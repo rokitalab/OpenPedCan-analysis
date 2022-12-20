@@ -73,17 +73,11 @@ OpenPedCan-analysis
 │       │   │   └── tmb_signature_dotplot.pdf
 │       │   ├── cosmicv2
 │       │   │   ├── bubble_matrix_cosmic_mutation_sig.png
-│       │   │   ├── individual_mutation_sig
-|       |   |   |   ├──{TUMOR_SAMPLE_BARCODE}_cosmic_mutation_sig.png
-|       |   |   |   └──...   
 │       │   │   └── signature_grouped_barplots
 |       |   |   |   ├──barplot_{HISTOLOGY_GROUP}_cosmic_mutation_sig.png
 |       |   |   |   └──...   
 │       │   ├── cosmicv3
 │       │   │   ├── bubble_matrix_cosmic_mutation_sig.png
-│       │   │   ├── individual_mutation_sig
-|       |   |   |   ├──{TUMOR_SAMPLE_BARCODE}_cosmic_mutation_sig.png
-|       |   |   |   └──...   
 │       │   │   └── signature_grouped_barplots
 |       |   |   |   ├──barplot_{HISTOLOGY_GROUP}_cosmic_mutation_sig.png
 |       |   |   |   └──...  
@@ -94,9 +88,6 @@ OpenPedCan-analysis
 |       |   |   |   └──...   
 │       │   └── nature
 │       │   |   ├── bubble_matrix_nature_mutation_sig.png
-│       │   |   ├── individual_mutation_sig
-|       |   |   |   ├──{TUMOR_SAMPLE_BARCODE}_nature_mutation_sig.png
-|       |   |   |   └──...   
 │       │   |   └── signature_grouped_barplots
 |       |   |   |   ├──barplot_{HISTOLOGY_GROUP}_nature_mutation_sig.png
 |       |   |   |   └──...   

@@ -259,36 +259,6 @@ cosmic_v33_wide <- do.call(dplyr::bind_rows, cosmic_v33_weights) %>%
   readr::write_tsv(file.path(results_dir, 'COSMICv3.3_signature_exposures.tsv'))
 ```
 
-### COSMIC v2 signature plots
-
-```{r}
-sample_mut_sig_plot(
-  sample_sigs_cosmic,
-  label = "cosmicv2",
-  output_dir = file.path(cosmicv2_plots, "individual_mutation_sig")
-)
-```
-
-### Alexandrov et al, 2013 signature plots
-
-```{r}
-sample_mut_sig_plot(
-  sample_sigs_nature,
-  label = "nature",
-  output_dir = file.path(nature_plots, "individual_mutation_sig")
-)
-```
-
-### COSMIC v3.3 signature plots
-
-```{r}
-sample_mut_sig_plot(
-  sample_sigs_cosmic_v33,
-  label = "cosmicv3",
-  output_dir = file.path(cosmicv3_plots, "individual_mutation_sig")
-)
-```
-
 ### Calculate the mutations per Mb for each signature
 
 Do this for COSMIC v2 mutation signatures.
