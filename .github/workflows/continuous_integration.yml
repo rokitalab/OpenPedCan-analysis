@@ -121,7 +121,7 @@ jobs:
             entrypoint: copy_number_consensus_call/run_consensus_call.sh
 
           - name: Consensus CN annotation
-            entrypoint: focal-cn-file-preparation/run-prepare-cn-OpenTarget.sh
+            entrypoint: focal-cn-file-preparation/run-prepare-cn.sh
             openpbta_testing: 1
 
           - name: TMB calculation
@@ -151,6 +151,10 @@ jobs:
 
           - name: CNV frequency tables
             entrypoint: cnv-frequencies/run-cnv-frequencies-analysis.sh
+            
+          - name: RNA-Seq batch correction
+            entrypoint: rnaseq-batch-correct/run_ruvseq.sh
+
     steps:
       - uses: actions/checkout@v3
 
