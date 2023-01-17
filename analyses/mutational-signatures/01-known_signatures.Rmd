@@ -231,22 +231,47 @@ readr::write_tsv(file.path(results_dir, 'Nature_signature_exposures.tsv'))
 ```
 
 Get [COSMIC genome v3.3 signatures](https://cancer.sanger.ac.uk/cosmic) for each sample. 
-This step will take some time. 
 
 ```{r}
 signatures.cosmic.v3.3 <- read_tsv(file.path(input_dir, 'COSMIC_v3.3.1_SBS_GRCh38.txt')) %>%
   column_to_rownames('Type') %>%
   t %>%
   as.data.frame()
+```
 
+Create list of include/exclude signatures using SBSv3 mapping file 
+
+```{r Set up lists of excluded and included signatures for COSMIC V3}
+ map <- read_tsv(file.path(input_dir, "sbs_v3_map.tsv"))
+
+ # Excluded signatures:
+ artifact_sigs <- map %>%
+   filter(Broad_category == "Sequencing artifact") %>%
+   pull(Signature)
+
+ environ_sigs <- map %>%
+   filter(Broad_category == "Environmental exposure") %>%
+   pull(Signature)
+
+ unknown <- map %>%
+   filter(Broad_category == "Unknown") %>%
+   pull(Signature)
+
+ exclude_sigs <- c(artifact_sigs, environ_sigs, unknown, "SBS39")
+ include_sigs <- setdiff(rownames(signatures.cosmic.v3.3), exclude_sigs)
+```
+
+Run signature extraction. This step will take some time.
+
+```{r}
 sample_sigs_cosmic_v33 <- lapply(tumor_sample_ids, function(sample_id) {
   # Determine the signatures contributing to the sample
   whichSignatures(
     tumor.ref = sigs_input,
-    signatures.ref = signatures.cosmic.v3.3,
+    signatures.ref = signatures.cosmic.v3.3[include_sigs,],
     sample.id = sample_id,
     contexts.needed = TRUE
-  )
+    )
 })
 # Bring along the names
 names(sample_sigs_cosmic_v33) <- tumor_sample_ids
