@@ -144,8 +144,8 @@ fusion_calls<-fusion_calls %>%
 Kinase domainIDs are obtained pfam by a simple grep "kinase" in their Name
 
 ```{r}
-# identify kinase domain from bioMartPfam dataframe provided with annoFuse
-bioMartDataPfam <- readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuse"))
+# identify kinase domain from bioMartPfam dataframe provided with annoFuseData
+bioMartDataPfam <- readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuseData"))
 
 # look for domains with "kinase" in their domain Name
 kinaseid<-unique(bioMartDataPfam[grep("kinase",bioMartDataPfam$NAME),
@@ -324,4 +324,9 @@ putative_driver_fusions<-rbind(QCGeneFiltered_recFusionUniq,putative_driver_anno
 
 write.table(putative_driver_fusions,file.path(root_dir,"scratch","fusion-putative-oncogenic-preQC.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
 
+```
+
+### session info
+```{r session info}
+sessionInfo()
 ```
