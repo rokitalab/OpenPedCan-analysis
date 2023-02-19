@@ -82,7 +82,7 @@ rna_library_list <- rna_library_list[!is.na(rna_library_list)]
 } else{
 rna_library_list <- c("stranded", "poly-A")
 }
-rna_library_list %>%  write_lines("my_list.txt")
+
 # filter to samples of a particular RNA library type
 expression_matrix_list <- lapply(rna_library_list, function(x){
   
