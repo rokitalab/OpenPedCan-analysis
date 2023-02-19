@@ -56,7 +56,7 @@ if ( params$base_run ==0 ){
 }
 
 # recording of "BS_ETC8R0TD" GMKF NBL sample; needs to be remove once updated in v12
-clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
+#clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
 
 histology <- clinical %>%
   dplyr::select("Kids_First_Biospecimen_ID",
@@ -214,7 +214,7 @@ tp53_alterations_score <- tp53_alterations %>%
                                   "cohort")) %>%
   # select useful columns
   dplyr::select(sample_id,Kids_First_Biospecimen_ID_RNA,Kids_First_Biospecimen_ID_DNA,
-         tp53_score,cancer_predispositions,HGVSp_Short,copy_number,SV.type,FusionName,hotspot,activating) %>%
+         tp53_score,cancer_predispositions,HGVSp_Short,copy_number,SV_type,FusionName,hotspot,activating) %>%
   arrange(sample_id) %>%
   unique() %>%
   replace_na(list(hotspot = 0, activating = 0))
@@ -241,11 +241,11 @@ tp53_alterations_score_wide <- tp53_alterations_score %>%
     # summarize length of SNV and CNV alterations 
    SNV_indel_counts= length(unique(HGVSp_Short[!is.na(HGVSp_Short)])), 
     CNV_loss_counts = length(unique(copy_number[!is.na(copy_number)])),
-    SV_counts = length(unique(SV.type[!is.na(SV.type)])),
+    SV_counts = length(unique(SV_type[!is.na(SV_type)])),
     Fusion_counts = length(unique(FusionName[!is.na(FusionName)])),
     HGVSp_Short = toString(unique(HGVSp_Short)),
     CNV_loss_evidence = toString(unique(copy_number)),
-    SV_type = toString(unique(SV.type)),
+    SV_type = toString(unique(SV_type)),
     Fusion_evidence = toString(unique(FusionName)),
     # summarize unique hotspot values per sample_id
     hotspot = max(unique(hotspot[!is.na(hotspot) ])),

@@ -36,6 +36,10 @@ echo "Create independent sample list for fusion filtering module"
 cd ${analyses_dir}/independent-samples
 OPENPBTA_BASE_SUBTYPING=1 bash run-independent-samples.sh
 
+# Copy over independent pre-release lists
+cp ${analyses_dir}/independent-samples/results/*pre-release.tsv ${release_dir}
+cp ${analyses_dir}/independent-samples/results/*pre-release.tsv ${data_dir}
+
 # Run fusion filtering
 echo "Create fusion filtered list"
 cd ${analyses_dir}/fusion_filtering
@@ -43,10 +47,12 @@ OPENPBTA_BASE_SUBTYPING=1 bash run_fusion_merged.sh
 
 # Copy over fusions lists
 cp ${analyses_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv ${release_dir}
+cp ${analyses_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv ${data_dir}
+
 
 # Run modules that cannot be run locally due to memory requirements
 if [ "$RUN_LOCAL" -lt "1" ]; then
-  
+
   # Run GISTIC step -- only the part that generates ZIP file
   echo "Run GISTIC"
   # Run a step that subs ploidy for NA to allow GISTIC to run
@@ -54,10 +60,10 @@ if [ "$RUN_LOCAL" -lt "1" ]; then
   --in_consensus ${data_dir}/cnv-consensus.seg.gz \
   --out_consensus ${analyses_dir}/run-gistic/results/cnv-consensus-gistic-only.seg.gz \
   --histology ${data_dir}/histologies-base.tsv
-  
+
   # This will use the file that just got generated above
   bash ${analyses_dir}/run-gistic/scripts/run-gistic-opentargets.sh
-  
+
   # Copy over GISTIC
   cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic.zip ${release_dir}
   cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic-only.seg.gz ${release_dir}
@@ -71,10 +77,13 @@ if [ "$RUN_LOCAL" -lt "1" ]; then
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${release_dir}
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${release_dir}
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${data_dir}
 
   # Copy over the consensus with status file
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_seg_with_status.tsv ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_seg_with_status.tsv ${data_dir}
   cp ${analyses_dir}/focal-cn-file-preparation/results/cnvkit_with_status.tsv ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/cnvkit_with_status.tsv ${data_dir}
 
 fi
 
@@ -103,7 +112,7 @@ cd ${analyses_dir}/gene-set-enrichment-analysis
 OPENPBTA_BASE_SUBTYPING=1 bash run-gsea.sh
 
 # Copy over GSEA results for subtyping
-cp ${analyses_dir}/gene-set-enrichment-analysis/results/gsva_scores.tsv ${release_dir}
+#cp ${analyses_dir}/gene-set-enrichment-analysis/results/gsva_scores.tsv ${release_dir}
 
 # Run TP53
 echo "TP53 altered score"
@@ -114,6 +123,13 @@ OPENPBTA_BASE_SUBTYPING=1 bash run_classifier.sh
 cp ${analyses_dir}/tp53_nf1_score/results/* ${release_dir}
 cp ${analyses_dir}/tp53_nf1_score/plots/* ${release_dir}
 
+# Delete pre-release copied to the data directory
+rm -f ${data_dir}/independent-specimens.rnaseq.*pre-release.tsv
+rm -f ${data_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv
+rm -f ${data_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz
+rm -f ${data_dir}/focal-cn-file-preparation/results/consensus_seg_with_status.tsv
+rm -f ${data_dir}/focal-cn-file-preparation/results/cnvkit_with_status.tsv
+
 # Create an md5sum file for all the files in the directories where the analysis
 # files are compiled
 cd ${release_dir}
@@ -123,6 +139,6 @@ rm -f analysis_files_release_md5sum.txt
 md5sum * > analysis_files_release_md5sum.txt
 
 # Upload all release files s3 bucket in their respective folders
-aws s3 cp ${release_dir}/ $URL/$RELEASE/ --recursive
+#aws s3 cp ${release_dir}/ $URL/$RELEASE/ --recursive
 
 printf "\nDone generating pre-release files...\n\n"
