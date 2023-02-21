@@ -125,10 +125,10 @@ cp ${analyses_dir}/tp53_nf1_score/plots/* ${release_dir}
 
 # Delete pre-release copied to the data directory
 rm -f ${data_dir}/independent-specimens.rnaseq.*pre-release.tsv
-rm -f ${data_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv
-rm -f ${data_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz
-rm -f ${data_dir}/focal-cn-file-preparation/results/consensus_seg_with_status.tsv
-rm -f ${data_dir}/focal-cn-file-preparation/results/cnvkit_with_status.tsv
+rm -f ${data_dir}/fusion-putative-oncogenic.tsv
+rm -f ${data_dir}/consensus_wgs_plus_cnvkit_wxs.tsv.gz
+rm -f ${data_dir}/consensus_seg_with_status.tsv
+rm -f ${data_dir}/cnvkit_with_status.tsv
 
 # Create an md5sum file for all the files in the directories where the analysis
 # files are compiled

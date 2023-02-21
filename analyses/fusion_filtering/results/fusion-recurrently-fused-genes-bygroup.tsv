@@ -221,6 +221,7 @@ MAD1L1	Hematologic malignancy	104
 MAD1L1	Renal tumor	4
 MAEA	Hematologic malignancy	14
 MAFK	Hematologic malignancy	14
+MAML2	Ependymal tumor	4
 MAML3	Hematologic malignancy	7
 MARCHF11	Embryonal tumor	5
 MBP	Hematologic malignancy	4
@@ -319,7 +320,7 @@ RASSF1	Hematologic malignancy	4
 RBBP6	Hematologic malignancy	5
 RBM14-RBM4	Hematologic malignancy	4
 RBM38	Hematologic malignancy	82
-RELA	Ependymal tumor	4
+RELA	Ependymal tumor	32
 RER1	Hematologic malignancy	8
 REV3L	Diffuse astrocytic and oligodendroglial tumor	4
 REV3L	Low-grade astrocytic tumor	5
@@ -424,7 +425,7 @@ ZC3H3	Hematologic malignancy	17
 ZEB1	Hematologic malignancy	4
 ZEB2	Hematologic malignancy	12
 ZFPM1	Hematologic malignancy	29
-ZFTA	Ependymal tumor	9
+ZFTA	Ependymal tumor	36
 ZMIZ1	Hematologic malignancy	10
 ZMYM2	Hematologic malignancy	11
 ZNF131	Hematologic malignancy	4
