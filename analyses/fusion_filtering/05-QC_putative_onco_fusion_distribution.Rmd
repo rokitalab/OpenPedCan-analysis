@@ -230,11 +230,21 @@ if ( params$base_run ==0 ){
 We can assume these fusions to be potential false calls because it is highly unlikely that fusions of biological importance occur in these highly divese cancer groups. We (Krutika, Jo Lynne and Payal ) also manually reviewed "Total putative oncogene fusion" plots to look for genes that are found in more than 4 grouping variables for base histology and none seemed to interesting/relevant.
 
 ```{r final filtering }
+# get the annofuse reference data
+geneListReferenceDataTab <- read.delim(system.file("extdata", "genelistreference.txt", package = "annoFuseData"))
+OncogeneFusions <- geneListReferenceDataTab %>% 
+  dplyr::filter(stringr::str_detect(type, "Oncogene")) %>%
+  dplyr::pull(Gene_Symbol) %>% 
+  unique()
+
 # count number of fusions in putative oncogene annotated fused gene are in more than N (countBaseGroup) histology group
 FusionInNbh<-fusion_calls %>% dplyr::select(FusionName,group_base) %>% unique() %>% group_by(FusionName) %>% tally(name="count")
 
-# select fusions that will be filtered (found in more than 4 grouping variables for base histology)
-FusionInNbh<-FusionInNbh[FusionInNbh$count>countBaseGroup,]
+# select fusions that will be filtered (found in more than 4 grouping variables for base histology and are not oncogenes)
+FusionInNbh <- FusionInNbh  %>%
+  tidyr::separate(FusionName, c("GeneA", "GeneB"), sep = "--", remove = FALSE) %>%
+  dplyr::filter(count > countBaseGroup & (!GeneA %in% OncogeneFusions | !GeneB %in% OncogeneFusions)) %>%
+  dplyr::select(-GeneA, -GeneB)
 FusionInNbh
 
 putative_driver_fusions<-fusion_calls %>% dplyr::filter(!FusionName %in% FusionInNbh$FusionName) %>%
