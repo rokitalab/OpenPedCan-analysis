@@ -10,8 +10,8 @@ option_list <- list(
   make_option(c("--batch_col"), type = "character",
               default = NULL,
               help = "Combine and batch correct input matrices using which column?"),
-  make_option(c("--output_dir"), type = "character",
-              help = "Output directory"),
+  make_option(c("--scratch_dir"), type = "character",
+              help = "Scratch directory"),
   make_option(c("--output_prefix"), type = "character",
               help = "Output file prefix")
 )
@@ -20,12 +20,11 @@ option_list <- list(
 opt <- parse_args(OptionParser(option_list = option_list))
 batch_col <- opt$batch_col
 output_prefix <- opt$output_prefix
-output_dir <- opt$output_dir
+scratch_dir <- opt$scratch_dir
 
 # directories
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
 data_dir <- file.path(root_dir, "data")
-dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 # input files
 clin_file <- file.path(data_dir, "histologies-base.tsv")
@@ -37,13 +36,13 @@ terms_file <- file.path("input", "mb_subtyping_path_dx_strings.json")
 path_dx_list <- jsonlite::fromJSON(terms_file)
 
 # output file
-uncorrected_file <- file.path(output_dir, paste0(output_prefix, ".rds"))
+uncorrected_file <- file.path(scratch_dir, paste0(output_prefix, ".rds"))
 
 # collapsed expression matrix
 exprs_mat <- readRDS(exprs_file)
 
 # read and subset clinical file to MB samples
-clin <- read.delim(clin_file, stringsAsFactors = F)
+clin <- read_tsv(clin_file, guess_max = 100000)
 
 # Filter to medulloblastoma samples only based on criteria determined in 00-mb-select-pathology-dx
 clin_mb  <- clin %>%
@@ -77,6 +76,6 @@ if(!is.null(batch_col)){
                           batch = clin_mb_rnaseq[, batch_col])
   
   # save corrected matrix
-  corrected_file <- file.path(output_dir, paste0(output_prefix, "-batch-corrected.rds"))
+  corrected_file <- file.path(scratch_dir, paste0(output_prefix, "-batch-corrected.rds"))
   write_rds(corrected_mat, corrected_file)
 }

@@ -1,0 +1,137 @@
+# Author: Jo Lynne Rokita
+# Function: Script to subtype MB tumors and all associated bs_ids from either MB RNA-Seq classifier results or methylation classifier results
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+})
+
+# root directory
+root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
+
+# set results directory
+analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-MB") 
+output_dir <- file.path(analysis_dir, "results") 
+input_dir <- file.path(analysis_dir, "input") 
+
+# create results file
+results_file <- "MB_molecular_subtype.tsv"
+
+# read medulloblastoma samples from clinical file created in script 01
+mb_biospecimens <- read_tsv(file.path(input_dir, "subset-mb-clinical.tsv"))
+nrow(mb_biospecimens)
+
+# how many patients? 
+mb_pts <- mb_biospecimens %>%
+  pull(Kids_First_Participant_ID) %>%
+  unique()
+length(mb_pts)
+
+# start with samples which had RNA subtyped ------------------
+# read in medulloPackage results and recode
+mb_results <- readRDS(file.path(output_dir, "mb-classified.rds"))$medulloPackage %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = sample,
+                molecular_subtype = best.fit) %>%
+  # format subtype result
+  mutate(molecular_subtype = paste0("MB, ", molecular_subtype)) %>%
+  select(Kids_First_Biospecimen_ID, molecular_subtype) %>%
+  # pull in sample ID and composition
+  left_join(mb_biospecimens[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "sample_id", "composition", "tumor_descriptor")]) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  #rename RNA bs_id to enable joining of other bs_ids
+  dplyr::rename(Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID)
+
+# are there discrepancies? yes
+rna_map <- mb_results %>%
+  select(sample_id, composition, tumor_descriptor, molecular_subtype) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  unique()
+
+# we will add methyl subtypes in the absence of RNA-Seq classification or in the case of discrepant classifier results
+methyl_bs_with_mb_subtypes <- mb_biospecimens %>%
+  filter(experimental_strategy == "Methylation",
+         (grepl("MB_", dkfz_v12_methylation_subclass) & dkfz_v12_methylation_subclass_score >= 0.8)) %>%
+  # reformat classifier result per https://www.molecularneuropathology.org/mnp/classifiers/11
+  mutate(molecular_subtype = case_when(grepl("MB_SHH", dkfz_v12_methylation_subclass) ~ "MB, SHH",
+                                       dkfz_v12_methylation_subclass %in% c("MB_G34_I", "MB_G34_II", "MB_G34_III", "MB_G34_IV") ~ "MB, Group3",
+                                       dkfz_v12_methylation_subclass %in% c("MB_G34_V", "MB_G34_VI", "MB_G34_VII", "MB_G34_VIII") ~ "MB, Group4",
+                                       dkfz_v12_methylation_subclass == "MB_WNT" ~ "MB, WNT",
+                                       dkfz_v12_methylation_subclass == "MB_MYO" ~ "MB, MYO")) %>%
+  #dplyr::rename(Kids_First_Biospecimen_ID_methyl = Kids_First_Biospecimen_ID) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
+
+# are there any methylation discrepancies? no, OK we can use these to replace discrepancies in RNA-Seq
+methyl_subtype_map <- methyl_bs_with_mb_subtypes %>%
+  select(sample_id, composition, tumor_descriptor, molecular_subtype) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  unique()
+
+all.equal(length(unique(methyl_subtype_map$id)), nrow(methyl_subtype_map))
+
+
+# 1 discrepant subtype pair from RNA results, let's fix it and set up to auto fix later
+dups <- rna_map %>%
+  filter(duplicated(.[["id"]])) 
+
+if (nrow(dups) > 0) {
+  mb_results_updated <- mb_results %>%
+  mutate(molecular_subtype = case_when(id %in% dups$id ~ NA_character_,
+                                       TRUE ~ as.character(molecular_subtype)))
+  tmp_df <- methyl_subtype_map %>%
+    filter(id %in% dups$id)
+    
+  mb_results_updated <- mb_results_updated %>%
+    left_join(tmp_df, by = c("id", "sample_id", "composition", "tumor_descriptor")) %>%
+    mutate(Values=coalesce(molecular_subtype.x,molecular_subtype.y)) %>%
+    select(-molecular_subtype.x,-molecular_subtype.y) %>%
+    dplyr::rename(molecular_subtype = Values) %>%
+    unique()
+    
+  }
+
+# now add methylation results and associated samples if no rnaseq
+methyl_bs_with_mb_subtypes_norna <- methyl_bs_with_mb_subtypes %>%
+  filter(!id %in% mb_results$id) %>%
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
+
+# these results will be the basis for all other bs_ids
+base_results_map <- mb_results_updated %>%
+  bind_rows(methyl_bs_with_mb_subtypes_norna) %>%
+  select(molecular_subtype, id) %>%
+  unique()
+
+
+# subset clinical for non rna-seq specimens
+mb_biospecimens_subtyped <- mb_biospecimens %>%
+  select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  left_join(base_results_map) %>%
+  #make all NA To be classified
+  dplyr::mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "MB, To be classified",
+                                              TRUE ~ molecular_subtype)) %>%
+  arrange(sample_id) %>%
+  write_tsv(file.path(output_dir, results_file))
+
+# how many tumor in each subgroup?
+mb_biospecimens_subtyped %>%
+  select(id, molecular_subtype) %>%
+  unique() %>%
+  dplyr::count(molecular_subtype)
+
+# how many patients subtyped?
+mb_biospecimens_subtyped %>%
+  filter(molecular_subtype != "MB, To be classified") %>%
+  pull(Kids_First_Participant_ID) %>%
+  unique() %>%
+  length()
+
+# how many tumors subtyped?
+mb_biospecimens_subtyped %>%
+  filter(molecular_subtype != "MB, To be classified") %>%
+  pull(id) %>%
+  unique() %>%
+  length()
+
+
+
+
