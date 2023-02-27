@@ -147,11 +147,11 @@ results/mb-classified.rds
 2. Function
 
 This script assigns molecular subtypes for medulloblastoma biospecimens.
-- First, a match id is created using `sample_id` + `composition`.
+- First, a match `id` is created using `sample_id` + `composition`.
 - Next, medulloPackage subtypes are assigned to the respective RNA-Seq biospecimen ids.
-If there are multiple samples with the same match id but different subtype, methylation subtypes are used to determine the correct subtype.
+If there are multiple samples with the same match `id` but different subtype, methylation subtypes are used to determine the correct subtype.
 - If there is no RNA-Seq available for a tumor, the methylation subtypes with scores >= 0.80 are used.
-- Biospecimens with match ids corresponding to those described above are assigned the same subtype.
+- Biospecimens with match `id`s corresponding to those described above are assigned the same subtype.
 - Finally, tumors without RNA-Seq or methylation are deemed "MB, To be classified".
 
 3. Output
