@@ -5,7 +5,7 @@ output:
     df_print: paged
 params:
   expected_input:
-    value: input/openPBTA-mb-pathology-subtypes.rds
+    value: input/pbta-mb-pathology-subtypes.tsv
   observed_input:
     value: results/mb-classified.rds
 ---
@@ -49,7 +49,7 @@ subset_clin_file <- file.path("input", "subset-mb-clinical.tsv")
 # read in subset clinical mb file that was created in 01-filter-and-batch-correction.R
 subset_clin <- read.delim(subset_clin_file)
 
-exp_class <- readRDS(params$expected_input)
+exp_class <- read_tsv(params$expected_input)
 obs_class <- readRDS(params$observed_input)
 
 # format ambiguous expected classes 
