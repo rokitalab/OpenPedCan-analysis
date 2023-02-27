@@ -154,6 +154,10 @@ If there are multiple samples with the same match `id` but different subtype, me
 - Biospecimens with match `id`s corresponding to those described above are assigned the same subtype.
 - Finally, tumors without RNA-Seq or methylation are deemed "MB, To be classified".
 
+##### Accuracy assessment
+The last part of this script adds the methylation subtype to the final subtyping file, as well as calculates the accuracy of medulloPackage using methylation subtypes as the true positives.
+- Accuracy of medulloPackage was 99.35% (154/155).
+
 3. Output
 
 ```

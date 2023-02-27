@@ -109,8 +109,7 @@ mb_biospecimens_subtyped <- mb_biospecimens %>%
   #make all NA To be classified
   dplyr::mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "MB, To be classified",
                                               TRUE ~ molecular_subtype)) %>%
-  arrange(sample_id) %>%
-  write_tsv(file.path(output_dir, results_file))
+  arrange(sample_id)
 
 # how many tumor in each subgroup?
 mb_biospecimens_subtyped %>%
@@ -132,6 +131,36 @@ mb_biospecimens_subtyped %>%
   unique() %>%
   length()
 
+### check accuracy of medulloPackage with methylation ------------------
+methyl_subtype_map_short <- methyl_subtype_map %>%
+  dplyr::rename(molecular_subtype_methyl = molecular_subtype) %>%
+  select(id, molecular_subtype_methyl)
 
+# add methyl subtype to the final subtype file
+mb_biospecimens_subtyped_plus_methyl <- mb_biospecimens_subtyped %>%
+  left_join(methyl_subtype_map_short) %>%
+  arrange(sample_id) %>%
+  # let's write this out as the final file
+  write_tsv(file.path(output_dir, results_file))
 
+# check accuracy
+mb_biospecimens_subtyped_plus_methyl_subset <- mb_biospecimens_subtyped_plus_methyl %>%
+  filter(!is.na(molecular_subtype_methyl),
+         # remove methyl only samples
+         !id %in% methyl_bs_with_mb_subtypes_norna$id) %>%
+  select(id, molecular_subtype, molecular_subtype_methyl) %>%
+  unique() %>%
+  mutate(match = ifelse(molecular_subtype == molecular_subtype_methyl, "true", "false"))
 
+n_match <- mb_biospecimens_subtyped_plus_methyl_subset %>%
+  filter(match == "true") %>%
+ nrow() 
+print(paste0(n_match, " matches"))
+
+n_no_match <- mb_biospecimens_subtyped_plus_methyl_subset %>%
+  filter(match == "false") %>%
+  nrow() 
+print(paste0(n_no_match, " non-matches"))
+
+Accuracy = paste0(round(n_match/sum(n_match+n_no_match)*100, 2), '%')
+Accuracy
