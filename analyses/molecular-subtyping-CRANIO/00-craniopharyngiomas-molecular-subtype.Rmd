@@ -70,7 +70,10 @@ dgd_maf_file <- file.path(root_dir, "data", "snv-dgd.maf.tsv.gz")
 snv_file <- file.path(root_dir, "data", "snv-consensus-plus-hotspots.maf.tsv.gz")
 
 dgd_df <- read_tsv(dgd_maf_file, comment = '#') %>%
-    filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID)
+    filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID) %>%
+  mutate(n_ref_count = as.numeric(n_ref_count),
+         n_alt_count = as.numeric(n_alt_count),
+         PHENO = as.numeric(PHENO))
 snv_df <- read_tsv(snv_file, comment = '#') %>%
   filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID) %>%
   bind_rows(dgd_df)
