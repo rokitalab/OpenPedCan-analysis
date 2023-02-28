@@ -38,14 +38,16 @@ This above  script is designed to change to this directory to run, so it should 
 
     A new column named `subgroup` is added to the input table and saved in `results/EPN_all_data_withsubgroup.tsv`.
 
-    This script prioritizes features of subgroups first and does not assign those samples to any other subgroups. For example, samples where `disease_group == 'spinal'` are prioritized for the `EPN, SP` or `EPN, SP-MYCN` subgroup, and are not assigned to any other groups. Samples are tested for assignment to subgroups in the following prioritized order:
+    This script prioritizes features of subgroups first and does not assign those samples to any other subgroups. For example, samples where `disease_group == 'spinal'` are prioritized for the `EPN, SP` or `EPN, SP-MYCN` subgroup, and are not assigned to any other groups. Samples are tested for assignment to subgroups in the following prioritized order shown below. Subgroups inferred from methylation classification are only included where subgroups are determined (i.e., EPN, To be classified).
     1) EPN, SP-MYCN
     2) EPN, SP
     3) EPN, ST ZFTA
     4) EPN, ST YAP1
     5) EPN, PF A 
     6) EPN, PF B
-    7) EPN, To be classified
+    7) EPN, PF SE (methylation classificaton)
+    8) EPN, SP-SE B (methylation classificaton)
+    9) EPN, To be classified
 
     From the [input file here](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/analyses/molecular-subtyping-EPN/results/EPN_all_data.tsv) values for various columns are considered for assigning subgroups. The following criteria are used to prioritize samples for assignment to each group: 
             <table>
@@ -63,7 +65,7 @@ This above  script is designed to change to this directory to run, so it should 
                 </tr>
                 <tr>
                     <td>EPN, ST ZFTA</td>
-                    <td>`C11orf95--RELA == TRUE` or `C11orf95--MAML2 == TRUE` or `C11orf95--YAP1 == TRUE`</td>
+                    <td>`ZFTA--RELA == TRUE` or `ZFTA--MAML2 == TRUE`</td>
                 </tr>
                 <tr>
                     <td>EPN, ST YAP1</td>
@@ -71,9 +73,9 @@ This above  script is designed to change to this directory to run, so it should 
                 </tr>
                 <tr>
                     <td>EPN, PF A</td>
-                    <td>(`1q_gain > 1` and `TKTL1_expr_zscore > 3`) or `CXorf67_expr_zscore > 3` or (`CNS_region == 'Posterior fossa'` and 
-      (`H3F3A_HGVSp_Short == 'p.K28M'` or `H3F3B_HGVSp_Short == 'p.K28M'` or `HIST1H3B_HGVSp_Short == 'p.K28M'` or 
-         `HIST1H3C_HGVSp_Short == 'p.K28M'` or `HIST2H3C_HGVSp_Short == 'p.K28M'`))</td>
+                    <td>(`1q_gain > 1` and `TKTL1_expr_zscore > 3`) or `EZHIP_expr_zscore > 3` or (`CNS_region == 'Posterior fossa'` and 
+      (`H3-3A_HGVSp_Short == 'p.K28M'` or `H3-3B_HGVSp_Short == 'p.K28M'` or `H3C2_HGVSp_Short == 'p.K28M'` or 
+         `H3C3_HGVSp_Short == 'p.K28M'` or `H3C14_HGVSp_Short == 'p.K28M'`))</td>
                 </tr>
                 <tr>
                     <td>EPN, PF B</td>

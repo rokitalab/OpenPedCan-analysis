@@ -112,7 +112,7 @@ focal_cn_gene_NF2 <- focal_cn_gene %>%
 
 # Reading consensus snv results and filtering for EPN samples
 mutations <- data.table::fread(mutations) %>%
-  filter(Hugo_Symbol %in% c("NF2", "H3F3A", "H3F3B", "HIST1H3B", "HIST1H3C", "HIST2H3C"))
+  filter(Hugo_Symbol %in% c("NF2", "H3-3A", "H3-3B", "H3C2", "H3C3", "H3C14"))
 
 
 # Reading the input in a  dataframe
@@ -184,7 +184,7 @@ fill_df <- function(sample, ref_df, col_name, included_samples = NULL, default =
 EPN_notebook$NFKB_pathway_GSEAscore <- sapply(EPN_notebook$Kids_First_Biospecimen_ID_RNA, function(x) fill_df(sample = x, ref_df = gsva_NFKB, col_name = "gsea_score"))
 
 # Fill appropriate fusion summary information under each fusion
-fusions_list = c("C11orf95--RELA", "C11orf95--MAML2", "C11orf95--YAP1", "YAP1--MAMLD1", "YAP1--FAM118B", "YAP1--MAML2", "LTBP3--RELA", "PTEN--TAS2R1")
+fusions_list = c("ZFTA--RELA", "ZFTA--MAML2", "YAP1--MAMLD1", "YAP1--FAM118B", "YAP1--MAML2", "PTEN--TAS2R1")
 fusion_df <- fusion_df[,fusions_list]
 for(i in 1:length(fusions_list)){
   fusion <- fusions_list[i]
@@ -232,24 +232,24 @@ EPN_notebook[,"NF2_variant_consequence"] <- unlist(sapply(EPN_notebook$Kids_Firs
                                           function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'Consequence')))
 EPN_notebook[,"NF2_variant_classification"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
                                                    function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'Variant_Classification')))
-mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3F3A" & HGVSp_Short == 'p.K28M')
-EPN_notebook[,"H3F3A_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
+mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3-3A" & HGVSp_Short == 'p.K28M')
+EPN_notebook[,"H3-3A_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
                                                              function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'HGVSp_Short')))
-mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3F3B" & HGVSp_Short == 'p.K28M')
-EPN_notebook[,"H3F3B_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
+mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3-3B" & HGVSp_Short == 'p.K28M')
+EPN_notebook[,"H3-3B_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
                                                     function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'HGVSp_Short')))
-mutation_gene <- mutations %>% filter(Hugo_Symbol == "HIST1H3B" & HGVSp_Short == 'p.K28M')
-EPN_notebook[,"HIST1H3B_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
+mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3C2" & HGVSp_Short == 'p.K28M')
+EPN_notebook[,"H3C2_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
                                                     function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'HGVSp_Short')))
-mutation_gene <- mutations %>% filter(Hugo_Symbol == "HIST1H3C" & HGVSp_Short == 'p.K28M')
-EPN_notebook[,"HIST1H3C_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
+mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3C3" & HGVSp_Short == 'p.K28M')
+EPN_notebook[,"H3C3_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
                                                        function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'HGVSp_Short')))
-mutation_gene <- mutations %>% filter(Hugo_Symbol == "HIST2H3C" & HGVSp_Short == 'p.K28M')
-EPN_notebook[,"HIST2H3C_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
+mutation_gene <- mutations %>% filter(Hugo_Symbol == "H3C14" & HGVSp_Short == 'p.K28M')
+EPN_notebook[,"H3C14_HGVSp_Short"] <- unlist(sapply(EPN_notebook$Kids_First_Biospecimen_ID_DNA,
                                                        function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, col_name = 'HGVSp_Short')))
 
 # Adding expression z-scores to dataframe
-genes_of_interest = c("RELA", "L1CAM", "ARL4D", "CLDN1", "CXorf67", "TKTL1", "GPBP1", "IFT46", "MYCN", "NF2")
+genes_of_interest = c("RELA", "L1CAM", "ARL4D", "CLDN1", "EZHIP", "TKTL1", "GPBP1", "IFT46", "MYCN", "NF2")
 subset_df <- expr_dat[genes_of_interest, intersect(EPN_notebook$Kids_First_Biospecimen_ID_RNA, colnames(expr_dat))]
 # log2(x + 1) transform the expression matrix
 log_expression <- log2(subset_df + 1)
