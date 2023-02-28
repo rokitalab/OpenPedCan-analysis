@@ -37,28 +37,47 @@ EP_rnaseq_samples = EP %>%
 # filter for DNA samples 
 WGS_dnaseqsamples = EP %>%
   filter(experimental_strategy == "WGS") %>%
-  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region) %>%
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, ) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_DNA" = "Kids_First_Biospecimen_ID")
 
-# sample_id is common between both  dataframes and also unique between RNA and DNA. 
+# filter for Methyl samples 
+methy_samples = EP %>%
+  dplyr::filter(experimental_strategy == "Methylation", 
+                (grepl("EPN_", dkfz_v12_methylation_subclass) & dkfz_v12_methylation_subclass_score >= 0.8)) %>%
+  dplyr::mutate(molecular_subtype_methyl = case_when(grepl("EPN_PFA", dkfz_v12_methylation_subclass) ~ "EPN, PF A",
+                                                     grepl("EPN_PFB", dkfz_v12_methylation_subclass) ~ "EPN, PF B",
+                                                     grepl("EPN_ST_ZFTA", dkfz_v12_methylation_subclass) ~ "EPN, ST ZFTA",
+                                                     dkfz_v12_methylation_subclass == "EPN_MPE" ~ "EPN, MPE",
+                                                     dkfz_v12_methylation_subclass == "EPN_PF_SE" ~ "EPN, PF SE",
+                                                     dkfz_v12_methylation_subclass == "EPN_SPINE" ~ "EPN, SP",
+                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_MYCN" ~ "EPN, SP-MYCN",
+                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_SE_A" ~ "EPN, SP-SE A",
+                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_SE_B" ~ "EPN, SP-SE B",
+                                                     dkfz_v12_methylation_subclass == "EPN_ST_SE" ~ "EPN, ST SE",
+                                                     dkfz_v12_methylation_subclass == "EPN_YAP" ~ "EPN, ST YAP1")) %>%
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID")
+
+# sample_id is common between both  dataframes and also unique between RNA and DNA, methyl. 
 # Some DNA BSID's are missing for the corresponding RNA samples
-EP_rnaseq_WGS = EP_rnaseq_samples %>%
-  full_join(WGS_dnaseqsamples, by = c("sample_id", "Kids_First_Participant_ID","primary_site", "CNS_region"))
+EP_rnaseq_WGS_methyl = EP_rnaseq_samples %>%
+  dplyr::full_join(WGS_dnaseqsamples, by = c("sample_id", "Kids_First_Participant_ID","primary_site", "CNS_region")) %>% 
+  dplyr::full_join(methy_samples, by = c("sample_id", "Kids_First_Participant_ID","primary_site", "CNS_region"))
+  
 
 # add disease group (supra/infra category) inferred from primary_site
-EP_rnaseq_WGS <- EP_rnaseq_WGS %>%
-  mutate(disease_group_supra = ifelse(grepl(paste0(supra, collapse = "|"), tolower(primary_site)), "supratentorial", "undetermined"),
-         disease_group_infra = ifelse(grepl(paste0(infra, collapse = "|"), tolower(primary_site)), "infratentorial", "undetermined"),
-         disease_group_spine = ifelse(grepl(paste0(spine, collapse = "|"), tolower(primary_site)), "spinal", "undetermined"),
-         disease_group = ifelse(disease_group_supra == "supratentorial" & disease_group_infra == "undetermined" & disease_group_spine == "undetermined", "supratentorial",
-                                ifelse(disease_group_supra == "undetermined" & disease_group_infra == "infratentorial" & disease_group_spine == "undetermined", "infratentorial",
-                                       ifelse(disease_group_supra == "undetermined" & disease_group_infra == "undetermined" & disease_group_spine == "spinal", "spinal",
-                                              ifelse(disease_group_supra == "undetermined" & disease_group_infra == "undetermined" & disease_group_spine == "undetermined", "undetermined", "mixed"))))) %>%
-  arrange(Kids_First_Participant_ID, sample_id) %>%
-  dplyr::select(Kids_First_Participant_ID, sample_id, 
-                Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
-                CNS_region, primary_site, disease_group)
+EP_rnaseq_WGS_methyl <- EP_rnaseq_WGS_methyl %>%
+  dplyr::mutate(disease_group_supra = ifelse(grepl(paste0(supra, collapse = "|"), tolower(primary_site)), "supratentorial", "undetermined"),
+                disease_group_infra = ifelse(grepl(paste0(infra, collapse = "|"), tolower(primary_site)), "infratentorial", "undetermined"),
+                disease_group_spine = ifelse(grepl(paste0(spine, collapse = "|"), tolower(primary_site)), "spinal", "undetermined"),
+                disease_group = ifelse(disease_group_supra == "supratentorial" & disease_group_infra == "undetermined" & disease_group_spine == "undetermined", "supratentorial",
+                                       ifelse(disease_group_supra == "undetermined" & disease_group_infra == "infratentorial" & disease_group_spine == "undetermined", "infratentorial",
+                                              ifelse(disease_group_supra == "undetermined" & disease_group_infra == "undetermined" & disease_group_spine == "spinal", "spinal",
+                                                     ifelse(disease_group_supra == "undetermined" & disease_group_infra == "undetermined" & disease_group_spine == "undetermined", "undetermined", "mixed"))))) %>%
+  dplyr::arrange(Kids_First_Participant_ID, sample_id) %>%
+  dplyr::select(Kids_First_Participant_ID, sample_id, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA, 
+                Kids_First_Biospecimen_ID_Methyl, CNS_region, primary_site, disease_group, molecular_subtype_methyl)
 
 
 # write out
-readr::write_tsv(EP_rnaseq_WGS, outfile)
+readr::write_tsv(EP_rnaseq_WGS_methyl, outfile)

@@ -93,15 +93,15 @@ viewDataTable(EPN_final %>%
 
 ### Fusion prioritization
 
-We will next prioritize ZFTA (C11orf95) and YAP1 fusions based on evidence for these subgroups from Pajtler. et al. Fig.6
+We will next prioritize ZFTA (formaerly C11orf95) and YAP1 fusions based on evidence for these subgroups from Pajtler. et al. Fig.6
 
 ### ZFTA gene fusions
 
-1. Here we are prioritizing ZFTA (C11orf95) fusions, if any of the ZFTA fusions are present for a sample, it is assigned "EPN, ST ZFTA"
+1. Here we are prioritizing ZFTA (formerly C11orf95) fusions, if any of the ZFTA fusions are present for a sample, it is assigned "EPN, ST ZFTA"
 2. These samples will not be considered for further subgrouping
 
 ```{r}
-st_epn_zfta_fusions = c("C11orf95--RELA", "C11orf95--YAP1", "C11orf95--MAML2")
+st_epn_zfta_fusions = c("ZFTA--RELA", "ZFTA--MAML2")
 df <- EPN_final[,st_epn_zfta_fusions]
 df[] <- lapply(df, as.logical)
 EPN_final$tmp <- apply(df, MARGIN = 1, any)
@@ -151,7 +151,7 @@ viewDataTable(EPN_final %>%
 ### PT_EPN subgroups
 
 1. Here we will assign the PT_EPN_A and PT_EPN_B subgroups to the sample that have not been subgrouped before. 
-2. Based on Pajtler et al. fig. 4, over expression of CXorf67 and TKTL1 along with 1q gain is seen under PT_EPN_A subgroup
+2. Based on Pajtler et al. fig. 4, over expression of EZHIP (formerly CXorf67) and TKTL1 along with 1q gain is seen under PT_EPN_A subgroup
 
 3. Similarly GPBP1 and IFT46 shows over expression along with 6p and 6q loss in PT_EPN_B subgroup
 
@@ -160,12 +160,13 @@ viewDataTable(EPN_final %>%
 EPN_final <- EPN_final %>%
   mutate(subgroup = case_when(
     subgroup == "EPN, To be classified" & `1q_gain` > 0 & TKTL1_expr_zscore > 3 ~  "EPN, PF A",
-    subgroup == "EPN, To be classified" & CXorf67_expr_zscore > 3 ~ "EPN, PF A",
+    subgroup == "EPN, To be classified" & EZHIP_expr_zscore > 3 ~ "EPN, PF A",
     subgroup == "EPN, To be classified"  & CNS_region == "Posterior fossa" & 
-      (H3F3A_HGVSp_Short == "p.K28M" | H3F3B_HGVSp_Short == "p.K28M" | HIST1H3B_HGVSp_Short == "p.K28M" | 
-         HIST1H3C_HGVSp_Short == "p.K28M" | HIST2H3C_HGVSp_Short == "p.K28M") ~ "EPN, PF A",
+      (EPN_final$`H3-3A_HGVSp_Short` == "p.K28M" | EPN_final$`H3-3B_HGVSp_Short` == "p.K28M" | H3C2_HGVSp_Short == "p.K28M" | 
+         H3C3_HGVSp_Short == "p.K28M" | H3C14_HGVSp_Short == "p.K28M") ~ "EPN, PF A",
     subgroup == "EPN, To be classified" & (`6q_loss` > 0 | `6p_loss` > 0) & 
       (GPBP1_expr_zscore > 3 | IFT46_expr_zscore > 3) ~ "EPN, PF B",
+    subgroup == "EPN, To be classified" & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
     TRUE ~ subgroup)
     )
                      
@@ -191,7 +192,7 @@ viewDataTable(EPN_final %>%
 
 <!-- 1. This next part assigns RELA and YAP1 subgroups based on a set of filters.   -->
 <!-- 2. We will not be subgrouping samples that have been subgrouped before. -->
-<!-- 3. We will not be prioritizing the samples here i.e. if a sample has PTEN--TAS2R1 fusion and C11orf95--MAML2 fusion, it will have both ST_EPN_RELA and ST_EPN_YAP1 assigned to it. -->
+<!-- 3. We will not be prioritizing the samples here i.e. if a sample has PTEN--TAS2R1 fusion and ZFTA--MAML2 fusion, it will have both ST_EPN_RELA and ST_EPN_YAP1 assigned to it. -->
 
 
 <!-- ```{r} -->
@@ -203,7 +204,7 @@ viewDataTable(EPN_final %>%
 <!--                                 `9q_loss` > 0 |  -->
 <!--                                 RELA_expr_zscore > 3 |  -->
 <!--                                 L1CAM_expr_zscore > 3) &  -->
-<!--                              (`C11orf95--MAML2` > 0 |  -->
+<!--                              (`ZFTA--MAML2` > 0 |  -->
 <!--                                 `11q_loss` > 0 | -->
 <!--                                 `11q_gain` > 0 | -->
 <!--                                 ARL4D_expr_zscore > 3 | -->
@@ -232,7 +233,7 @@ viewDataTable(EPN_final %>%
 <!-- # now assign where EPN, ST YAP1 is applicable -->
 <!-- EPN_final <- EPN_final %>% -->
 <!--   mutate(subgroup = ifelse(subgroup == "" & -->
-<!--                              (`C11orf95--MAML2` > 0 |  -->
+<!--                              (`ZFTA--MAML2` > 0 |  -->
 <!--                                 `11q_loss` > 0 | -->
 <!--                                 `11q_gain` > 0 | -->
 <!--                                 ARL4D_expr_zscore > 3 | -->
