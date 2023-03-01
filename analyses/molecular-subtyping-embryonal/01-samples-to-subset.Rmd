@@ -76,6 +76,7 @@ path_dx_list <- jsonlite::fromJSON(
 
 ```{r}
 output_file <- file.path(results_dir, "biospecimen_ids_embryonal_subtyping.tsv")
+methly_output_file <- file.path(results_dir, "methyl_embryonal_subtyping.tsv")
 ```
 
 ## Identify relevant samples
@@ -134,9 +135,10 @@ relevant_samples <- histologies_df %>%
 
 relevant_sample_df <- histologies_df %>%
   filter(sample_id %in% relevant_samples,
-         experimental_strategy %in% c("WGS", "WXS"),
+         experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
          sample_type == "Tumor",
-         composition == "Solid Tissue")
+         composition == "Solid Tissue",
+         is.na(RNA_library))
 
 relevant_sample_df
 ```
@@ -222,6 +224,30 @@ histologies_df %>%
   dplyr::filter(!cohort %in% c("GMKF", "TARGET")) %>% 
   dplyr::select(Kids_First_Biospecimen_ID) %>%
   write_tsv(output_file)
+```
+
+### Methylation embryonal subtypes
+
+Write to file high confidence methylation classification subtypes
+
+```{r}
+histologies_df %>% 
+  dplyr::filter(experimental_strategy == "Methylation", 
+                sample_type == "Tumor", 
+                composition == "Solid Tissue",
+                cohort != "TARGET",
+                dkfz_v12_methylation_subclass_score >= 0.8) %>% 
+  dplyr::mutate(molecular_subtype_methyl = 
+                  case_when(dkfz_v12_methylation_subclass == "CNS_NB_FOXR2" ~ "CNS NB-FOXR2",
+                            dkfz_v12_methylation_subclass == "ETMR_C19MC" ~ "ETMR, C19MC-altered",
+                            dkfz_v12_methylation_subclass == "CNS_BCOR_ITD" ~ "CNS BCOR",
+                            dkfz_v12_methylation_subclass == "NET_CXXC5" ~ "CNS HGNET-MN1",
+                            dkfz_v12_methylation_subclass == "ABM_MN1" ~ "CNS HGNET-MN1")) %>% 
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
+  dplyr::distinct() %>% 
+  readr::write_tsv(methly_output_file)
 ```
 
 ## Session Info
