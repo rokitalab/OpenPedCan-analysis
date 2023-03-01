@@ -11,27 +11,38 @@ Identify sample IDs with hallmark _EWSR1_ fusions and subtype as `EWS`
 library("tidyverse")
 ```
 
-### Read in data
+### Set directories and file paths
 
 ```{r}
 # to get root directory
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
-
-# data directory
 dataDir <- file.path(root_dir, "data")
+analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-EWS")
+results_dir <- file.path(analysis_dir, "results")
 
+# create output file
+ews_file <- file.path(results_dir, "EWS_results.tsv")
+```
+
+# Read in data
+```{r read in data}
 # histology file
-clinical <- readr::read_tsv(file.path(dataDir, "histologies-base.tsv"),
-                            guess_max = 100000) %>%
-  select(Kids_First_Biospecimen_ID,
-         Kids_First_Participant_ID, 
-         experimental_strategy, 
-         pathology_diagnosis,
-         sample_id,
-         sample_type,
-         cohort)
+clinical <- readr::read_tsv(file.path(dataDir, "histologies-base.tsv"), guess_max = 100000) %>%
+  filter(cohort %in% c("PBTA", "DGD"))
+
+# ewings samples or samples with EWS via methylation
+ews_clinical <- clinical %>%
+  filter(pathology_diagnosis == "Ewings Sarcoma" | (dkfz_v12_methylation_subclass == "EWS" & dkfz_v12_methylation_subclass_score >= 0.8))
+
+# what are the path diagnoses here? Non-EWS should be reviewed by pathology
+ews_clinical %>%
+  count(pathology_diagnosis) %>%
+  arrange(desc(n))
+
+```
 
 # get ewings fusion calls from fusion-summary results file
+```{r fusion bsids}
 ewings_foi_bsids <- readr::read_tsv(
   file.path(root_dir, 
             "data",
@@ -53,81 +64,77 @@ if (!dir.exists(results_dir)) {
 # get a vector of biospecimen IDs for those biospecimens that should be subtyped
 has_ews_fusion <- rowSums(ewings_foi_bsids[, -1]) > 0
 
-# get rna sample_id which have hallmark fusion 
-has_ews_fusion_sampleid <- ewings_foi_bsids %>%
+# get bs_ids which have hallmark fusion 
+fusion_bsid <- ewings_foi_bsids %>%
   filter(has_ews_fusion) %>%
   left_join(clinical) %>%
-  pull(sample_id)
+  filter(cohort %in% c("PBTA", "DGD")) %>%
+  select(Kids_First_Biospecimen_ID, sample_id, composition) %>%
+  mutate(molecular_subtype = "EWS",
+         id = paste(sample_id, composition, sep = "_"))
+
+# subtype map 
+subtype_map <- fusion_bsid %>%
+  select(id, molecular_subtype) %>%
+  unique()
 
 ```
 
-### Get RNA-Seq where pathology_diagnosis is Ewings Sarcoma OR has Ewings Sarcoma _EWSR1_ fusion
+# get methylation EWS
+```{r methylation subtypes}
+# get all methyl samples
+all_methyl <- clinical %>%
+  filter(experimental_strategy == "Methylation") %>%
+  pull(Kids_First_Biospecimen_ID)
+
+# we will add methyl subtypes 
+methyl_bs_ids_with_subtypes <- clinical %>%
+  filter(experimental_strategy == "Methylation",
+         dkfz_v12_methylation_subclass == "EWS" & dkfz_v12_methylation_subclass_score >= 0.8) %>%
+  # reformat classifier result per https://www.molecularneuropathology.org/mnp/classifiers/11
+  mutate(molecular_subtype_methyl = dkfz_v12_methylation_subclass) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype_methyl, id) 
+
+# methyl map
+methyl_map <- methyl_bs_ids_with_subtypes %>%
+  select(id, molecular_subtype_methyl) %>%
+  unique()
+
+
+```
+
+### Get other samples matching above ids
 
 ```{r}
 
-ews_rnaseq <- clinical %>%
-  # pathology_diagnosis is Ewings Sarcoma
-  filter(str_detect(pathology_diagnosis,"Ewings Sarcoma")|
-           # OR sample_id associated with the RNA sample with hallmark fusion
-         sample_id %in% has_ews_fusion_sampleid,
-         experimental_strategy == "RNA-Seq") %>%
-  filter(!cohort %in% c("TARGET", "GMKF")) %>% 
-  select(Kids_First_Biospecimen_ID, 
-         Kids_First_Participant_ID, 
-         sample_id) 
-```
-
-### Get WGS samples where pathology_diagnosis is Ewings Sarcoma OR has sample_id associated with rna-seq sample with Ewings Sarcoma _EWSR1_ fusion
-
-```{r}
-
-ews_wgs <- clinical %>%
-  # pathology_diagnosis is Ewings Sarcoma
-  filter(str_detect(pathology_diagnosis,"Ewings Sarcoma")|
-         # OR sample_id associated with the RNA sample with hallmark fusion
-         sample_id %in% has_ews_fusion_sampleid,
-         # filter to Tumor since we have Normal WGS as well
-         sample_type == "Tumor",
-         experimental_strategy == "WGS") %>%
-  filter(!cohort %in% c("TARGET", "GMKF")) %>% 
-  select(Kids_First_Biospecimen_ID, 
-         Kids_First_Participant_ID, 
-         sample_id) 
+all_subtypes <- ews_clinical %>%
+  select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, pathology_diagnosis) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  left_join(subtype_map) %>%
+  left_join(methyl_map) %>%
+  # make subtype EWS if diagnosis EWS or methylation was EWS
+  mutate(molecular_subtype = case_when(pathology_diagnosis == "Ewings Sarcoma" ~ "EWS",
+                                       TRUE ~ molecular_subtype_methyl))
 
 ```
 
-
-### Join DNA and RNA sample together to have molecular subtyping per "Kids_First_Participant_ID", and "sample_id"
-
-```{r}
-
-ews_subtype <- ews_rnaseq %>% 
-  # merge DNA and RNA samples by sample_id
-  full_join(ews_wgs,
-             by = c("Kids_First_Participant_ID",
-                    "sample_id"),
-             suffix = c("_RNA", "_DNA")) %>%
-  select(Kids_First_Participant_ID,
-         Kids_First_Biospecimen_ID_RNA,
-         Kids_First_Biospecimen_ID_DNA,
-         sample_id,
-         everything()) %>%
-  dplyr::mutate(molecular_subtype="EWS")
-```
-
-### List which samples are molecular_subtype == "EWS" or "EWS, To be classified"
-
-```{r}
-ews_subtype 
-```
+#### To investigate!
+BS_ER9RMSVG - this sample has MB diagnosis. It was To be classified via MB subtyping.
+BS_SRW0DH5G - this sample has Cranio diagnosis. It was To be classified via Cranio subtyping.
+These may be mis-diagnoses. Will need to confirm with pathology.
 
 #### Save to file
 
 ```{r}
-ews_subtype %>%
-  readr::write_tsv(file.path(results_dir, "EWS_results.tsv"))
+all_subtypes %>%
+  readr::write_tsv(ews_file)
 ```
 
+# get session info
+```{r}
+sessionInfo()
+```
 
 
 
