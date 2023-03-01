@@ -30,13 +30,15 @@ EP = pbta_histologies %>%
 
 # filter for RNA samples
 EP_rnaseq_samples = EP %>%
-  filter(experimental_strategy == "RNA-Seq") %>%
+  filter(experimental_strategy == "RNA-Seq" | experimental_strategy == "Targeted Sequencing"
+         & (!is.na(RNA_library) & experimental_strategy == "Targeted Sequencing")) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_RNA" = "Kids_First_Biospecimen_ID")
 
 # filter for DNA samples 
 WGS_dnaseqsamples = EP %>%
-  filter(experimental_strategy == "WGS") %>%
+  filter(experimental_strategy == "WGS" | experimental_strategy == "WXS" | experimental_strategy == "Targeted Sequencing",
+         is.na(RNA_library)) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, ) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_DNA" = "Kids_First_Biospecimen_ID")
 
