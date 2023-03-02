@@ -39,7 +39,7 @@ EP_rnaseq_samples = EP %>%
 WGS_dnaseqsamples = EP %>%
   filter(experimental_strategy == "WGS" | experimental_strategy == "WXS" | experimental_strategy == "Targeted Sequencing",
          is.na(RNA_library)) %>%
-  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, ) %>%
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_DNA" = "Kids_First_Biospecimen_ID")
 
 # filter for Methyl samples 
