@@ -67,22 +67,31 @@ neurocytoma_from_pathology_diagnosis$primary_site %>% unique()
 
 ## Subtyping Neurocytoma samples based on primary site 
 
-The values are only "Ventricles" and "Parietal Lobe" so we can directly check if primary_site== "Ventricles" ~ "CNC" and if primary_site != "Ventricles" ~ "EVN"
+The values are only "Ventricles", "Parietal Lobe", or "Frontal Lobe;Temporal Lobe" so we can directly check if primary_site== "Ventricles" ~ "CNC" and if primary_site != "Ventricles" ~ "EVN"
 
 ```{r}
+# Get methylation subtypes
+neurocytoma_subtype <- neurocytoma_from_pathology_diagnosis %>% 
+  filter(experimental_strategy == "Methylation") %>%
+  mutate(methyl_subtype = case_when(dkfz_v12_methylation_subclass == "EVNCYT" ~ "EVN",
+                                           dkfz_v12_methylation_subclass == "CN" ~ "CNC",
+                                           TRUE ~ NA_character_)) %>%
+  select(sample_id, composition, methyl_subtype) %>%
+  unique()
+  
 
 neurocytoma_subtype <- neurocytoma_from_pathology_diagnosis %>% 
   dplyr::mutate(molecular_subtype= 
-                  # primary_site == "Ventricles", then molecular_subtype == CNC (central neurocytoma) 
+                  # primary_site == "Ventricles", 
+                  # then molecular_subtype == CNC (central neurocytoma) 
                   case_when(primary_site == "Ventricles" ~ "CNC",
-                  # primary_site != "Ventricles", then molecular_subtype == EVN (extraventricular neurocytoma)       
-                            primary_site != "Ventricles" ~ "EVN"
-                            )
-  ) %>%
-  dplyr::select(Kids_First_Participant_ID,
-                sample_id,
-                Kids_First_Biospecimen_ID,
-                molecular_subtype) %>%
+                  # primary_site != "Ventricles", 
+                  # then molecular_subtype == EVN (extraventricular neurocytoma)       
+                            primary_site != "Ventricles" ~ "EVN")) %>%
+  left_join(neurocytoma_subtype) %>%
+  dplyr::select(Kids_First_Participant_ID, sample_id, composition, Kids_First_Biospecimen_ID,
+                molecular_subtype, methyl_subtype) %>%
+  arrange(sample_id) %>%
   write_tsv(outputfile)
 
 ```

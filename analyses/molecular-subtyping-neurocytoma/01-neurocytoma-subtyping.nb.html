@@ -2951,18 +2951,12 @@ div.tocify {
 <!-- rnb-source-begin eyJkYXRhIjoibGlicmFyeSh0aWR5dmVyc2UpIn0= -->
 <pre class="r"><code>library(tidyverse)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICd0aWJibGUnOlxuICBtZXRob2QgICAgIGZyb20gIFxuICBmb3JtYXQudGJsIHBpbGxhclxuICBwcmludC50YmwgIHBpbGxhclxuIn0= -->
-<pre><code>Registered S3 methods overwritten by 'tibble':
-  method     from  
-  format.tbl pillar
-  print.tbl  pillar</code></pre>
-<!-- rnb-message-end -->
 <!-- rnb-message-begin eyJkYXRhIjoi4pSA4pSAIEF0dGFjaGluZyBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDEuMi4xIOKUgOKUgFxuIn0= -->
 <pre><code>── Attaching packages ────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
 <!-- rnb-message-end -->
-<!-- rnb-message-begin eyJkYXRhIjoi4pyUIGdncGxvdDIgMy4yLjAgICAgIOKclCBwdXJyciAgIDAuMy4yXG7inJQgdGliYmxlICAyLjEuMyAgICAg4pyUIGRwbHlyICAgMS4wLjdcbuKclCB0aWR5ciAgIDAuOC4zICAgICDinJQgc3RyaW5nciAxLjQuMFxu4pyUIHJlYWRyICAgMS4zLjEgICAgIOKclCBmb3JjYXRzIDAuNC4wXG4ifQ== -->
+<!-- rnb-message-begin eyJkYXRhIjoi4pyUIGdncGxvdDIgMy4yLjAgICAgIOKclCBwdXJyciAgIDAuMy4yXG7inJQgdGliYmxlICAyLjEuMyAgICAg4pyUIGRwbHlyICAgMC44LjNcbuKclCB0aWR5ciAgIDAuOC4zICAgICDinJQgc3RyaW5nciAxLjQuMFxu4pyUIHJlYWRyICAgMS4zLjEgICAgIOKclCBmb3JjYXRzIDAuNC4wXG4ifQ== -->
 <pre><code>✔ ggplot2 3.2.0     ✔ purrr   0.3.2
-✔ tibble  2.1.3     ✔ dplyr   1.0.7
+✔ tibble  2.1.3     ✔ dplyr   0.8.3
 ✔ tidyr   0.8.3     ✔ stringr 1.4.0
 ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
 <!-- rnb-message-end -->
@@ -2982,41 +2976,44 @@ div.tocify {
 <pre class="r"><code>data_dir &lt;- file.path(&quot;..&quot;, &quot;..&quot;, &quot;data&quot;)
 histologies_df &lt;- read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgaW50ZWdyYXRlZF9kaWFnbm9zaXMgPSBjb2xfbG9naWNhbCgpLFxuICBPU19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBhZ2VfbGFzdF91cGRhdGVfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgbW9sZWN1bGFyX3N1YnR5cGUgPSBjb2xfbG9naWNhbCgpLFxuICBjbnNfbWV0aHlsYXRpb25fY2xhc3Nfc2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIGNuc19tZXRoeWxhdGlvbl9zdWJjbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgUkZfcHVyaXR5X0FCU09MVVRFID0gY29sX2RvdWJsZSgpLFxuICBSRl9wdXJpdHlfRVNUSU1BVEUgPSBjb2xfZG91YmxlKCksXG4gIFJGX3B1cml0eV9MVU1QID0gY29sX2RvdWJsZSgpLFxuICBoYXJtb25pemVkX2RpYWdub3NpcyA9IGNvbF9sb2dpY2FsKCksXG4gIE5vdGVzID0gY29sX2xvZ2ljYWwoKSxcbiAgZ3RleF9ncm91cCA9IGNvbF9sb2dpY2FsKCksXG4gIGd0ZXhfc3ViZ3JvdXAgPSBjb2xfbG9naWNhbCgpLFxuICBnZXJtbGluZV9zZXhfZXN0aW1hdGUgPSBjb2xfbG9naWNhbCgpLFxuICBub3JtYWxfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9wbG9pZHkgPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgYWdlX2F0X2RpYWdub3Npc19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBpbnRlZ3JhdGVkX2RpYWdub3NpcyA9IGNvbF9sb2dpY2FsKCksXG4gIE9TX2RheXMgPSBjb2xfZG91YmxlKCksXG4gIGFnZV9sYXN0X3VwZGF0ZV9kYXlzID0gY29sX2RvdWJsZSgpLFxuICBtb2xlY3VsYXJfc3VidHlwZSA9IGNvbF9sb2dpY2FsKCksXG4gIGd0ZXhfZ3JvdXAgPSBjb2xfbG9naWNhbCgpLFxuICBndGV4X3N1Ymdyb3VwID0gY29sX2xvZ2ljYWwoKSxcbiAgbm9ybWFsX2ZyYWN0aW9uID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9mcmFjdGlvbiA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfcGxvaWR5ID0gY29sX2RvdWJsZSgpLFxuICBhZ2VfYXRfZXZlbnRfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2F0X2NoZW1vX3N0YXJ0ID0gY29sX2RvdWJsZSgpLFxuICBhZ2VfYXRfcmFkaWF0aW9uX3N0YXJ0ID0gY29sX2RvdWJsZSgpLFxuICBjZWxsX2xpbmVfcGFzc2FnZSA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb25fUkZwdXJpZnlfQUJTT0xVVEUgPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uX1JGcHVyaWZ5X0VTVElNQVRFID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9mcmFjdGlvbl9MVU1QID0gY29sX2RvdWJsZSgpLFxuICBka2Z6X3YxMV9tZXRoeWxhdGlvbl9zdWJjbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgZGtmel92MTJfbWV0aHlsYXRpb25fc3ViY2xhc3Nfc2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIGRrZnpfdjEyX21ldGh5bGF0aW9uX21nbXRfZXN0aW1hdGVkID0gY29sX2RvdWJsZSgpXG4pXG4ifQ== -->
 <pre><code>Parsed with column specification:
 cols(
   .default = col_character(),
+  age_at_diagnosis_days = col_double(),
   integrated_diagnosis = col_logical(),
   OS_days = col_double(),
   age_last_update_days = col_double(),
   molecular_subtype = col_logical(),
-  cns_methylation_class_score = col_double(),
-  cns_methylation_subclass_score = col_double(),
-  RF_purity_ABSOLUTE = col_double(),
-  RF_purity_ESTIMATE = col_double(),
-  RF_purity_LUMP = col_double(),
-  harmonized_diagnosis = col_logical(),
-  Notes = col_logical(),
   gtex_group = col_logical(),
   gtex_subgroup = col_logical(),
-  germline_sex_estimate = col_logical(),
   normal_fraction = col_double(),
   tumor_fraction = col_double(),
-  tumor_ploidy = col_double()
+  tumor_ploidy = col_double(),
+  age_at_event_days = col_double(),
+  age_at_chemo_start = col_double(),
+  age_at_radiation_start = col_double(),
+  cell_line_passage = col_double(),
+  tumor_fraction_RFpurify_ABSOLUTE = col_double(),
+  tumor_fraction_RFpurify_ESTIMATE = col_double(),
+  tumor_fraction_LUMP = col_double(),
+  dkfz_v11_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_mgmt_estimated = col_double()
 )</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-message-begin eyJkYXRhIjoiU2VlIHNwZWMoLi4uKSBmb3IgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbnMuXG4ifQ== -->
 <pre><code>See spec(...) for full column specifications.</code></pre>
 <!-- rnb-message-end -->
-<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZzogNDAxNDAgcGFyc2luZyBmYWlsdXJlcy5cbiByb3cgICAgICAgICAgICAgICAgICAgY29sICAgICAgICAgICBleHBlY3RlZCBhY3R1YWwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxlXG4zMTk2IGdlcm1saW5lX3NleF9lc3RpbWF0ZSAxLzAvVC9GL1RSVUUvRkFMU0UgRmVtYWxlICcuLi8uLi9kYXRhL2hpc3RvbG9naWVzLWJhc2UudHN2J1xuMzE5NyBnZXJtbGluZV9zZXhfZXN0aW1hdGUgMS8wL1QvRi9UUlVFL0ZBTFNFIEZlbWFsZSAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbjMxOTggZ2VybWxpbmVfc2V4X2VzdGltYXRlIDEvMC9UL0YvVFJVRS9GQUxTRSBNYWxlICAgJy4uLy4uL2RhdGEvaGlzdG9sb2dpZXMtYmFzZS50c3YnXG4zMTk5IGdlcm1saW5lX3NleF9lc3RpbWF0ZSAxLzAvVC9GL1RSVUUvRkFMU0UgRmVtYWxlICcuLi8uLi9kYXRhL2hpc3RvbG9naWVzLWJhc2UudHN2J1xuMzIwMCBnZXJtbGluZV9zZXhfZXN0aW1hdGUgMS8wL1QvRi9UUlVFL0ZBTFNFIE1hbGUgICAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbi4uLi4gLi4uLi4uLi4uLi4uLi4uLi4uLi4uIC4uLi4uLi4uLi4uLi4uLi4uLiAuLi4uLi4gLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uXG5TZWUgcHJvYmxlbXMoLi4uKSBmb3IgbW9yZSBkZXRhaWxzLlxuIn0= -->
-<pre><code>Warning: 40140 parsing failures.
- row                   col           expected actual                              file
-3196 germline_sex_estimate 1/0/T/F/TRUE/FALSE Female '../../data/histologies-base.tsv'
-3197 germline_sex_estimate 1/0/T/F/TRUE/FALSE Female '../../data/histologies-base.tsv'
-3198 germline_sex_estimate 1/0/T/F/TRUE/FALSE Male   '../../data/histologies-base.tsv'
-3199 germline_sex_estimate 1/0/T/F/TRUE/FALSE Female '../../data/histologies-base.tsv'
-3200 germline_sex_estimate 1/0/T/F/TRUE/FALSE Male   '../../data/histologies-base.tsv'
-.... ..................... .................. ...... .................................
+<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZzogMzQ3NjggcGFyc2luZyBmYWlsdXJlcy5cbiAgcm93ICAgICAgICAgICAgICAgY29sICAgICAgICAgICAgICAgZXhwZWN0ZWQgIGFjdHVhbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGVcbiAzNzgxIGNlbGxfbGluZV9wYXNzYWdlIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgLUEgICAgICAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbiA1Njc5IGNlbGxfbGluZV9wYXNzYWdlIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgLUIgICAgICAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbjEwMTQwIGNlbGxfbGluZV9wYXNzYWdlIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgLUEgICAgICAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbjEyNTczIGNlbGxfbGluZV9wYXNzYWdlIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgLUIgICAgICAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbjEzMTcyIGd0ZXhfZ3JvdXAgICAgICAgIDEvMC9UL0YvVFJVRS9GQUxTRSAgICAgQWRpcG9zZSAnLi4vLi4vZGF0YS9oaXN0b2xvZ2llcy1iYXNlLnRzdidcbi4uLi4uIC4uLi4uLi4uLi4uLi4uLi4uIC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gLi4uLi4uLiAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi5cblNlZSBwcm9ibGVtcyguLi4pIGZvciBtb3JlIGRldGFpbHMuXG4ifQ== -->
+<pre><code>Warning: 34768 parsing failures.
+  row               col               expected  actual                              file
+ 3781 cell_line_passage no trailing characters -A      '../../data/histologies-base.tsv'
+ 5679 cell_line_passage no trailing characters -B      '../../data/histologies-base.tsv'
+10140 cell_line_passage no trailing characters -A      '../../data/histologies-base.tsv'
+12573 cell_line_passage no trailing characters -B      '../../data/histologies-base.tsv'
+13172 gtex_group        1/0/T/F/TRUE/FALSE     Adipose '../../data/histologies-base.tsv'
+..... ................. ...................... ....... .................................
 See problems(...) for more details.</code></pre>
 <!-- rnb-warning-end -->
 <!-- rnb-chunk-end -->
@@ -3055,7 +3052,7 @@ neurocytoma_from_pathology_free_text_diagnosis %&gt;%
 <!-- rnb-source-end -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sample_id"],"name":[2],"type":["chr"],"align":["left"]},{"label":["aliquot_id"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Kids_First_Participant_ID"],"name":[4],"type":["chr"],"align":["left"]},{"label":["experimental_strategy"],"name":[5],"type":["chr"],"align":["left"]},{"label":["sample_type"],"name":[6],"type":["chr"],"align":["left"]},{"label":["composition"],"name":[7],"type":["chr"],"align":["left"]},{"label":["tumor_descriptor"],"name":[8],"type":["chr"],"align":["left"]},{"label":["primary_site"],"name":[9],"type":["chr"],"align":["left"]},{"label":["reported_gender"],"name":[10],"type":["chr"],"align":["left"]},{"label":["race"],"name":[11],"type":["chr"],"align":["left"]},{"label":["ethnicity"],"name":[12],"type":["chr"],"align":["left"]},{"label":["age_at_diagnosis_days"],"name":[13],"type":["chr"],"align":["left"]},{"label":["pathology_diagnosis"],"name":[14],"type":["chr"],"align":["left"]},{"label":["integrated_diagnosis"],"name":[15],"type":["lgl"],"align":["right"]},{"label":["RNA_library"],"name":[16],"type":["chr"],"align":["left"]},{"label":["OS_days"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["OS_status"],"name":[18],"type":["chr"],"align":["left"]},{"label":["PFS_days"],"name":[19],"type":["chr"],"align":["left"]},{"label":["cohort"],"name":[20],"type":["chr"],"align":["left"]},{"label":["age_last_update_days"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["seq_center"],"name":[22],"type":["chr"],"align":["left"]},{"label":["cancer_predispositions"],"name":[23],"type":["chr"],"align":["left"]},{"label":["molecular_subtype"],"name":[24],"type":["lgl"],"align":["right"]},{"label":["pathology_free_text_diagnosis"],"name":[25],"type":["chr"],"align":["left"]},{"label":["cohort_participant_id"],"name":[26],"type":["chr"],"align":["left"]},{"label":["extent_of_tumor_resection"],"name":[27],"type":["chr"],"align":["left"]},{"label":["cns_methylation_class"],"name":[28],"type":["chr"],"align":["left"]},{"label":["cns_methylation_subclass"],"name":[29],"type":["chr"],"align":["left"]},{"label":["cns_methylation_class_score"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["cns_methylation_subclass_score"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["RF_purity_ABSOLUTE"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["RF_purity_ESTIMATE"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["RF_purity_LUMP"],"name":[34],"type":["dbl"],"align":["right"]},{"label":["CNS_region"],"name":[35],"type":["chr"],"align":["left"]},{"label":["broad_histology"],"name":[36],"type":["chr"],"align":["left"]},{"label":["short_histology"],"name":[37],"type":["chr"],"align":["left"]},{"label":["harmonized_diagnosis"],"name":[38],"type":["lgl"],"align":["right"]},{"label":["Notes"],"name":[39],"type":["lgl"],"align":["right"]},{"label":["gtex_group"],"name":[40],"type":["lgl"],"align":["right"]},{"label":["gtex_subgroup"],"name":[41],"type":["lgl"],"align":["right"]},{"label":["germline_sex_estimate"],"name":[42],"type":["lgl"],"align":["right"]},{"label":["normal_fraction"],"name":[43],"type":["dbl"],"align":["right"]},{"label":["tumor_fraction"],"name":[44],"type":["dbl"],"align":["right"]},{"label":["tumor_ploidy"],"name":[45],"type":["dbl"],"align":["right"]}],"data":[],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sample_id"],"name":[2],"type":["chr"],"align":["left"]},{"label":["aliquot_id"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Kids_First_Participant_ID"],"name":[4],"type":["chr"],"align":["left"]},{"label":["experimental_strategy"],"name":[5],"type":["chr"],"align":["left"]},{"label":["sample_type"],"name":[6],"type":["chr"],"align":["left"]},{"label":["composition"],"name":[7],"type":["chr"],"align":["left"]},{"label":["tumor_descriptor"],"name":[8],"type":["chr"],"align":["left"]},{"label":["primary_site"],"name":[9],"type":["chr"],"align":["left"]},{"label":["reported_gender"],"name":[10],"type":["chr"],"align":["left"]},{"label":["race"],"name":[11],"type":["chr"],"align":["left"]},{"label":["ethnicity"],"name":[12],"type":["chr"],"align":["left"]},{"label":["age_at_diagnosis_days"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["pathology_diagnosis"],"name":[14],"type":["chr"],"align":["left"]},{"label":["integrated_diagnosis"],"name":[15],"type":["lgl"],"align":["right"]},{"label":["RNA_library"],"name":[16],"type":["chr"],"align":["left"]},{"label":["OS_days"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["OS_status"],"name":[18],"type":["chr"],"align":["left"]},{"label":["PFS_days"],"name":[19],"type":["chr"],"align":["left"]},{"label":["cohort"],"name":[20],"type":["chr"],"align":["left"]},{"label":["age_last_update_days"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["seq_center"],"name":[22],"type":["chr"],"align":["left"]},{"label":["cancer_predispositions"],"name":[23],"type":["chr"],"align":["left"]},{"label":["molecular_subtype"],"name":[24],"type":["lgl"],"align":["right"]},{"label":["pathology_free_text_diagnosis"],"name":[25],"type":["chr"],"align":["left"]},{"label":["cohort_participant_id"],"name":[26],"type":["chr"],"align":["left"]},{"label":["extent_of_tumor_resection"],"name":[27],"type":["chr"],"align":["left"]},{"label":["CNS_region"],"name":[28],"type":["chr"],"align":["left"]},{"label":["broad_histology"],"name":[29],"type":["chr"],"align":["left"]},{"label":["short_histology"],"name":[30],"type":["chr"],"align":["left"]},{"label":["harmonized_diagnosis"],"name":[31],"type":["chr"],"align":["left"]},{"label":["Notes"],"name":[32],"type":["chr"],"align":["left"]},{"label":["gtex_group"],"name":[33],"type":["lgl"],"align":["right"]},{"label":["gtex_subgroup"],"name":[34],"type":["lgl"],"align":["right"]},{"label":["germline_sex_estimate"],"name":[35],"type":["chr"],"align":["left"]},{"label":["normal_fraction"],"name":[36],"type":["dbl"],"align":["right"]},{"label":["tumor_fraction"],"name":[37],"type":["dbl"],"align":["right"]},{"label":["tumor_ploidy"],"name":[38],"type":["dbl"],"align":["right"]},{"label":["age_at_event_days"],"name":[39],"type":["dbl"],"align":["right"]},{"label":["clinical_status_at_event"],"name":[40],"type":["chr"],"align":["left"]},{"label":["age_at_chemo_start"],"name":[41],"type":["dbl"],"align":["right"]},{"label":["age_at_radiation_start"],"name":[42],"type":["dbl"],"align":["right"]},{"label":["cell_line_composition"],"name":[43],"type":["chr"],"align":["left"]},{"label":["cell_line_passage"],"name":[44],"type":["dbl"],"align":["right"]},{"label":["tumor_fraction_RFpurify_ABSOLUTE"],"name":[45],"type":["dbl"],"align":["right"]},{"label":["tumor_fraction_RFpurify_ESTIMATE"],"name":[46],"type":["dbl"],"align":["right"]},{"label":["tumor_fraction_LUMP"],"name":[47],"type":["dbl"],"align":["right"]},{"label":["dkfz_v11_methylation_subclass"],"name":[48],"type":["chr"],"align":["left"]},{"label":["dkfz_v11_methylation_subclass_score"],"name":[49],"type":["dbl"],"align":["right"]},{"label":["dkfz_v12_methylation_subclass"],"name":[50],"type":["chr"],"align":["left"]},{"label":["dkfz_v12_methylation_subclass_score"],"name":[51],"type":["dbl"],"align":["right"]},{"label":["dkfz_v12_methylation_mgmt_status"],"name":[52],"type":["chr"],"align":["left"]},{"label":["dkfz_v12_methylation_mgmt_estimated"],"name":[53],"type":["dbl"],"align":["right"]}],"data":[],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-chunk-end -->
@@ -3067,44 +3064,57 @@ neurocytoma_from_pathology_free_text_diagnosis %&gt;%
 <!-- rnb-source-begin eyJkYXRhIjoibmV1cm9jeXRvbWFfZnJvbV9wYXRob2xvZ3lfZGlhZ25vc2lzJHByaW1hcnlfc2l0ZSAlPiUgdW5pcXVlKCkifQ== -->
 <pre class="r"><code>neurocytoma_from_pathology_diagnosis$primary_site %&gt;% unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUGFyaWV0YWwgTG9iZVwiICAgICAgICAgICAgICBcIlZlbnRyaWNsZXNcIiAgICAgICAgICAgICAgICBcblszXSBcIkZyb250YWwgTG9iZTtUZW1wb3JhbCBMb2JlXCJcbiJ9 -->
-<pre><code>[1] &quot;Parietal Lobe&quot;              &quot;Ventricles&quot;                
-[3] &quot;Frontal Lobe;Temporal Lobe&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRnJvbnRhbCBMb2JlO1RlbXBvcmFsIExvYmVcIiBcIlBhcmlldGFsIExvYmVcIiAgICAgICAgICAgICBcblszXSBcIlZlbnRyaWNsZXNcIiAgICAgICAgICAgICAgICBcbiJ9 -->
+<pre><code>[1] &quot;Frontal Lobe;Temporal Lobe&quot; &quot;Parietal Lobe&quot;             
+[3] &quot;Ventricles&quot;                </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjpbIlBhcmlldGFsIExvYmVcbiIsIlZlbnRyaWNsZXNcbiIsIkZyb250YWwgTG9iZTtUZW1wb3JhbCBMb2JlXG4iXX0= -->
-<pre><code>Parietal Lobe
+<!-- rnb-output-begin eyJkYXRhIjpbIkZyb250YWwgTG9iZTtUZW1wb3JhbCBMb2JlXG4iLCJQYXJpZXRhbCBMb2JlXG4iLCJWZW50cmljbGVzXG4iXX0= -->
+<pre><code>Frontal Lobe;Temporal Lobe
 
-Ventricles
+Parietal Lobe
 
-Frontal Lobe;Temporal Lobe</code></pre>
+Ventricles</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="subtyping-neurocytoma-samples-based-on-primary-site" class="section level2">
 <h2>Subtyping Neurocytoma samples based on primary site</h2>
-<p>The values are only “Ventricles” and “Parietal Lobe” so we can directly check if primary_site== “Ventricles” ~ “CNC” and if primary_site != “Ventricles” ~ “EVN”</p>
+<p>The values are only “Ventricles”, “Parietal Lobe”, or “Frontal Lobe;Temporal Lobe” so we can directly check if primary_site== “Ventricles” ~ “CNC” and if primary_site != “Ventricles” ~ “EVN”</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoibmV1cm9jeXRvbWFfc3VidHlwZSA8LSBuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9kaWFnbm9zaXMgJT4lIFxuICBkcGx5cjo6bXV0YXRlKG1vbGVjdWxhcl9zdWJ0eXBlPSBcbiAgICAgICAgICAgICAgICAgICMgcHJpbWFyeV9zaXRlID09IFwiVmVudHJpY2xlc1wiLCB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IENOQyAoY2VudHJhbCBuZXVyb2N5dG9tYSkgXG4gICAgICAgICAgICAgICAgICBjYXNlX3doZW4ocHJpbWFyeV9zaXRlID09IFwiVmVudHJpY2xlc1wiIH4gXCJDTkNcIixcbiAgICAgICAgICAgICAgICAgICMgcHJpbWFyeV9zaXRlICE9IFwiVmVudHJpY2xlc1wiLCB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IEVWTiAoZXh0cmF2ZW50cmljdWxhciBuZXVyb2N5dG9tYSkgICAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcHJpbWFyeV9zaXRlICE9IFwiVmVudHJpY2xlc1wiIH4gXCJFVk5cIlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIClcbiAgKSAlPiVcbiAgZHBseXI6OnNlbGVjdChLaWRzX0ZpcnN0X1BhcnRpY2lwYW50X0lELFxuICAgICAgICAgICAgICAgIHNhbXBsZV9pZCxcbiAgICAgICAgICAgICAgICBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELFxuICAgICAgICAgICAgICAgIG1vbGVjdWxhcl9zdWJ0eXBlKSAlPiVcbiAgd3JpdGVfdHN2KG91dHB1dGZpbGUpIn0= -->
-<pre class="r"><code>neurocytoma_subtype &lt;- neurocytoma_from_pathology_diagnosis %&gt;% 
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgR2V0IG1ldGh5bGF0aW9uIHN1YnR5cGVzIiwibmV1cm9jeXRvbWFfc3VidHlwZSA8LSBuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9kaWFnbm9zaXMgJT4lIFxuICBmaWx0ZXIoZXhwZXJpbWVudGFsX3N0cmF0ZWd5ID09IFwiTWV0aHlsYXRpb25cIikgJT4lXG4gIG11dGF0ZShtZXRoeWxfc3VidHlwZSA9IGNhc2Vfd2hlbihka2Z6X3YxMl9tZXRoeWxhdGlvbl9zdWJjbGFzcyA9PSBcIkVWTkNZVFwiIH4gXCJFVk5cIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBka2Z6X3YxMl9tZXRoeWxhdGlvbl9zdWJjbGFzcyA9PSBcIkNOXCIgfiBcIkNOQ1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRSVUUgfiBOQV9jaGFyYWN0ZXJfKSkgJT4lXG4gIHNlbGVjdChzYW1wbGVfaWQsIGNvbXBvc2l0aW9uLCBtZXRoeWxfc3VidHlwZSkgJT4lXG4gIHVuaXF1ZSgpIiwiICAiLCIiLCJuZXVyb2N5dG9tYV9zdWJ0eXBlIDwtIG5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2RpYWdub3NpcyAlPiUgXG4gIGRwbHlyOjptdXRhdGUobW9sZWN1bGFyX3N1YnR5cGU9IFxuICAgICAgICAgICAgICAgICAgIyBwcmltYXJ5X3NpdGUgPT0gXCJWZW50cmljbGVzXCIsIFxuICAgICAgICAgICAgICAgICAgIyB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IENOQyAoY2VudHJhbCBuZXVyb2N5dG9tYSkgXG4gICAgICAgICAgICAgICAgICBjYXNlX3doZW4ocHJpbWFyeV9zaXRlID09IFwiVmVudHJpY2xlc1wiIH4gXCJDTkNcIixcbiAgICAgICAgICAgICAgICAgICMgcHJpbWFyeV9zaXRlICE9IFwiVmVudHJpY2xlc1wiLCBcbiAgICAgICAgICAgICAgICAgICMgdGhlbiBtb2xlY3VsYXJfc3VidHlwZSA9PSBFVk4gKGV4dHJhdmVudHJpY3VsYXIgbmV1cm9jeXRvbWEpICAgICAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHByaW1hcnlfc2l0ZSAhPSBcIlZlbnRyaWNsZXNcIiB+IFwiRVZOXCIpKSAlPiVcbiAgbGVmdF9qb2luKG5ldXJvY3l0b21hX3N1YnR5cGUpICU+JVxuICBkcGx5cjo6c2VsZWN0KEtpZHNfRmlyc3RfUGFydGljaXBhbnRfSUQsIHNhbXBsZV9pZCwgY29tcG9zaXRpb24sIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsXG4gICAgICAgICAgICAgICAgbW9sZWN1bGFyX3N1YnR5cGUsIG1ldGh5bF9zdWJ0eXBlKSAlPiVcbiAgYXJyYW5nZShzYW1wbGVfaWQpICU+JVxuICB3cml0ZV90c3Yob3V0cHV0ZmlsZSkiXX0= -->
+<pre class="r"><code># Get methylation subtypes
+neurocytoma_subtype &lt;- neurocytoma_from_pathology_diagnosis %&gt;% 
+  filter(experimental_strategy == &quot;Methylation&quot;) %&gt;%
+  mutate(methyl_subtype = case_when(dkfz_v12_methylation_subclass == &quot;EVNCYT&quot; ~ &quot;EVN&quot;,
+                                           dkfz_v12_methylation_subclass == &quot;CN&quot; ~ &quot;CNC&quot;,
+                                           TRUE ~ NA_character_)) %&gt;%
+  select(sample_id, composition, methyl_subtype) %&gt;%
+  unique()
+  
+
+neurocytoma_subtype &lt;- neurocytoma_from_pathology_diagnosis %&gt;% 
   dplyr::mutate(molecular_subtype= 
-                  # primary_site == &quot;Ventricles&quot;, then molecular_subtype == CNC (central neurocytoma) 
+                  # primary_site == &quot;Ventricles&quot;, 
+                  # then molecular_subtype == CNC (central neurocytoma) 
                   case_when(primary_site == &quot;Ventricles&quot; ~ &quot;CNC&quot;,
-                  # primary_site != &quot;Ventricles&quot;, then molecular_subtype == EVN (extraventricular neurocytoma)       
-                            primary_site != &quot;Ventricles&quot; ~ &quot;EVN&quot;
-                            )
-  ) %&gt;%
-  dplyr::select(Kids_First_Participant_ID,
-                sample_id,
-                Kids_First_Biospecimen_ID,
-                molecular_subtype) %&gt;%
+                  # primary_site != &quot;Ventricles&quot;, 
+                  # then molecular_subtype == EVN (extraventricular neurocytoma)       
+                            primary_site != &quot;Ventricles&quot; ~ &quot;EVN&quot;)) %&gt;%
+  left_join(neurocytoma_subtype) %&gt;%
+  dplyr::select(Kids_First_Participant_ID, sample_id, composition, Kids_First_Biospecimen_ID,
+                molecular_subtype, methyl_subtype) %&gt;%
+  arrange(sample_id) %&gt;%
   write_tsv(outputfile)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiSm9pbmluZywgYnkgPSBjKFwic2FtcGxlX2lkXCIsIFwiY29tcG9zaXRpb25cIilcbiJ9 -->
+<pre><code>Joining, by = c(&quot;sample_id&quot;, &quot;composition&quot;)</code></pre>
+<!-- rnb-message-end -->
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3VidHlwZSBOZXVyb2N5dG9tYSB0dW1vcnMgYXMgY2VudHJhbCBvciBleHRyYS12ZW50cmljdWxhciIKb3V0cHV0OiAKICBodG1sX25vdGVib29rOgogICAgdG9jOiBUUlVFCiAgICB0b2NfZmxvYXQ6IFRSVUUKYXV0aG9yOiBLcnV0aWthIEdhb25rYXIgZm9yIEQzYgpkYXRlOiAyMDIwCi0tLQoKRm9yLCAiTmV1cm9jeXRvbWEiIHNhbXBsZXMgZGV0ZWN0ZWQgaW4gcGF0aG9sb2d5X2RpYWdub3Npcywgc3VidHlwaW5nIGNvbmRpdGlvbnMgYXMgcGVyIGlzc3VlIFsjODA1XShodHRwczovL2dpdGh1Yi5jb20vQWxleHNMZW1vbmFkZS9PcGVuUEJUQS1hbmFseXNpcy9pc3N1ZXMvODA1KSBhcmUgYXMgZm9sbG93cyA6CgogLSBJZiBwcmltYXJ5X3NpdGUgPT0gIlZlbnRyaWNsZXMiLCB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IENOQyAoY2VudHJhbCBuZXVyb2N5dG9tYSkgCiAtIElmIHByaW1hcnlfc2l0ZSAhPSAiVmVudHJpY2xlcyIsIHRoZW4gbW9sZWN1bGFyX3N1YnR5cGUgPT0gRVZOIChleHRyYXZlbnRyaWN1bGFyIG5ldXJvY3l0b21hKQoKIyMgU2V0IHVwIAoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCiMjIElucHV0IGRpcmVjdG9yaWVzIGFuZCBmaWxlcwoKYGBge3J9CmRhdGFfZGlyIDwtIGZpbGUucGF0aCgiLi4iLCAiLi4iLCAiZGF0YSIpCmhpc3RvbG9naWVzX2RmIDwtIHJlYWRfdHN2KGZpbGUucGF0aChkYXRhX2RpciwgImhpc3RvbG9naWVzLWJhc2UudHN2IikpCgpgYGAKCiMjIE91dHB1dCBkaXJlY3RvcnkgYW5kIGZpbGUKCmBgYHtyfQpyZXN1bHRzX2RpciA8LSAicmVzdWx0cyIKaWYgKCFkaXIuZXhpc3RzKHJlc3VsdHNfZGlyKSkgewogIGRpci5jcmVhdGUocmVzdWx0c19kaXIpCn0Kb3V0cHV0ZmlsZSA8LSBmaWxlLnBhdGgocmVzdWx0c19kaXIsIm5ldXJvY3l0b21hX3N1YnR5cGluZy50c3YiKQpgYGAKCgojIyBDaGVjayBpZiBgcGF0aG9sb2d5X2ZyZWVfdGV4dF9kaWFnbm9zaXNgIGFuZCBgcGF0aG9sb2d5X2RpYWdub3Npc2AgZGlmZmVyZW50IGZvciBhbnkgTmV1cm9jeXRvbWEgc2FtcGxlCgpBcmUgdGhlcmUgYW55IE5ldXJvY3l0b21hIHNhbXBsZXMgaW4gYHBhdGhvbG9neV9mcmVlX3RleHRfZGlhZ25vc2lzYCB0aGF0IGFyZSBub3QgbGlzdGVkIGluIHBhdGhvbG9neV9kaWFnbm9zaXM/CgpgYGB7cn0KCm5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2ZyZWVfdGV4dF9kaWFnbm9zaXMgPC0gaGlzdG9sb2dpZXNfZGYgJT4lCiAgZmlsdGVyKHN0cl9kZXRlY3QocGF0aG9sb2d5X2ZyZWVfdGV4dF9kaWFnbm9zaXMsICJuZXVyb2N5dG9tYSIpCiAgICAgICAgICAgICAgICAgICAgKSAKCm5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2RpYWdub3NpcyA8LSBoaXN0b2xvZ2llc19kZiAlPiUKICBmaWx0ZXIoc3RyX2RldGVjdChwYXRob2xvZ3lfZGlhZ25vc2lzLCAiTmV1cm9jeXRvbWEiKQogICAgICAgICAgICAgICAgICAgICkgCgpuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9mcmVlX3RleHRfZGlhZ25vc2lzICU+JQogIGRwbHlyOjpmaWx0ZXIoIUtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgJWluJSBuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9kaWFnbm9zaXMkS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCApCgpgYGAKVGhlcmUgYXJlIG5vIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgaW4gYHBhdGhvbG9neV9mcmVlX3RleHRfZGlhZ25vc2lzYCB0aGF0IGFyZSBub3QgbGlzdGVkIGFzICJOZXVyb2N5dG9tYSIgaW4gIGBwYXRob2xvZ3lfZGlhZ25vc2lzYC4gU28gd2lsbCBvbmx5IHVzZSAgYHBhdGhvbG9neV9kaWFnbm9zaXNgIHRvIGxvb2sgdXAgIk5ldXJvY3l0b21hIiBzYW1wbGVzIGZvciBzdWJ0eXBpbmcKCgpDaGVja2luZyBpZiBgcGF0aG9sb2d5X2RpYWdub3Npc2AgaGFzICJOZXVyb2N5dG9tYSIgd2hhdCBhcmUgYWxsIHByaW1hcnlfc2l0ZSBhc3NvY2lhdGVkIHdpdGggaXQKYGBge3J9Cm5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2RpYWdub3NpcyRwcmltYXJ5X3NpdGUgJT4lIHVuaXF1ZSgpCmBgYAoKCiMjIFN1YnR5cGluZyBOZXVyb2N5dG9tYSBzYW1wbGVzIGJhc2VkIG9uIHByaW1hcnkgc2l0ZSAKClRoZSB2YWx1ZXMgYXJlIG9ubHkgIlZlbnRyaWNsZXMiIGFuZCAiUGFyaWV0YWwgTG9iZSIgc28gd2UgY2FuIGRpcmVjdGx5IGNoZWNrIGlmIHByaW1hcnlfc2l0ZT09ICJWZW50cmljbGVzIiB+ICJDTkMiIGFuZCBpZiBwcmltYXJ5X3NpdGUgIT0gIlZlbnRyaWNsZXMiIH4gIkVWTiIKCmBgYHtyfQoKbmV1cm9jeXRvbWFfc3VidHlwZSA8LSBuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9kaWFnbm9zaXMgJT4lIAogIGRwbHlyOjptdXRhdGUobW9sZWN1bGFyX3N1YnR5cGU9IAogICAgICAgICAgICAgICAgICAjIHByaW1hcnlfc2l0ZSA9PSAiVmVudHJpY2xlcyIsIHRoZW4gbW9sZWN1bGFyX3N1YnR5cGUgPT0gQ05DIChjZW50cmFsIG5ldXJvY3l0b21hKSAKICAgICAgICAgICAgICAgICAgY2FzZV93aGVuKHByaW1hcnlfc2l0ZSA9PSAiVmVudHJpY2xlcyIgfiAiQ05DIiwKICAgICAgICAgICAgICAgICAgIyBwcmltYXJ5X3NpdGUgIT0gIlZlbnRyaWNsZXMiLCB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IEVWTiAoZXh0cmF2ZW50cmljdWxhciBuZXVyb2N5dG9tYSkgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcmltYXJ5X3NpdGUgIT0gIlZlbnRyaWNsZXMiIH4gIkVWTiIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICkKICApICU+JQogIGRwbHlyOjpzZWxlY3QoS2lkc19GaXJzdF9QYXJ0aWNpcGFudF9JRCwKICAgICAgICAgICAgICAgIHNhbXBsZV9pZCwKICAgICAgICAgICAgICAgIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsCiAgICAgICAgICAgICAgICBtb2xlY3VsYXJfc3VidHlwZSkgJT4lCiAgd3JpdGVfdHN2KG91dHB1dGZpbGUpCgpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3VidHlwZSBOZXVyb2N5dG9tYSB0dW1vcnMgYXMgY2VudHJhbCBvciBleHRyYS12ZW50cmljdWxhciIKb3V0cHV0OiAKICBodG1sX25vdGVib29rOgogICAgdG9jOiBUUlVFCiAgICB0b2NfZmxvYXQ6IFRSVUUKYXV0aG9yOiBLcnV0aWthIEdhb25rYXIgZm9yIEQzYgpkYXRlOiAyMDIwCi0tLQoKRm9yLCAiTmV1cm9jeXRvbWEiIHNhbXBsZXMgZGV0ZWN0ZWQgaW4gcGF0aG9sb2d5X2RpYWdub3Npcywgc3VidHlwaW5nIGNvbmRpdGlvbnMgYXMgcGVyIGlzc3VlIFsjODA1XShodHRwczovL2dpdGh1Yi5jb20vQWxleHNMZW1vbmFkZS9PcGVuUEJUQS1hbmFseXNpcy9pc3N1ZXMvODA1KSBhcmUgYXMgZm9sbG93cyA6CgogLSBJZiBwcmltYXJ5X3NpdGUgPT0gIlZlbnRyaWNsZXMiLCB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IENOQyAoY2VudHJhbCBuZXVyb2N5dG9tYSkgCiAtIElmIHByaW1hcnlfc2l0ZSAhPSAiVmVudHJpY2xlcyIsIHRoZW4gbW9sZWN1bGFyX3N1YnR5cGUgPT0gRVZOIChleHRyYXZlbnRyaWN1bGFyIG5ldXJvY3l0b21hKQoKIyMgU2V0IHVwIAoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCiMjIElucHV0IGRpcmVjdG9yaWVzIGFuZCBmaWxlcwoKYGBge3J9CmRhdGFfZGlyIDwtIGZpbGUucGF0aCgiLi4iLCAiLi4iLCAiZGF0YSIpCmhpc3RvbG9naWVzX2RmIDwtIHJlYWRfdHN2KGZpbGUucGF0aChkYXRhX2RpciwgImhpc3RvbG9naWVzLWJhc2UudHN2IikpCgpgYGAKCiMjIE91dHB1dCBkaXJlY3RvcnkgYW5kIGZpbGUKCmBgYHtyfQpyZXN1bHRzX2RpciA8LSAicmVzdWx0cyIKaWYgKCFkaXIuZXhpc3RzKHJlc3VsdHNfZGlyKSkgewogIGRpci5jcmVhdGUocmVzdWx0c19kaXIpCn0Kb3V0cHV0ZmlsZSA8LSBmaWxlLnBhdGgocmVzdWx0c19kaXIsIm5ldXJvY3l0b21hX3N1YnR5cGluZy50c3YiKQpgYGAKCgojIyBDaGVjayBpZiBgcGF0aG9sb2d5X2ZyZWVfdGV4dF9kaWFnbm9zaXNgIGFuZCBgcGF0aG9sb2d5X2RpYWdub3Npc2AgZGlmZmVyZW50IGZvciBhbnkgTmV1cm9jeXRvbWEgc2FtcGxlCgpBcmUgdGhlcmUgYW55IE5ldXJvY3l0b21hIHNhbXBsZXMgaW4gYHBhdGhvbG9neV9mcmVlX3RleHRfZGlhZ25vc2lzYCB0aGF0IGFyZSBub3QgbGlzdGVkIGluIHBhdGhvbG9neV9kaWFnbm9zaXM/CgpgYGB7cn0KCm5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2ZyZWVfdGV4dF9kaWFnbm9zaXMgPC0gaGlzdG9sb2dpZXNfZGYgJT4lCiAgZmlsdGVyKHN0cl9kZXRlY3QocGF0aG9sb2d5X2ZyZWVfdGV4dF9kaWFnbm9zaXMsICJuZXVyb2N5dG9tYSIpCiAgICAgICAgICAgICAgICAgICAgKSAKCm5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2RpYWdub3NpcyA8LSBoaXN0b2xvZ2llc19kZiAlPiUKICBmaWx0ZXIoc3RyX2RldGVjdChwYXRob2xvZ3lfZGlhZ25vc2lzLCAiTmV1cm9jeXRvbWEiKQogICAgICAgICAgICAgICAgICAgICkgCgpuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9mcmVlX3RleHRfZGlhZ25vc2lzICU+JQogIGRwbHlyOjpmaWx0ZXIoIUtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgJWluJSBuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9kaWFnbm9zaXMkS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCApCgpgYGAKVGhlcmUgYXJlIG5vIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgaW4gYHBhdGhvbG9neV9mcmVlX3RleHRfZGlhZ25vc2lzYCB0aGF0IGFyZSBub3QgbGlzdGVkIGFzICJOZXVyb2N5dG9tYSIgaW4gIGBwYXRob2xvZ3lfZGlhZ25vc2lzYC4gU28gd2lsbCBvbmx5IHVzZSAgYHBhdGhvbG9neV9kaWFnbm9zaXNgIHRvIGxvb2sgdXAgIk5ldXJvY3l0b21hIiBzYW1wbGVzIGZvciBzdWJ0eXBpbmcKCgpDaGVja2luZyBpZiBgcGF0aG9sb2d5X2RpYWdub3Npc2AgaGFzICJOZXVyb2N5dG9tYSIgd2hhdCBhcmUgYWxsIHByaW1hcnlfc2l0ZSBhc3NvY2lhdGVkIHdpdGggaXQKYGBge3J9Cm5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2RpYWdub3NpcyRwcmltYXJ5X3NpdGUgJT4lIHVuaXF1ZSgpCmBgYAoKCiMjIFN1YnR5cGluZyBOZXVyb2N5dG9tYSBzYW1wbGVzIGJhc2VkIG9uIHByaW1hcnkgc2l0ZSAKClRoZSB2YWx1ZXMgYXJlIG9ubHkgIlZlbnRyaWNsZXMiLCAiUGFyaWV0YWwgTG9iZSIsIG9yICJGcm9udGFsIExvYmU7VGVtcG9yYWwgTG9iZSIgc28gd2UgY2FuIGRpcmVjdGx5IGNoZWNrIGlmIHByaW1hcnlfc2l0ZT09ICJWZW50cmljbGVzIiB+ICJDTkMiIGFuZCBpZiBwcmltYXJ5X3NpdGUgIT0gIlZlbnRyaWNsZXMiIH4gIkVWTiIKCmBgYHtyfQojIEdldCBtZXRoeWxhdGlvbiBzdWJ0eXBlcwpuZXVyb2N5dG9tYV9zdWJ0eXBlIDwtIG5ldXJvY3l0b21hX2Zyb21fcGF0aG9sb2d5X2RpYWdub3NpcyAlPiUgCiAgZmlsdGVyKGV4cGVyaW1lbnRhbF9zdHJhdGVneSA9PSAiTWV0aHlsYXRpb24iKSAlPiUKICBtdXRhdGUobWV0aHlsX3N1YnR5cGUgPSBjYXNlX3doZW4oZGtmel92MTJfbWV0aHlsYXRpb25fc3ViY2xhc3MgPT0gIkVWTkNZVCIgfiAiRVZOIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRrZnpfdjEyX21ldGh5bGF0aW9uX3N1YmNsYXNzID09ICJDTiIgfiAiQ05DIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRSVUUgfiBOQV9jaGFyYWN0ZXJfKSkgJT4lCiAgc2VsZWN0KHNhbXBsZV9pZCwgY29tcG9zaXRpb24sIG1ldGh5bF9zdWJ0eXBlKSAlPiUKICB1bmlxdWUoKQogIAoKbmV1cm9jeXRvbWFfc3VidHlwZSA8LSBuZXVyb2N5dG9tYV9mcm9tX3BhdGhvbG9neV9kaWFnbm9zaXMgJT4lIAogIGRwbHlyOjptdXRhdGUobW9sZWN1bGFyX3N1YnR5cGU9IAogICAgICAgICAgICAgICAgICAjIHByaW1hcnlfc2l0ZSA9PSAiVmVudHJpY2xlcyIsIAogICAgICAgICAgICAgICAgICAjIHRoZW4gbW9sZWN1bGFyX3N1YnR5cGUgPT0gQ05DIChjZW50cmFsIG5ldXJvY3l0b21hKSAKICAgICAgICAgICAgICAgICAgY2FzZV93aGVuKHByaW1hcnlfc2l0ZSA9PSAiVmVudHJpY2xlcyIgfiAiQ05DIiwKICAgICAgICAgICAgICAgICAgIyBwcmltYXJ5X3NpdGUgIT0gIlZlbnRyaWNsZXMiLCAKICAgICAgICAgICAgICAgICAgIyB0aGVuIG1vbGVjdWxhcl9zdWJ0eXBlID09IEVWTiAoZXh0cmF2ZW50cmljdWxhciBuZXVyb2N5dG9tYSkgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcmltYXJ5X3NpdGUgIT0gIlZlbnRyaWNsZXMiIH4gIkVWTiIpKSAlPiUKICBsZWZ0X2pvaW4obmV1cm9jeXRvbWFfc3VidHlwZSkgJT4lCiAgZHBseXI6OnNlbGVjdChLaWRzX0ZpcnN0X1BhcnRpY2lwYW50X0lELCBzYW1wbGVfaWQsIGNvbXBvc2l0aW9uLCBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELAogICAgICAgICAgICAgICAgbW9sZWN1bGFyX3N1YnR5cGUsIG1ldGh5bF9zdWJ0eXBlKSAlPiUKICBhcnJhbmdlKHNhbXBsZV9pZCkgJT4lCiAgd3JpdGVfdHN2KG91dHB1dGZpbGUpCgpgYGAK</div>
 
 
 </div>
