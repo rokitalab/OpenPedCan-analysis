@@ -31,11 +31,14 @@ histologies_df <- readr::read_tsv(file.path("..", "..", "data", "histologies-bas
 # Subset metadata
 subset_metadata <- histologies_df %>%
   dplyr::filter(pathology_diagnosis == "Chordoma") %>%
-  select(
-    Kids_First_Biospecimen_ID, sample_id, Kids_First_Participant_ID,
-    experimental_strategy,tumor_ploidy
-  ) %>%
-  rename(ploidy=tumor_ploidy)
+  select(Kids_First_Biospecimen_ID, sample_id, composition, Kids_First_Participant_ID,experimental_strategy,tumor_ploidy) %>%
+  dplyr::rename(ploidy=tumor_ploidy) %>%
+  mutate(id = paste(sample_id, composition, sep = "_"))
+
+# collect methyl and Targeted Seq samples to add back later (these don't have CN or RNA expression)
+methyl_panel <- subset_metadata %>%
+  filter(experimental_strategy %in% c("Methylation", "Targeted Sequencing")) %>%
+  select(Kids_First_Biospecimen_ID, sample_id, composition, Kids_First_Participant_ID,experimental_strategy,ploidy, id)
 ```
 
 ```{r}
@@ -91,42 +94,27 @@ chordoma_loss
 Distinguishing the chordoma samples with no copy number change chromosome 22
 ```{r}
 copy_neutral_df <- subset_metadata %>%
-  # the copy events can only be taken from WGS data not RNA-seq data
+  # the copy events can only be taken from WGS/WXS data not RNA-seq data
   # we also only want biospecimens where a loss was not recorded to avoid duplicates
   filter(
-    experimental_strategy == "WGS",
+    experimental_strategy %in% c("WGS", "WXS"),
     !(Kids_First_Biospecimen_ID %in% chordoma_loss$biospecimen_id)
   ) %>%
   # if there's no loss, let's assume status is copy neutral
   mutate(status = "neutral",
          copy_number = ploidy) %>%
-  # let's get the columns to match chordoma_loss
-  dplyr::rename(biospecimen_id = Kids_First_Biospecimen_ID) %>%
-  select(biospecimen_id, status, copy_number,ploidy)
+  select(Kids_First_Biospecimen_ID, id, status, copy_number,ploidy)
 copy_neutral_df
 ```
 
 Joining chordoma samples (both with chr 22 loss and no copy number change)
 ```{r}
 chordoma_copy <- chordoma_loss %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = biospecimen_id) %>%
   # join the losses with the neutrals to get a new data frame
-  select(biospecimen_id, status,ploidy,copy_number) %>%
+  select(Kids_First_Biospecimen_ID, status,ploidy,copy_number) %>%
+  left_join(subset_metadata[,c("Kids_First_Biospecimen_ID", "id")]) %>%
   bind_rows(copy_neutral_df)
-chordoma_copy
-```
-
-Need to get the sample_id that corresponds to biospecimen_id into chordoma_copy so we can match WGS and RNA-seq biospecimens from the same event/sample:
-```{r}
-chordoma_copy <- chordoma_copy %>%
-  # get only the Kids_First_Biospecimen_ID, sample_id columns from our identifier data.frame
-  # then use biospecimen IDs to add the sample_id info
-  inner_join(select(
-    subset_metadata,
-    Kids_First_Biospecimen_ID,
-    sample_id
-  ),
-  by = c("biospecimen_id" = "Kids_First_Biospecimen_ID")
-  )
 chordoma_copy
 ```
 
@@ -156,61 +144,36 @@ smarcb1_expression <- t(smarcb1_expression) %>%
   # we want the rownames that are biospecimen identifers as their own column called Kids_First_Biospecimen_ID
   tibble::rownames_to_column("Kids_First_Biospecimen_ID") %>%
   # give SMARCB1 column a slightly better column name
-  dplyr::rename(SMARCB1_expression = SMARCB1)
+  dplyr::rename(SMARCB1_expression = SMARCB1) %>%
+  left_join(subset_metadata[,c("Kids_First_Biospecimen_ID", "id")])
 smarcb1_expression
 ```
 
-This also needs sample_id to add it in
-```{r}
-smarcb1_expression <- smarcb1_expression %>%
-  inner_join(select(
-    subset_metadata,
-    Kids_First_Biospecimen_ID,
-    sample_id
-  ),
-  by = "Kids_First_Biospecimen_ID"
-  )
-smarcb1_expression
-```
 
 Joining the copy number data with the expression data in this step
 ```{r}
 chordoma_smarcb1_df <- smarcb1_expression %>%
-  # any missing samples will get filled with NA when using a full join
-  full_join(chordoma_copy, by = "sample_id") %>%
-  dplyr::rename(
-    Kids_First_Biospecimen_ID_DNA = biospecimen_id,
-    Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID
-  )
-
-# this step adds in the participant identifier (sample_id to match between the two data.frame)
-chordoma_smarcb1_df <- subset_metadata %>%
-  select(sample_id, Kids_First_Participant_ID) %>%
-  distinct() %>%
-  inner_join(chordoma_smarcb1_df,
-    by = "sample_id"
-  )
-
-chordoma_smarcb1_df
-```
-
-```{r}
-chordoma_smarcb1_df <- chordoma_smarcb1_df %>%
-  select(
-    Kids_First_Participant_ID,
-    Kids_First_Biospecimen_ID_DNA,
-    Kids_First_Biospecimen_ID_RNA,
-    sample_id,
-    status,
-    ploidy,
-    copy_number,
-    SMARCB1_expression
-  ) %>%
+  bind_rows(chordoma_copy) %>%
+  # add pt id
+  left_join(subset_metadata[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID")]) %>%
   # 'status' is replaced a more descriptive name
   dplyr::rename(focal_SMARCB1_status = status,
-                SMARCB1_copy_number = copy_number)
+                SMARCB1_copy_number = copy_number) %>%
+  select(
+    Kids_First_Participant_ID,
+    Kids_First_Biospecimen_ID,
+    id,
+    focal_SMARCB1_status,
+    ploidy,
+    SMARCB1_copy_number,
+    SMARCB1_expression
+  ) %>%
+  # add remaining samples
+  bind_rows(methyl_panel) %>%
+  arrange(id)
 chordoma_smarcb1_df
 ```
+
 
 ### Plot _SMARCB1_ expression
 
@@ -250,8 +213,6 @@ Write the table to file.
 
 ```{r}
 chordoma_smarcb1_df %>%
-  arrange(Kids_First_Participant_ID, sample_id) %>%
-  distinct() %>% 
   write_tsv(output_file)
 ```
 
