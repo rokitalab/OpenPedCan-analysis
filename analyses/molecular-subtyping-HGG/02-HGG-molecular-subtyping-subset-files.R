@@ -36,7 +36,7 @@ if (!dir.exists(subset_dir)) {
 metadata <-
   read_tsv(file.path(root_dir, "data", "histologies-base.tsv"),
            guess_max = 100000) %>% 
-  dplyr::filter(cohort == "PBTA")
+  dplyr::filter(cohort %in% c("PBTA", "DGD"))
 
 # Select wanted columns in metadata for merging and assign to a new object
 select_metadata <- metadata %>%
@@ -92,7 +92,7 @@ path_dx_df <- tumor_metadata_df %>%
          # Inclusion based on pathology free text diagnosis for IHG
          pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx | 
          # Inclusion based on cns methylation subclass for IHG
-         cns_methylation_subclass %in% path_dx_list$IHG_cns_methylation_subclass)
+         dkfz_v12_methylation_subclass %in% path_dx_list$IHG_cns_methylation_subclass)
   
 
 # Now samples on the basis of the defining lesions
@@ -183,11 +183,16 @@ rm(cn_metadata)
 
 #### Filter fusion data --------------------------------------------------------
 # Read in fusion data
+dgd_fusion_df <- read_tsv(
+  file.path(root_dir, "data","fusion-dgd.tsv.gz")) %>% 
+  select(Sample, FusionName)
 fusion_df <- read_tsv(
-  file.path(root_dir, "data","fusion-putative-oncogenic.tsv"))
+  file.path(root_dir, "data","fusion-putative-oncogenic.tsv")) %>% 
+  select(Sample, FusionName) %>% 
+  bind_rows(dgd_fusion_df) %>% 
+  distinct()
 
 fusion_df <- fusion_df %>%
-  select(Sample, FusionName) %>%
   left_join(select_metadata,
             by = c("Sample" = "Kids_First_Biospecimen_ID")) %>%
   filter(Sample %in% hgg_metadata_df$Kids_First_Biospecimen_ID) %>%
@@ -246,10 +251,16 @@ keep_cols <- c("Chromosome",
                "HGVSp_Short",
                "Exon_Number")
 
+snv_dgd_maf <- data.table::fread(
+  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+  select = keep_cols,
+  data.table = FALSE)
+
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
   select = keep_cols,
-  data.table = FALSE) 
+  data.table = FALSE) %>% 
+  bind_rows(snv_dgd_maf)
 
 snv_consensus_hotspot_maf <- snv_consensus_hotspot_maf %>%
   left_join(select_metadata,

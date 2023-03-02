@@ -1841,19 +1841,23 @@ cols(
 
 hgg_subtypes &lt;- read_tsv(file.path(results_dir,&quot;HGG_molecular_subtype.tsv&quot;)) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBLaWRzX0ZpcnN0X1BhcnRpY2lwYW50X0lEID0gY29sX2NoYXJhY3RlcigpLFxuICBzYW1wbGVfaWQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURfRE5BID0gY29sX2NoYXJhY3RlcigpLFxuICBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEX1JOQSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRF9tZXRoeSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgY29tcG9zaXRpb24gPSBjb2xfY2hhcmFjdGVyKCksXG4gIG1vbGVjdWxhcl9zdWJ0eXBlID0gY29sX2NoYXJhY3RlcigpLFxuICBIR0dfRnVzaW9uX2V2aWRlbmNlID0gY29sX2NoYXJhY3RlcigpLFxuICBIR0dfRnVzaW9uX2NvdW50cyA9IGNvbF9kb3VibGUoKVxuKVxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgYWdlX2F0X2RpYWdub3Npc195ciA9IGNvbF9kb3VibGUoKSxcbiAgY2VsbF9saW5lX2NvbXBvc2l0aW9uID0gY29sX2xvZ2ljYWwoKSxcbiAgYWxpcXVvdF9pZF9ETkEgPSBjb2xfbG9naWNhbCgpLFxuICBGT1hHMV9leHByZXNzaW9uX3pzY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgT0xJRzJfZXhwcmVzc2lvbl96c2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIFRQNzNfQVMxX2V4cHJlc3Npb25fenNjb3JlID0gY29sX2RvdWJsZSgpLFxuICBIR0dfRnVzaW9uX2NvdW50cyA9IGNvbF9kb3VibGUoKSxcbiAgU2FtcGxlID0gY29sX2xvZ2ljYWwoKSxcbiAgYWxpcXVvdF9pZF9STkEgPSBjb2xfbG9naWNhbCgpXG4pXG4ifQ== -->
 <pre><code>Parsed with column specification:
 cols(
-  Kids_First_Participant_ID = col_character(),
-  sample_id = col_character(),
-  Kids_First_Biospecimen_ID_DNA = col_character(),
-  Kids_First_Biospecimen_ID_RNA = col_character(),
-  Kids_First_Biospecimen_ID_methy = col_character(),
-  composition = col_character(),
-  molecular_subtype = col_character(),
-  HGG_Fusion_evidence = col_character(),
-  HGG_Fusion_counts = col_double()
+  .default = col_character(),
+  age_at_diagnosis_yr = col_double(),
+  cell_line_composition = col_logical(),
+  aliquot_id_DNA = col_logical(),
+  FOXG1_expression_zscore = col_double(),
+  OLIG2_expression_zscore = col_double(),
+  TP73_AS1_expression_zscore = col_double(),
+  HGG_Fusion_counts = col_double(),
+  Sample = col_logical(),
+  aliquot_id_RNA = col_logical()
 )</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiU2VlIHNwZWMoLi4uKSBmb3IgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbnMuXG4ifQ== -->
+<pre><code>See spec(...) for full column specifications.</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiaGdnX3N1YnR5cGVzJEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURfUk5BIDwtIGFzLmNoYXJhY3RlcihoZ2dfc3VidHlwZXMkS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRF9STkEpIn0= -->
 <pre class="r"><code>hgg_subtypes$Kids_First_Biospecimen_ID_RNA &lt;- as.character(hgg_subtypes$Kids_First_Biospecimen_ID_RNA)</code></pre>

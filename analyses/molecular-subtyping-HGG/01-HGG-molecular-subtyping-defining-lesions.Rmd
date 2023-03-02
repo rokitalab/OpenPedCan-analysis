@@ -56,7 +56,7 @@ metadata <-
   readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"), 
                   guess_max = 100000) %>%
   dplyr::filter(sample_type == "Tumor") %>%
-  dplyr::filter(cohort == "PBTA")
+  dplyr::filter(cohort == c("PBTA", "DGD"))
 
 # File from 00-LGAT-select-pathology-dx that is used for inclusion/exclusion
 path_dx_list_lgat <- jsonlite::fromJSON(
@@ -83,7 +83,7 @@ lgat_specimens <- metadata %>%
 ```
 
 # Read in snv consensus and hotspots mutation data, filtering out LGAT
- - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contains consensus SNV calls that are present in all 3 callers (strelka2, mutect2, and lancet) and with hotspot rescued. 
+ - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contains consensus SNV calls that are present in all 3 callers (strelka2, mutect2, and lancet) and with hotspot rescued. Also include the DGD MAF, `snv-dgd.maf.tsv.gz` for OpenPedCan.  
  - Calls that overlap MSKCC hotspots found in any caller are included (except if only vardict calls the site as variant, we remove these calls since we have a lot of calls unique to vardict which we consider as false positive as discussed [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis))
 
 ```{r}
@@ -99,12 +99,19 @@ keep_cols <- c("Chromosome",
              "Hugo_Symbol",
              "HGVSp_Short",
              "Exon_Number")
-
+# DGD MAF
+snv_dgd_maf <- data.table::fread(
+  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+                                   select = keep_cols,
+                                   data.table = FALSE) %>%
+  dplyr::filter(!Tumor_Sample_Barcode %in% lgat_specimens) 
+# Add DGD MAF to consensus MAF
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
                                    select = keep_cols,
                                    data.table = FALSE) %>%
-  dplyr::filter(!Tumor_Sample_Barcode %in% lgat_specimens) 
+  dplyr::filter(!Tumor_Sample_Barcode %in% lgat_specimens) %>% 
+  dplyr::bind_rows(snv_dgd_maf)
 
 ```
 
@@ -114,28 +121,28 @@ snv_consensus_hotspot_maf <- data.table::fread(
 ```{r}
 # Filter the snv consensus mutation data for the target lesions
 snv_lesions_df <- snv_consensus_hotspot_maf  %>%
-  dplyr::filter(Hugo_Symbol %in% c("H3F3A", "HIST1H3B",
-                                   "HIST1H3C", "HIST2H3C") &
+  dplyr::filter(Hugo_Symbol %in% c("H3-3A", "H3C2",
+                                   "H3C3", "H3C14") &
                   HGVSp_Short %in% c("p.K28M", "p.G35R",
                                      "p.G35V")) %>%
   dplyr::select(Tumor_Sample_Barcode, Hugo_Symbol, HGVSp_Short) %>%
   dplyr::mutate(
-    H3F3A.K28M = dplyr::case_when(Hugo_Symbol == "H3F3A" &
+    "H3-3A.K28M" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.K28M" ~ "Yes",
                                   TRUE ~ "No"),
-    HIST1H3B.K28M = dplyr::case_when(
-      Hugo_Symbol == "HIST1H3B" & HGVSp_Short == "p.K28M" ~ "Yes",
+    H3C2.K28M = dplyr::case_when(
+      Hugo_Symbol == "H3C2" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    HIST1H3C.K28M = dplyr::case_when(
-      Hugo_Symbol == "HIST1H3C" & HGVSp_Short == "p.K28M" ~ "Yes",
+    H3C3.K28M = dplyr::case_when(
+      Hugo_Symbol == "H3C3" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    HIST2H3C.K28M = dplyr::case_when(
-      Hugo_Symbol == "HIST2H3C" & HGVSp_Short == "p.K28M" ~ "Yes",
+    H3C14.K28M = dplyr::case_when(
+      Hugo_Symbol == "H3C14" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    H3F3A.G35R = dplyr::case_when(Hugo_Symbol == "H3F3A" &
+    "H3-3A.G35R" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.G35R" ~ "Yes",
                                   TRUE ~ "No"),
-    H3F3A.G35V = dplyr::case_when(Hugo_Symbol == "H3F3A" &
+    "H3-3A.G35V" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.G35V" ~ "Yes",
                                   TRUE ~ "No")
   ) %>%
@@ -162,12 +169,12 @@ We'll use this to create subset files in the next step.
 snv_lesions_df <- snv_lesions_df %>%
   dplyr::mutate(
     defining_lesion = dplyr::case_when(
-      H3F3A.K28M == "Yes" ~ TRUE,
-      HIST1H3B.K28M == "Yes" ~ TRUE,
-      HIST1H3C.K28M == "Yes" ~ TRUE,
-      HIST2H3C.K28M == "Yes" ~ TRUE,
-      H3F3A.G35R == "Yes" ~ TRUE,
-      H3F3A.G35V == "Yes" ~ TRUE,
+      "H3-3A.K28M" == "Yes" ~ TRUE,
+      H3C2.K28M == "Yes" ~ TRUE,
+      H3C3.K28M == "Yes" ~ TRUE,
+      H3C14.K28M == "Yes" ~ TRUE,
+      "H3-3A.G35R" == "Yes" ~ TRUE,
+      "H3-3A.G35V" == "Yes" ~ TRUE,
       TRUE ~ FALSE
     )
   )

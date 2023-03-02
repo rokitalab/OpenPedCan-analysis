@@ -79,15 +79,13 @@ A table with the molecular subtype information for each HGG sample at `results/H
 1. If there was an _H3F3A_ K28M, _HIST1H3B_ K28M, _HIST1H3C_ K28M, or _HIST2H3C_ K28M mutation -> `DMG, H3K28`
 2. If there was an _H3F3A_ G35V or G35R mutation -> `HGG, H3 G35`
 3. If there was an _IDH1_ R132 mutation -> `HGG, IDH`
-4. All other samples that did not meet any of these criteria were marked as `HGG, H3 wildtype`
+4. All other samples that did not meet any of these criteria were marked as `HGG, H3 wildtype` if there was no canonical histone variant the DNA sample, the methylation classification subtype if present, or else `HGG, To be classified` 
 5. In `histologies_base.tsv`, column `pathology_free_text_diagnosis` contains "infant type hemispheric glioma" or `cns_methylation_subclass` == "IHG" -> `IHG`
     1. If there was a _NTRK_ fusion -> `IHG, NTRK-altered`
     2. If there was a _ROS1_ fusion -> `IHG, ROS1-altered`
     3. If there was a _ALK_ fusion -> `IHG, ALK-altered`
     4. If there was a _MET_ fusion -> `IHG, MET-altered`
-    5. If there was no fusion found and both DNA and RNA were available for the samples and the `cns_methylation_subclass_score` >= 0.8 -> `IHG, To be classified.`
-    6. If there was no fusion found and RNA was not available and the `cns_methylation_subclass_score` >= 0.8 or `pathology_free_text_diagnosis` says this is an IHG -> `IHG, To be classified.`
-    7. If there was no fusion found and DNA and RNA were available and the `cns_methylation_subclass_score` < 0.8 and this sample was not previously subtyped as HGG, then removed from the HGG subtyping 
+    5. If there was no fusion -> `IHG, To be classified` based on IHG methylation classification and sample clinical report in the `pathology_diagnosis_free_text` stated as `infant type hemispheric glioma`
 
 [`08-1p19q-codeleted-oligodendrogliomas.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/08-1p19q-codeleted-oligodendrogliomas.nb.html) is a notebook written to identify samples in the OpenPBTA dataset that should be classified as 1p/19q co-deleted oligodendrogliomas.
 The GISTIC `broad_values_by_arm.txt` file is used to identify samples with `1p` and `19q` loss, then the consensus mutation file is filtered to the identified samples in order to check for _IDH1_ mutations.
