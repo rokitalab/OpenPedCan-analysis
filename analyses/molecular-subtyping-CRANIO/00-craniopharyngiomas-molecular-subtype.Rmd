@@ -120,7 +120,7 @@ methyl_bs_ids_with_subtypes <- metadata %>%
   filter(experimental_strategy == "Methylation",
          (grepl("CPH_", dkfz_v12_methylation_subclass) & dkfz_v12_methylation_subclass_score >= 0.8)) %>%
   # reformat classifier result per https://www.molecularneuropathology.org/mnp/classifiers/11
-  mutate(molecular_subtype = case_when(dkfz_v12_methylation_subclass == "CPH_PAP" ~ "CRANIP, PAP",
+  mutate(molecular_subtype = case_when(dkfz_v12_methylation_subclass == "CPH_PAP" ~ "CRANIO, PAP",
                                        dkfz_v12_methylation_subclass == "CPH_ADM" ~ "CRANIO, ADAM")) %>%
   mutate(id = paste(sample_id, composition, sep = "_")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
@@ -177,7 +177,8 @@ snv_subtype <- snv_lesion_df %>%
   mutate(molecular_subtype =
            case_when(
              (BRAF.V600E & fourty_or_older) & !(CTNNB1.Exon3 & !fourty_or_older) ~ "CRANIO, PAP",
-             !(BRAF.V600E & fourty_or_older) & (CTNNB1.Exon3 & !fourty_or_older) ~ "CRANIO, ADAM", 
+             !(BRAF.V600E & fourty_or_older) & (CTNNB1.Exon3 & !fourty_or_older) ~ "CRANIO, ADAM",
+             !(BRAF.V600E & fourty_or_older) & (CTNNB1.Exon3 & fourty_or_older) ~ "CRANIO, ADAM",
              TRUE ~ "CRANIO, To be classified"))  %>%
   select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, id, molecular_subtype)
 
