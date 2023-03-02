@@ -285,12 +285,15 @@ molecular_subtype_table <- bind_rows(mycn_subtyped, mycn_not_subtyped)
 
 ```{r write to file}
 alteration_df %>% 
+  arrange(Kids_First_Biospecimen_ID_DNA) %>%
   readr::write_tsv(file.path(results_dir, 
                              "alteration_table_with_molecular_subtype.tsv"))
 alteration_tmp_df %>% 
+  arrange(Kids_First_Biospecimen_ID_DNA) %>%
   readr::write_tsv(file.path(results_dir, 
                              "molecular_subtypes_based_on_cutoff.tsv"))
 molecular_subtype_table %>% 
+  arrange(Kids_First_Biospecimen_ID_DNA) %>%
   readr::write_tsv(file.path(results_dir, 
                              "neuroblastoma_molecular_subtypes.tsv"))
 ```
