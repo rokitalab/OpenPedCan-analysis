@@ -28,8 +28,13 @@ atrt_df <- histo %>%
 atrt_df_methyl <- atrt_df %>% 
   filter(experimental_strategy == "Methylation") %>%
   select(sample_id, Kids_First_Biospecimen_ID, 
-         cns_methylation_subclass, cns_methylation_subclass_score, Kids_First_Participant_ID) %>%
-  dplyr::rename(Kids_First_Biospecimen_ID_methyl = Kids_First_Biospecimen_ID)
+         dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score, Kids_First_Participant_ID) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID_methyl = Kids_First_Biospecimen_ID) %>%
+  # mutate ATRT subtypes from methyl so they are in the format needed later
+  mutate(dkfz_v12_methylation_subclass = case_when(dkfz_v12_methylation_subclass == "ATRT_MYC" ~ "ATRT, MYC",
+                                                   dkfz_v12_methylation_subclass == "ATRT_SHH" ~ "ATRT, SHH",
+                                                   dkfz_v12_methylation_subclass == "ATRT_TYR" ~ "ATRT, TYR",
+                                                   TRUE ~ dkfz_v12_methylation_subclass))
 
 atrt_df_panel_dna <- atrt_df %>% 
   filter(experimental_strategy == "Targeted Sequencing",
@@ -63,11 +68,11 @@ atrt_subtype <- atrt_df_methyl %>%
 # create a list for ATRT subtypes
 ATRT_subtype_list <- c("ATRT, MYC", "ATRT, SHH", "ATRT, TYR")
 
-# for the samples, whose cns_methlation_subclass_score >= 0.8 and cns_methylation_subclass is one of the three types in ATRT_subtype_list, their molecular subtype are same as cns_methylation_subclass
+# for the samples, whose cns_methlation_subclass_score >= 0.8 and dkfz_v12_methylation_subclass is one of the three types in ATRT_subtype_list, their molecular subtype are same as dkfz_v12_methylation_subclass
 # for the samples without methylation sequencing, their molecular subtype are "ATRT, To be classified."
 # For the samples fit all the other situations, their molecular subtype are "ATRT, To be classified."
 atrt_subtype_final <- atrt_subtype %>% 
-  mutate(molecular_subtype = case_when(cns_methylation_subclass_score >= 0.8 & cns_methylation_subclass %in% ATRT_subtype_list ~ cns_methylation_subclass, 
+  mutate(molecular_subtype = case_when(dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass %in% ATRT_subtype_list ~ dkfz_v12_methylation_subclass, 
                                        is.na(Kids_First_Biospecimen_ID_methyl) ~ "ATRT, To be classified",
                                        TRUE ~ "ATRT, To be classified")) %>%
   select(sample_id, Kids_First_Participant_ID, Kids_First_Biospecimen_ID_methyl, Kids_First_Biospecimen_ID_DNA_wgs, Kids_First_Biospecimen_ID_RNA, Kids_First_Biospecimen_ID_DNA_panel, Kids_First_Biospecimen_ID_RNA_panel, molecular_subtype) %>%
