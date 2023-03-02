@@ -76,8 +76,8 @@ This notebook produces two expression results table (one for each selection stra
 This notebook produces one table with the cleaned data found at `results/HGG_cleaned_all_table.tsv`.
 A table with the molecular subtype information for each HGG sample at `results/HGG_molecular_subtype.tsv` is also produced, where the subtype values in the `molecular_subtype` column are determined as follows:
 
-1. If there was an _H3F3A_ K28M, _HIST1H3B_ K28M, _HIST1H3C_ K28M, or _HIST2H3C_ K28M mutation -> `DMG, H3K28`
-2. If there was an _H3F3A_ G35V or G35R mutation -> `HGG, H3 G35`
+1. If there was an _H3-3A_ K28M, _H3C2_ K28M, _H3C3_ K28M, or _H3C14_ K28M mutation -> `DMG, H3K28`
+2. If there was an _H3-3A_ G35V or G35R mutation -> `HGG, H3 G35`
 3. If there was an _IDH1_ R132 mutation -> `HGG, IDH`
 4. All other samples that did not meet any of these criteria were marked as `HGG, H3 wildtype` if there was no canonical histone variant the DNA sample, the methylation classification subtype if present, or else `HGG, To be classified` 
 5. In `histologies_base.tsv`, column `pathology_free_text_diagnosis` contains "infant type hemispheric glioma" or `cns_methylation_subclass` == "IHG" -> `IHG`
