@@ -63,13 +63,6 @@ subset_expression_data <-
 ### Output
 
 ```{r}
-# scatterplot
-plot_dir <- "plots"
-if (!dir.exists(plot_dir)) {
-  dir.create(plot_dir)
-}
-plot_file <- file.path(plot_dir, "smarcb1_expression_copy_status.png")
-
 # tabular data
 results_dir <- "results"
 if (!dir.exists(results_dir)) {
@@ -174,40 +167,6 @@ chordoma_smarcb1_df <- smarcb1_expression %>%
 chordoma_smarcb1_df
 ```
 
-
-### Plot _SMARCB1_ expression
-
-copy loss vs. copy neutral 
-
-```{r}
-# this specifies that this is the data we want to plot
-chordoma_smarcb1_df %>%
-  # drop the sample that doesn't have WGS data
-  # tidyr::drop_na() %>%
-  # this step specifies what should go on the x- and y-axes
-  ggplot(aes(
-    x = focal_SMARCB1_status,
-    y = SMARCB1_expression
-  )) +
-  # we want a jitter plot where the points aren't too far
-  # apart that's what width does
-  geom_jitter(width = 0.1) +
-  # this is plotting the median as a blue diamond
-  stat_summary(
-    fun.y = "median",
-    geom = "point",
-    size = 3,
-    color = "blue",
-    shape = 18
-  ) +
-  xlab("SMARCB1 status") +
-  xlab("SMARCB1 status") +
-  ylab("SMARCB1 expression")
-```
-
-```{r}
-ggsave(filename = plot_file)
-```
 
 Write the table to file.
 
