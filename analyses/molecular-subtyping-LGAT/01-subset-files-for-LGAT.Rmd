@@ -341,11 +341,11 @@ lgat_methyl_subtypes <- clinical %>%
                 dkfz_v12_methylation_subclass_score >= 0.8) %>% 
   dplyr::mutate(molecular_subtype_methyl = 
                   case_when(grepl("LGG_MYB", dkfz_v12_methylation_subclass) ~ "LGG, MYB/MYBL1",
-                            dkfz_v12_methylation_subclass == "SEGA" ~ "SEGA, wildtype",
+                            dkfz_v12_methylation_subclass == "SEGA" ~ "SEGA",
                             dkfz_v12_methylation_subclass == "A_IDH_LG" ~ "LGG, IDH",
                             dkfz_v12_methylation_subclass == "PA_INF_FGFR" ~ "LGG, FGFR",
                             dkfz_v12_methylation_subclass == "AG_MYB" ~ "LGG, MYB/MYBL1",
-                            dkfz_v12_methylation_subclass == "GG" ~ "GNG, wildtype")) %>% 
+                            dkfz_v12_methylation_subclass == "GG" ~ "GNG, MAPK")) %>% 
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
