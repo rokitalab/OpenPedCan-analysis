@@ -63,10 +63,10 @@ bind_exp_strategies <- function(results_df) {
   
   # So far, files have one of two sets of columns - this might change in the future or we might need to think of how to better handle
   dna_rna_cols <- c("Kids_First_Biospecimen_ID_DNA", "Kids_First_Biospecimen_ID_RNA")
-  long_cols <- c("Kids_First_Biospecimen_ID_methyl", "Kids_First_Biospecimen_ID_DNA_wgs, Kids_First_Biospecimen_ID_DNA_panel, Kids_First_Biospecimen_ID_RNA_panel", "Kids_First_Biospecimen_ID_RNA")
+  long_cols <- c("Kids_First_Biospecimen_ID_Methyl", "Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA")
   
     # if only DNA and RNA present:
-  if (dna_rna_cols %in% names(results_df)) {
+  if (!"Kids_First_Biospecimen_ID_Methyl" %in% names(results_df)) {
     rna_df <- results_df %>%
     dplyr::select(-Kids_First_Biospecimen_ID_DNA) %>%
     dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA)) %>%
@@ -81,33 +81,23 @@ bind_exp_strategies <- function(results_df) {
   }
   
     # if all the things - DNA, RNA, methyl, DNA and RNA panel - are present:
-  if (long_cols %in% names(results_df)) {
+  if ("Kids_First_Biospecimen_ID_Methyl" %in% names(results_df)) {
     rna_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_methyl, Kids_First_Biospecimen_ID_DNA_panel, Kids_First_Biospecimen_ID_RNA_panel, Kids_First_Biospecimen_ID_DNA_wgs)) %>%
+    dplyr::select(-c(Kids_First_Biospecimen_ID_Methyl, Kids_First_Biospecimen_ID_DNA)) %>%
     dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA)) %>%
     dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_RNA)
     
     dna_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_methyl, Kids_First_Biospecimen_ID_DNA_panel, Kids_First_Biospecimen_ID_RNA_panel, Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA_wgs)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA_wgs)
-    
-    rna_panel_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_methyl, Kids_First_Biospecimen_ID_DNA_wgs, Kids_First_Biospecimen_ID_DNA_panel, Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA_panel)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_RNA_panel)
-    
-    dna_panel_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_methyl, Kids_First_Biospecimen_ID_DNA_wgs, Kids_First_Biospecimen_ID_RNA_panel, Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA_panel)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA_panel)
+    dplyr::select(-c(Kids_First_Biospecimen_ID_Methyl, Kids_First_Biospecimen_ID_RNA)) %>%
+    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA)) %>%
+    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA)
     
     methyl_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_DNA_panel, Kids_First_Biospecimen_ID_DNA_wgs, Kids_First_Biospecimen_ID_RNA_panel, Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_methyl)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_methyl)
+    dplyr::select(-c(Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA)) %>%
+    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_Methyl)) %>%
+    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_Methyl)
     
-    return(bind_rows(rna_df, dna_df, rna_panel_df, dna_panel_df, methyl_df) %>% distinct())
+    return(bind_rows(rna_df, dna_df, methyl_df) %>% distinct())
   }
     
   # sometimes there will be multiple RNA-seq assays per single DNA-seq assay
@@ -210,12 +200,14 @@ nbl_results_df <- read_tsv(nbl_results_file)
 
 ```{r non atrt/non mb}
 embryonal_results_df <- bind_exp_strategies(embryonal_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(molecular_subtype == "CNS Embryonal, NOS"~ "CNS Embryonal tumor, NEC/NOS",
                                           molecular_subtype == "CNS HGNET-MN1"~ "CNS Embryonal tumor, HGNET-MN1",
                                           molecular_subtype == "CNS NB-FOXR2" ~ "CNS neuroblastoma",
                                           molecular_subtype == "ETMR, C19MC-altered"~ "Embryonal tumor with multilayer rosettes, C19MC-altered",
+                                          molecular_subtype == "CNS BCOR" ~ "CNS with BCOR ITD",
                                           molecular_subtype == "ETMR, NOS"~"Embryonal tumor with multilayer rosettes, NOS",
                                           TRUE ~ NA_character_), 
         short_histology = 
@@ -230,7 +222,8 @@ embryonal_results_df <- bind_exp_strategies(embryonal_results_df) %>%
 
 ```{r}
 # Add EWS integrated diagnosis, broad histology, short histology
-ews_results_df <- bind_exp_strategies(ews_results_df) %>%
+ews_results_df <-ews_results_df %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = "Ewing sarcoma",
@@ -243,6 +236,7 @@ ews_results_df <- bind_exp_strategies(ews_results_df) %>%
 
 ```{r}
 hgg_results_df <- bind_exp_strategies(hgg_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(grepl("DMG, H3 K28", molecular_subtype) ~ "Diffuse midline glioma, H3 K28-mutant",
@@ -254,10 +248,14 @@ hgg_results_df <- bind_exp_strategies(hgg_results_df) %>%
                                           grepl("IHG, ALK-altered", molecular_subtype) ~ "Infant-type hemispheric glioma, ALK-altered",
                                           grepl("IHG, ROS1-altered", molecular_subtype) ~ "Infant-type hemispheric glioma, ROS1-altered",
                                           grepl("IHG, MET-altered", molecular_subtype) ~ "Infant-type hemispheric glioma, MET-altered",
+                                          molecular_subtype == "IHG, To be classified" ~ "Infant-type hemispheric glioma",
                                           TRUE~ NA_character_),
                   broad_histology = "Diffuse astrocytic and oligodendroglial tumor",
                   short_histology = "HGAT",
-         Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes))
+         Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes)) %>%
+  # we don't need all the columns
+  select(names(embryonal_results_df))
+
 ```
 
 ### Handling LGAT
@@ -266,6 +264,7 @@ For Glial neuronal tumors (GNT) will be updated these values using pathology_fre
 
 ```{r}
 lgat_results_df <- bind_exp_strategies(lgat_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,c(join_cols,
                                      pathology_diagnosis)),
              by = "Kids_First_Biospecimen_ID") %>%
@@ -291,20 +290,24 @@ lgat_results_df <- bind_exp_strategies(lgat_results_df) %>%
 
 ```{r}
 epn_results_df <- bind_exp_strategies(epn_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
            by = "Kids_First_Biospecimen_ID") %>%
   mutate(molecular_subtype = subgroup) %>%
   mutate(molecular_subtype = if_else(is.na(molecular_subtype), "EPN, To be classified", molecular_subtype), 
          integrated_diagnosis = case_when(molecular_subtype == "EPN, PF A" ~ "Posterior fossa group A (PFA) ependymoma",
+                                          molecular_subtype == "EPN, PF B" ~ "Posterior fossa group B (PFB) ependymoma",
+                                          molecular_subtype == "EPN, PF SE" ~ "Posterior fossa subependymoma",
                                           molecular_subtype == "EPN, ST ZFTA" ~ "Supratentorial ependymoma, ZFTA fusion-positive",
                                           molecular_subtype == "EPN, ST YAP1" ~ "Supratentorial ependymoma, YAP1 fusion-positive", 
-                                          # add new EPN subtypes
                                           molecular_subtype == "EPN, SP" ~ "Spinal ependymoma, NOS",
                                           molecular_subtype == "EPN, SP-MYCN" ~ "Spinal ependymoma, MYCN-amplified",
                                           TRUE~ NA_character_),
          broad_histology = "Ependymal tumor",
          short_histology = "Ependymoma",
-         Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes))
+         Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes)) %>%
+  # we don't need all the columns
+  select(names(embryonal_results_df))
 ```
 
 ### Handling MB
@@ -328,6 +331,7 @@ mb_results_df <- bind_exp_strategies(mb_results_df) %>%
 
 ```{r}
 cranio_results_df <- bind_exp_strategies(cranio_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(molecular_subtype == "CRANIO, ADAM" ~"Adamantinomatous craniopharyngioma",
@@ -341,6 +345,7 @@ cranio_results_df <- bind_exp_strategies(cranio_results_df) %>%
 ### Handling Neurocytoma
 ```{r}
 neurocytoma_results_df <- neurocytoma_results_df %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
             by = "Kids_First_Biospecimen_ID") %>%
   mutate(harmonized_diagnosis = case_when(molecular_subtype == "CNC"~ "Central Neurocytoma",
@@ -355,6 +360,7 @@ neurocytoma_results_df <- neurocytoma_results_df %>%
 ```{r}
 
 chordoma_results_df <- bind_exp_strategies(chordoma_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   # will update subtype and integrated diagnosis in step 3
@@ -369,6 +375,7 @@ chordoma_results_df <- bind_exp_strategies(chordoma_results_df) %>%
 ### Handling ATRT
 ```{r}
 atrt_results_df <-  bind_exp_strategies(atrt_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(molecular_subtype == "ATRT, MYC" ~ "Atypical Teratoid Rhabdoid Tumor, MYC",
@@ -385,6 +392,7 @@ atrt_results_df <-  bind_exp_strategies(atrt_results_df) %>%
 
 ```{r}
 nbl_results_df <- bind_exp_strategies(nbl_results_df) %>%
+  unique() %>%
   inner_join(select(histologies_df, c("Kids_First_Participant_ID", "sample_id", join_cols)),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(molecular_subtype == "NBL, MYCN amplified" ~ paste0(short_histology, ", MYCN-amplified"),
