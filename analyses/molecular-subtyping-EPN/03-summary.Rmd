@@ -72,7 +72,7 @@ We will first prioritize samples from spinal cord to be assigned to "EPN, SP" or
 
 ```{r}
 EPN_final <- EPN_final %>%
-  mutate(subgroup = ifelse(disease_group == "spinal" & consensus_focal_CN_MYCN == "amplification", "EPN, SP-MYCN", 
+  mutate(subgroup = ifelse(disease_group == "spinal" & grepl("amplification", consensus_focal_CN_MYCN), "EPN, SP-MYCN", 
                            ifelse(disease_group == "spinal", "EPN, SP", subgroup)))
 sp_samples_assigned <- EPN_final %>%
   filter(subgroup == "EPN, SP") %>%
@@ -187,64 +187,6 @@ print(paste("Number of samples assigned for PT_EPN_B:", length(epn_pfb_samples_a
 viewDataTable(EPN_final %>%
                 filter(subgroup %in% c("EPN, PF A", "EPN, PF B")))
 ```
-
-<!-- ### Additional RELA and YAP1 groups -->
-
-<!-- 1. This next part assigns RELA and YAP1 subgroups based on a set of filters.   -->
-<!-- 2. We will not be subgrouping samples that have been subgrouped before. -->
-<!-- 3. We will not be prioritizing the samples here i.e. if a sample has PTEN--TAS2R1 fusion and ZFTA--MAML2 fusion, it will have both ST_EPN_RELA and ST_EPN_YAP1 assigned to it. -->
-
-
-<!-- ```{r} -->
-<!-- # first assign where both subtypes are applicable -->
-<!-- EPN_final <- EPN_final %>% -->
-<!--   mutate(subgroup = ifelse(subgroup == "" & -->
-<!--                              (`PTEN--TAS2R1` > 0 |  -->
-<!--                                 `9p_loss` > 0 |  -->
-<!--                                 `9q_loss` > 0 |  -->
-<!--                                 RELA_expr_zscore > 3 |  -->
-<!--                                 L1CAM_expr_zscore > 3) &  -->
-<!--                              (`ZFTA--MAML2` > 0 |  -->
-<!--                                 `11q_loss` > 0 | -->
-<!--                                 `11q_gain` > 0 | -->
-<!--                                 ARL4D_expr_zscore > 3 | -->
-<!--                                 CLDN1_expr_zscore > 3), "EPN, ST RELA; EPN, ST YAP1", subgroup), -->
-<!--          subgroup = ifelse(is.na(subgroup), "", subgroup)) -->
-<!-- print("After assigning EPN, ST RELA; EPN, ST YAP1:") -->
-<!-- viewDataTable(EPN_final %>% -->
-<!--   group_by(subgroup) %>% -->
-<!--   summarise(n = n())) -->
-
-<!-- # now only investigate values under subgroup_tmp where no subtype was assigned in the previous step -->
-<!-- # assign where EPN, ST RELA is applicable   -->
-<!-- EPN_final <- EPN_final %>% -->
-<!--   mutate(subgroup = ifelse(subgroup == "" & -->
-<!--                              (`PTEN--TAS2R1` > 0 |  -->
-<!--                                 `9p_loss` > 0 | -->
-<!--                                 `9q_loss` > 0 | -->
-<!--                                 RELA_expr_zscore > 3 | -->
-<!--                                 L1CAM_expr_zscore > 3), yes = "EPN, ST RELA", subgroup), -->
-<!--          subgroup = ifelse(is.na(subgroup), "", subgroup)) -->
-<!-- print("After assigning EPN, ST RELA:") -->
-<!-- viewDataTable(EPN_final %>% -->
-<!--   group_by(subgroup) %>% -->
-<!--   summarise(n = n())) -->
-
-<!-- # now assign where EPN, ST YAP1 is applicable -->
-<!-- EPN_final <- EPN_final %>% -->
-<!--   mutate(subgroup = ifelse(subgroup == "" & -->
-<!--                              (`ZFTA--MAML2` > 0 |  -->
-<!--                                 `11q_loss` > 0 | -->
-<!--                                 `11q_gain` > 0 | -->
-<!--                                 ARL4D_expr_zscore > 3 | -->
-<!--                                 CLDN1_expr_zscore > 3), yes = "EPN, ST YAP1", subgroup), -->
-<!--          subgroup = ifelse(is.na(subgroup), "", subgroup)) -->
-
-<!-- print("After assigning EPN, ST YAP1:") -->
-<!-- viewDataTable(EPN_final %>% -->
-<!--   group_by(subgroup) %>% -->
-<!--   summarise(n = n())) -->
-<!-- ``` -->
 
 ### Adding `SV_instability` and `CNV_instability` columns to the final dataframe
 
