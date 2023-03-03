@@ -272,6 +272,7 @@ lgat_results_df <- bind_exp_strategies(lgat_results_df) %>%
   mutate(integrated_diagnosis = case_when(
     str_detect(molecular_subtype, "To be classified") ~ NA_character_,
     grepl("^GNG, ",molecular_subtype) ~ str_replace(molecular_subtype, "GNG, ", "Ganglioglioma, "),
+    grepl("^GNT, ",molecular_subtype) ~ str_replace(molecular_subtype, "GNT, ", "Glial-neuronal tumor, "),
     grepl("^SEGA, ",molecular_subtype) ~ str_replace(molecular_subtype, "SEGA, ", "Subependymal Giant Cell Astrocytoma, "),
     TRUE ~ str_replace(molecular_subtype, "LGG, ", "Low-grade glioma, ")
   ),
@@ -300,8 +301,8 @@ epn_results_df <- bind_exp_strategies(epn_results_df) %>%
                                           molecular_subtype == "EPN, PF SE" ~ "Posterior fossa subependymoma",
                                           molecular_subtype == "EPN, ST ZFTA" ~ "Supratentorial ependymoma, ZFTA fusion-positive",
                                           molecular_subtype == "EPN, ST YAP1" ~ "Supratentorial ependymoma, YAP1 fusion-positive", 
-                                          molecular_subtype == "EPN, SP" ~ "Spinal ependymoma, NOS",
                                           molecular_subtype == "EPN, SP-MYCN" ~ "Spinal ependymoma, MYCN-amplified",
+                                          molecular_subtype == "EPN, MPE" ~ "Myxopapillary ependymoma",
                                           TRUE~ NA_character_),
          broad_histology = "Ependymal tumor",
          short_histology = "Ependymoma",
@@ -313,7 +314,8 @@ epn_results_df <- bind_exp_strategies(epn_results_df) %>%
 ### Handling MB
 
 ```{r}
-mb_results_df <- bind_exp_strategies(mb_results_df) %>%
+mb_results_df <- mb_results_df %>%
+  unique() %>%
   inner_join(select(histologies_df,join_cols),
             by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(molecular_subtype == "MB, SHH" ~ "Medulloblastoma, SHH-activated",
@@ -330,7 +332,7 @@ mb_results_df <- bind_exp_strategies(mb_results_df) %>%
 ### Handling CRANIO
 
 ```{r}
-cranio_results_df <- bind_exp_strategies(cranio_results_df) %>%
+cranio_results_df <- cranio_results_df %>%
   unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
@@ -348,8 +350,8 @@ neurocytoma_results_df <- neurocytoma_results_df %>%
   unique() %>%
   inner_join(select(histologies_df,join_cols),
             by = "Kids_First_Biospecimen_ID") %>%
-  mutate(harmonized_diagnosis = case_when(molecular_subtype == "CNC"~ "Central Neurocytoma",
-                                          molecular_subtype == "EVN" ~"Extraventricular Neurocytoma", 
+  mutate(harmonized_diagnosis = case_when(molecular_subtype == "CNC"~ "Central neurocytoma",
+                                          molecular_subtype == "EVN" ~"Extraventricular neurocytoma", 
                                         TRUE ~ NA_character_),
          broad_histology = "Neuronal and mixed neuronal-glial tumor",
          short_histology = "Neurocytoma",
@@ -359,7 +361,7 @@ neurocytoma_results_df <- neurocytoma_results_df %>%
 ### Handling Chordoma
 ```{r}
 
-chordoma_results_df <- bind_exp_strategies(chordoma_results_df) %>%
+chordoma_results_df <- chordoma_results_df %>%
   unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
@@ -374,7 +376,7 @@ chordoma_results_df <- bind_exp_strategies(chordoma_results_df) %>%
 
 ### Handling ATRT
 ```{r}
-atrt_results_df <-  bind_exp_strategies(atrt_results_df) %>%
+atrt_results_df <-  atrt_results_df %>%
   unique() %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
@@ -384,7 +386,7 @@ atrt_results_df <-  bind_exp_strategies(atrt_results_df) %>%
                                           TRUE ~ NA_character_),
          broad_histology = "Embryonal tumor",
          short_histology = "ATRT",
-         Notes = if_else(!is.na(integrated_diagnosis), "Subtype based on methylation;Updated via OpenPedCan subtyping", Notes))
+         Notes = if_else(!is.na(integrated_diagnosis), "Subtype based on methylation;Updated via OpenPedCan subtyping", Notes)) 
 
 ```
 ### leave this section  for NBL module
@@ -399,7 +401,7 @@ nbl_results_df <- bind_exp_strategies(nbl_results_df) %>%
                                           molecular_subtype == "NBL, MYCN non-amplified" ~ paste0(short_histology, ", MYCN-non-amplified"), 
                                           TRUE ~ NA_character_),
          broad_histology = "Embryonal tumor",
-         Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes))
+         Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes)) 
 ```
 ### All results
 
@@ -420,12 +422,8 @@ all_results_df <- bind_rows(embryonal_results_df,
                             ) %>%
   select(Kids_First_Participant_ID, sample_id, Kids_First_Biospecimen_ID, molecular_subtype,
          integrated_diagnosis, short_histology, broad_histology, Notes) %>%
-  # Cleanup a few Notes which have changed since last time
-  # Remove this because those were taken out of EWS
-  mutate(Notes = case_when(Notes == "Reclassified due to presence of hallmark EWS fusions"~ NA_character_,
-                          Notes == "Subtype based on prediction"~ NA_character_,
-                          TRUE ~ Notes)) %>%
   arrange(Kids_First_Participant_ID, sample_id) %>%
+  unique() %>%
   write_tsv(output_file)
 ```
 
