@@ -30,11 +30,11 @@ harbors FGFR1 p.N546K, p.K656E, p.N577, or p. K687 hotspot mutations or
 harbors an IDH R132 mutation
 
 - LGG, H3.3
-harbors an H3F3A or H3F3B K28M or G35R/V mutation
+harbors an H3-3A or H3-3B K28M or G35R/V mutation
 
 -  LGG, H3.1
-harbors an HIST1H3B K28M
-harbors and HIST1H3C  K28M
+harbors an H3C2 K28M
+harbors and H3C3  K28M
 
 
 ### Setup
@@ -74,7 +74,7 @@ clinical <- read_tsv(file.path(root_dir,
 ```
 
 ### SNV for subtyping 
- - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contained consensus calling plus hotspot rescued for SNV calling - detilaed in [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis))
+ - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contained consensus calling plus hotspot rescued for SNV calling - detialed in [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis)). Also include the DGD MAF, `snv-dgd.maf.tsv.gz` for OpenPedCan.
 
 ```{r load-inputs-please-wait}
 
@@ -92,10 +92,16 @@ keep_cols <- c("Chromosome",
              "PolyPhen",
              "DOMAINS")
 
+snv_dgd_maf <- data.table::fread(
+  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+  select = keep_cols,
+  data.table = FALSE) 
+
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
   select = keep_cols,
-  data.table = FALSE) 
+  data.table = FALSE) %>% 
+  dplyr::bind_rows(snv_dgd_maf)
 
 ```
 
@@ -119,16 +125,19 @@ write_tsv(lgat_specimens_df, file.path(subset_dir, "lgat_metadata.tsv"))
 
 # Filter to dna samples
 lgat_dna_df <- lgat_specimens_df %>%
-  dplyr::filter(experimental_strategy != "RNA-Seq") %>%
+  dplyr::filter(experimental_strategy == "WGS" | 
+                  experimental_strategy == "WXS" | 
+                  experimental_strategy == "Targeted Sequencing", 
+                is.na(RNA_library)) %>%
   # will keep Kids_First_Biospecimen_ID 
   # sample_id is kept to be able to match with RNA-Seq in the later step
-  dplyr::select(Kids_First_Biospecimen_ID,sample_id)
+  dplyr::select(Kids_First_Biospecimen_ID, sample_id)
 ```
 
 
 Gather gene(s) that define LGAT subtypes
 Additional information for genes with known hotspots/canonical mutation is also provided in the list. 
-If the gene has multiple hotspots we will gather the protein hotspots site to use it in the below chunks to grep the HGVSp_Short column.
+If the gene has multiple hotspots we will gather the protein hotspots site to use it in the below chunks to grep the `HGVSp_Short` column.
 
 ```{r}
 # combined list for SNV of interest per subtype
@@ -252,15 +261,15 @@ lgat_idh <- snv_consensus_hotspot_maf %>%
 # H3F3A canonical mutations
 lgat_histone <- snv_consensus_hotspot_maf  %>%
   dplyr::filter(
-    HGVSp_Short %in% snvOI$H3F3A$canonical & Hugo_Symbol %in% "H3F3A" | # OR
+    HGVSp_Short %in% snvOI$`H3-3A`$canonical & Hugo_Symbol %in% "H3-3A" | # OR
       # H3F3B canonical mutations
-      HGVSp_Short %in% snvOI$H3F3B$canonical & Hugo_Symbol %in% "H3F3B" | # OR
+      HGVSp_Short %in% snvOI$`H3-3B`$canonical & Hugo_Symbol %in% "H3-3B" | # OR
       # HIST1H3B canonical mutations
-      HGVSp_Short %in% snvOI$HIST1H3B$canonical & Hugo_Symbol %in% "HIST1H3B" | # OR
+      HGVSp_Short %in% snvOI$H3C2$canonical & Hugo_Symbol %in% "H3C2" | # OR
       # HIST1H3C canonical mutations
-      HGVSp_Short %in% snvOI$HIST1H3C$canonical & Hugo_Symbol %in% "HIST1H3C" | # OR
+      HGVSp_Short %in% snvOI$H3C3$canonical & Hugo_Symbol %in% "H3C3" | # OR
       # HIST2H3C canonical mutations     
-      HGVSp_Short %in% snvOI$HIST2H3C$canonical & Hugo_Symbol %in% "HIST2H3C" 
+      HGVSp_Short %in% snvOI$H3C14C$canonical & Hugo_Symbol %in% "H3C14" 
   ) %>%
   right_join(lgat_dna_df,by=c("Tumor_Sample_Barcode"="Kids_First_Biospecimen_ID"))
 
@@ -278,9 +287,9 @@ MAPK_mut | contains mutation in KRAS, NRAS, HRAS, MAP2K1, MAP2K2, MAP2K1, ARAF S
 RTK_mut | harbors a MET, KIT, or PDGFRA SNV 
 FGFR_mut | harbors FGFR1 p.N546K, p.K656E, p.N577, or p. K687 hotspot mutations 
 IDH_mut | harbors an IDH R132 mutation 
-H3.1_mut | harbors an HIST1H3B K28M or HIST1H3C  K28M
-H3.2_mut | harbors an HIST2H3C K28M
-H3.3_mut | harbors an H3F3A K28M or G35R/V mutation 
+H3.1_mut | harbors an H3C2 K28M or H3C3  K28M
+H3.2_mut | harbors an H3C14 K28M
+H3.3_mut | harbors an H3-3A K28M or G35R/V mutation 
 
 ```{r}
 
@@ -297,9 +306,9 @@ recode_mutations <- function(.data, genes, subtype) {
 lgat_subtypes_list <- list(recode_mutations(lgat_braf_V600,genes = snvOI$BRAF_V600E$gene, subtype = "BRAF_V600E_mut"),
                            recode_mutations(lgat_fgfr,genes = snvOI$FGFR$gene, subtype = "FGFR_mut"),
                            recode_mutations(lgat_idh,genes = snvOI$IDH1$gene,subtype = "IDH_mut"),
-                           recode_mutations(lgat_histone,genes = c("HIST1H3B","HIST1H3C"),subtype = "H3.1_mut"),
-                           recode_mutations(lgat_histone,genes = snvOI$HIST2H3C$gene,subtype = "H3.2_mut"),
-                           recode_mutations(lgat_histone,genes = c("H3F3A","H3F3B") ,subtype  = "H3.3_mut"),
+                           recode_mutations(lgat_histone,genes = c("H3C2","H3C3"),subtype = "H3.1_mut"),
+                           recode_mutations(lgat_histone,genes = snvOI$H3C14$gene,subtype = "H3.2_mut"),
+                           recode_mutations(lgat_histone,genes = c("H3-3A","H3-3B") ,subtype  = "H3.3_mut"),
                            recode_mutations(lgat_mapk,genes = snvOI$MAPK$gene, subtype = "MAPK_mut"),
                            recode_mutations(lgat_rtk,genes = snvOI$RTK$gene, subtype = "RTK_mut"),
                            recode_mutations(lgat_nf1,genes = snvOI$NF1$gene, subtype = "NF1_mut"))    
@@ -313,13 +322,47 @@ lgat_subtypes
 
 ```
 
+Save to subset folder
+
 ```{r}
 
-# save to subset folder
 write_tsv(lgat_subtypes,file.path(subset_dir, "LGAT_snv_subset.tsv"))
 
 ```
 
+### High confidence methylation classification subtypes
+
+```{r}
+lgat_methyl_subtypes <- clinical %>% 
+  dplyr::filter(experimental_strategy == "Methylation", 
+                sample_type == "Tumor", 
+                composition == "Solid Tissue",
+                cohort != "TARGET",
+                dkfz_v12_methylation_subclass_score >= 0.8) %>% 
+  dplyr::mutate(molecular_subtype_methyl = 
+                  case_when(grepl("LGG_MYB", dkfz_v12_methylation_subclass) ~ "LGG, MYB/MYBL1",
+                            dkfz_v12_methylation_subclass == "SEGA" ~ "SEGA, wildtype",
+                            dkfz_v12_methylation_subclass == "A_IDH_LG" ~ "LGG, IDH",
+                            dkfz_v12_methylation_subclass == "PA_INF_FGFR" ~ "LGG, FGFR",
+                            dkfz_v12_methylation_subclass == "AG_MYB" ~ "LGG, MYB/MYBL1",
+                            dkfz_v12_methylation_subclass == "GG" ~ "GNG, wildtype")) %>% 
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
+  dplyr::distinct()
+lgat_methyl_subtypes
+```
+
+Save subtypes to folder
+
+```{r}
+
+
+readr::write_tsv(lgat_methyl_subtypes, file.path(subset_dir, "LGAT_methyl_subtypes.tsv"))
+
+```
+
+## Session Info
 
 ```{r}
 sessionInfo()

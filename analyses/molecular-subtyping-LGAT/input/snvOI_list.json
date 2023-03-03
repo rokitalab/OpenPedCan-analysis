@@ -71,50 +71,50 @@
             "cancer_disposition": "NF-1"
         }
     ],
-    "H3F3A": [
+    "H3-3A": [
         {
             "canonical": "p.K28M",
-            "gene": "H3F3A"
+            "gene": "H3-3A"
         },
         {
             "canonical": "p.G35R",
-            "gene": "H3F3A"
+            "gene": "H3-3A"
         },
         {
             "canonical": "p.G35V",
-            "gene": "H3F3A"
+            "gene": "H3-3A"
         }
     ],
-    "H3F3B": [
+    "H3-3B": [
         {
             "canonical": "p.K28M",
-            "gene": "H3F3B"
+            "gene": "H3-3B"
         },
         {
             "canonical": "p.G35R",
-            "gene": "H3F3B"
+            "gene": "H3-3B"
         },
         {
             "canonical": "p.G35V",
-            "gene": "H3F3B"
+            "gene": "H3-3B"
         }
     ],
-     "HIST1H3B": [
+     "H3C2": [
         {
             "canonical": "p.K28M",
-            "gene": "HIST1H3B"
+            "gene": "H3C2"
         }
     ],
-    "HIST1H3C": [ 
+    "H3C3": [ 
         {
             "canonical": "p.K28M",
-            "gene": "HIST1H3C"
+            "gene": "H3C3"
         }
     ],
-    "HIST2H3C": [ 
+    "H3C14": [ 
         {
             "canonical": "p.K28M",
-            "gene": "HIST2H3C"
+            "gene": "H3C14"
         }
     ],
     "IDH1": [
