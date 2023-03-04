@@ -1,6 +1,6 @@
 ---
 title: "High-Grade Glioma Molecular Subtyping - Combine DNA Assays"
-author: "Chante Bethell, Jaclyn Taroni for ALSF CCDL and Zhuangzhuang Geng for D3b"
+author: "Chante Bethell, Jaclyn Taroni for ALSF CCDL, Zhuangzhuang Geng for D3b, Eric Wafula for DBHI, Jo Lynne Rokita for D3b"
 date: "2020"
 output:
   html_notebook:
@@ -57,16 +57,15 @@ data_dir <- file.path(root_dir, "data")
 cn_gistic_df <- read_tsv(file.path(results_dir, "HGG_cleaned_cnv.tsv"))
 mutation_df <- read_tsv(file.path(results_dir, "HGG_cleaned_mutation.tsv"))
 histologies_df <- read_tsv(file.path(data_dir, "histologies-base.tsv"), guess_max = 100000) %>% 
-  dplyr::filter(cohort %in% c("PBTA", "DGD"))
+  dplyr::filter(cohort %in% c("PBTA", "DGD")) %>%
+  # create cell line merge id
+  mutate(cell_line_id = paste(cell_line_composition, cell_line_passage, sep = "_"))
 fusion_df <- read_tsv(file.path(results_dir, "HGG_cleaned_fusion.tsv"))
 exp_df <- read_tsv(file.path(results_dir,
                                 "HGG_cleaned_expression.tsv"))
 
-# the cell line composition file comes from #610 in OpenPBTA_analysis repo
-cell_line_composition <- read_tsv(file.path("input","cell-line-composition.tsv"),
-                                  col_types =
-                                    readr::cols( aliquot_id  = readr::col_character()))
-
+# diff in exp and fusion files?
+missing_from_exp <- setdiff(fusion_df$Kids_First_Biospecimen_ID, exp_df$Kids_First_Biospecimen_ID)
 
 ```
 
@@ -81,56 +80,12 @@ output_subtype <- file.path(results_dir, "HGG_molecular_subtype.tsv")
 
 ## Join Together
 
-### DNA-seq Data (CNV, Mutation)
-
-The CNV and SV data, and therefore the GISTIC data that is _downstream_ of the copy number consensus calls, only includes WGS samples.
-Let's look at what biospecimen identifiers are present in the mutation data but not in the copy number data.
-
-```{r}
-histologies_df %>%
-  filter(Kids_First_Biospecimen_ID %in%
-           setdiff(mutation_df$Tumor_Sample_Barcode,
-                   cn_gistic_df$Kids_First_Biospecimen_ID)) %>%
-  count(experimental_strategy)
-```
-
 ```{r}
 dna_df <- mutation_df %>%
   rename(Kids_First_Biospecimen_ID = Tumor_Sample_Barcode) %>%
   left_join(cn_gistic_df) %>%
-  left_join(histologies_df[, c("Kids_First_Participant_ID", "sample_id", "Kids_First_Biospecimen_ID", "composition")])
+  left_join(histologies_df[, c("Kids_First_Participant_ID", "sample_id", "Kids_First_Biospecimen_ID", "composition", "cell_line_id")])
 ```
-
-
-```{r}
-any(duplicated(dna_df$sample_id))
-```
-What are they?
-
-If we only group by sample_id what does composition,aliquot_id and cell_line_composition look like:
-
-```{r}
-histologies_df %>%
-  left_join(cell_line_composition) %>%
-  filter(sample_id %in% dna_df$sample_id[duplicated(dna_df$sample_id)],
-         experimental_strategy %in% c("WGS"),
-         sample_type == "Tumor") %>%
-  group_by(sample_id) %>%
-  arrange(sample_id) %>%
-  dplyr::select(Kids_First_Biospecimen_ID,
-                sample_id,
-                composition,
-                cell_line_composition,
-                aliquot_id) %>%
-  summarize(
-            composition =  paste(composition, collapse = ", "),
-            cell_line_composition = paste(cell_line_composition, collapse = ", "),
-            aliquot_id = paste(aliquot_id, collapse = ", "))
-
-```
-The duplicates are mostly from multiple Solid tumor samples per sample_id or there are non-tumor ( derived cell-line ) samples for sample_id .
-
-
 
 ```{r}
 rm(mutation_df, cn_gistic_df)
@@ -140,72 +95,12 @@ rm(mutation_df, cn_gistic_df)
 
 We used a combined gene expressoin file in the previous module and we will continue using combined one here.
 
-#### Digging into Fusion Data
-
-There are some biospecimen identifiers that are in the expression files, but not the fusion files.
-What are they?
-
-```{r}
-missing_bsids <- setdiff(exp_df$Kids_First_Biospecimen_ID,
-                         fusion_df$Kids_First_Biospecimen_ID)
-
-histologies_df %>%
-  filter(Kids_First_Biospecimen_ID %in% missing_bsids)
-```
-
-No obvious pattern -- the `sample_type` and `composition` columns contain values we'd expect based on the retention of these identifiers.
-Are these samples present in the files prior to subsetting in [`02-HGG-molecular-subtyping-subset-files.R`](./02-HGG-molecular-subtyping-subset-files.R)?
-
 ```{r}
 # read in full file
 putative_oncogenic_df <-
   read_tsv(file.path(root_dir,
     "data",
     "fusion-putative-oncogenic.tsv"))
-```
-
-```{r}
-all(missing_bsids %in% putative_oncogenic_df$Sample)
-```
-
-```{r}
-sum(!(missing_bsids %in% putative_oncogenic_df$Sample))
-```
-
-No, none of these identifiers are in the original putative oncogenic list.
-What about the unfiltered fusion files?
-
-STARFusion first.
-
-```{r}
-starfusion_df <- read_tsv(file.path(data_dir, "fusion-starfusion.tsv.gz"))
-```
-
-```{r}
-all(missing_bsids %in% starfusion_df$tumor_id)
-```
-
-```{r}
-arriba_df <- read_tsv(file.path(data_dir, "fusion-arriba.tsv.gz"))
-```
-
-```{r}
-all(missing_bsids %in% arriba_df$tumor_id)
-```
-
-So all samples that are "missing" from the putative oncogenic fusion file are present in the Arriba file, but some are not present in the STARFusion file.
-Putative oncogenic fusions are retained if they are detected by _either_ caller.
-We will consider biospecimen identifiers that were present in the Arriba file to have no evidence for these fusions, rather than consider them missing data.
-
-```{r}
-fusion_df <- fusion_df %>%
-  # Add in the instances where we have no evidence
-  bind_rows(data.frame(Sample = missing_bsids)) %>%
-  replace(is.na(.), "None")
-```
-
-```{r}
-rm(arriba_df, putative_oncogenic_df, starfusion_df, missing_bsids)
 ```
 
 ### Join the Expression and Fusion Data
@@ -220,84 +115,13 @@ rna_df <- histologies_df %>%
   select(Kids_First_Participant_ID,
          sample_id,
          Kids_First_Biospecimen_ID, 
-         composition) %>%
+         composition, cell_line_id) %>%
   inner_join(rna_df)
 ```
 
 ```{r}
 rm(exp_df)
 ```
-
-Are there duplicated `sample_id` in the RNA data frame?
-
-```{r}
-any(duplicated(rna_df$sample_id))
-```
-What are they?
-
-Checking for duplicate RNA sample_ids. If we only group by sample_id what does composition and cell_line_composition look like:
-
-```{r}
-histologies_df %>%
-  left_join(cell_line_composition) %>%
-  filter(sample_id %in% rna_df$sample_id[which(duplicated(rna_df$sample_id))],
-         experimental_strategy == "RNA-Seq") %>%
-  group_by(sample_id) %>%
-  summarize(RNA_library = paste(RNA_library, collapse = ", "),
-            composition =  paste(composition, collapse = ", "),
-            cell_line_compositio = paste(cell_line_composition, collapse = ", "),
-            aliquot_id = paste(aliquot_id, collapse = ", "))
-```
-
-The duplicates are mostly from multiple Solid tumor samples per sample_id or there are non-tumor ( derived cell-line ) samples for sample_id.
-
-
-We are only trying to find a solution for multiple sample_ids per Kids_First_Participant_ID becuase of additional non-tumor `Derived Cell Line` samples .
-
-Checking : if we group by `sample_id` and `aliquot_id` do we get unique matches between DNA and RNA?
-
-```{r}
-
-histologies_df %>%
-  dplyr::filter(composition=="Derived Cell Line") %>%
-  # grouping by sample_id and aliquot_id
-  group_by(sample_id,aliquot_id) %>%
-  # here we are checking if can aggregate DNA and RNA samples using
-  # grouping by sample_id,aliquot_id
-  summarise(experimental_strategy=paste(experimental_strategy,collapse = ", "),count=n()) %>%
-  # if we can successfully aggregate `count` woulbe be >1
-  dplyr::filter(count >1)
-
-```
-Don't find any aggregated DNA and RNA samples by grouping by `sample_id,aliquot_id`
-
-
-If we group by `sample_id` and `cell_line_composition` do we get unique matches between DNA and RNA?
-```{r}
-histologies_df %>%
-  left_join(cell_line_composition) %>%
-  dplyr::filter(composition=="Derived Cell Line") %>%
-  # grouping by sample_id and cell_line_composition
-  group_by(sample_id,cell_line_composition) %>%
-  # here we are checking if can aggregate DNA and RNA samples using
-  # sample_id and cell_line_composition
-  summarise(experimental_strategy=paste(experimental_strategy,collapse = ", "),count=n()) %>%
-  # if we can successfully aggregate`count` woulbe be >1
-  dplyr::filter(count >1)
-
-```
-We find 16 pairs of WGS and RNA-Seq samples grouping by sample_id and cell_line_composition. Let's add `cell_line_composition`column to dna and rna files to match `Derived Cell Line` samples appropriately in `All Data` section of notebook.
-
-```{r}
-
-dna_df <- dna_df %>%
-  left_join(cell_line_composition,by = c("Kids_First_Participant_ID", "sample_id", "Kids_First_Biospecimen_ID"))
-
-rna_df <- rna_df %>%
-  left_join(cell_line_composition,by = c("Kids_First_Participant_ID", "sample_id", "Kids_First_Biospecimen_ID"))
-
-```
-
 
 ### All Data
 
@@ -307,7 +131,7 @@ Create one table with the all cleaned data.
 
 all_data_df <- full_join(dna_df, rna_df,
                          by = c("Kids_First_Participant_ID",
-                                "sample_id","cell_line_composition"),
+                                "sample_id","cell_line_id"),
                          suffix = c("_DNA", "_RNA"))
 
 head(all_data_df, n = 10)

@@ -90,9 +90,7 @@ path_dx_df <- tumor_metadata_df %>%
          # Inclusion based on pathology free text diagnosis
          pathology_free_text_diagnosis == path_dx_list$gliomatosis_path_free_text_exact |
          # Inclusion based on pathology free text diagnosis for IHG
-         pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx | 
-         # Inclusion based on cns methylation subclass for IHG
-         dkfz_v12_methylation_subclass %in% path_dx_list$IHG_cns_methylation_subclass)
+         pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx)
   
 
 # Now samples on the basis of the defining lesions
