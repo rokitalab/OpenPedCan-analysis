@@ -72,12 +72,7 @@ We will first prioritize samples from spinal cord to be assigned to "EPN, SP" or
 
 ```{r}
 EPN_final <- EPN_final %>%
-  mutate(subgroup = ifelse(disease_group == "spinal" & grepl("amplification", consensus_focal_CN_MYCN), "EPN, SP-MYCN", 
-                           ifelse(disease_group == "spinal", "EPN, SP", subgroup)))
-sp_samples_assigned <- EPN_final %>%
-  filter(subgroup == "EPN, SP") %>%
-  pull(sample_id)
-print(paste("Number of samples assigned for SP:", length(sp_samples_assigned)))
+  mutate(subgroup = ifelse(disease_group == "spinal" & grepl("amplification", consensus_focal_CN_MYCN), "EPN, SP-MYCN", subgroup))
 sp_mycn_samples_assigned <- EPN_final %>%
   filter(subgroup == "EPN, SP-MYCN") %>%
   pull(sample_id)
@@ -88,7 +83,7 @@ print(paste("Number of samples assigned for SP-MYCN:", length(sp_mycn_samples_as
 
 ```{r}
 viewDataTable(EPN_final %>%
-                filter(subgroup %in% c("EPN, SP", "EPN, SP-MYCN")))
+                filter(subgroup == "EPN, SP-MYCN"))
 ```
 
 ### Fusion prioritization
