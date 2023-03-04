@@ -125,7 +125,7 @@ snv_lesions_df <- snv_consensus_hotspot_maf  %>%
                                      "p.G35V")) %>%
   dplyr::select(Tumor_Sample_Barcode, Hugo_Symbol, HGVSp_Short) %>%
   dplyr::mutate(
-    "H3-3A.K28M" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
+    `H3-3A.K28M` = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.K28M" ~ "Yes",
                                   TRUE ~ "No"),
     H3C2.K28M = dplyr::case_when(
@@ -137,10 +137,10 @@ snv_lesions_df <- snv_consensus_hotspot_maf  %>%
     H3C14.K28M = dplyr::case_when(
       Hugo_Symbol == "H3C14" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    "H3-3A.G35R" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
+    `H3-3A.G35R` = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.G35R" ~ "Yes",
                                   TRUE ~ "No"),
-    "H3-3A.G35V" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
+    `H3-3A.G35V` = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.G35V" ~ "Yes",
                                   TRUE ~ "No")
   ) %>%

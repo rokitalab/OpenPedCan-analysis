@@ -335,7 +335,7 @@ h3_k28_df_biospecimen <- all_data_df %>%
 ```{r}
 h3_g35_df <- all_data_df %>%
   # Only rows with H3 G35 mutations
-  filter("H3-3A.G35R" == "Yes" | "H3-3A.G35V" == "Yes") %>%
+  filter(`H3-3A.G35R` == "Yes" | `H3-3A.G35V` == "Yes") %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
          sample_id,
@@ -356,7 +356,7 @@ Make a biospecimen-centric table.
 ```{r}
 h3_g35_df_biospecimen <- all_data_df %>%
   # Only rows with H3 G35 mutations
-  filter("H3-3A.G35R" == "Yes" | "H3-3A.G35V" == "Yes") %>%
+  filter(`H3-3A.G35R` == "Yes" | `H3-3A.G35V` == "Yes") %>%
   mutate(molecular_subtype = "HGG, H3 G35")
 ```
 
