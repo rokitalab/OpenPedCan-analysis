@@ -245,17 +245,17 @@ In this section, we'll divide up the table based on the molecular subtypes descr
 ```{r}
 h3_k28_df <- all_data_df %>%
   # Only rows with H3 K28M mutations
-  filter("H3-3A.K28M" == "Yes" | H3C2.K28M == "Yes" |
+  filter(`H3-3A.K28M` == "Yes" | H3C2.K28M == "Yes" |
            H3C3.K28M == "Yes" | H3C14.K28M == "Yes") %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
          sample_id,
-         "H3-3A.K28M",
+         `H3-3A.K28M`,
          H3C2.K28M,
          H3C3.K28M,
          H3C14.K28M,
-         "H3-3A.G35R",
-         "H3-3A.G35V",
+         `H3-3A.G35R`,
+         `H3-3A.G35V`,
          age_at_diagnosis_yr,
          CNS_region,
          relevant_coding_mutations,
@@ -319,7 +319,7 @@ So we'll create a table that contains the biospecimen IDs and the calls.
 
 ```{r}
 h3_k28_df_biospecimen <- all_data_df %>%
-  filter("H3-3A.K28M" == "Yes" | H3C2.K28M == "Yes" |
+  filter(`H3-3A.K28M` == "Yes" | H3C2.K28M == "Yes" |
            H3C3.K28M == "Yes" | H3C14.K28M == "Yes") %>%
   mutate(molecular_subtype = "DMG, H3 K28")
 
@@ -339,10 +339,10 @@ h3_g35_df <- all_data_df %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
          sample_id,
-         "H3-3A.K28M",
+         `H3-3A.K28M`,
          H3C2.K28M,
-         "H3-3A.G35R",
-         "H3-3A.G35V",
+         `H3-3A.G35R`,
+         `H3-3A.G35V`,
          age_at_diagnosis_yr,
          relevant_coding_mutations,
          NTRK_fusions) %>%
@@ -391,12 +391,12 @@ idh_df_biospecimen <- all_data_df %>%
 
 ```{r}
 wildtype_df <- all_data_df %>%
-  filter("H3-3B.K28M" == "No",
+  filter(`H3-3A.K28M` == "No",
          H3C2.K28M == "No",
          H3C3.K28M == "No",
          H3C14.K28M == "No",
-         "H3-3B.G35R" == "No",
-         "H3-3B.G35V" == "No",
+         `H3-3A.G35R` == "No",
+         `H3-3A.G35V` == "No",
          !grepl("IDH1", relevant_coding_mutations)) %>%
   select(Kids_First_Participant_ID,
          sample_id,
@@ -510,10 +510,7 @@ IHG <- all_data_df %>%
     Kids_First_Biospecimen_ID_RNA %in% ROS1 ~ "IHG, ROS1-altered",
     Kids_First_Biospecimen_ID_RNA %in% MET ~ "IHG, MET-altered",
     !Kids_First_Biospecimen_ID_RNA %in% c(NTRK, ALK, MET, ROS1) & 
-      molecular_subtype_methyl == "IHG" ~ "IHG, To be classified",
-    !Kids_First_Biospecimen_ID_RNA %in% c(NTRK, ALK, MET, ROS1) &
-      (molecular_subtype_methyl != "IHG" | 
-         clinical_pathology == "IHG") ~ "IHG, To be classified")) %>%
+      molecular_subtype_methyl == "IHG" ~ "IHG, To be classified")) %>%
   filter(!is.na(molecular_subtype)) %>% 
   distinct()
 

@@ -55,8 +55,8 @@ if (!dir.exists(results_dir)) {
 metadata <-
   readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"), 
                   guess_max = 100000) %>%
-  dplyr::filter(sample_type == "Tumor") %>%
-  dplyr::filter(cohort == c("PBTA", "DGD"))
+  dplyr::filter(cohort %in% c("PBTA", "DGD"),
+                !is.na(pathology_diagnosis))
 
 # File from 00-LGAT-select-pathology-dx that is used for inclusion/exclusion
 path_dx_list_lgat <- jsonlite::fromJSON(
@@ -68,7 +68,7 @@ path_dx_list_lgat <- jsonlite::fromJSON(
 # Prepare Data
 
 ```{r}
-# Get LGAT tumor samples on the basis of pathology diagnosis
+# Get LGG samples on the basis of pathology diagnosis
 lgat_specimens <- metadata %>%
   filter(str_detect(str_to_lower(pathology_diagnosis),  # Inclusion criteria
                     paste0(path_dx_list_lgat$include_path_dx, collapse = "|")),
@@ -76,9 +76,7 @@ lgat_specimens <- metadata %>%
          str_detect(str_to_lower(pathology_diagnosis),
                     paste0(path_dx_list_lgat$exclude_path_dx, collapse = "|"),
                     negate = TRUE),
-         # Tumors
-         sample_type == "Tumor",
-         composition == "Solid Tissue") %>%
+         !is.na(pathology_diagnosis)) %>%
   pull(Kids_First_Biospecimen_ID)
 ```
 
@@ -169,12 +167,12 @@ We'll use this to create subset files in the next step.
 snv_lesions_df <- snv_lesions_df %>%
   dplyr::mutate(
     defining_lesion = dplyr::case_when(
-      "H3-3A.K28M" == "Yes" ~ TRUE,
+      `H3-3A.K28M` == "Yes" ~ TRUE,
       H3C2.K28M == "Yes" ~ TRUE,
       H3C3.K28M == "Yes" ~ TRUE,
       H3C14.K28M == "Yes" ~ TRUE,
-      "H3-3A.G35R" == "Yes" ~ TRUE,
-      "H3-3A.G35V" == "Yes" ~ TRUE,
+      `H3-3A.G35R` == "Yes" ~ TRUE,
+      `H3-3A.G35V` == "Yes" ~ TRUE,
       TRUE ~ FALSE
     )
   )
