@@ -77,14 +77,8 @@ path_dx_list <- jsonlite::fromJSON(
 # Filter metadata based on pathology diagnosis fields and include samples that
 # should be classified as high-grade glioma based on defining lesions
 
-# First, filter to exclude cell lines
-tumor_metadata_df <- metadata %>%
-  filter(
-    sample_type == "Tumor"
-  )
-
 # Samples included on the basis of the pathology diagnosis fields
-path_dx_df <- tumor_metadata_df %>%
+path_dx_df <- metadata %>%
   # Inclusion on the basis of CBTTC harmonized pathology diagnoses
   filter(pathology_diagnosis %in% path_dx_list$exact_path_dx |
          # Inclusion based on pathology free text diagnosis
@@ -97,7 +91,8 @@ path_dx_df <- tumor_metadata_df %>%
 hgg_sample_ids <- hgg_lesions_df %>%
   filter(defining_lesion) %>%
   pull(sample_id)
-lesions_df <- tumor_metadata_df %>%
+
+lesions_df <- metadata %>%
   filter(sample_id %in% hgg_sample_ids)
 
 # Putting it all together now

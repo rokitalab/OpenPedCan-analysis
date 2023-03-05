@@ -31,7 +31,8 @@ exact_path_dx<- c(
 # glioma so we will add an inclusion criteria for v9 release 
 # to only keep `Gliomatosis Cerebri` samples if pathology_free_text_diagnosis
 # as `anaplastic gliomatosis cerebri (who grade 4)`
-gliomatosis_path_free_text_exact <- "anaplastic gliomatosis cerebri (who grade 4)"
+gliomatosis_path_free_text_exact <- c("anaplastic gliomatosis cerebri (who grade 4)",
+                                      "astroblastoma")
 
 #Identify which samples are IHGs and bring them into the HGG module for subtyping. 
 #This can be done by either searching 
