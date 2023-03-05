@@ -450,13 +450,13 @@ not_subtyped <- setdiff(all_data_df$id, molecular_subtype_table$id)
 wildtype_df <- all_data_df %>%
   filter(id %in% not_subtyped) %>%
   left_join(molecular_subtype_table[c("id", "molecular_subtype", "molecular_subtype_methyl")]) %>%
-  filter(`H3F3A_H3-3A.K28M` == "No",
-         HIST1H3B_H3C2.K28M == "No",
-         HIST1H3C_H3C3.K28M == "No",
-         HIST2H3C_H3C14.K28M == "No",
-         `H3F3A_H3-3A.G35R` == "No",
-         `H3F3A_H3-3A.G35V` == "No",
-         IDH1_mutation == "No R132 or R172",
+  filter(is.na(`H3F3A_H3-3A.K28M`) | `H3F3A_H3-3A.K28M` == "No",
+         is.na(HIST1H3B_H3C2.K28M) | HIST1H3B_H3C2.K28M == "No",
+         is.na(HIST1H3C_H3C3.K28M) | HIST1H3C_H3C3.K28M == "No",
+         is.na(HIST2H3C_H3C14.K28M) | HIST2H3C_H3C14.K28M == "No",
+         is.na(`H3F3A_H3-3A.G35R`) | `H3F3A_H3-3A.G35R` == "No",
+         is.na(`H3F3A_H3-3A.G35V`) | `H3F3A_H3-3A.G35V` == "No",
+         is.na(IDH1_mutation) | IDH1_mutation == "No R132 or R172",
          # and not re-classified by methyl
          !molecular_subtype_methyl %in% c("DMG, H3 K28", "DHG, H3 G35", "IHG")) %>%
   mutate(molecular_subtype = "HGG, H3 wildtype") %>%
@@ -482,7 +482,7 @@ molecular_subtype_table_final <- molecular_subtype_table %>%
 subtype_map <- molecular_subtype_table_final %>%
   select(id, molecular_subtype, molecular_subtype_methyl) %>%
   unique()
-table(subtype_map$molecular_subtype)
+as.data.frame(table(subtype_map$molecular_subtype)) 
 
 # add missing methyl
 missing_methyl_subtyped <- missing_methyl %>%
@@ -492,7 +492,8 @@ missing_methyl_subtyped <- missing_methyl %>%
                                     TRUE ~ molecular_subtype))
 
 molecular_subtype_table_final <- molecular_subtype_table_final %>%
-  bind_rows(missing_methyl_subtyped)
+  bind_rows(missing_methyl_subtyped) %>%
+  arrange(id)
 
 # subset only columns needed
 molecular_subtype_table_final_subset <- molecular_subtype_table_final %>%
@@ -509,15 +510,19 @@ ids <- c(molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_DNA, mol
 all_needed_ids <- hgg_meta$Kids_First_Biospecimen_ID
 
 missing_dna <- setdiff(dna_bsids$Kids_First_Biospecimen_ID_DNA, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_DNA)
+missing_dna
+
 missing_rna <- setdiff(rna_bsids$Kids_First_Biospecimen_ID_RNA, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_RNA)
+missing_rna
+
 missing_methyl <- setdiff(methyl_bsids$Kids_First_Biospecimen_ID_Methyl, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_Methyl)
+missing_methyl
 
 dna_missing_df <- hgg_meta %>%
   filter(Kids_First_Biospecimen_ID %in% missing_dna)
 
 rna_missing_df <- hgg_meta %>%
   filter(Kids_First_Biospecimen_ID %in% missing_rna)
-
 
 
 ```
