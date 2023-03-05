@@ -207,7 +207,9 @@ We use the putative oncogenic file here, therefore any sample that was profiled 
 ```{r}
 # gather and combine
 specimensUnion <- hist %>%
-  filter(experimental_strategy == "RNA-Seq" | grepl("DGD_FUSIP", aliquot_id)) %>%
+  filter((experimental_strategy == "RNA-Seq" | grepl("DGD_FUSIP", aliquot_id)),
+         # remove TCGA/GTEx
+         !cohort %in% c("TCGA", "GTEx")) %>%
   pull(Kids_First_Biospecimen_ID)
 ```
 
