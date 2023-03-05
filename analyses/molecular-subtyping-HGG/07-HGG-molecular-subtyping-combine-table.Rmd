@@ -518,15 +518,18 @@ missing_rna
 missing_methyl <- setdiff(methyl_bsids$Kids_First_Biospecimen_ID_Methyl, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_Methyl)
 missing_methyl
 
-dna_missing_df <- hgg_meta %>%
-  filter(Kids_First_Biospecimen_ID %in% missing_dna)
-
-rna_missing_df <- hgg_meta %>%
-  filter(Kids_First_Biospecimen_ID %in% missing_rna)
-
-
 ```
 
+# Summary 
+```{r summary}
+tumors_subtyped <- molecular_subtype_table_final_subset %>%
+  select(id, molecular_subtype) %>%
+  unique()
+
+as.data.frame(table(tumors_subtyped$molecular_subtype)) %>%
+  arrange(desc(Freq))
+
+```
 
 Write to file.
 
