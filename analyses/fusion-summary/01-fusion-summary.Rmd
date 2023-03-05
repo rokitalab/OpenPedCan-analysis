@@ -81,6 +81,9 @@ annotDir <- file.path("..", "..", "analyses", "fusion_filtering", "references")
 annot <- read.delim(system.file("extdata", "genelistreference.txt", package = "annoFuseData"))
 
 #' The putative oncogenic fusion file is what we'll use to check for the #' presence or absence of the fusions.
+#' However, some biospecimens are not represented in this filtered, prioritized
+#' file but have been assayed - we will gather those from the histology file
+hist <- read_tsv(file.path(dataDir, "histologies-base.tsv"))
 
 # This needs to come from the data directory when running in CI
 if ( params$ci_run == 1 ){
@@ -91,11 +94,7 @@ putativeOncogenicDF <-
   read_tsv(file.path(dataDir, "fusion-putative-oncogenic.tsv"))
 }
 
-#' However, some biospecimens are not represented in this filtered, prioritized
-#' file but *are* present in the original files -- this will cause them to be
-#' "missing" in the final files for consumption which could mislead analysts.
-arribaDF <- read_tsv(file.path(dataDir, "fusion-arriba.tsv.gz"))
-starfusionDF <- read_tsv(file.path(dataDir, "fusion-starfusion.tsv.gz"))
+
 ```
 
 ### Read in DGD and arrange as fusion filtering df 
@@ -202,17 +201,14 @@ allFuseLGGHGG <- filterFusion(df = putativeOncogenicDF,
 
 ```
 
-Get the biospecimen IDs that are present in *either* caller file (Arriba, STARFusion).
-The fusions in the putative oncogenic fusion file can be retained even if they are not in both callers: https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/8fba1753608d8ac0aa3d5d7d63c480b8f00ff0e9/analyses/fusion_filtering/04-project-specific-filtering.Rmd#L242
-We use the putative oncogenic file here, therefore any sample that is in either file but does not have a fusion that is relevant to the subtyping tickets is not _missing_ but instead has no evidence of the relevant fusions.
+Get the biospecimen IDs that have had either RNA-Seq or Targeted fusion panel performed.
+We use the putative oncogenic file here, therefore any sample that was profiled but does not have a fusion that is relevant to the subtyping tickets is not _missing_ but instead has no evidence of the relevant fusions.
 
 ```{r}
-# combine star and arriba samples
-specimensUnion<- union(arribaDF$tumor_id, 
-                       starfusionDF$tumor_id)
-# add dgd samples here 
-specimensUnion<- union(specimensUnion,
-                       dgd_fusion$Sample)
+# gather and combine
+specimensUnion <- hist %>%
+  filter(experimental_strategy == "RNA-Seq" | grepl("DGD_FUSIP", aliquot_id)) %>%
+  pull(Kids_First_Biospecimen_ID)
 ```
 
 #### Write non-MB, non-ATRT embryonal fusions to file
