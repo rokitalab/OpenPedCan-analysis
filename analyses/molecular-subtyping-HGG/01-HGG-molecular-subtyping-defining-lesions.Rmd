@@ -92,7 +92,7 @@ hgg_only_meta <- metadata %>%
          # Inclusion based on pathology free text diagnosis for IHG
          pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx)
 
-dna_bsids <- hgg_meta %>%
+dna_bsids <- hgg_only_meta %>%
   filter(!is.na(pathology_diagnosis),
                 (experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing") & is.na(RNA_library))) %>%
   pull(Kids_First_Biospecimen_ID)

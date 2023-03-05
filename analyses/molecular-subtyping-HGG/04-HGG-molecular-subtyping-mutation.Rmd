@@ -26,6 +26,7 @@ Rscript -e "rmarkdown::render('analyses/molecular-subtyping-HGG/04-HGG-molecular
 
 ```{r}
 `%>%` <- dplyr::`%>%`
+library(tidyverse)
 ```
 
 We'll take a similar approach to the [`tp53_nf1_score`](../tp53_nf1_score/) module and use functions from the [`snv-callers`](../snv-callers/) module.
