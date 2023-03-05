@@ -17,7 +17,6 @@ results_dir <- file.path(
   "analyses",
   "molecular-subtyping-HGG",
   "results")
-
 ```
 
 
