@@ -60,6 +60,6 @@ hgg_subtypes <- hgg_subtypes %>%
     TRUE ~ molecular_subtype
   )) %>%
   arrange(Kids_First_Participant_ID, sample_id) %>%
-  write_tsv(file.path(results_dir,"HGG_molecular_subtype.tsv"))
+  write_tsv(file.path(results_dir,"HGG_molecular_subtype_tp53.tsv"))
 
 ```

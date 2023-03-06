@@ -78,7 +78,7 @@ lesion_subtype_file <- file.path(results_dir, "HGG_cleaned_all_table.tsv")
 subtype_file <- file.path(results_dir, "HGG_molecular_subtype.tsv")
 ```
 
-## collect all dna and rna ids to add to dfs later, in case of no fusion or mutation/cnv calls
+## collect all dna, rna, and methyl bs ids
 ```{r sample lists}
 rna_bsids <- hgg_meta %>%
   filter(experimental_strategy == "RNA-Seq" | (experimental_strategy == "Targeted Sequencing" & !is.na(RNA_library))) %>%
@@ -167,21 +167,22 @@ Add methylation to all_data_df.
 ```{r}
 methyl_df <- hgg_meta %>% 
   filter(experimental_strategy == "Methylation", 
-         ((grepl("GBM_", dkfz_v12_methylation_subclass) |
+         (grepl("GBM_", dkfz_v12_methylation_subclass) |
              grepl("pedHGG_", dkfz_v12_methylation_subclass) | 
              dkfz_v12_methylation_subclass == "DHG_G34" | 
              dkfz_v12_methylation_subclass == "DMG_K27" | 
              dkfz_v12_methylation_subclass == "A_IDH_HG" |
-             dkfz_v12_methylation_subclass == "IHG") & 
-          dkfz_v12_methylation_subclass_score >= 0.8)) %>% 
+             dkfz_v12_methylation_subclass == "IHG")) %>% 
+  # add all samples but only keep subtypes if score >=0.8
   mutate(molecular_subtype_methyl = case_when(
-    grepl("GBM_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
-    grepl("pedHGG_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
-    dkfz_v12_methylation_subclass == "DHG_G34"  ~ "DHG, H3 G35",
-    dkfz_v12_methylation_subclass == "DMG_K27"  ~ "DMG, H3 K28",
-    dkfz_v12_methylation_subclass == "A_IDH_HG"  ~ "HGG, IDH",
-    dkfz_v12_methylation_subclass == "O_IDH" ~ "Oligo, IDH",
-    dkfz_v12_methylation_subclass == "IHG"  ~ "IHG")) %>% 
+    dkfz_v12_methylation_subclass_score >= 0.8 & grepl("GBM_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
+    dkfz_v12_methylation_subclass_score >= 0.8 & grepl("pedHGG_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
+    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "DHG_G34"  ~ "DHG, H3 G35",
+    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "DMG_K27"  ~ "DMG, H3 K28",
+    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "A_IDH_HG"  ~ "HGG, IDH",
+    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "O_IDH" ~ "Oligo, IDH",
+    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "IHG"  ~ "IHG",
+    TRUE ~ NA_character_)) %>% 
   select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 composition, id, molecular_subtype_methyl) %>%
   rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>%
@@ -366,10 +367,10 @@ Let's first filter by the broad arm data and see what we get.
 
 ```{r}
 all_data_df %>%
-  filter(`1p` == "loss" | `19q` == "loss")
+  filter(`1p` == "loss" & `19q` == "loss")
 ```
 
-We don't see the _IDH1_ mutations we would expect and we do see an H3 K28M mutation, so we will leave this off as well for the moment and in a subsequent notebook we'll address [`AlexsLemonade/OpenPBTA-analysis#435 (comment)`](https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/435#issuecomment-576898275):
+No co-occurring 1p/19q
 
 > We expect very few, if any of these (maybe 1 when we looked by CNV), so I think maybe we can approach this cohort by starting to look for 1p/19q codeletions in all samples + IDH mutations, and if we see any, we may manually want to check the CNV plots just to confirm.
 
@@ -445,22 +446,33 @@ as.data.frame(table(molecular_subtype_table$molecular_subtype)) %>%
 
 ```{r}
 # which tumors were not yet subtyped?
-not_subtyped <- setdiff(all_data_df$id, molecular_subtype_table$id)
-
+not_subtyped <- setdiff(unique(all_data_df$id), molecular_subtype_table$id)
+#"BS_DBH8YWA1"
+  
+  
 wildtype_df <- all_data_df %>%
   filter(id %in% not_subtyped) %>%
   left_join(molecular_subtype_table[c("id", "molecular_subtype", "molecular_subtype_methyl")]) %>%
-  filter(is.na(`H3F3A_H3-3A.K28M`) | `H3F3A_H3-3A.K28M` == "No",
-         is.na(HIST1H3B_H3C2.K28M) | HIST1H3B_H3C2.K28M == "No",
-         is.na(HIST1H3C_H3C3.K28M) | HIST1H3C_H3C3.K28M == "No",
-         is.na(HIST2H3C_H3C14.K28M) | HIST2H3C_H3C14.K28M == "No",
-         is.na(`H3F3A_H3-3A.G35R`) | `H3F3A_H3-3A.G35R` == "No",
-         is.na(`H3F3A_H3-3A.G35V`) | `H3F3A_H3-3A.G35V` == "No",
-         is.na(IDH1_mutation) | IDH1_mutation == "No R132 or R172",
+  filter(`H3F3A_H3-3A.K28M` == "No",
+         HIST1H3B_H3C2.K28M == "No",
+         HIST1H3C_H3C3.K28M == "No",
+         HIST2H3C_H3C14.K28M == "No",
+         `H3F3A_H3-3A.G35R` == "No",
+         `H3F3A_H3-3A.G35V` == "No",
+         IDH1_mutation == "No R132 or R172",
          # and not re-classified by methyl
          !molecular_subtype_methyl %in% c("DMG, H3 K28", "DHG, H3 G35", "IHG")) %>%
   mutate(molecular_subtype = "HGG, H3 wildtype") %>%
   distinct()
+
+# add wildtype methyl not already there
+wildtype_methyl <- all_data_df %>%
+  filter(!Kids_First_Biospecimen_ID_Methyl %in% wildtype_df$Kids_First_Biospecimen_ID_Methyl,
+         molecular_subtype_methyl == "HGG, H3 wildtype") %>%
+  mutate(molecular_subtype = molecular_subtype_methyl)
+
+wildtype_df <- wildtype_df %>%
+  bind_rows(missing_wt_methyl)
 
 wildtype_df %>% arrange(MYCN_focal_status, PDGFRA_focal_status)
 ```
@@ -470,59 +482,38 @@ wildtype_df %>% arrange(MYCN_focal_status, PDGFRA_focal_status)
 > We added non-methyl DNA bs_ids which were not present in CNV or mutation files
 > We added high-confidence methyl bs_ids earlier, so need to add remaining methylation bs_ids
 
-```{r add remaining bs_ids}
-missing_methyl <- hgg_meta %>%
-  filter(Kids_First_Biospecimen_ID %in% setdiff(methyl_bsids$Kids_First_Biospecimen_ID_Methyl, methyl_df$Kids_First_Biospecimen_ID_Methyl)) %>%
-  select(Kids_First_Biospecimen_ID_Methyl = Kids_First_Biospecimen_ID, id)
-
-molecular_subtype_table_final <- molecular_subtype_table %>%
+```{r add subtypes if exist for other specimens or the same id and rest as To be classified}
+molecular_subtype_table_wt <- molecular_subtype_table %>%
   bind_rows(wildtype_df)
 
 # subtype mapping 
-subtype_map <- molecular_subtype_table_final %>%
-  select(id, molecular_subtype, molecular_subtype_methyl) %>%
+subtype_map <- molecular_subtype_table_wt %>%
+  select(id, molecular_subtype) %>%
   unique()
-as.data.frame(table(subtype_map$molecular_subtype)) 
 
-# add missing methyl
-missing_methyl_subtyped <- missing_methyl %>%
-  left_join(subtype_map) %>%
-  # to be classified if NA
-  mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "HGG, To be classified",
-                                    TRUE ~ molecular_subtype))
+# which ids have samples which can be assigned subtypes
+all_subtypes <- subtype_map %>%
+  left_join(hgg_meta[,c("Kids_First_Biospecimen_ID", "id")]) %>%
+  select(Kids_First_Biospecimen_ID, id, molecular_subtype)
 
-molecular_subtype_table_final <- molecular_subtype_table_final %>%
-  bind_rows(missing_methyl_subtyped) %>%
-  arrange(id)
+# add rest as TO BE CLASSIFIED
+to_be_classified <- hgg_meta %>%
+  filter(!id %in% all_subtypes$id) %>%
+  mutate(molecular_subtype = "HGG, To be classified") %>%
+  select(Kids_First_Biospecimen_ID, id, molecular_subtype)
 
-# subset only columns needed
-molecular_subtype_table_final_subset <- molecular_subtype_table_final %>%
-  select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA, Kids_First_Biospecimen_ID_Methyl, sample_id, composition, id, molecular_subtype, molecular_subtype_methyl) %>%
+molecular_subtype_table_final <- all_subtypes %>%
+  bind_rows(to_be_classified)
+
+# create final lesion + subtype file
+lesions_subtypes <- all_data_df %>%
+  right_join(molecular_subtype_table_final[,c("id", "molecular_subtype")]) %>%
   unique()
-```
-
-## Finally, do we have all bs_ids accounted for?
-
-```{r check bs ids}
-ids <- c(molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_DNA, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_RNA, 
-         molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_Methyl) %>% unique()
-
-all_needed_ids <- hgg_meta$Kids_First_Biospecimen_ID
-
-missing_dna <- setdiff(dna_bsids$Kids_First_Biospecimen_ID_DNA, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_DNA)
-missing_dna
-
-missing_rna <- setdiff(rna_bsids$Kids_First_Biospecimen_ID_RNA, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_RNA)
-missing_rna
-
-missing_methyl <- setdiff(methyl_bsids$Kids_First_Biospecimen_ID_Methyl, molecular_subtype_table_final_subset$Kids_First_Biospecimen_ID_Methyl)
-missing_methyl
-
 ```
 
 # Summary 
 ```{r summary}
-tumors_subtyped <- molecular_subtype_table_final_subset %>%
+tumors_subtyped <- molecular_subtype_table_final %>%
   select(id, molecular_subtype) %>%
   unique()
 
@@ -534,8 +525,8 @@ as.data.frame(table(tumors_subtyped$molecular_subtype)) %>%
 Write to file.
 
 ```{r}
-write_tsv(molecular_subtype_table_final, lesion_subtype_file)
-write_tsv(molecular_subtype_table_final_subset, subtype_file)
+write_tsv(lesions_subtypes, lesion_subtype_file)
+write_tsv(molecular_subtype_table_final, subtype_file)
 ```
 
 ## Session Info
