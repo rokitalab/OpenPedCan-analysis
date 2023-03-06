@@ -472,7 +472,7 @@ wildtype_methyl <- all_data_df %>%
   mutate(molecular_subtype = molecular_subtype_methyl)
 
 wildtype_df <- wildtype_df %>%
-  bind_rows(missing_wt_methyl)
+  bind_rows(wildtype_methyl)
 
 wildtype_df %>% arrange(MYCN_focal_status, PDGFRA_focal_status)
 ```
@@ -503,12 +503,14 @@ to_be_classified <- hgg_meta %>%
   select(Kids_First_Biospecimen_ID, id, molecular_subtype)
 
 molecular_subtype_table_final <- all_subtypes %>%
-  bind_rows(to_be_classified)
+  bind_rows(to_be_classified) %>%
+  arrange(Kids_First_Biospecimen_ID)
 
 # create final lesion + subtype file
 lesions_subtypes <- all_data_df %>%
   right_join(molecular_subtype_table_final[,c("id", "molecular_subtype")]) %>%
-  unique()
+  unique() %>%
+  arrange(id)
 ```
 
 # Summary 
