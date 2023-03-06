@@ -500,7 +500,7 @@ all_subtypes <- subtype_map %>%
 to_be_classified <- hgg_meta %>%
   filter(!id %in% all_subtypes$id) %>%
   mutate(molecular_subtype = "HGG, To be classified") %>%
-  select(Kids_First_Biospecimen_ID, id, molecular_subtype)
+select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, id, molecular_subtype)
 
 molecular_subtype_table_final <- all_subtypes %>%
   bind_rows(to_be_classified) %>%
