@@ -392,7 +392,7 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "cnv-cnvkit.seg.gz")) %>%
   dplyr::pull(ID) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
+  dplyr::filter(experimental_strategy %in% c("WGS", "WXS"),
                 !is.na(pathology_diagnosis)
                 cohort != "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
