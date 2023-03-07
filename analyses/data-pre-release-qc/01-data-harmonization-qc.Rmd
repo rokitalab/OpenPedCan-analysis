@@ -393,8 +393,7 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "cnv-cnvkit.seg.gz")) %>%
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
-                is.na(RNA_library),
-                sample_type == "Tumor",
+                !is.na(pathology_diagnosis)
                 cohort != "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
