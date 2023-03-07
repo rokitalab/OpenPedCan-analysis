@@ -630,11 +630,8 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "fusion-annoFuse.tsv.gz")
   dplyr::pull(Sample) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy == "RNA-Seq" | 
-                  experimental_strategy == "Targeted Sequencing", 
-                !is.na(RNA_library), 
-                sample_type == "Tumor",
-                !cohort %in% c("DGD", "TCGA")) %>%
+  dplyr::filter(experimental_strategy == "RNA-Seq", 
+                !cohort %in% c("DGD", "TCGA", "GTEx")) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
