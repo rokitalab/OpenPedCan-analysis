@@ -450,7 +450,7 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "cnv-gatk.seg.gz")) %>%
   dplyr::pull(BS_ID) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
+  dplyr::filter(experimental_strategy %in% c("WGS"),
                 is.na(RNA_library),
                 sample_type == "Tumor",
                 cohort != "DGD",) %>%
