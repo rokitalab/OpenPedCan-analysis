@@ -603,8 +603,8 @@ biospecimen_ids <- data.table::fread(file.path(data_dir,
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy == "RNA-Seq",
-                sample_type == "Tumor",
-                cohort != "TCGA") %>%
+               !is.na(pathology_diagnosis),
+               !cohort %in% c("TCGA", "GTEx") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
