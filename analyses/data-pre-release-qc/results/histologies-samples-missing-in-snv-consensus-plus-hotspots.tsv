@@ -1,301 +1,1890 @@
 Kids_First_Biospecimen_ID	Kids_First_Participant_ID	experimental_strategy	sample_type	RNA_library	cohort
+BS_01SW27ZV	PT_HF7GAGP1	Targeted Sequencing	Tumor	NA	DGD
 BS_027R9VSH	PT_JXH1NWTR	WGS	Tumor	NA	PBTA
+BS_02JZJRYD	PT_4J766Q6K	Targeted Sequencing	Tumor	NA	DGD
+BS_02R0RSH8	PT_CSXXV81T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_02WHCCXX	PT_18RFW909	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_02YTANST	PT_8F7SK9V1	Targeted Sequencing	Tumor	NA	DGD
+BS_03D8KK86	PT_GKFQN9WV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_03FQS6DB	PT_AQECAW5W	Targeted Sequencing	Tumor	NA	DGD
+BS_03XEXKME	PT_AQ0RFSVQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_051YH363	PT_TRZ1N1HQ	Targeted Sequencing	Tumor	NA	DGD
+BS_061395E1	PT_7K25M5TQ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_065QV76T	PT_MDWPRDBT	WGS	Tumor	NA	PBTA
+BS_06F75MZ7	PT_65B5CGQG	Targeted Sequencing	Tumor	NA	DGD
+BS_06XEM873	PT_VAHFRMG5	Targeted Sequencing	Tumor	NA	DGD
+BS_07Q3532N	PT_G1EVC9DA	Targeted Sequencing	Tumor	NA	DGD
+BS_0828VTVY	PT_8127P12D	Targeted Sequencing	Tumor	NA	DGD
+BS_08W2KH2X	PT_XCA58RC8	Targeted Sequencing	Tumor	NA	DGD
+BS_093YD5JS	PT_81880Z3H	Targeted Sequencing	Tumor	NA	DGD
+BS_09WRAJ1Y	PT_7THNHCPN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0A73E7KV	PT_9C2G356W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0AF1XY2M	PT_203ZQ296	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0B7TP5KM	PT_8FBR94AD	Targeted Sequencing	Tumor	NA	DGD
+BS_0CH9VDS3	PT_A5ET1M7B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0CS6EWRM	PT_0AGB3GAN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0DAAQ75Z	PT_WN1B80HN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0DD7BQ8Z	PT_9A6RPJ97	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0DH77YMM	PT_9TPW6850	Targeted Sequencing	Tumor	NA	DGD
+BS_0E390R1S	PT_GBN55D2P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0G5YKQ3V	PT_SK5CQRYP	Targeted Sequencing	Tumor	NA	DGD
+BS_0GF99J0D	PT_H7WRRTGQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0GWCGK6N	PT_MXVNR2GC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0HZD2R30	PT_KZM85C3N	Targeted Sequencing	Tumor	NA	DGD
+BS_0J82KXT3	PT_CDEGKAFR	Targeted Sequencing	Tumor	NA	DGD
+BS_0JBZC5JY	PT_CXHQV5YC	Targeted Sequencing	Tumor	NA	DGD
+BS_0N13G21A	PT_MWDQ3RA1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0PHW7PMV	PT_67R1AF5R	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0Q2RXF59	PT_F4DBSRRC	Targeted Sequencing	Tumor	NA	DGD
+BS_0QMVN3N0	PT_5V2GEART	Targeted Sequencing	Tumor	NA	DGD
+BS_0R7JPP8R	PT_42KS3NMS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0R7SVEVC	PT_803AVNGK	Targeted Sequencing	Tumor	NA	DGD
+BS_0RGYKA7F	PT_FWP0SNEH	Targeted Sequencing	Tumor	NA	DGD
 BS_0RRDGQHS	PT_GG0D31DC	WGS	Tumor	NA	PBTA
 BS_0S7SKQCR	PT_WP871F5S	WGS	Tumor	NA	PBTA
+BS_0SJWJ2VF	PT_40CNEWYP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0SXS90H5	PT_DNKYB4BX	Targeted Sequencing	Tumor	NA	DGD
+BS_0T899T2R	PT_H0Q5FCYW	Targeted Sequencing	Tumor	NA	DGD
+BS_0TN4ABA8	PT_C6NDFST5	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_0V5MGFZG	PT_J8H4A62A	WGS	Tumor	NA	PBTA
+BS_0VZDNWC9	PT_DZ0X4KM1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0W583P4P	PT_93AT7BSV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0WC3PCF7	PT_V4NJP4PW	Targeted Sequencing	Tumor	NA	DGD
+BS_0WWZA3X9	PT_M9KRWVTD	Targeted Sequencing	Tumor	NA	DGD
+BS_0XC02E11	PT_V5PCYAFJ	Targeted Sequencing	Tumor	NA	DGD
+BS_0YBAGHZ1	PT_PY5CGXPY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_0YTVP2BR	PT_KKE7HAEH	Targeted Sequencing	Tumor	NA	DGD
+BS_0Z8FEYDJ	PT_5KPDJCD3	Targeted Sequencing	Tumor	NA	DGD
+BS_0ZPC12J7	PT_67JEDH01	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_10YVD9EK	PT_59TC9JX2	Targeted Sequencing	Tumor	NA	DGD
+BS_10Z4QJA8	PT_9CCEQ57K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_11FNCGD9	PT_AZQ230WT	Targeted Sequencing	Tumor	NA	DGD
+BS_11HRA2CM	PT_41WETNRC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_12534KZN	PT_EZ2S3W9C	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_12TRHKCY	PT_S0Q27J13	WGS	Tumor	NA	PBTA
 BS_14EC2J1V	PT_7F4TBYYQ	WGS	Tumor	NA	PBTA
+BS_14JFJACH	PT_F91JTSZC	Targeted Sequencing	Tumor	NA	DGD
+BS_14V0HA2H	PT_VH3F6AZ0	Targeted Sequencing	Tumor	NA	DGD
+BS_14Z6J25D	PT_KVMF5TFW	Targeted Sequencing	Tumor	NA	DGD
+BS_173WDBFT	PT_84211MPY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_17XFWGKN	PT_VN63HHEN	Targeted Sequencing	Tumor	NA	DGD
+BS_18ARG9JQ	PT_VN63HHEN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_198EK3RE	PT_GGR8NGD0	Targeted Sequencing	Tumor	NA	DGD
+BS_1A2TGJB7	PT_R6JT89KD	Targeted Sequencing	Tumor	NA	DGD
+BS_1APK09C2	PT_P1F0AHMT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1B40H9VS	PT_FCX193D1	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_1BFJJ3PA	PT_P9GVEXFE	WGS	Tumor	NA	PBTA
+BS_1BSBHC91	PT_9C2G356W	Targeted Sequencing	Tumor	NA	DGD
+BS_1C2KSWN1	PT_3Z8ABX6B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1C71D5CH	PT_WQ2EJVF5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1CHY8BMN	PT_9XHYDDNS	Targeted Sequencing	Tumor	NA	DGD
+BS_1CV12YKW	PT_7GSP7K3N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1D17Y76Q	PT_28TM5WBD	Targeted Sequencing	Tumor	NA	DGD
+BS_1DYEZCM3	PT_5KP2E0DS	Targeted Sequencing	Tumor	NA	DGD
+BS_1E4KZ2BG	PT_2ECVKTTQ	Targeted Sequencing	Tumor	NA	DGD
 BS_1EPK1JVF	PT_F1PXEJMQ	WGS	Tumor	NA	PBTA
+BS_1EWT0A1G	PT_NJXB8E28	Targeted Sequencing	Tumor	NA	DGD
+BS_1F58T7MG	PT_6SC3MY4H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1F8J25Q1	PT_V5PCYAFJ	Targeted Sequencing	Tumor	NA	DGD
+BS_1FZ7AJP4	PT_Y8GBEEJZ	Targeted Sequencing	Tumor	NA	DGD
+BS_1GEVH8SJ	PT_5JMNQAY8	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_1HN0E63C	PT_4W0BP7F3	WGS	Tumor	NA	PBTA
+BS_1J2DKQCB	PT_H9QTD79G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1JAZV5AJ	PT_QTDY0Y9A	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1KKF4KEB	PT_8ZDR3H4J	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1M3M7TGY	PT_G9GCH1AY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1MG2BRXM	PT_XPS6EJCM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1MP28298	PT_9H8P5G4X	Targeted Sequencing	Tumor	NA	DGD
+BS_1NRD589W	PT_NK9MYJT8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1P6BWMK3	PT_BK06Z2Q1	Targeted Sequencing	Tumor	NA	DGD
+BS_1PC3BXCP	PT_5EDSAGSV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1PJNHRVK	PT_AQECAW5W	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_1Q426SX5	PT_0MHKP408	WGS	Tumor	NA	PBTA
+BS_1QY2R5BF	PT_VK94C42M	Targeted Sequencing	Tumor	NA	DGD
 BS_1REYJQ80	PT_R4BMS5K3	WGS	Tumor	NA	PBTA
 BS_1S2RA2FN	PT_PN1YJD1M	WGS	Tumor	NA	PBTA
+BS_1S8N84TQ	PT_4NVTPQ65	Targeted Sequencing	Tumor	NA	DGD
+BS_1TEPWTZA	PT_SAKTG21V	Targeted Sequencing	Tumor	NA	DGD
+BS_1V3K7G2B	PT_Q8QBKBTX	Targeted Sequencing	Tumor	NA	DGD
+BS_1VXK5X8Q	PT_FW7B47ST	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1W1837HX	PT_NYBH025T	Targeted Sequencing	Tumor	NA	DGD
 BS_1X206RYY	PT_4XB3YTJM	WGS	Tumor	NA	PBTA
 BS_1Y62MR17	PT_DPVW4M1W	WGS	Tumor	NA	PBTA
+BS_1YMB70S6	PT_1JP2ANQK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_1ZRB1HJ7	PT_619DG5VP	Targeted Sequencing	Tumor	NA	DGD
+BS_1ZVN51H9	PT_SCZYPN5C	Targeted Sequencing	Tumor	NA	DGD
+BS_201QAYF0	PT_YC8VMNB5	Targeted Sequencing	Tumor	NA	DGD
+BS_208W3AYF	PT_F91JTSZC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_21YYTQJ3	PT_01SH4F1X	Targeted Sequencing	Tumor	NA	DGD
+BS_223NCNYJ	PT_ZSHEMD0K	Targeted Sequencing	Tumor	NA	DGD
+BS_23ACWPG9	PT_1MQ6Q08V	Targeted Sequencing	Tumor	NA	DGD
+BS_24JKMXHS	PT_3Z8ABX6B	Targeted Sequencing	Tumor	NA	DGD
 BS_24SNRV8Q	PT_NPY2K3F4	WGS	Tumor	NA	PBTA
 BS_24TKY0T9	PT_QNHGY3KQ	WGS	Tumor	NA	PBTA
+BS_2504CVT7	PT_GKFQN9WV	Targeted Sequencing	Tumor	NA	DGD
+BS_25ZA6DP6	PT_H0PXZWJ6	Targeted Sequencing	Tumor	NA	DGD
+BS_2604H901	PT_K0NHTG93	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_26QGRXVQ	PT_RZN44FHP	Targeted Sequencing	Tumor	NA	DGD
+BS_26VVJS4W	PT_MMT47BS8	Targeted Sequencing	Tumor	NA	DGD
+BS_27572VKC	PT_773ZPTEB	Targeted Sequencing	Tumor	NA	DGD
 BS_28B6MZP3	PT_Z3Q3JMSE	WGS	Tumor	NA	PBTA
 BS_28D60H36	PT_NMZBRFYS	WGS	Tumor	NA	PBTA
+BS_290G7EAF	PT_WVPM84TF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_29E2B8BX	PT_GRZE094W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2ARYKYD9	PT_SQ90PCPS	Targeted Sequencing	Tumor	NA	DGD
 BS_2B567J5H	PT_SEKXH6HT	WGS	Tumor	NA	PBTA
+BS_2DHW0JVG	PT_TN2KF4SA	Targeted Sequencing	Tumor	NA	DGD
+BS_2DTMDD2C	PT_78BDCX2C	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_2E7N6KW1	PT_7S81MVTV	WGS	Tumor	NA	PBTA
 BS_2EAF5GXZ	PT_38FS37DP	WGS	Tumor	NA	PBTA
+BS_2EE76KEF	PT_FSR10RSN	Targeted Sequencing	Tumor	NA	DGD
+BS_2EP9CDHM	PT_T80DHEVF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2F4BJR0W	PT_GK725SCY	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_2F8PFTW5	PT_3WA7SBQ6	WGS	Tumor	NA	PBTA
+BS_2FNFDCNB	PT_T95NCZMM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2FRSBDVX	PT_PZNX0ZVQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2G4JSPR5	PT_SAKTG21V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2GZP21DB	PT_MKWZC1QY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2HBE3DJ7	PT_GWX2XSM0	Targeted Sequencing	Tumor	NA	DGD
+BS_2HM4AE24	PT_V5PCYAFJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2HV0P7TF	PT_4E3H4SBP	Targeted Sequencing	Tumor	NA	DGD
+BS_2JY962VX	PT_E2TAE6HT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2KSRH0M1	PT_TZ1PJ4CY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2MHHEMZ4	PT_XN1P30ZC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2MMZYY2R	PT_DJ106XYS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2MZ3YAAQ	PT_KJ8DYES9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2P20CQH9	PT_2E552BAR	Targeted Sequencing	Tumor	NA	DGD
+BS_2P3HZV28	PT_RQ58PVSA	Targeted Sequencing	Tumor	NA	DGD
+BS_2P3PBZBW	PT_Q38AT6JY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2PEY9Y3X	PT_N4563ERM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2QESHC27	PT_A0B5S6SM	Targeted Sequencing	Tumor	NA	DGD
+BS_2QMFNMTX	PT_KNJDVV4K	Targeted Sequencing	Tumor	NA	DGD
+BS_2RGFY8JF	PT_XBCBJBTN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2RSG4S3T	PT_P127TWRS	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_2SRKC1JX	PT_H57TEQDT	WGS	Tumor	NA	PBTA
 BS_2SW9ZSEC	PT_XNMKQ4MR	WGS	Tumor	NA	PBTA
+BS_2SZXYX72	PT_2YT37G8P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2TN75G7Z	PT_54NFS78W	Targeted Sequencing	Tumor	NA	DGD
+BS_2VF0XYPM	PT_HAE2QEEJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2WD073MX	PT_4XE4WDAH	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_2WS7E25W	PT_HNZNZ635	WGS	Tumor	NA	PBTA
+BS_2X6XBEC6	PT_Z7E64KKQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2XW8Q8Z7	PT_WE2R6AYQ	Targeted Sequencing	Tumor	NA	DGD
+BS_2XZ59ZVB	PT_242A6C4M	Targeted Sequencing	Tumor	NA	DGD
+BS_2Y791F32	PT_11DZQ3HH	Targeted Sequencing	Tumor	NA	DGD
+BS_2Z5ZKKPD	PT_QDXDZ3DK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_2ZAFT05B	PT_01SH4F1X	Targeted Sequencing	Tumor	NA	DGD
+BS_30HQ910T	PT_CPYZVCN8	Targeted Sequencing	Tumor	NA	DGD
+BS_30HXDT7K	PT_A1J3631D	Targeted Sequencing	Tumor	NA	DGD
+BS_30X01X72	PT_J7KJTZRQ	Targeted Sequencing	Tumor	NA	DGD
+BS_327GE38E	PT_TMY5EVG3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_34M1NKA2	PT_TBSP0A0Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_34WKQMWV	PT_KYZB57ED	Targeted Sequencing	Tumor	NA	DGD
+BS_36VPPDQV	PT_M0RNDETE	Targeted Sequencing	Tumor	NA	DGD
+BS_376YPT68	PT_M9WKP8RF	Targeted Sequencing	Tumor	NA	DGD
+BS_37KP02VA	PT_CDEGKAFR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_37XTWG7A	PT_EQX0VT4F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_384CP6RG	PT_RD7TMNHR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_38DAD8F5	PT_Y66SNKHR	WXS	Tumor	NA	PBTA
+BS_38FJ0SBV	PT_QK1GTVW1	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_3A0G4630	PT_QH9H491G	WGS	Tumor	NA	PBTA
 BS_3B427PNG	PT_F9G665B1	WGS	Tumor	NA	PBTA
 BS_3B8V4G2E	PT_GYSNY9G2	WGS	Tumor	NA	PBTA
+BS_3BHR89XP	PT_P5QWNFBJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3CYYQHE1	PT_J91YGJ73	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3DE052QS	PT_JXSTA5HB	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_3E9Q93XX	PT_KX1QQQRC	WGS	Tumor	NA	PBTA
+BS_3EB4Y5FA	PT_4P5Y70YW	Targeted Sequencing	Tumor	NA	DGD
+BS_3G1N74DK	PT_TECKH3V0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3GCEQ805	PT_P4V35VZ8	Targeted Sequencing	Tumor	NA	DGD
+BS_3H1CMP5W	PT_EJ8TKG2Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3HBCBH9P	PT_4ZSR5DY8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3J8Z4STV	PT_H5J0VYAB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3JNJA91B	PT_QX3ZH4NZ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_3JR05TXQ	PT_E3WNEDD4	WGS	Tumor	NA	PBTA
 BS_3K5MMTMR	PT_5BWZA0NT	WGS	Tumor	NA	PBTA
+BS_3MP03QK2	PT_VT6QDTP4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3N1MCMCB	PT_1WNWDG3M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3NR4RZWA	PT_01SH4F1X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3NZ43CKW	PT_3B27053H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3P9BQCDK	PT_P2MFTDX2	Targeted Sequencing	Tumor	NA	DGD
+BS_3RNPMRT5	PT_GAKHC0Y2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3RT4ZFT0	PT_P8PQXSQ7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3RWMC6WD	PT_TP6GS00H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3S1XG5E6	PT_H7WRRTGQ	Targeted Sequencing	Tumor	NA	DGD
+BS_3S713Z0Q	PT_8QT39SNX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3SS0GYDQ	PT_1K7R8GB1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3T0ACGNS	PT_GHTSGFCT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3T9WQG94	PT_STE26Y8Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3THDMYQP	PT_BHJT2M99	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3VQFEN39	PT_XRQHMBHB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3X0C3B98	PT_VY5A2ECP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3XDN7XT2	PT_C9AY9KQF	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_3Y55A2AQ	PT_440E1XW5	WGS	Tumor	NA	PBTA
+BS_3Y6ZRHA0	PT_YA9XESGF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3YDDZHAC	PT_MPESH3X8	Targeted Sequencing	Tumor	NA	DGD
+BS_3YFT7WXJ	PT_8PVAX1B6	Targeted Sequencing	Tumor	NA	DGD
 BS_3YGQ4RZ6	PT_SY6W6B0Z	WGS	Tumor	NA	PBTA
+BS_3YJB85S7	PT_G65ZS4RM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3YK65QZG	PT_FK1GP73M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3YP96Z6C	PT_6Q7DD6RZ	Targeted Sequencing	Tumor	NA	DGD
+BS_3YSSSEPK	PT_NTVQKQAV	Targeted Sequencing	Tumor	NA	DGD
+BS_3ZDB86R3	PT_41WETNRC	Targeted Sequencing	Tumor	NA	DGD
+BS_3ZGAK2TC	PT_DJ39ZXZX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_3ZHNXCAJ	PT_CQN8M3RF	Targeted Sequencing	Tumor	NA	DGD
 BS_3ZR0ZY1P	PT_CSZ9QA1N	WGS	Tumor	NA	PBTA
+BS_409NF13H	PT_P5QWNFBJ	Targeted Sequencing	Tumor	NA	DGD
+BS_40VWRF7M	PT_8HBWG092	Targeted Sequencing	Tumor	NA	DGD
+BS_418S7XYC	PT_84211MPY	Targeted Sequencing	Tumor	NA	DGD
+BS_41NJB2WJ	PT_962TCBVR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_41PQRD6K	PT_KVMF5TFW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_41T0ENK2	PT_WXP9ZWJ0	Targeted Sequencing	Tumor	NA	DGD
+BS_422NNE0X	PT_MZPW2BAD	Targeted Sequencing	Tumor	NA	DGD
+BS_42RM9E3E	PT_5XV23PWB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_42VATCMK	PT_V9ZD1PGJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_43S4ZB8M	PT_1DY6G8CB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_46RNYY75	PT_V41TGECC	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_46Y97SN3	PT_MPGTKRRA	WGS	Tumor	NA	PBTA
+BS_474T9KBS	PT_XTVQB9S4	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_4757EX24	PT_W3FSA7NH	WGS	Tumor	NA	PBTA
+BS_47H6RK5V	PT_4XE4WDAH	Targeted Sequencing	Tumor	NA	DGD
+BS_47YCTZ24	PT_ZZRBX5JT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4848P1VM	PT_4NVTPQ65	Targeted Sequencing	Tumor	NA	DGD
+BS_48EGWZKV	PT_E71VTFBZ	Targeted Sequencing	Tumor	NA	DGD
+BS_498TZMZF	PT_YHJ3TP9X	Targeted Sequencing	Tumor	NA	DGD
+BS_49CCRRXX	PT_BK06Z2Q1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_49GXRKB1	PT_QGD544T9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_49SPJ2E4	PT_JAS80YH7	Targeted Sequencing	Tumor	NA	DGD
+BS_4A29MG9R	PT_GS68Z9B6	Targeted Sequencing	Tumor	NA	DGD
+BS_4ACANPTW	PT_VTK4R2BC	Targeted Sequencing	Tumor	NA	DGD
+BS_4BXXQCSX	PT_333GHVG7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4C0CKSW5	PT_XC15JMBJ	Targeted Sequencing	Tumor	NA	DGD
+BS_4CADZHM6	PT_QVWCRKZM	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_4CMXCJ7M	PT_6G1D0K5Z	WGS	Tumor	NA	PBTA
+BS_4CTMDJ6X	PT_VBJ02EY1	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_4EDBG0FW	PT_T16E2TWZ	WGS	Tumor	NA	PBTA
+BS_4EM410Q6	PT_NKGQYCKZ	Targeted Sequencing	Tumor	NA	DGD
+BS_4EYEGTSX	PT_GKKZRZN0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4F99M1QC	PT_D6AJHDST	Targeted Sequencing	Tumor	NA	DGD
 BS_4GMSE5BE	PT_MDWPRDBT	WGS	Tumor	NA	PBTA
+BS_4H49GA1F	PT_S9YT3GSS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4JAWZJWK	PT_XT0RH9SF	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_4JDY8YS0	PT_EPW84DJW	WXS	Tumor	NA	PBTA
+BS_4JN5WWX9	PT_0D0YGGBW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4K3XM3EV	PT_8V4W9Q0G	Targeted Sequencing	Tumor	NA	DGD
+BS_4M09CDQ7	PT_F2CG3ZZB	Targeted Sequencing	Tumor	NA	DGD
+BS_4M36DXCV	PT_JYZQ2J21	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4MPS6S7Z	PT_JNF0XNAP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4MWP3Z92	PT_RBCEW1B3	Targeted Sequencing	Tumor	NA	DGD
+BS_4QABSGSJ	PT_WJY6K9H9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4QRKHCEA	PT_W95TYXPM	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_4SK2VJ75	PT_ZZRBX5JT	WGS	Tumor	NA	PBTA
 BS_4TH4NYR1	PT_CPYZVCN8	WGS	Tumor	NA	PBTA
+BS_4V3T1HCZ	PT_4N01RPJF	Targeted Sequencing	Tumor	NA	DGD
+BS_4W8TBP0J	PT_D3KVBV7D	Targeted Sequencing	Tumor	NA	DGD
+BS_4WW9KMJ2	PT_1FP0ZWQB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4X8VNBQ6	PT_ZZRBX5JT	Targeted Sequencing	Tumor	NA	DGD
+BS_4XK24YWX	PT_6QXP9GQT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4XX0MZZ7	PT_SK5CQRYP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4XX4YX6D	PT_G9XKWA3N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_4YS8T6J9	PT_BC0B16HC	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_4Z0R4H3N	PT_MMEMRN3N	WGS	Tumor	NA	PBTA
+BS_4ZJK8WQ3	PT_XRQHMBHB	Targeted Sequencing	Tumor	NA	DGD
+BS_4ZTSJ7GD	PT_V12EAF2V	Targeted Sequencing	Tumor	NA	DGD
+BS_50ZJMPCA	PT_GWD2Z5AM	Targeted Sequencing	Tumor	NA	DGD
+BS_50ZKQ5ZD	PT_Y572BRC1	Targeted Sequencing	Tumor	NA	DGD
 BS_51B72GM7	PT_97F1YCGF	WGS	Tumor	NA	PBTA
+BS_51EE2N7E	PT_7GK1X6WR	Targeted Sequencing	Tumor	NA	DGD
+BS_525F961Y	PT_197JDVDB	Targeted Sequencing	Tumor	NA	DGD
+BS_526PT1PD	PT_D7GN92VR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_52V1ADN9	PT_CEWNZVKF	WGS	Tumor	NA	PBTA
+BS_52XRVZJA	PT_J91YGJ73	Targeted Sequencing	Tumor	NA	DGD
+BS_53QYW5ZT	PT_8SRYHAAW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_547ZPRTX	PT_STE26Y8Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_54E2NYWM	PT_TTQ3KXDH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5519HCE8	PT_TZKM2RGD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_565NXM7G	PT_N4563ERM	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_58ZJ93W0	PT_6J1350XD	WGS	Tumor	NA	PBTA
+BS_59GK8J1C	PT_J8C3VPNF	Targeted Sequencing	Tumor	NA	DGD
+BS_5A9HAW3H	PT_HV6C0T34	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5ANHPRMQ	PT_EPR6F96B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5BM7G270	PT_1K7R8GB1	Targeted Sequencing	Tumor	NA	DGD
 BS_5C0SRKYC	PT_Z4PJA6KT	WGS	Tumor	NA	PBTA
+BS_5CZCGMA9	PT_VH3F6AZ0	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_5D1QYYFE	PT_A5S5BB3A	WGS	Tumor	NA	PBTA
+BS_5DAD9R8K	PT_1H2REHT2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5F8DNK4T	PT_B5HCHR89	Targeted Sequencing	Tumor	NA	DGD
+BS_5G9R3W7D	PT_EHXD392P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5GMSWGF9	PT_PZCPVKDX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5GSFVQ98	PT_ZH3SBJPZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5HMSZJMZ	PT_VBJ02EY1	Targeted Sequencing	Tumor	NA	DGD
+BS_5JA6Z5PJ	PT_44FPNNS3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5MA18ZPM	PT_V0Q3SPHV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5MGAKGJA	PT_6Q7DD6RZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5NGHMKC9	PT_8FP2770K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5NPSXM2M	PT_PXQN10A8	Targeted Sequencing	Tumor	NA	DGD
+BS_5P0X5WKQ	PT_SQ90PCPS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5PEZXA2D	PT_CNCJZ4JD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5PY7T16M	PT_FC0EF5ZT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5Q9EDT8W	PT_Q99REANT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5RK4RKXD	PT_GWX2XSM0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5RT1NBNX	PT_TRMYF97N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5RTN4RM0	PT_0E8P5QX8	Targeted Sequencing	Tumor	NA	DGD
 BS_5SWRB9C6	PT_ZZRBX5JT	WGS	Tumor	NA	PBTA
+BS_5TDMG1RZ	PT_25739MWR	Targeted Sequencing	Tumor	NA	DGD
+BS_5TRW664P	PT_1N6ATKJS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5TZ77K7G	PT_ZR8MQRVG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5VHHVY4J	PT_0NF0FA68	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5VQGQDD8	PT_S1CYDVZW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5VZZE003	PT_67HW00BS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5W49P11G	PT_64C7QNBP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5W71ERWP	PT_G5MWV2WW	Targeted Sequencing	Tumor	NA	DGD
+BS_5WZBN4PG	PT_V5YXSK76	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5X44RHQS	PT_59FJRPVX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5XHT363M	PT_9P7P6YAQ	Targeted Sequencing	Tumor	NA	DGD
+BS_5XZ990JG	PT_WWR7NB5Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5Y5KMKCJ	PT_23NZGSRJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_5Y90194J	PT_9RACP1ZZ	Targeted Sequencing	Tumor	NA	DGD
+BS_5YN3WK5H	PT_X7GTQR9N	Targeted Sequencing	Tumor	NA	DGD
 BS_5ZG38NTF	PT_VCD0W8HG	WGS	Tumor	NA	PBTA
+BS_6081G0SH	PT_G9GCH1AY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_60ZFFGXZ	PT_Y5YHX20Q	Targeted Sequencing	Tumor	NA	DGD
+BS_614SHB8R	PT_AZAJRK9Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_61CSW3RY	PT_XT0RH9SF	Targeted Sequencing	Tumor	NA	DGD
+BS_61GCC90K	PT_J7KJTZRQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_61M6HSRE	PT_X82W2SGQ	Targeted Sequencing	Tumor	NA	DGD
+BS_623YX182	PT_K7NAC0JG	Targeted Sequencing	Tumor	NA	DGD
+BS_62GTSZ5J	PT_YJGJS19Q	Targeted Sequencing	Tumor	NA	DGD
+BS_63ZNGX1J	PT_BM2HARTG	Targeted Sequencing	Tumor	NA	DGD
+BS_643G4VR8	PT_XY9HE8Q5	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_64EPGDKB	PT_351GXJCW	WGS	Tumor	NA	PBTA
+BS_64N8DEHG	PT_594GWYY6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_64YKSKVF	PT_R86EY5TZ	Targeted Sequencing	Tumor	NA	DGD
 BS_65BN9Z4G	PT_BGHP70ZG	WGS	Tumor	NA	PBTA
+BS_663DHBTW	PT_59FJRPVX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6660SDPE	PT_C75GZ47D	Targeted Sequencing	Tumor	NA	DGD
+BS_66G5NWZ7	PT_WPQF0B3M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_682JKE4A	PT_YHJ3TP9X	Targeted Sequencing	Tumor	NA	DGD
 BS_68BZ8N6P	PT_RXT6KRR6	WGS	Tumor	NA	PBTA
+BS_68DEBNDG	PT_3JNXBSHR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6A6HGZ1T	PT_QW68M2P9	Targeted Sequencing	Tumor	NA	DGD
 BS_6AAJ8JBD	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
 BS_6ACH3G53	PT_M26G3W3T	WGS	Tumor	NA	PBTA
+BS_6ARFP61F	PT_SYSCTVT8	Targeted Sequencing	Tumor	NA	DGD
+BS_6D6GFGHQ	PT_32CD03EE	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_6DHFYGP9	PT_PAB4RZG2	WXS	Tumor	NA	PBTA
+BS_6DJP343F	PT_83F2MT1S	Targeted Sequencing	Tumor	NA	DGD
+BS_6DVJQP82	PT_D5KKHPAE	Targeted Sequencing	Tumor	NA	DGD
+BS_6E3DP8JQ	PT_Q1DQWK39	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6ERCW6P5	PT_AH6VGDWV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6EZMCP04	PT_V12EAF2V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6FCA7BJ2	PT_AH4KBE3G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6FJ2HHEE	PT_WJY6K9H9	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_6G5WQCZF	PT_D5C09HMR	WGS	Tumor	NA	PBTA
+BS_6HQ3FNBX	PT_0J07HTRF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6HYESPAN	PT_HMZS0FHM	Targeted Sequencing	Tumor	NA	DGD
 BS_6HYN5530	PT_NXX0M835	WGS	Tumor	NA	PBTA
+BS_6J0TC1JS	PT_NJXB8E28	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6J9HGSSB	PT_K1YK24PP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6JAFZKVR	PT_PMFS3A49	Targeted Sequencing	Tumor	NA	DGD
+BS_6JWMFBYM	PT_XTVQB9S4	Targeted Sequencing	Tumor	NA	DGD
+BS_6KY32S0B	PT_3KRH9THJ	Targeted Sequencing	Tumor	NA	DGD
+BS_6MFTX7TW	PT_203ZQ296	Targeted Sequencing	Tumor	NA	DGD
+BS_6N0SQ4KA	PT_AZNBS4EK	Targeted Sequencing	Tumor	NA	DGD
+BS_6N1WX5S7	PT_R3MXG7SY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6P2E9H62	PT_RC1THQGJ	Targeted Sequencing	Tumor	NA	DGD
 BS_6P9ZXPCY	PT_ZZRBX5JT	WGS	Tumor	NA	PBTA
+BS_6PM2B26T	PT_M4T6FSB7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6PNX9EZ8	PT_YY6GQEEM	Targeted Sequencing	Tumor	NA	DGD
+BS_6QEF506A	PT_XCA58RC8	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_6QJ1EYB8	PT_AXMVG8QE	WGS	Tumor	NA	PBTA
+BS_6QTM8577	PT_08M919BH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6R551QPW	PT_2YT37G8P	Targeted Sequencing	Tumor	NA	DGD
 BS_6TE460P2	PT_NNZQ09SH	WGS	Tumor	NA	PBTA
+BS_6TJFW960	PT_04V47WFC	Targeted Sequencing	Tumor	NA	DGD
+BS_6VST5VMB	PT_XH5X1XEQ	Targeted Sequencing	Tumor	NA	DGD
+BS_6W5NPPK8	PT_MVSWHXSR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6WEX9QB3	PT_EVJS8VYH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6WR84N4J	PT_NKGQYCKZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_6WYRSJCK	PT_9H8P5G4X	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_6XBVJ3WQ	PT_DH4SSE7V	WGS	Tumor	NA	PBTA
 BS_6Y08PVRK	PT_ZZRBX5JT	WGS	Tumor	NA	PBTA
+BS_6YRXBN2A	PT_W4T50N4T	Targeted Sequencing	Tumor	NA	DGD
+BS_6YVNM107	PT_DBNM3KCE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_70ETBQ18	PT_8YE5DC0T	Targeted Sequencing	Tumor	NA	DGD
+BS_710VJA1N	PT_84211MPY	Targeted Sequencing	Tumor	NA	DGD
+BS_71M3ZGM6	PT_ZZRBX5JT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_71RZ291C	PT_EPR6F96B	Targeted Sequencing	Tumor	NA	DGD
+BS_71SFYT8Z	PT_Q576ZJH5	Targeted Sequencing	Tumor	NA	DGD
 BS_7314XTPY	PT_MDWPRDBT	WGS	Tumor	NA	PBTA
+BS_73DZ66BZ	PT_N1GX3XT3	Targeted Sequencing	Tumor	NA	DGD
+BS_73JZWD6C	PT_D5KKHPAE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_74G0GZ00	PT_0Q496N0Q	Targeted Sequencing	Tumor	NA	DGD
+BS_7576V83X	PT_ZZRBX5JT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_757M7F9G	PT_BX4BBRRM	Targeted Sequencing	Tumor	NA	DGD
 BS_75VWKW1M	PT_JV9G8MFD	WGS	Tumor	NA	PBTA
+BS_76WB4ZWZ	PT_Q8QBKBTX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_779W4RC6	PT_S9YT3GSS	Targeted Sequencing	Tumor	NA	DGD
+BS_77FWJDJY	PT_767ZWQ30	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_77G0AGMT	PT_4FQHQDEE	WXS	Tumor	NA	PBTA
 BS_782E9R1N	PT_XETT8T7M	WGS	Tumor	NA	PBTA
+BS_78CJ1HPR	PT_14J2SHNA	Targeted Sequencing	Tumor	NA	DGD
+BS_78NPAWRV	PT_1C778V42	Targeted Sequencing	Tumor	NA	DGD
+BS_78T7HW16	PT_0P6X0B0E	Targeted Sequencing	Tumor	NA	DGD
+BS_79B4V9EZ	PT_CNCJZ4JD	Targeted Sequencing	Tumor	NA	DGD
+BS_7AEXFPET	PT_BK0N6RKV	Targeted Sequencing	Tumor	NA	DGD
+BS_7B3FFM4G	PT_E3ADF4ZB	Targeted Sequencing	Tumor	NA	DGD
+BS_7BPH8CEB	PT_K28M7003	Targeted Sequencing	Tumor	NA	DGD
+BS_7C49N1BW	PT_PXEFP56B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7CG7E8XJ	PT_D19XT3GV	Targeted Sequencing	Tumor	NA	DGD
+BS_7CPZ4D6Y	PT_NQT3G1QZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7D14RYWW	PT_F4DBSRRC	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_7D4Q6WQB	PT_3GZF248B	WXS	Tumor	NA	PBTA
+BS_7DNEFT3F	PT_AVDTVBRK	Targeted Sequencing	Tumor	NA	DGD
+BS_7E791WM8	PT_0ER3Y4Z3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7E838QJP	PT_BX4BBRRM	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_7E9HHKXA	PT_XTVQB9S4	WGS	Tumor	NA	PBTA
+BS_7EH7GF6S	PT_7JZ1W69S	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_7F3MMNBQ	PT_KZG2CZ95	WGS	Tumor	NA	PBTA
+BS_7F65KRCN	PT_ZGREK0Z2	Targeted Sequencing	Tumor	NA	DGD
+BS_7F9538E7	PT_42KS3NMS	Targeted Sequencing	Tumor	NA	DGD
 BS_7FSQQWNM	PT_YAF9B3CC	WGS	Tumor	NA	PBTA
+BS_7G2NF47K	PT_HDPAZPNA	Targeted Sequencing	Tumor	NA	DGD
 BS_7GF5144B	PT_84ZTC7PV	WGS	Tumor	NA	PBTA
+BS_7HR6EFX4	PT_F7ZBQ9BY	Targeted Sequencing	Tumor	NA	DGD
 BS_7HZYFWF8	PT_JC3FDHBS	WGS	Tumor	NA	PBTA
+BS_7K0S0P7N	PT_41WETNRC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7K2DDAZ5	PT_5FPQXNAM	Targeted Sequencing	Tumor	NA	DGD
+BS_7K5NFB1Y	PT_JK8TXGM0	Targeted Sequencing	Tumor	NA	DGD
 BS_7KN8003B	PT_BNARR0N6	WGS	Tumor	NA	PBTA
+BS_7KTGJPVN	PT_Y44DNH44	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7KV4GPR8	PT_PMEXVDFJ	Targeted Sequencing	Tumor	NA	DGD
+BS_7N8DFBZ1	PT_FK1GP73M	Targeted Sequencing	Tumor	NA	DGD
+BS_7NCP9X8X	PT_SY00NFNF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7NDCEZ0C	PT_Z9BN2V4W	Targeted Sequencing	Tumor	NA	DGD
 BS_7NFFJYSP	PT_DNB6V0TP	WGS	Tumor	NA	PBTA
+BS_7NHDQH68	PT_3SSDXJFC	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_7PEKR4XB	PT_EPBWCARF	WGS	Tumor	NA	PBTA
 BS_7Q2443TQ	PT_N3HVMV06	WGS	Tumor	NA	PBTA
+BS_7QRNCF3M	PT_D5C09HMR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7QTDWY4D	PT_XY9HE8Q5	Targeted Sequencing	Tumor	NA	DGD
+BS_7R9R0C26	PT_G1QG2MNH	Targeted Sequencing	Tumor	NA	DGD
 BS_7RZSS2ES	PT_4HPR047B	WGS	Tumor	NA	PBTA
+BS_7SHWFGZ8	PT_N522WKTW	Targeted Sequencing	Tumor	NA	DGD
 BS_7SVNJTTG	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
+BS_7TJ8222T	PT_PXQN10A8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7TMW58WR	PT_E8XM8JFZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7VN1N26Y	PT_GKN1EAW9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7WTRP8V3	PT_HEVH2ZQ1	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_7XH95HP9	PT_PFKHS5BR	WGS	Tumor	NA	PBTA
+BS_7XHPDTRE	PT_34ZN2JQF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7YEJ2B1T	PT_M0RNDETE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_7YFJHWSP	PT_EQ5C5TEA	Targeted Sequencing	Tumor	NA	DGD
+BS_7Z3VXA03	PT_DZ86YXN6	Targeted Sequencing	Tumor	NA	DGD
+BS_803XWRFN	PT_4N0S7800	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8072ADGT	PT_JPFR0046	Targeted Sequencing	Tumor	NA	DGD
+BS_80V301E0	PT_PM85EGY2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8101EMXF	PT_G9D39RG0	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_817952E6	PT_DY6QG8QC	WGS	Tumor	NA	PBTA
+BS_82E3E49E	PT_YQJN9T4G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_82R0BYYK	PT_Q533NKVY	Targeted Sequencing	Tumor	NA	DGD
+BS_82VTWRPZ	PT_JK8TXGM0	Targeted Sequencing	Tumor	NA	DGD
+BS_83FDRPN3	PT_NRGT5NKY	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_83HJK8RS	PT_K1YK24PP	WGS	Tumor	NA	PBTA
+BS_83HX4CXB	PT_5ZPPR06P	Targeted Sequencing	Tumor	NA	DGD
+BS_848SAXQW	PT_HE8FBFNA	Targeted Sequencing	Tumor	NA	DGD
+BS_84B0965E	PT_Z6NN0436	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_84EGV3ZJ	PT_10NVJP9G	Targeted Sequencing	Tumor	NA	DGD
+BS_84YPPNVF	PT_W6BNECSP	Targeted Sequencing	Tumor	NA	DGD
+BS_85BXRPAB	PT_QEP13FH4	Targeted Sequencing	Tumor	NA	DGD
+BS_86SKTG9Y	PT_N17MK63X	Targeted Sequencing	Tumor	NA	DGD
+BS_87DD9ZCD	PT_87QS6VVQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_87NNX24A	PT_ZX2SJMFJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_87NQHSBG	PT_23G70TEN	Targeted Sequencing	Tumor	NA	DGD
+BS_88V70PJ2	PT_2VSDT9CK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_89C07SJ2	PT_27YHK492	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_89MD9FAN	PT_2Z17BT6Z	Targeted Sequencing	Tumor	NA	DGD
+BS_89NA6K0F	PT_GVYEJKXD	Targeted Sequencing	Tumor	NA	DGD
+BS_89XDC6KF	PT_HMY997GX	Targeted Sequencing	Tumor	NA	DGD
+BS_8A1PG4BW	PT_9A2NW4XJ	Targeted Sequencing	Tumor	NA	DGD
+BS_8AKQ9XZH	PT_7DVYFX8F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8AP8XV05	PT_2GTHCPXB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8B4H127B	PT_EYV8QBB9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8C8P45VQ	PT_SGT44Z3C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8DMK935R	PT_SS62DEH5	Targeted Sequencing	Tumor	NA	DGD
+BS_8E0SRM9G	PT_1MQ6Q08V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8FHRXF5Z	PT_EV33K8AN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8FNJ4CP8	PT_J2EJGAJT	Targeted Sequencing	Tumor	NA	DGD
+BS_8G87RFQE	PT_8SDJXNFR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8JBAJFB4	PT_HDPAZPNA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8JD02P2G	PT_J2EJGAJT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8KEV8HDE	PT_2HA8XN0T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8KGBM5EC	PT_ZS2WCK6W	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_8M3TJFPF	PT_SY6W6B0Z	WGS	Tumor	NA	PBTA
+BS_8MDN8KCP	PT_8FBR94AD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8NEJP1Y3	PT_1DE7WVW3	Targeted Sequencing	Tumor	NA	DGD
 BS_8NXNKYMQ	PT_0VS7CBZ1	WXS	Tumor	NA	PBTA
+BS_8P02DSEP	PT_TC6A6TX7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8PKNSM80	PT_NYBH025T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8QS7G327	PT_FDQHEKJB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8RPS1YW4	PT_7GSP7K3N	Targeted Sequencing	Tumor	NA	DGD
+BS_8RWG2640	PT_82MX6J77	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8RWNF7DA	PT_VAW7C1MR	Targeted Sequencing	Tumor	NA	DGD
+BS_8RWXRFH7	PT_9XHYDDNS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8S0VPM45	PT_F2B6E7GY	Targeted Sequencing	Tumor	NA	DGD
+BS_8T5Q9W11	PT_NME1D79F	Targeted Sequencing	Tumor	NA	DGD
+BS_8TATHK50	PT_VT6QDTP4	Targeted Sequencing	Tumor	NA	DGD
 BS_8TM3SM9D	PT_P5HHJJPH	WGS	Tumor	NA	PBTA
+BS_8TRY74ED	PT_99R55MP0	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_8VKM8PYT	PT_PZRWEBK5	WGS	Tumor	NA	PBTA
+BS_8WWATME2	PT_WG2Z95B5	Targeted Sequencing	Tumor	NA	DGD
+BS_8XXJSJ6Z	PT_YHNKHJMM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8Y7V5264	PT_RBCEW1B3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8Z0ZT3J2	PT_25739MWR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8ZQV7HNA	PT_FWP0SNEH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_8ZVYPGYN	PT_9JA20YPN	Targeted Sequencing	Tumor	NA	DGD
+BS_902WNHT2	PT_PMEXVDFJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_90NXV63H	PT_CPYZVCN8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9122PCQ1	PT_G0X1JBBP	Targeted Sequencing	Tumor	NA	DGD
 BS_91BDE667	PT_MVSWHXSR	WGS	Tumor	NA	PBTA
+BS_91NSXESW	PT_6H0WGQ6E	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_91V7FC29	PT_T2QGGYXC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_92JTBSZX	PT_HVX28JYD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_92KE2TZT	PT_6E8JYRXM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_92Q7SB0C	PT_T58EGJRX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_92Y4DXS1	PT_XGAGKG7T	Targeted Sequencing	Tumor	NA	DGD
+BS_93PB8G76	PT_04V47WFC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_93ZSCBD1	PT_9MCA9HKD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_94KJHSE7	PT_HV6C0T34	Targeted Sequencing	Tumor	NA	DGD
+BS_95SYFDT7	PT_74Y53WN8	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_9658ZFM1	PT_WN5P2GCY	WGS	Tumor	NA	PBTA
+BS_98FBSXMQ	PT_74Y53WN8	Targeted Sequencing	Tumor	NA	DGD
+BS_99CQWD5N	PT_JBCAXNK2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_99RC3R3S	PT_DBNM3KCE	Targeted Sequencing	Tumor	NA	DGD
+BS_99SZG5H0	PT_FV2TNKY5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_99TSKKJ9	PT_NWC0P29C	Targeted Sequencing	Tumor	NA	DGD
 BS_9B8WJ80Y	PT_Y66SNKHR	WGS	Tumor	NA	PBTA
+BS_9BS7N3YD	PT_9BZETM0M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9CV76DXE	PT_26V72ZXB	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_9D7YPY72	PT_95S99RWE	WGS	Tumor	NA	PBTA
+BS_9E13A1V4	PT_YC8VMNB5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9E3E34A4	PT_EK4VZ6AY	Targeted Sequencing	Tumor	NA	DGD
+BS_9EAMV73M	PT_8ZDR3H4J	Targeted Sequencing	Tumor	NA	DGD
+BS_9EDHP7HY	PT_3V0P8GTY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9ERP08J1	PT_3ASSFBQX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9GRNY82E	PT_QN2XN0H6	Targeted Sequencing	Tumor	NA	DGD
+BS_9HDY5EF0	PT_N8W26H19	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9HEF3KE9	PT_FH0TJ5P2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9K1YGAB4	PT_PK04YTT1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9K6NRMHE	PT_TZKM2RGD	Targeted Sequencing	Tumor	NA	DGD
+BS_9K8PGQET	PT_KKE7HAEH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9ME5VXJ2	PT_5VMBPWYG	Targeted Sequencing	Tumor	NA	DGD
+BS_9MPFGWJV	PT_6DZB4WYH	Targeted Sequencing	Tumor	NA	DGD
+BS_9N1MJ2DW	PT_AXMVG8QE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9N3DMZKB	PT_VTG1S395	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9N8PXH2X	PT_W31WP285	Targeted Sequencing	Tumor	NA	DGD
+BS_9NETJ5FK	PT_VJXDBEKN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9NJ3RXY4	PT_DBWWKJ86	Targeted Sequencing	Tumor	NA	DGD
+BS_9NME41F4	PT_JQA14J4Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9P08S0VV	PT_EN67STXE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9P9DNAHS	PT_J01MB51G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9PJS4J9E	PT_QW68M2P9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9Q8M3B20	PT_M1PAR2KC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9QJE5XMG	PT_773ZPTEB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9QTDK6MF	PT_04V47WFC	Targeted Sequencing	Tumor	NA	DGD
+BS_9RSJRKWN	PT_NGGRVR71	Targeted Sequencing	Tumor	NA	DGD
+BS_9S10XFGA	PT_W9ZYNS8Y	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9S1RNVV3	PT_7K25M5TQ	Targeted Sequencing	Tumor	NA	DGD
 BS_9VJ3VV46	PT_HVZTF42R	WGS	Tumor	NA	PBTA
 BS_9WNRPT1P	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
 BS_9XC8PWYX	PT_DH968NQY	WGS	Tumor	NA	PBTA
 BS_9XKE2ZZF	PT_4W0BP7F3	WGS	Tumor	NA	PBTA
+BS_9XKTEW1Y	PT_242A6C4M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9Y5XB5QM	PT_Y9MZ7486	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9Z1VTWJV	PT_K0YFKQ6V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_9ZAW2P9F	PT_GG0D31DC	Targeted Sequencing	Tumor	NA	DGD
+BS_9ZJB6NKX	PT_B4NYKS5V	Targeted Sequencing	Tumor	NA	DGD
 BS_9ZQPH9B2	PT_XX33CWA3	WGS	Tumor	NA	PBTA
 BS_A024WSJX	PT_26V72ZXB	WGS	Tumor	NA	PBTA
+BS_A04T3EY0	PT_Y313PAMM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_A05MJ45Y	PT_K0YFKQ6V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_A1D917R9	PT_Z7E64KKQ	Targeted Sequencing	Tumor	NA	DGD
 BS_A1HA5NNZ	PT_XX33CWA3	WXS	Tumor	NA	PBTA
+BS_A2BH219E	PT_NCF47KJM	Targeted Sequencing	Tumor	NA	DGD
+BS_A304AZW7	PT_1P436YMM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_A31YZVEB	PT_0H8VY9HP	Targeted Sequencing	Tumor	NA	DGD
+BS_A38369KJ	PT_MDWPRDBT	Targeted Sequencing	Tumor	NA	DGD
 BS_A3S28ANC	PT_89XRZBSG	WGS	Tumor	NA	PBTA
+BS_A4Z0ADK2	PT_3X871YSB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_A6YHEBQE	PT_B5SDQ9YE	Targeted Sequencing	Tumor	NA	DGD
 BS_A79S84KJ	PT_ZWY04DCR	WGS	Tumor	NA	PBTA
+BS_A82KS34Q	PT_803AVNGK	Targeted Sequencing	Tumor	NA	DGD
 BS_A8XRT37Q	PT_KEQ53KRH	WGS	Tumor	NA	PBTA
+BS_ABETQ8YW	PT_EV33K8AN	Targeted Sequencing	Tumor	NA	DGD
+BS_ABXV8J03	PT_82Y8F33E	Targeted Sequencing	Tumor	NA	DGD
+BS_ADNFY748	PT_HVCRDJ95	Targeted Sequencing	Tumor	NA	DGD
+BS_ADQTEWCW	PT_FE0GF07R	Targeted Sequencing	Tumor	NA	DGD
+BS_AEPFMP61	PT_XZGWKXC5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AEQWS56Y	PT_4DZ9B62P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AFG2EN7D	PT_W6BNECSP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AFRSJN0R	PT_F91JTSZC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AGJBNBT8	PT_4AZARJZ6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AGRX3DSA	PT_JXGMAHHN	Targeted Sequencing	Tumor	NA	DGD
+BS_AH9FHVFQ	PT_A0B5S6SM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AHJ276QN	PT_YFTHYYNS	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_AHW1VXPG	PT_3AWKWXEV	WGS	Tumor	NA	PBTA
 BS_AJ2YA7HC	PT_M1RYN7B0	WGS	Tumor	NA	PBTA
+BS_AJWRJG64	PT_WVPM84TF	Targeted Sequencing	Tumor	NA	DGD
+BS_AK1A6MWG	PT_203SE2J7	Targeted Sequencing	Tumor	NA	DGD
+BS_AK5SDH9A	PT_WJY6K9H9	Targeted Sequencing	Tumor	NA	DGD
+BS_AK9X52AY	PT_V4NJP4PW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AKS869FD	PT_H9QTD79G	Targeted Sequencing	Tumor	NA	DGD
+BS_ANP2CHDV	PT_XD66MEPC	Targeted Sequencing	Tumor	NA	DGD
+BS_ANQ1PQF8	PT_7GK1X6WR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ANRGV1D3	PT_04V47WFC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ANSVC5T8	PT_EQX0VT4F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ANSWHS85	PT_T95NCZMM	Targeted Sequencing	Tumor	NA	DGD
+BS_ANWKVDR6	PT_916QYQN2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_APKVNXJC	PT_GS68Z9B6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AQPPSDSZ	PT_Y2JCWXEY	Targeted Sequencing	Tumor	NA	DGD
+BS_AR94BV9R	PT_1352J18C	Targeted Sequencing	Tumor	NA	DGD
 BS_AS2VPSS9	PT_FK7ZXG3E	WGS	Tumor	NA	PBTA
+BS_AS9XV7XG	PT_D6AJHDST	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ASDFFCMS	PT_23NZGSRJ	Targeted Sequencing	Tumor	NA	DGD
+BS_AV72WZJH	PT_HKA4TX9W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AV866CXW	PT_CYVVA9AB	Targeted Sequencing	Tumor	NA	DGD
+BS_AW59EVGQ	PT_94BFYTVZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AWJYECT8	PT_YVY56QHA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AWXQNYJ4	PT_GGR8NGD0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AWYGHXYR	PT_39V0DG4H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_AX5HFN8M	PT_3KRH9THJ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_AYYWDHWJ	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
 BS_AZD61W93	PT_4XB3YTJM	WGS	Tumor	NA	PBTA
+BS_AZJ4ED6K	PT_G6FP5J9Y	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B16X61VH	PT_32H0CD1P	Targeted Sequencing	Tumor	NA	DGD
+BS_B1TWDV2N	PT_Q4GD8TFQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B1Y3T2TS	PT_PZAXT2BJ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_B1YQHE16	PT_M26VF62B	WGS	Tumor	NA	PBTA
+BS_B31PERXZ	PT_4CYZHPMT	Targeted Sequencing	Tumor	NA	DGD
+BS_B3ERJY69	PT_0P47VWQG	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_B3JHHP3X	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
 BS_B4B6QRFD	PT_4D8WG2DP	WGS	Tumor	NA	PBTA
+BS_B4E35ZH3	PT_T4VN7ZRB	Targeted Sequencing	Tumor	NA	DGD
+BS_B4W2FC5F	PT_SNAHBBGX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B4YEWQGD	PT_BZEDKWBS	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_B4Z69W5J	PT_S4YNE17X	WGS	Tumor	NA	PBTA
+BS_B5DBFPD1	PT_H5J0VYAB	Targeted Sequencing	Tumor	NA	DGD
 BS_B5S27A0B	PT_Y5KY6KN9	WGS	Tumor	NA	PBTA
+BS_B654SMX1	PT_ATE3YRH5	Targeted Sequencing	Tumor	NA	DGD
+BS_B6B74J78	PT_G6FP5J9Y	Targeted Sequencing	Tumor	NA	DGD
 BS_B6YFEKXJ	PT_BPW4VRZB	WGS	Tumor	NA	PBTA
+BS_B6ZYES58	PT_GTQN90DF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B75E56G6	PT_GKKZRZN0	Targeted Sequencing	Tumor	NA	DGD
+BS_B78E81YZ	PT_FSR10RSN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B7AXVY9S	PT_0BSG3R3N	Targeted Sequencing	Tumor	NA	DGD
+BS_B7X6CHSD	PT_10NVJP9G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B8EEMXH8	PT_1T7WF5S1	Targeted Sequencing	Tumor	NA	DGD
+BS_B8F0WNZC	PT_Y44DNH44	Targeted Sequencing	Tumor	NA	DGD
+BS_B8QKWAHT	PT_XDV8W16W	Targeted Sequencing	Tumor	NA	DGD
+BS_B8XCTQQ4	PT_DN84REQ3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B90015XS	PT_3QPZQXGZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_B9XBBA8D	PT_5ZPPR06P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BAGS4H5P	PT_EVQZ62SE	Targeted Sequencing	Tumor	NA	DGD
+BS_BAVHT9C7	PT_8EX2R1RB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BBKQVYTE	PT_CYVVA9AB	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_BCG56PNT	PT_W2AGRJWS	WGS	Tumor	NA	PBTA
+BS_BCWFRX8D	PT_EGGE4SGY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BD8RSRW9	PT_YDFPMXAR	Targeted Sequencing	Tumor	NA	DGD
+BS_BDFYTZHD	PT_QP1G00R9	Targeted Sequencing	Tumor	NA	DGD
 BS_BDHJ5CXX	PT_ZFKQKGME	WGS	Tumor	NA	PBTA
+BS_BGM6XN3S	PT_J8C3VPNF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BGMFE63Q	PT_6H0WGQ6E	Targeted Sequencing	Tumor	NA	DGD
+BS_BGXX01ZJ	PT_BMDYFRJD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BH45SCWY	PT_S9M3JJVB	Targeted Sequencing	Tumor	NA	DGD
+BS_BHE8890A	PT_SMP5FPP6	Targeted Sequencing	Tumor	NA	DGD
 BS_BHEXF24T	PT_J4BNR6FN	WGS	Tumor	NA	PBTA
+BS_BHY8AB76	PT_D5DE7YZQ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_BJ5XDBN7	PT_SKXVTDKK	WGS	Tumor	NA	PBTA
 BS_BJ9WKXWQ	PT_164RNWTT	WGS	Tumor	NA	PBTA
 BS_BJGV8RBP	PT_WG2Z95B5	WGS	Tumor	NA	PBTA
+BS_BJW6371E	PT_HY664Q1B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BM4AWHQ2	PT_XD66MEPC	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_BP8A42GM	PT_JBYZJRNM	WGS	Tumor	NA	PBTA
+BS_BQD9G5XX	PT_D7GN92VR	Targeted Sequencing	Tumor	NA	DGD
+BS_BQP85RPA	PT_7F4TBYYQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BRR1ZVGH	PT_CJ1M7YTY	Targeted Sequencing	Tumor	NA	DGD
+BS_BRVP0NSN	PT_AYSD9P2X	Targeted Sequencing	Tumor	NA	DGD
+BS_BV0WJ83P	PT_QD35M3XB	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_BV366GMK	PT_BNARR0N6	WGS	Tumor	NA	PBTA
+BS_BVK04C63	PT_B5SDQ9YE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_BVS8J5TA	PT_EHXD392P	Targeted Sequencing	Tumor	NA	DGD
+BS_BW70YHPR	PT_65H9H75F	Targeted Sequencing	Tumor	NA	DGD
+BS_BXMNQQF7	PT_G16J1RA8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C04GDZD9	PT_G6FP5J9Y	Targeted Sequencing	Tumor	NA	DGD
+BS_C06NCB64	PT_D4JJMH7V	Targeted Sequencing	Tumor	NA	DGD
 BS_C06X8GBZ	PT_8MDE46MC	WGS	Tumor	NA	PBTA
+BS_C1H7GHDF	PT_HXCQ9T79	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_C1ZW0KNW	PT_A9CDRD3E	WGS	Tumor	NA	PBTA
+BS_C275XB4K	PT_KYP0GHPE	Targeted Sequencing	Tumor	NA	DGD
+BS_C33FVEMC	PT_WFQNVJ4Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C3NW0KFE	PT_DBNV494P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C472KBRC	PT_2189ZWKX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C4MPKK2H	PT_H6MHKR2J	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C522GDY0	PT_HAK6TYRC	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_C5AMH7AC	PT_SY6W6B0Z	WGS	Tumor	NA	PBTA
 BS_C5KHGXM3	PT_XETT8T7M	WGS	Tumor	NA	PBTA
+BS_C5ZMREAZ	PT_2Z17BT6Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C6346GQH	PT_AZAJRK9Z	Targeted Sequencing	Tumor	NA	DGD
+BS_C7FRTK6P	PT_P2MFTDX2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C7NABWVW	PT_JJKK6YFQ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_C8614MWB	PT_XWYNQBTK	WGS	Tumor	NA	PBTA
+BS_C8867Q5R	PT_YDFPMXAR	Targeted Sequencing	Tumor	NA	DGD
 BS_C8NGJR1D	PT_X7Z2NMSA	WGS	Tumor	NA	PBTA
+BS_C8VFXBWH	PT_HMZS0FHM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_C99KT76V	PT_GMQ1TQAF	Targeted Sequencing	Tumor	NA	DGD
+BS_C9HRZ7MC	PT_EK4VZ6AY	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_CA4CRZKP	PT_C9YDTZPA	WGS	Tumor	NA	PBTA
+BS_CA670CZB	PT_HJMP6PH2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CAQFKHXA	PT_YYKHGYV8	Targeted Sequencing	Tumor	NA	DGD
+BS_CASVG3A2	PT_XA8ASFJK	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_CBMEM2CZ	PT_ZPR5NYBT	WGS	Tumor	NA	PBTA
+BS_CC4C1THN	PT_YY6GQEEM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CD3ZTRKT	PT_QP1G00R9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CD4YKKYK	PT_P4V35VZ8	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_CDE84YN0	PT_4D8WG2DP	WGS	Tumor	NA	PBTA
 BS_CDEHKQWJ	PT_2DJN7BH2	WGS	Tumor	NA	PBTA
+BS_CDMCRR7C	PT_XJSZWCQG	Targeted Sequencing	Tumor	NA	DGD
 BS_CE5ZQN2W	PT_SA4P4VJE	WGS	Tumor	NA	PBTA
+BS_CEEHD1BQ	PT_6RX3FNT4	Targeted Sequencing	Tumor	NA	DGD
+BS_CFPZDCFF	PT_SXVFJQ46	Targeted Sequencing	Tumor	NA	DGD
+BS_CFYHBDH6	PT_PZCPVKDX	Targeted Sequencing	Tumor	NA	DGD
+BS_CG9ZFAQR	PT_4VYW4AAZ	Targeted Sequencing	Tumor	NA	DGD
+BS_CGHZD6VP	PT_B4NYKS5V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CGN9W4GJ	PT_QH8FDPEB	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_CH7E6EZC	PT_JSFBMK5V	WGS	Tumor	NA	PBTA
+BS_CHPRX7K3	PT_GR866ZRC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CJ2ZP2ZW	PT_CMBBRZ8R	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CJZXDF4Z	PT_4TFTQXJ8	Targeted Sequencing	Tumor	NA	DGD
+BS_CK7YAZC0	PT_QN2XN0H6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CKCFK4GA	PT_Z6NN0436	Targeted Sequencing	Tumor	NA	DGD
 BS_CKX0QTD6	PT_NTV1B352	WGS	Tumor	NA	PBTA
+BS_CM2MDESG	PT_CXHQV5YC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CMRZA1EW	PT_GHNF574X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CN4T8ZQB	PT_N4SFAFZ3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CN7XDVBJ	PT_M1PAR2KC	Targeted Sequencing	Tumor	NA	DGD
+BS_CNBP5W3S	PT_65B5CGQG	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_CNMM5BCD	PT_HVZTF42R	WGS	Tumor	NA	PBTA
 BS_CNR0KNW7	PT_FASMB8YK	WGS	Tumor	NA	PBTA
 BS_CNZQBDDX	PT_ZPE3RXF0	WGS	Tumor	NA	PBTA
+BS_CPABRKN2	PT_NZNS6DFG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CPH1MESX	PT_SMP5FPP6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CPKTDHCK	PT_9A6RPJ97	Targeted Sequencing	Tumor	NA	DGD
+BS_CQ1SWT6Z	PT_XXZHRPNM	Targeted Sequencing	Tumor	NA	DGD
 BS_CQZCXSNW	PT_BCWGRGDB	WGS	Tumor	NA	PBTA
+BS_CRBGVE81	PT_MQHST8YC	Targeted Sequencing	Tumor	NA	DGD
+BS_CT19FBNY	PT_B5HCHR89	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CTJFHT0J	PT_MFRBR09K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CV823DNJ	PT_MKR211TP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CW567XAP	PT_WFQNVJ4Z	Targeted Sequencing	Tumor	NA	DGD
+BS_CX0Y08K2	PT_BAH54SVM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_CXCCGW8E	PT_XCA58RC8	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_CXE82B6Z	PT_VZTTTP3Q	WGS	Tumor	NA	PBTA
+BS_CZVNMYM3	PT_JQA14J4Z	Targeted Sequencing	Tumor	NA	DGD
+BS_D1SEBRD9	PT_GJGB2TCX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D217XESK	PT_H23ET9G4	Targeted Sequencing	Tumor	NA	DGD
+BS_D29GVD9K	PT_GTQN90DF	Targeted Sequencing	Tumor	NA	DGD
+BS_D2MZGCQA	PT_Q4GD8TFQ	Targeted Sequencing	Tumor	NA	DGD
+BS_D311D34X	PT_DMHFS0HX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D5GN39Q9	PT_5VQE208D	Targeted Sequencing	Tumor	NA	DGD
+BS_D6SFFS4N	PT_DNKYB4BX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D76NYH8H	PT_56SWR1FM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D7AW2K6T	PT_EH3PVS4D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D7WP3A25	PT_14J2SHNA	Targeted Sequencing	Tumor	NA	DGD
+BS_D7XB617A	PT_83WNQR3T	Targeted Sequencing	Tumor	NA	DGD
+BS_D7Y5CM96	PT_P1F0AHMT	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_D94ZCKWJ	PT_1VQWQ0TC	WGS	Tumor	NA	PBTA
+BS_D96V0JH4	PT_Z4BF2NSB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D96WXWH9	PT_VTG1S395	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_D9JNS2E3	PT_D3KVBV7D	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_DADZ1JXD	PT_FFHQ1B9R	WGS	Tumor	NA	PBTA
+BS_DB658ARW	PT_SS62DEH5	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_DBH8YWA1	PT_RYMG3M91	WGS	Tumor	NA	PBTA
+BS_DDM623X8	PT_F0N89D15	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DDSPE4YK	PT_STE26Y8Z	Targeted Sequencing	Tumor	NA	DGD
+BS_DE10BN8R	PT_5KPDJCD3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DE3B5AWG	PT_0H8VY9HP	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_DG7HNCMZ	PT_0JEBFP0E	WXS	Tumor	NA	PBTA
+BS_DGMHEJDB	PT_9BZETM0M	Targeted Sequencing	Tumor	NA	DGD
+BS_DGWKS84S	PT_3SSDXJFC	Targeted Sequencing	Tumor	NA	DGD
+BS_DK2TDJYC	PT_G1EVC9DA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DK5Y0J72	PT_EN4G7A9Z	Targeted Sequencing	Tumor	NA	DGD
+BS_DKA0JVE5	PT_4JRBFE1N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DKD8QMNT	PT_6FTNAKB5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DKFNPT42	PT_TYCMYVZE	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_DKKKVJ2P	PT_DTP4MMRA	WGS	Tumor	NA	PBTA
+BS_DPPZJXK8	PT_803AVNGK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DPW5XME3	PT_JNEV57VK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DQ3DK53S	PT_0QABV2YR	Targeted Sequencing	Tumor	NA	DGD
+BS_DRTC8YRZ	PT_E71VTFBZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DSQ5983E	PT_4W0BP7F3	Targeted Sequencing	Tumor	NA	DGD
+BS_DTXY52GG	PT_333GHVG7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DW6WDZX5	PT_5JMNQAY8	Targeted Sequencing	Tumor	NA	DGD
+BS_DW8BRRX7	PT_9CGBDPVV	Targeted Sequencing	Tumor	NA	DGD
+BS_DWRM8B7J	PT_PY5CGXPY	Targeted Sequencing	Tumor	NA	DGD
+BS_DX353NJ0	PT_6F0R9T61	Targeted Sequencing	Tumor	NA	DGD
 BS_DXED8GNF	PT_YJY2QXDM	WXS	Tumor	NA	PBTA
+BS_DYG11SFT	PT_ZZRBX5JT	Targeted Sequencing	Tumor	NA	DGD
+BS_DYGKM8DY	PT_D4PT2V4V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_DYK2GHEZ	PT_TYCMYVZE	Targeted Sequencing	Tumor	NA	DGD
+BS_DZEX0DD0	PT_XXZHRPNM	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_E06RB6D3	PT_T58EGJRX	WGS	Tumor	NA	PBTA
 BS_E099RXP7	PT_KV1NWG3Z	WGS	Tumor	NA	PBTA
+BS_E10P7DM7	PT_VK94C42M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_E1G68P5F	PT_HVXYKN8E	Targeted Sequencing	Tumor	NA	DGD
 BS_E24CBV73	PT_3D74J8RZ	WGS	Tumor	NA	PBTA
+BS_E2VFCQF7	PT_EN4G7A9Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_E3924DKP	PT_KBBR6MNP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_E3J0DWTK	PT_3SF3NQ43	Targeted Sequencing	Tumor	NA	DGD
+BS_E4BNS1J2	PT_YANM4078	Targeted Sequencing	Tumor	NA	DGD
+BS_E5DM2GBK	PT_QH8FDPEB	Targeted Sequencing	Tumor	NA	DGD
+BS_E5RRJ18X	PT_JXSTA5HB	Targeted Sequencing	Tumor	NA	DGD
+BS_E5V5NH90	PT_WE2R6AYQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_E7K6ZHCY	PT_17H2AASA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_E80PWNYD	PT_G16J1RA8	Targeted Sequencing	Tumor	NA	DGD
+BS_E8EFACMN	PT_XBSCF601	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_E8Z367DQ	PT_440E1XW5	WGS	Tumor	NA	PBTA
 BS_E91CY318	PT_8ED5MJR2	WGS	Tumor	NA	PBTA
 BS_E971M51Z	PT_WP871F5S	WGS	Tumor	NA	PBTA
 BS_EA7CWRV4	PT_1NBHNPE4	WGS	Tumor	NA	PBTA
+BS_EAP8YZK3	PT_4P5Y70YW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EB7W8REZ	PT_1MQ6Q08V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EBCAN257	PT_MKR211TP	Targeted Sequencing	Tumor	NA	DGD
+BS_ECWDN0AS	PT_K28M7003	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EDSPP3XC	PT_BAH54SVM	Targeted Sequencing	Tumor	NA	DGD
+BS_EFAAQ0BY	PT_NK9MYJT8	Targeted Sequencing	Tumor	NA	DGD
+BS_EFJ7JWGY	PT_TEBD1SES	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EGWF2H4X	PT_HMY997GX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EH0X4VF5	PT_D9PAEZAE	Targeted Sequencing	Tumor	NA	DGD
+BS_EHGB1XXT	PT_XF1BVHZ9	Targeted Sequencing	Tumor	NA	DGD
+BS_EHTR5BMD	PT_ZBFGMNXT	Targeted Sequencing	Tumor	NA	DGD
+BS_EJM7GD08	PT_PY4QFHHV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EKY6EYY6	PT_SRZ6S76Y	Targeted Sequencing	Tumor	NA	DGD
+BS_EM3N5EPR	PT_JGHYFZ35	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EQ218WS6	PT_D6W7HYAS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EQ46464T	PT_3HPZ05BA	Targeted Sequencing	Tumor	NA	DGD
+BS_EQR5EWF3	PT_8EJHBSBB	Targeted Sequencing	Tumor	NA	DGD
+BS_ERH1GHJ1	PT_9CCEQ57K	Targeted Sequencing	Tumor	NA	DGD
+BS_ERQEFR9J	PT_32H0CD1P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ES1R3BYE	PT_B8J44J08	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ESRNDFYA	PT_E8XM8JFZ	Targeted Sequencing	Tumor	NA	DGD
+BS_ESXWK2S0	PT_3RTY57SF	Targeted Sequencing	Tumor	NA	DGD
+BS_ETT92GJF	PT_GJSVZ7TK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EW9QPBWT	PT_6EH4EZBH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EXZ4ZMMH	PT_4J766Q6K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EY0C9N6Z	PT_CQN8M3RF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_EZTYHBEW	PT_CPZ0A4WC	Targeted Sequencing	Tumor	NA	DGD
+BS_F01Y8VYV	PT_MGZXMQD8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_F06APPCA	PT_5752JPCK	Targeted Sequencing	Tumor	NA	DGD
 BS_F1CQH8V5	PT_CGVPMMD8	WGS	Tumor	NA	PBTA
 BS_F1DWCBAB	PT_K8ZV7APT	WGS	Tumor	NA	PBTA
 BS_F2YGCAHF	PT_89XRZBSG	WGS	Tumor	NA	PBTA
+BS_F3811J1J	PT_2E552BAR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_F477Y9P9	PT_H23ET9G4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_F4HKDAV9	PT_AX5NM47X	Targeted Sequencing	Tumor	NA	DGD
+BS_F5Y3JWJ7	PT_5KP2E0DS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_F6EM5AA2	PT_448FAWFM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_F6TAXK91	PT_Q1DQWK39	Targeted Sequencing	Tumor	NA	DGD
+BS_F7QTPCTC	PT_EQ5C5TEA	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_F7VH8BQX	PT_440E1XW5	WGS	Tumor	NA	PBTA
 BS_F8QNJDBZ	PT_8D35V6HW	WGS	Tumor	NA	PBTA
+BS_F9472HHD	PT_EN4G7A9Z	Targeted Sequencing	Tumor	NA	DGD
+BS_F95H15HC	PT_VZ32W7M8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FADCN5S8	PT_R50DPWF5	Targeted Sequencing	Tumor	NA	DGD
+BS_FAEQSPVZ	PT_54W0PNYT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FC74DGPX	PT_7P08E4J4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FCF2JTAR	PT_17H2AASA	Targeted Sequencing	Tumor	NA	DGD
+BS_FCRHWY3P	PT_EGGE4SGY	Targeted Sequencing	Tumor	NA	DGD
+BS_FCT5A36Z	PT_R50DPWF5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FCW2QKPY	PT_PTA1YP8J	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FD865E17	PT_EYV8QBB9	Targeted Sequencing	Tumor	NA	DGD
+BS_FD9G98MZ	PT_Z35DMGNV	Targeted Sequencing	Tumor	NA	DGD
+BS_FFS3Z67G	PT_A0V7V4N0	Targeted Sequencing	Tumor	NA	DGD
+BS_FG5EW50D	PT_MFRBR09K	Targeted Sequencing	Tumor	NA	DGD
+BS_FGAAJ7G6	PT_AMTFBV3F	Targeted Sequencing	Tumor	NA	DGD
+BS_FGW8SD9T	PT_91PDAFH0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FJ1ZEBJ6	PT_S6AWF9MH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FJSHF4B1	PT_81880Z3H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FK8T7PV8	PT_SYSCTVT8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FKJB6XAY	PT_28TM5WBD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FKVCJA09	PT_2ECVKTTQ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_FMCSE824	PT_FH0TJ5P2	WGS	Tumor	NA	PBTA
+BS_FNFX0H9P	PT_ZZRBX5JT	Targeted Sequencing	Tumor	NA	DGD
+BS_FPCN2HC8	PT_MXASQ2GW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FPK69QN9	PT_DBPKVB5P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FPS9WN53	PT_DDMD7JFV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FPYV3YV8	PT_PZVXH4BM	Targeted Sequencing	Tumor	NA	DGD
+BS_FQ0V2YDV	PT_PTRZXJMM	Targeted Sequencing	Tumor	NA	DGD
+BS_FQAYSED4	PT_SCZYPN5C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FQB6HSBQ	PT_9RACP1ZZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FR8C2JHQ	PT_NY5TVQT9	Targeted Sequencing	Tumor	NA	DGD
+BS_FRH3G0MZ	PT_F2CG3ZZB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FRJHCS75	PT_NS1F6DT8	Targeted Sequencing	Tumor	NA	DGD
+BS_FRQYQA4Q	PT_P4NBN7KG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FS5KJWY5	PT_0ER3Y4Z3	Targeted Sequencing	Tumor	NA	DGD
+BS_FSB51VQM	PT_17WDKFB3	Targeted Sequencing	Tumor	NA	DGD
+BS_FSMKG24M	PT_2F6M5Z1E	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FT7Y6JV6	PT_CTC9ZDNY	Targeted Sequencing	Tumor	NA	DGD
+BS_FWGN79WB	PT_1JP2ANQK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FWP19HZG	PT_C73C5BBZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FWPPCVWD	PT_CTC9ZDNY	Targeted Sequencing	Tumor	NA	DGD
+BS_FXCM4RE2	PT_9T0WBKS6	Targeted Sequencing	Tumor	NA	DGD
+BS_FXJ66ADF	PT_C9AY9KQF	Targeted Sequencing	Tumor	NA	DGD
+BS_FXN93PD2	PT_4JRBFE1N	Targeted Sequencing	Tumor	NA	DGD
+BS_FXP5373Q	PT_DJ39ZXZX	Targeted Sequencing	Tumor	NA	DGD
+BS_FZJB74XA	PT_1DE7WVW3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_FZJYF57K	PT_84WA83VT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G02V7X2E	PT_767ZWQ30	Targeted Sequencing	Tumor	NA	DGD
+BS_G0C2BKGC	PT_40VEXGGS	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_G14MSJYQ	PT_ZG4J0EK0	WGS	Tumor	NA	PBTA
+BS_G1WKH7F8	PT_Z1JD96RW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G2ZD7T67	PT_EGW3VRVV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G3N1PZCT	PT_5V2GEART	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G4VAG1SX	PT_GR02DP0Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G5MQ7C03	PT_ZKGZPH3J	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_G6KYSGQF	PT_S0Q27J13	WGS	Tumor	NA	PBTA
+BS_G7C88C1T	PT_ZEQ3NS7K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G7MH3910	PT_GS68Z9B6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_G7N5401T	PT_2WSNYKAC	Targeted Sequencing	Tumor	NA	DGD
 BS_G802JZ6S	PT_VAJN5QP8	WGS	Tumor	NA	PBTA
 BS_G95MRREJ	PT_DJ39ZXZX	WGS	Tumor	NA	PBTA
+BS_G9JAJSQG	PT_6B194PRW	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_G9YT70JB	PT_6Q0NPVP3	WGS	Tumor	NA	PBTA
+BS_GA1KRKGV	PT_KJ8DYES9	Targeted Sequencing	Tumor	NA	DGD
+BS_GA5MWQ5F	PT_WEY5N1C5	Targeted Sequencing	Tumor	NA	DGD
+BS_GAM8FWDY	PT_HVX28JYD	Targeted Sequencing	Tumor	NA	DGD
+BS_GB58G25E	PT_916QYQN2	Targeted Sequencing	Tumor	NA	DGD
+BS_GBBKANN2	PT_V5DQJ4D4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GBBR8EC3	PT_8SRYHAAW	Targeted Sequencing	Tumor	NA	DGD
 BS_GBWRV6G1	PT_EQ5C5TEA	WGS	Tumor	NA	PBTA
+BS_GE5Y7FW7	PT_0AVBHZ3K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GH0TKD2S	PT_3B27053H	Targeted Sequencing	Tumor	NA	DGD
+BS_GJEBYP1N	PT_8127P12D	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_GJFBA5W4	PT_6MB6RED3	WGS	Tumor	NA	PBTA
+BS_GJGG6T3D	PT_NCF47KJM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GJQBD0NY	PT_W9ZYNS8Y	Targeted Sequencing	Tumor	NA	DGD
+BS_GK6W5K5J	PT_2CA9MM6W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GM6HZ8F2	PT_DDQCAZJG	Targeted Sequencing	Tumor	NA	DGD
 BS_GMB12C07	PT_W2G4Y7HG	WGS	Tumor	NA	PBTA
+BS_GMW7F5H5	PT_DQERVR60	Targeted Sequencing	Tumor	NA	DGD
+BS_GN4KPT8N	PT_SG40BVJ1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GN7RYJB8	PT_G65ZS4RM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GNAHQKTF	PT_5EDSAGSV	Targeted Sequencing	Tumor	NA	DGD
+BS_GNR8S3PW	PT_DJ106XYS	Targeted Sequencing	Tumor	NA	DGD
+BS_GPR8ZV36	PT_0Q13NSP5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GQ0B08T7	PT_C6NDFST5	Targeted Sequencing	Tumor	NA	DGD
+BS_GQZF2ARY	PT_4JJDTCWH	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_GS2ASN7Y	PT_MGJJBG0T	WGS	Tumor	NA	PBTA
+BS_GS6P77Y7	PT_KJ4PGWSS	Targeted Sequencing	Tumor	NA	DGD
+BS_GSRDGK5W	PT_GAKHC0Y2	Targeted Sequencing	Tumor	NA	DGD
 BS_GTJZFG9B	PT_8ED5MJR2	WGS	Tumor	NA	PBTA
+BS_GW0J1049	PT_5R8KC1A1	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_GW7MKKP9	PT_Z4PJA6KT	WGS	Tumor	NA	PBTA
+BS_GWT6ZHPK	PT_N4563ERM	Targeted Sequencing	Tumor	NA	DGD
+BS_GYG9YRZ0	PT_E6BGSP51	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GZGT2Q9F	PT_B5KXHZ6Q	Targeted Sequencing	Tumor	NA	DGD
+BS_GZPCG7NZ	PT_HAWZPGFS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GZSE3MX7	PT_Y2PEKGGY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_GZVXKJ7Q	PT_MXRB6753	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H14MQ92S	PT_8PVAX1B6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H1JJGQTY	PT_AVDTVBRK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H1M57JSX	PT_ZZRBX5JT	Targeted Sequencing	Tumor	NA	DGD
 BS_H1Q7X6NE	PT_ME0JMDEB	WGS	Tumor	NA	PBTA
+BS_H20HMXVJ	PT_AE52FZ41	Targeted Sequencing	Tumor	NA	DGD
+BS_H21YQR4B	PT_GMQ1TQAF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H25DQMAW	PT_0BSG3R3N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H2KQ9N7E	PT_VBJ02EY1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H3RTEKGQ	PT_401GQ0VV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H4CQWSWE	PT_7T2HQNR7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H4P8P54E	PT_X7GTQR9N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H54V7VT3	PT_7FXAJ0N4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H5MYBZZM	PT_B694AQYE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H5QDPGSE	PT_F1MDWB5W	Targeted Sequencing	Tumor	NA	DGD
+BS_H69PHEVX	PT_ZZRBX5JT	Targeted Sequencing	Tumor	NA	DGD
+BS_H74NCZBT	PT_4JJDTCWH	Targeted Sequencing	Tumor	NA	DGD
+BS_H7M78DXR	PT_G9D39RG0	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_H7MZ3G93	PT_0SRRNSAS	WGS	Tumor	NA	PBTA
+BS_H7S4N6QN	PT_9DN55H64	Targeted Sequencing	Tumor	NA	DGD
+BS_H80M4MJA	PT_M1X9HETP	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_H8EVA6AJ	PT_AZQ230WT	WGS	Tumor	NA	PBTA
+BS_H8V199HJ	PT_GWP274NR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_H97T3FAF	PT_JNEV57VK	Targeted Sequencing	Tumor	NA	DGD
+BS_H9YYADDT	PT_BCBMG74N	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_HAASCD2D	PT_ZXMR1WSK	WGS	Tumor	NA	PBTA
+BS_HAV3GEET	PT_53YVBPY9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HB3WV8Y5	PT_6GGV7Q84	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HBG9C3PY	PT_0WTX4CBR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HC74K582	PT_A0V7V4N0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HDDK62FX	PT_T4VN7ZRB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HEDCVFKC	PT_936J0BZ5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HEM25FB4	PT_D7GN92VR	Targeted Sequencing	Tumor	NA	DGD
+BS_HESTWHEA	PT_XGAGKG7T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HF1F5K7D	PT_G1QG2MNH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HFG4T6P3	PT_H23ET9G4	Targeted Sequencing	Tumor	NA	DGD
+BS_HFXTH50D	PT_5SWFTE95	Targeted Sequencing	Tumor	NA	DGD
+BS_HG91043S	PT_GRNZAWM0	Targeted Sequencing	Tumor	NA	DGD
+BS_HGEE9HD1	PT_CVW6KRRH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HJ25AR0W	PT_6RX3FNT4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HJN62GBH	PT_HE44ZDGB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HKK76Z6J	PT_QVCXSYEJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HKK80N7T	PT_JDAGM28V	Targeted Sequencing	Tumor	NA	DGD
+BS_HKNH1HNP	PT_64C7QNBP	Targeted Sequencing	Tumor	NA	DGD
+BS_HKZRRFR9	PT_BCN28SW9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HMF8XE7Y	PT_GKN1EAW9	Targeted Sequencing	Tumor	NA	DGD
+BS_HNBH9HW9	PT_JGK9BJYH	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_HNC1VM0C	PT_ZPE3RXF0	WGS	Tumor	NA	PBTA
+BS_HNPBMWAD	PT_0NF0FA68	Targeted Sequencing	Tumor	NA	DGD
 BS_HNTVG0RJ	PT_K1YK24PP	WGS	Tumor	NA	PBTA
+BS_HQ7C5E3D	PT_KYZB57ED	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HRWZK1P4	PT_Y9MZ7486	Targeted Sequencing	Tumor	NA	DGD
+BS_HS6CS68B	PT_G24FN04H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HV87NW1Z	PT_41WETNRC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HVWFG1SS	PT_AMTFBV3F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HW9F496A	PT_962TCBVR	Targeted Sequencing	Tumor	NA	DGD
+BS_HWCMYANE	PT_TN2KF4SA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HX7P9SJ5	PT_ZABG0DZ2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_HYK03K2A	PT_82MX6J77	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_HYN8EFJB	PT_SY6W6B0Z	WGS	Tumor	NA	PBTA
+BS_HZ91NM1E	PT_XATX07ZC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J02X3Y7T	PT_NF6R6YHR	Targeted Sequencing	Tumor	NA	DGD
+BS_J03TR6FY	PT_GH4R9CKM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J187MVMG	PT_5VQE208D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J1Y56KM8	PT_0324HWD5	Targeted Sequencing	Tumor	NA	DGD
+BS_J276DA87	PT_D4JJMH7V	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_J2DZYGMY	PT_WKYPN77B	WGS	Tumor	NA	PBTA
+BS_J2G30JNW	PT_548918FZ	Targeted Sequencing	Tumor	NA	DGD
+BS_J3A5TY0Q	PT_VTFBA8FE	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_J440ZA7W	PT_KEQ53KRH	WGS	Tumor	NA	PBTA
+BS_J5QVVEK6	PT_5FPQXNAM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J7160EQ5	PT_1TQA3ZS2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J7CZNDC6	PT_AQ0RFSVQ	Targeted Sequencing	Tumor	NA	DGD
 BS_J7EY237P	PT_E3WNEDD4	WGS	Tumor	NA	PBTA
+BS_J7M0GMKH	PT_GD2XQW0A	Targeted Sequencing	Tumor	NA	DGD
+BS_J83AMQW1	PT_MDWPRDBT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J8YRVFDM	PT_GSS468PJ	Targeted Sequencing	Tumor	NA	DGD
+BS_J9JFMNEA	PT_QTKXFDWS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_J9Q3BGH1	PT_NTVQKQAV	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_JA5034KX	PT_3D74J8RZ	WGS	Tumor	NA	PBTA
+BS_JA92F5YT	PT_ATE3YRH5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JAM5Q7Y8	PT_59FJRPVX	Targeted Sequencing	Tumor	NA	DGD
+BS_JAMFD8CW	PT_NG0AT7VG	Targeted Sequencing	Tumor	NA	DGD
 BS_JAR21NK3	PT_P1F0AHMT	WGS	Tumor	NA	PBTA
+BS_JAWFR2NM	PT_8GWV6XCR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JAX6SZY3	PT_BC6JG69J	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JBDEJ07Y	PT_KW4DAA7Z	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_JBWSP4QA	PT_D9H1C43M	WGS	Tumor	NA	PBTA
+BS_JBWZ6P4C	PT_EQ5C5TEA	Targeted Sequencing	Tumor	NA	DGD
 BS_JC4AXPBD	PT_3A2Q62RD	WGS	Tumor	NA	PBTA
+BS_JCPTM7KZ	PT_4E9H2BG6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JD5CV0ZY	PT_FXD4BKRF	Targeted Sequencing	Tumor	NA	DGD
+BS_JDEZYGHV	PT_P127TWRS	Targeted Sequencing	Tumor	NA	DGD
+BS_JDZD619N	PT_EQ0BRG88	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JEE020F8	PT_RC1THQGJ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_JF8VQ9VV	PT_ZZRBX5JT	WGS	Tumor	NA	PBTA
+BS_JFGZ7Q2Q	PT_4N0S7800	Targeted Sequencing	Tumor	NA	DGD
+BS_JFKESZ0A	PT_67JEDH01	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JGB3XGGJ	PT_P1F0AHMT	Targeted Sequencing	Tumor	NA	DGD
+BS_JGBJTPDA	PT_2WSNYKAC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JHD2EC5T	PT_7TEHW6VQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JHEHJN1M	PT_0Q496N0Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JK0C3366	PT_XA98HG1C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JKGT66BP	PT_JDAGM28V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JKK5QZTC	PT_0Q13NSP5	Targeted Sequencing	Tumor	NA	DGD
+BS_JKPKPT0J	PT_SNAHBBGX	Targeted Sequencing	Tumor	NA	DGD
+BS_JKR644RJ	PT_RBCEW1B3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JKZMKCMB	PT_333GHVG7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JPBGY31Y	PT_V3NX1DWV	Targeted Sequencing	Tumor	NA	DGD
+BS_JPCC1B0Q	PT_7PWX8MC2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JPHE48PA	PT_401GQ0VV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JPVWK5X3	PT_MQHST8YC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JQJNY4PQ	PT_PTDWX0NK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JR0BT8A5	PT_8NRH7W3N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JR74SMCX	PT_QGD544T9	Targeted Sequencing	Tumor	NA	DGD
+BS_JRA090H1	PT_ME0JMDEB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JRB59NJ9	PT_ZMKMKCFQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JRDC52R1	PT_FV2TNKY5	Targeted Sequencing	Tumor	NA	DGD
+BS_JRP74F84	PT_VTK4R2BC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JRVJ99K9	PT_75HRTX4S	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JRX06QQ3	PT_GZNGMDWN	Targeted Sequencing	Tumor	NA	DGD
+BS_JRY5R8VB	PT_19GCSK2S	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JS7G87QP	PT_JPBMNESN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JTGTQX4Q	PT_9BZETM0M	Targeted Sequencing	Tumor	NA	DGD
+BS_JVM99RZA	PT_WXP9ZWJ0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JXE81GR7	PT_WN1B80HN	Targeted Sequencing	Tumor	NA	DGD
+BS_JYTPPYEV	PT_43RV93NM	Targeted Sequencing	Tumor	NA	DGD
+BS_JYW2ZW5G	PT_ZZQ34S2F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_JZPMQKKS	PT_CTC9ZDNY	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_JZRZG8KJ	PT_E8XM8JFZ	WGS	Tumor	NA	PBTA
 BS_JZSYY072	PT_MFF8XQES	WXS	Tumor	NA	PBTA
+BS_K113F90F	PT_BVA0H9T9	Targeted Sequencing	Tumor	NA	DGD
+BS_K1R6MJPB	PT_GDZXK2AG	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_K1XG2N91	PT_VPAXYBS7	WGS	Tumor	NA	PBTA
+BS_K20GJQ0Z	PT_TEBD1SES	Targeted Sequencing	Tumor	NA	DGD
+BS_K236CQ11	PT_GCKT4FJX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_K36TV7AZ	PT_6F0R9T61	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_K3HXKSVA	PT_6EH4EZBH	Targeted Sequencing	Tumor	NA	DGD
+BS_K46SCZAY	PT_YA9XESGF	Targeted Sequencing	Tumor	NA	DGD
+BS_K4M88G0Y	PT_EN4G7A9Z	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_K4RFFR6Y	PT_E3Y5BBSF	WGS	Tumor	NA	PBTA
 BS_K56ZXZME	PT_D46SNAQ7	WGS	Tumor	NA	PBTA
+BS_K58DN77T	PT_5ZPPR06P	Targeted Sequencing	Tumor	NA	DGD
+BS_K5QNZHG2	PT_D981E18T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_K5TGDR6G	PT_VXZJDVCQ	Targeted Sequencing	Tumor	NA	DGD
+BS_K62F9BCS	PT_XF1BVHZ9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_K6KRPCZJ	PT_83WNQR3T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_K7HBDY7X	PT_11DZQ3HH	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_K8Q4JZ59	PT_DWJRMYP8	WGS	Tumor	NA	PBTA
+BS_K8T7J2JC	PT_PMDHR92B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_K8Z7C252	PT_6EE8PH5C	Targeted Sequencing	Tumor	NA	DGD
+BS_K9KJXKEE	PT_K7NAC0JG	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_K9VSRKD1	PT_JBYZJRNM	WGS	Tumor	NA	PBTA
+BS_KADGB2GY	PT_YDFPMXAR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KAFZ6X4K	PT_9CCEQ57K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KAKP1MAK	PT_GBDYKSPY	Targeted Sequencing	Tumor	NA	DGD
+BS_KAQWXAMA	PT_T6E6868Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KB08774J	PT_QH9H491G	Targeted Sequencing	Tumor	NA	DGD
+BS_KBBEP6GP	PT_E99F32RF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KBEWFFRG	PT_XC15JMBJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KC1VE0B7	PT_97VXEK6Y	Targeted Sequencing	Tumor	NA	DGD
+BS_KC5J0RSK	PT_803AVNGK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KD41P8W6	PT_Y9JQ3VPX	Targeted Sequencing	Tumor	NA	DGD
+BS_KDZQH1X9	PT_P69FZ5A6	Targeted Sequencing	Tumor	NA	DGD
+BS_KEYJTDM1	PT_TRZ1N1HQ	Targeted Sequencing	Tumor	NA	DGD
 BS_KFJP278G	PT_K7FZ6YHZ	WGS	Tumor	NA	PBTA
+BS_KG4Q5F0R	PT_5ASG173C	Targeted Sequencing	Tumor	NA	DGD
+BS_KG54BRRN	PT_NAYJ2G2E	Targeted Sequencing	Tumor	NA	DGD
+BS_KGP4KYYS	PT_Q4YNJEMN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KGTFWEAB	PT_REB10J3V	Targeted Sequencing	Tumor	NA	DGD
+BS_KH6A4ABK	PT_PAPEQ0T0	Targeted Sequencing	Tumor	NA	DGD
+BS_KJ6KXE8G	PT_3T3VGWC6	Targeted Sequencing	Tumor	NA	DGD
+BS_KJDP8WZC	PT_WQ2EJVF5	Targeted Sequencing	Tumor	NA	DGD
+BS_KJDWN2FD	PT_TG2YJS5J	Targeted Sequencing	Tumor	NA	DGD
+BS_KJMYSHQM	PT_P2P78M18	Targeted Sequencing	Tumor	NA	DGD
+BS_KJZ590EJ	PT_1RYJXGCY	Targeted Sequencing	Tumor	NA	DGD
+BS_KKH625KS	PT_A93QFD2B	Targeted Sequencing	Tumor	NA	DGD
+BS_KKR68E9E	PT_REB10J3V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KMKCB3FJ	PT_WFQNVJ4Z	Targeted Sequencing	Tumor	NA	DGD
+BS_KMS9RPDV	PT_EN67STXE	Targeted Sequencing	Tumor	NA	DGD
+BS_KN6D1XV7	PT_HVXYKN8E	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_KPPXTTQH	PT_GBDYKSPY	WGS	Tumor	NA	PBTA
+BS_KQGFD8MZ	PT_F0KEA3EH	Targeted Sequencing	Tumor	NA	DGD
 BS_KQZY3ZRV	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
+BS_KR8MSCG9	PT_AR55452N	Targeted Sequencing	Tumor	NA	DGD
+BS_KS2HY842	PT_14Z5353Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KS8V7N4V	PT_Y8GBEEJZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KSEGGZYR	PT_YHJ3TP9X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KSZM545Y	PT_P8PQXSQ7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KT3X5H1W	PT_VCD0W8HG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KTXWFTS3	PT_HAK6TYRC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KV1MZWSR	PT_VXZJDVCQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KVSFN7Y1	PT_G6ZR8BCV	Targeted Sequencing	Tumor	NA	DGD
 BS_KW23F2YH	PT_CGVPMMD8	WGS	Tumor	NA	PBTA
+BS_KWPH2QPC	PT_PZNX0ZVQ	Targeted Sequencing	Tumor	NA	DGD
+BS_KWXJ584D	PT_9MT2G8NE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KXE5J0Z7	PT_ZH3SBJPZ	Targeted Sequencing	Tumor	NA	DGD
+BS_KXT2JPE2	PT_R86EY5TZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KY1CYFFK	PT_ER9J5A9E	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KY22QHV4	PT_8HBWG092	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KZ615HBJ	PT_8EX2R1RB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_KZSF0NTX	PT_AXBVXK19	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_M07VS4K2	PT_EKHZBAT3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_M0PRQVMH	PT_G9GCH1AY	Targeted Sequencing	Tumor	NA	DGD
+BS_M1XR5A0B	PT_83F2MT1S	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_M33Y7NB3	PT_7JZ1W69S	Targeted Sequencing	Tumor	NA	DGD
+BS_M4M1ZVCB	PT_FW7B47ST	Targeted Sequencing	Tumor	NA	DGD
 BS_M56NS0SQ	PT_F1AMYRMZ	WGS	Tumor	NA	PBTA
+BS_M5VSCH4Y	PT_GJGB2TCX	Targeted Sequencing	Tumor	NA	DGD
+BS_M626X1AR	PT_ZX2SJMFJ	Targeted Sequencing	Tumor	NA	DGD
+BS_M6CR0T96	PT_4ADZ9F53	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_M6DSW0H0	PT_QEP13FH4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_M6RA0XGK	PT_3X871YSB	Targeted Sequencing	Tumor	NA	DGD
+BS_M8FX5D80	PT_VJXDBEKN	Targeted Sequencing	Tumor	NA	DGD
 BS_M98BYTMF	PT_MWDQ3RA1	WGS	Tumor	NA	PBTA
+BS_MA4MY6AK	PT_QTDY0Y9A	Targeted Sequencing	Tumor	NA	DGD
+BS_MA9CNNRJ	PT_401GQ0VV	Targeted Sequencing	Tumor	NA	DGD
+BS_MAW3R46K	PT_MKDQZ17N	Targeted Sequencing	Tumor	NA	DGD
+BS_MBPV04D6	PT_4NVTPQ65	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_MDAXXXAM	PT_7HEDWKTM	WXS	Tumor	NA	PBTA
+BS_ME2Z7BP2	PT_KW988XQH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MEG9FT17	PT_CHHBDNNJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MEHK6P0P	PT_QZWDK114	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_MEMVBD1Z	PT_E3WNEDD4	WGS	Tumor	NA	PBTA
+BS_MF0AZF2A	PT_EN4G7A9Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MF1YWFMX	PT_CWXSP19D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MF2NVCZZ	PT_VAHFRMG5	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_MGFDE2ZH	PT_440E1XW5	WGS	Tumor	NA	PBTA
+BS_MGQHT5VW	PT_333GHVG7	Targeted Sequencing	Tumor	NA	DGD
+BS_MHGS0DQG	PT_AH6VGDWV	Targeted Sequencing	Tumor	NA	DGD
+BS_MKJWKQB5	PT_MPESH3X8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MKT34TXJ	PT_HDPAZPNA	Targeted Sequencing	Tumor	NA	DGD
+BS_MM7DYTTK	PT_7THNHCPN	Targeted Sequencing	Tumor	NA	DGD
+BS_MMCR55FE	PT_R2AK82FX	Targeted Sequencing	Tumor	NA	DGD
+BS_MMFXD8Y5	PT_NWC0P29C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MMG1YNWH	PT_SKXVTDKK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MMWJD3XD	PT_Y2PEKGGY	Targeted Sequencing	Tumor	NA	DGD
+BS_MN5MKW6J	PT_HYBNXPN8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MPKN85G0	PT_7H8X9M9E	Targeted Sequencing	Tumor	NA	DGD
+BS_MS9XKGGN	PT_A8YMD5T6	Targeted Sequencing	Tumor	NA	DGD
 BS_MSZW0KPS	PT_H45M7M2T	WGS	Tumor	NA	PBTA
+BS_MV72Q5SH	PT_QK1GTVW1	Targeted Sequencing	Tumor	NA	DGD
+BS_MVK3N0KW	PT_43RV93NM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MX6A841K	PT_AX5NM47X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MXSQ6JBV	PT_GHTSGFCT	Targeted Sequencing	Tumor	NA	DGD
+BS_MXTWEDWK	PT_34ZN2JQF	Targeted Sequencing	Tumor	NA	DGD
+BS_MXW6VAMQ	PT_9BZETM0M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_MXYKVB50	PT_JNB7WJ56	Targeted Sequencing	Tumor	NA	DGD
 BS_MZ2RPTYW	PT_W5T878YK	WGS	Tumor	NA	PBTA
+BS_MZM43PN3	PT_93AT7BSV	Targeted Sequencing	Tumor	NA	DGD
+BS_MZW56JZJ	PT_S4YNE17X	Targeted Sequencing	Tumor	NA	DGD
+BS_N0QX9FTB	PT_Z4BF2NSB	Targeted Sequencing	Tumor	NA	DGD
+BS_N17YAGFN	PT_Q7VXYJQ4	Targeted Sequencing	Tumor	NA	DGD
 BS_N187C2CN	PT_7T2HQNR7	WGS	Tumor	NA	PBTA
+BS_N1CNKYBN	PT_NQT3G1QZ	Targeted Sequencing	Tumor	NA	DGD
+BS_N1E2DCBH	PT_3D74J8RZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_N2DQT7J8	PT_04V47WFC	Targeted Sequencing	Tumor	NA	DGD
+BS_N2Z9GTB3	PT_KJJM3G90	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_N30XYWEN	PT_9KRSSPSF	WGS	Tumor	NA	PBTA
+BS_N3GYAJC5	PT_MKR211TP	Targeted Sequencing	Tumor	NA	DGD
+BS_N46TJ4EW	PT_A1J3631D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_N4CMSQ1G	PT_8SDJXNFR	Targeted Sequencing	Tumor	NA	DGD
+BS_N53S35SY	PT_916QYQN2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_N5KVWT6A	PT_C75GZ47D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_N5QX15C8	PT_G9XKWA3N	Targeted Sequencing	Tumor	NA	DGD
+BS_N77EV707	PT_A20FXKRQ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_N7CXF010	PT_39HBKSGG	WGS	Tumor	NA	PBTA
+BS_N7DVDR2D	PT_NTVQKQAV	Targeted Sequencing	Tumor	NA	DGD
+BS_N7MQWZ33	PT_W5PW7QVB	Targeted Sequencing	Tumor	NA	DGD
+BS_N9ZSB4B7	PT_HFQNKP5X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NA6SPY6X	PT_4TFTQXJ8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NC976TBP	PT_BZ0KR7Q1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NE1PVXJD	PT_65H9H75F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NF4VA82T	PT_E99F32RF	Targeted Sequencing	Tumor	NA	DGD
+BS_NFJ4WJET	PT_XH5X1XEQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NFJGCR8T	PT_YY6GQEEM	Targeted Sequencing	Tumor	NA	DGD
 BS_NFTZDWJ8	PT_41BCPB7R	WGS	Tumor	NA	PBTA
+BS_NGB6NN0E	PT_VTG1S395	Targeted Sequencing	Tumor	NA	DGD
 BS_NKDT0PSK	PT_D5KKHPAE	WGS	Tumor	NA	PBTA
+BS_NN6HG45K	PT_MYX67TFW	Targeted Sequencing	Tumor	NA	DGD
+BS_NNS1K0NB	PT_4NVTPQ65	Targeted Sequencing	Tumor	NA	DGD
+BS_NPPJC2G1	PT_Z1JD96RW	Targeted Sequencing	Tumor	NA	DGD
+BS_NQ41MEBX	PT_QHJSYTWJ	Targeted Sequencing	Tumor	NA	DGD
+BS_NQ97XYXC	PT_5VMBPWYG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NRJA5JT9	PT_GRZE094W	Targeted Sequencing	Tumor	NA	DGD
+BS_NVDRTFNN	PT_EN4YDKPS	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_NVW6HQV2	PT_64CRJ580	WGS	Tumor	NA	PBTA
 BS_NW43TQEW	PT_ZZRBX5JT	WGS	Tumor	NA	PBTA
+BS_NW8WV3D1	PT_E6BGSP51	Targeted Sequencing	Tumor	NA	DGD
 BS_NWD3P0QN	PT_K1YK24PP	WGS	Tumor	NA	PBTA
+BS_NWPKZEJ1	PT_EJA9RQXE	Targeted Sequencing	Tumor	NA	DGD
+BS_NX982194	PT_KHQGBBDN	Targeted Sequencing	Tumor	NA	DGD
+BS_NXDCQRZJ	PT_DAKPNP7K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_NXX7BR6G	PT_S6TMQPG6	Targeted Sequencing	Tumor	NA	DGD
+BS_NZ3V41PF	PT_3SF3NQ43	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P0FMD14Y	PT_YDFPMXAR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_P0KJHM68	PT_9P7P6YAQ	WGS	Tumor	NA	PBTA
+BS_P133Z0C2	PT_W6H1Q54P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P1HT8NHP	PT_HE8FBFNA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P23KT3DV	PT_REB10J3V	Targeted Sequencing	Tumor	NA	DGD
+BS_P2NVYPV1	PT_H6MHKR2J	Targeted Sequencing	Tumor	NA	DGD
+BS_P46TYM27	PT_RE5FZQTP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P4QZXRC6	PT_803AVNGK	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P506YK65	PT_32CD03EE	Targeted Sequencing	Tumor	NA	DGD
+BS_P56EWRWP	PT_ARBPVCGH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P6WVTBVM	PT_NG0AT7VG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P8T4JW93	PT_04V47WFC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_P9CHXAPR	PT_4TASAQKA	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_P9MA3S97	PT_0PT33SCF	WGS	Tumor	NA	PBTA
+BS_PASBEQZ9	PT_J1S28HCE	Targeted Sequencing	Tumor	NA	DGD
+BS_PAY25BJS	PT_9CGBDPVV	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PBP7633F	PT_ZFKQKGME	WGS	Tumor	NA	PBTA
+BS_PCA12A3R	PT_HAWZPGFS	Targeted Sequencing	Tumor	NA	DGD
+BS_PCR7RTEH	PT_GJ2SN63Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PDD77KMJ	PT_ZZTQQVCT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PEEBT382	PT_A1J3631D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PF13EW6R	PT_DZ0X4KM1	Targeted Sequencing	Tumor	NA	DGD
+BS_PF5JDJJV	PT_101VYN5T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PFADK7HP	PT_Z9BN2V4W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PGP0B5FQ	PT_7M2PGCBV	Targeted Sequencing	Tumor	NA	DGD
+BS_PHAV6TRP	PT_KJWMG0E0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PJ95BE63	PT_01SH4F1X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PK682VBW	PT_ZBFGMNXT	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PMFAKGQ5	PT_VTM2STE3	WGS	Tumor	NA	PBTA
+BS_PP487Q7T	PT_C73C5BBZ	Targeted Sequencing	Tumor	NA	DGD
+BS_PPG3MHAM	PT_Q576ZJH5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PQAD7B77	PT_5SWFTE95	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PQSJ9VQW	PT_6VHGCV7M	WGS	Tumor	NA	PBTA
+BS_PR6Q0EEQ	PT_54NFS78W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PR9JVJSD	PT_ZZRBX5JT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PRSB0X9N	PT_S6TMQPG6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PTTZ15MN	PT_203SE2J7	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PTW3FZXK	PT_ZFKQKGME	WGS	Tumor	NA	PBTA
+BS_PTXCTHRM	PT_YJGJS19Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PVQJPR1S	PT_QVWCRKZM	Targeted Sequencing	Tumor	NA	DGD
+BS_PWDTGRV4	PT_AAZ38138	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PWFH1N9W	PT_NS1F6DT8	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PWFV4AMD	PT_QEP13FH4	WGS	Tumor	NA	PBTA
+BS_PWG8GF2F	PT_X82W2SGQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PWG8NJFZ	PT_PMDHR92B	Targeted Sequencing	Tumor	NA	DGD
+BS_PXCVAA4S	PT_0QABV2YR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PYMRR1Y1	PT_BC6JG69J	WGS	Tumor	NA	PBTA
+BS_PYR12WA6	PT_BHPBJNCP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_PZ1N2XK1	PT_56SWR1FM	Targeted Sequencing	Tumor	NA	DGD
+BS_PZAZJ0BZ	PT_YHJ3TP9X	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_PZNYCWJK	PT_YJY2QXDM	WXS	Tumor	NA	PBTA
+BS_Q09JJY5Y	PT_ZS2WCK6W	Targeted Sequencing	Tumor	NA	DGD
+BS_Q18M2SR6	PT_KNJDVV4K	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Q1NTEF8V	PT_X8SK8120	WGS	Tumor	NA	PBTA
+BS_Q2R3YQ33	PT_HKA4TX9W	Targeted Sequencing	Tumor	NA	DGD
+BS_Q35NMDBH	PT_S4J0JZAA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q3SJSECW	PT_DZ86YXN6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q42DZ923	PT_4AZARJZ6	Targeted Sequencing	Tumor	NA	DGD
+BS_Q56J2S2W	PT_18RFW909	Targeted Sequencing	Tumor	NA	DGD
+BS_Q5MZSQEN	PT_P8PQXSQ7	Targeted Sequencing	Tumor	NA	DGD
+BS_Q5QWEKVP	PT_TRZ1N1HQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q6HFJCQ7	PT_7P08E4J4	Targeted Sequencing	Tumor	NA	DGD
+BS_Q6ZYXAS5	PT_V8PT0YGV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q73GKFAQ	PT_D77M7EEG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q7N1SPC2	PT_VY5A2ECP	Targeted Sequencing	Tumor	NA	DGD
+BS_Q80SZDZS	PT_NCGMG9FB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q8ANN2A9	PT_ZABG0DZ2	Targeted Sequencing	Tumor	NA	DGD
+BS_Q8PRWQZQ	PT_C9AY9KQF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Q9CRYQSS	PT_97VXEK6Y	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Q9MAXZF6	PT_WG2Z95B5	WGS	Tumor	NA	PBTA
+BS_QA5ZYCF3	PT_W95TYXPM	Targeted Sequencing	Tumor	NA	DGD
+BS_QB1MCGW6	PT_2GTHCPXB	Targeted Sequencing	Tumor	NA	DGD
+BS_QCCMD5RB	PT_F7ZBQ9BY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QCDX19AH	PT_0WTX4CBR	Targeted Sequencing	Tumor	NA	DGD
+BS_QCGB5P1T	PT_GR02DP0Q	Targeted Sequencing	Tumor	NA	DGD
 BS_QCVB3325	PT_JNEV57VK	WGS	Tumor	NA	PBTA
+BS_QD2AZRR0	PT_W5Z2VB5Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QD33DVC5	PT_W31WP285	Targeted Sequencing	Tumor	NA	DGD
+BS_QE3PPHEA	PT_4X7VW8WT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QEY9YH4J	PT_S9M3JJVB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QFYX6CE4	PT_G9D39RG0	Targeted Sequencing	Tumor	NA	DGD
+BS_QG3ZWTKG	PT_29F8VGHR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QGHDYRYS	PT_RSB0ADXH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QGJ61P2P	PT_08M919BH	Targeted Sequencing	Tumor	NA	DGD
+BS_QGPZ6RJ2	PT_DPZ9A6FP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QK85RWGK	PT_GSS468PJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QK96S7ZD	PT_EQ5C5TEA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QKF0W9CW	PT_QX3ZH4NZ	Targeted Sequencing	Tumor	NA	DGD
+BS_QN5YPCRG	PT_17WDKFB3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QN9NN4PX	PT_FY419DF9	Targeted Sequencing	Tumor	NA	DGD
+BS_QNN4GD08	PT_RQ58PVSA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QPEM4R0A	PT_Y572BRC1	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_QPMCX442	PT_4W0BP7F3	WGS	Tumor	NA	PBTA
+BS_QPY2741E	PT_YHJ3TP9X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QQ18PB43	PT_JAS80YH7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QQ19J2T7	PT_GWD2Z5AM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QRH5RDMT	PT_CSXXV81T	Targeted Sequencing	Tumor	NA	DGD
 BS_QRM7A5YZ	PT_3GP5H8Z0	WGS	Tumor	NA	PBTA
+BS_QRSB31CC	PT_BC6JG69J	Targeted Sequencing	Tumor	NA	DGD
+BS_QSP7FJYN	PT_9CCEQ57K	Targeted Sequencing	Tumor	NA	DGD
+BS_QSS96VAM	PT_0324HWD5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QSSBRBV2	PT_PTA1YP8J	Targeted Sequencing	Tumor	NA	DGD
+BS_QSTKDM1Q	PT_G8NZAPDQ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_QTEWYN0M	PT_TXFYRDP4	WGS	Tumor	NA	PBTA
+BS_QTF342BT	PT_650GZWJR	Targeted Sequencing	Tumor	NA	DGD
+BS_QTTPERXC	PT_V0Q3SPHV	Targeted Sequencing	Tumor	NA	DGD
+BS_QVKSS7S7	PT_B5TJ8Q6D	Targeted Sequencing	Tumor	NA	DGD
 BS_QW10D8NY	PT_V75NCPJE	WGS	Tumor	NA	PBTA
+BS_QWRKADEJ	PT_3BCCR1WZ	Targeted Sequencing	Tumor	NA	DGD
+BS_QX5ZY43J	PT_REB10J3V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QY48KHDX	PT_NAYJ2G2E	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_QYBVJZHB	PT_V8PT0YGV	Targeted Sequencing	Tumor	NA	DGD
 BS_QYHHN0W2	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
+BS_QZN5C0DS	PT_P69FZ5A6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R0CP86BW	PT_VA5BWB5M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R0G2S8WH	PT_PTTBTPS6	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_R0Z82GZX	PT_BTYG7JR9	WGS	Tumor	NA	PBTA
+BS_R1ESEEXA	PT_1C778V42	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R1N1EZXF	PT_KW4DAA7Z	Targeted Sequencing	Tumor	NA	DGD
+BS_R2054BET	PT_Q99REANT	Targeted Sequencing	Tumor	NA	DGD
+BS_R249PESW	PT_KJWMG0E0	Targeted Sequencing	Tumor	NA	DGD
+BS_R456HJ0W	PT_TFCNV42Z	Targeted Sequencing	Tumor	NA	DGD
+BS_R5BC671C	PT_KJJM3G90	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R5VBXRGG	PT_YQJN9T4G	Targeted Sequencing	Tumor	NA	DGD
+BS_R6NNMZ05	PT_A5ET1M7B	Targeted Sequencing	Tumor	NA	DGD
+BS_R7KTDNTA	PT_329KVX20	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R7XS5MN3	PT_M9WKP8RF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R91DDK9A	PT_HVCRDJ95	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_R96P5GZ6	PT_EN4YDKPS	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_RA4GZM25	PT_FZHGKJ0H	WGS	Tumor	NA	PBTA
+BS_RAENXFNV	PT_2HWA1TA9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RBJGEPDQ	PT_3QPZQXGZ	Targeted Sequencing	Tumor	NA	DGD
+BS_RBK8BX7W	PT_3SWR1K6C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RBSQNHXB	PT_QZN7FZER	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RCB5QR73	PT_2BYQ1DPQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RCQFNRV8	PT_NCGMG9FB	Targeted Sequencing	Tumor	NA	DGD
+BS_RCTBM37P	PT_4X7VW8WT	Targeted Sequencing	Tumor	NA	DGD
+BS_RDP3M86X	PT_KJJM3G90	Targeted Sequencing	Tumor	NA	DGD
+BS_RECF1S4Q	PT_BCBMG74N	Targeted Sequencing	Tumor	NA	DGD
 BS_RES3E00R	PT_JRA29R0N	WXS	Tumor	NA	PBTA
 BS_REXHSEGZ	PT_XETT8T7M	WXS	Tumor	NA	PBTA
 BS_RF19FHQW	PT_BC6JG69J	WGS	Tumor	NA	PBTA
+BS_RFB2JP1Y	PT_3D74J8RZ	Targeted Sequencing	Tumor	NA	DGD
+BS_RGM44ASP	PT_3JNXBSHR	Targeted Sequencing	Tumor	NA	DGD
+BS_RHP4DGQH	PT_G5MWV2WW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RHPB630Q	PT_H0PXZWJ6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RHWRKXDT	PT_EGW3VRVV	Targeted Sequencing	Tumor	NA	DGD
+BS_RJJVQ53E	PT_1PTGJDXD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RJX52BBE	PT_QH9H491G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RKBEHAFD	PT_EVQZ62SE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RKKEPMBN	PT_AYV78KT9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RM6VB6XB	PT_333GHVG7	Targeted Sequencing	Tumor	NA	DGD
 BS_RMNNT83R	PT_4347ZBEX	WGS	Tumor	NA	PBTA
+BS_RMX22RDY	PT_HVX28JYD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RPKDTJKP	PT_EQX0VT4F	Targeted Sequencing	Tumor	NA	DGD
+BS_RQ4TNF1G	PT_N17MK63X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RQ632JMP	PT_0BR64M1A	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RQDR76G2	PT_MMT47BS8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RR4N5HYZ	PT_EAG38QHB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RSFJ8S66	PT_3D74J8RZ	Targeted Sequencing	Tumor	NA	DGD
+BS_RSQJANXC	PT_MZPW2BAD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RTCK8BGN	PT_4W0BP7F3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RTWYX3G5	PT_84211MPY	Targeted Sequencing	Tumor	NA	DGD
+BS_RVWC5ZFC	PT_7F4TBYYQ	Targeted Sequencing	Tumor	NA	DGD
+BS_RWZRY9CF	PT_D19XT3GV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RX4JBBA3	PT_NBY8PZR9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RXMFWSDW	PT_517M9521	Targeted Sequencing	Tumor	NA	DGD
+BS_RXVJKTD7	PT_BZEDKWBS	Targeted Sequencing	Tumor	NA	DGD
+BS_RYKSW03T	PT_1RYJXGCY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_RZ8XKVP9	PT_41WETNRC	Targeted Sequencing	Tumor	NA	DGD
+BS_S02XCS9N	PT_VZ32W7M8	Targeted Sequencing	Tumor	NA	DGD
 BS_S0P9KPAZ	PT_4D8WG2DP	WGS	Tumor	NA	PBTA
+BS_S0X4JYFJ	PT_CCZRN7A3	Targeted Sequencing	Tumor	NA	DGD
+BS_S1BHHF33	PT_FKJCVYJW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_S1R0D7M8	PT_67HW00BS	Targeted Sequencing	Tumor	NA	DGD
+BS_S1S55JW0	PT_DBNV494P	Targeted Sequencing	Tumor	NA	DGD
+BS_S21QTJGH	PT_JXGMAHHN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_S2XGY5RN	PT_PAPEQ0T0	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_S4P7XKFK	PT_4347ZBEX	WGS	Tumor	NA	PBTA
+BS_S4SRZHET	PT_9PDE9KSB	Targeted Sequencing	Tumor	NA	DGD
+BS_S4V0H5F5	PT_41WETNRC	Targeted Sequencing	Tumor	NA	DGD
+BS_S50ARG81	PT_DDQCAZJG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_S5NYQFVS	PT_81D172ZP	Targeted Sequencing	Tumor	NA	DGD
+BS_S5P0E3BN	PT_ZZQ34S2F	Targeted Sequencing	Tumor	NA	DGD
+BS_S5QC01D9	PT_CWXSP19D	Targeted Sequencing	Tumor	NA	DGD
+BS_S5ZN74VN	PT_PF9EC93Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_S67N46ZF	PT_865QGR0X	Targeted Sequencing	Tumor	NA	DGD
+BS_S6D3AD72	PT_DYHXJR7B	Targeted Sequencing	Tumor	NA	DGD
+BS_S7VXD92G	PT_P4NBN7KG	Targeted Sequencing	Tumor	NA	DGD
+BS_S83QFHPW	PT_MGZXMQD8	Targeted Sequencing	Tumor	NA	DGD
+BS_S8ET6SYQ	PT_2CA9MM6W	Targeted Sequencing	Tumor	NA	DGD
+BS_S8Q50YS3	PT_2AR4JX4X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_S94Z0Y0Z	PT_N4563ERM	Targeted Sequencing	Tumor	NA	DGD
+BS_S9D0S598	PT_6N825561	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SAEMBCPN	PT_TP6GS00H	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SBFHRGZB	PT_GK725SCY	Targeted Sequencing	Tumor	NA	DGD
+BS_SBXT7XCB	PT_CMWKP37V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SCSGTW9X	PT_JNF0XNAP	Targeted Sequencing	Tumor	NA	DGD
+BS_SCYJA84Z	PT_ME0JMDEB	Targeted Sequencing	Tumor	NA	DGD
+BS_SDE5H3JC	PT_W6H1Q54P	Targeted Sequencing	Tumor	NA	DGD
 BS_SE8D7CWD	PT_27M5988T	WGS	Tumor	NA	PBTA
+BS_SEDY0CEZ	PT_N8W26H19	Targeted Sequencing	Tumor	NA	DGD
+BS_SERF50CV	PT_1H2REHT2	Targeted Sequencing	Tumor	NA	DGD
 BS_SH9NS018	PT_9BZETM0M	WGS	Tumor	NA	PBTA
+BS_SHN87MQW	PT_G24FN04H	Targeted Sequencing	Tumor	NA	DGD
+BS_SJ8KB4Z2	PT_XWVQW6JX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SKT393YF	PT_MKR211TP	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_SMS2WYWX	PT_R4BMS5K3	WXS	Tumor	NA	PBTA
+BS_SMYNJQ6X	PT_G7YHHH4J	Targeted Sequencing	Tumor	NA	DGD
+BS_SNYFA134	PT_ZSNKTE47	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SPCRD7QW	PT_803AVNGK	Targeted Sequencing	Tumor	NA	DGD
+BS_SPN6T953	PT_HN728BV7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SQ3GZJBF	PT_54W0PNYT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SQ3KZFEJ	PT_4HXYZQRX	Targeted Sequencing	Tumor	NA	DGD
+BS_SQDN9C1K	PT_TB8HPJBN	Targeted Sequencing	Tumor	NA	DGD
+BS_SQGMSTYW	PT_XPS6EJCM	Targeted Sequencing	Tumor	NA	DGD
+BS_SQR8P0TR	PT_70YY1KH4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SQW4VY3F	PT_9Z1C5K9Z	Targeted Sequencing	Tumor	NA	DGD
+BS_SS8KGYFF	PT_67JEDH01	Targeted Sequencing	Tumor	NA	DGD
 BS_SSP9MG2E	PT_440E1XW5	WGS	Tumor	NA	PBTA
+BS_STX3V5MF	PT_2CA9MM6W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SV8DKTPZ	PT_04V47WFC	Targeted Sequencing	Tumor	NA	DGD
 BS_SV9567M8	PT_P1290MMP	WGS	Tumor	NA	PBTA
+BS_SVMQ9B7G	PT_Y9MZ7486	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SX8CHB91	PT_40NJ9ZXN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SXH4WCR5	PT_75HRTX4S	Targeted Sequencing	Tumor	NA	DGD
+BS_SXR87VVV	PT_TRZ1N1HQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SY60ZGJY	PT_GD0TGXM3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_SZP0QKC0	PT_F1MDWB5W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_T2DG8VFJ	PT_G6ZR8BCV	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_T3AXBKKY	PT_XRQHMBHB	WGS	Tumor	NA	PBTA
+BS_T4AQZFXE	PT_TBSP0A0Z	Targeted Sequencing	Tumor	NA	DGD
+BS_T4CM0KWX	PT_78BDCX2C	Targeted Sequencing	Tumor	NA	DGD
 BS_T4XT27EF	PT_GSSQYQKV	WGS	Tumor	NA	PBTA
+BS_T77GYX21	PT_329KVX20	Targeted Sequencing	Tumor	NA	DGD
+BS_T83RG1TA	PT_TP6GS00H	Targeted Sequencing	Tumor	NA	DGD
+BS_T88CNJ8A	PT_JPFR0046	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TA04C03Y	PT_7T2HQNR7	Targeted Sequencing	Tumor	NA	DGD
+BS_TAPTEH4M	PT_4HXYZQRX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TAQ6HBJH	PT_7Z0FF6A2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TBZ0WF0M	PT_4NVTPQ65	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TCY0B4C8	PT_A1J3631D	Targeted Sequencing	Tumor	NA	DGD
+BS_TE0D230V	PT_R4JE89YX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TEADB60E	PT_1PVVBG1B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TF603ZGD	PT_Y9JQ3VPX	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TFH3Q06W	PT_99R55MP0	Targeted Sequencing	Tumor	NA	DGD
 BS_TFYBVE0A	PT_H9QTP1JF	WGS	Tumor	NA	PBTA
+BS_TG1N261P	PT_T2QGGYXC	Targeted Sequencing	Tumor	NA	DGD
+BS_TGF6RNXN	PT_EE2E1AXD	Targeted Sequencing	Tumor	NA	DGD
+BS_TGZQCY36	PT_PGTGVKK3	Targeted Sequencing	Tumor	NA	DGD
+BS_THDGHGCS	PT_N1GX3XT3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_THJNRGK6	PT_9DN55H64	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TK4YJ5AM	PT_TG2YJS5J	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TK60BN7Q	PT_NBY8PZR9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TKDQG179	PT_TH18S0JQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TMPT731C	PT_EF5W4PS6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TNDMV4Z5	PT_7Z0FF6A2	Targeted Sequencing	Tumor	NA	DGD
+BS_TNFDFFR2	PT_6EE8PH5C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TNK7YQQ2	PT_0D0YGGBW	Targeted Sequencing	Tumor	NA	DGD
 BS_TNV2XNE4	PT_4W0BP7F3	WGS	Tumor	NA	PBTA
+BS_TPEY8YYD	PT_0Q2T0YRJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TPFF7BZ1	PT_9T0WBKS6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TRGW0XPY	PT_8SDJXNFR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_TRKRS2WJ	PT_ZPE3RXF0	WGS	Tumor	NA	PBTA
+BS_TSNBH5A6	PT_DF18YV38	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TSNQ2YJM	PT_DYHXJR7B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TSZAGM8S	PT_HF7GAGP1	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TT87BP3Z	PT_C6NDFST5	Targeted Sequencing	Tumor	NA	DGD
+BS_TWMZCEKT	PT_4CYZHPMT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TX45VMN4	PT_4SD4YXPR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TXJ6YDHH	PT_FXPXV0CZ	Targeted Sequencing	Tumor	NA	DGD
+BS_TXWKF5BN	PT_7M2PGCBV	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_TXYG2PRR	PT_GYSNY9G2	WXS	Tumor	NA	PBTA
 BS_TYE6Q66H	PT_D5PE7B2H	WGS	Tumor	NA	PBTA
+BS_TYJ3YME9	PT_VAW7C1MR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_TYSTD57D	PT_T16E2TWZ	WGS	Tumor	NA	PBTA
+BS_TYT9RGC3	PT_81D172ZP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_TZ09ZHDF	PT_BK92NM09	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_TZWCWMJJ	PT_E3WNEDD4	WGS	Tumor	NA	PBTA
+BS_V0G7QM74	PT_EN4G7A9Z	Targeted Sequencing	Tumor	NA	DGD
+BS_V17TP9SY	PT_9TPW6850	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V19ZKG08	PT_3D74J8RZ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_V1FV7FJK	PT_W17NV5YG	WGS	Tumor	NA	PBTA
+BS_V1Q5A9B1	PT_5ZPPR06P	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V1WWA3S9	PT_6DZB4WYH	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_V27ABVGT	PT_C2D4JXS1	WGS	Tumor	NA	PBTA
+BS_V2A5DE46	PT_7Q0XGYHA	Targeted Sequencing	Tumor	NA	DGD
+BS_V36N1NAN	PT_AYSD9P2X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V429AAT3	PT_B5KXHZ6Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V5N71HQS	PT_RBCEW1B3	Targeted Sequencing	Tumor	NA	DGD
+BS_V5WZEF9H	PT_1M94P9BT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V62FBEZ3	PT_XZARHEHG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V6HRP1B9	PT_E7VA6E07	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V6X2QWKN	PT_Z6F9Y2MZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V71FT8XP	PT_14J2SHNA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V7QGW64V	PT_QEP13FH4	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_V878P31R	PT_BNARR0N6	WGS	Tumor	NA	PBTA
 BS_V889E2HD	PT_K1YK24PP	WGS	Tumor	NA	PBTA
+BS_V8AE965P	PT_Y5YHX20Q	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_V9TJFBDC	PT_D5C09HMR	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_VA0XFEB5	PT_CYBYN18G	WGS	Tumor	NA	PBTA
+BS_VB0K7885	PT_V4MF99XB	Targeted Sequencing	Tumor	NA	DGD
+BS_VB1VPZ94	PT_84WA83VT	Targeted Sequencing	Tumor	NA	DGD
+BS_VB7DN9NF	PT_GBDYKSPY	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_VBHKHMVE	PT_6QNT7WP5	WGS	Tumor	NA	PBTA
+BS_VBHXJ9M6	PT_84211MPY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VCKWSMTA	PT_CCZRN7A3	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VDNANFWZ	PT_1N6ATKJS	Targeted Sequencing	Tumor	NA	DGD
+BS_VFM8JYMR	PT_5XV23PWB	Targeted Sequencing	Tumor	NA	DGD
+BS_VFXS93PX	PT_30EX0QAT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VGQVV0M9	PT_V3NX1DWV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VGX6GXBG	PT_WF2DPWKV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VH68VD09	PT_AJXE05XM	Targeted Sequencing	Tumor	NA	DGD
+BS_VHAFNTWP	PT_AE52FZ41	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VJPVD63T	PT_FMF4Z93G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VJRP8ETF	PT_KHBVFV5T	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_VKG6D1Y4	PT_K1YK24PP	WGS	Tumor	NA	PBTA
+BS_VKJTSWGG	PT_5752JPCK	Targeted Sequencing	Tumor	NA	DGD
+BS_VKPV2XKV	PT_Q7VXYJQ4	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VM548G8F	PT_C6NDFST5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VNGJXP8A	PT_2ZFBQV7A	Targeted Sequencing	Tumor	NA	DGD
+BS_VNWG6GV4	PT_GG0D31DC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VP1W70ZV	PT_548918FZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VP9Q5YVN	PT_4JG5KWE8	Targeted Sequencing	Tumor	NA	DGD
+BS_VPB2HYTX	PT_2F6M5Z1E	Targeted Sequencing	Tumor	NA	DGD
+BS_VPJ6WCQF	PT_TP6GS00H	Targeted Sequencing	Tumor	NA	DGD
+BS_VPK8HKGV	PT_BXXZE0CQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VQA90X2A	PT_G65ZS4RM	Targeted Sequencing	Tumor	NA	DGD
+BS_VQJSP9JS	PT_HY664Q1B	Targeted Sequencing	Tumor	NA	DGD
+BS_VQTNJ40N	PT_W5PW7QVB	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_VR2E4K25	PT_T03AT4BJ	WGS	Tumor	NA	PBTA
+BS_VS8NWRB4	PT_27YHK492	Targeted Sequencing	Tumor	NA	DGD
+BS_VSFK563A	PT_2189ZWKX	Targeted Sequencing	Tumor	NA	DGD
+BS_VSS3RJ0Y	PT_D4PT2V4V	Targeted Sequencing	Tumor	NA	DGD
+BS_VSXD69H3	PT_XN1P30ZC	Targeted Sequencing	Tumor	NA	DGD
 BS_VV22THAM	PT_5S029SZM	WGS	Tumor	NA	PBTA
+BS_VV6ZP0KQ	PT_EQX0VT4F	Targeted Sequencing	Tumor	NA	DGD
+BS_VV9Y36EM	PT_TTQ3KXDH	Targeted Sequencing	Tumor	NA	DGD
+BS_VW095SRR	PT_3RTY57SF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VWH1ZSVY	PT_VA5BWB5M	Targeted Sequencing	Tumor	NA	DGD
+BS_VWSPMS59	PT_40NJ9ZXN	Targeted Sequencing	Tumor	NA	DGD
 BS_VXAXJ87Y	PT_Q5S82AA3	WGS	Tumor	NA	PBTA
+BS_VXE04S6C	PT_RZN44FHP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VXQSQP29	PT_WJCD2NS0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_VY8GH1BX	PT_TH18S0JQ	Targeted Sequencing	Tumor	NA	DGD
+BS_VYMVSK60	PT_XC15JMBJ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_W005KCS2	PT_40X4TBVD	WGS	Tumor	NA	PBTA
+BS_W10NP14A	PT_XATX07ZC	Targeted Sequencing	Tumor	NA	DGD
+BS_W13Y5Q7M	PT_D2K2S59T	Targeted Sequencing	Tumor	NA	DGD
+BS_W1AB5C54	PT_XX68XJMH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W1AKV5VN	PT_84211MPY	Targeted Sequencing	Tumor	NA	DGD
+BS_W1EMBRBQ	PT_PMFS3A49	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W1KD76HS	PT_1TQA3ZS2	Targeted Sequencing	Tumor	NA	DGD
+BS_W2DMN1QX	PT_AZQ230WT	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_W2EFWR50	PT_T0MRCE9A	WGS	Tumor	NA	PBTA
 BS_W3GDJ7WA	PT_EDG0Q7P4	WGS	Tumor	NA	PBTA
+BS_W3MQ9WS8	PT_BSR2P67X	Targeted Sequencing	Tumor	NA	DGD
+BS_W434VYPN	PT_3T3VGWC6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W4FSG0NE	PT_28W2R8EF	Targeted Sequencing	Tumor	NA	DGD
+BS_W4K462V7	PT_H0Q5FCYW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W4ZSWT4H	PT_YANM4078	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W6KTNJBM	PT_YYKHGYV8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W6PEC47S	PT_BXXZE0CQ	Targeted Sequencing	Tumor	NA	DGD
 BS_W6PXPK9Q	PT_NXX0M835	WGS	Tumor	NA	PBTA
+BS_W726MXGY	PT_Y2JCWXEY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W8W4213F	PT_S4YNE17X	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_W9N759KV	PT_HFQNKP5X	Targeted Sequencing	Tumor	NA	DGD
+BS_WAH4KKQ5	PT_HGWCJDHV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WB015379	PT_401GQ0VV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WC096WYV	PT_XDV8W16W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WCFGW07E	PT_ZZRBX5JT	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WCFW3RZK	PT_9BZETM0M	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WD253JB2	PT_JPFR0046	Targeted Sequencing	Tumor	NA	DGD
+BS_WDC88K6G	PT_1352J18C	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WDKXG0VV	PT_JPFR0046	Targeted Sequencing	Tumor	NA	DGD
+BS_WF6XD83K	PT_4E3H4SBP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WGC1DZYK	PT_517M9521	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WGXZ09AD	PT_8CHBTY1V	Targeted Sequencing	Tumor	NA	DGD
+BS_WHAAS7Z9	PT_Z35DMGNV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WHBBXSCJ	PT_KJ4PGWSS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WHNYFSKJ	PT_WEY5N1C5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WJK2SFX9	PT_QEP13FH4	Targeted Sequencing	Tumor	NA	DGD
+BS_WKD7S669	PT_HAK6TYRC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WKFND8VV	PT_E7VA6E07	Targeted Sequencing	Tumor	NA	DGD
+BS_WM87398M	PT_44FPNNS3	Targeted Sequencing	Tumor	NA	DGD
+BS_WMKJQKCQ	PT_EJA9RQXE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WNHYRMRE	PT_M4T6FSB7	Targeted Sequencing	Tumor	NA	DGD
+BS_WP3P7YVH	PT_BDPH0Z9G	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WP4ZQCRP	PT_NME1D79F	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_WP9890AN	PT_R4T1V1K4	WGS	Tumor	NA	PBTA
 BS_WPDSG5HR	PT_KJKY2JTZ	WGS	Tumor	NA	PBTA
+BS_WQAF0JHK	PT_1FP0ZWQB	Targeted Sequencing	Tumor	NA	DGD
+BS_WQMRXSVF	PT_F2B6E7GY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WQN6CS9Q	PT_NF6R6YHR	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WQWYBZ6V	PT_1JP2ANQK	Targeted Sequencing	Tumor	NA	DGD
+BS_WR416T9M	PT_GRNZAWM0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WS10S4PM	PT_0BR64M1A	Targeted Sequencing	Tumor	NA	DGD
+BS_WSGA8ZYV	PT_ZG4J0EK0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WTJ6B553	PT_BDPH0Z9G	Targeted Sequencing	Tumor	NA	DGD
+BS_WV4HS1D1	PT_EN67STXE	Targeted Sequencing	Tumor	NA	DGD
+BS_WV7R85TW	PT_7GSP7K3N	Targeted Sequencing	Tumor	NA	DGD
+BS_WVE68QCW	PT_2HWA1TA9	Targeted Sequencing	Tumor	NA	DGD
 BS_WX0BJEC6	PT_EN2RN5Y1	WGS	Tumor	NA	PBTA
+BS_WX4SB77F	PT_FMDSEFXH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WY0APTGQ	PT_BHPBJNCP	Targeted Sequencing	Tumor	NA	DGD
+BS_WZG6Y476	PT_B880VBNQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WZKAFZ1T	PT_A93QFD2B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_WZNC4625	PT_W5Z2VB5Z	Targeted Sequencing	Tumor	NA	DGD
+BS_WZQNFJCT	PT_XWVQW6JX	Targeted Sequencing	Tumor	NA	DGD
 BS_X0RWHXRX	PT_JEW5HG4W	WGS	Tumor	NA	PBTA
+BS_X0Z9XZKJ	PT_G0X1JBBP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_X1DWHYPJ	PT_82MX6J77	Targeted Sequencing	Tumor	NA	DGD
+BS_X1V23Z60	PT_PTRZXJMM	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_X1Y64MYT	PT_CHHBDNNJ	Targeted Sequencing	Tumor	NA	DGD
+BS_X2GCG78F	PT_D6AJHDST	Targeted Sequencing	Tumor	NA	DGD
+BS_X3B9SRQJ	PT_TFCNV42Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_X5642RX5	PT_0AGB3GAN	Targeted Sequencing	Tumor	NA	DGD
 BS_X586X4VM	PT_2BTC5TEN	WGS	Tumor	NA	PBTA
+BS_X605CM9Q	PT_NME1D79F	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_X60TW29C	PT_91PDAFH0	Targeted Sequencing	Tumor	NA	DGD
+BS_X6Q1VKBP	PT_CJ1M7YTY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_X71793RC	PT_G9GCH1AY	Targeted Sequencing	Tumor	NA	DGD
+BS_X87EYPPC	PT_448FAWFM	Targeted Sequencing	Tumor	NA	DGD
+BS_X8ACJ6M6	PT_V4MF99XB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XAG04XJ6	PT_A8YMD5T6	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_XAGE6DAG	PT_4RJ2EATN	WGS	Tumor	NA	PBTA
+BS_XBQDMMB3	PT_QHJSYTWJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XD20PN3M	PT_9JA20YPN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XDJ2X0BW	PT_G8NZAPDQ	Targeted Sequencing	Tumor	NA	DGD
+BS_XEEXF9TQ	PT_XZGWKXC5	Targeted Sequencing	Tumor	NA	DGD
+BS_XFA9ENRK	PT_9P7P6YAQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XFH8MPJ0	PT_B880VBNQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XG3QY6PP	PT_9BZETM0M	Targeted Sequencing	Tumor	NA	DGD
+BS_XGH76HBE	PT_TC6A6TX7	Targeted Sequencing	Tumor	NA	DGD
 BS_XH4QH13B	PT_H9QTP1JF	WGS	Tumor	NA	PBTA
+BS_XH8RH1XM	PT_7GSP7K3N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XHXRM8YS	PT_Y9JGD26R	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XJB5WPW3	PT_BB6587KA	Targeted Sequencing	Tumor	NA	DGD
+BS_XJHR3BVR	PT_PTTBTPS6	Targeted Sequencing	Tumor	NA	DGD
+BS_XK1KYHH4	PT_48WWMAAG	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_XKBT2G20	PT_440E1XW5	WGS	Tumor	NA	PBTA
+BS_XM5AHENP	PT_W5JZPWFS	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XMADRSG8	PT_8KF6YSTW	Targeted Sequencing	Tumor	NA	DGD
 BS_XMGE3HS2	PT_4W0BP7F3	WGS	Tumor	NA	PBTA
+BS_XMMXNT9K	PT_NTVQKQAV	Targeted Sequencing	Tumor	NA	DGD
+BS_XMQJ9WXZ	PT_Z6F9Y2MZ	Targeted Sequencing	Tumor	NA	DGD
+BS_XNJ29A92	PT_ARBPVCGH	Targeted Sequencing	Tumor	NA	DGD
+BS_XNRRKCCW	PT_PXEFP56B	Targeted Sequencing	Tumor	NA	DGD
 BS_XNYQS1WG	PT_G16VK7FR	WGS	Tumor	NA	PBTA
+BS_XP9F31ED	PT_101VYN5T	Targeted Sequencing	Tumor	NA	DGD
+BS_XPHHQH0E	PT_EH3PVS4D	Targeted Sequencing	Tumor	NA	DGD
+BS_XQ1XS1YD	PT_6GGV7Q84	Targeted Sequencing	Tumor	NA	DGD
+BS_XQ415YA0	PT_JXSTA5HB	Targeted Sequencing	Tumor	NA	DGD
+BS_XQASH9X8	PT_HMK5D470	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_XQF18WZP	PT_RE6AXQM1	WGS	Tumor	NA	PBTA
+BS_XQT6SBYV	PT_9PDE9KSB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XR6727XA	PT_NY5TVQT9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XRWHMA2C	PT_XCA58RC8	Targeted Sequencing	Tumor	NA	DGD
+BS_XSPB2XTH	PT_3BCCR1WZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XTKSCGA9	PT_G65ZS4RM	Targeted Sequencing	Tumor	NA	DGD
+BS_XTY1GAQ2	PT_WPQF0B3M	Targeted Sequencing	Tumor	NA	DGD
+BS_XTZQXY8E	PT_Y9JGD26R	Targeted Sequencing	Tumor	NA	DGD
+BS_XV40PE3Q	PT_V5PCYAFJ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XVMYD065	PT_SRZ6S76Y	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XVWAJ1HC	PT_DMHFS0HX	Targeted Sequencing	Tumor	NA	DGD
+BS_XXQASRDZ	PT_XJSZWCQG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XXRDAN4R	PT_BM2HARTG	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_XY8Y6RMW	PT_D9NTSYSC	Targeted Sequencing	Tumor	NA	DGD
+BS_Y08D8NDH	PT_3TN9R00B	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y0DRFXMP	PT_77QDW95T	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y0R2M7K6	PT_EE2E1AXD	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y1BE8YST	PT_P1F0AHMT	Targeted Sequencing	Tumor	NA	DGD
+BS_Y1E5EQY9	PT_401GQ0VV	Targeted Sequencing	Tumor	NA	DGD
+BS_Y1SRJ229	PT_0E8P5QX8	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y2436YCZ	PT_FDQHEKJB	Targeted Sequencing	Tumor	NA	DGD
+BS_Y28EM001	PT_4SD4YXPR	Targeted Sequencing	Tumor	NA	DGD
+BS_Y2F7EE4K	PT_XQ001FC5	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y2KBZN1Q	PT_CPZ0A4WC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y2RRRZVB	PT_V5YXSK76	Targeted Sequencing	Tumor	NA	DGD
+BS_Y3W5D0GK	PT_PFFQ4M1W	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y533Z93R	PT_KBBR6MNP	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Y5F08V7Z	PT_M9KRWVTD	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Y5GZPFZ8	PT_MPCV62DT	WGS	Tumor	NA	PBTA
 BS_Y5XANBYF	PT_WSDHPC8C	WGS	Tumor	NA	PBTA
+BS_Y6RJAFKM	PT_FE0GF07R	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Y7CT08T2	PT_7MZRW1DH	WGS	Tumor	NA	PBTA
+BS_Y7RCQ4AX	PT_XA8ASFJK	Targeted Sequencing	Tumor	NA	DGD
+BS_Y7ZZQXGK	PT_EJ8TKG2Z	Targeted Sequencing	Tumor	NA	DGD
+BS_Y847Q9KB	PT_B5HCHR89	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Y87JJ47R	PT_77J37DEW	WGS	Tumor	NA	PBTA
+BS_Y8SJAKNH	PT_FXPXV0CZ	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Y9Q9RPNZ	PT_440E1XW5	WGS	Tumor	NA	PBTA
+BS_Y9TD08BR	PT_AAZ38138	Targeted Sequencing	Tumor	NA	DGD
+BS_YAFFFX03	PT_VBQ43F3K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YBXM34XV	PT_K0YFKQ6V	Targeted Sequencing	Tumor	NA	DGD
+BS_YC7NA8MS	PT_VTG1S395	Targeted Sequencing	Tumor	NA	DGD
+BS_YCTF7WP4	PT_AR55452N	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YDEBSX12	PT_B5TJ8Q6D	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YDGJ114H	PT_FXD4BKRF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YDZ4J968	PT_9MT2G8NE	Targeted Sequencing	Tumor	NA	DGD
+BS_YECQ1JDN	PT_KHQGBBDN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YF600H4D	PT_FMDSEFXH	Targeted Sequencing	Tumor	NA	DGD
+BS_YFC95H8P	PT_J1S28HCE	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YFDRCQJ2	PT_WWR7NB5Q	Targeted Sequencing	Tumor	NA	DGD
+BS_YFJ8Z38V	PT_82Y8F33E	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YGRKHP32	PT_XBSCF601	Targeted Sequencing	Tumor	NA	DGD
+BS_YHEAB6AA	PT_HQSVFBPH	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YHM819CA	PT_HVX28JYD	Targeted Sequencing	Tumor	NA	DGD
+BS_YHT49AYM	PT_D6W7HYAS	Targeted Sequencing	Tumor	NA	DGD
 BS_YHVCFBXZ	PT_4347ZBEX	WGS	Tumor	NA	PBTA
+BS_YJXZJ328	PT_MQJJV7NZ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YJYDPT1D	PT_W3Z7GYTA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YKEK4YWT	PT_JXSTA5HB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YKFRC2Z1	PT_NTVQKQAV	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YKMMSQJP	PT_XX68XJMH	Targeted Sequencing	Tumor	NA	DGD
+BS_YKTEH2TX	PT_0J07HTRF	Targeted Sequencing	Tumor	NA	DGD
+BS_YMPSTN5Z	PT_D6AJHDST	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YN3KRPWP	PT_GG0D31DC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YNQ1KW43	PT_8CHBTY1V	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YNRTCMYD	PT_QAX38GM7	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YP080MN8	PT_23G70TEN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YPFQ9ETM	PT_AJXE05XM	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_YPN9H9KK	PT_C2D4JXS1	WGS	Tumor	NA	PBTA
+BS_YQ2455PK	PT_DBWWKJ86	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YQG40Y6D	PT_NGGRVR71	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YQGDF81P	PT_E3ADF4ZB	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YR24TZJG	PT_ZZTQQVCT	Targeted Sequencing	Tumor	NA	DGD
+BS_YRMYYY6Q	PT_MVSWHXSR	Targeted Sequencing	Tumor	NA	DGD
+BS_YRP28J6X	PT_7H8X9M9E	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YRQ5TTQZ	PT_1JP2ANQK	Targeted Sequencing	Tumor	NA	DGD
+BS_YSKS0XRF	PT_R6JT89KD	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_YTE4SYEN	PT_FRZQJNW9	WGS	Tumor	NA	PBTA
 BS_YTGVCQ6W	PT_MQYPS0W1	WGS	Tumor	NA	PBTA
 BS_YTTPJ4RX	PT_41BCPB7R	WGS	Tumor	NA	PBTA
+BS_YTYSPH4Q	PT_TSZV8DK6	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YVEXCE4P	PT_28W2R8EF	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YW8F09JT	PT_JK8TXGM0	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YXAAM9J4	PT_ZSHEMD0K	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_YY1EQ16F	PT_QVCXSYEJ	Targeted Sequencing	Tumor	NA	DGD
+BS_YY5E3YEE	PT_14Z5353Q	Targeted Sequencing	Tumor	NA	DGD
+BS_YYE74XA4	PT_BB6587KA	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_YZFQG0FH	PT_VJZN69T9	WGS	Tumor	NA	PBTA
+BS_YZHNMD7J	PT_2H3ZMQKY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Z14Z9P0G	PT_MXVNR2GC	Targeted Sequencing	Tumor	NA	DGD
+BS_Z1XGT75P	PT_WJY6K9H9	Targeted Sequencing	Tumor	NA	DGD
+BS_Z2D5R0TJ	PT_MXASQ2GW	Targeted Sequencing	Tumor	NA	DGD
+BS_Z2SMZ2GX	PT_E2TAE6HT	Targeted Sequencing	Tumor	NA	DGD
+BS_Z3EQR5G1	PT_F1MDWB5W	Targeted Sequencing	Tumor	NA	DGD
+BS_Z3WY3R5N	PT_D9NTSYSC	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Z5YJ29YM	PT_8FP2770K	Targeted Sequencing	Tumor	NA	DGD
 BS_Z6J98BXC	PT_1H42W9GW	WGS	Tumor	NA	PBTA
+BS_Z7GP088B	PT_B5HCHR89	Targeted Sequencing	Tumor	NA	DGD
+BS_Z7PFYR8F	PT_JBCAXNK2	Targeted Sequencing	Tumor	NA	DGD
+BS_Z7Y12BZC	PT_6WZ8RVRQ	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Z801DB4E	PT_8EX2R1RB	Targeted Sequencing	Tumor	NA	DGD
+BS_Z810J1CB	PT_3MNY9BRY	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_Z8NSK04Z	PT_865QGR0X	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_Z98YME53	PT_XETT8T7M	WGS	Tumor	NA	PBTA
 BS_Z9DSJRTP	PT_8ED5MJR2	WGS	Tumor	NA	PBTA
 BS_Z9F5KQX1	PT_67R1AF5R	WGS	Tumor	NA	PBTA
 BS_Z9WZWFDB	PT_0JEBFP0E	WGS	Tumor	NA	PBTA
+BS_ZAF8SF66	PT_SGT44Z3C	Targeted Sequencing	Tumor	NA	DGD
 BS_ZAGSN0JY	PT_3D74J8RZ	WGS	Tumor	NA	PBTA
+BS_ZCNRWXQ0	PT_WFQNVJ4Z	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZDFZZCHT	PT_G7YHHH4J	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_ZEQCS2WN	PT_3AWKWXEV	WGS	Tumor	NA	PBTA
+BS_ZGN9EYS6	PT_JJKK6YFQ	Targeted Sequencing	Tumor	NA	DGD
+BS_ZKGXVT4C	PT_BVA0H9T9	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZM1SF5T1	PT_GVYEJKXD	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_ZMP8QPX4	PT_X5AEX1N4	WGS	Tumor	NA	PBTA
+BS_ZNB9GZMH	PT_GDZXK2AG	Targeted Sequencing	Tumor	NA	DGD
+BS_ZNC3356D	PT_HQSVFBPH	Targeted Sequencing	Tumor	NA	DGD
+BS_ZP5HVXXJ	PT_4E9H2BG6	Targeted Sequencing	Tumor	NA	DGD
+BS_ZP6JNHT3	PT_59TC9JX2	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZPCX9PC7	PT_TB8HPJBN	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZS93AZWP	PT_NY5TVQT9	Targeted Sequencing	Tumor	NA	DGD
+BS_ZSG28118	PT_TRMYF97N	Targeted Sequencing	Tumor	NA	DGD
+BS_ZSM0C0H7	PT_RQ58PVSA	Targeted Sequencing	Tumor	NA	DGD
+BS_ZT5PGWY5	PT_8NRH7W3N	Targeted Sequencing	Tumor	NA	DGD
+BS_ZTQ8F8VT	PT_XA98HG1C	Targeted Sequencing	Tumor	NA	DGD
+BS_ZTRXHX26	PT_PQZ6YE0F	Targeted Sequencing	Tumor	exome_capture	DGD
 BS_ZV9292J2	PT_MGZXMQD8	WGS	Tumor	NA	PBTA
 BS_ZW7VSY3Z	PT_SY6W6B0Z	WGS	Tumor	NA	PBTA
+BS_ZWYXY82Q	PT_9KT4AA7A	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZX1JVB77	PT_PM85EGY2	Targeted Sequencing	Tumor	NA	DGD
+BS_ZXARSHFT	PT_3HPZ05BA	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZXJ0P29Z	PT_K1YK24PP	Targeted Sequencing	Tumor	NA	DGD
 BS_ZXT2J35E	PT_S0Q27J13	WGS	Tumor	NA	PBTA
+BS_ZY7PH8XJ	PT_F91JTSZC	Targeted Sequencing	Tumor	NA	DGD
+BS_ZY82YKQK	PT_BC0B16HC	Targeted Sequencing	Tumor	NA	DGD
+BS_ZYETXESQ	PT_C9AY9KQF	Targeted Sequencing	Tumor	NA	DGD
 BS_ZYP3XG56	PT_440E1XW5	WGS	Tumor	NA	PBTA
+BS_ZYVCNAAB	PT_54W0PNYT	Targeted Sequencing	Tumor	NA	DGD
+BS_ZZ6XMSG0	PT_4ADZ9F53	Targeted Sequencing	Tumor	NA	DGD
+BS_ZZA88AMB	PT_8KF6YSTW	Targeted Sequencing	Tumor	exome_capture	DGD
+BS_ZZHJD255	PT_SY00NFNF	Targeted Sequencing	Tumor	NA	DGD
 TARGET-30-PARPUF-01A-01D	PARPUF	Targeted Sequencing	Tumor	NA	TARGET
 TARGET-30-PARTRP-01A-01D	PARTRP	Targeted Sequencing	Tumor	NA	TARGET
 TARGET-30-PARVIH-01A-01D	PARVIH	Targeted Sequencing	Tumor	NA	TARGET
