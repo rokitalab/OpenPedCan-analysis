@@ -477,7 +477,8 @@ biospecimen_ids <- snv_consensus_maf %>%
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
-                !is.na(pathology_diagnosis)) %>%
+                !is.na(pathology_diagnosis),
+                cohort != "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
