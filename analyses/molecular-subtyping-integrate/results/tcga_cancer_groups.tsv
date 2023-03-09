@@ -21,8 +21,8 @@ Head and Neck Squamous Cell Carcinoma	Metastatic	2
 Head and Neck Squamous Cell Carcinoma	Primary Tumor	498
 Hepatocellular Carcinoma	Primary Tumor	369
 Hepatocellular Carcinoma	Recurrence	3
-Low-grade glioma/astrocytoma	Primary Tumor	507
-Low-grade glioma/astrocytoma	Recurrence	18
+Low-grade glioma	Primary Tumor	507
+Low-grade glioma	Recurrence	18
 Lung Adenocarcinoma	Primary Tumor	531
 Lung Adenocarcinoma	Recurrence	2
 Lung Squamous Cell Carcinoma	Primary Tumor	499

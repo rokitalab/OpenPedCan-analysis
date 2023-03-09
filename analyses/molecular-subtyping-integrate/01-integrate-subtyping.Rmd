@@ -42,7 +42,6 @@ library(tidyverse)
 library(stringr)
 data_dir <- "../../data/"
 
-
 base_histology <- read_tsv(file.path(data_dir,"histologies-base.tsv"),
                            col_types = readr::cols(molecular_subtype = readr::col_character(),
                                                    short_histology = readr::col_character(),
@@ -137,7 +136,7 @@ histology <- base_histology %>%
 dup_ids<-histology$Kids_First_Biospecimen_ID[duplicated(histology$Kids_First_Biospecimen_ID)]
 
 histology[which(histology$Kids_First_Biospecimen_ID %in% dup_ids),] %>%
-    readr::write_tsv("results/duplicates_to_check.tsv")
+    readr::write_tsv("results/discrepancies_to_check.tsv")
 ```
 
 No duplicates
@@ -174,14 +173,13 @@ histology_cg <- histology %>%
     cancer_group == "Brainstem glioma- Diffuse intrinsic pontine glioma" ~ "Diffuse intrinsic pontine glioma",
     cancer_group == "Non-germinomatous germ cell tumor;Teratoma" ~ "Mixed germ cell tumor",
     cancer_group %in% c("Meningothelial meningioma", "Clear cell meningioma", "Atypical meningioma", "Anaplastic (malignant) meningioma") ~ "Meningioma",
-    cancer_group == "Supratentorial or Spinal Cord PNET" ~ "CNS Embryonal tumor",
-    cancer_group == "Embryonal tumor" ~ "Embryonal tumor",
+    cancer_group %in% c("Supratentorial or Spinal Cord PNET", "Embryonal tumor", "Embryonal Tumor", "CNS Embryonal tumor, NEC/NOS", "CNS with BCOR ITD") ~ "Embryonal tumor",
     cancer_group == "Embryonal Tumor with Multilayered Rosettes (ETMR)" ~ "Embryonal tumor with multilayer rosettes",
     cancer_group %in% c("Wilms Tumor", "Juvenile Xanthogranuloma", "Clear Cell Sarcoma of the Kidney") ~ stringr::str_to_sentence(cancer_group),
     cancer_group == "Ependymoma;Metastatic secondary tumors" ~ "Ependymoma",
     cancer_group %in% c("Acute Promyelocytic Leukemia", "Therapy-Related Acute Myeloid Leukemia") ~ "Acute Myeloid Leukemia",
     cancer_group %in% c("Mixed Lineage Leukemia") ~ "Acute Lymphoblastic Leukemia",
-    cancer_group == "Brain Lower Grade Glioma" ~ "Low-grade glioma/astrocytoma",
+    cancer_group == "Brain Lower Grade Glioma" ~ "Low-grade glioma",
     cancer_group == "congenital malignant brain tumor" ~ "High-grade glioma/astrocytoma",
     cancer_group == "Kidney Chromophobe" ~ "Chromophobe renal cell carcinoma",
     cancer_group == "Kidney Renal Clear Cell Carcinoma" ~ "Renal Clear Cell Carcinoma",
@@ -191,12 +189,14 @@ histology_cg <- histology %>%
     cancer_group %in% c("Adamantinomatous craniopharyngioma", "Gliomatosis cerebri") ~ str_to_title(cancer_group),
     #typo
     cancer_group == "Fibromixoid lesion" ~ "Fibromyxoid lesion",
-    cancer_group == "Glioneuronal tumor" ~ "Glial-neuronal tumor NOS",
     cancer_group == "Histiocytic Tumor" ~ str_to_sentence(cancer_group),
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
     cancer_group == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor",
-    short_histology == "LIHC" ~ "Hepatocellular Carcinoma",
+    cancer_group == "Glioneuronal tumor" ~ "Glial-neuronal tumor",
+    harmonized_diagnosis == "Neuroepithelial neoplasm with EWSR1--PLAG1 fusion" ~ "Glial-neuronal tumor",
     harmonized_diagnosis == "Rosai-dorfman" ~ "Rosai-Dorfman disease",
+    short_histology == "LIHC" ~ "Hepatocellular Carcinoma",
+    broad_histology == "Ependymal tumor" ~ "Ependymoma",
     TRUE ~ as.character(cancer_group))
   ) %>%
   # Additional update to clean up terms that we will use in plots
@@ -207,6 +207,7 @@ histology_cg <- histology %>%
   dplyr::mutate(cancer_group = str_extract(cancer_group, "[^(]*")) %>%
   # remove space at the ends
   dplyr::mutate(cancer_group = gsub(" $","",cancer_group))
+
 ```
 
 #### Write out table for `harmonized_diagnosis` -> `cancer_group` mapping
@@ -335,7 +336,7 @@ all_cg  <- ped_cancer_groups %>%
   select(cancer_group) %>%
   unique() 
 
-efo_mondo <- read_tsv(file.path(data_dir, "efo-mondo-map.tsv"))
+efo_mondo <- read_tsv(file.path(data_dir, "efo-mondo-map-previous-release.tsv"))
 
 efo_v11 <- all_cg %>%
   left_join(efo_mondo) %>%

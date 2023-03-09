@@ -44,16 +44,12 @@ Choroid plexus tumor	Initial CNS Tumor	3
 Chronic Myelogenous Leukemia	Primary Tumor	3
 CIC-DUX4 Sarcoma	Primary Tumor	2
 Clear cell sarcoma of the kidney	Primary Tumor	24
-CNS Embryonal tumor	Deceased	1
-CNS Embryonal tumor	Initial CNS Tumor	36
-CNS Embryonal tumor	Progressive	7
-CNS Embryonal tumor	Recurrence	13
+CNS Embryonal tumor	Initial CNS Tumor	27
+CNS Embryonal tumor	Progressive	4
+CNS Embryonal tumor	Recurrence	9
 CNS Melanoma	Initial CNS Tumor	2
 CNS neuroblastoma	Initial CNS Tumor	7
 CNS neuroblastoma	Recurrence	1
-CNS with BCOR ITD	Deceased	1
-CNS with BCOR ITD	Initial CNS Tumor	4
-CNS with BCOR ITD	Recurrence	3
 Craniopharyngioma	Initial CNS Tumor	77
 Craniopharyngioma	Progressive	19
 Craniopharyngioma	Recurrence	6
@@ -79,20 +75,21 @@ Dysembryoplastic neuroepithelial tumor	Primary Tumor	2
 Dysembryoplastic neuroepithelial tumor	Progressive	24
 Dysembryoplastic neuroepithelial tumor	Recurrence	9
 Dysgerminoma	Primary Tumor	1
-Embryonal tumor	Initial CNS Tumor	3
-Embryonal tumor	Progressive	3
-Embryonal tumor	Recurrence	3
+Embryonal tumor	Deceased	2
+Embryonal tumor	Initial CNS Tumor	16
+Embryonal tumor	Progressive	6
+Embryonal tumor	Recurrence	10
 Embryonal Tumor NOS	Primary Tumor	1
 Embryonal tumor with multilayer rosettes	Initial CNS Tumor	16
 Embryonal tumor with multilayer rosettes	Progressive	7
 Embryonal tumor with multilayer rosettes	Recurrence	2
-Ependymoma	Deceased	14
-Ependymoma	Initial CNS Tumor	148
+Ependymoma	Deceased	38
+Ependymoma	Initial CNS Tumor	474
 Ependymoma	Not Reported	2
-Ependymoma	Progressive	48
-Ependymoma	Recurrence	53
-Ependymoma	Second Malignancy	1
-Ependymoma	Unavailable	1
+Ependymoma	Progressive	130
+Ependymoma	Recurrence	127
+Ependymoma	Second Malignancy	3
+Ependymoma	Unavailable	2
 Epstein-Barr virus-related tumor	Initial CNS Tumor	2
 Ewing sarcoma	Deceased	16
 Ewing sarcoma	Initial CNS Tumor	46
@@ -191,8 +188,6 @@ Mixed germ cell tumor	Initial CNS Tumor	2
 Mixed germ cell tumor	Progressive	6
 Mixed germ cell tumor	Recurrence	2
 Myeloid Neoplasm	Primary Tumor	1
-Myxopapillary ependymoma	Initial CNS Tumor	38
-Myxopapillary ependymoma	Recurrence	3
 Neuroblastoma	Deceased	3
 Neuroblastoma	Initial CNS Tumor	15
 Neuroblastoma	Metastatic	2
@@ -226,14 +221,6 @@ Pineoblastoma	Progressive	7
 Pineoblastoma	Recurrence	3
 Pineocytoma	Initial CNS Tumor	2
 Pleomorphic xanthoastrocytoma	Initial CNS Tumor	2
-Posterior fossa group A	Deceased	19
-Posterior fossa group A	Initial CNS Tumor	153
-Posterior fossa group A	Progressive	56
-Posterior fossa group A	Recurrence	22
-Posterior fossa group A	Second Malignancy	2
-Posterior fossa group B	Initial CNS Tumor	23
-Posterior fossa group B	Progressive	1
-Posterior fossa subependymoma	Initial CNS Tumor	1
 Primary CNS lymphoma	Initial CNS Tumor	3
 Primary mediastinal large B cell lymphoma	Primary Tumor	2
 Retinoblastoma	Recurrence	2
@@ -254,16 +241,9 @@ Schwannoma	Primary Tumor	3
 Schwannoma	Progressive	11
 Schwannoma	Recurrence	7
 Schwannoma	Unavailable	2
-Spinal ependymoma	Initial CNS Tumor	19
-Spinal ependymoma	Progressive	3
 Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	19
 Subependymal Giant Cell Astrocytoma	Progressive	3
 Subependymal Giant Cell Astrocytoma	Second Malignancy	4
-Supratentorial ependymoma	Deceased	5
-Supratentorial ependymoma	Initial CNS Tumor	92
-Supratentorial ependymoma	Progressive	22
-Supratentorial ependymoma	Recurrence	49
-Supratentorial ependymoma	Unavailable	1
 T Acute Lymphoblastic Leukemia/Lymphoma	Primary Tumor	14
 T Acute Lymphoblastic Leukemia/Lymphoma	Recurrence	4
 T Acute Lymphoblastic Leukemia/Lymphoma	Second Malignancy	2

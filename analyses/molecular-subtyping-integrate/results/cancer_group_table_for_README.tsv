@@ -14,12 +14,13 @@ Atypical vascular lesion	NA
 Benign Vascular Neoplasm	NA
 Bone marrow cellularity	NA
 Bone marrow failure	NA
-Brain Lower Grade Glioma	Low-grade glioma/astrocytoma
+Brain Lower Grade Glioma	Low-grade glioma
 Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma
 Cholesterol granuloma	NA
 Chondroma	NA
 Chronic myeloid leukemia pathway	NA
 Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney
+CNS with BCOR ITD	Embryonal tumor
 Cranial fasciitis	NA
 Cyst	NA
 Dermoid cyst	NA
@@ -67,6 +68,7 @@ Myelodysplastic syndrome	NA
 Myofibroblastic tumor	Inflammatory Myofibroblastic Tumor
 Myofibroma	NA
 Myxoid spindle cell tumor	NA
+Myxopapillary ependymoma	Ependymoma
 Necrotizing myelopathy	NA
 Neuroblastic tumor	NA
 Neuroendocrine carcinoma	NA
@@ -84,18 +86,21 @@ Ovarian sertoli-leydig cell tumor	NA
 Pilomatricoma	NA
 Pleuropulmonary blastoma	NA
 Portions of white matter with a few reactive astrocytes and rare cells with mild atypia	NA
-Posterior fossa group A (PFA) ependymoma	Posterior fossa group A
-Posterior fossa group B (PFB) ependymoma	Posterior fossa group B
+Posterior fossa group A (PFA) ependymoma	Ependymoma
+Posterior fossa group B (PFB) ependymoma	Ependymoma
+Posterior fossa subependymoma	Ependymoma
 Primary myelofibrosis	NA
 Reactive connective tissue	NA
 Retinal neuroblastoma	NA
 Rosai-dorfman	Rosai-Dorfman disease
 Shwachman-diamond syndrome	NA
 Solid pseudopapillary neoplasm of the pancreas	NA
+Spinal ependymoma	Ependymoma
 Spindle cell neoplasm	NA
 Spinocerebellar ataxia type 7	NA
 Subependymal Giant Cell Astrocytoma (SEGA)	Subependymal Giant Cell Astrocytoma
-Supratentorial or Spinal Cord PNET	CNS Embryonal tumor
+Supratentorial ependymoma	Ependymoma
+Supratentorial or Spinal Cord PNET	Embryonal tumor
 Therapy-Related Acute Myeloid Leukemia	Acute Myeloid Leukemia
 Thrombocytopenia	NA
 Thrombocytosis	NA
