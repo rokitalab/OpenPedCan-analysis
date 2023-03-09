@@ -4,13 +4,11 @@
         "Brainstem glioma- Diffuse intrinsic pontine glioma"
     ],
     "gliomatosis_path_free_text_exact": [
-        "anaplastic gliomatosis cerebri (who grade 4)"
+        "anaplastic gliomatosis cerebri (who grade 4)",
+        "astroblastoma"
     ],
     "IHG_path_free_path_dx": [
         "infant type hemispheric glioma with ALK fusion"
-    ],
-    "IHG_cns_methylation_subclass": [
-        "IHG"
     ]
 }
 
