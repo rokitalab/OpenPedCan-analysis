@@ -17,7 +17,6 @@ results_dir <- file.path(
   "analyses",
   "molecular-subtyping-HGG",
   "results")
-
 ```
 
 
@@ -34,7 +33,7 @@ tp53_status <- read_tsv(file.path(
 tp53_status$Kids_First_Biospecimen_ID_RNA <- as.character(tp53_status$Kids_First_Biospecimen_ID_RNA)
 
 
-hgg_subtypes <- read_tsv(file.path(results_dir,"HGG_molecular_subtype.tsv")) 
+hgg_subtypes <- read_tsv(file.path(results_dir,"HGG_cleaned_all_table.tsv")) 
 hgg_subtypes$Kids_First_Biospecimen_ID_RNA <- as.character(hgg_subtypes$Kids_First_Biospecimen_ID_RNA)
 
 ```
@@ -61,6 +60,6 @@ hgg_subtypes <- hgg_subtypes %>%
     TRUE ~ molecular_subtype
   )) %>%
   arrange(Kids_First_Participant_ID, sample_id) %>%
-  write_tsv(file.path(results_dir,"HGG_molecular_subtype.tsv"))
+  write_tsv(file.path(results_dir,"HGG_molecular_subtype_tp53.tsv"))
 
 ```

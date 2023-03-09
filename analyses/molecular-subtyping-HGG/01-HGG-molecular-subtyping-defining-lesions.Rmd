@@ -43,6 +43,12 @@ lgat_subset_dir <- file.path(root_dir,
                         "molecular-subtyping-LGAT",
                         "lgat-subset")
 
+# Get lgat subset folder from the module in master
+hgg_subset_dir <- file.path(root_dir, 
+                        "analyses",
+                        "molecular-subtyping-HGG",
+                        "hgg-subset")
+
 # File path to results directory
 results_dir <-
   file.path(root_dir, "analyses", "molecular-subtyping-HGG", "results")
@@ -55,30 +61,57 @@ if (!dir.exists(results_dir)) {
 metadata <-
   readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"), 
                   guess_max = 100000) %>%
-  dplyr::filter(sample_type == "Tumor") %>%
-  dplyr::filter(cohort == c("PBTA", "DGD"))
+  dplyr::filter(cohort %in% c("PBTA", "DGD"),
+                !is.na(pathology_diagnosis))
 
 # File from 00-LGAT-select-pathology-dx that is used for inclusion/exclusion
 path_dx_list_lgat <- jsonlite::fromJSON(
   file.path(lgat_subset_dir, 
             "lgat_subtyping_path_dx_strings.json")
 )
+
+
+# Read in the JSON file that contains the strings we'll use to include or
+# exclude samples for subtyping - see 00-HGG-select-pathology-dx
+path_dx_list <- jsonlite::fromJSON(
+  file.path(hgg_subset_dir,
+            "hgg_subtyping_path_dx_strings.json")
+)
+
+#### Filter metadata -----------------------------------------------------------
+
+# Filter metadata based on pathology diagnosis fields and include samples that
+# should be classified as high-grade glioma based on defining lesions
+
+# Samples included on the basis of the pathology diagnosis fields
+hgg_only_meta <- metadata %>%
+  # Inclusion on the basis of CBTTC harmonized pathology diagnoses
+  filter(pathology_diagnosis %in% path_dx_list$exact_path_dx |
+         # Inclusion based on pathology free text diagnosis
+         pathology_free_text_diagnosis == path_dx_list$gliomatosis_path_free_text_exact |
+         # Inclusion based on pathology free text diagnosis for IHG
+         pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx)
+
+dna_bsids <- hgg_only_meta %>%
+  filter(!is.na(pathology_diagnosis),
+                (experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing") & is.na(RNA_library))) %>%
+  pull(Kids_First_Biospecimen_ID)
+
 ```
 
 # Prepare Data
 
 ```{r}
-# Get LGAT tumor samples on the basis of pathology diagnosis
-lgat_specimens <- metadata %>%
-  filter(str_detect(str_to_lower(pathology_diagnosis),  # Inclusion criteria
+# Since LGG and EPN can also have H3 mutations, exclude them
+lgg_epn_specimens <- metadata %>%
+  filter(pathology_diagnosis == "Ependymoma" | str_detect(str_to_lower(pathology_diagnosis),  
+                    # Inclusion criteria
                     paste0(path_dx_list_lgat$include_path_dx, collapse = "|")),
          # Exclusion criteria
          str_detect(str_to_lower(pathology_diagnosis),
                     paste0(path_dx_list_lgat$exclude_path_dx, collapse = "|"),
                     negate = TRUE),
-         # Tumors
-         sample_type == "Tumor",
-         composition == "Solid Tissue") %>%
+         !is.na(pathology_diagnosis)) %>%
   pull(Kids_First_Biospecimen_ID)
 ```
 
@@ -104,14 +137,14 @@ snv_dgd_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
                                    select = keep_cols,
                                    data.table = FALSE) %>%
-  dplyr::filter(!Tumor_Sample_Barcode %in% lgat_specimens) 
+  dplyr::filter(!Tumor_Sample_Barcode %in% lgg_epn_specimens) 
 # Add DGD MAF to consensus MAF
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
                                    select = keep_cols,
                                    data.table = FALSE) %>%
-  dplyr::filter(!Tumor_Sample_Barcode %in% lgat_specimens) %>% 
-  dplyr::bind_rows(snv_dgd_maf)
+  dplyr::bind_rows(snv_dgd_maf) %>%
+  dplyr::filter(!Tumor_Sample_Barcode %in% lgg_epn_specimens)
 
 ```
 
@@ -127,22 +160,22 @@ snv_lesions_df <- snv_consensus_hotspot_maf  %>%
                                      "p.G35V")) %>%
   dplyr::select(Tumor_Sample_Barcode, Hugo_Symbol, HGVSp_Short) %>%
   dplyr::mutate(
-    "H3-3A.K28M" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
+    `H3F3A_H3-3A.K28M` = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.K28M" ~ "Yes",
                                   TRUE ~ "No"),
-    H3C2.K28M = dplyr::case_when(
+    HIST1H3B_H3C2.K28M = dplyr::case_when(
       Hugo_Symbol == "H3C2" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    H3C3.K28M = dplyr::case_when(
+    HIST1H3C_H3C3.K28M = dplyr::case_when(
       Hugo_Symbol == "H3C3" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    H3C14.K28M = dplyr::case_when(
+    HIST2H3C_H3C14.K28M = dplyr::case_when(
       Hugo_Symbol == "H3C14" & HGVSp_Short == "p.K28M" ~ "Yes",
       TRUE ~ "No"),
-    "H3-3A.G35R" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
+    `H3F3A_H3-3A.G35R` = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.G35R" ~ "Yes",
                                   TRUE ~ "No"),
-    "H3-3A.G35V" = dplyr::case_when(Hugo_Symbol == "H3-3A" &
+    `H3F3A_H3-3A.G35V` = dplyr::case_when(Hugo_Symbol == "H3-3A" &
                                     HGVSp_Short == "p.G35V" ~ "Yes",
                                   TRUE ~ "No")
   ) %>%
@@ -155,8 +188,7 @@ snv_lesions_df <- snv_consensus_hotspot_maf  %>%
 snv_lesions_df <- snv_lesions_df %>%
   dplyr::bind_rows(
     data.frame(
-      Tumor_Sample_Barcode = setdiff(unique(snv_consensus_hotspot_maf$Tumor_Sample_Barcode),
-                                     snv_lesions_df$Tumor_Sample_Barcode)
+      Tumor_Sample_Barcode = setdiff(dna_bsids, snv_lesions_df$Tumor_Sample_Barcode)
     )
   ) %>%
   dplyr::mutate_all(function(x) tidyr::replace_na(x, "No"))
@@ -169,16 +201,26 @@ We'll use this to create subset files in the next step.
 snv_lesions_df <- snv_lesions_df %>%
   dplyr::mutate(
     defining_lesion = dplyr::case_when(
-      "H3-3A.K28M" == "Yes" ~ TRUE,
-      H3C2.K28M == "Yes" ~ TRUE,
-      H3C3.K28M == "Yes" ~ TRUE,
-      H3C14.K28M == "Yes" ~ TRUE,
-      "H3-3A.G35R" == "Yes" ~ TRUE,
-      "H3-3A.G35V" == "Yes" ~ TRUE,
+      `H3F3A_H3-3A.K28M` == "Yes" ~ TRUE,
+      HIST1H3B_H3C2.K28M == "Yes" ~ TRUE,
+      HIST1H3C_H3C3.K28M == "Yes" ~ TRUE,
+      HIST2H3C_H3C14.K28M == "Yes" ~ TRUE,
+      `H3F3A_H3-3A.G35R` == "Yes" ~ TRUE,
+      `H3F3A_H3-3A.G35V` == "Yes" ~ TRUE,
       TRUE ~ FALSE
     )
   )
 ```
+
+## What are the diagnoses of the samples which have defining lesions but are not HGG, LGG, or EPN? Make sure to add these back at the end!
+
+```{r non HGG samples with defining lesions}
+metadata %>%
+  filter(Kids_First_Biospecimen_ID %in% setdiff(snv_lesions_df$Tumor_Sample_Barcode, dna_bsids)) %>%
+  select(Kids_First_Biospecimen_ID, sample_id, pathology_diagnosis)
+
+```
+
 
 Add other identifiers and sort.
 
@@ -191,6 +233,7 @@ snv_lesions_df <- metadata %>%
                     by = c("Kids_First_Biospecimen_ID" = "Tumor_Sample_Barcode")) %>%
   dplyr::arrange(Kids_First_Participant_ID, sample_id)
 ```
+
 
 
 ## Save final table of results
