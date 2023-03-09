@@ -38,7 +38,7 @@ This above  script is designed to change to this directory to run, so it should 
 
     A new column named `subgroup` is added to the input table and saved in `results/EPN_all_data_withsubgroup.tsv`.
 
-    This script prioritizes features of subgroups first and does not assign those samples to any other subgroups. For example, samples where `disease_group == 'spinal'` are prioritized for the `EPN, SP` or `EPN, SP-MYCN` subgroup, and are not assigned to any other groups. Samples are tested for assignment to subgroups in the following prioritized order shown below. Subgroups inferred from methylation classification are only included where subgroups are determined (i.e., EPN, To be classified).
+    This script prioritizes features of subgroups first and does not assign those samples to any other subgroups. For example, samples where `disease_group == 'spinal'` are prioritized for the `EPN, SP` or `EPN, SP-MYCN` subgroup, and are not assigned to any other groups. Samples are tested for assignment to subgroups in the following prioritized order shown below. Subgroups inferred from methylation classification are only included where subgroups are not determined (i.e., EPN, To be classified).
     1) EPN, SP-MYCN
     2) EPN, SP
     3) EPN, ST ZFTA
