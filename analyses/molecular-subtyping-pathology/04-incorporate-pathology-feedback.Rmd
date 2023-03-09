@@ -314,7 +314,7 @@ compiled_df %>%
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-158" ~ "High-grade glioma/astrocytoma, H3 G35-mutant",
+      sample_id == "7316-158" ~ "Diffuse hemispheric glioma, H3 G35-mutant",
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
@@ -326,7 +326,7 @@ compiled_df <- compiled_df %>%
       TRUE ~ broad_histology
     ),
     molecular_subtype = case_when(
-      sample_id == "7316-158" ~ "HGG, H3 G35",
+      sample_id == "7316-158" ~ "DHG, H3 G35",
       TRUE ~ molecular_subtype
     ),
     Notes = case_when(
@@ -397,7 +397,7 @@ compiled_df %>%
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-1105" ~ "High-grade glioma/astrocytoma, H3 G35-mutant",
+      sample_id == "7316-1105" ~ "Diffuse hemispheric glioma, H3 G35-mutant",
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
@@ -409,7 +409,7 @@ compiled_df <- compiled_df %>%
       TRUE ~ broad_histology
     ),
     molecular_subtype = case_when(
-      sample_id == "7316-1105" ~ "HGG, H3 G35",
+      sample_id == "7316-1105" ~ "DHG, H3 G35",
       TRUE ~ molecular_subtype
     ),
     Notes = case_when(sample_id == "7316-1105" ~ "Updated via OpenPBTA subtyping",
