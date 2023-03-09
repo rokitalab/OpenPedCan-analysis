@@ -125,7 +125,8 @@ histology <- base_histology %>%
                                                  TRUE ~ as.character(harmonized_diagnosis))) %>%
     dplyr::mutate(harmonized_diagnosis = case_when(molecular_subtype == "CNC" ~ "Central neurocytoma",
                                                    molecular_subtype == "EVN" ~ "Extraventricular neurocytoma",
-                                                   TRUE ~ as.character(harmonized_diagnosis)))
+                                                   TRUE ~ as.character(harmonized_diagnosis))) %>%
+  unique()
 ```
 
 
@@ -135,7 +136,8 @@ histology <- base_histology %>%
 ```{r}
 dup_ids<-histology$Kids_First_Biospecimen_ID[duplicated(histology$Kids_First_Biospecimen_ID)]
 
-histology[which(histology$Kids_First_Biospecimen_ID %in% dup_ids),]
+histology[which(histology$Kids_First_Biospecimen_ID %in% dup_ids),] %>%
+    readr::write_tsv("results/duplicates_to_check.tsv")
 ```
 
 No duplicates
