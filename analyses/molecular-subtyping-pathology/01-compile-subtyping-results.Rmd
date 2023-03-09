@@ -158,7 +158,7 @@ Results files from individual modules.
 cranio_results_file <- file.path(cranio_dir, results_dir, "CRANIO_molecular_subtype.tsv")
 ews_results_file <- file.path(ews_dir, results_dir, "EWS_results.tsv")
 epn_results_file <- file.path(epn_dir, results_dir, "EPN_all_data_withsubgroup.tsv")
-hgg_results_file <- file.path(hgg_dir, results_dir, "HGG_molecular_subtype.tsv")
+hgg_results_file <- file.path(hgg_dir, results_dir, "HGG_molecular_subtype_tp53.tsv")
 lgat_results_file <- file.path(lgat_dir, results_dir, "lgat_subtyping.tsv")
 mb_results_file <- file.path(mb_dir, results_dir, "MB_molecular_subtype.tsv")
 embryonal_results_file <- file.path(embryonal_dir, results_dir,
@@ -240,7 +240,7 @@ hgg_results_df <- bind_exp_strategies(hgg_results_df) %>%
   inner_join(select(histologies_df,join_cols),
              by = "Kids_First_Biospecimen_ID") %>%
   mutate(integrated_diagnosis = case_when(grepl("DMG, H3 K28", molecular_subtype) ~ "Diffuse midline glioma, H3 K28-mutant",
-                                          grepl("HGG, H3 G35", molecular_subtype) ~ "Diffuse hemispheric glioma, H3 G35-mutant",
+                                          grepl("DHG, H3 G35", molecular_subtype) ~ "Diffuse hemispheric glioma, H3 G35-mutant",
                                           grepl("HGG, H3 wildtype", molecular_subtype) ~ "High-grade glioma, IDH-wildtype and H3-wildtype",
                                           grepl("HGG, IDH", molecular_subtype) ~ "High-grade glioma, IDH-mutant",
                                           # account for IGH subtypes
@@ -258,8 +258,8 @@ hgg_results_df <- bind_exp_strategies(hgg_results_df) %>%
 
 ```
 
-### Handling LGAT
-Within LGAT, we will add integrated_diagnosis,broad_histology and short_histology for Ganglioglioma (GNG) and Subependymal Giant Cell Astrocytoma (SEGA) samples.
+### Handling LGG
+Within LGG, we will add integrated_diagnosis,broad_histology and short_histology for Ganglioglioma (GNG) and Subependymal Giant Cell Astrocytoma (SEGA) samples.
 For Glial neuronal tumors (GNT) will be updated these values using pathology_free_text_diagnosis in the next step.
 
 ```{r}
@@ -284,7 +284,6 @@ lgat_results_df <- bind_exp_strategies(lgat_results_df) %>%
     TRUE ~ "LGAT"),
   Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes)
   )
-
 ```
 
 ### Handling EPN 
@@ -301,6 +300,7 @@ epn_results_df <- bind_exp_strategies(epn_results_df) %>%
                                           molecular_subtype == "EPN, PF SE" ~ "Posterior fossa subependymoma",
                                           molecular_subtype == "EPN, ST ZFTA" ~ "Supratentorial ependymoma, ZFTA fusion-positive",
                                           molecular_subtype == "EPN, ST YAP1" ~ "Supratentorial ependymoma, YAP1 fusion-positive", 
+                                          molecular_subtype == "EPN, SP" ~ "Spinal ependymoma",
                                           molecular_subtype == "EPN, SP-MYCN" ~ "Spinal ependymoma, MYCN-amplified",
                                           molecular_subtype == "EPN, MPE" ~ "Myxopapillary ependymoma",
                                           TRUE~ NA_character_),
@@ -309,6 +309,11 @@ epn_results_df <- bind_exp_strategies(epn_results_df) %>%
          Notes = if_else(!is.na(integrated_diagnosis), "Updated via OpenPedCan subtyping", Notes)) %>%
   # we don't need all the columns
   select(names(embryonal_results_df))
+
+epn_results_df_subset <- epn_results_df %>%
+  select(molecular_subtype, molecular_subtype_methyl, integrated_diagnosis) %>%
+  unique()
+
 ```
 
 ### Handling MB
