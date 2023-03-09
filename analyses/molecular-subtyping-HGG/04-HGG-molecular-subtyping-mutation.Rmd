@@ -26,6 +26,7 @@ Rscript -e "rmarkdown::render('analyses/molecular-subtyping-HGG/04-HGG-molecular
 
 ```{r}
 `%>%` <- dplyr::`%>%`
+library(tidyverse)
 ```
 
 We'll take a similar approach to the [`tp53_nf1_score`](../tp53_nf1_score/) module and use functions from the [`snv-callers`](../snv-callers/) module.
@@ -64,6 +65,10 @@ snv_df <- readr::read_tsv(file.path(input_dir, "hgg_snv_maf.tsv.gz"))
 # Read in defining lesions file
 defining_lesions_df <- readr::read_tsv(file.path(results_dir,
                                                  "HGG_defining_lesions.tsv"))
+subset_bsid <- read_tsv(file.path(input_dir, "hgg_metadata.tsv")) %>%
+  filter(!is.na(pathology_diagnosis),
+                (experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing") & is.na(RNA_library))) %>%
+  pull(Kids_First_Biospecimen_ID)
 ```
 
 ## Output File
@@ -80,7 +85,7 @@ We'll summarize the contents of ([`AlexsLemonade/OpenPBTA-analysis#249`](https:/
 
 From [`@jharenza`](https://github.com/jharenza):
 
-> Any sample that harbors _H3F3A_ K28M, _H3F3A_ G35R/V, or _HIST1H3B_ K28M, if not classified as a high-grade glioma, should be, as this is a defining lesion. Eg: three former PNET tumors were re-classified as such.
+> Any sample that harbors _H3F3A_ (_H3-3A_) K28M, _H3F3A_ (_H3-3A_) G35R/V, or _HIST1H3B_ (_H3C2_) K28M, if not classified as a high-grade glioma, should be, as this is a defining lesion. Eg: three former PNET tumors were re-classified as such.
 
 Samples were examined for the presence or absence of these defining lesions in [`01-HGG-molecular-subtyping-defining-lesions`](./01-HGG-molecular-subtyping-defining-lesions.Rmd).
 Samples that have path diagnosis and path free text indicated in `00-HGG-select-pathology-dx.R` and with definine lesions were included in the analysis (see: [`02-HGG-molecular-subtyping-subset-files.R`](./02-HGG-molecular-subtyping-subset-files.R)).
@@ -120,7 +125,7 @@ idh_genes_of_interest <- c("IDH1", "TP53")
 
 ### H3.3 and IDH wildtype
 
-These tumors do not have _H3F3A_ or _IDH1_ mutations, but harbor _TP53_ and _TERT_ mutations.
+These tumors do not have _H3-3A_ or _IDH1_ mutations, but harbor _TP53_ and _TERT_ mutations.
 
 ```{r}
 wildtype_genes_of_interest <- c("H3-3A", "H3C2", "H3C3", "H3C14",
@@ -211,7 +216,7 @@ head(braf_snv_df, n = 10)
 
 Now that we've filtered the data, we'll get it into a form that's more amenable to presentation.
 First, let's include a column that contains all of the coding mutations of interest (excluding _TERT_).
-This will contain duplicated information -- e.g., _H3F3A_ will be present for tumors with _H3F3A_ K28M mutations -- but serve as a "sanity check."
+This will contain duplicated information -- e.g., _H3-3A_ will be present for tumors with _H3-3A_ K28M mutations -- but serve as a "sanity check."
 
 ```{r}
 coding_summary_df <- coding_snv_df %>% 
@@ -228,9 +233,6 @@ head(coding_summary_df, n = 10)
 Add tumors that had no mutations in the relevant genes into this `data.frame`.
 
 ```{r}
-# This will be all biospecimen IDs that were included in the HGG subset
-# SNV file
-subset_bsid <- unique(snv_df$Tumor_Sample_Barcode)
 # Add the 'missing' biospecimen IDs into the coding summary data.frame but
 # mark relevant_coding_mutations as "None"
 coding_summary_df <- coding_summary_df %>%
