@@ -392,8 +392,10 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "cnv-cnvkit.seg.gz")) %>%
   dplyr::pull(ID) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy %in% c("WGS", "WXS"),
-                !is.na(pathology_diagnosis)) %>%
+  dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
+                sample_type == "Tumor",
+                cohort !=  "DGD") %>%
+                #!is.na(pathology_diagnosis)) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
@@ -419,8 +421,10 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "cnv-controlfreec.tsv.gz"
   dplyr::pull(Kids_First_Biospecimen_ID) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy %in% c("WGS", "WXS"), 
-                !is.na(pathology_diagnosis)) %>%
+  dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
+                sample_type == "Tumor",
+                cohort !=  "DGD") %>%
+                #!is.na(pathology_diagnosis)) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
@@ -446,8 +450,9 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "cnv-gatk.seg.gz")) %>%
   dplyr::pull(BS_ID) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy %in% c("WGS"), 
-                !is.na(pathology_diagnosis)) %>%
+  dplyr::filter(experimental_strategy %in% c("WGS"),
+                sample_type == "Tumor") %>%
+                #!is.na(pathology_diagnosis)) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
@@ -477,7 +482,8 @@ biospecimen_ids <- snv_consensus_maf %>%
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
-                !is.na(pathology_diagnosis),
+                sample_type == "Tumor",
+                #!is.na(pathology_diagnosis),
                 cohort != "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
@@ -507,8 +513,9 @@ biospecimen_ids <- snv_dgd_maf %>%
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy == "Targeted Sequencing",
+                sample_type == "Tumor",
                 is.na(RNA_library),
-                !is.na(pathology_diagnosis), 
+                #!is.na(pathology_diagnosis), 
                 cohort == "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
@@ -560,7 +567,8 @@ biospecimen_ids <- data.table::fread(file.path(data_dir,
   dplyr::pull(Kids.First.Biospecimen.ID.Tumor) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy %in% c("WGS", "WXS"),
+  dplyr::filter(experimental_strategy %in% c("WGS"),
+                sample_type == "Tumor",
                 !is.na(pathology_diagnosis)) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
@@ -588,7 +596,8 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "biospecimen_id_to_bed_ma
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
-                !is.na(pathology_diagnosis),
+                sample_type == "Tumor",
+                #!is.na(pathology_diagnosis),
                 cohort != "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_ids <- setdiff(hist_ids, biospecimen_ids)
@@ -608,37 +617,38 @@ if (length(missing_hist_ids) > 0) {
 print(paste("DNA biospecimen in biospecimen_id_to_bed_map.tsv missing in histolgies = ", length(missing_hist_ids)))
 ```
 
-#### Check RNA splice events and fusions biospecimen IDs
+<!-- #### Check RNA splice events and fusions biospecimen IDs -->
 
-- rMATS file (splice-events-rmats.tsv.gz)
-```{r}
-# check that all biospecimen IDs are in the file
-biospecimen_ids <- data.table::fread(file.path(data_dir,
-                                               "splice-events-rmats.tsv.gz"),
-                                     data.table = FALSE) %>%
-  dplyr::pull(sample_id) %>%
-  unique()
-hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy == "RNA-Seq",
-               !is.na(pathology_diagnosis),
-               !cohort %in% c("TCGA", "GTEx")) %>%
-  dplyr::pull(Kids_First_Biospecimen_ID)
-missing_ids <- setdiff(hist_ids, biospecimen_ids)
-missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
-if (length(missing_ids) > 0) {
-  output_file <- "histologies-samples-missing-in-splice-events-rmats.tsv"
-  missing_ids_df <- missing_biospecimen_table(hist_df, missing_ids, output_file)
-  missing_ids_df
-}
-print(paste("RNA biospecimen in histolgies missing in splice-events-rmats.tsv.gz = ", length(missing_ids)))
-if (length(missing_hist_ids) > 0) {
-  output_file <- "splice-events-rmats-samples-missing-in-histologies.tsv"
-  missing_hist_ids_df <- tibble::tibble(Kids_First_Biospecimen_ID = missing_hist_ids)
-  missing_hist_ids_df %>% readr::write_tsv(file.path(results_dir, output_file))
-  missing_hist_ids_df
-}
-print(paste("RNA biospecimen in splice-events-rmats.tsv.gz missing in histolgies = ", length(missing_hist_ids)))
-```
+<!-- - rMATS file (splice-events-rmats.tsv.gz) -->
+<!-- ```{r} -->
+<!-- # check that all biospecimen IDs are in the file -->
+<!-- biospecimen_ids <- data.table::fread(file.path(data_dir, -->
+<!--                                                "splice-events-rmats.tsv.gz"), -->
+<!--                                      data.table = FALSE) %>% -->
+<!--   dplyr::pull(sample_id) %>% -->
+<!--   unique() -->
+<!-- hist_ids <- hist_df %>% -->
+<!--   dplyr::filter(experimental_strategy == "RNA-Seq", -->
+<!--                 sample_type == "Tumor", -->
+<!--                 #!is.na(pathology_diagnosis), -->
+<!--                 !cohort %in% c("TCGA", "GTEx")) %>% -->
+<!--   dplyr::pull(Kids_First_Biospecimen_ID) -->
+<!-- missing_ids <- setdiff(hist_ids, biospecimen_ids) -->
+<!-- missing_hist_ids <- setdiff(biospecimen_ids, hist_ids) -->
+<!-- if (length(missing_ids) > 0) { -->
+<!--   output_file <- "histologies-samples-missing-in-splice-events-rmats.tsv" -->
+<!--   missing_ids_df <- missing_biospecimen_table(hist_df, missing_ids, output_file) -->
+<!--   missing_ids_df -->
+<!-- } -->
+<!-- print(paste("RNA biospecimen in histolgies missing in splice-events-rmats.tsv.gz = ", length(missing_ids))) -->
+<!-- if (length(missing_hist_ids) > 0) { -->
+<!--   output_file <- "splice-events-rmats-samples-missing-in-histologies.tsv" -->
+<!--   missing_hist_ids_df <- tibble::tibble(Kids_First_Biospecimen_ID = missing_hist_ids) -->
+<!--   missing_hist_ids_df %>% readr::write_tsv(file.path(results_dir, output_file)) -->
+<!--   missing_hist_ids_df -->
+<!-- } -->
+<!-- print(paste("RNA biospecimen in splice-events-rmats.tsv.gz missing in histolgies = ", length(missing_hist_ids))) -->
+<!-- ``` -->
 
 - AnnoFuse file (fusion-annoFuse.tsv.gz)
 ```{r}
@@ -648,6 +658,7 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "fusion-annoFuse.tsv.gz")
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy == "RNA-Seq", 
+                sample_type == "Tumor",
                 !cohort %in% c("DGD", "TCGA", "GTEx")) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
@@ -668,6 +679,7 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "fusion-arriba.tsv.gz")) 
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy == "RNA-Seq", 
+                sample_type == "Tumor",
                 !cohort %in% c("DGD", "TCGA", "GTEx")) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
@@ -688,6 +700,7 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "fusion-starfusion.tsv.gz
   unique()
 hist_ids <- hist_df %>%
   dplyr::filter(experimental_strategy == "RNA-Seq", 
+                sample_type == "Tumor",
                 !cohort %in% c("DGD", "TCGA", "GTEx")) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 missing_hist_ids <- setdiff(biospecimen_ids, hist_ids)
@@ -707,7 +720,8 @@ biospecimen_ids <- readr::read_tsv(file.path(data_dir, "fusion-dgd.tsv.gz")) %>%
   dplyr::pull(Sample) %>%
   unique()
 hist_ids <- hist_df %>%
-  dplyr::filter(experimental_strategy == "Targeted Sequencing", 
+  dplyr::filter(experimental_strategy == "Targeted Sequencing",
+                sample_type == "Tumor",
                 !is.na(RNA_library),
                 cohort == "DGD") %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
