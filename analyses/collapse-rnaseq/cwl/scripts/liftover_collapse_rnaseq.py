@@ -92,13 +92,13 @@ if __name__ == '__main__':
         "--table",
         action="store",
         dest="table",
-        help="Input expression matrix",
+        help="Input expression matrix. Can be gzipped or plain tsv",
     )
     parser.add_argument(
         "-o", "--output-basename", action="store", dest="out", help="output basename of liftover and collapse if flag given"
     )
     parser.add_argument(
-        "-i", "--input-gtf", action="store", dest="gtf", help="GTF file to use as liftover reference"
+        "-i", "--input-gtf", action="store", dest="gtf", help="GTF file to use as liftover reference. Can be gzipped or plain tsv"
     )
     parser.add_argument(
         "-g", "--gene-id", action="store", dest="gene_id", help="NAME of gene ID (ENSG values) column"
