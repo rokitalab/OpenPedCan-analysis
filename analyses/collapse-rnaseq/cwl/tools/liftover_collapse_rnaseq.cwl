@@ -1,0 +1,52 @@
+cwlVersion: v1.0
+class: CommandLineTool
+id: liftover-collapse-rnaseq
+doc: "Tool to use a GTF and expression matrix with ENSG to liftover gene symbols and collapse repeat symbols if needed"
+
+requirements:
+  - class: ShellCommandRequirement
+  - class: DockerRequirement
+    dockerPull: 'pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest'
+  - class: InlineJavascriptRequirement
+  - class: InitialWorkDirRequirement
+    listing:
+      - entryname: liftover_collapse_rnaseq_wrapper.sh
+        entry:
+          $include: ../scripts/liftover_collapse_rnaseq_wrapper.sh
+      - entryname: liftover_collapsed_rnaseq.py
+        entry:
+          $include: ../scripts/liftover_collapse_rnaseq.py
+
+
+baseCommand: [./liftover_collapse_rnaseq_wrapper.sh]
+
+inputs:
+  table: {type: File, doc: "Input expression matrix",
+    inputBinding: { prefix: "--table", position: 1} }
+  output_basename: {type: string, doc: "output basename of liftover and collapse if flag given",
+    inputBinding: { prefix: "--output-basename", position: 1} }
+  input_gtf: {type: string, doc: "GTF file to use as liftover reference",
+    inputBinding: { prefix: "--input-gtf", position: 1} }
+  gene_id: {type: string, doc: "NAME of gene ID (ENSG values) column",
+    inputBinding: { prefix: "--gene-id", position: 1} }
+  gene_name: {type: string, doc: "NAME of gene name column, if present to keep if not found",
+    inputBinding: { prefix: "--gene-name", position: 1} }
+  skip: {type: 'int?', doc: "Number of lines to skip if needed, i.e. file has extra unneeded header lines",
+    inputBinding: { prefix: "skip", position: 1} }
+  collapse: {type: 'boolean?', doc: "If set, will collapse on repeat gene symbols and choose highest mean expression", default: true,
+    inputBinding: { prefix: "skip", position: 1} }
+
+
+
+
+outputs:
+  liftover:
+    type: File
+    outputBinding:
+      glob: '*.liftover.tsv.gz'
+    doc: "Un-collapsed expression matrix with lifted-over gene symbols"
+  collapsed:
+    type: File
+    outputBinding:
+      glob: '*.collapsed.tsv.gz'
+    doc: "Collapsed expression matrix with lifted-over gene symbols"
