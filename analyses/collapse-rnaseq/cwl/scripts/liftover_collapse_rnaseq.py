@@ -78,7 +78,7 @@ def collapse_dups(dup_dict, out_file):
         for data in dup_dict[gene_sym]:
             means.append(mean(data))
         top_idx = means.index(max(means))
-        out_data = gene_sym + "\t" + "\t".join(list(map(str, dup_dict[gene_sym][top_idx])))
+        out_data = gene_sym + "\t" + "\t".join(list(map(str, dup_dict[gene_sym][top_idx]))) + '\n'
         out_file.write(out_data)
 
 
@@ -148,7 +148,7 @@ if __name__ == '__main__':
         out_lift_fn = args.out + '.liftover.tsv'
         out_lift = open(out_lift_fn, 'w')
         # Some counters to track progress
-        n = 1000
+        n = 10000
         l = 0
         out_head = ('gene_id\tgene_name\t' + '\t'.join(header[d_idx:]))
         out_lift.write(out_head)

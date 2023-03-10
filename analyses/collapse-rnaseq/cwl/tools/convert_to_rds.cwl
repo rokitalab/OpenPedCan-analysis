@@ -16,8 +16,6 @@ requirements:
   - class: ResourceRequirement
     ramMin: $(inputs.ram * 1000)
 
-
-
 baseCommand: [Rscript convert_to_rds.R]
 
 inputs:
@@ -27,7 +25,7 @@ inputs:
     inputBinding: { prefix: "--gene-col", position: 1} }
   output_filename: {type: string, doc: "Output file name, should fit pattern gene-[expression/counts]-rsem-[fpkm/tpm/expected_count]-collapsed.rds",
     inputBinding: { prefix: "--output-filename", position: 1} }
-  ram: { type: 'int?', doc: "Set ram requirement. Unfortunately reading and writing rds files is beefy!", default: 32}
+  ram: { type: 'int?', doc: "Set ram requirement. Unfortunately reading and writing rds files is beefy!", default: 32 }
 
 outputs:
   pirate_output:

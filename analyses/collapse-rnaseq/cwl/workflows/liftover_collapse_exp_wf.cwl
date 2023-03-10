@@ -28,8 +28,8 @@ steps:
     run: ../tools/liftover_collapse_rnaseq.cwl
     hints:
     - class: 'sbg:AWSInstanceType'
-        value: c5.2xlarge;ebs-gp2;400
-        doc: "Chosen for speed and lower cost"
+      value: c5.2xlarge;ebs-gp2;400
+      doc: "Chosen for speed and lower cost"
     in:
       table: table
       output_basename: output_basename
