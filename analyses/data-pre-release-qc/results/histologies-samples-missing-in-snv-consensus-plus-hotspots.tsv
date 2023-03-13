@@ -1,8 +1,5 @@
 Kids_First_Biospecimen_ID	Kids_First_Participant_ID	experimental_strategy	sample_type	RNA_library	cohort
-BS_CA4CRZKP	PT_C9YDTZPA	WGS	Tumor	NA	PBTA
 BS_RES3E00R	PT_JRA29R0N	WXS	Tumor	NA	PBTA
-BS_XNYQS1WG	PT_G16VK7FR	WGS	Tumor	NA	PBTA
-BS_XQF18WZP	PT_RE6AXQM1	WGS	Tumor	NA	PBTA
 TARGET-30-PARPUF-01A-01D	PARPUF	Targeted Sequencing	Tumor	NA	TARGET
 TARGET-30-PARTRP-01A-01D	PARTRP	Targeted Sequencing	Tumor	NA	TARGET
 TARGET-30-PARVIH-01A-01D	PARVIH	Targeted Sequencing	Tumor	NA	TARGET
