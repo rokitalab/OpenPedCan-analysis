@@ -121,7 +121,7 @@ def main():
     gene_sym_ct_dict = {}
     with (gzip.open if args.table.endswith("gz") else open)(args.table, "rt", encoding="utf-8") as table:
         if args.skip:
-            print('Skipping ' + str(args.skip) + ' lines', file=sys.stderr)
+            print("Skipping {} lines".format(args.skip), file=sys.stderr)
             for i in range(args.skip):
                 skip = next(table)
         head = next(table)
@@ -141,7 +141,7 @@ def main():
         out_lift.write(out_head)
         for line in table:
             if l % n == 0:
-                print("Processed " + str(l) + " lines", file=sys.stderr)
+                print("Processed {} lines".format(l), file=sys.stderr)
             out_data = liftover(line, gene_sym_ct_dict, g_idx, n_idx, gtf_dict, d_idx)
             out_lift.write(out_data)
             l += 1
@@ -163,11 +163,11 @@ def main():
             for line in lifted:
                 dup_ct, out_data = collate_dups(line, dup_gene_sym_dict, dup_ct, gene_sym_ct_dict, d_idx, n_idx)
                 if l % n == 0:
-                    print("Processed " + str(l) + " lines", file=sys.stderr)
+                    print("Processed {} lines".format(l), file=sys.stderr)
                 if out_data:
                     out_collapse.write(out_data)
                 l += 1
-        print("Processing " + str(dup_ct) + " repeat gene symbols and choosing highest mean expression", file=sys.stderr)
+        print("Processing {} repeat gene symbols and choosing highest mean expression".format(dup_ct), file=sys.stderr)
         out_data = collapse_dups(dup_gene_sym_dict)
         out_collapse.write(out_data)
         print("Done!", file=sys.stderr)
