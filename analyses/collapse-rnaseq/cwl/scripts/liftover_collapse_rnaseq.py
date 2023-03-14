@@ -65,9 +65,7 @@ def collapse_dups(dup_gene_sym_dict):
     Get highest mean for repeated gene symbols and output that row
     """
     for gene_sym in dup_gene_sym_dict:
-        means = []
-        for data in dup_gene_sym_dict[gene_sym]:
-            means.append(mean(data))
+        means = [mean(data) for data in dup_gene_sym_dict[gene_sym]]
         top_idx = means.index(max(means))
         out_data = "{}\t{}\n".format(gene_sym, '\t'.join(list(map(str, dup_gene_sym_dict[gene_sym][top_idx]))))
         return out_data
