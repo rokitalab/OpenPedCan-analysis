@@ -112,12 +112,12 @@ def main():
     name_find = re.compile(r".*gene_name \"(\S+)\";")
     print('Indexing gtf', file=sys.stderr)
     with (gzip.open if args.gtf.endswith("gz") else open)(args.gtf, "rt", encoding="utf-8") as gtf:
+        newline = gtf.readline()
+        while newline.startswith('##'):
             newline = gtf.readline()
-            while newline.startswith('##'):
-                newline = gtf.readline()
-            while newline != '':
-                update_gtf_dict(gtf_dict, newline, tx_type, tx_desc, id_find, name_find)
-                newline = gtf.readline()
+        while newline != '':
+            update_gtf_dict(gtf_dict, newline, tx_type, tx_desc, id_find, name_find)
+            newline = gtf.readline()
     # track sym occurrences if collapse flag given for later processing
     gene_sym_ct_dict = {}
     with (gzip.open if args.table.endswith("gz") else open)(args.table, "rt", encoding="utf-8") as table:
