@@ -40,7 +40,7 @@ def liftover(in_data, out_lift, n, l):
         sym_ct[gene_sym] = 1
     else:
         sym_ct[gene_sym] += 1
-    out_data = cur_id + '\t' + gene_sym + '\t' + '\t'.join(data[d_idx:]) + '\n'
+    out_data = "{}\t{}\t{}\n".format(cur_id, gene_sym, '\t'.join(data[d_idx:])
     out_lift.write(out_data)
     l += 1
     return l
@@ -140,9 +140,7 @@ if __name__ == '__main__':
         g_idx = header.index(args.gene_id)
         n_idx = header.index(args.gene_name)
         # make assumption that data will start after ID and name
-        d_idx = g_idx + 1
-        if n_idx > g_idx:
-            d_idx = n_idx + 1
+        d_idx = max(g_idx, n_idx) + 1
         sys.stderr.write('Processing table\n')
         sys.stderr.flush()
         out_lift_fn = args.out + '.liftover.tsv'
