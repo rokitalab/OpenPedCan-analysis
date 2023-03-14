@@ -48,8 +48,6 @@ steps:
     in:
       input_files:
         source: [liftover_collapse_rnaseq/liftover, liftover_collapse_rnaseq/collapsed]
-        valueFrom: |
-          $(self)
     out: [gzipped_files]
 
   convert_to_rds:
