@@ -1,4 +1,4 @@
-cwlVersion: v1.0
+cwlVersion: v1.2
 class: CommandLineTool
 id: liftover-collapse-rnaseq
 doc: "Tool to use a GTF and expression matrix with ENSG to liftover gene symbols and collapse repeat symbols if needed"

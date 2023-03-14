@@ -1,4 +1,4 @@
-cwlVersion: v1.0
+cwlVersion: v1.2
 class: CommandLineTool
 id: convert-to-rds
 doc: "Converts tsv table to rds"
