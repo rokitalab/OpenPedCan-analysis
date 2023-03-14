@@ -13,14 +13,13 @@ inputs:
   gene_id: { type: string, doc: "NAME of gene ID (ENSG values) column"  }
   gene_name: { type: string, doc: "NAME of gene name column, if present to keep if not found" }
   skip: { type: 'int?', doc: "Number of lines to skip if needed, i.e. file has extra unneeded header lines" }
-  collapse: { type: 'boolean?', doc: "If set, will collapse on repeat gene symbols and choose highest mean expression" }
+  collapse: { type: 'boolean?', doc: "If set, will collapse on repeat gene symbols and choose highest mean expression", default: true }
   # convert to rds
   output_filename: { type: string, doc: "Output file name, should fit pattern gene-[expression/counts]-rsem-[fpkm/tpm/expected_count]-collapsed.rds" }
   rds_ram: { type: 'int?', doc: "Set ram requirement. Unfortunately reading and writing rds files is beefy!", default: 32}
 
 outputs:
-  lifted: { type: File, outputSource: liftover_collapse_rnaseq/liftover }
-  collapsed: { type: File, outputSource: liftover_collapse_rnaseq/collapsed }
+  gzipped_results: { type: 'File[]', outputSource: gzip_tsv/gzipped_files }
   expression_rds: { type: 'File?', outputSource: convert_to_rds/pirate_output }
 
 steps:
@@ -40,6 +39,19 @@ steps:
       collapse: collapse
     out: [liftover, collapsed]
 
+  gzip_tsv:
+    run: ../tools/ubuntu_gzip.cwl
+    hints:
+    - class: 'sbg:AWSInstanceType'
+      value: c5.2xlarge;ebs-gp2;400
+      doc: "Chosen for speed and lower cost"
+    in:
+      input_files:
+        source: [liftover_collapse_rnaseq/liftover, liftover_collapse_rnaseq/collapsed]
+        valueFrom: |
+          $([self])
+    out: [gzipped_files]
+
   convert_to_rds:
     run: ../tools/convert_to_rds.cwl
     when: $(inputs.input_tsv != null)
@@ -51,3 +63,6 @@ steps:
 
 $namespaces:
   sbg: https://sevenbridges.com
+hints:
+- class: "sbg:maxNumberOfParallelInstances"
+  value: 2

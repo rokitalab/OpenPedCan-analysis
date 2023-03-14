@@ -85,16 +85,8 @@ Examples:
 ├── TCGA.collapsed.tsv
 ├── TCGA.liftover.tsv
 ```
-### analyses/collapse-rnaseq/cwl/scripts/liftover_collapse_rnaseq_wrapper.sh
-Just runs the python script with an added `gzip *.tsv` step.
-Example with GTEx input:
-`bash liftover_collapse_rnaseq_wrapper.sh --collapse --gene-id Name --gene-name Description --input-gtf gencode.v39.primary_assembly.annotation.gtf --output-basename GTEx --skip 2 --table GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz`
-So output would be:
-```
-├── TCGA.collapsed.tsv.gz
-├── TCGA.liftover.tsv.gz
-```
-from example above
+### analyses/collapse-rnaseq/cwl/tools/ubuntu_gzip.cwl
+gzips the output from liftover step
 
 ### analyses/collapse-rnaseq/cwl/scripts/convert_to_rds.R
 ```
