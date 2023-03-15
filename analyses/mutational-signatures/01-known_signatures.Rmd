@@ -111,14 +111,28 @@ gradient_col_palette <- gradient_col_palette %>%
   dplyr::filter(color_names != "na_color")
 ```
 
-Read in the metadata and set it up with the color palette. 
+Read in the metadata and set it up with the color palette. Separate BS_ids into intial CNS tumors and other tumors, as mutational signatures analyses will be run on a different set of signatures for each group.  
 
 ```{r}
 metadata_df <- readr::read_tsv(file.path(data_dir, "histologies.tsv"), guess_max = 10000) %>% 
-  dplyr::select("Kids_First_Biospecimen_ID", "experimental_strategy") %>%
+#  dplyr::select("Kids_First_Biospecimen_ID", "experimental_strategy") %>%
   dplyr::inner_join(histology_label_mapping, by = "Kids_First_Biospecimen_ID") %>% 
   dplyr::rename(Tumor_Sample_Barcode = "Kids_First_Biospecimen_ID") 
 
+pretx_tumors <- readr::read_tsv(file.path(input_dir, "CBTN_all_therapy_20220922.tsv")) %>%
+  mutate(Pretreatment = case_when(`Age at Diagnosis` < `Age at Chemotherapy Start` ~ "yes",
+                                  `Age at Diagnosis` > `Age at Chemotherapy Start` ~ "no",
+                                  TRUE ~ as.character(NA))) %>%
+  filter(Pretreatment == "yes") %>%
+  pull(cohort_participant_id)
+
+initial_pretx_tumors <- metadata_df %>%
+  filter(tumor_descriptor == "Initial CNS Tumor" & cohort_participant_id %in% pretx_tumors) %>%
+  pull(Tumor_Sample_Barcode)
+
+#other_tumors <- metadata_df %>%
+#  filter(tumor_descriptor != "Initial CNS Tumor") %>%
+#  pull(Tumor_Sample_Barcode)
 ```
 
 Read in tmb-all file with WGS and WXS region lengths so they can be used for the Mb denominator. 
@@ -187,47 +201,47 @@ Get [COSMIC v2 signatures](https://cancer.sanger.ac.uk/cosmic) for each sample.
 This step will take some time. 
 
 ```{r}
-sample_sigs_cosmic <- lapply(tumor_sample_ids, function(sample_id) {
-  # Determine the signatures contributing to the sample
-  whichSignatures(
-    tumor.ref = sigs_input,
-    signatures.ref = signatures.cosmic,
-    sample.id = sample_id,
-    contexts.needed = TRUE
-  )
-})
-# Bring along the names
-names(sample_sigs_cosmic) <- tumor_sample_ids
-
-# Create matrix of COSMIC signature weights
-cosmic_weights <- lapply(sample_sigs_cosmic, "[[", "weights")
-cosmic_wide <- do.call(dplyr::bind_rows, cosmic_weights) %>%
-  add_column('Kids_First_Biospecimen_ID' = unlist(lapply(cosmic_weights, rownames)), .before = 1) %>%
-  tibble::as_tibble() %>%
-readr::write_tsv(file.path(results_dir, 'COSMICv2_signature_exposures.tsv'))
+# sample_sigs_cosmic <- lapply(tumor_sample_ids, function(sample_id) {
+#   # Determine the signatures contributing to the sample
+#   whichSignatures(
+#     tumor.ref = sigs_input,
+#     signatures.ref = signatures.cosmic,
+#     sample.id = sample_id,
+#     contexts.needed = TRUE
+#   )
+# })
+# # Bring along the names
+# names(sample_sigs_cosmic) <- tumor_sample_ids
+# 
+# # Create matrix of COSMIC signature weights
+# cosmic_weights <- lapply(sample_sigs_cosmic, "[[", "weights")
+# cosmic_wide <- do.call(dplyr::bind_rows, cosmic_weights) %>%
+#   add_column('Kids_First_Biospecimen_ID' = unlist(lapply(cosmic_weights, rownames)), .before = 1) %>%
+#   tibble::as_tibble() %>%
+# readr::write_tsv(file.path(results_dir, 'COSMICv2_signature_exposures.tsv'))
 ```
 
 Get [Alexandrov et al, 2013](https://www.ncbi.nlm.nih.gov/pubmed/23945592) signatures for each sample. 
 
 ```{r}
-sample_sigs_nature <- lapply(tumor_sample_ids, function(sample_id) {
-  # Determine the signatures contributing to the sample
-  whichSignatures(
-    tumor.ref = sigs_input,
-    signatures.ref = signatures.nature2013,
-    sample.id = sample_id,
-    contexts.needed = TRUE
-  )
-})
-# Bring along the names
-names(sample_sigs_nature) <- tumor_sample_ids
-
-# Create data frame of Nature signature weights
-nature_weights <- lapply(sample_sigs_nature, "[[", "weights")
-nature_wide <- do.call(dplyr::bind_rows, nature_weights) %>%
-  add_column('Kids_First_Biospecimen_ID' = unlist(lapply(nature_weights, rownames)), .before = 1) %>%
-  tibble::as_tibble() %>%
-readr::write_tsv(file.path(results_dir, 'Nature_signature_exposures.tsv'))
+# sample_sigs_nature <- lapply(tumor_sample_ids, function(sample_id) {
+#   # Determine the signatures contributing to the sample
+#   whichSignatures(
+#     tumor.ref = sigs_input,
+#     signatures.ref = signatures.nature2013,
+#     sample.id = sample_id,
+#     contexts.needed = TRUE
+#   )
+# })
+# # Bring along the names
+# names(sample_sigs_nature) <- tumor_sample_ids
+# 
+# # Create data frame of Nature signature weights
+# nature_weights <- lapply(sample_sigs_nature, "[[", "weights")
+# nature_wide <- do.call(dplyr::bind_rows, nature_weights) %>%
+#   add_column('Kids_First_Biospecimen_ID' = unlist(lapply(nature_weights, rownames)), .before = 1) %>%
+#   tibble::as_tibble() %>%
+# readr::write_tsv(file.path(results_dir, 'Nature_signature_exposures.tsv'))
 ```
 
 Get [COSMIC genome v3.3 signatures](https://cancer.sanger.ac.uk/cosmic) for each sample. 
@@ -239,26 +253,31 @@ signatures.cosmic.v3.3 <- read_tsv(file.path(input_dir, 'COSMIC_v3.3.1_SBS_GRCh3
   as.data.frame()
 ```
 
-Create list of include/exclude signatures using SBSv3 mapping file 
+Create list of include/exclude signatures using SBSv3 mapping file. For Initial CNS tumors, therapy exposures will be excluded, but they will be retained for other tumor types. 
 
 ```{r Set up lists of excluded and included signatures for COSMIC V3}
- map <- read_tsv(file.path(input_dir, "sbs_v3_map.tsv"))
+map <- read_tsv(file.path(input_dir, "sbs_v3_map.tsv"))
 
- # Excluded signatures:
- artifact_sigs <- map %>%
+# Excluded signatures:
+artifact_sigs <- map %>%
    filter(Broad_category == "Sequencing artifact") %>%
    pull(Signature)
 
- environ_sigs <- map %>%
+environ_sigs <- map %>%
    filter(Broad_category == "Environmental exposure") %>%
    pull(Signature)
 
- unknown <- map %>%
-   filter(Broad_category == "Unknown") %>%
+unknown <- map %>%
+   filter(Broad_category == "Unknown" & Signature != "SBS39") %>%
+   pull(Signature)
+ 
+therapy_sigs <- map %>%
+   filter(Broad_category == "Therapy exposure") %>%
    pull(Signature)
 
- exclude_sigs <- c(artifact_sigs, environ_sigs, unknown, "SBS39")
- include_sigs <- setdiff(rownames(signatures.cosmic.v3.3), exclude_sigs)
+exclude_sigs <- c(artifact_sigs, environ_sigs, unknown)
+include_sigs_initialPretx <- setdiff(rownames(signatures.cosmic.v3.3), c(exclude_sigs, therapy_sigs))
+include_sigs_other <- setdiff(rownames(signatures.cosmic.v3.3), exclude_sigs)
 ```
 
 Run signature extraction. This step will take some time.
@@ -266,13 +285,25 @@ Run signature extraction. This step will take some time.
 ```{r}
 sample_sigs_cosmic_v33 <- lapply(tumor_sample_ids, function(sample_id) {
   # Determine the signatures contributing to the sample
-  whichSignatures(
+  if (sample_id %in% initial_pretx_tumors){
+    whichSignatures(
     tumor.ref = sigs_input,
-    signatures.ref = signatures.cosmic.v3.3[include_sigs,],
+    signatures.ref = signatures.cosmic.v3.3,
     sample.id = sample_id,
-    contexts.needed = TRUE
+    contexts.needed = TRUE,
+    associated = include_sigs_initialPretx
     )
+  }else{
+    whichSignatures(
+    tumor.ref = sigs_input,
+    signatures.ref = signatures.cosmic.v3.3,
+    sample.id = sample_id,
+    contexts.needed = TRUE,
+    associated = include_sigs_other
+    )
+  }
 })
+
 # Bring along the names
 names(sample_sigs_cosmic_v33) <- tumor_sample_ids
 # 
