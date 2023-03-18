@@ -61,7 +61,7 @@ histology_df <- histology_df[sample(nrow(histology_df)), ]
 
 rnaseq_samples <- histology_df %>%
   dplyr::filter(sample_type == "Tumor", 
-                composition != "Derived Cell Line", 
+                !composition %in% c("Derived Cell Line", "PDX"), 
                 experimental_strategy == "RNA-Seq",
                 !grepl("Metastatic secondary tumors", pathology_diagnosis, 
                        ignore.case = FALSE, perl = FALSE,
