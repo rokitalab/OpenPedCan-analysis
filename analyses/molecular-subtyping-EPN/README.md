@@ -46,7 +46,7 @@ This above  script is designed to change to this directory to run, so it should 
     5) EPN, PF A 
     6) EPN, PF B
     7) EPN, PF SE (methylation classificaton)
-    8) EPN, SP-SE B (methylation classificaton)
+    8) EPN, SP-SE (methylation classificaton)
     9) EPN, To be classified
 
     From the [input file here](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/analyses/molecular-subtyping-EPN/results/EPN_all_data.tsv) values for various columns are considered for assigning subgroups. The following criteria are used to prioritize samples for assignment to each group: 
