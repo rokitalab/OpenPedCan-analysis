@@ -61,7 +61,7 @@ if (!dir.exists(results_dir)) {
 metadata <-
   readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"), 
                   guess_max = 100000) %>%
-  dplyr::filter(cohort %in% c("PBTA", "DGD"),
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD"),
                 !is.na(pathology_diagnosis))
 
 # File from 00-LGAT-select-pathology-dx that is used for inclusion/exclusion
