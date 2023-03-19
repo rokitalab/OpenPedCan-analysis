@@ -53,8 +53,8 @@ methy_samples = EP %>%
                                                      dkfz_v12_methylation_subclass == "EPN_PF_SE" ~ "EPN, PF SE",
                                                      dkfz_v12_methylation_subclass == "EPN_SPINE" ~ "EPN, SP",
                                                      dkfz_v12_methylation_subclass == "EPN_SPINE_MYCN" ~ "EPN, SP-MYCN",
-                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_SE_A" ~ "EPN, SP-SE A",
-                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_SE_B" ~ "EPN, SP-SE B",
+                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_SE_A" ~ "EPN, SP-SE",
+                                                     dkfz_v12_methylation_subclass == "EPN_SPINE_SE_B" ~ "EPN, SP-SE",
                                                      dkfz_v12_methylation_subclass == "EPN_ST_SE" ~ "EPN, ST SE",
                                                      dkfz_v12_methylation_subclass == "EPN_YAP" ~ "EPN, ST YAP1")) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, molecular_subtype_methyl) %>%

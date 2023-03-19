@@ -39,6 +39,7 @@ BS_A3K94FCY	BS_DHWN3X5S	NA	MYCN non-amp	NA	4.73	NBL, MYCN non-amplified
 BS_A5AQFAFA	BS_QJ3XB7XZ	3	MYCN amp	gain	26.87	NBL, MYCN non-amplified
 BS_ACCE0MEA	BS_94ZKC2SR	3	MYCN amp	gain	260.82	NBL, MYCN amplified
 BS_ACDQRWMY	BS_MG1N76FY	NA	MYCN non-amp	NA	8.4	NBL, MYCN non-amplified
+BS_ANFZNMQ4	BS_MXV7JCBD	NA	metastatic neuroblastoma	NA	10.63	NBL, MYCN non-amplified
 BS_B6E0477K	BS_N13KZYRR	NA	MYCN non-amp	NA	16.32	NBL, MYCN non-amplified
 BS_B80Z459E	NA	4	MYCN amp	neutral	NA	Pathology-amp,MYCN_CN_status-non-amp,TPM-NA
 BS_BJCTR4C8	BS_GB1XPW06	NA	MYCN non-amp	NA	7.87	NBL, MYCN non-amplified
@@ -101,7 +102,6 @@ BS_RQZZ6T97	BS_S01DMJ5X	NA	MYCN non-amp	NA	2.61	NBL, MYCN non-amplified
 BS_S4R97RNZ	BS_KYGRX01W	NA	MYCN non-amp	NA	12.29	NBL, MYCN non-amplified
 BS_S8Q6R8MX	BS_70H191SN	NA	MYCN non-amp	NA	4.34	NBL, MYCN non-amplified
 BS_SPGHWHXY	BS_CD6WEHG9	NA	MYCN non-amp	NA	1.96	NBL, MYCN non-amplified
-BS_SV9567M8	BS_G1Y281HX	NA	peripheral neuroblastoma	NA	0.19	NBL, MYCN non-amplified
 BS_T9KJYH7M	BS_8NQWYZHR	NA	MYCN non-amp	NA	18.16	NBL, MYCN non-amplified
 BS_TBSPYEEW	BS_YBD5FS1Q	NA	MYCN non-amp	NA	24.14	NBL, MYCN non-amplified
 BS_TT4PHFV7	BS_3CTRC269	NA	MYCN non-amp	NA	12.21	NBL, MYCN non-amplified
@@ -125,6 +125,7 @@ BS_XX68G6KE	BS_HP8EEDS6	NA	MYCN non-amp	NA	9.35	NBL, MYCN non-amplified
 BS_Y3KBY0FY	BS_B2BWSTJV	NA	MYCN non-amp	NA	0.41	NBL, MYCN non-amplified
 BS_Y4V9JXG4	BS_2XTH5QRD	NA	MYCN non-amp	NA	5.2	NBL, MYCN non-amplified
 BS_Y9BHAPG3	BS_FRY5NFRY	NA	MYCN non-amp	NA	16.23	NBL, MYCN non-amplified
+BS_YC4RWPH3	BS_ZJGXGR1V	26	neuroblastoma	amplification	179.59	NBL, MYCN amplified
 BS_YTQ6Y7FQ	BS_C84NQED0	NA	MYCN non-amp	NA	11.34	NBL, MYCN non-amplified
 BS_YV3MJ2BD	BS_K59AGJKW	NA	MYCN non-amp	NA	12.11	NBL, MYCN non-amplified
 BS_Z2G9EG1X	BS_AFRGW493	NA	MYCN non-amp	NA	17.8	NBL, MYCN non-amplified
@@ -208,8 +209,10 @@ NA	BS_327GE38E	NA	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous Sys
 NA	BS_9P9DNAHS	NA	NA	NA	NA	NBL, To be classified
 NA	BS_9Z1VTWJV	NA	peripheral neuroblastic tumor status post-chemotherapy	NA	NA	NBL, To be classified
 NA	BS_G0C2BKGC	NA	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System	NA	NA	NBL, To be classified
+NA	BS_G1Y281HX	NA	peripheral neuroblastoma	NA	0.19	NBL, MYCN non-amplified
 NA	BS_HEDCVFKC	NA	NA	NA	NA	NBL, To be classified
 NA	BS_JS7G87QP	NA	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System	NA	NA	NBL, To be classified
+NA	BS_NGAWSN7T	NA	ganglioneuroblastoma, who grade iv	NA	8.48	NBL, MYCN non-amplified
 NA	BS_PTTZ15MN	NA	NA	NA	NA	NBL, To be classified
 NA	BS_TD1ZEQ7R	NA	neuroblastoma	NA	3.35	NBL, MYCN non-amplified
 NA	BS_TSNBH5A6	NA	Adrenal Gland Neuroblastoma	NA	NA	NBL, To be classified
