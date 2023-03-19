@@ -28,7 +28,7 @@ ews_file <- file.path(results_dir, "EWS_results.tsv")
 ```{r read in data}
 # histology file
 clinical <- readr::read_tsv(file.path(dataDir, "histologies-base.tsv"), guess_max = 100000) %>%
-  filter(cohort %in% c("PBTA", "DGD"))
+  filter(cohort %in% c("PBTA", "Kentucky", "DGD"))
 
 # ewings samples or samples with EWS via methylation
 ews_clinical <- clinical %>%
@@ -68,7 +68,7 @@ has_ews_fusion <- rowSums(ewings_foi_bsids[, -1]) > 0
 fusion_bsid <- ewings_foi_bsids %>%
   filter(has_ews_fusion) %>%
   left_join(clinical) %>%
-  filter(cohort %in% c("PBTA", "DGD")) %>%
+  filter(cohort %in% c("PBTA", "Kentucky", "DGD")) %>%
   select(Kids_First_Biospecimen_ID, sample_id, composition) %>%
   mutate(molecular_subtype = "EWS",
          id = paste(sample_id, composition, sep = "_"))
