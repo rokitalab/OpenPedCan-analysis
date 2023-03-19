@@ -22,7 +22,7 @@ histo <-
 # select all ATRT biospecimens from PBTA and/DGD
 atrt_df <- histo %>%
   dplyr::filter(short_histology == "ATRT",
-                cohort == "PBTA" | cohort == "DGD") %>%
+                cohort %in% c("PBTA", "Kentucky", "DGD")) %>%
   # create match id
   mutate(id = paste(sample_id, composition, sep = "_"))
 
