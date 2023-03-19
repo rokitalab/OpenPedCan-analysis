@@ -86,15 +86,16 @@ for idx, val in enumerate(full_status_df.itertuples()):
     # if SNV has more than 1 hit sample can be considered as double hit
     if full_status_df.loc[idx, 'SNV_indel_counts'] >= 1 and full_status_df.loc[idx,'CNV_loss_counts'] >= 1:
         full_status_df.loc[idx,'tp53_status'] = 1
-    elif full_status_df.loc[idx,'SNV_indel_counts'] == 1 and full_status_df.loc[idx,'cancer_predispositions'] == "Li-Fraumeni syndrome":
+    elif full_status_df.loc[idx,'SNV_indel_counts'] == 1 and "Li-Fraumeni syndrome" in str(full_status_df.loc[idx,'cancer_predispositions']):
         full_status_df.loc[idx,'tp53_status'] = 1
-    elif full_status_df.loc[idx,'CNV_loss_counts'] == 1 and full_status_df.loc[idx,'cancer_predispositions'] == "Li-Fraumeni syndrome":
+    elif full_status_df.loc[idx,'CNV_loss_counts'] == 1 and "Li-Fraumeni syndrome" in str(full_status_df.loc[idx,'cancer_predispositions']):
         full_status_df.loc[idx,'tp53_status'] = 1
     elif full_status_df.loc[idx,'SNV_indel_counts'] > 1:
         full_status_df.loc[idx,'tp53_status'] = 1
     else:
         full_status_df.loc[idx,'tp53_status']=0
 
+print(full_status_df)
 
 print("drop tp53_score columns from tp53 annotation file")
 full_status_df = full_status_df.drop("tp53_score" , axis = "columns")

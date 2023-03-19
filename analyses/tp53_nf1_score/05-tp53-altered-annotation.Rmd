@@ -406,7 +406,7 @@ Interesting 2 bs ids annotated with Li-Fraumeni synfrome pre-disposition have ve
 ```{r}
 
 tp53_alterations_score_wide %>%
-  filter(cancer_predispositions == "Li-Fraumeni syndrome",
+  filter(grepl("Li-Fraumeni syndrome", cancer_predispositions),
          tp53_score < 0.5) 
   
 ```
