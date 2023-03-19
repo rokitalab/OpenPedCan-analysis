@@ -58,7 +58,7 @@ data_dir <- file.path(root_dir, "data")
 cn_gistic_df <- read_tsv(file.path(results_dir, "HGG_cleaned_cnv.tsv"))
 mutation_df <- read_tsv(file.path(results_dir, "HGG_cleaned_mutation.tsv"))
 hgg_meta <- read_tsv(file.path(subset_dir, "hgg_metadata.tsv")) %>% 
-  dplyr::filter(cohort %in% c("PBTA", "DGD"),
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD"),
                 !is.na(pathology_diagnosis)) %>%
   # create cell line merge id & tumor merge id
   mutate(id = ifelse(composition == "Derived Cell Line", paste(sample_id, composition, cell_line_composition, cell_line_passage, sep = "_"),

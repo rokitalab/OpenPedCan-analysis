@@ -1132,6 +1132,7 @@ BS_8072ADGT	BS_T88CNJ8A	PT_JPFR0046	NA	NA	NA	DGD	Recurrent Neuroblastoma
 BS_83HX4CXB	BS_B9XBBA8D	PT_5ZPPR06P	NA	NA	NA	DGD	metastatic peripheral neuroblastic tumor
 BS_87NQHSBG	BS_YP080MN8	PT_23G70TEN	NA	NA	NA	DGD	NA
 BS_ADNFY748	BS_R91DDK9A	PT_HVCRDJ95	NA	NA	NA	DGD	High Risk Neuroblastoma
+BS_ANFZNMQ4	BS_MXV7JCBD	PT_P6PKT77Y	10.63	NA	NA	PBTA	metastatic neuroblastoma
 BS_B8F0WNZC	BS_7KTGJPVN	PT_Y44DNH44	NA	NA	NA	DGD	NA
 BS_CK7CPM73	BS_NFRXNAFE	PT_RXT6KRR6	4.68	3	gain	PBTA	ganglioneuroblastoma
 BS_CZVNMYM3	BS_9NME41F4	PT_JQA14J4Z	NA	NA	NA	DGD	NA
@@ -1142,32 +1143,29 @@ BS_NHMPQ8Q1	BS_JBGZ7HHZ	PT_FZHGKJ0H	0.02	NA	NA	PBTA	ganglioneuroblastoma, stage 
 BS_NQ41MEBX	BS_XBQDMMB3	PT_QHJSYTWJ	NA	NA	NA	DGD	neuroblastoma (schwannian stroma poor),
 BS_NRJA5JT9	BS_29E2B8BX	PT_GRZE094W	NA	NA	NA	DGD	High Risk Neuroblastoma
 BS_RECF1S4Q	BS_H9YYADDT	PT_BCBMG74N	NA	NA	NA	DGD	NA
-BS_SV9567M8	BS_G1Y281HX	PT_P1290MMP	0.19	NA	NA	PBTA	peripheral neuroblastoma
 BS_V5N71HQS	BS_8Y7V5264	PT_RBCEW1B3	NA	NA	NA	DGD	NA
 BS_XGH76HBE	BS_8P02DSEP	PT_TC6A6TX7	NA	NA	NA	DGD	NA
 BS_XMADRSG8	BS_ZZA88AMB	PT_8KF6YSTW	NA	NA	NA	DGD	NA
 BS_YBXM34XV	BS_A05MJ45Y	PT_K0YFKQ6V	NA	NA	NA	DGD	peripheral neuroblastic tumor status post-chemotherapy
-BS_24TKY0T9	NA	PT_QNHGY3KQ	NA	NA	NA	PBTA	metastatic neuroblastoma and organizing blood clot
-BS_68BZ8N6P	NA	PT_RXT6KRR6	NA	NA	NA	PBTA	ganglioneuroblastoma, who grade iv
+BS_YC4RWPH3	BS_ZJGXGR1V	PT_9F58PWB3	179.59	26	amplification	PBTA	neuroblastoma
 BS_76YE7XNX	NA	PT_5ZPPR06P	NA	NA	NA	PBTA	neuroblastoma
 BS_79QMX6KP	NA	PT_EQCQNN1B	NA	NA	NA	PBTA	neuroblastic tumor, status post chemotherapy, residual
 BS_AK1A6MWG	NA	PT_203SE2J7	NA	NA	NA	DGD	NA
-BS_ANFZNMQ4	NA	PT_P6PKT77Y	NA	NA	NA	PBTA	metastatic neuroblastoma
 BS_EBW10QNH	NA	PT_5ZPPR06P	NA	NA	NA	PBTA	ganglioneuroblastoma, intermixed
 BS_KQGFD8MZ	NA	PT_F0KEA3EH	NA	NA	NA	DGD	NA
 BS_NT49M4RG	NA	PT_QHJSYTWJ	NA	NA	NA	PBTA	neuroblastoma (schwannian stroma poor),
-BS_RA4GZM25	NA	PT_FZHGKJ0H	NA	NA	NA	PBTA	post treatment peripheral neuroblastic tumor
 BS_SR0TJ11R	NA	PT_DHZ5KCNN	NA	NA	NA	PBTA	recurrent ganglioneuroma, schwannian stroma-dominant
 BS_TJ9KW884	NA	PT_K0YFKQ6V	NA	NA	NA	PBTA	peripheral neuroblastic tumor status post-chemotherapy
 BS_V2A5DE46	NA	PT_7Q0XGYHA	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System
 BS_WD253JB2	NA	PT_JPFR0046	NA	NA	NA	DGD	NA
-BS_YC4RWPH3	NA	PT_9F58PWB3	NA	26	amplification	PBTA	neuroblastoma
 NA	BS_327GE38E	PT_TMY5EVG3	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System
 NA	BS_9P9DNAHS	PT_J01MB51G	NA	NA	NA	DGD	NA
 NA	BS_9Z1VTWJV	PT_K0YFKQ6V	NA	NA	NA	DGD	peripheral neuroblastic tumor status post-chemotherapy
 NA	BS_G0C2BKGC	PT_40VEXGGS	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System
+NA	BS_G1Y281HX	PT_P1290MMP	0.19	NA	NA	PBTA	peripheral neuroblastoma
 NA	BS_HEDCVFKC	PT_936J0BZ5	NA	NA	NA	DGD	NA
 NA	BS_JS7G87QP	PT_JPBMNESN	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System
+NA	BS_NGAWSN7T	PT_RXT6KRR6	8.48	NA	NA	PBTA	ganglioneuroblastoma, who grade iv
 NA	BS_PTTZ15MN	PT_203SE2J7	NA	NA	NA	DGD	NA
 NA	BS_TD1ZEQ7R	PT_MRTHX2AQ	3.35	NA	NA	PBTA	neuroblastoma
 NA	BS_TSNBH5A6	PT_DF18YV38	NA	NA	NA	DGD	Adrenal Gland Neuroblastoma
