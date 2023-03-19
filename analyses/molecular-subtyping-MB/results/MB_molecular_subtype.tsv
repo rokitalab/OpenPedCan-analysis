@@ -85,7 +85,6 @@ PT_17NG0KW3	BS_JDS0SYST	7316-1945	Solid Tissue	Initial CNS Tumor	7316-1945_Solid
 PT_17NG0KW3	BS_YETBN0RQ	7316-1945	Solid Tissue	Initial CNS Tumor	7316-1945_Solid Tissue	MB, WNT	MB, WNT
 PT_17NG0KW3	BS_YYFTD7TP	7316-1945	Solid Tissue	Initial CNS Tumor	7316-1945_Solid Tissue	MB, WNT	MB, WNT
 PT_PZRWEBK5	BS_8K9YVM5G	7316-1988	Solid Tissue	Initial CNS Tumor	7316-1988_Solid Tissue	MB, Group4	MB, Group4
-PT_PZRWEBK5	BS_8VKM8PYT	7316-1988	Solid Tissue	Initial CNS Tumor	7316-1988_Solid Tissue	MB, Group4	MB, Group4
 PT_PZRWEBK5	BS_AD4CSC2Y	7316-1988	Solid Tissue	Initial CNS Tumor	7316-1988_Solid Tissue	MB, Group4	MB, Group4
 PT_DESHZ91V	BS_HKZENFDA	7316-2009	Solid Tissue	Initial CNS Tumor	7316-2009_Solid Tissue	MB, Group4	MB, Group4
 PT_DESHZ91V	BS_XQ5CSC8B	7316-2009	Solid Tissue	Initial CNS Tumor	7316-2009_Solid Tissue	MB, Group4	MB, Group4
@@ -151,7 +150,6 @@ PT_N1HWK3YS	BS_GKQQKS8C	7316-2603	Solid Tissue	Initial CNS Tumor	7316-2603_Solid
 PT_N1HWK3YS	BS_JV8JSETJ	7316-2603	Solid Tissue	Initial CNS Tumor	7316-2603_Solid Tissue	MB, WNT	MB, WNT
 PT_N1HWK3YS	BS_WZZN982T	7316-2603	Solid Tissue	Initial CNS Tumor	7316-2603_Solid Tissue	MB, WNT	MB, WNT
 PT_6VHGCV7M	BS_CH0YF9B8	7316-2624	Solid Tissue	Initial CNS Tumor	7316-2624_Solid Tissue	MB, Group4	MB, Group4
-PT_6VHGCV7M	BS_PQSJ9VQW	7316-2624	Solid Tissue	Initial CNS Tumor	7316-2624_Solid Tissue	MB, Group4	MB, Group4
 PT_TVK2KY36	BS_J71N7D09	7316-2626	Solid Tissue	Initial CNS Tumor	7316-2626_Solid Tissue	MB, Group4	NA
 PT_TVK2KY36	BS_P0KXVQ8K	7316-2626	Solid Tissue	Initial CNS Tumor	7316-2626_Solid Tissue	MB, Group4	NA
 PT_TVK2KY36	BS_S34SCYW4	7316-2626	Solid Tissue	Initial CNS Tumor	7316-2626_Solid Tissue	MB, Group4	NA
@@ -171,7 +169,6 @@ PT_FXCSG8EY	BS_G9CCAMGS	7316-2701	Solid Tissue	Initial CNS Tumor	7316-2701_Solid
 PT_FXCSG8EY	BS_X56KVW29	7316-2701	Solid Tissue	Initial CNS Tumor	7316-2701_Solid Tissue	MB, Group3	MB, Group3
 PT_T03AT4BJ	BS_M7Y23VST	7316-2708	Solid Tissue	Initial CNS Tumor	7316-2708_Solid Tissue	MB, Group4	NA
 PT_T03AT4BJ	BS_NKEAAFMW	7316-2708	Solid Tissue	Initial CNS Tumor	7316-2708_Solid Tissue	MB, Group4	NA
-PT_T03AT4BJ	BS_VR2E4K25	7316-2708	Solid Tissue	Initial CNS Tumor	7316-2708_Solid Tissue	MB, Group4	NA
 PT_2S6A3RV8	BS_C8RVHTVV	7316-2711	Solid Tissue	Initial CNS Tumor	7316-2711_Solid Tissue	MB, SHH	NA
 PT_2S6A3RV8	BS_PYTJAVWN	7316-2711	Solid Tissue	Initial CNS Tumor	7316-2711_Solid Tissue	MB, SHH	NA
 PT_2S6A3RV8	BS_VYQSFAKR	7316-2711	Solid Tissue	Initial CNS Tumor	7316-2711_Solid Tissue	MB, SHH	NA
@@ -240,7 +237,6 @@ PT_97EQQMT9	BS_53BCKC4V	7316-3114	Solid Tissue	Initial CNS Tumor	7316-3114_Solid
 PT_97EQQMT9	BS_ZDJB4BK4	7316-3114	Solid Tissue	Initial CNS Tumor	7316-3114_Solid Tissue	MB, SHH	NA
 PT_74XM7BV7	BS_47GABKYC	7316-312	Solid Tissue	Recurrence	7316-312_Solid Tissue	MB, Group3	NA
 PT_74XM7BV7	BS_M86ECPHK	7316-312	Solid Tissue	Recurrence	7316-312_Solid Tissue	MB, Group3	NA
-PT_M26VF62B	BS_B1YQHE16	7316-3124	Solid Tissue	Initial CNS Tumor	7316-3124_Solid Tissue	MB, SHH	MB, SHH
 PT_M26VF62B	BS_SDV5CN6V	7316-3124	Solid Tissue	Initial CNS Tumor	7316-3124_Solid Tissue	MB, SHH	MB, SHH
 PT_QW5VW2PY	BS_A4KYP5H0	7316-313	Solid Tissue	Initial CNS Tumor	7316-313_Solid Tissue	MB, Group4	MB, Group4
 PT_QW5VW2PY	BS_HHPA8NJ2	7316-313	Solid Tissue	Initial CNS Tumor	7316-313_Solid Tissue	MB, Group4	MB, Group4
@@ -253,13 +249,11 @@ PT_45P9F9MD	BS_0RF0G9SQ	7316-314	Solid Tissue	Initial CNS Tumor	7316-314_Solid T
 PT_45P9F9MD	BS_GNV89A5P	7316-314	Solid Tissue	Initial CNS Tumor	7316-314_Solid Tissue	MB, Group4	MB, Group4
 PT_SBP79T7F	BS_4XRT5H2P	7316-315	Solid Tissue	Initial CNS Tumor	7316-315_Solid Tissue	MB, Group4	MB, Group4
 PT_SBP79T7F	BS_7FWZ518S	7316-315	Solid Tissue	Initial CNS Tumor	7316-315_Solid Tissue	MB, Group4	MB, Group4
-PT_3GP5H8Z0	BS_QRM7A5YZ	7316-3170	Solid Tissue	Initial CNS Tumor	7316-3170_Solid Tissue	MB, WNT	MB, WNT
 PT_3GP5H8Z0	BS_TW395V33	7316-3170	Solid Tissue	Initial CNS Tumor	7316-3170_Solid Tissue	MB, WNT	MB, WNT
 PT_3GP5H8Z0	BS_XC0PNBG2	7316-3170	Solid Tissue	Initial CNS Tumor	7316-3170_Solid Tissue	MB, WNT	MB, WNT
 PT_NV584F7Q	BS_NMQD5VJY	7316-3192	Solid Tissue	Initial CNS Tumor	7316-3192_Solid Tissue	MB, Group4	MB, Group4
 PT_NV584F7Q	BS_TYAYZ9ZW	7316-3192	Solid Tissue	Initial CNS Tumor	7316-3192_Solid Tissue	MB, Group4	MB, Group4
 PT_NV584F7Q	BS_X7QJCVJB	7316-3192	Solid Tissue	Initial CNS Tumor	7316-3192_Solid Tissue	MB, Group4	MB, Group4
-PT_A5S5BB3A	BS_5D1QYYFE	7316-3195	Solid Tissue	Initial CNS Tumor	7316-3195_Solid Tissue	MB, Group3	MB, Group3
 PT_A5S5BB3A	BS_FGPTXWAV	7316-3195	Solid Tissue	Initial CNS Tumor	7316-3195_Solid Tissue	MB, Group3	MB, Group3
 PT_A5S5BB3A	BS_QE6F8DQW	7316-3195	Solid Tissue	Initial CNS Tumor	7316-3195_Solid Tissue	MB, Group3	MB, Group3
 PT_GH6HM5QF	BS_70FKSKM9	7316-3202	Solid Tissue	Initial CNS Tumor	7316-3202_Solid Tissue	MB, SHH	NA
@@ -272,8 +266,6 @@ PT_9S6WMQ92	BS_1CZPVCXR	7316-333	Solid Tissue	Progressive	7316-333_Solid Tissue	
 PT_9S6WMQ92	BS_Q400D66E	7316-333	Solid Tissue	Progressive	7316-333_Solid Tissue	MB, SHH	NA
 PT_9S6WMQ92	BS_S6Q7NKA3	7316-333	Solid Tissue	Progressive	7316-333_Solid Tissue	MB, SHH	NA
 PT_H9QTP1JF	BS_336M1VHM	7316-3334	Solid Tissue	Recurrence	7316-3334_Solid Tissue	MB, SHH	MB, SHH
-PT_H9QTP1JF	BS_XH4QH13B	7316-3334	Solid Tissue	Recurrence	7316-3334_Solid Tissue	MB, SHH	MB, SHH
-PT_F1AMYRMZ	BS_M56NS0SQ	7316-3405	Solid Tissue	Initial CNS Tumor	7316-3405_Solid Tissue	MB, To be classified	NA
 PT_T3JEF4ZH	BS_6G19QBAY	7316-3409	Solid Tissue	Initial CNS Tumor	7316-3409_Solid Tissue	MB, Group3	MB, Group3
 PT_T3JEF4ZH	BS_9H0M145X	7316-3409	Solid Tissue	Initial CNS Tumor	7316-3409_Solid Tissue	MB, Group3	MB, Group3
 PT_7QKGGMKV	BS_FBYXT186	7316-347	Solid Tissue	Initial CNS Tumor	7316-347_Solid Tissue	MB, Group4	MB, Group4
@@ -289,7 +281,6 @@ PT_X1XVE1XX	BS_A87NPZAP	7316-3511	Solid Tissue	Initial CNS Tumor	7316-3511_Solid
 PT_X1XVE1XX	BS_ENCVX9ZP	7316-3511	Solid Tissue	Initial CNS Tumor	7316-3511_Solid Tissue	MB, Group4	MB, Group4
 PT_X1XVE1XX	BS_XNTQBZAJ	7316-3511	Solid Tissue	Initial CNS Tumor	7316-3511_Solid Tissue	MB, Group4	MB, Group4
 PT_FRZQJNW9	BS_22QMSCFR	7316-3542	Solid Tissue	Initial CNS Tumor	7316-3542_Solid Tissue	MB, Group3	NA
-PT_FRZQJNW9	BS_YTE4SYEN	7316-3542	Solid Tissue	Initial CNS Tumor	7316-3542_Solid Tissue	MB, Group3	NA
 PT_26V72ZXB	BS_9CV76DXE	7316-3576	Not Available	Initial CNS Tumor	7316-3576_Not Available	MB, To be classified	NA
 PT_26V72ZXB	BS_QZT3SPY7	7316-3576	Solid Tissue	Initial CNS Tumor	7316-3576_Solid Tissue	MB, Group3	NA
 PT_26V72ZXB	BS_R439VVPK	7316-3576	Solid Tissue	Initial CNS Tumor	7316-3576_Solid Tissue	MB, Group3	NA
@@ -308,13 +299,11 @@ PT_X4TT75N8	BS_ECP485VV	7316-3659	Solid Tissue	Initial CNS Tumor	7316-3659_Solid
 PT_X4TT75N8	BS_T45AJSTV	7316-3659	Solid Tissue	Initial CNS Tumor	7316-3659_Solid Tissue	MB, Group4	MB, Group4
 PT_VJZN69T9	BS_AJ8937QY	7316-3669	Solid Tissue	Progressive	7316-3669_Solid Tissue	MB, Group3	MB, Group3
 PT_VJZN69T9	BS_Y89WNXXD	7316-3669	Solid Tissue	Progressive	7316-3669_Solid Tissue	MB, Group3	MB, Group3
-PT_VJZN69T9	BS_YZFQG0FH	7316-3669	Solid Tissue	Progressive	7316-3669_Solid Tissue	MB, Group3	MB, Group3
 PT_RQ21EBK9	BS_39Q80NT3	7316-367	Solid Tissue	Initial CNS Tumor	7316-367_Solid Tissue	MB, Group4	MB, Group4
 PT_RQ21EBK9	BS_3MYEMXPQ	7316-367	Solid Tissue	Initial CNS Tumor	7316-367_Solid Tissue	MB, Group4	MB, Group4
 PT_RQ21EBK9	BS_WKNHM9QK	7316-367	Solid Tissue	Initial CNS Tumor	7316-367_Solid Tissue	MB, Group4	MB, Group4
 PT_W6D0547F	BS_28SW7RBN	7316-3681	Solid Tissue	Initial CNS Tumor	7316-3681_Solid Tissue	MB, Group4	MB, Group4
 PT_W6D0547F	BS_PYC7BDDF	7316-3681	Solid Tissue	Initial CNS Tumor	7316-3681_Solid Tissue	MB, Group4	MB, Group4
-PT_6J1350XD	BS_58ZJ93W0	7316-3690	Solid Tissue	Initial CNS Tumor	7316-3690_Solid Tissue	MB, To be classified	NA
 PT_K2FGJ1X7	BS_61ARW0V1	7316-3726	Solid Tissue	Initial CNS Tumor	7316-3726_Solid Tissue	MB, Group4	MB, Group4
 PT_K2FGJ1X7	BS_N9X43JSB	7316-3726	Solid Tissue	Initial CNS Tumor	7316-3726_Solid Tissue	MB, Group4	MB, Group4
 PT_K2FGJ1X7	BS_SR2M85RQ	7316-3726	Solid Tissue	Initial CNS Tumor	7316-3726_Solid Tissue	MB, Group4	MB, Group4
@@ -364,13 +353,11 @@ PT_9B3YD5DR	BS_0E8WBZBF	7316-411	Solid Tissue	Initial CNS Tumor	7316-411_Solid T
 PT_9B3YD5DR	BS_KX9ECQZW	7316-411	Solid Tissue	Initial CNS Tumor	7316-411_Solid Tissue	MB, Group4	MB, Group4
 PT_9B3YD5DR	BS_MJYJDAD5	7316-411	Solid Tissue	Initial CNS Tumor	7316-411_Solid Tissue	MB, Group4	MB, Group4
 PT_H9QTP1JF	BS_7SMY657N	7316-4162	Solid Tissue	Progressive	7316-4162_Solid Tissue	MB, SHH	NA
-PT_H9QTP1JF	BS_TFYBVE0A	7316-4162	Solid Tissue	Progressive	7316-4162_Solid Tissue	MB, SHH	NA
 PT_CMPNS3BQ	BS_1ZWSD3YQ	7316-4174	Solid Tissue	Initial CNS Tumor	7316-4174_Solid Tissue	MB, Group3	NA
 PT_CMPNS3BQ	BS_B5AQJ9XV	7316-4174	Solid Tissue	Initial CNS Tumor	7316-4174_Solid Tissue	MB, Group3	NA
 PT_CMPNS3BQ	BS_XQ33BNV0	7316-4174	Solid Tissue	Initial CNS Tumor	7316-4174_Solid Tissue	MB, Group3	NA
 PT_BTYG7JR9	BS_34CAMM62	7316-4187	Solid Tissue	Progressive	7316-4187_Solid Tissue	MB, Group3	MB, Group3
 PT_BTYG7JR9	BS_60KVHAYR	7316-4187	Solid Tissue	Progressive	7316-4187_Solid Tissue	MB, Group3	MB, Group3
-PT_BTYG7JR9	BS_R0Z82GZX	7316-4187	Solid Tissue	Progressive	7316-4187_Solid Tissue	MB, Group3	MB, Group3
 PT_NZ85YSJ1	BS_0HKNEFQC	7316-4188	Solid Tissue	Initial CNS Tumor	7316-4188_Solid Tissue	MB, Group4	MB, Group4
 PT_NZ85YSJ1	BS_4HRYS7JY	7316-4188	Solid Tissue	Initial CNS Tumor	7316-4188_Solid Tissue	MB, Group4	MB, Group4
 PT_NZ85YSJ1	BS_DX75YHQE	7316-4188	Solid Tissue	Initial CNS Tumor	7316-4188_Solid Tissue	MB, Group4	MB, Group4
@@ -489,7 +476,6 @@ PT_BK06Z2Q1	BS_BEKKNDWB	7316-5187	Solid Tissue	Initial CNS Tumor	7316-5187_Solid
 PT_BK06Z2Q1	BS_P2774N21	7316-5187	Solid Tissue	Initial CNS Tumor	7316-5187_Solid Tissue	MB, Group4	MB, Group4
 PT_BK06Z2Q1	BS_XK0FGTT0	7316-5187	Solid Tissue	Initial CNS Tumor	7316-5187_Solid Tissue	MB, Group4	MB, Group4
 PT_9KRSSPSF	BS_4VD4ZEQQ	7316-520	Solid Tissue	Initial CNS Tumor	7316-520_Solid Tissue	MB, SHH	MB, SHH
-PT_9KRSSPSF	BS_N30XYWEN	7316-520	Solid Tissue	Initial CNS Tumor	7316-520_Solid Tissue	MB, SHH	MB, SHH
 PT_K94ZVZMX	BS_KQER6QAE	7316-521	Solid Tissue	Initial CNS Tumor	7316-521_Solid Tissue	MB, WNT	NA
 PT_K94ZVZMX	BS_N4B1SZZH	7316-521	Solid Tissue	Initial CNS Tumor	7316-521_Solid Tissue	MB, WNT	NA
 PT_K94ZVZMX	BS_W3R2DQ86	7316-521	Solid Tissue	Initial CNS Tumor	7316-521_Solid Tissue	MB, WNT	NA
@@ -515,7 +501,6 @@ PT_G9XKWA3N	BS_DH9NX6ZR	7316-5463	Solid Tissue	Initial CNS Tumor	7316-5463_Solid
 PT_G9XKWA3N	BS_FPZ63KF4	7316-5463	Solid Tissue	Initial CNS Tumor	7316-5463_Solid Tissue	MB, Group4	MB, Group4
 PT_G9XKWA3N	BS_N5QX15C8	7316-5463	Not Available	Initial CNS Tumor	7316-5463_Not Available	MB, To be classified	NA
 PT_G9XKWA3N	BS_RYRWBV7K	7316-5463	Solid Tissue	Initial CNS Tumor	7316-5463_Solid Tissue	MB, Group4	MB, Group4
-PT_26V72ZXB	BS_A024WSJX	7316-5473	Solid Tissue	Progressive	7316-5473_Solid Tissue	MB, Group3	MB, Group3
 PT_26V72ZXB	BS_AEX9TT0Z	7316-5473	Solid Tissue	Progressive	7316-5473_Solid Tissue	MB, Group3	MB, Group3
 PT_26V72ZXB	BS_RMG3XZQQ	7316-5473	Solid Tissue	Progressive	7316-5473_Solid Tissue	MB, Group3	MB, Group3
 PT_VW5Y6N97	BS_DPRBAXTR	7316-5515	Solid Tissue	Initial CNS Tumor	7316-5515_Solid Tissue	MB, SHH	MB, SHH
@@ -584,7 +569,6 @@ PT_6A7123NH	BS_VPH2J6ES	7316-6533	Solid Tissue	Initial CNS Tumor	7316-6533_Solid
 PT_DAKPNP7K	BS_1DA3F1K1	7316-6643	Solid Tissue	Progressive	7316-6643_Solid Tissue	MB, Group3	MB, Group3
 PT_DAKPNP7K	BS_5NFX4ZRQ	7316-6643	Solid Tissue	Progressive	7316-6643_Solid Tissue	MB, Group3	MB, Group3
 PT_DAKPNP7K	BS_NXDCQRZJ	7316-6643	Not Available	Progressive	7316-6643_Not Available	MB, To be classified	NA
-PT_ZG4J0EK0	BS_G14MSJYQ	7316-6664	Solid Tissue	Recurrence	7316-6664_Solid Tissue	MB, Group3	MB, Group3
 PT_ZG4J0EK0	BS_SFD4VRYG	7316-6664	Solid Tissue	Recurrence	7316-6664_Solid Tissue	MB, Group3	MB, Group3
 PT_ZG4J0EK0	BS_Y3GY1GSH	7316-6664	Solid Tissue	Recurrence	7316-6664_Solid Tissue	MB, Group3	MB, Group3
 PT_2N647SBA	BS_A83P2345	7316-6685	Solid Tissue	Initial CNS Tumor	7316-6685_Solid Tissue	MB, SHH	MB, SHH
@@ -596,13 +580,13 @@ PT_EDWA0XTP	BS_WP2D11SK	7316-670	Solid Tissue	Initial CNS Tumor	7316-670_Solid T
 PT_EZS4SRH6	BS_HD4EJYE3	7316-676	Solid Tissue	Initial CNS Tumor	7316-676_Solid Tissue	MB, Group4	MB, Group4
 PT_EZS4SRH6	BS_T7SSWRA0	7316-676	Solid Tissue	Initial CNS Tumor	7316-676_Solid Tissue	MB, Group4	MB, Group4
 PT_EZS4SRH6	BS_X1R0N8QS	7316-676	Solid Tissue	Initial CNS Tumor	7316-676_Solid Tissue	MB, Group4	MB, Group4
-PT_84ZTC7PV	BS_7GF5144B	7316-678	Solid Tissue	Initial CNS Tumor	7316-678_Solid Tissue	MB, Group4	MB, Group4
 PT_84ZTC7PV	BS_XXQKWJQR	7316-678	Solid Tissue	Initial CNS Tumor	7316-678_Solid Tissue	MB, Group4	MB, Group4
 PT_9MT2G8NE	BS_10Z9BMZ7	7316-6781	Solid Tissue	Initial CNS Tumor	7316-6781_Solid Tissue	MB, Group3	MB, Group3
 PT_9MT2G8NE	BS_CZEC9YAH	7316-6781	Solid Tissue	Initial CNS Tumor	7316-6781_Solid Tissue	MB, Group3	MB, Group3
 PT_9MT2G8NE	BS_KWXJ584D	7316-6781	Not Available	Initial CNS Tumor	7316-6781_Not Available	MB, To be classified	NA
 PT_9MT2G8NE	BS_YDZ4J968	7316-6781	Not Available	Initial CNS Tumor	7316-6781_Not Available	MB, To be classified	NA
 PT_4J766Q6K	BS_02JZJRYD	7316-6785	Not Available	Initial CNS Tumor	7316-6785_Not Available	MB, To be classified	NA
+PT_4J766Q6K	BS_95EMTN3E	7316-6785	Solid Tissue	Initial CNS Tumor	7316-6785_Solid Tissue	MB, To be classified	NA
 PT_4J766Q6K	BS_EXZ4ZMMH	7316-6785	Not Available	Initial CNS Tumor	7316-6785_Not Available	MB, To be classified	NA
 PT_6PPHRJZB	BS_6XHRA95C	7316-6792	Solid Tissue	Initial CNS Tumor	7316-6792_Solid Tissue	MB, Group4	MB, Group4
 PT_6PPHRJZB	BS_FVZMSC5K	7316-6792	Solid Tissue	Initial CNS Tumor	7316-6792_Solid Tissue	MB, Group4	MB, Group4
@@ -619,10 +603,10 @@ PT_WH5PD8ZK	BS_5EBCN02A	7316-6808	Solid Tissue	Initial CNS Tumor	7316-6808_Solid
 PT_WH5PD8ZK	BS_RGQH7K0C	7316-6808	Solid Tissue	Initial CNS Tumor	7316-6808_Solid Tissue	MB, Group4	NA
 PT_WH5PD8ZK	BS_Z4RS1691	7316-6808	Solid Tissue	Initial CNS Tumor	7316-6808_Solid Tissue	MB, Group4	NA
 PT_MCC2RZ5H	BS_6PWHC64Y	7316-6823	Solid Tissue	Initial CNS Tumor	7316-6823_Solid Tissue	MB, Group4	NA
+PT_MCC2RZ5H	BS_BP1EZNGF	7316-6823	Solid Tissue	Initial CNS Tumor	7316-6823_Solid Tissue	MB, Group4	NA
 PT_GY0MCXR8	BS_1KMVTHES	7316-683	Solid Tissue	Initial CNS Tumor	7316-683_Solid Tissue	MB, WNT	MB, WNT
 PT_GY0MCXR8	BS_HD33RVPJ	7316-683	Solid Tissue	Initial CNS Tumor	7316-683_Solid Tissue	MB, WNT	MB, WNT
 PT_GY0MCXR8	BS_QATZJBWR	7316-683	Solid Tissue	Initial CNS Tumor	7316-683_Solid Tissue	MB, WNT	MB, WNT
-PT_W2G4Y7HG	BS_GMB12C07	7316-6887	Solid Tissue	Recurrence	7316-6887_Solid Tissue	MB, Group3	MB, Group3
 PT_W2G4Y7HG	BS_YG39AE0N	7316-6887	Solid Tissue	Recurrence	7316-6887_Solid Tissue	MB, Group3	MB, Group3
 PT_1A4HM6FR	BS_4FKXNJHW	7316-6980	Solid Tissue	Initial CNS Tumor	7316-6980_Solid Tissue	MB, Group4	MB, Group4
 PT_1A4HM6FR	BS_HC77B45S	7316-6980	Solid Tissue	Initial CNS Tumor	7316-6980_Solid Tissue	MB, Group4	MB, Group4
@@ -643,11 +627,11 @@ PT_65B5CGQG	BS_CNBP5W3S	7316-7110	Not Available	Initial CNS Tumor	7316-7110_Not 
 PT_65B5CGQG	BS_F0EA1FGK	7316-7110	Solid Tissue	Initial CNS Tumor	7316-7110_Solid Tissue	MB, WNT	MB, WNT
 PT_65B5CGQG	BS_PC107GE3	7316-7110	Solid Tissue	Initial CNS Tumor	7316-7110_Solid Tissue	MB, WNT	MB, WNT
 PT_0KTVJ74J	BS_FHM1TKTT	7316-7135	Solid Tissue	Deceased	7316-7135_Solid Tissue	MB, SHH	NA
+PT_0KTVJ74J	BS_K5XA5N93	7316-7135	Solid Tissue	Deceased	7316-7135_Solid Tissue	MB, SHH	NA
 PT_NZ85YSJ1	BS_7M1ZAZ7B	7316-7194	Solid Tissue	Deceased	7316-7194_Solid Tissue	MB, To be classified	NA
 PT_NZ85YSJ1	BS_Q7QH96SX	7316-7194	Solid Tissue	Deceased	7316-7194_Solid Tissue	MB, To be classified	NA
 PT_76W7C93V	BS_T0G1JWZV	7316-7208	Solid Tissue	Initial CNS Tumor	7316-7208_Solid Tissue	MB, Group4	MB, Group4
 PT_76W7C93V	BS_VE1D2BFM	7316-7208	Solid Tissue	Initial CNS Tumor	7316-7208_Solid Tissue	MB, Group4	MB, Group4
-PT_27M5988T	BS_SE8D7CWD	7316-7286	Solid Tissue	Initial CNS Tumor	7316-7286_Solid Tissue	MB, To be classified	NA
 PT_FN4GEEFR	BS_9Z5PWXZB	7316-729	Solid Tissue	Initial CNS Tumor	7316-729_Solid Tissue	MB, SHH	MB, SHH
 PT_FN4GEEFR	BS_BPWEFR89	7316-729	Solid Tissue	Initial CNS Tumor	7316-729_Solid Tissue	MB, SHH	MB, SHH
 PT_FN4GEEFR	BS_BX8AR74E	7316-729	Solid Tissue	Initial CNS Tumor	7316-729_Solid Tissue	MB, SHH	MB, SHH
@@ -674,7 +658,6 @@ PT_6H0WGQ6E	BS_91NSXESW	7316-7503	Not Available	Initial CNS Tumor	7316-7503_Not 
 PT_6H0WGQ6E	BS_BGMFE63Q	7316-7503	Not Available	Initial CNS Tumor	7316-7503_Not Available	MB, To be classified	NA
 PT_6H0WGQ6E	BS_DSXA9WZK	7316-7503	Solid Tissue	Initial CNS Tumor	7316-7503_Solid Tissue	MB, SHH	MB, SHH
 PT_6H0WGQ6E	BS_R8F3DR5F	7316-7503	Solid Tissue	Initial CNS Tumor	7316-7503_Solid Tissue	MB, SHH	MB, SHH
-PT_PN1YJD1M	BS_1S2RA2FN	7316-7567	Solid Tissue	Initial CNS Tumor	7316-7567_Solid Tissue	MB, Group3	MB, Group3
 PT_PN1YJD1M	BS_4Z2JRAC6	7316-7567	Solid Tissue	Initial CNS Tumor	7316-7567_Solid Tissue	MB, Group3	MB, Group3
 PT_W4M7YD0J	BS_P14GK1PS	7316-7598	Solid Tissue	Initial CNS Tumor	7316-7598_Solid Tissue	MB, SHH	NA
 PT_W4M7YD0J	BS_P3NDA9Z7	7316-7598	Solid Tissue	Initial CNS Tumor	7316-7598_Solid Tissue	MB, SHH	NA
@@ -687,6 +670,7 @@ PT_H0Y8DJA8	BS_PS00F8DA	7316-7742	Solid Tissue	Initial CNS Tumor	7316-7742_Solid
 PT_MKZ7ESSF	BS_93DGTKHY	7316-7753	Solid Tissue	Initial CNS Tumor	7316-7753_Solid Tissue	MB, Group4	MB, Group4
 PT_MKZ7ESSF	BS_RPF3Z9P9	7316-7753	Solid Tissue	Initial CNS Tumor	7316-7753_Solid Tissue	MB, Group4	MB, Group4
 PT_MKZ7ESSF	BS_SXXD403S	7316-7753	Solid Tissue	Initial CNS Tumor	7316-7753_Solid Tissue	MB, Group4	MB, Group4
+PT_KE0A6FHD	BS_CGQXVQH1	7316-7806	Solid Tissue	Initial CNS Tumor	7316-7806_Solid Tissue	MB, Group3	NA
 PT_KE0A6FHD	BS_RE4X3715	7316-7806	Solid Tissue	Initial CNS Tumor	7316-7806_Solid Tissue	MB, Group3	NA
 PT_H0PXZWJ6	BS_25ZA6DP6	7316-7930	Not Available	Initial CNS Tumor	7316-7930_Not Available	MB, To be classified	NA
 PT_H0PXZWJ6	BS_D0J34RBW	7316-7930	Solid Tissue	Initial CNS Tumor	7316-7930_Solid Tissue	MB, Group3	MB, Group3
@@ -705,19 +689,11 @@ PT_K71TQSF4	BS_9J2R4B8S	7316-8046	Solid Tissue	Deceased	7316-8046_Solid Tissue	M
 PT_K71TQSF4	BS_HKCEZ21S	7316-8046	Solid Tissue	Deceased	7316-8046_Solid Tissue	MB, Group4	NA
 PT_K71TQSF4	BS_J48PMH5C	7316-8046	Solid Tissue	Deceased	7316-8046_Solid Tissue	MB, Group4	NA
 PT_K71TQSF4	BS_WJMR3X7P	7316-8046	Solid Tissue	Deceased	7316-8046_Solid Tissue	MB, Group4	NA
-PT_T0MRCE9A	BS_6AAJ8JBD	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_T0MRCE9A	BS_765VDA4Q	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_7SVNJTTG	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_T0MRCE9A	BS_91DFC8Z3	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_T0MRCE9A	BS_9ABXKE6Y	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_9WNRPT1P	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_AYYWDHWJ	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_B3JHHP3X	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_T0MRCE9A	BS_CX25HQBY	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_KQZY3ZRV	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_T0MRCE9A	BS_NKCEJ5YG	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_QYHHN0W2	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
-PT_T0MRCE9A	BS_W2EFWR50	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_T0MRCE9A	BS_XV5MXCGE	7316-8053	Solid Tissue	Deceased	7316-8053_Solid Tissue	MB, SHH	NA
 PT_S0XSZAF2	BS_C7G3F912	7316-8068	Solid Tissue	Initial CNS Tumor	7316-8068_Solid Tissue	MB, SHH	MB, SHH
 PT_W9ZYNS8Y	BS_56W96Q43	7316-8109	Solid Tissue	Initial CNS Tumor	7316-8109_Solid Tissue	MB, Group3	MB, Group3
@@ -779,6 +755,7 @@ PT_B4RTR0T5	BS_FV820J38	7316-8916	Solid Tissue	Initial CNS Tumor	7316-8916_Solid
 PT_B4RTR0T5	BS_JP186GB0	7316-8916	Solid Tissue	Initial CNS Tumor	7316-8916_Solid Tissue	MB, Group4	MB, Group4
 PT_B4RTR0T5	BS_QWWYFRGZ	7316-8916	Solid Tissue	Initial CNS Tumor	7316-8916_Solid Tissue	MB, Group4	MB, Group4
 PT_M91MGM4K	BS_E67QTP84	7316-8938	Solid Tissue	Initial CNS Tumor	7316-8938_Solid Tissue	MB, SHH	NA
+PT_M91MGM4K	BS_JDDMWG64	7316-8938	Solid Tissue	Initial CNS Tumor	7316-8938_Solid Tissue	MB, SHH	NA
 PT_Q90R6M3E	BS_5PJCHF6V	7316-897	Solid Tissue	Initial CNS Tumor	7316-897_Solid Tissue	MB, Group4	MB, Group4
 PT_Q90R6M3E	BS_H8QK3J0B	7316-897	Solid Tissue	Initial CNS Tumor	7316-897_Solid Tissue	MB, Group4	MB, Group4
 PT_Q90R6M3E	BS_XGMXJKFX	7316-897	Solid Tissue	Initial CNS Tumor	7316-897_Solid Tissue	MB, Group4	MB, Group4
@@ -799,10 +776,18 @@ PT_9A6RPJ97	BS_4D9DD103	7316-906	Solid Tissue	Initial CNS Tumor	7316-906_Solid T
 PT_9A6RPJ97	BS_NEZ4TS7F	7316-906	Solid Tissue	Initial CNS Tumor	7316-906_Solid Tissue	MB, WNT	MB, WNT
 PT_9A6RPJ97	BS_RHEBGZF8	7316-906	Solid Tissue	Initial CNS Tumor	7316-906_Solid Tissue	MB, WNT	MB, WNT
 PT_MYNKT1TK	BS_27GVG2B7	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_6P8GWSCZ	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
 PT_MYNKT1TK	BS_83HGE3WV	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_95ERKNCZ	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_9VB2SEYP	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
 PT_MYNKT1TK	BS_AQFQBR2R	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_ATN1ZVEX	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_CRR6RTMG	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
 PT_MYNKT1TK	BS_F8F0EYRG	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_HT74FBJ2	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_RG9W7TH4	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
 PT_MYNKT1TK	BS_YBD8KGXQ	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
+PT_MYNKT1TK	BS_Z7ADGXGV	7316-9075	Solid Tissue	Deceased	7316-9075_Solid Tissue	MB, SHH	NA
 PT_39HBKSGG	BS_61E80SD6	7316-908	Solid Tissue	Initial CNS Tumor	7316-908_Solid Tissue	MB, Group4	MB, Group4
 PT_39HBKSGG	BS_EKJTEJAR	7316-908	Solid Tissue	Initial CNS Tumor	7316-908_Solid Tissue	MB, Group4	MB, Group4
 PT_39HBKSGG	BS_Z5D6G1S6	7316-908	Solid Tissue	Initial CNS Tumor	7316-908_Solid Tissue	MB, Group4	MB, Group4
@@ -827,6 +812,7 @@ PT_BW36HGH4	BS_0VMW2NWK	7316-9488	Solid Tissue	Initial CNS Tumor	7316-9488_Solid
 PT_BW36HGH4	BS_G6YHGFF2	7316-9488	Solid Tissue	Initial CNS Tumor	7316-9488_Solid Tissue	MB, Group4	MB, Group4
 PT_9S6WMQ92	BS_FCAKKZ20	7316-95	Solid Tissue	Progressive	7316-95_Solid Tissue	MB, SHH	NA
 PT_9S6WMQ92	BS_ZR75EKKX	7316-95	Solid Tissue	Progressive	7316-95_Solid Tissue	MB, SHH	NA
+PT_SDNP56RH	BS_Z4YCK78X	7316-9509	Solid Tissue	Initial CNS Tumor	7316-9509_Solid Tissue	MB, To be classified	NA
 PT_XX2VW3D9	BS_0J5GC803	7316-96	Solid Tissue	Initial CNS Tumor	7316-96_Solid Tissue	MB, Group3	MB, MYO
 PT_XX2VW3D9	BS_3F3XBXZ4	7316-96	Solid Tissue	Initial CNS Tumor	7316-96_Solid Tissue	MB, Group3	MB, MYO
 PT_XX2VW3D9	BS_VJVDJABP	7316-96	Solid Tissue	Initial CNS Tumor	7316-96_Solid Tissue	MB, Group3	MB, MYO
@@ -840,6 +826,7 @@ PT_JGTXEKNV	BS_DWSKVGZ9	7316-9742	Solid Tissue	Initial CNS Tumor	7316-9742_Solid
 PT_Q0N3AG4D	BS_C0GQVFWA	7316-9804	Solid Tissue	Initial CNS Tumor	7316-9804_Solid Tissue	MB, SHH	NA
 PT_Q0N3AG4D	BS_HP7S6Y13	7316-9804	Solid Tissue	Initial CNS Tumor	7316-9804_Solid Tissue	MB, SHH	NA
 PT_Q0N3AG4D	BS_NK9XQ95W	7316-9804	Solid Tissue	Initial CNS Tumor	7316-9804_Solid Tissue	MB, SHH	NA
+PT_98W7YNZ7	BS_2TXVAHMQ	7316-9824	Solid Tissue	Initial CNS Tumor	7316-9824_Solid Tissue	MB, Group3	NA
 PT_98W7YNZ7	BS_BE1WV2B2	7316-9824	Solid Tissue	Initial CNS Tumor	7316-9824_Solid Tissue	MB, Group3	NA
 PT_SCRJF38G	BS_8QP9RPQM	7316-99	Solid Tissue	Initial CNS Tumor	7316-99_Solid Tissue	MB, Group3	MB, Group3
 PT_A4Q2TSC5	BS_AVXJSWEN	C4105125-Tumor	Solid Tissue	Initial CNS Tumor	C4105125-Tumor_Solid Tissue	MB, Group4	NA
