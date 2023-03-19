@@ -19,10 +19,10 @@ histology_df <- readr::read_tsv(file.path(root_dir, 'data/histologies.tsv'), gue
 set.seed(100)
 histology_df <- histology_df[sample(nrow(histology_df)), ]
 
-# Filter to only WGS samples from tumors, where composition is not "Derived Cell Line"
+# Filter to only WGS samples from tumors, where composition is not "Derived Cell Line" and "PDX"
 wgs_samples <- histology_df %>%
   dplyr::filter(sample_type == "Tumor", 
-                composition != "Derived Cell Line", 
+                !composition %in% c("Derived Cell Line", "PDX"), 
                 experimental_strategy == "WGS",
                 !grepl("Metastatic secondary tumors", pathology_diagnosis, ignore.case = FALSE, perl = FALSE,
                        fixed = FALSE, useBytes = FALSE))
