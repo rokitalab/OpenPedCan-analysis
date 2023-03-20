@@ -81,6 +81,7 @@ PBTA	Spinal ependymoma	Ependymoma	No	Yes
 DGD	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
 PBTA	Spinal ependymoma, MYCN-amplified	Ependymoma	Yes	Yes
 PBTA	Posterior fossa subependymoma	Ependymoma	No	Yes
+PBTA	Spinal subependymoma	Ependymoma	No	Yes
 PBTA	Epstein-Barr virus-related tumor	Epstein-Barr virus-related tumor	No	No
 TCGA	Esophageal Carcinoma	Esophageal Carcinoma	No	No
 PBTA	Ewing sarcoma	Ewing sarcoma	No	No
@@ -122,6 +123,7 @@ TARGET	Ganglioneuroma, maturing subtype OR Ganglioneuroblastoma, well differenti
 DGD	Germ Cell Tumor	Germ Cell Tumor	No	No
 PBTA	Germinoma	Germinoma	No	No
 DGD	Germinoma	Germinoma	No	No
+PBTA	Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor	No	Yes
 PBTA	Glial-neuronal tumor NOS	Glial-neuronal tumor NOS	No	No
 PBTA	Glial-neuronal tumor NOS,  BRAF V600E	Glial-neuronal tumor NOS	Yes	No
 PBTA	Glial-neuronal tumor NOS,  To be classified	Glial-neuronal tumor NOS	Yes	No
@@ -161,10 +163,10 @@ DGD	Juvenile Xanthogranuloma	Juvenile xanthogranuloma	No	Yes
 PBTA	Langerhans Cell histiocytosis	Langerhans Cell histiocytosis	No	No
 DGD	Langerhans Cell histiocytosis	Langerhans Cell histiocytosis	No	No
 PBTA	Low-grade glioma, other MAPK	Low-grade glioma	Yes	No
-PBTA	Low-grade glioma, wildtype	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, NF1-germline	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, RTK	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma, wildtype	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, IDH	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, FGFR	Low-grade glioma	Yes	No
@@ -227,10 +229,10 @@ GMKF	Neuroblastoma	Neuroblastoma	No	No
 PBTA	Neuroblastoma	Neuroblastoma	No	No
 DGD	Neuroblastoma	Neuroblastoma	No	No
 PBTA	Neuroblastoma, MYCN non-amplified	Neuroblastoma	Yes	No
+PBTA	Neuroblastoma, MYCN-amplified	Neuroblastoma	Yes	No
 TARGET	Neuroblastoma, MYCN-amplified	Neuroblastoma	Yes	No
 TARGET	Neuroblastoma, MYCN non-amplified	Neuroblastoma	Yes	No
 TARGET	Neuroblastoma	Neuroblastoma	No	No
-PBTA	Neuroepithelial neoplasm witj EWSR1--PLAG1 fusion	Neuroepithelial neoplasm witj EWSR1--PLAG1 fusion	No	No
 PBTA	Neurofibroma/Plexiform	Neurofibroma/Plexiform	No	No
 DGD	Neurofibroma/Plexiform	Neurofibroma/Plexiform	No	No
 PBTA	Non-germinomatous germ cell tumor	Non-germinomatous germ cell tumor	No	No
@@ -268,6 +270,7 @@ DGD	High Grade Sarcoma	Sarcoma	No	Yes
 TCGA	Sarcoma	Sarcoma	No	No
 PBTA	Schwannoma	Schwannoma	No	No
 DGD	Schwannoma	Schwannoma	No	No
+PBTA	SEGA	SEGA	No	No
 TCGA	Stomach Adenocarcinoma	Stomach Adenocarcinoma	No	No
 PBTA	Subependymal Giant Cell Astrocytoma, wildtype	Subependymal Giant Cell Astrocytoma	Yes	No
 PBTA	Subependymal Giant Cell Astrocytoma (SEGA)	Subependymal Giant Cell Astrocytoma	No	Yes
@@ -313,18 +316,16 @@ DGD	Cyst	NA	No	Yes
 DGD	Hemangioma	NA	No	Yes
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	NA	No	Yes
 PBTA	Ossifying fibroma	NA	No	Yes
-PBTA	Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma	NA	No	Yes
 DGD	Hypophyseal stalk thickening	NA	No	Yes
 DGD	Not Reported	NA	No	Yes
-PBTA	Meningioma;Schwannoma	NA	No	Yes
 PBTA	Atypical lymphoid infiltrate	NA	No	Yes
-PBTA	Tuberous sclerosis	NA	No	Yes
 PBTA	Malignant peripheral nerve sheath tumor (MPNST);Neurofibroma/Plexiform	NA	No	Yes
 PBTA	Inclusion cyst	NA	No	Yes
 DGD	Adenoma	NA	No	Yes
 DGD	Aplastic anemia	NA	No	Yes
 PBTA	Ganglioglioma;Low-grade glioma/astrocytoma (WHO grade I/II)	NA	No	Yes
 DGD	Cranial fasciitis	NA	No	Yes
+PBTA	Meningioma;Schwannoma	NA	No	Yes
 PBTA	Arteriovenous malformation	NA	No	Yes
 PBTA	Hamartoma	NA	No	Yes
 DGD	Atypical lymphoid infiltrate	NA	No	Yes
@@ -336,9 +337,11 @@ PBTA	Giant cell tumor of bone	NA	No	Yes
 DGD	Chronic myeloid leukemia pathway	NA	No	Yes
 PBTA	Lipoblastoma	NA	No	Yes
 DGD	Adrenal mass	NA	No	Yes
+PBTA	Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma	NA	No	Yes
 PBTA	Chondroma	NA	No	Yes
 PBTA	Reactive connective tissue	NA	No	Yes
 DGD	Aneurismal bone cyst (abc) with col1a1-usp6 fusion	NA	No	Yes
+PBTA	Familial adenomatous polyposis	NA	No	Yes
 PBTA	Meningioma;Neurofibroma/Plexiform	NA	No	Yes
 PBTA	Myofibroma	NA	No	Yes
 DGD	Lymphadenitis	NA	No	Yes
@@ -360,7 +363,6 @@ DGD	Non-cancer diagnosis	NA	No	Yes
 PBTA	Fibroma	NA	No	Yes
 DGD	Neuroblastic tumor	NA	No	Yes
 DGD	Spinocerebellar ataxia type 7	NA	No	Yes
-PBTA	Cranial fasciitis	NA	No	Yes
 PBTA	Vascular malformation	NA	No	Yes
 DGD	Neuroendocrine carcinoma	NA	No	Yes
 DGD	Bone marrow failure	NA	No	Yes

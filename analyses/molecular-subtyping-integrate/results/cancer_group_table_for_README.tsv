@@ -33,6 +33,7 @@ Embryonal Tumor with Multilayered Rosettes (ETMR)	Embryonal tumor with multilaye
 Ependymoma;Metastatic secondary tumors	NA
 Epidermoid cyst	NA
 Epilepsy	NA
+Familial adenomatous polyposis	NA
 Fibroma	NA
 Fibromixoid lesion	Fibromyxoid lesion
 Ganglioglioma;Low-grade glioma/astrocytoma (WHO grade I/II)	NA
@@ -72,6 +73,7 @@ Myxopapillary ependymoma	Ependymoma
 Necrotizing myelopathy	NA
 Neuroblastic tumor	NA
 Neuroendocrine carcinoma	NA
+Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor
 Neurofibroma/Plexiform;Schwannoma	NA
 Neutropenia	NA
 Nodular fasciitis	NA
@@ -96,6 +98,7 @@ Rosai-dorfman	Rosai-Dorfman disease
 Shwachman-diamond syndrome	NA
 Solid pseudopapillary neoplasm of the pancreas	NA
 Spinal ependymoma	Ependymoma
+Spinal subependymoma	Ependymoma
 Spindle cell neoplasm	NA
 Spinocerebellar ataxia type 7	NA
 Subependymal Giant Cell Astrocytoma (SEGA)	Subependymal Giant Cell Astrocytoma
@@ -104,7 +107,6 @@ Supratentorial or Spinal Cord PNET	Embryonal tumor
 Therapy-Related Acute Myeloid Leukemia	Acute Myeloid Leukemia
 Thrombocytopenia	NA
 Thrombocytosis	NA
-Tuberous sclerosis	NA
 Type ii pleuropulmonary blastoma	NA
 Undifferentiated malignant neoplasm	NA
 Vascular malformation	NA
