@@ -23,7 +23,7 @@ diseases_dir <- file.path(scratch_dir, "mtp-csv", "diseases")
 list.files(diseases_dir, pattern = ".csv", full.names = TRUE) %>% 
   purrr::map(~ readr::read_csv(.x)) %>% 
   dplyr::bind_rows() %>% 
-  dplyr::select(id, name, description, dbXRefs) %>% 
+  dplyr::select(id, name, dbXRefs) %>% 
   dplyr::distinct() %>% 
   readr::write_tsv(file.path(results_dir, "mtp-diseases-mapping.tsv.gz"))
 
