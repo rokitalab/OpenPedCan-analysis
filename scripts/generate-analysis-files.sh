@@ -21,15 +21,21 @@ RUN_LOCAL=${RUN_LOCAL:-0}
 cd ..
 BASEDIR="$(pwd)"
 cd -
-  
+
+RELEASE="v12"
 analyses_dir="$BASEDIR/analyses"
-data_dir="$BASEDIR/data"
+data_dir="$BASEDIR/data/$RELEASE"
 scratch_dir="$BASEDIR/scratch"
 
 # Compile all the files that need to be included in the release in one place
 # in the scratch directory
 release_dir="${scratch_dir}/analysis-files-pre-release"
 mkdir -p ${release_dir}
+
+# Copy over cnv consensus file
+echo "Copy currently generated cnv consensus file in copy_number_consensus_call moudule"
+cp ${analyses_dir}/copy_number_consensus_call/results/cnv-consensus.seg.gz ${release_dir}
+cp ${analyses_dir}/copy_number_consensus_call/results/cnv-consensus.seg.gz ${data_dir}
 
 # Create the independent sample list using the *base* histology file (i.e. - histologies-base.tsv)
 echo "Create independent sample list for fusion filtering module"
@@ -66,6 +72,7 @@ if [ "$RUN_LOCAL" -lt "1" ]; then
 
   # Copy over GISTIC
   cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic.zip ${release_dir}
+  cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic.zip ${data_dir}
   cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic-only.seg.gz ${release_dir}
   
   # Run step that generates "most focal CN" files (annotation) using the *BASE* histology file
@@ -75,7 +82,9 @@ if [ "$RUN_LOCAL" -lt "1" ]; then
   
   ## Copy over focal CN
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${data_dir}
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${data_dir}
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${release_dir}
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${data_dir}
 
@@ -93,7 +102,8 @@ cd ${analyses_dir}/fusion-summary
 bash run-new-analysis.sh
 
 # Copy over fusion summary
-cp ${analyses_dir}/fusion-summary/results/* ${release_dir}
+cp ${analyses_dir}/fusion-summary/results/*_foi.tsv ${release_dir}
+cp ${analyses_dir}/fusion-summary/results/*_foi.tsv ${data_dir}
 
 # Run TMB
 echo "Create TMB results"
@@ -102,7 +112,14 @@ bash run_tmb_calculation.sh
 
 # Copy over TMB results
 cp ${analyses_dir}/tmb-calculation/results/snv-mutation-tmb-coding.tsv ${release_dir}
+cp ${analyses_dir}/tmb-calculation/results/snv-mutation-tmb-coding.tsv ${data_dir}
 cp ${analyses_dir}/tmb-calculation/results/snv-mutation-tmb-all.tsv ${release_dir}
+cp ${analyses_dir}/tmb-calculation/results/snv-mutation-tmb-all.tsv ${data_dir}
+
+
+# create symbolic links for generated pre-release files
+cd ${BASEDIR}/data
+ln -s $RELEASE/* .
 
 ## Generate summary files needed for subtyping
 
@@ -112,7 +129,7 @@ cd ${analyses_dir}/gene-set-enrichment-analysis
 OPENPBTA_BASE_SUBTYPING=1 bash run-gsea.sh
 
 # Copy over GSEA results for subtyping
-#cp ${analyses_dir}/gene-set-enrichment-analysis/results/gsva_scores.tsv ${release_dir}
+cp ${analyses_dir}/gene-set-enrichment-analysis/results/gsva_scores.tsv ${release_dir}
 
 # Run TP53
 echo "TP53 altered score"
@@ -124,11 +141,6 @@ cp ${analyses_dir}/tp53_nf1_score/results/* ${release_dir}
 cp ${analyses_dir}/tp53_nf1_score/plots/* ${release_dir}
 
 # Delete pre-release copied to the data directory
-rm -f ${data_dir}/independent-specimens.rnaseq.*pre-release.tsv
-rm -f ${data_dir}/fusion-putative-oncogenic.tsv
-rm -f ${data_dir}/consensus_wgs_plus_cnvkit_wxs.tsv.gz
-rm -f ${data_dir}/consensus_seg_with_status.tsv
-rm -f ${data_dir}/cnvkit_with_status.tsv
 
 # Create an md5sum file for all the files in the directories where the analysis
 # files are compiled

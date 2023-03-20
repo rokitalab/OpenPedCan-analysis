@@ -3,7 +3,6 @@ BS_05KKQDPR	PT_2KBBSP56	7316-4527	Choroid plexus papilloma	choroid plexus papill
 BS_07Q3532N	PT_G1EVC9DA	7316-4732	Choroid plexus papilloma	choroid plexus papilloma who grade i	Choroid plexus tumor	CPT	Progressive	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_0GDJQANN	PT_ABV3RS3T	7316-471	Choroid plexus papilloma	choroid plexus papilloma (who grade i)	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_0Q8G4N8H	PT_AYZA2WCW	7316-197	Choroid plexus papilloma	choroidplexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
-BS_14EC2J1V	PT_7F4TBYYQ	7316-3296	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_17FVWMNV	PT_GY99ZJHV	7316-1654	Choroid plexus papilloma	atypical choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Atypical choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_196W36QM	PT_5R8KC1A1	7316-5482	Choroid plexus papilloma	choroid plexus papilloma, who grade i	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_1EYKDS0Z	PT_JN3S17B3	7316-1693	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
@@ -23,6 +22,7 @@ BS_4K6Y2TEH	PT_QJ3144WH	7316-3204	Choroid plexus papilloma	choroid plexus papill
 BS_4SM4CG1E	PT_2S69A6JY	7316-5239	Choroid plexus papilloma	atypical choroid plexus papilloma who grade ii	Choroid plexus tumor	CPT	Initial CNS Tumor	Atypical choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_533FYRG7	PT_GTQN90DF	7316-4922	Choroid plexus papilloma	chloroplexus papilloma who grade ii	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_5BM9MXP9	PT_PHKSYE6Q	7316-220	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
+BS_5JDXT0KX	PT_H8MG4MRQ	7316-6835	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_6W8E9283	PT_N4CXYJSM	7316-4533	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_76MPTPTA	PT_JN3S17B3	7316-1693	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_7FDN6CJB	PT_HN0AXSZ0	7316-1103	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
@@ -37,9 +37,9 @@ BS_9DCNFF21	PT_GTQN90DF	7316-4922	Choroid plexus papilloma	chloroplexus papillom
 BS_9XNVJKVG	PT_2189ZWKX	7316-5262	Choroid plexus papilloma	choroid plexus papilloma who grade i	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_AGS1HHGF	PT_HN0AXSZ0	7316-1103	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_AHHP55VR	PT_WWME595X	7316-245	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
+BS_ARDM13TY	PT_KBWVBMR4	7316-7745	Choroid plexus papilloma	favor choroid plexus papilloma, who grade 1	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_AWH4X3Q3	PT_2KBBSP56	7316-4527	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_B4NHQPGV	PT_KBWVBMR4	7316-7745	Choroid plexus papilloma	favor choroid plexus papilloma, who grade 1	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
-BS_B6YFEKXJ	PT_BPW4VRZB	7316-439	Choroid plexus papilloma	atypical choroid plexus papilloma, who grade ii	Choroid plexus tumor	CPT	Initial CNS Tumor	Atypical choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_B6ZYES58	PT_GTQN90DF	7316-4922	Choroid plexus papilloma	chloroplexus papilloma who grade ii	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_B741RZY9	PT_ZS2YDFBE	7316-2860	Choroid plexus papilloma	choroid plexus papilloma	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis
 BS_BP7PZPZV	PT_R50DPWF5	7316-6772	Choroid plexus papilloma	choroid plexus papilloma with multiple cnvs, who grade i	Choroid plexus tumor	CPT	Initial CNS Tumor	Choroid plexus papilloma	Updated via pathology_free_text_diagnosis

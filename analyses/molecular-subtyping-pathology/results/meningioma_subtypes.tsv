@@ -18,7 +18,6 @@ BS_30W58P7B	PT_714QF82Q	7316-9743	Initial CNS Tumor	Meningioma	Meningioma	Atypic
 BS_354DTKHE	PT_0F3RHT8J	7316-2673	Initial CNS Tumor	Meningioma	Meningioma	Clear cell meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_398KYV92	PT_976P4557	7316-214	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_39DNBN15	PT_JXSDFPNM	7316-2142	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_3A0G4630	PT_QH9H491G	7316-8733	Recurrence	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_3CW6E0W8	PT_GKPGR452	C4106478-Tumor	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_3DCBDJAT	PT_AKQZZPH8	7316-2782	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_3F33N9RR	PT_BF3PGTF7	7316-1808	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
@@ -36,10 +35,10 @@ BS_65N6QVEF	PT_C1HRBJJD	7316-6379	Second Malignancy	Meningioma	Meningioma	Mening
 BS_6DC7GEYT	PT_4E6BXP04	7316-4968	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_6HE8H9HY	PT_976P4557	7316-214	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_6M1F3J71	PT_ECBD1D5J	7316-2177	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_6QJ1EYB8	PT_AXMVG8QE	7316-8875	Recurrence	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_6V776686	PT_C1HRBJJD	7316-6379	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_6YMJ621P	PT_0F3RHT8J	7316-2673	Initial CNS Tumor	Meningioma	Meningioma	Clear cell meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_70FFPA51	PT_BCWGRGDB	7316-3623	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
+BS_77R29074	PT_KHABYTB0	7316-8930	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_7ADKRVHT	PT_3D74J8RZ	7316-877	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_7S6GNG04	PT_QH9H491G	7316-382	Recurrence	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_7XZNDFV4	PT_T2M1338J	7316-2588	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
@@ -56,6 +55,7 @@ BS_9N1MJ2DW	PT_AXMVG8QE	7316-2732	Initial CNS Tumor	Meningioma	Meningioma	Mening
 BS_A3QZB9Y2	PT_HT4HJXY6	7316-901	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_AGAW7M7W	PT_BF3PGTF7	7316-1808	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_AJWRJG64	PT_WVPM84TF	7316-7504	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
+BS_AMARZ7J6	PT_NQXV606T	7316-7763	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_AN87J6X2	PT_PKCTFSV2	7316-242	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_BA0M71QZ	PT_BCWGRGDB	7316-3623	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_BAVWP5JG	PT_G5RA8E3N	7316-727	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
@@ -64,14 +64,11 @@ BS_BG1W2F7V	PT_QH9H491G	7316-382	Recurrence	Meningioma	Meningioma	Meningioma	Upd
 BS_BGS2YE1H	PT_F8MJBBJJ	7316-9021	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_BX7K8WF8	PT_JEW5HG4W	7316-8425	Recurrence	Meningioma	Meningioma	Meningothelial meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_C08EHVE0	PT_ZPE3RXF0	7316-3401	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_CNZQBDDX	PT_ZPE3RXF0	7316-3398	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_CQZCXSNW	PT_BCWGRGDB	7316-3639	Progressive	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_D008KA45	PT_1JRQQVYZ	7316-5899	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_D0KV2X28	PT_ZPE3RXF0	7316-3398	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_D3KVGMRJ	PT_AQWDQW27	7316-1705	Progressive	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_D9GEXXHX	PT_AQWDQW27	7316-1705	Progressive	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_DXKYMFRY	PT_J4MWGQFQ	7316-2071	Initial CNS Tumor	Meningioma	Meningioma	Meningothelial meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_E24CBV73	PT_3D74J8RZ	7316-5312	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_E2Z940S4	PT_QH9H491G	7316-1461	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_E685NDKM	PT_QH9H491G	7316-1461	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_E8SJ36A6	PT_J4MWGQFQ	7316-2071	Initial CNS Tumor	Meningioma	Meningioma	Meningothelial meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
@@ -94,11 +91,9 @@ BS_H6K3MGTB	PT_Y0XPQ1SZ	7316-8870	Initial CNS Tumor	Meningioma	Meningioma	Mening
 BS_HFACGMWB	PT_WVPM84TF	7316-7504	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_HGP0PV0D	PT_3D74J8RZ	7316-1792	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_HJBVSPH7	PT_4E6BXP04	7316-4968	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_HNC1VM0C	PT_ZPE3RXF0	7316-3401	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_J60G8DMK	PT_G16WS1MW	7316-279	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_J68XEJAD	PT_3D74J8RZ	7316-1792	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_J81C76DJ	PT_G16WS1MW	7316-279	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_JA5034KX	PT_3D74J8RZ	7316-7493	Progressive	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_JAEM78XS	PT_82MX6J77	7316-2148	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_JBTBZ5BG	PT_X0GD01P1	7316-930	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_JD5VKMAH	PT_AXMVG8QE	7316-2732	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
@@ -153,7 +148,6 @@ BS_TDFCRS7E	PT_7M2PGCBV	7316-331	Initial CNS Tumor	Meningioma	Meningioma	Anaplas
 BS_TFH3Q06W	PT_99R55MP0	7316-4417	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_THSPSG2Z	PT_M0FVZ88D	7316-1986	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_TKS3KBF7	PT_7M2PGCBV	7316-3312	Recurrence	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_TRKRS2WJ	PT_ZPE3RXF0	7316-6935	Progressive	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_TT0R88ZT	PT_AQWDQW27	7316-1705	Progressive	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_TXWKF5BN	PT_7M2PGCBV	7316-3312	Recurrence	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_V19ZKG08	PT_3D74J8RZ	7316-7493	Progressive	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
@@ -169,7 +163,6 @@ BS_WJK28RGB	PT_ZP4W7JN6	7316-1074	Initial CNS Tumor	Meningioma	Meningioma	Mening
 BS_WV897Z15	PT_B5ZZP9YS	7316-8448	Initial CNS Tumor	Meningioma	Meningioma	Meningothelial meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_WWHA79G6	PT_714QF82Q	7316-9743	Initial CNS Tumor	Meningioma	Meningioma	Atypical meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_WZY34KWZ	PT_673WYA9X	7316-7595	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
-BS_X0RWHXRX	PT_JEW5HG4W	7316-8425	Recurrence	Meningioma	Meningioma	Meningothelial meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_X21QDRGN	PT_B5ZZP9YS	7316-8448	Initial CNS Tumor	Meningioma	Meningioma	Meningothelial meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_X2QTK3QD	PT_T2M1338J	7316-2588	Second Malignancy	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis
 BS_X4FED3TW	PT_CX58G6P6	7316-2191	Initial CNS Tumor	Meningioma	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis

@@ -17,7 +17,6 @@ BS_1GQJVG9Q	NA	PATMRZ	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
 BS_1HXG4A7B	NA	PATYXS	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
 BS_1YD0ZQ4R	NA	PASKCS	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
 BS_20HSXMYQ	BS_02X4QTNE	PAUIRD	27.18	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
-BS_24TKY0T9	NA	PT_QNHGY3KQ	NA	NA	NA	PBTA	metastatic neuroblastoma and organizing blood clot	NBL, To be classified
 BS_255803B6	BS_3D1XTG0K	PATSTU	3.51	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_25EXB29C	BS_8V59CEJJ	PATWPC	8.6	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_29DZNQYC	BS_3N0ZS3G3	PARXPD	24.05	3	loss	GMKF	MYCN non-amp	NBL, MYCN non-amplified
@@ -67,7 +66,6 @@ BS_5QFRPR61	BS_FC37XAZK	PAUPMU	2.61	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplif
 BS_60ZFFGXZ	BS_V8AE965P	PT_Y5YHX20Q	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System	NBL, To be classified
 BS_64P50TAP	BS_CZMY8CVE	PATFIK	42.2	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_65F8T6N7	NA	PAUWTC	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
-BS_68BZ8N6P	NA	PT_RXT6KRR6	NA	NA	NA	PBTA	ganglioneuroblastoma, who grade iv	NBL, To be classified
 BS_69KVWAWK	BS_H5RWQDCJ	PASMUB	10.02	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_6AENZKKA	BS_Z36F6GKX	PATVKN	10.21	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_6FA0NNF1	BS_S0SM38BZ	PATNXK	21.23	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
@@ -123,7 +121,7 @@ BS_ACDQRWMY	BS_MG1N76FY	PATSUL	8.4	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplifi
 BS_ADNFY748	BS_R91DDK9A	PT_HVCRDJ95	NA	NA	NA	DGD	High Risk Neuroblastoma	NBL, To be classified
 BS_AE718N55	BS_ZWRZRC4V	PASLTC	53.02	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_AK1A6MWG	NA	PT_203SE2J7	NA	NA	NA	DGD	NA	NBL, To be classified
-BS_ANFZNMQ4	NA	PT_P6PKT77Y	NA	NA	NA	PBTA	metastatic neuroblastoma	NBL, To be classified
+BS_ANFZNMQ4	BS_MXV7JCBD	PT_P6PKT77Y	10.63	NA	NA	PBTA	metastatic neuroblastoma	NBL, MYCN non-amplified
 BS_APY3G22J	BS_A70FPYSH	PASWEE	32.12	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_AZ6KVKC4	NA	PASAEJ	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
 BS_B2RYV4GG	BS_S32M2YTY	PATTHB	20.8	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
@@ -285,7 +283,6 @@ BS_R0WH31Q0	BS_HEKMP7BH	PATNWM	20.88	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-ampli
 BS_R13WNSAR	BS_GMH5C45K	PASWXG	340.62	54	amplification	GMKF	MYCN amp	NBL, MYCN amplified
 BS_R2G2TPBV	NA	PAUFKP	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
 BS_R66Z3ENM	BS_KBXSSXWF	PATWIL	18.31	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
-BS_RA4GZM25	NA	PT_FZHGKJ0H	NA	NA	NA	PBTA	post treatment peripheral neuroblastic tumor	NBL, To be classified
 BS_RA5HNMDP	BS_0SC4QNTM	PASMET	71.4	46	amplification	GMKF	MYCN amp	NBL, MYCN amplified
 BS_RECF1S4Q	BS_H9YYADDT	PT_BCBMG74N	NA	NA	NA	DGD	NA	NBL, To be classified
 BS_RFEDCJTP	BS_WKVJJF3F	PAUMFN	32.33	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
@@ -303,7 +300,6 @@ BS_SR0TJ11R	NA	PT_DHZ5KCNN	NA	NA	NA	PBTA	recurrent ganglioneuroma, schwannian st
 BS_SSHQFYA8	BS_EF8F5GH8	PASBHS	20.69	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_SSS5J8P5	NA	PATWAG	NA	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_STK02B14	BS_NPG879ST	PATUWG	6.59	3	loss	GMKF	MYCN non-amp	NBL, MYCN non-amplified
-BS_SV9567M8	BS_G1Y281HX	PT_P1290MMP	0.19	NA	NA	PBTA	peripheral neuroblastoma	NBL, MYCN non-amplified
 BS_SXVVN52M	NA	PATNBK	NA	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_SY6CCX4G	BS_19PXZ71B	PASIUJ	142.05	33	amplification	GMKF	MYCN amp	NBL, MYCN amplified
 BS_SYQG48V0	NA	PATVER	NA	NA	NA	GMKF	MYCN non-amp	NBL, To be classified
@@ -365,7 +361,7 @@ BS_Y3KBY0FY	BS_B2BWSTJV	PAVDFW	0.41	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplif
 BS_Y4V9JXG4	BS_2XTH5QRD	PASUFD	5.2	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_Y9BHAPG3	BS_FRY5NFRY	PASZRF	16.23	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_YBXM34XV	BS_A05MJ45Y	PT_K0YFKQ6V	NA	NA	NA	DGD	peripheral neuroblastic tumor status post-chemotherapy	NBL, To be classified
-BS_YC4RWPH3	NA	PT_9F58PWB3	NA	26	amplification	PBTA	neuroblastoma	NBL, To be classified
+BS_YC4RWPH3	BS_ZJGXGR1V	PT_9F58PWB3	179.59	26	amplification	PBTA	neuroblastoma	NBL, MYCN amplified
 BS_YK9W04XG	BS_9BYP1GZS	PATKGB	37.42	3	loss	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_YPKSF86W	BS_83RF7CY6	PATVRG	10.71	3	gain	GMKF	MYCN non-amp	NBL, MYCN non-amplified
 BS_YTQ6Y7FQ	BS_C84NQED0	PATWTJ	11.34	NA	NA	GMKF	MYCN non-amp	NBL, MYCN non-amplified
@@ -1166,8 +1162,10 @@ NA	BS_327GE38E	PT_TMY5EVG3	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and S
 NA	BS_9P9DNAHS	PT_J01MB51G	NA	NA	NA	DGD	NA	NBL, To be classified
 NA	BS_9Z1VTWJV	PT_K0YFKQ6V	NA	NA	NA	DGD	peripheral neuroblastic tumor status post-chemotherapy	NBL, To be classified
 NA	BS_G0C2BKGC	PT_40VEXGGS	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System	NBL, To be classified
+NA	BS_G1Y281HX	PT_P1290MMP	0.19	NA	NA	PBTA	peripheral neuroblastoma	NBL, MYCN non-amplified
 NA	BS_HEDCVFKC	PT_936J0BZ5	NA	NA	NA	DGD	NA	NBL, To be classified
 NA	BS_JS7G87QP	PT_JPBMNESN	NA	NA	NA	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System	NBL, To be classified
+NA	BS_NGAWSN7T	PT_RXT6KRR6	8.48	NA	NA	PBTA	ganglioneuroblastoma, who grade iv	NBL, MYCN non-amplified
 NA	BS_PTTZ15MN	PT_203SE2J7	NA	NA	NA	DGD	NA	NBL, To be classified
 NA	BS_TD1ZEQ7R	PT_MRTHX2AQ	3.35	NA	NA	PBTA	neuroblastoma	NBL, MYCN non-amplified
 NA	BS_TSNBH5A6	PT_DF18YV38	NA	NA	NA	DGD	Adrenal Gland Neuroblastoma	NBL, To be classified
