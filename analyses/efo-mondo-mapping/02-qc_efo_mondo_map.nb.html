@@ -1848,14 +1848,27 @@ cancer_group_effective &lt;- cancer_group_summary %&gt;%
 
 all(cancer_group_effective %in% efo_mondo_map$cancer_group)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZVshY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZSAlaW4lIGVmb19tb25kb19tYXAkY2FuY2VyX2dyb3VwXSAifQ== -->
 <pre class="r"><code>cancer_group_effective[!cancer_group_effective %in% efo_mondo_map$cancer_group] </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2hhcmFjdGVyKDApXG4ifQ== -->
-<pre><code>character(0)</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUGlsb2N5dGljIGFzdHJvY3l0b21hXCIgICAgICAgICAgXCJDTlMgQnVya2l0dCdzIGx5bXBob21hXCIgICAgICAgIFxuWzNdIFwiRGlmZnVzZSBmaWJyaWxsYXJ5IGFzdHJvY3l0b21hXCIgXCJHbGlvc2FyY29tYVwiICAgICAgICAgICAgICAgICAgIFxuWzVdIFwiTmV1cm9lcGl0aGVsaWFsIG5lb3BsYXNtXCIgICAgICBcbiJ9 -->
+<pre><code>[1] &quot;Pilocytic astrocytoma&quot;          &quot;CNS Burkitt's lymphoma&quot;        
+[3] &quot;Diffuse fibrillary astrocytoma&quot; &quot;Gliosarcoma&quot;                   
+[5] &quot;Neuroepithelial neoplasm&quot;      </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjpbIlBpbG9jeXRpYyBhc3Ryb2N5dG9tYVxuIiwiQ05TIEJ1cmtpdHQncyBseW1waG9tYVxuIiwiRGlmZnVzZSBmaWJyaWxsYXJ5IGFzdHJvY3l0b21hXG4iLCJHbGlvc2FyY29tYVxuIiwiTmV1cm9lcGl0aGVsaWFsIG5lb3BsYXNtXG4iXX0= -->
+<pre><code>Pilocytic astrocytoma
+
+CNS Burkitt's lymphoma
+
+Diffuse fibrillary astrocytoma
+
+Gliosarcoma
+
+Neuroepithelial neoplasm</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
