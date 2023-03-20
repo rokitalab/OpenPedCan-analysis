@@ -68,7 +68,7 @@ map_prefill_auto <- dplyr::inner_join(map_prefill,efo_auto_prefill,by="cancer_gr
          mondo_code_prefill=mondo_code.x,
          efo_code_auto=efo_code.y,
          mondo_code_auto=mondo_code.y,
-         ncit_code_auto=ncit_code) %>%
+         ncit_code_auto=ncit_code.y) %>%
   select(cancer_group, efo_code_prefill,mondo_code_prefill,efo_code_auto,
          mondo_code_auto,ncit_code_auto,efo_OntoDesc,mondo_OntoDesc,ncit_OntoDesc) %>%
   mutate(efo_desc_match = case_when(tolower(cancer_group) == tolower(efo_OntoDesc) ~ "True",
