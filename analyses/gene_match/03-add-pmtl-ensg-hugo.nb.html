@@ -1814,9 +1814,9 @@ cols(
   Mapping_Description = col_character()
 )</code></pre>
 <!-- rnb-message-end -->
-<!-- rnb-source-begin eyJkYXRhIjpbIiMgYWRkIHBtdGwgdmVyc2lvbiIsInBtdGwkdmVyc2lvbiA8LSBcIlBNVEwgdmVyc2lvbiAxLjFcIiJdfQ== -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgYWRkIHBtdGwgdmVyc2lvbiIsInBtdGwkdmVyc2lvbiA8LSBcIlBNVEwgdmVyc2lvbiAzLjFcIiJdfQ== -->
 <pre class="r"><code># add pmtl version
-pmtl$version &lt;- &quot;PMTL version 1.1&quot;</code></pre>
+pmtl$version &lt;- &quot;PMTL version 3.1&quot;</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1849,10 +1849,10 @@ pmtl$version &lt;- &quot;PMTL version 1.1&quot;</code></pre>
 ens_pmtl_mer$mismatches &lt;- ifelse(ens_pmtl_mer$Approved_Symbol == ens_pmtl_mer$gene_symbol, &quot;true&quot;, &quot;false&quot;)
 table(ens_pmtl_mer$mismatches)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5mYWxzZSAgdHJ1ZSBcbiAgIDE5ICAgNDkxIFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5mYWxzZSAgdHJ1ZSBcbiAgICAyICAgNDkxIFxuIn0= -->
 <pre><code>
 false  true 
-   19   491 </code></pre>
+    2   491 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiZW5zX3BtdGxfbWVyICU+JVxuICBmaWx0ZXIobWlzbWF0Y2hlcyA9PSBcImZhbHNlXCIpICU+JVxuICBzZWxlY3QoQXBwcm92ZWRfU3ltYm9sLCBnZW5lX3N5bWJvbCkifQ== -->
 <pre class="r"><code>ens_pmtl_mer %&gt;%
@@ -1861,7 +1861,7 @@ false  true
 <!-- rnb-source-end -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Approved_Symbol"],"name":[1],"type":["chr"],"align":["left"]},{"label":["gene_symbol"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"POLR1H","2":"ZNRD1"},{"1":"POLR1F","2":"TWISTNB"},{"1":"RIGI","2":"DDX58"},{"1":"POLR1G","2":"CD3EAP"},{"1":"SEPTIN6","2":"SEPT6"},{"1":"H3-3B","2":"H3F3B"},{"1":"H3-3B","2":"H3F3B"},{"1":"H3-3A","2":"H3F3A"},{"1":"H3-3A","2":"H3F3A"},{"1":"VEGFD","2":"FIGF"},{"1":"TUBB8B","2":"TUBB8P12"},{"1":"TUBB8B","2":"RP11-683L23.1"},{"1":"STING1","2":"TMEM173"},{"1":"H3C14","2":"HIST2H3C"},{"1":"H3C14","2":"HIST2H3C"},{"1":"TUBA3GP","2":"AC002472.14"},{"1":"TUBA3FP","2":"AC002472.16"},{"1":"TUBA3FP","2":"ENSG00000284130"},{"1":"TUBA3FP","2":"AC002472.3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Approved_Symbol"],"name":[1],"type":["chr"],"align":["left"]},{"label":["gene_symbol"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"RIGI","2":"DDX58"},{"1":"TUBA3FP","2":"ENSG00000284130"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-chunk-end -->
@@ -1885,7 +1885,7 @@ false  true
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMgTG9hZCBtZXJnZWQgZ2VuZSBzeW1ib2wgKyBFTlNHIG1hcHBpbmcgZmlsZSBhbmQgUE1UTCBmaWxlCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKCmVuc19tYXAgPC0gcmVhZF90c3YoInJlc3VsdHMvZ2VuY29kZV9lbnNnX3N5bWJvbF9tYXBfbWVyZ2VkLnRzdiIpICU+JQogIHJlbmFtZShlbnNnX2lkID0gZW5zZW1ibCkKcG10bCA8LSByZWFkX3RzdigiaW5wdXQvUE1UTF92My4xLnRzdiIpICU+JQogIHJlbmFtZShlbnNnX2lkID0gRW5zZW1ibF9JRCwgcG10bCA9IEZEQV9EZXNpZ25hdGlvbikKIyBhZGQgcG10bCB2ZXJzaW9uCnBtdGwkdmVyc2lvbiA8LSAiUE1UTCB2ZXJzaW9uIDEuMSIKYGBgCiMjIEFyZSB0aGVyZSBhbGwgUE1UTCBlbnNnIGlkcyBpbmNsdWRlZCBpbiB0aGUgbWFwcGluZyBmaWxlPyAKYGBge3J9CnNldGRpZmYocG10bCRlbnNnX2lkLCBlbnNfbWFwJGVuc2dfaWQpCiN5ZXMKYGBgCgojI01lcmdlIHRoZSBQTVRMIGZpbGUgd2l0aCBFTlNHIG1hcHBpbmcgZmlsZQpgYGB7cn0KZW5zX3BtdGxfbWVyIDwtIG1lcmdlKHBtdGwsIGVuc19tYXAsIGFsbC54ID0gVCkKCiMgRG8gYW55IGdlbmUgSURzIG1pc21hdGNoPwplbnNfcG10bF9tZXIkbWlzbWF0Y2hlcyA8LSBpZmVsc2UoZW5zX3BtdGxfbWVyJEFwcHJvdmVkX1N5bWJvbCA9PSBlbnNfcG10bF9tZXIkZ2VuZV9zeW1ib2wsICJ0cnVlIiwgImZhbHNlIikKdGFibGUoZW5zX3BtdGxfbWVyJG1pc21hdGNoZXMpCmVuc19wbXRsX21lciAlPiUKICBmaWx0ZXIobWlzbWF0Y2hlcyA9PSAiZmFsc2UiKSAlPiUKICBzZWxlY3QoQXBwcm92ZWRfU3ltYm9sLCBnZW5lX3N5bWJvbCkKYGBgCiMjIEtlZXAgdGhlIGBnZW5lX3N5bWJvbGAgYXMgaW4gdGhlIFJOQS1TZXEgZmlsZXMKYGBge3J9CmVuc19odWdvX3BtdGwgPC0gZW5zX21hcCAlPiUKICBmdWxsX2pvaW4ocG10bCkgJT4lCiAgc2VsZWN0KGVuc2dfaWQsIGdlbmVfc3ltYm9sLCBwbXRsLCB2ZXJzaW9uKSAlPiUKICBkaXN0aW5jdCgpICU+JQogIGZpbHRlcighZW5zZ19pZCA9PSAiU3ltYm9sX05vdF9Gb3VuZCIgfCAhZ2VuZV9zeW1ib2wgPT0gJ05BJykgJT4lCiAgd3JpdGVfdHN2KCJyZXN1bHRzL2Vuc2ctaHVnby1wbXRsLW1hcHBpbmcudHN2IikKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMgTG9hZCBtZXJnZWQgZ2VuZSBzeW1ib2wgKyBFTlNHIG1hcHBpbmcgZmlsZSBhbmQgUE1UTCBmaWxlCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKCmVuc19tYXAgPC0gcmVhZF90c3YoInJlc3VsdHMvZ2VuY29kZV9lbnNnX3N5bWJvbF9tYXBfbWVyZ2VkLnRzdiIpICU+JQogIHJlbmFtZShlbnNnX2lkID0gZW5zZW1ibCkKcG10bCA8LSByZWFkX3RzdigiaW5wdXQvUE1UTF92My4xLnRzdiIpICU+JQogIHJlbmFtZShlbnNnX2lkID0gRW5zZW1ibF9JRCwgcG10bCA9IEZEQV9EZXNpZ25hdGlvbikKIyBhZGQgcG10bCB2ZXJzaW9uCnBtdGwkdmVyc2lvbiA8LSAiUE1UTCB2ZXJzaW9uIDMuMSIKYGBgCiMjIEFyZSB0aGVyZSBhbGwgUE1UTCBlbnNnIGlkcyBpbmNsdWRlZCBpbiB0aGUgbWFwcGluZyBmaWxlPyAKYGBge3J9CnNldGRpZmYocG10bCRlbnNnX2lkLCBlbnNfbWFwJGVuc2dfaWQpCiN5ZXMKYGBgCgojI01lcmdlIHRoZSBQTVRMIGZpbGUgd2l0aCBFTlNHIG1hcHBpbmcgZmlsZQpgYGB7cn0KZW5zX3BtdGxfbWVyIDwtIG1lcmdlKHBtdGwsIGVuc19tYXAsIGFsbC54ID0gVCkKCiMgRG8gYW55IGdlbmUgSURzIG1pc21hdGNoPwplbnNfcG10bF9tZXIkbWlzbWF0Y2hlcyA8LSBpZmVsc2UoZW5zX3BtdGxfbWVyJEFwcHJvdmVkX1N5bWJvbCA9PSBlbnNfcG10bF9tZXIkZ2VuZV9zeW1ib2wsICJ0cnVlIiwgImZhbHNlIikKdGFibGUoZW5zX3BtdGxfbWVyJG1pc21hdGNoZXMpCmVuc19wbXRsX21lciAlPiUKICBmaWx0ZXIobWlzbWF0Y2hlcyA9PSAiZmFsc2UiKSAlPiUKICBzZWxlY3QoQXBwcm92ZWRfU3ltYm9sLCBnZW5lX3N5bWJvbCkKYGBgCiMjIEtlZXAgdGhlIGBnZW5lX3N5bWJvbGAgYXMgaW4gdGhlIFJOQS1TZXEgZmlsZXMKYGBge3J9CmVuc19odWdvX3BtdGwgPC0gZW5zX21hcCAlPiUKICBmdWxsX2pvaW4ocG10bCkgJT4lCiAgc2VsZWN0KGVuc2dfaWQsIGdlbmVfc3ltYm9sLCBwbXRsLCB2ZXJzaW9uKSAlPiUKICBkaXN0aW5jdCgpICU+JQogIGZpbHRlcighZW5zZ19pZCA9PSAiU3ltYm9sX05vdF9Gb3VuZCIgfCAhZ2VuZV9zeW1ib2wgPT0gJ05BJykgJT4lCiAgd3JpdGVfdHN2KCJyZXN1bHRzL2Vuc2ctaHVnby1wbXRsLW1hcHBpbmcudHN2IikKYGBgCg==</div>
 
 
 

@@ -12,7 +12,7 @@ ens_map <- read_tsv("results/gencode_ensg_symbol_map_merged.tsv") %>%
 pmtl <- read_tsv("input/PMTL_v3.1.tsv") %>%
   rename(ensg_id = Ensembl_ID, pmtl = FDA_Designation)
 # add pmtl version
-pmtl$version <- "PMTL version 1.1"
+pmtl$version <- "PMTL version 3.1"
 ```
 ## Are there all PMTL ensg ids included in the mapping file? 
 ```{r}
