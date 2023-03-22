@@ -336,7 +336,7 @@ all_cg  <- ped_cancer_groups %>%
   select(cancer_group) %>%
   unique() 
 
-efo_mondo <- read_tsv(file.path(data_dir, "efo-mondo-map-previous-release.tsv"))
+efo_mondo <- read_tsv(file.path(data_dir, "efo-mondo-map.tsv"))
 
 efo_v11 <- all_cg %>%
   left_join(efo_mondo) %>%
