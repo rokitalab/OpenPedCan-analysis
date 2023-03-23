@@ -1017,7 +1017,7 @@ gene_level_mut_freq_tbl <- gene_level_mut_freq_tbl %>%
          PedcBio_PedOT_oncoprint_plot_URL, PedcBio_PedOT_mutations_plot_URL) %>%
   rename(targetFromSourceId = Gene_Ensembl_ID,
          diseaseFromSourceMappedId = EFO) %>%
-  mutate(datatypeId = "somatic_mutation",
+  mutate(datatypeId = "pediatric_cancer",
          datasourceId = "chop_gene_level_snv") %>%
   mutate(Dataset = replace(Dataset,
          Dataset == "all_cohorts", "All Cohorts"))
