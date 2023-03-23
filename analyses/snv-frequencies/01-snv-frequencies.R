@@ -455,6 +455,7 @@ add_cg_ch_pedcbio_pedot_plot_urls <- function(mut_freq_tbl,
 #   Gene,
 #   ENSP,
 #   HGVSp_Short,
+#   HGVSg,
 #   HotSpotAllele.
 # - overall_histology_df: the histology tibble that contains all samples. Must
 #   contain the following fields: Kids_First_Biospecimen_ID,
@@ -525,6 +526,7 @@ get_cg_ch_var_level_mut_freq_tbl <- function(maf_df, overall_histology_df,
               Protein_Ensembl_ID = paste(
                 discard(unique(ENSP), is.na), collapse = ','),
               Protein_change = unique(HGVSp_Short),
+              HGVSg = unique(HGVSg),
               HotSpotAllele = unique(HotSpotAllele)) %>%
     left_join(ss_mut_freq_df, by = 'Variant_ID') %>%
     mutate(Disease = ss_cancer_group,
@@ -534,7 +536,7 @@ get_cg_ch_var_level_mut_freq_tbl <- function(maf_df, overall_histology_df,
     select(Gene_symbol, Dataset, Disease, Variant_ID, dbSNP_ID,
            VEP_impact, SIFT_impact, PolyPhen_impact, Variant_classification,
            Variant_type, Gene_Ensembl_ID, Protein_Ensembl_ID, Protein_change,
-           Total_mutations_over_subjects_in_dataset,
+           HGVSg, Total_mutations_over_subjects_in_dataset,
            Frequency_in_overall_dataset,
            Total_primary_tumors_mutated_over_primary_tumors_in_dataset,
            Frequency_in_primary_tumors,
@@ -987,7 +989,7 @@ var_level_mut_freq_tbl <- var_level_mut_freq_tbl %>%
   rename(Variant_ID_hg38 = Variant_ID,
          targetFromSourceId = Gene_Ensembl_ID,
          diseaseFromSourceMappedId = EFO) %>%
-  mutate(datatypeId = "somatic_mutation",
+  mutate(datatypeId = "pediatric_cancer",
          datasourceId = "chop_variant_level_snv") %>%
   mutate(Dataset = replace(Dataset,
          Dataset == "all_cohorts", "All Cohorts"))
