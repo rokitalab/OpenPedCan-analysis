@@ -978,7 +978,7 @@ var_level_mut_freq_tbl <- var_level_mut_freq_tbl %>%
   select(Gene_symbol, Dataset, Disease, EFO, MONDO, Variant_ID, dbSNP_ID,
          VEP_impact, SIFT_impact, PolyPhen_impact, Variant_classification,
          Variant_type, Gene_full_name, Protein_RefSeq_ID,
-         Gene_Ensembl_ID, Protein_Ensembl_ID, Protein_change,
+         Gene_Ensembl_ID, Protein_Ensembl_ID, Protein_change, HGVSg,
          Total_mutations_over_subjects_in_dataset,
          Frequency_in_overall_dataset,
          Total_primary_tumors_mutated_over_primary_tumors_in_dataset,
