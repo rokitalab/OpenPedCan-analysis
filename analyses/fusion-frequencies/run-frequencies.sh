@@ -23,7 +23,7 @@ isl_relapse_all="${data_path}/independent-specimens.rnaseqpanel.relapse.tsv"
 
 # Filtered Fusion files 
 fusion_file="${data_path}/fusion-putative-oncogenic.tsv"
-fusion_file_dgd="results/fusion-dgd-annotated.tsv"
+fusion_file_dgd="${data_path}/fusion-dgd.tsv.gz"
 
 # Histology file
 histology_file="${data_path}/histologies.tsv"
