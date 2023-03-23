@@ -43,7 +43,7 @@ For each `cancer_group_cohort` with `n_samples` >= 3, compute `Frequency_in_over
 
 
 #### New columns
-- `datatypeId` column with value for all rows set to `somatic_mutation`
+- `datatypeId` column with value for all rows set to `pediatric_cancer`
 - `chop_uuid` column with unique UUID for each row
 - `datasourceId` column with value for all rows set to `chop_gene_level_cnv`
 
