@@ -337,7 +337,7 @@ annotated_m_fus_freq_tbl <- annotated_m_fus_freq_tbl %>%
   dplyr::rename(Gene_symbol = Gene_Symbol,
                 targetFromSourceId = Gene_Ensembl_ID,
                 diseaseFromSourceMappedId = EFO) %>% 
-  dplyr::mutate(datatypeId = "somatic_mutation",
+  dplyr::mutate(datatypeId = "pediatric_cancer",
                 datasourceId = data_source_id) %>%
   arrange(Disease, Dataset)
 
