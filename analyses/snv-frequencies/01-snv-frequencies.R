@@ -873,7 +873,7 @@ maf_df <- maf_df %>%
                             Tumor_Seq_Allele2, sep = '_')) %>%
   select(Kids_First_Biospecimen_ID, Variant_ID,
          Hugo_Symbol, dbSNP_RS, IMPACT, SIFT, PolyPhen, Variant_Classification,
-         Variant_Type, RefSeq, Gene, ENSP, HGVSp_Short, HotSpotAllele)
+         Variant_Type, RefSeq, Gene, ENSP, HGVSp_Short, HGVSg, HotSpotAllele)
 
 
 # Compute mutation frequencies -------------------------------------------------
