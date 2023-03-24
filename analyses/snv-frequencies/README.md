@@ -30,6 +30,8 @@ Issues addressed:
 - Updated analysis: update snv-frequencies for v11 data release: <https://github.com/PediatricOpenTargets/ticket-tracker/issues/361> This issue updates the tables after the OpenPedCan-analysis v11 data release and also excludes CHOP DGD samples from inclusion in "All Cohorts"
 - Assert compatibility between histology and independent specimen lists: <https://github.com/PediatricOpenTargets/ticket-tracker/issues/293>
 - Updated analysis: rerun snv-frequencies with updated v11 pedcbio case IDs <https://github.com/PediatricOpenTargets/ticket-tracker/issues/386>
+- Updated analysis: `snv-frequencies` to add HGVSg <https://github.com/PediatricOpenTargets/ticket-tracker/issues/315>
+- update snv-frequencies tables for v12 <https://github.com/PediatricOpenTargets/ticket-tracker/issues/529>
 
 ### Methods
 
