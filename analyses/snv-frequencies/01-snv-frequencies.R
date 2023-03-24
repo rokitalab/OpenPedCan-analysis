@@ -627,7 +627,14 @@ get_cg_ch_gene_level_mut_freq_tbl <- function(maf_df, overall_histology_df,
     group_by(Gene) %>%
     summarise(Gene_symbol = unique(Hugo_Symbol),
               Protein_Ensembl_ID = paste(
-                discard(unique(ENSP), is.na), collapse = ',')) %>%
+              discard(unique(ENSP), is.na), collapse = ',')) %>%
+    # 2023-03 Because of the switch to Gencode v39 annotation, some noncoding 
+    # genes now map to multiple transcript ids in the Hugo_Symbol/Gene_symbol
+    # column. At time of update this applies to 2 genes, so arbitrarily picking
+    # the first transcript ID, but will want a better way of handling duplicates
+    # in the future
+    filter(row_number() == 1) %>%
+    ungroup() %>%
     left_join(ss_mut_freq_df, by = 'Gene') %>%
     rename(Gene_Ensembl_ID = Gene) %>%
     mutate(Disease = ss_cancer_group,
