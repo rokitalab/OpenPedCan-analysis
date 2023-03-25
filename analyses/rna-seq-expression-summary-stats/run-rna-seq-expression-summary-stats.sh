@@ -17,7 +17,7 @@ mkdir -p results
 
 Rscript --vanilla '01-tpm-summary-stats.R'
 
-# convert results table from to json format
+# convert tsv results table to json format
 # As of v12 data relase, jsonlite:json error out due to R limitations in memory
 # allocation for large files - "R character strings are limited to 2^31-1 bytes"
 sed 's/\t/,/'g  results/long_n_tpm_mean_sd_quantile_group_wise_zscore.tsv | \
