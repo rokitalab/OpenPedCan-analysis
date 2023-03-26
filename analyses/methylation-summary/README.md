@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Summarize preprocessed `Illumina Infinium HumanMethylation` array measurements produced by the [OpenPedCan methylation-preprocessing module](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-preprocessing) and [Illumina infinium methylation array probes](https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html) lifted over from GRCh37 to GRCh38 build and annotated with GENCODE release v39 that is currently utilized in the OpenPedCan data analyses.
+Summarize preprocessed `Illumina Infinium HumanMethylation` array measurements produced by the [OpenPedCan methylation-preprocessing module](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-preprocessing) and [Illumina infinium methylation array CpG probe coordinates](https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html) lifted-over from GRCh37 to GRCh38 build and annotated with GENCODE v39 release that is currently utilized in the OpenPedCan data analyses.
 
 
 ## Analysis scripts
