@@ -7,7 +7,7 @@ Summarize preprocessed `Illumina Infinium HumanMethylation` array measurements p
 
 ## Analysis scripts
 1. **`01-calculate-tpm-medians.R`** script calculates representative cancer group gene-level and isoform-level TPM expression medians for subjects with both RNA-Seq and methylation data in a cohort.
-```
+
 ```
 Usage: Rscript --vanilla 01-calculate-tpm-medians.R [options]
 
@@ -59,6 +59,7 @@ Options:
 ```
 
 3. **`03-methyl-tpm-correlation.py`** script calculates representative `array probe` to `gene locus` correlations and `array probe` to `gene locus-isoforms` correlations between `RNA-Seq TPM-values` and either`Beta-values` or `M-values` for each cancer group within a cohort for patients who have both datasets.
+
 ```
 usage: python3 03-methyl-tpm-correlation.py [-h] [-m {beta,m}] [-e {gene,isoform}] 
             [-v] HISTOLOGY_FILE RNA_INDEPENDENT_SAMPLES METHYL_INDEPENDENT_SAMPLES 
