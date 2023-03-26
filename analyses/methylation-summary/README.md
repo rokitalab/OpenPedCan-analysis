@@ -2,29 +2,36 @@
 
 ## Purpose
 
-Summarize preprocessed `Illumina Infinium HumanMethylation` array measurements produced by the [OpenPedCan methylation-preprocessing module](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-preprocessing). 
+Summarize preprocessed `Illumina Infinium HumanMethylation` array measurements produced by the [OpenPedCan methylation-preprocessing module](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-preprocessing) and [Illumina infinium methylation array probes](https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html) lifted over from GRCh37 to GRCh38 build and annotated with GENCODE release v39 that is currently utilized in the OpenPedCan data analyses.
 
 
 ## Analysis scripts
-1. **`01-create-probe-annotations.R`** script creates gene annotations with the current GENCODE release utilized in the OpenPedCan data analyses for [Illumina infinium methylation probe arrays](https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html).
+1. **`01-calculate-tpm-medians.R`** script calculates representative cancer group gene-level and isoform-level TPM expression medians for subjects with both RNA-Seq and methylation data in a cohort.
 ```
-Usage: Rscript --vanilla 01-create-probe-annotations.R [options]
+```
+Usage: Rscript --vanilla 01-calculate-tpm-medians.R [options]
 
 Options:
-	--probes_manifest=CHARACTER
-		The latest Illumina Infinuim array probe manifest with 
-              cpg annotation metadata.
+  --histologies=CHARACTER
+    Histologies file
 
-	--annotation_mapping=CHARACTER
-		The Ensembl gene ID mapping for annotations the Illumina
-              Infinuim array probe manifest.
-              
-	--gencode_gtf=CHARACTER
-		The current GENCODE GTF utilized in OpenPedCan analyses
-              modules.
+  --rnaseq_matrix=CHARACTER
+    OpenPedCan rnaseq tpm gene or isoform matrix file
 
-	-h, --help
-		Show this help message and exit
+ --methyl_probe_annot=CHARACTER
+    Methyl gencode array probe annotation results file
+
+  --methyl_independent_samples=CHARACTER
+    OpenPedCan methyl independent biospecimen list file
+
+  --methyl_independent_samples=CHARACTER
+    OpenPedCan rnaseq independent biospecimen list file
+
+  --exp_values_values=CHARACTER
+    OpenPedCan expression matrix values: gene (default) and isoform
+
+  -h, --help
+    Show this help message and exit
 ```
 
 2. **`02-calculate-methly-quantiles.R`** script calculates probe-level quantiles for either Beta-values or M-values methylation matrix.
@@ -37,6 +44,9 @@ Options:
 
 	--methyl_matrix=CHARACTER
 		OPenPedCan methyl beta-values or m-values matrix file
+
+ --methyl_probe_annot=CHARACTER
+    Methyl gencode array probe annotation results file
 
 	--independent_samples=CHARACTER
 		OpenPedCan methyl independent biospecimen list file
@@ -127,10 +137,12 @@ positional arguments:
     - **Gene_Symbol**: gene symbol
     - **targetFromSourceId**: Ensemble locus ID
     - **transcript_id**: Ensemble locus-isoform ID (for isoform-level summary table only)
+    - **Gene_Feature**: GENCODE gene feature i.e., promoter, 5' UTR, exon, intron, 3'UTR, and intergenic
     - **Dataset**: OpenPedCan `cohort` i.e., TARGET
     - **Disease**: OpenPedCan `cancer_group` i.e., Neuroblastoma
     - **diseaseFromSourceMappedId**: EFO ID of OpenPedCan `cancer_group`
     - **MONDO**: MONDO_ID of OpenPedCan `cancer_group`
+    - **Median_TPM**: representative `cancer_group` gene-level or isoform-level TPM expression medians in a `cohort`
     - **RNA_Correlation**: array probe-level correlation between `methylation Beta-values` and `RNA-Seq TPM values`
     - **Transcript_Representation**: RNA-Seq expression (tpm) percent transcript representation (for isoform-level summary table only)
     - **Probe_ID**: `Illumina Infinium HumanMethylation` array probe ID for the CpG site
@@ -141,9 +153,9 @@ positional arguments:
     - **Beta_Median**: array probe-level Beta Q3 quantile
     - **Beta_Q4**: array probe-level Beta Q4 quantile
     - **Beta_Q5**: array probe-level Beta Q5 quantile
-    - **datatypeId**: Illumina_methylation_array
+    - **datatypeId**: pediatric_cancer
     - **chop_uuid**: generate UUID
-    - **datasourceId**: chop_gene_level_methylation
+    - **datasourceId**: chop_gene_level_methylation or chop_isoform_level_methylation
 ```
 Usage: 05-create-methyl-summary-table.R [options]
 
@@ -157,6 +169,12 @@ Options:
 	--methyl_probe_annot=CHARACTER
 		Methyl gencode array probe annotation results file
 
+  --rnaseq_tpm_medians=CHARACTER
+    RNA-Seq gene-level or isoform-level tmp median expression results file
+
+  --tpm_transcript_rep=CHARACTER
+    RNA-Seq expression (tpm) gene isoform (transcript) representation results file
+
 	--efo_mondo_annot=CHARACTER
 		OpenPedCan EFO and MONDO annotation file
 
@@ -166,8 +184,7 @@ Options:
 	--methyl_values=CHARACTER
 		OpenPedCan methly matrix values: beta (default) and m
 
-  --tpm_transcript_rep=CHARACTER
-    RNA-Seq expression (tpm) gene isoform (transcript) representation results file
+
 
 	-h, --help
 		Show this help message and exit
@@ -204,24 +221,23 @@ bash run-methylation-summary.sh
 
 ## Input datasets
 The methylation `beta-values` and `M-values`matrices are available on the CHOP HPC `Isilon` sever (location: `/mnt/isilon/opentargets/wafulae/methylation-preprocessing/results/`). Please contact `Avin Farrel (@afarrel)` for access if not already available for download using the [OpenPedCan data release download script](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/blob/dev/download-data.sh). 
-- `input/infinium-methylationepic-v-1-0-b5-manifest-file-csv.zip`
-- `input/infinium-annotation-mapping.tsv`
-- `../../data/results/gencode.v39.primary_assembly.annotation.gtf.gz`
+- `../../data/infinium.gencode.v39.probe.annotations.tsv.gz`
 - `../../data/independent-specimens.rnaseqpanel.eachcohort.tsv`
 - `../../data/independent-specimens.methyl.eachcohort.tsv`
 - `../../data/gene-expression-rsem-tpm-collapsed.rds`
 - `../../data/rna-isoform-expression-rsem-tpm.rds`
-- `../../data/ensg-hugo-pmtl-mapping.tsv.tsv`
 - `../../data/methyl-beta-values.rds` 
 - `../../data/efo-mondo-map.tsv`
 - `../../data/histologies.tsv` 
 
 ## Output datasets
-Analysis result files sizes exceed the limit allowable to push on to a GitHub repository and are available on the CHOP HPC `Isilon` sever (location: `/mnt/isilon/opentargets/wafulae/methylation-summary/results/`). Please contact `Avin Ferrel (@afarrel)` for access.
+Most analysis result files sizes exceed the limit allowable to push on to a GitHub repository. All results files are available on the CHOP HPC `Isilon` sever (location: `/mnt/isilon/opentargets/wafulae/methylation-summary/results/`). Please contact `Avin Ferrel (@afarrel)` for access.
 - `results/methyl-probe-annotations.tsv.gz`
 - `results/methyl-probe-beta-quantiles.tsv.gz`
 - `results/gene-methyl-probe-beta-tpm-correlations.tsv.gz`
 - `results/isoform-methyl-probe-beta-tpm-correlations.tsv.gz`
+- `results/gene-median-tpm-expression.tsv.gz`
+- `results/isoform-median-tpm-expression.tsv.gz`
 - `results/methyl-tpm-transcript-representation.tsv.gz`
 - `results/gene-methyl-beta-values-summary.rds` 
 - `results/gene-methyl-beta-values-summary.tsv.gz` 

@@ -27,6 +27,12 @@ option_list <- list(
   make_option(opt_str = "--methyl_probe_annot", type = "character", default = NULL,
               help = "Methyl gencode array probe annotation results file",
               metavar = "character"),
+  make_option(opt_str = "--rnaseq_tpm_medians", type = "character", default = NULL,
+              help = "RNA-Seq gene-level or isoform-level tmp median expression results file",
+              metavar = "character"),
+  make_option(opt_str = "--tpm_transcript_rep", type = "character", default = NULL,
+              help = "RNA-Seq expression (tpm) gene isoform (transcript) representation results file",
+              metavar = "character"),
   make_option(opt_str = "--efo_mondo_annot", type = "character", default =  NULL,
               help = "OpenPedCan EFO and MONDO annotation file", 
               metavar = "character"),
@@ -35,10 +41,8 @@ option_list <- list(
               metavar = "character"),
   make_option(opt_str = "--methyl_values", type = "character", default = "beta",
               help = "OpenPedCan methly matrix values: beta (default) and m", 
-              metavar = "character"),
-  make_option(opt_str = "--tpm_transcript_rep", type = "character", default = NULL,
-              help = "RNA-Seq expression (tpm) gene isoform (transcript) representation results file",
               metavar = "character")
+  
 )
 
 # parse parameter options
@@ -46,10 +50,12 @@ opt <- parse_args(OptionParser(option_list = option_list))
 methyl_tpm_corr <- opt$methyl_tpm_corr
 methyl_probe_qtiles <- opt$methyl_probe_qtiles
 methyl_probe_annot <- opt$methyl_probe_annot
+rnaseq_tpm_medians <- opt$rnaseq_tpm_medians
+tpm_transcript_rep <- opt$tpm_transcript_rep
 efo_mondo_annot <- opt$efo_mondo_annot
 exp_values <- opt$exp_values
 methyl_values <- opt$methyl_values
-tpm_transcript_rep <- opt$tpm_transcript_rep
+
 
 # establish base dir
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
@@ -65,7 +71,7 @@ message("==========================================================")
 message("Creating Pediatric OpenTargets methyl summary table")
 message("==========================================================\n")
 
-# using on-disk RSQLite database for to join tables; dplyr requires utilizes
+# using on-disk RSQLite database for to join tables; dplyr utilizes
 # lots memory for large table joins.
 db_connect <- DBI::dbConnect(RSQLite::SQLite(), path = "")
 
@@ -79,8 +85,13 @@ message("--Loading methy-tpm correlations...\n")
 DBI::dbWriteTable(db_connect, "methy_tpm_corr_tb",
                   data.table::fread(methyl_tpm_corr, showProgress = FALSE))
 
+# load rnaseq gene-level or isoform-level tmp median expression
+message("--Loading tmp median expression...\n")
+DBI::dbWriteTable(db_connect, "rnaseq_tpm_medians_tb",
+                  data.table::fread(rnaseq_tpm_medians, showProgress = FALSE))
+
 # load gencode  methyl probe annotations
-message("--Loading genecode array prob annotations...\n")
+message("--Loading genecode array probe annotations...\n")
 DBI::dbWriteTable(db_connect, "methyl_probe_annot_tb",
                   data.table::fread(methyl_probe_annot, showProgress = FALSE))
 
@@ -89,13 +100,17 @@ message("--Loading OpenPedCan EFO and MONDO annotations...\n")
 DBI::dbWriteTable(db_connect, "efo_mondo_annot_tb",
                   data.table::fread(efo_mondo_annot, showProgress = FALSE))
 
-# merge array probe quantiles, correlations and gencode annotations
-message("--merging quantiles, correlations, and probe annotations...\n")
+# merge array probe quantiles, correlations, medians, and probe annotations
+message("--merging quantiles, correlations, medians and probe annotations...\n")
 if (exp_values == "gene") {
   methy_summary_table <- 
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_qtiles_tb"),
-                     dplyr::tbl(db_connect, "methy_tpm_corr_tb"),
+                     dplyr::tbl(db_connect, "methy_tpm_corr_tb") %>% 
+                       dplyr::distinct(), 
                      by = c("Probe_ID", "Dataset", "Disease")) %>% 
+    dplyr::left_join(dplyr::tbl(db_connect, "rnaseq_tpm_medians_tb") %>% 
+                       dplyr::distinct(), 
+                     by = c("Dataset", "Disease", "targetFromSourceId")) %>% 
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
                        dplyr::select(-transcript_id) %>% 
                        dplyr::distinct(), 
@@ -108,8 +123,12 @@ if (exp_values == "gene") {
 
   methy_summary_table <- 
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_qtiles_tb"),
-                     dplyr::tbl(db_connect, "methy_tpm_corr_tb"),
+                     dplyr::tbl(db_connect, "methy_tpm_corr_tb") %>% 
+                       dplyr::distinct(), 
                      by = c("Probe_ID", "Dataset", "Disease")) %>% 
+    dplyr::left_join(dplyr::tbl(db_connect, "rnaseq_tpm_medians_tb") %>% 
+                       dplyr::distinct(), 
+                     by = c("Dataset", "Disease", "transcript_id")) %>%
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
                        dplyr::distinct(), 
                      by = c("Probe_ID", "transcript_id")) %>% 
@@ -129,37 +148,51 @@ methy_summary_table <- dplyr::tbl(db_connect, "efo_mondo_annot_tb") %>%
 
 # Add additional columns required for the OT portal
 message("--inlcuding additional metadata required for the NCI MTP portal ...\n")
-methy_summary_table <- methy_summary_table %>% 
-  tidyr::as_tibble()
-uuid_strings <- ids::uuid(nrow(methy_summary_table))
-stopifnot(length(unique(uuid_strings)) == nrow(methy_summary_table))
-methy_summary_table <- methy_summary_table %>% 
-  dplyr::mutate(datatypeId = "Illumina_methylation_array",
-                chop_uuid = uuid_strings, 
-                datasourceId = "chop_gene_level_methylation")
+if (exp_values == "gene") {
+  methy_summary_table <- methy_summary_table %>% 
+    tidyr::as_tibble()
+  uuid_strings <- ids::uuid(nrow(methy_summary_table))
+  stopifnot(length(unique(uuid_strings)) == nrow(methy_summary_table))
+  methy_summary_table <- methy_summary_table %>% 
+    dplyr::mutate(datatypeId = "pediatric_cancer",
+                  chop_uuid = uuid_strings, 
+                  datasourceId = "chop_gene_level_methylation")
+} else {
+  methy_summary_table <- methy_summary_table %>% 
+    tidyr::as_tibble()
+  uuid_strings <- ids::uuid(nrow(methy_summary_table))
+  stopifnot(length(unique(uuid_strings)) == nrow(methy_summary_table))
+  methy_summary_table <- methy_summary_table %>% 
+    dplyr::mutate(datatypeId = "pediatric_cancer",
+                  chop_uuid = uuid_strings, 
+                  datasourceId = "chop_isoform_level_methylation")
+}
 
 # Write methylation summary table to RDS file - needed for API DB loading
 message("--Writing methylation summary table to  file...\n")    
 if (exp_values == "gene") {
   if (methyl_values == "beta") {
     methy_summary_table <-  methy_summary_table %>% 
-      dplyr::select(Gene_symbol, targetFromSourceId, Dataset, Disease,
-                    diseaseFromSourceMappedId, MONDO, RNA_Correlation, Probe_ID, 
-                    Chromosome, Location, Beta_Q1, Beta_Q2, Beta_Median, Beta_Q4, 
-                    Beta_Q5)
+      dplyr::select(Gene_symbol, targetFromSourceId, Gene_Feature, Dataset, Disease,
+                    diseaseFromSourceMappedId, MONDO,  Median_TPM, RNA_Correlation, 
+                    Probe_ID, Chromosome, Location, Beta_Q1, Beta_Q2, Beta_Median,  
+                    Beta_Q4, Beta_Q5, datatypeId, chop_uuid, datasourceId)
     methy_summary_table %>%
-      readr::write_rds(file.path(results_dir, "gene-methyl-beta-values-summary.rds"))
+      readr::write_rds(file.path(results_dir, "gene-methyl-beta-values-summary.rds"),
+                       compress = "gz")
     methy_summary_table %>% data.table::setDT() %>%
       data.table::fwrite(file.path(results_dir,
                                    "gene-methyl-beta-values-summary.tsv.gz"), 
                          sep="\t", compress = "auto")
   } else {
     methy_summary_table <-  methy_summary_table %>% 
-      dplyr::select(Gene_symbol, targetFromSourceId, Dataset, Disease,
-                    diseaseFromSourceMappedId, MONDO, RNA_Correlation, Probe_ID, 
-                    Chromosome, Location, M_Q1, M_Q2, M_Median, M_Q4, M_Q5) 
+      dplyr::select(Gene_symbol, targetFromSourceId, Gene_Feature, Dataset, Disease,
+                    diseaseFromSourceMappedId, MONDO,  Median_TPM, RNA_Correlation, 
+                    Probe_ID, Chromosome, Location, M_Q1, M_Q2, M_Median, M_Q4, 
+                    M_Q5, datatypeId, chop_uuid, datasourceId) 
     methy_summary_table %>% 
-      readr::write_rds(file.path(results_dir, "gene-methyl-m-values-summary.rds"))
+      readr::write_rds(file.path(results_dir, "gene-methyl-m-values-summary.rds"),
+                       compress = "gz")
     methy_summary_table %>% data.table::setDT() %>%
       data.table::fwrite(file.path(results_dir,
                                    "gene-methyl-m-values-summary.tsv.gz"), 
@@ -168,24 +201,28 @@ if (exp_values == "gene") {
 } else {
   if (methyl_values == "beta") {
     methy_summary_table <-  methy_summary_table %>%
-      dplyr::select(Gene_symbol, targetFromSourceId, transcript_id, Dataset, 
-                    Disease, diseaseFromSourceMappedId, MONDO, RNA_Correlation, 
-                    Transcript_Representation, Probe_ID, Chromosome, Location, 
-                    Beta_Q1, Beta_Q2, Beta_Median, Beta_Q4, Beta_Q5) 
+      dplyr::select(Gene_symbol, targetFromSourceId, transcript_id, Gene_Feature, 
+                    Dataset, Disease, diseaseFromSourceMappedId, MONDO,  Median_TPM,  
+                    RNA_Correlation, Transcript_Representation, Probe_ID, Chromosome,   
+                    Location, Beta_Q1, Beta_Q2, Beta_Median, Beta_Q4, Beta_Q5, 
+                    datatypeId, chop_uuid, datasourceId) 
     methy_summary_table %>%
-      readr::write_rds(file.path(results_dir, "isoform-methyl-beta-values-summary.rds"))
+      readr::write_rds(file.path(results_dir, "isoform-methyl-beta-values-summary.rds"),
+                       compress = "gz")
     methy_summary_table %>% data.table::setDT() %>%
       data.table::fwrite(file.path(results_dir,
                                    "isoform-methyl-beta-values-summary.tsv.gz"), 
                          sep="\t", compress = "auto")
   } else {
     methy_summary_table <-  methy_summary_table %>% 
-      dplyr::select(Gene_symbol, targetFromSourceId, transcript_id, Dataset,
-                    Disease,diseaseFromSourceMappedId, MONDO, RNA_Correlation, 
-                    Transcript_Representation, Probe_ID, Chromosome, Location, 
-                    M_Q1, M_Q2, M_Median, M_Q4, M_Q5) 
+      dplyr::select(Gene_symbol, targetFromSourceId, transcript_id, Gene_Feature, 
+                    Dataset, Disease, diseaseFromSourceMappedId, MONDO,  Median_TPM,  
+                    RNA_Correlation, Transcript_Representation, Probe_ID, Chromosome,   
+                    Location, M_Q1, M_Q2, M_Median, M_Q4, M_Q5, datatypeId, chop_uuid, 
+                    datasourceId) 
     methy_summary_table %>%
-      readr::write_rds(file.path(results_dir, "isoform-methyl-m-values-summary.rds"))
+      readr::write_rds(file.path(results_dir, "isoform-methyl-m-values-summary.rds"),
+                       compress = "gz")
     methy_summary_table %>% data.table::setDT() %>%
       data.table::fwrite(file.path(results_dir,
                                    "isoform-methyl-m-values-summary.tsv.gz"), 
