@@ -5,8 +5,6 @@
 set -e
 set -o pipefail
 
-printf "Start generating mtp tables...\n\n"
-
 # Set MTP Open Targets FTP download links for diseases and targets
 version="22.11"
 diseases_url="ftp://ftp.ebi.ac.uk/pub/databases/opentargets/platform/$version/output/etl/json/diseases"
@@ -47,3 +45,4 @@ perl -e 'foreach (<*.json>){/(.*)\.json$/; $name = $1; system "dasel -r json -w 
 # Create diseases and targets mapping files
 cd $module_dir
 Rscript --vanilla 01-mtp-annotations.R
+
