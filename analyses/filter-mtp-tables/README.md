@@ -1,7 +1,7 @@
 ## Filter MTP Tables
 
 ### Purpose
-Remove `Ensembl (ESNG)` gene identifier and update EFO-MONO codes in the MTP tables, including [SNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/snv-frequencies), [CNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/cnv-frequencies), [fusion](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/fusion-frequencies), [Gene expression TPM](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/rna-seq-expression-summary-stats) and [methylation summary](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-summary) based on the Open Targts Platform [Targets and Disease/Phenotype annotations](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/mtp-annotations).
+Remove `Ensembl (ESNG)` gene identifier and update EFO-MONO codes in the MTP tables, including [SNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/snv-frequencies), [CNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/cnv-frequencies), [fusion](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/fusion-frequencies), [Gene expression TPM](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/rna-seq-expression-summary-stats) and [methylation summary](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-summary) based on the Open Targets Platform [Targets and Disease/Phenotype annotations](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/mtp-annotations).
 
 
 ### Analysis scripts
