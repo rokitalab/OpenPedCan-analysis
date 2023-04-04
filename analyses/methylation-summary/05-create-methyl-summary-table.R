@@ -95,6 +95,21 @@ message("--Loading genecode array probe annotations...\n")
 DBI::dbWriteTable(db_connect, "methyl_probe_annot_tb",
                   data.table::fread(methyl_probe_annot, showProgress = FALSE))
 
+# determine longest transcript for every ENSEMBL gene locus 
+message("--Determine longest transcript per gene locus...\n")
+if (exp_values == "gene") {
+  longest_transcript <- dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
+    dplyr::group_by(Chromosome, transcript_id, targetFromSourceId) %>%  
+    dplyr::summarize(Start = min(Start), End = max(End)) %>% 
+    dplyr::mutate(Length = End - Start) %>% 
+    dplyr::ungroup() %>%
+    dplyr::group_by(Chromosome, targetFromSourceId) %>% 
+    dplyr::filter(Length == max(Length)) %>% 
+    dplyr::ungroup() %>%
+    dplyr::pull(transcript_id) %>% 
+    unique()
+}
+
 # load OpenPedCan EFO and MONDO annotations
 message("--Loading OpenPedCan EFO and MONDO annotations...\n")
 DBI::dbWriteTable(db_connect, "efo_mondo_annot_tb",
@@ -111,9 +126,10 @@ if (exp_values == "gene") {
     dplyr::left_join(dplyr::tbl(db_connect, "rnaseq_tpm_medians_tb") %>% 
                        dplyr::distinct(), 
                      by = c("Dataset", "Disease", "targetFromSourceId")) %>% 
-    dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
-                       dplyr::select(-transcript_id) %>% 
-                       dplyr::distinct(), 
+    dplyr::inner_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
+                       dplyr::filter(transcript_id %in% longest_transcript) %>% 
+                       dplyr::select(-transcript_id, -Start, -End, -Strand) %>% 
+                       dplyr::distinct(),
                      by = c("Probe_ID", "targetFromSourceId"))
 } else {
   # load rna-seq expression tpm transcript representations
@@ -130,6 +146,7 @@ if (exp_values == "gene") {
                        dplyr::distinct(), 
                      by = c("Dataset", "Disease", "transcript_id")) %>%
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
+                       dplyr::select(-Start, -End, -Strand) %>% 
                        dplyr::distinct(), 
                      by = c("Probe_ID", "transcript_id")) %>% 
     dplyr::left_join(dplyr::tbl(db_connect, "tpm_transcript_rep_tb") %>% 

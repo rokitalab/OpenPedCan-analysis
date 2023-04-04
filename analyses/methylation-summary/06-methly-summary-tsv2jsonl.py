@@ -53,11 +53,9 @@ def tsv_to_jsonl(input_tsv_file, output_jsonl_file):
      -------
      None
      """
-
-     methyl_tmp_correlation_tsv = input_tsv_file
-     methyl_tmp_correlation_json = output_jsonl_file
-     tsv_file = gzip.open(methyl_tmp_correlation_tsv, "rt")
-     jsonl_file = gzip.open(methyl_tmp_correlation_json, "wt")
+     
+     tsv_file = gzip.open(input_tsv_file, "rt")
+     jsonl_file = gzip.open(output_jsonl_file, "wt")
      reader = csv.DictReader(tsv_file, delimiter="\t")
      headers = reader.fieldnames
      for row in reader:
