@@ -95,10 +95,18 @@ message("--Loading genecode array probe annotations...\n")
 DBI::dbWriteTable(db_connect, "methyl_probe_annot_tb",
                   data.table::fread(methyl_probe_annot, showProgress = FALSE))
 
-# determine longest transcript for every ENSEMBL gene locus 
-message("--Determine longest transcript per gene locus...\n")
+# get intergenic probes 
+probe_gene_annots <- dplyr::tbl(db_connect, "methyl_probe_annot_tb")
+intergenic_probes <- probe_gene_annots %>% 
+  dplyr::filter(Gene_Feature == "intergenic") %>% 
+  dplyr::pull(Probe_ID) %>% 
+  unique()
+
 if (exp_values == "gene") {
-  longest_transcript <- dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
+  # determine longest transcript for every ENSEMBL gene locus
+  message("--Determine longest transcript per gene locus...\n")
+  longest_transcript <- probe_gene_annots %>% 
+    dplyr::filter(Gene_Feature != "intergenic") %>% 
     dplyr::group_by(Chromosome, transcript_id, targetFromSourceId) %>%  
     dplyr::summarize(Start = min(Start), End = max(End)) %>% 
     dplyr::mutate(Length = End - Start) %>% 
@@ -108,6 +116,10 @@ if (exp_values == "gene") {
     dplyr::ungroup() %>%
     dplyr::pull(transcript_id) %>% 
     unique()
+  probe_gene_annots <- probe_gene_annots %>% 
+    dplyr::select(Chromosome, Probe_ID, Location, targetFromSourceId, 
+                  Gene_symbol) %>% 
+    dplyr::distinct()
 }
 
 # load OpenPedCan EFO and MONDO annotations
@@ -120,17 +132,23 @@ message("--merging quantiles, correlations, medians and probe annotations...\n")
 if (exp_values == "gene") {
   methy_summary_table <- 
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_qtiles_tb"),
-                     dplyr::tbl(db_connect, "methy_tpm_corr_tb") %>% 
+                     probe_gene_annots, by = "Probe_ID") %>% 
+    dplyr::left_join(dplyr::tbl(db_connect, "methy_tpm_corr_tb") %>% 
                        dplyr::distinct(), 
-                     by = c("Probe_ID", "Dataset", "Disease")) %>% 
+                     by = c("Probe_ID", "Dataset", "Disease", 
+                            "targetFromSourceId")) %>% 
     dplyr::left_join(dplyr::tbl(db_connect, "rnaseq_tpm_medians_tb") %>% 
                        dplyr::distinct(), 
-                     by = c("Dataset", "Disease", "targetFromSourceId")) %>% 
-    dplyr::inner_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
+                     by = c("Dataset", "Disease", "targetFromSourceId")) %>%
+    dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
                        dplyr::filter(transcript_id %in% longest_transcript) %>% 
                        dplyr::select(-transcript_id, -Start, -End, -Strand) %>% 
                        dplyr::distinct(),
-                     by = c("Probe_ID", "targetFromSourceId"))
+                     by = c("Chromosome", "Location" ,"Probe_ID", 
+                            "targetFromSourceId", "Gene_symbol")) %>% 
+    dplyr::mutate(Gene_Feature = 
+                    case_when(Probe_ID %in% intergenic_probes ~ "intergenic",
+                              TRUE ~ Gene_Feature))
 } else {
   # load rna-seq expression tpm transcript representations
   message("--Loading rna-seq tpm transcript representation...\n")
@@ -139,19 +157,23 @@ if (exp_values == "gene") {
 
   methy_summary_table <- 
     dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_qtiles_tb"),
-                     dplyr::tbl(db_connect, "methy_tpm_corr_tb") %>% 
+                     dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
+                       dplyr::select(-Start, -End, -Strand) %>%
+                       dplyr::distinct(),
+                     by = "Probe_ID", "transcript_id") %>% 
+    dplyr::left_join(dplyr::tbl(db_connect, "methy_tpm_corr_tb") %>% 
                        dplyr::distinct(), 
-                     by = c("Probe_ID", "Dataset", "Disease")) %>% 
+                     by = c("Probe_ID", "Dataset", "Disease", 
+                            "transcript_id")) %>% 
     dplyr::left_join(dplyr::tbl(db_connect, "rnaseq_tpm_medians_tb") %>% 
                        dplyr::distinct(), 
                      by = c("Dataset", "Disease", "transcript_id")) %>%
-    dplyr::left_join(dplyr::tbl(db_connect, "methyl_probe_annot_tb") %>% 
-                       dplyr::select(-Start, -End, -Strand) %>% 
-                       dplyr::distinct(), 
-                     by = c("Probe_ID", "transcript_id")) %>% 
     dplyr::left_join(dplyr::tbl(db_connect, "tpm_transcript_rep_tb") %>% 
                        dplyr::distinct(), 
-                     by = c("transcript_id", "Dataset", "Disease"))
+                     by = c("transcript_id", "Dataset", "Disease")) %>% 
+    dplyr::mutate(Gene_Feature = 
+                    case_when(Probe_ID %in% intergenic_probes ~ "intergenic",
+                              TRUE ~ Gene_Feature))
   
 }
 
