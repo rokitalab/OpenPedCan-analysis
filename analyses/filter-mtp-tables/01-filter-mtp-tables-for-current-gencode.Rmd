@@ -543,6 +543,43 @@ filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
 rm(isoform_level_methyl, filtered_ensg)
 ```
 
+#### DESeq tumor-normal results 
+OpenPedCan contains methylation and rnaseq summaries of cohort cancer groups and
+can't not associate with samples. Therefore, samples associated with removed ENSEMBL 
+identifiers cannot be listed. 
+```{r}
+# read mtp table
+mtp_file <- 
+  file.path(input_dir, "gene-counts-rsem-expected_count-collapsed-deseq.tsv.gz")
+gene_level_deseq <- 
+  data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
+    tibble::as_tibble() 
+# filter mtp table 
+file_name <- basename(mtp_file)
+filter_mtp_table(gene_level_deseq, ensg_ids, file_name)
+
+# Ensembl gene identifiers removed
+filtered_ensg <- gene_level_deseq %>% 
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+  dplyr::select(Gene_symbol, targetFromSourceId, cohort) %>%
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::distinct()
+
+# write to file
+readr::write_tsv(filtered_ensg,
+  file.path(results_dir, 
+            "gene-counts-rsem-expected_count-collapsed-deseq_dropped_ensg.tsv.gz"))
+
+# Display removed ENSEMBL IDs 
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+  dplyr::distinct() %>%
+  tidyr::drop_na() %>% 
+  table()
+
+# Remove frequencies data frame
+rm(gene_level_deseq, filtered_ensg)
+```
+
 ## Session Info
 ```{r}
 sessionInfo()
