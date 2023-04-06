@@ -886,7 +886,7 @@ maf_df <- maf_df %>%
 # Compute mutation frequencies -------------------------------------------------
 message('Compute mutation frequencies...')
 cancer_group_cohort_summary_df <- get_cg_cs_tbl(td_htl_dfs$overall_htl_df,
-                                                c('TARGET', 'PBTA', 'GMKF'))
+                                                c('TARGET', 'PBTA', 'GMKF', 'Kentucky'))
 
 # nf = n_samples filtered
 nf_cancer_group_cohort_summary_df <- cancer_group_cohort_summary_df %>%
