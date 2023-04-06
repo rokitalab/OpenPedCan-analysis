@@ -1,7 +1,7 @@
 ## Filter MTP Tables
 
 ### Purpose
-Remove `Ensembl (ESNG)` gene identifier and update EFO-MONO codes in the MTP tables, including [SNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/snv-frequencies), [CNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/cnv-frequencies), [fusion](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/fusion-frequencies), [Gene expression TPM](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/rna-seq-expression-summary-stats) and [methylation summary](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-summary) based on the Open Targets Platform [Targets and Disease/Phenotype annotations](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/mtp-annotations).
+Remove `Ensembl (ESNG)` gene identifier and update EFO-MONO codes in the MTP tables, including [SNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/snv-frequencies), [CNV](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/cnv-frequencies), [fusion](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/fusion-frequencies), [Gene expression TPM](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/rna-seq-expression-summary-stats), [methylation summary](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/methylation-summary) and [tumor-normal-differential-expression](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/tumor-normal-differential-expression) based on the Open Targets Platform [Targets and Disease/Phenotype annotations](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/mtp-annotations).
 
 
 ### Analysis scripts
@@ -49,6 +49,7 @@ optional arguments:
 - `long_n_tpm_mean_sd_quantile_gene_wise_zscore.tsv.gz`
 - `gene-methyl-beta-values-summary.tsv.gz`
 - `isoform-methyl-beta-values-summary.tsv.gz`
+- `gene-counts-rsem-expected_count-collapsed-deseq.tsv.gz`
 - `../../data/input/gencode.v38.primary_assembly.annotation.gtf.gz"`
 - `../../data/snv-consensus-plus-hotspots.maf.tsv.gz`
 - `../../data/consensus_wgs_plus_cnvkit_wxs.tsv.gz`
@@ -89,5 +90,6 @@ optional arguments:
 - `results/putative-oncogene-fused-gene-freq_dropped_ensg.tsv.gz`
 - `results/putative-oncogene-fusion-freq_dropped_ensg.tsv.gz`
 - `results/variant-level-snv-consensus-annotated-mut-freq_dropped_ensg.tsv.gz`
+- `results/gene-counts-rsem-expected_count-collapsed-deseq_dropped_ensg.tsv.gz`
 - `01-filter-mtp-tables-for-current-gencode.nb.html`
 

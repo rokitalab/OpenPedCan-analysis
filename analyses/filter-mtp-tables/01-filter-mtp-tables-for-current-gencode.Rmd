@@ -100,9 +100,11 @@ filter_mtp_table <- function(mtp_table, ensg_ids, file_name) {
                                 Disease == "Meningioma" ~ "MONDO_0016642",
                                 Disease == "Perineuroma" ~ "MONDO_0019404",
                                 Disease == "Wilms tumor" ~ "MONDO_0006058",
+                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
                                 TRUE ~ EFO)) %>% 
       dplyr::mutate(MONDO = 
                       case_when(Disease == "Perineuroma" ~ "MONDO_0019404",
+                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
                                 TRUE ~ MONDO)) %>% 
       readr::write_tsv(file.path(output_dir, file_name))
   } else {
@@ -114,12 +116,14 @@ filter_mtp_table <- function(mtp_table, ensg_ids, file_name) {
                                 Disease == "Meningioma" ~ "MONDO_0016642",
                                 Disease == "Perineuroma" ~ "MONDO_0019404",
                                 Disease == "Wilms tumor" ~ "MONDO_0006058", 
+                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
                                 TRUE ~ diseaseFromSourceMappedId)) %>% 
       dplyr::mutate(MONDO = 
                       case_when(Disease == "Perineuroma" ~ "MONDO_0019404",
+                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
                                 TRUE ~ MONDO)) %>% 
       readr::write_tsv(file.path(output_dir, file_name))
-     if (grepl("methyl", file_name)) {
+     if (grepl("methyl|deseq", file_name)) {
        rds_file <- paste(unlist(str_split(file_name, "\\."))[1], "rds", sep = ".")
        mtp_table %>% readr::write_rds(file.path(output_dir, rds_file), compress = "gz")
      }
@@ -131,53 +135,54 @@ return(mtp_table)
 #### Gene level SNV frequencies
 ```{r}
 # read mtp table
-mtp_file <- 
+mtp_file <-
   file.path(input_dir, "gene-level-snv-consensus-annotated-mut-freq.tsv.gz")
-gene_level_snv <- 
+gene_level_snv <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble() %>%
+  dplyr::filter(Dataset != "CHOP P30 Panel")
+# filter mtp table
 file_name <- basename(mtp_file)
-filter_mtp_table(gene_level_snv, ensg_ids, file_name) 
+filter_mtp_table(gene_level_snv, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- gene_level_snv %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- gene_level_snv %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
   dplyr::distinct()
 
 # read the SNV consensus file
 consensus_ensg <- data.table::fread(
-  file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz"), 
-  select = c("Tumor_Sample_Barcode", "Gene"), showProgress = FALSE) %>% 
-  tibble::as_tibble() %>% 
-  dplyr::filter(!is.na(Gene)) %>% 
-  dplyr::rename(Kids_First_Biospecimen_ID = Tumor_Sample_Barcode) %>% 
+  file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz"),
+  select = c("Tumor_Sample_Barcode", "Gene"), showProgress = FALSE) %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(!is.na(Gene)) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = Tumor_Sample_Barcode) %>%
   dplyr::distinct()
 
 # merge sample IDs to filtered ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(consensus_ensg, by=c("Ensembl_ID" = "Gene"))
 
 # merge OpenPedCan cohorts to filtered ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(sample_ids, by= "Kids_First_Biospecimen_ID")
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "gene-level-snv-consensus-annotated-mut-freq_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>%  
+  tidyr::drop_na() %>%
   table()
 
 # Display samples in removed ENSEMBL IDs that are in PMTL list
-filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>% 
-  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>% 
+filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>%
+  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 
 # Remove data frames
@@ -187,44 +192,45 @@ rm(gene_level_snv, filtered_ensg)
 #### Variant level SNV frequencies
 ```{r}
 # read mtp table
-mtp_file <- 
+mtp_file <-
   file.path(input_dir, "variant-level-snv-consensus-annotated-mut-freq.tsv.gz")
-variant_level_snv <- 
+variant_level_snv <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
+    tibble::as_tibble() %>%
+  dplyr::filter(Dataset != "CHOP P30 Panel")
 # filter mtp table
 file_name <- basename(mtp_file)
-filter_mtp_table(variant_level_snv, ensg_ids, file_name) 
+filter_mtp_table(variant_level_snv, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- variant_level_snv %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- variant_level_snv %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
   dplyr::distinct()
 
 # merge sample IDs to filtered ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(consensus_ensg, by=c("Ensembl_ID" = "Gene"))
 
 # merge OpenPedCan cohorts to filtered ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(sample_ids, by= "Kids_First_Biospecimen_ID")
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "variant-level-snv-consensus-annotated-mut-freq_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Display samples in removed ENSEMBL IDs that are in PMTL list
-filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>% 
-  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>% 
+filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>%
+  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 
 # Remove data frames
@@ -234,53 +240,54 @@ rm(variant_level_snv, filtered_ensg, consensus_ensg)
 #### Gene level CNV frequencies
 ```{r}
 # read mtp table
-mtp_file <- 
+mtp_file <-
   file.path(input_dir, "gene-level-cnv-consensus-annotated-mut-freq.tsv.gz")
-gene_level_cnv <- 
+gene_level_cnv <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble() %>%
+  dplyr::select(-Variant_category)
+# filter mtp table
 file_name <- basename(mtp_file)
-filter_mtp_table(gene_level_cnv, ensg_ids, file_name)  
+filter_mtp_table(gene_level_cnv, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- gene_level_cnv %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- gene_level_cnv %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
   dplyr::distinct()
 
 # read the CNV consensus file
 consensus_ensg <- data.table::fread(
-  file.path(data_dir, "consensus_wgs_plus_cnvkit_wxs.tsv.gz"), 
-  select = c("biospecimen_id", "ensembl"), showProgress = FALSE) %>% 
-  tibble::as_tibble() %>% 
-  dplyr::filter(!is.na(ensembl)) %>% 
-  dplyr::rename(Kids_First_Biospecimen_ID = biospecimen_id) %>% 
+  file.path(data_dir, "consensus_wgs_plus_cnvkit_wxs.tsv.gz"),
+  select = c("biospecimen_id", "ensembl"), showProgress = FALSE) %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(!is.na(ensembl)) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = biospecimen_id) %>%
   dplyr::distinct()
 
 # merge sample IDs to filtered OT ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(consensus_ensg, by=c("Ensembl_ID" = "ensembl"))
 
 # merge OpenPedCan cohorts to filtered OT ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(sample_ids, by= "Kids_First_Biospecimen_ID")
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "gene-level-cnv-consensus-annotated-mut-freq_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Display samples in removed ENSEMBL IDs that are in PMTL list
-filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>% 
-  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>% 
+filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>%
+  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 
 # Remove data frames
@@ -291,56 +298,56 @@ rm(gene_level_cnv, filtered_ensg, consensus_ensg)
 ```{r}
 # read mtp table
 mtp_file <- file.path(input_dir, "putative-oncogene-fusion-freq.tsv.gz")
-fusion <- 
+fusion <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble()
+# filter mtp table
 file_name <- basename(mtp_file)
-filter_mtp_table(fusion, ensg_ids, file_name) 
+filter_mtp_table(fusion, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- fusion %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- fusion %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(FusionName, Gene_symbol, targetFromSourceId) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
   dplyr::distinct()
 
 # split fusion name into constituent genes  symbols
 fusion_names <- data.table::fread(
-  file.path(data_dir, "fusion-putative-oncogenic.tsv"), 
-  select = c("Sample", "FusionName"), showProgress = FALSE) %>% 
-  tibble::as_tibble() %>% 
-  tidyr::separate_rows(FusionName, sep = "--", convert = FALSE) %>% 
-  tidyr::separate_rows(FusionName, sep = '/', convert = FALSE) %>% 
-  dplyr::rename(Kids_First_Biospecimen_ID = Sample, 
-                Gene_symbol = FusionName) %>% 
-  dplyr::filter(!is.na(Gene_symbol)) %>% 
-  dplyr::distinct() 
+  file.path(data_dir, "fusion-putative-oncogenic.tsv"),
+  select = c("Sample", "FusionName"), showProgress = FALSE) %>%
+  tibble::as_tibble() %>%
+  tidyr::separate_rows(FusionName, sep = "--", convert = FALSE) %>%
+  tidyr::separate_rows(FusionName, sep = '/', convert = FALSE) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = Sample,
+                Gene_symbol = FusionName) %>%
+  dplyr::filter(!is.na(Gene_symbol)) %>%
+  dplyr::distinct()
 
 # merge sample IDs to filtered OT ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
-  dplyr::left_join(fusion_names, by="Gene_symbol") %>% 
-  dplyr::select(-FusionName) %>% 
+filtered_ensg <- filtered_ensg %>%
+  dplyr::left_join(fusion_names, by="Gene_symbol") %>%
+  dplyr::select(-FusionName) %>%
   dplyr::distinct()
 
 # merge OpenPedCan cohorts to filtered OT ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(sample_ids, by = "Kids_First_Biospecimen_ID")
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "putative-oncogene-fusion-freq_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Display samples in removed ENSEMBL IDs that are in PMTL list
-filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>% 
-  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>% 
+filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>%
+  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 
 # Remove frequencies data frame
@@ -351,44 +358,44 @@ rm(fusion, filtered_ensg)
 ```{r}
 # read mtp table
 mtp_file <- file.path(input_dir, "putative-oncogene-fused-gene-freq.tsv.gz")
-fused_gene <- 
+fused_gene <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble()
+# filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(fused_gene, ensg_ids, file_name)
 
 
 # Ensembl gene identifiers removed
-filtered_ensg <- fused_gene %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- fused_gene %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
   dplyr::distinct()
 
 # merge sample IDs to filtered OT ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
-  dplyr::left_join(fusion_names, by = "Gene_symbol") %>% 
+filtered_ensg <- filtered_ensg %>%
+  dplyr::left_join(fusion_names, by = "Gene_symbol") %>%
   dplyr::distinct()
 
 # merge sample IDs to filtered OT ENSG IDs
-filtered_ensg <- filtered_ensg %>% 
+filtered_ensg <- filtered_ensg %>%
   dplyr::left_join(sample_ids, by = "Kids_First_Biospecimen_ID")
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "putative-oncogene-fused-gene-freq_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Display samples in removed ENSEMBL IDs that are in PMTL list
-filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>% 
-  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>% 
+filtered_ensg %>% dplyr::filter(Ensembl_ID %in% pmtl_ids) %>%
+  select(Ensembl_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 
 # Remove frequencies data frame
@@ -396,37 +403,37 @@ rm(fused_gene, filtered_ensg, fusion_names)
 ```
 
 #### Gene expression TPM group-wise summary statistics
-OpenPedCan collapsed gene expressions TPM matrix only contains gene symbols 
-and not ENSEMBL gene identifiers. Therefore, samples associated with removed 
-ENSEMBL identifiers cannot be listed. 
+OpenPedCan collapsed gene expressions TPM matrix only contains gene symbols
+and not ENSEMBL gene identifiers. Therefore, samples associated with removed
+ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- 
+mtp_file <-
   file.path(input_dir, "long_n_tpm_mean_sd_quantile_group_wise_zscore.tsv.gz")
-tpm_group_wise_stats <- 
+tpm_group_wise_stats <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble()
+# filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(tpm_group_wise_stats, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- tpm_group_wise_stats %>% 
-  dplyr::filter(!Gene_Ensembl_ID %in% ensg_ids) %>% 
+filtered_ensg <- tpm_group_wise_stats %>%
+  dplyr::filter(!Gene_Ensembl_ID %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, Gene_Ensembl_ID, cohort) %>%
-  dplyr::rename(Ensembl_ID = Gene_Ensembl_ID) %>% 
+  dplyr::rename(Ensembl_ID = Gene_Ensembl_ID) %>%
   dplyr::distinct()
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "long_n_tpm_mean_sd_quantile_group_wise_zscore_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
-  dplyr::filter(cohort != "All Cohorts") %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
+  dplyr::filter(cohort != "All Cohorts") %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>%  
+  tidyr::drop_na() %>%
   table()
 
 # Remove summary statistics data frame
@@ -434,146 +441,147 @@ rm(tpm_group_wise_stats, filtered_ensg)
 ```
 
 #### Gene expression TPM gene-wise summary statistics
-OpenPedCan collapsed gene expressions TPM matrix only contains gene symbols 
-and not ENSEMBL gene identifiers. Therefore, samples associated with removed 
-ENSEMBL identifiers cannot be listed. 
+OpenPedCan collapsed gene expressions TPM matrix only contains gene symbols
+and not ENSEMBL gene identifiers. Therefore, samples associated with removed
+ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- 
+mtp_file <-
   file.path(input_dir, "long_n_tpm_mean_sd_quantile_gene_wise_zscore.tsv.gz")
-tpm_gene_wise_stats <- 
+tpm_gene_wise_stats <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble()
+# filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(tpm_gene_wise_stats, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- tpm_gene_wise_stats %>% 
-  dplyr::filter(!Gene_Ensembl_ID %in% ensg_ids) %>% 
+filtered_ensg <- tpm_gene_wise_stats %>%
+  dplyr::filter(!Gene_Ensembl_ID %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, Gene_Ensembl_ID, cohort) %>%
-  dplyr::rename(Ensembl_ID = Gene_Ensembl_ID) %>% 
+  dplyr::rename(Ensembl_ID = Gene_Ensembl_ID) %>%
   dplyr::distinct()
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "long_n_tpm_mean_sd_quantile_gene_wise_zscore_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
-  dplyr::filter(cohort != "All Cohorts") %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
+  dplyr::filter(cohort != "All Cohorts") %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>%  
+  tidyr::drop_na() %>%
   table()
 
 # Remove summary statistics data frame
 rm(tpm_gene_wise_stats, filtered_ensg)
 ```
 
-#### Methylation gene-level summary 
-OpenPedCan contains methylation and rnaseq summaries of cohort cancer groups and
-can't not associate with samples. Therefore, samples associated with removed ENSEMBL 
-identifiers cannot be listed. 
+#### Methylation gene-level summary
+OpenPedCan methylation tables contains methylation and rnaseq summaries of cohort
+cancer groups and can't not associate with samples. Therefore, samples associated
+with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
 mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz")
-gene_level_methyl <- 
+gene_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble()
+# filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(gene_level_methyl, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- gene_level_methyl %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- gene_level_methyl %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId, Dataset) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>%
   dplyr::distinct()
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "gene-methyl-beta-values-summary_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Remove frequencies data frame
 rm(gene_level_methyl, filtered_ensg)
 ```
 
-#### Methylation gene-level summary 
-OpenPedCan contains methylation and rnaseq summaries of cohort cancer groups and
-can't not associate with samples. Therefore, samples associated with removed ENSEMBL 
-identifiers cannot be listed. 
+#### Methylation gene-level summary
+OpenPedCan methylation tables contains methylation and rnaseq summaries of cohort
+cancer groups and can't not associate with samples. Therefore, samples associated
+with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
 mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz")
-isoform_level_methyl <- 
+isoform_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble()
+# filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(isoform_level_methyl, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- isoform_level_methyl %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- isoform_level_methyl %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId, Dataset) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>%
   dplyr::distinct()
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "isoform-methyl-beta-values-summary_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Remove frequencies data frame
 rm(isoform_level_methyl, filtered_ensg)
 ```
 
-#### DESeq tumor-normal results 
-OpenPedCan contains methylation and rnaseq summaries of cohort cancer groups and
-can't not associate with samples. Therefore, samples associated with removed ENSEMBL 
-identifiers cannot be listed. 
+#### DESeq tumor-normal comparison
+OpenPedCan DESeq tumor-normal contains comparisons of cohort cancer groups and
+can't not associate with samples. Therefore, samples associated with removed ENSEMBL
+identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- 
+mtp_file <-
   file.path(input_dir, "gene-counts-rsem-expected_count-collapsed-deseq.tsv.gz")
-gene_level_deseq <- 
+gene_level_deseq <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() 
-# filter mtp table 
+    tibble::as_tibble() %>%
+  dplyr::rename(Disease = cancer_group)
+# filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(gene_level_deseq, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
-filtered_ensg <- gene_level_deseq %>% 
-  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>% 
+filtered_ensg <- gene_level_deseq %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
   dplyr::select(Gene_symbol, targetFromSourceId, cohort) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>% 
+  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
   dplyr::distinct()
 
 # write to file
 readr::write_tsv(filtered_ensg,
-  file.path(results_dir, 
+  file.path(results_dir,
             "gene-counts-rsem-expected_count-collapsed-deseq_dropped_ensg.tsv.gz"))
 
-# Display removed ENSEMBL IDs 
-filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>% 
+# Display removed ENSEMBL IDs
+filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
   dplyr::distinct() %>%
-  tidyr::drop_na() %>% 
+  tidyr::drop_na() %>%
   table()
 
 # Remove frequencies data frame
