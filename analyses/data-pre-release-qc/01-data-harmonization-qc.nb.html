@@ -3003,6 +3003,9 @@ hist_df &lt;- readr::read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quo
                            guess_max = 10000,
                            col_types = cols(.default = col_guess()))</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZzogT25lIG9yIG1vcmUgcGFyc2luZyBpc3N1ZXMsIHNlZSBgcHJvYmxlbXMoKWAgZm9yIGRldGFpbHNcbiJ9 -->
+<pre><code>Warning: One or more parsing issues, see `problems()` for details</code></pre>
+<!-- rnb-warning-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -3442,9 +3445,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;cnv-cnvkit.seg.g
   dplyr::pull(ID) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDUzODYyNCBDb2x1bW5zOiA3XG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMik6IElELCBjaHJvbVxuZGJsICg1KTogbG9jLnN0YXJ0LCBsb2MuZW5kLCBudW0ubWFyaywgc2VnLm1lYW4sIGNvcHkubnVtXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDUzODYyNCBDb2x1bW5zOiA3XG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgyKTogSUQsIGNocm9tXG5kYmwgKDUpOiBsb2Muc3RhcnQsIGxvYy5lbmQsIG51bS5tYXJrLCBzZWcubWVhbiwgY29weS5udW1cblxuaSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbmkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
 <pre><code>Rows: 4538624 Columns: 7
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (2): ID, chrom
 dbl (5): loc.start, loc.end, num.mark, seg.mean, copy.num
@@ -3496,9 +3499,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;cnv-controlfreec
   dplyr::pull(Kids_First_Biospecimen_ID) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMzIzNTc2OCBDb2x1bW5zOiAxMVxuLS0gQ29sdW1uIHNwZWNpZmljYXRpb24gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDQpOiBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELCBjaHIsIHN0YXR1cywgZ2Vub3R5cGVcbmRibCAoNyk6IHN0YXJ0LCBlbmQsIGNvcHkgbnVtYmVyLCB1bmNlcnRhaW50eSwgV2lsY294b25SYW5rU3VtVGVzdFB2YWx1ZSwgS28uLi5cblxuaSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbmkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMzIzNTc2OCBDb2x1bW5zOiAxMVxuLS0gQ29sdW1uIHNwZWNpZmljYXRpb24gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoNCk6IEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIGNociwgc3RhdHVzLCBnZW5vdHlwZVxuZGJsICg3KTogc3RhcnQsIGVuZCwgY29weSBudW1iZXIsIHVuY2VydGFpbnR5LCBXaWxjb3hvblJhbmtTdW1UZXN0UHZhbHVlLCBLby4uLlxuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
 <pre><code>Rows: 3235768 Columns: 11
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (4): Kids_First_Biospecimen_ID, chr, status, genotype
 dbl (7): start, end, copy number, uncertainty, WilcoxonRankSumTestPvalue, Ko...
@@ -3550,9 +3553,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;cnv-gatk.seg.gz&
   dplyr::pull(BS_ID) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTg2NTUyNiBDb2x1bW5zOiA3XG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMyk6IEJTX0lELCBDT05USUcsIENBTExcbmRibCAoNCk6IFNUQVJULCBFTkQsIE5VTV9QT0lOVFNfQ09QWV9SQVRJTywgTUVBTl9MT0cyX0NPUFlfUkFUSU9cblxuaSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbmkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTg2NTUyNiBDb2x1bW5zOiA3XG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgzKTogQlNfSUQsIENPTlRJRywgQ0FMTFxuZGJsICg0KTogU1RBUlQsIEVORCwgTlVNX1BPSU5UU19DT1BZX1JBVElPLCBNRUFOX0xPRzJfQ09QWV9SQVRJT1xuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
 <pre><code>Rows: 1865526 Columns: 7
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (3): BS_ID, CONTIG, CALL
 dbl (4): START, END, NUM_POINTS_COPY_RATIO, MEAN_LOG2_COPY_RATIO
@@ -3576,7 +3579,7 @@ if (length(missing_ids) &gt; 0) {
 <!-- rnb-source-end -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Kids_First_Participant_ID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["experimental_strategy"],"name":[3],"type":["chr"],"align":["left"]},{"label":["sample_type"],"name":[4],"type":["chr"],"align":["left"]},{"label":["RNA_library"],"name":[5],"type":["chr"],"align":["left"]},{"label":["cohort"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"BS_A9Q65W4Q","2":"PT_FK7ZXG3E","3":"WGS","4":"Tumor","5":"NA","6":"PBTA"},{"1":"BS_JTNTWJMD","2":"PT_YJY2QXDM","3":"WGS","4":"Tumor","5":"NA","6":"PBTA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Kids_First_Participant_ID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["experimental_strategy"],"name":[3],"type":["chr"],"align":["left"]},{"label":["sample_type"],"name":[4],"type":["chr"],"align":["left"]},{"label":["RNA_library"],"name":[5],"type":["chr"],"align":["left"]},{"label":["cohort"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"BS_A9Q65W4Q","2":"PT_FK7ZXG3E","3":"WGS","4":"Tumor","5":"stranded","6":"PBTA"},{"1":"BS_JTNTWJMD","2":"PT_YJY2QXDM","3":"WGS","4":"Tumor","5":"stranded","6":"PBTA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-source-begin eyJkYXRhIjoicHJpbnQocGFzdGUoXCJETkEgYmlvc3BlY2ltZW4gaW4gaGlzdG9sZ2llcyBtaXNzaW5nIGluIGNudi1nYXRrLnNlZy5neiA9IFwiLCBsZW5ndGgobWlzc2luZ19pZHMpKSkifQ== -->
@@ -3785,9 +3788,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;biospecimen_id_t
   dplyr::pull(Kids_First_Biospecimen_ID) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDQxNCBDb2x1bW5zOiAyXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMik6IEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIGJlZF90b191c2VcblxuaSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbmkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDQxNCBDb2x1bW5zOiAyXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgyKTogS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCwgYmVkX3RvX3VzZVxuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
 <pre><code>Rows: 4414 Columns: 2
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (2): Kids_First_Biospecimen_ID, bed_to_use
 
@@ -3869,9 +3872,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;fusion-annoFuse.
   dplyr::pull(Sample) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjMzMTQyIENvbHVtbnM6IDIyXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMTgpOiBTYW1wbGUsIEZ1c2lvbk5hbWUsIExlZnRCcmVha3BvaW50LCBSaWdodEJyZWFrcG9pbnQsIENhbGxlciwgRnVzaW8uLi5cbmRibCAgKDMpOiBKdW5jdGlvblJlYWRDb3VudCwgU3Bhbm5pbmdGcmFnQ291bnQsIFNwYW5uaW5nRGVsdGFcbmxnbCAgKDEpOiByZWNpcHJvY2FsX2V4aXN0c1xuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>Rows: 233142 Columns: 22
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjM2MTg0IENvbHVtbnM6IDIyXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgxOCk6IFNhbXBsZSwgRnVzaW9uTmFtZSwgTGVmdEJyZWFrcG9pbnQsIFJpZ2h0QnJlYWtwb2ludCwgQ2FsbGVyLCBGdXNpby4uLlxuZGJsICAoMyk6IEp1bmN0aW9uUmVhZENvdW50LCBTcGFubmluZ0ZyYWdDb3VudCwgU3Bhbm5pbmdEZWx0YVxubGdsICAoMSk6IHJlY2lwcm9jYWxfZXhpc3RzXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<pre><code>Rows: 236184 Columns: 22
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (18): Sample, FusionName, LeftBreakpoint, RightBreakpoint, Caller, Fusio...
 dbl  (3): JunctionReadCount, SpanningFragCount, SpanningDelta
@@ -3918,9 +3921,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;fusion-arriba.ts
   dplyr::pull(tumor_id) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjgyMDU2IENvbHVtbnM6IDMzXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMjgpOiBnZW5lMSwgZ2VuZTIsIHN0cmFuZDEuZ2VuZS5mdXNpb24uLCBzdHJhbmQyLmdlbmUuZnVzaW9uLiwgYnJlYWtwb2kuLi5cbmRibCAgKDUpOiBzcGxpdF9yZWFkczEsIHNwbGl0X3JlYWRzMiwgZGlzY29yZGFudF9tYXRlcywgY292ZXJhZ2UxLCBjb3ZlcmFnZTJcblxuaSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbmkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
-<pre><code>Rows: 282056 Columns: 33
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjg0OTA1IENvbHVtbnM6IDMzXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgyOCk6IGdlbmUxLCBnZW5lMiwgc3RyYW5kMS5nZW5lLmZ1c2lvbi4sIHN0cmFuZDIuZ2VuZS5mdXNpb24uLCBicmVha3BvaS4uLlxuZGJsICAoNSk6IHNwbGl0X3JlYWRzMSwgc3BsaXRfcmVhZHMyLCBkaXNjb3JkYW50X21hdGVzLCBjb3ZlcmFnZTEsIGNvdmVyYWdlMlxuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 284905 Columns: 33
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (28): gene1, gene2, strand1.gene.fusion., strand2.gene.fusion., breakpoi...
 dbl  (5): split_reads1, split_reads2, discordant_mates, coverage1, coverage2
@@ -3966,9 +3969,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;fusion-starfusio
   dplyr::pull(tumor_id) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTI2OTQgQ29sdW1uczogMjhcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgyMSk6IEZ1c2lvbk5hbWUsIFNwbGljZVR5cGUsIExlZnRHZW5lLCBMZWZ0QnJlYWtwb2ludCwgUmlnaHRHZW5lLCBSaWdodC4uLlxuZGJsICAoNyk6IEp1bmN0aW9uUmVhZENvdW50LCBTcGFubmluZ0ZyYWdDb3VudCwgZXN0X0osIGVzdF9TLCBGRlBNLCBMZWZ0QnJlYS4uLlxuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>Rows: 12694 Columns: 28
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTI5NTAgQ29sdW1uczogMjhcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDIxKTogRnVzaW9uTmFtZSwgU3BsaWNlVHlwZSwgTGVmdEdlbmUsIExlZnRCcmVha3BvaW50LCBSaWdodEdlbmUsIFJpZ2h0Li4uXG5kYmwgICg3KTogSnVuY3Rpb25SZWFkQ291bnQsIFNwYW5uaW5nRnJhZ0NvdW50LCBlc3RfSiwgZXN0X1MsIEZGUE0sIExlZnRCcmVhLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<pre><code>Rows: 12950 Columns: 28
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (21): FusionName, SpliceType, LeftGene, LeftBreakpoint, RightGene, Right...
 dbl  (7): JunctionReadCount, SpanningFragCount, est_J, est_S, FFPM, LeftBrea...
@@ -3992,7 +3995,7 @@ if (length(missing_hist_ids) &gt; 0) {
 <!-- rnb-source-end -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"BS_4PRD2E3Q"},{"1":"BS_BXSX4A7H"},{"1":"BS_47EYP04A"},{"1":"TARGET-50-CAAAAQ-11A-01R"},{"1":"TARGET-50-PAJNRL-11A-01R"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"TARGET-50-CAAAAQ-11A-01R"},{"1":"BS_4PRD2E3Q"},{"1":"BS_BXSX4A7H"},{"1":"BS_47EYP04A"},{"1":"TARGET-50-PAJNRL-11A-01R"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-source-begin eyJkYXRhIjoicHJpbnQocGFzdGUoXCJSTkEgYmlvc3BlY2ltZW4gaW4gZnVzaW9uLXN0YXJmdXNpb24udHN2Lmd6IG1pc3NpbmcgaW4gaGlzdG9sZ2llcyA9IFwiLCBsZW5ndGgobWlzc2luZ19oaXN0X2lkcykpKSJ9 -->
@@ -4014,9 +4017,9 @@ biospecimen_ids &lt;- readr::read_tsv(file.path(data_dir, &quot;fusion-dgd.tsv.g
   dplyr::pull(Sample) %&gt;%
   unique()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjc4IENvbHVtbnM6IDE3XG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoOSk6IFNhbXBsZSwgRnVzaW9uTmFtZSwgRnVzaW9uX1R5cGUsIEdlbmUxQSwgR2VuZTFCLCBhbm5vdHMsIEdlbmUxQV9hbm4uLi5cbmRibCAoMik6IEp1bmN0aW9uUmVhZENvdW50LCBTcGFubmluZ0ZyYWdDb3VudFxubGdsICg2KTogR2VuZTJBLCBHZW5lMkIsIExlZnRCcmVha3BvaW50LCBSaWdodEJyZWFrcG9pbnQsIEdlbmUyQV9hbm5vLCBHZW5lMi4uLlxuXG5pIFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxuaSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjc4IENvbHVtbnM6IDE3XG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICg5KTogU2FtcGxlLCBGdXNpb25OYW1lLCBGdXNpb25fVHlwZSwgR2VuZTFBLCBHZW5lMUIsIGFubm90cywgR2VuZTFBX2Fubi4uLlxuZGJsICgyKTogSnVuY3Rpb25SZWFkQ291bnQsIFNwYW5uaW5nRnJhZ0NvdW50XG5sZ2wgKDYpOiBHZW5lMkEsIEdlbmUyQiwgTGVmdEJyZWFrcG9pbnQsIFJpZ2h0QnJlYWtwb2ludCwgR2VuZTJBX2Fubm8sIEdlbmUyLi4uXG5cbmkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG5pIFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 278 Columns: 17
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Column specification ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Delimiter: &quot;\t&quot;
 chr (9): Sample, FusionName, Fusion_Type, Gene1A, Gene1B, annots, Gene1A_ann...
 dbl (2): JunctionReadCount, SpanningFragCount
