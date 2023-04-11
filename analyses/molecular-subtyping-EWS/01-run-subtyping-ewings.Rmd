@@ -32,7 +32,7 @@ clinical <- readr::read_tsv(file.path(dataDir, "histologies-base.tsv"), guess_ma
 
 # ewings samples or samples with EWS via methylation
 ews_clinical <- clinical %>%
-  filter(pathology_diagnosis == "Ewings Sarcoma" | (dkfz_v12_methylation_subclass == "EWS" & dkfz_v12_methylation_subclass_score >= 0.8))
+  filter(pathology_diagnosis == "Ewings Sarcoma" | (dkfz_v12_methylation_subclass == "EWS" & dkfz_v12_methylation_subclass_score >= 0.8)) 
 
 # what are the path diagnoses here? Non-EWS should be reviewed by pathology
 ews_clinical %>%
@@ -45,7 +45,7 @@ ews_clinical %>%
 ```{r fusion bsids}
 ewings_foi_bsids <- readr::read_tsv(
   file.path(root_dir, 
-            "data",
+            "data", 
             "fusion_summary_ewings_foi.tsv")
   ) 
 
@@ -113,6 +113,8 @@ all_subtypes <- ews_clinical %>%
   mutate(id = paste(sample_id, composition, sep = "_")) %>%
   left_join(subtype_map) %>%
   left_join(methyl_map) %>%
+  # confirm the subtype based in the pathology, remove any with different pathology dx
+  filter(pathology_diagnosis == "Ewings Sarcoma") %>% 
   # make subtype EWS if diagnosis EWS or methylation was EWS
   mutate(molecular_subtype = case_when(pathology_diagnosis == "Ewings Sarcoma" ~ "EWS",
                                        TRUE ~ molecular_subtype_methyl))
