@@ -216,7 +216,7 @@ h3_k28_df <- all_data_df %>%
            molecular_subtype_methyl == "DMG, H3 K28") %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
-         sample_id,
+         id,
          `H3F3A_H3-3A.K28M`,
          HIST1H3B_H3C2.K28M,
          HIST1H3C_H3C3.K28M,
@@ -303,7 +303,7 @@ h3_g35_df <- all_data_df %>%
            molecular_subtype_methyl == "DHG, H3 G35") %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
-         sample_id,
+         id,
          `H3F3A_H3-3A.K28M`,
          HIST1H3B_H3C2.K28M,
          `H3F3A_H3-3A.G35R`,
