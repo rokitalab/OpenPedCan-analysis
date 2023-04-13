@@ -1,6 +1,6 @@
 Kids_First_Biospecimen_ID	Kids_First_Participant_ID	sample_id	tumor_descriptor	broad_histology	short_histology	molecular_subtype	integrated_diagnosis	harmonized_diagnosis	Notes
 BS_00JRW8F2	PT_9C7GK4YB	7316-8427	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
-BS_01Y5F4PN	PT_QK4XB83F	7316-663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_01Y5F4PN	PT_QK4XB83F	7316-663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_044XZ8ST	PT_QAX38GM7	7316-3570	Progressive	Low-grade astrocytic tumor	LGAT	LGG, other MAPK	Low-grade glioma, other MAPK	Low-grade glioma, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_04B8X54S	PT_ATE3YRH5	7316-3308	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF, RTK	Low-grade glioma, KIAA1549-BRAF, RTK	Low-grade glioma, KIAA1549-BRAF, RTK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_04KM3N3S	PT_3SF3NQ43	7316-5288	Progressive	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -38,7 +38,7 @@ BS_1GK2EMFY	PT_W3FSA7NH	7316-3522	Progressive	Low-grade astrocytic tumor	LGAT	LG
 BS_1HYS8CSC	PT_XBSCF601	7316-7961	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_1JDG6JV5	PT_CK41DW03	7316-329	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_1QRW0M8X	PT_NHX9RARA	7316-9739	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_1TPWFSK6	PT_7JQ24F35	7316-1957	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_1TPWFSK6	PT_7JQ24F35	7316-1957	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_1VMBA3BN	PT_9C2G356W	7316-3555	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_1VNMJHMN	PT_773ZPTEB	7316-8115	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_1Z9AX9JS	PT_62G82T6Q	7316-6800	Progressive	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -71,7 +71,7 @@ BS_304SPN6B	PT_49KEX2FK	7316-8066	Initial CNS Tumor	Low-grade astrocytic tumor	L
 BS_35YGX2Z6	PT_6PQNGZEX	7316-5897	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_36HCZ3KW	PT_T5CR5HQZ	7316-33	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_39P851A7	PT_Z9BN2V4W	7316-6778	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_3A0CJMRH	PT_E79807KT	7316-1087	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_3A0CJMRH	PT_E79807KT	7316-1087	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_3AERRZQT	PT_CK41DW03	7316-329	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_3C4YAMKJ	PT_YGN06RPZ	7316-2204	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_3EK4EGFE	PT_PD7G77HN	7316-4511	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E, CDKN2A/B	Low-grade glioma, BRAF V600E, CDKN2A/B	Low-grade glioma, BRAF V600E, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -179,7 +179,7 @@ BS_7W63ZCSR	PT_WMGSWG25	7316-4780	Initial CNS Tumor	Low-grade astrocytic tumor	L
 BS_7Z93ZYMS	PT_3J0ASVHN	7316-3622	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_87HS6R4E	PT_XVB5Z3FC	C4118532-Tumor	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E	Low-grade glioma, BRAF V600E	Low-grade glioma, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_880ESDFZ	PT_S4J0JZAA	7316-6769	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_895FJ34T	PT_7JQ24F35	7316-1681	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_895FJ34T	PT_7JQ24F35	7316-1681	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_89RCN9PF	PT_NZFFMZ0B	7316-923	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, other MAPK	Low-grade glioma, other MAPK	Low-grade glioma, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_8BF616QR	PT_2MZPGZN1	7316-3167	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, FGFR	Low-grade glioma, FGFR	Low-grade glioma, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_8CEH088G	PT_GSQJ4YFX	7316-4955	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -213,7 +213,7 @@ BS_9Q7695CZ	PT_FVBANNK9	7316-6395	Initial CNS Tumor	Low-grade astrocytic tumor	L
 BS_9SJWWYQ4	PT_3CVMBGD7	7316-1963	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_9TPM9HC4	PT_XYS9EB2T	7316-6532	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_9VVQJW2P	PT_CM36GB66	7316-4973	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
-BS_9XBGGK0F	PT_QT3MK7BZ	7316-1977	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_9XBGGK0F	PT_QT3MK7BZ	7316-1977	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_9XNTT5MF	PT_1ZNX0TGK	7316-517	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_9YXH2CZ0	PT_S9ZZSZHR	7316-9027	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_A13BMEF5	PT_TB8HPJBN	7316-2663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -247,7 +247,7 @@ BS_B0SVFK4P	PT_RRT2E7HK	7316-136	Initial CNS Tumor	Low-grade astrocytic tumor	LG
 BS_B5JM6T8K	PT_YVY56QHA	7316-8837	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, other MAPK	Low-grade glioma, other MAPK	Low-grade glioma, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_B6JKQFKA	PT_9XXGZHJV	7316-7743	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, other MAPK	Low-grade glioma, other MAPK	Low-grade glioma, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_B6K0N6HS	PT_NA8NZ0BN	7316-2135	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, RTK, CDKN2A/B	Low-grade glioma, RTK, CDKN2A/B	Low-grade glioma, RTK, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_B6M763JS	PT_QT3MK7BZ	7316-1977	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_B6M763JS	PT_QT3MK7BZ	7316-1977	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_B7GEH89C	PT_H57TEQDT	7316-2324	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_B85R6Q94	PT_Q8WBFJ5R	7316-8969	Progressive	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_BA6EZCD7	PT_R86EY5TZ	7316-8743	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
@@ -325,12 +325,12 @@ BS_ECGQWHNQ	PT_VN6MTPPM	7316-3532	Initial CNS Tumor	Low-grade astrocytic tumor	L
 BS_EFEZB0ZH	PT_DW6V5V8E	7316-924	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_EHVYJAVA	PT_GHHY5AAE	7316-741	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, FGFR	Low-grade glioma, FGFR	Low-grade glioma, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_EQE19CB0	PT_K63972GG	7316-666	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_ERZJP66A	PT_7JQ24F35	7316-1681	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_ERZJP66A	PT_7JQ24F35	7316-1681	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_ET8CJXSF	PT_VGXHFMND	7316-1643	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_EW8SRNV4	PT_WW0M48CT	7316-3671	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_EXYHZ6D4	PT_2YCHME6S	7316-2622	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_EY2B6KD0	PT_3SF3NQ43	7316-5288	Progressive	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_EYYMKWB7	PT_E79807KT	7316-1087	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_EYYMKWB7	PT_E79807KT	7316-1087	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_F1B71HTZ	PT_1KEER2Q1	7316-460	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_F1K9QTBS	PT_N8VZWF99	7316-8865	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_F349AQKV	PT_XZGWKXC5	7316-7494	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -341,8 +341,8 @@ BS_F77MGAQT	PT_XVB5Z3FC	C4118532-Tumor	Initial CNS Tumor	Low-grade astrocytic tu
 BS_F7BAKXTE	PT_MGSQG85P	7316-4542	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_F7YNCQK9	PT_QK1GTVW1	7316-4429	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_F969DNHD	PT_EEKE0V9T	7316-32	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E	Low-grade glioma, BRAF V600E	Low-grade glioma, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_F9ZTZ4YS	PT_QT3MK7BZ	7316-1977	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_FBPGKMX5	PT_7JQ24F35	7316-1957	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_F9ZTZ4YS	PT_QT3MK7BZ	7316-1977	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
+BS_FBPGKMX5	PT_7JQ24F35	7316-1957	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_FBVCQX23	PT_T7F3KA8X	7316-4276	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_FBZBS9JR	PT_AX5NM47X	7316-4683	Progressive	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_FFD25TTK	PT_VJ0M4E8Y	7316-2099	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -400,10 +400,10 @@ BS_HX0S30NE	PT_H45M7M2T	7316-1652	Initial CNS Tumor	Low-grade astrocytic tumor	L
 BS_J037K4BM	PT_Y572BRC1	7316-2193	Progressive	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_J5H5VXWY	PT_WWR7NB5Q	7316-5146	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, other MAPK, CDKN2A/B	Low-grade glioma, other MAPK, CDKN2A/B	Low-grade glioma, other MAPK, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_J6B8ARCR	PT_X4PV4FBS	7316-9445	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, RTK	Low-grade glioma, RTK	Low-grade glioma, RTK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_J6NGG30Q	PT_E79807KT	7316-1087	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_J6NGG30Q	PT_E79807KT	7316-1087	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_J6VRW67C	PT_0MHKP408	7316-726	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E	Low-grade glioma, BRAF V600E	Low-grade glioma, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_J791FW5S	PT_56SWR1FM	7316-4742	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_JG9JZTA9	PT_QK4XB83F	7316-663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_JG9JZTA9	PT_QK4XB83F	7316-663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_JGKZ54SA	PT_5XV23PWB	7316-4738	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_JH29M4KG	PT_0MHKP408	7316-726	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E	Low-grade glioma, BRAF V600E	Low-grade glioma, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_JHGFJR3D	PT_RRT2E7HK	7316-136	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E	Low-grade glioma, BRAF V600E	Low-grade glioma, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -526,7 +526,7 @@ BS_R1V343SK	PT_V41TGECC	7316-6646	Initial CNS Tumor	Low-grade astrocytic tumor	L
 BS_R244Z0WX	PT_JPWVCTAJ	7316-1953	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_R3AJB6VS	PT_2V5GJG0F	7316-6077	Progressive	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_R407FX2P	PT_T06GNH71	7316-6036	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_R634WKN7	PT_7JQ24F35	7316-1681	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_R634WKN7	PT_7JQ24F35	7316-1681	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_R726FKHP	PT_RXJZ3C5G	7316-2632	Progressive	Low-grade astrocytic tumor	LGAT	LGG, FGFR	Low-grade glioma, FGFR	Low-grade glioma, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_R7V8BC98	PT_SJ9PJ1D0	7316-6037	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, other MAPK	Low-grade glioma, other MAPK	Low-grade glioma, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_R7VSGBAK	PT_9TPW6850	7316-5279	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
@@ -553,7 +553,7 @@ BS_RSB4R1C7	PT_3P3HARZ2	7316-720	Initial CNS Tumor	Low-grade astrocytic tumor	LG
 BS_RWJZFTP9	PT_S0PBN4M7	7316-1805	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_RYZG8SPC	PT_DH968NQY	7316-7202	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_RZ8S8DRK	PT_TY9T3SB8	7316-6129	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, BRAF V600E	Low-grade glioma, BRAF V600E	Low-grade glioma, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_S0CRDFF4	PT_QK4XB83F	7316-663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_S0CRDFF4	PT_QK4XB83F	7316-663	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_S4V27HQX	PT_JGHYFZ35	7316-6649	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_S4V9E1XJ	PT_Y572BRC1	7316-2193	Progressive	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_S6S317MG	PT_RZN44FHP	7316-4340	Progressive	Low-grade astrocytic tumor	LGAT	LGG, FGFR	Low-grade glioma, FGFR	Low-grade glioma, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
@@ -632,7 +632,7 @@ BS_W9P0PFDH	PT_S7WJ99PC	7316-677	Initial CNS Tumor	Low-grade astrocytic tumor	LG
 BS_WCMPH1PM	PT_SJ9PJ1D0	7316-6037	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, other MAPK	Low-grade glioma, other MAPK	Low-grade glioma, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_WCRKYV0T	PT_GVDMG7KC	7316-152	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_WCX9HT5Y	PT_N4563ERM	7316-7511	Progressive	Low-grade astrocytic tumor	LGAT	LGG, wildtype	Low-grade glioma, wildtype	Low-grade glioma, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
-BS_WD7AQV83	PT_7JQ24F35	7316-1957	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA	SEGA	SEGA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
+BS_WD7AQV83	PT_7JQ24F35	7316-1957	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	SEGA, To be classified	NA	Subependymal Giant Cell Astrocytoma	Updated via pathology_free_text_diagnosis
 BS_WDXPT9NT	PT_JDAGM28V	7316-4687	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, To be classified	NA	Pilocytic astrocytoma	Updated via pathology_free_text_diagnosis
 BS_WG203ECV	PT_962TCBVR	7316-896	Recurrence	Low-grade astrocytic tumor	LGAT	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis
 BS_WHVZY7E7	PT_FQDKMXHH	7316-2979	Initial CNS Tumor	Low-grade astrocytic tumor	LGAT	LGG, NF1-germline, BRAF V600E	Low-grade glioma, NF1-germline, BRAF V600E	Low-grade glioma, NF1-germline, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis

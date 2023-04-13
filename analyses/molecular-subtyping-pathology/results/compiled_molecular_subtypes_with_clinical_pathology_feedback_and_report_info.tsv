@@ -1459,9 +1459,9 @@ PT_04X0KGW6	7316-7739	BS_7S2N5ZM8	EPN, PF A	Posterior fossa group A (PFA) ependy
 PT_04YTK82N	7316-746	BS_3JE2T7AR	MB, Group3	Medulloblastoma, group 3	Medulloblastoma	Embryonal tumor	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_04YTK82N	7316-746	BS_9PB3XH5D	MB, Group3	Medulloblastoma, group 3	Medulloblastoma	Embryonal tumor	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_04YTK82N	7316-746	BS_M6YZNRVZ	MB, Group3	Medulloblastoma, group 3	Medulloblastoma	Embryonal tumor	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_06ERX8Z7	7316-2578	BS_29CPJ040	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_06ERX8Z7	7316-2578	BS_7VBT9G8F	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_06ERX8Z7	7316-2578	BS_B1X2SB4P	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
+PT_06ERX8Z7	7316-2578	BS_29CPJ040	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
+PT_06ERX8Z7	7316-2578	BS_7VBT9G8F	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
+PT_06ERX8Z7	7316-2578	BS_B1X2SB4P	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
 PT_06H29FCG	7316-1944	BS_0W8AWY10	EPN, To be classified	NA	Ependymoma	Ependymal tumor	NA	Initial CNS Tumor	NA
 PT_06H29FCG	7316-1944	BS_4T0HPZDC	EPN, To be classified	NA	Ependymoma	Ependymal tumor	NA	Initial CNS Tumor	NA
 PT_084D4KS4	7316-514	BS_RK04GPWZ	EPN, PF A	Posterior fossa group A (PFA) ependymoma	Ependymoma	Ependymal tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
@@ -2505,9 +2505,9 @@ PT_65B5CGQG	7316-7110	BS_72TN2CTK	MB, WNT	Medulloblastoma, WNT-activated	Medullo
 PT_65B5CGQG	7316-7110	BS_CNBP5W3S	MB, To be classified	NA	Medulloblastoma	Embryonal tumor	NA	Initial CNS Tumor	NA
 PT_65B5CGQG	7316-7110	BS_F0EA1FGK	MB, WNT	Medulloblastoma, WNT-activated	Medulloblastoma	Embryonal tumor	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_65B5CGQG	7316-7110	BS_PC107GE3	MB, WNT	Medulloblastoma, WNT-activated	Medulloblastoma	Embryonal tumor	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_66XN3MT1	7316-936	BS_42X5PNA0	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_66XN3MT1	7316-936	BS_8Z3SCKB5	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_66XN3MT1	7316-936	BS_DC7XYYG8	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
+PT_66XN3MT1	7316-936	BS_42X5PNA0	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
+PT_66XN3MT1	7316-936	BS_8Z3SCKB5	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
+PT_66XN3MT1	7316-936	BS_DC7XYYG8	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
 PT_66ZF97BR	7316-4104	BS_H16EVNVN	NA	NA	CPT	Choroid plexus tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma
 PT_673WYA9X	7316-7595	BS_EFRXNDWX	NA	NA	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma
 PT_673WYA9X	7316-7595	BS_WZY34KWZ	NA	NA	Meningioma	Meningioma	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma
@@ -2742,12 +2742,12 @@ PT_7HGY5W67	7316-6044	BS_5NK9RCM7	CNS HGNET-MN1	CNS Embryonal tumor, HGNET-MN1	E
 PT_7HGY5W67	7316-6044	BS_NPWT4SXA	CNS HGNET-MN1	CNS Embryonal tumor, HGNET-MN1	Embryonal tumor	Embryonal tumor	Updated via OpenPedCan subtyping	Recurrence	NA
 PT_7HGY5W67	7316-6056	BS_GPPREVAD	CNS Embryonal, NOS	CNS Embryonal tumor, NEC/NOS	Embryonal tumor	Embryonal tumor	Updated via OpenPedCan subtyping	Progressive	NA
 PT_7HSD72ZQ	7316-8808	BS_MD7A34PT	HGG, H3 wildtype	High-grade glioma, IDH-wildtype and H3-wildtype	HGAT	Diffuse astrocytic and oligodendroglial tumor	Updated via OpenPedCan subtyping	Deceased	NA
-PT_7JQ24F35	7316-1681	BS_895FJ34T	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_7JQ24F35	7316-1681	BS_ERZJP66A	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_7JQ24F35	7316-1681	BS_R634WKN7	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_7JQ24F35	7316-1957	BS_1TPWFSK6	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_7JQ24F35	7316-1957	BS_FBPGKMX5	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_7JQ24F35	7316-1957	BS_WD7AQV83	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
+PT_7JQ24F35	7316-1681	BS_895FJ34T	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_7JQ24F35	7316-1681	BS_ERZJP66A	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_7JQ24F35	7316-1681	BS_R634WKN7	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_7JQ24F35	7316-1957	BS_1TPWFSK6	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_7JQ24F35	7316-1957	BS_FBPGKMX5	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_7JQ24F35	7316-1957	BS_WD7AQV83	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
 PT_7K25M5TQ	7316-5266	BS_061395E1	EPN, To be classified	NA	Ependymoma	Ependymal tumor	NA	Recurrence	NA
 PT_7K25M5TQ	7316-5266	BS_9S1RNVV3	EPN, To be classified	NA	Ependymoma	Ependymal tumor	NA	Recurrence	NA
 PT_7K321REE	7316-9744	BS_8P5ZHHPM	CRANIO, ADAM	Adamantinomatous craniopharyngioma	Craniopharyngioma	Tumors of sellar region	Updated via OpenPedCan subtyping	Progressive	NA
@@ -3883,9 +3883,9 @@ PT_E6FTW238	7316-3890	BS_8CN9JW34	ATRT, MYC	Atypical Teratoid Rhabdoid Tumor, MY
 PT_E6FTW238	7316-3890	BS_S71RJ8DH	ATRT, MYC	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT	Embryonal tumor	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_E78NHRWQ	7316-1081	BS_3DYRAZE7	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_E78NHRWQ	7316-1081	BS_HSHN8PBB	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_E79807KT	7316-1087	BS_3A0CJMRH	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_E79807KT	7316-1087	BS_EYYMKWB7	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_E79807KT	7316-1087	BS_J6NGG30Q	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
+PT_E79807KT	7316-1087	BS_3A0CJMRH	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_E79807KT	7316-1087	BS_EYYMKWB7	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_E79807KT	7316-1087	BS_J6NGG30Q	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
 PT_E7A9ABJT	7316-9626	BS_77YYHA02	LGG, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Deceased	NA
 PT_E7A9ABJT	7316-9626	BS_P4F7BTR8	LGG, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Deceased	NA
 PT_E8M5V9V0	7316-6064	BS_FMZW3X54	DMG, H3 K28	Diffuse midline glioma, H3 K28-mutant	HGAT	Diffuse astrocytic and oligodendroglial tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
@@ -4658,9 +4658,9 @@ PT_HVZTF42R	7316-2187	BS_7MZTDB19	ATRT, To be classified	NA	ATRT	Embryonal tumor
 PT_HVZTF42R	7316-2187	BS_850BAHH9	ATRT, SHH	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT	Embryonal tumor	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_HVZTF42R	7316-2187	BS_KYRAHGZ8	ATRT, To be classified	NA	ATRT	Embryonal tumor	NA	Initial CNS Tumor	NA
 PT_HVZTF42R	7316-2187	BS_WXFK57AS	ATRT, SHH	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT	Embryonal tumor	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_HXDCHQ9Y	7316-2171	BS_3EVSN5QD	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_HXDCHQ9Y	7316-2171	BS_S7EWDE73	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_HXDCHQ9Y	7316-2171	BS_WEGGXVYA	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
+PT_HXDCHQ9Y	7316-2171	BS_3EVSN5QD	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
+PT_HXDCHQ9Y	7316-2171	BS_S7EWDE73	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
+PT_HXDCHQ9Y	7316-2171	BS_WEGGXVYA	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
 PT_HXEDE0JJ	7316-3644	BS_3ZEXZFSP	GNG, To be classified	NA	Ganglioglioma	Low-grade astrocytic tumor	NA	Initial CNS Tumor	NA
 PT_HXF3X28C	C4115088-Tumor	BS_981ME2R1	DMG, H3 K28	Diffuse midline glioma, H3 K28-mutant	HGAT	Diffuse astrocytic and oligodendroglial tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_HXF3X28C	C4115088-Tumor	BS_KS8HMGA6	DMG, H3 K28	Diffuse midline glioma, H3 K28-mutant	HGAT	Diffuse astrocytic and oligodendroglial tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
@@ -4826,9 +4826,9 @@ PT_JV9G8MFD	7316-2269	BS_9FHSNVS0	ATRT, SHH	Atypical Teratoid Rhabdoid Tumor, SH
 PT_JV9G8MFD	7316-2269	BS_ZAT0XJE5	ATRT, SHH	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT	Embryonal tumor	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_JV9G8MFD	7316-4292	BS_HCH609PX	ATRT, SHH	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT	Embryonal tumor	Subtype based on methylation;Updated via OpenPedCan subtyping	Recurrence	NA
 PT_JV9G8MFD	7316-4292	BS_VVP8QQX8	ATRT, SHH	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT	Embryonal tumor	Subtype based on methylation;Updated via OpenPedCan subtyping	Recurrence	NA
-PT_JW6FBEFK	7316-3019	BS_3BVVWHP5	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Progressive	NA
-PT_JW6FBEFK	7316-3019	BS_3P96RT4E	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Progressive	NA
-PT_JW6FBEFK	7316-3019	BS_M5AC601F	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Progressive	NA
+PT_JW6FBEFK	7316-3019	BS_3BVVWHP5	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Progressive	NA
+PT_JW6FBEFK	7316-3019	BS_3P96RT4E	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Progressive	NA
+PT_JW6FBEFK	7316-3019	BS_M5AC601F	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	NA	Progressive	NA
 PT_JWW33RTB	7316-1793	BS_699TN5RN	GNG, BRAF V600E	Ganglioglioma, BRAF V600E	Ganglioglioma	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_JWW33RTB	7316-1793	BS_JBHQ6G3J	GNG, BRAF V600E	Ganglioglioma, BRAF V600E	Ganglioglioma	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_JXGMAHHN	7316-7103	BS_BGRPWBNG	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Progressive	Low-grade glioma, KIAA1549-BRAF
@@ -5629,9 +5629,9 @@ PT_QJDY4Y9P	7316-4454	BS_XVVQ4M5T	LGG, To be classified	NA	LGAT	Low-grade astroc
 PT_QJDY4Y9P	7316-562	BS_4A45GGSW	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF
 PT_QJDY4Y9P	7316-562	BS_YPWPG2Y6	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF
 PT_QK1GTVW1	7316-4429	BS_F7YNCQK9	LGG, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma
-PT_QK4XB83F	7316-663	BS_01Y5F4PN	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_QK4XB83F	7316-663	BS_JG9JZTA9	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_QK4XB83F	7316-663	BS_S0CRDFF4	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
+PT_QK4XB83F	7316-663	BS_01Y5F4PN	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_QK4XB83F	7316-663	BS_JG9JZTA9	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_QK4XB83F	7316-663	BS_S0CRDFF4	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
 PT_QN3R80MS	7316-3899	BS_1HY7YDZH	EPN, ST ZFTA	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Ependymal tumor	Updated via OpenPedCan subtyping	Recurrence	NA
 PT_QNMBRAKM	7316-4450	BS_55X1W2MR	GNG, BRAF V600E	Ganglioglioma, BRAF V600E	Ganglioglioma	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_QNMBRAKM	7316-4450	BS_954APB7K	GNG, BRAF V600E	Ganglioglioma, BRAF V600E	Ganglioglioma	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
@@ -5640,9 +5640,9 @@ PT_QP4BVCX4	7316-6135	BS_14P5D735	CRANIO, ADAM	NA	Craniopharyngioma	Tumors of se
 PT_QQZXYR4M	7316-1946	BS_58X7SKJS	HGG, IDH, TP53	High-grade glioma, IDH-mutant	HGAT	Diffuse astrocytic and oligodendroglial tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_QQZXYR4M	7316-1946	BS_6AS03QVQ	LGG, IDH	Low-grade glioma, IDH	LGAT	Low-grade astrocytic tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_QQZXYR4M	7316-1946	BS_8PNA0V6R	HGG, IDH, TP53	High-grade glioma, IDH-mutant	HGAT	Diffuse astrocytic and oligodendroglial tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
-PT_QT3MK7BZ	7316-1977	BS_9XBGGK0F	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_QT3MK7BZ	7316-1977	BS_B6M763JS	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
-PT_QT3MK7BZ	7316-1977	BS_F9ZTZ4YS	SEGA	SEGA	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	SEGA
+PT_QT3MK7BZ	7316-1977	BS_9XBGGK0F	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_QT3MK7BZ	7316-1977	BS_B6M763JS	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
+PT_QT3MK7BZ	7316-1977	BS_F9ZTZ4YS	SEGA, To be classified	NA	LGAT	Low-grade astrocytic tumor	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Subependymal Giant Cell Astrocytoma
 PT_QT9PS43V	7316-9022	BS_4EQ6DJVM	EPN, ST ZFTA	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Ependymal tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_QT9PS43V	7316-9022	BS_RWN4YX62	EPN, ST ZFTA	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Ependymal tumor	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_QT9T89S5	7316-297	BS_T1W4JA94	LGG, KIAA1549-BRAF	Low-grade glioma, KIAA1549-BRAF	LGAT	Low-grade astrocytic tumor	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF
