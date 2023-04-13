@@ -61,9 +61,13 @@ subset_dir <- "subset-files"
 ### Read in relevant files
 
 ```{r message=FALSE}
-histologies_df <- read_tsv(file.path(data_dir, "histologies-base.tsv"), guess_max = 100000)
+histologies_df <- read_tsv(file.path(data_dir, "histologies-base.tsv"), 
+                           guess_max = 100000)
 fusion_summary_df <- read_tsv(file.path(data_dir, 
                                         "fusion_summary_embryonal_foi.tsv"))
+arriba <- read_tsv(file.path(data_dir, "fusion-arriba.tsv.gz"))
+starfusion <- read_tsv(file.path(data_dir, "fusion-starfusion.tsv.gz"))
+
 # Read in the JSON file that contains the strings we'll use to include or
 # exclude samples for subtyping - see 00-embryonal-select-pathology-dx.Rmd
 path_dx_list <- jsonlite::fromJSON(
@@ -100,6 +104,31 @@ ttyh1_fusion_biospecimens <- ttyh1_fusions %>%
   # if there's any TTYH1 fusion - pull out the biospecimen ID
   filter(fusion_count > 0) %>%
   pull(Kids_First_Biospecimen_ID)
+```
+
+make sure that at least one TTYH1 fusion breakpoint is in only the C19MC miRNA 
+cluster genomic region: `chr19:53,627,063-53,788,978` to keep the sample
+```{r}
+# TTYHI fusions in ariba
+arriba_ttyh1_fusions <- arriba %>% 
+  filter(str_detect(`gene1--gene2`, "^TTYH1"), 
+         str_detect(breakpoint1, "^chr19"), 
+         str_detect(breakpoint2, "^chr19")) %>%  
+  select(breakpoint1, breakpoint2, tumor_id) %>% 
+  mutate(breakpoint1 = str_split(breakpoint1, ":")[[1]][2], 
+         breakpoint2 = str_split(breakpoint2, ":")[[1]][2]) %>%  
+  filter(between(as.integer(breakpoint1), 53627062, 53788979) | 
+           between(as.integer(breakpoint2), 53627062, 53788979)) %>% 
+  pull(tumor_id) %>% unique()
+
+# v12 starfusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
+starfusion %>% filter(str_detect(FusionName, "^TTYH1"), 
+                      str_detect(LeftBreakpoint, "^chr19"), 
+                      str_detect(RightBreakpoint, "^chr19")) 
+
+# keep samples with with at least one break point within 
+# genomic region: `chr19:53,627,063-53,788,978` 
+ttyh1_fusion_biospecimens <-  ttyh1_fusion_biospecimens %in% arriba_ttyh1_fusions
 ```
 
 ### _MN1_ fusions
@@ -243,6 +272,8 @@ histologies_df %>%
                             dkfz_v12_methylation_subclass == "CNS_BCOR_ITD" ~ "CNS BCOR",
                             dkfz_v12_methylation_subclass == "NET_CXXC5" ~ "CNS HGNET-MN1",
                             dkfz_v12_methylation_subclass == "ABM_MN1" ~ "CNS HGNET-MN1")) %>% 
+  dplyr::filter(pathology_diagnosis %in% path_dx_list$include_path_dx |
+                  pathology_free_text_diagnosis %in% path_dx_list$include_free_text) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
