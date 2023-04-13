@@ -150,6 +150,8 @@ PBTA	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma/astrocyt
 DGD	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma/astrocytoma	No	Yes
 DGD	Histiocytic tumor	Histiocytic tumor	No	No
 DGD	Histiocytic Tumor	Histiocytic tumor	No	Yes
+PBTA	Other	Histiocytic tumor	No	Yes
+DGD	Other	Histiocytic tumor	No	Yes
 DGD	Hodgkin's lymphoma	Hodgkin's lymphoma	No	No
 PBTA	Infant-type hemispheric glioma, ALK-altered	Infant-type hemispheric glioma	Yes	No
 PBTA	Infant-type hemispheric glioma, NTRK-altered	Infant-type hemispheric glioma	Yes	No
@@ -243,8 +245,6 @@ PBTA	Oligodendroglioma	Oligodendroglioma	No	No
 DGD	Oligodendroglioma	Oligodendroglioma	No	No
 DGD	Osteosarcoma	Osteosarcoma	No	No
 TARGET	Osteosarcoma	Osteosarcoma	No	No
-PBTA	Other	Other	No	No
-DGD	Other	Other	No	No
 TCGA	Ovarian Serous Cystadenocarcinoma	Ovarian Serous Cystadenocarcinoma	No	No
 TCGA	Pancreatic Adenocarcinoma	Pancreatic Adenocarcinoma	No	No
 PBTA	Perineuroma	Perineuroma	No	No

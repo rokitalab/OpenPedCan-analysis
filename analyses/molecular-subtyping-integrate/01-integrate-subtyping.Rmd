@@ -180,7 +180,7 @@ histology_cg <- histology %>%
     cancer_group %in% c("Acute Promyelocytic Leukemia", "Therapy-Related Acute Myeloid Leukemia") ~ "Acute Myeloid Leukemia",
     cancer_group %in% c("Mixed Lineage Leukemia") ~ "Acute Lymphoblastic Leukemia",
     cancer_group == "Brain Lower Grade Glioma" ~ "Low-grade glioma",
-    cancer_group == "congenital malignant brain tumor" ~ "High-grade glioma/astrocytoma",
+    cancer_group == "congenital malignant brain tumor" ~ "High-grade glioma",
     cancer_group == "Kidney Chromophobe" ~ "Chromophobe renal cell carcinoma",
     cancer_group == "Kidney Renal Clear Cell Carcinoma" ~ "Renal Clear Cell Carcinoma",
     cancer_group == "Kidney Renal Papillary Cell Carcinoma" ~ "Renal Papillary Cell Carcinoma",    
@@ -190,6 +190,7 @@ histology_cg <- histology %>%
     #typo
     cancer_group == "Fibromixoid lesion" ~ "Fibromyxoid lesion",
     cancer_group == "Histiocytic Tumor" ~ str_to_sentence(cancer_group),
+    short_histology == "JXG" ~ "Histiocytic tumor",
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
     cancer_group == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor",
     cancer_group == "Glioneuronal tumor" ~ "Glial-neuronal tumor",
@@ -221,8 +222,6 @@ We'll only include a subset of the mappings in the README (those that we think r
 # explain whether or not the subtype is stripped and whether not additional 
 # modifications beyond that have been performed.
 mapping_table <- histology_cg %>% 
-  # Consider removing this sample? -- seems to be a special case, see chunk above
-  # dplyr::filter(sample_id != "7316-2577") %>%
   dplyr::select(cohort, harmonized_diagnosis, 
                 cancer_group) %>%
   dplyr::distinct() %>%
@@ -338,7 +337,7 @@ all_cg  <- ped_cancer_groups %>%
 
 efo_mondo <- read_tsv(file.path(data_dir, "efo-mondo-map.tsv"))
 
-efo_v11 <- all_cg %>%
+efo_new_release <- all_cg %>%
   left_join(efo_mondo) %>%
   unique() %>%
   arrange(cancer_group) %>%

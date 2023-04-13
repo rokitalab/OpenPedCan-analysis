@@ -139,7 +139,7 @@ High-grade glioma/astrocytoma	Initial CNS Tumor	104
 High-grade glioma/astrocytoma	Progressive	31
 High-grade glioma/astrocytoma	Recurrence	18
 High-grade glioma/astrocytoma	Second Malignancy	8
-Histiocytic tumor	Initial CNS Tumor	3
+Histiocytic tumor	Initial CNS Tumor	9
 Histiocytic tumor	Primary Tumor	6
 Histiocytic tumor	Progressive	4
 Hodgkin's lymphoma	Recurrence	2
@@ -221,7 +221,6 @@ Osteosarcoma	Primary Tumor	263
 Osteosarcoma	Progressive	2
 Osteosarcoma	Recurrence	2
 Osteosarcoma	Second Malignancy	1
-Other	Initial CNS Tumor	6
 Perineuroma	Initial CNS Tumor	3
 Pineal tumor	Initial CNS Tumor	1
 Pineoblastoma	Initial CNS Tumor	51
