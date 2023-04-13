@@ -165,7 +165,7 @@ Low-grade glioma	Progressive	112
 Low-grade glioma	Recurrence	45
 Low-grade glioma	Second Malignancy	4
 Low-grade glioma/astrocytoma	Deceased	5
-Low-grade glioma/astrocytoma	Initial CNS Tumor	492
+Low-grade glioma/astrocytoma	Initial CNS Tumor	507
 Low-grade glioma/astrocytoma	Primary Tumor	6
 Low-grade glioma/astrocytoma	Progressive	153
 Low-grade glioma/astrocytoma	Recurrence	43
@@ -248,9 +248,8 @@ Schwannoma	Primary Tumor	3
 Schwannoma	Progressive	10
 Schwannoma	Recurrence	7
 Schwannoma	Unavailable	1
-SEGA	Initial CNS Tumor	24
-SEGA	Progressive	3
-Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	11
+Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	20
+Subependymal Giant Cell Astrocytoma	Progressive	3
 Subependymal Giant Cell Astrocytoma	Second Malignancy	4
 T Acute Lymphoblastic Leukemia/Lymphoma	Primary Tumor	14
 T Acute Lymphoblastic Leukemia/Lymphoma	Recurrence	4
