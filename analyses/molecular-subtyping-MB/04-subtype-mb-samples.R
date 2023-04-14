@@ -60,6 +60,20 @@ methyl_bs_with_mb_subtypes <- mb_biospecimens %>%
   mutate(id = paste(sample_id, composition, sep = "_")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
 
+# assign remaining methyl sample without the subtype of interests as "MB, To be classified"
+# it will change the accuracy of medullo classifer
+methyl_no_subtype <- mb_biospecimens %>%
+  filter(str_detect(str_to_lower(pathology_diagnosis), paste(path_dx_list$include_free_text)), 
+         experimental_strategy == "Methylation",
+         !sample_id %in% methyl_bs_with_mb_subtypes$sample_id) %>% 
+  mutate(molecular_subtype = "MB, To be classified") %>% 
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
+
+methyl_bs_with_mb_subtypes <- methyl_bs_with_mb_subtypes %>% 
+  rbind(methyl_no_subtype) %>% 
+  distinct()
+
 # are there any methylation discrepancies? no, OK we can use these to replace discrepancies in RNA-Seq
 methyl_subtype_map <- methyl_bs_with_mb_subtypes %>%
   select(sample_id, composition, tumor_descriptor, molecular_subtype) %>%
