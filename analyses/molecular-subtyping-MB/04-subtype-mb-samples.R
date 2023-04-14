@@ -16,6 +16,9 @@ input_dir <- file.path(analysis_dir, "input")
 # create results file
 results_file <- "MB_molecular_subtype.tsv"
 
+# add pathological diagnosis json file
+path_dx_list <- jsonlite::fromJSON(file.path(input_dir, "mb_subtyping_path_dx_strings.json"))
+
 # read medulloblastoma samples from clinical file created in script 01
 mb_biospecimens <- read_tsv(file.path(input_dir, "subset-mb-clinical.tsv"))
 nrow(mb_biospecimens)
@@ -60,13 +63,13 @@ methyl_bs_with_mb_subtypes <- mb_biospecimens %>%
   mutate(id = paste(sample_id, composition, sep = "_")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
 
-# assign remaining methyl sample without the subtype of interests as "MB, To be classified"
-# it will change the accuracy of medullo classifer
+# assign remaining methyl sample without the subtype of interests as NA
+
 methyl_no_subtype <- mb_biospecimens %>%
   filter(str_detect(str_to_lower(pathology_diagnosis), paste(path_dx_list$include_free_text)), 
          experimental_strategy == "Methylation",
-         !sample_id %in% methyl_bs_with_mb_subtypes$sample_id) %>% 
-  mutate(molecular_subtype = "MB, To be classified") %>% 
+         !Kids_First_Biospecimen_ID %in% methyl_bs_with_mb_subtypes$Kids_First_Biospecimen_ID) %>% 
+  mutate(molecular_subtype = NA_character_) %>% 
   mutate(id = paste(sample_id, composition, sep = "_")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
 
@@ -153,9 +156,9 @@ methyl_subtype_map_short <- methyl_subtype_map %>%
 # add methyl subtype to the final subtype file
 mb_biospecimens_subtyped_plus_methyl <- mb_biospecimens_subtyped %>%
   left_join(methyl_subtype_map_short) %>%
-  arrange(sample_id) %>%
+  arrange(sample_id) #%>%
   # let's write this out as the final file
-  write_tsv(file.path(output_dir, results_file))
+  #write_tsv(file.path(output_dir, results_file))
 
 # check accuracy
 mb_biospecimens_subtyped_plus_methyl_subset <- mb_biospecimens_subtyped_plus_methyl %>%
