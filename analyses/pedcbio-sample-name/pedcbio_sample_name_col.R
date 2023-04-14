@@ -86,7 +86,7 @@ combined_histology_formatted_added <- do.call("rbind", formatted_specimens_list)
 ### Add IDs to those without sample id already
 # find the samples that do not have an ID yet 
 histology_df_no_format_id <- histology_df %>%
-  dplyr::filter(!Kids_First_Biospecimen_ID %in% combined_histology_formatted_added$Kids_First_Biospecimen_ID) 
+  dplyr::filter(!Kids_First_Biospecimen_ID %in% combined_histology_formatted_added$Kids_First_Biospecimen_ID)
 
 
 #### Handle each cohort at a time - start with PBTA
@@ -235,11 +235,12 @@ all_tiebreaks <- bind_rows(combined_histology_formatted_added,
                            target_add_tiebreak,
                            tcga_add_tiebreak)
 
-# for samples no need for tie break - use `sample_id` for PBTA and participant id for the rest
+# for samples no need for tie break - use `sample_id` for PBTA and DGD, and participant id for the rest
 no_need_for_tiebreaks <- histology_df %>%
   dplyr::filter(!Kids_First_Biospecimen_ID %in% all_tiebreaks$Kids_First_Biospecimen_ID) %>%
   dplyr::mutate(formatted_sample_id = case_when(
     cohort == "PBTA" ~ sample_id,
+    cohort == "DGD" ~ gsub("(^.*DGD)_\\w+_(\\d+$)", "\\1_\\2", aliquot_id),
     TRUE ~ Kids_First_Participant_ID
 ))
 
