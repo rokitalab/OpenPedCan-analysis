@@ -248,7 +248,6 @@ histology_all_fixed <- bind_rows(all_tiebreaks, no_need_for_tiebreaks)
 
 # write out the results
 histology_all_fixed %>% 
-  dplyr::filter(cohort != "TCGA") %>%
   readr::write_tsv(file.path(results_dir, "histologies-formatted-id-added.tsv"))
 
 
