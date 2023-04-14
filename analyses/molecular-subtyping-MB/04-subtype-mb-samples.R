@@ -51,7 +51,8 @@ rna_map <- mb_results %>%
 
 # we will add methyl subtypes in the absence of RNA-Seq classification or in the case of discrepant classifier results
 methyl_bs_with_mb_subtypes <- mb_biospecimens %>%
-  filter(experimental_strategy == "Methylation",
+  filter(str_detect(str_to_lower(pathology_diagnosis), path_dx_list$include_free_text), 
+         experimental_strategy == "Methylation",
          (grepl("MB_", dkfz_v12_methylation_subclass) & dkfz_v12_methylation_subclass_score >= 0.8)) %>%
   # reformat classifier result per https://www.molecularneuropathology.org/mnp/classifiers/11
   mutate(molecular_subtype = case_when(grepl("MB_SHH", dkfz_v12_methylation_subclass) ~ "MB, SHH",
