@@ -61,13 +61,12 @@ Desmoplastic infantile astrocytoma and ganglioglioma	Progressive	4
 Diffuse hemispheric glioma	Deceased	7
 Diffuse hemispheric glioma	Initial CNS Tumor	65
 Diffuse hemispheric glioma	Recurrence	17
-Diffuse intrinsic pontine glioma	Deceased	17
-Diffuse intrinsic pontine glioma	Initial CNS Tumor	11
-Diffuse intrinsic pontine glioma	Progressive	1
+Diffuse intrinsic pontine glioma	Deceased	11
+Diffuse intrinsic pontine glioma	Initial CNS Tumor	9
 Diffuse intrinsic pontine glioma	NA	1
 Diffuse leptomeningeal glioneuronal tumor	Progressive	2
-Diffuse midline glioma	Deceased	225
-Diffuse midline glioma	Initial CNS Tumor	399
+Diffuse midline glioma	Deceased	238
+Diffuse midline glioma	Initial CNS Tumor	405
 Diffuse midline glioma	Not Reported	2
 Diffuse midline glioma	Primary Tumor	2
 Diffuse midline glioma	Progressive	38
@@ -118,7 +117,7 @@ Germinoma	Progressive	4
 Germinoma	Recurrence	1
 Glial-neuronal tumor	Initial CNS Tumor	2
 Glial-neuronal tumor NOS	Deceased	20
-Glial-neuronal tumor NOS	Initial CNS Tumor	74
+Glial-neuronal tumor NOS	Initial CNS Tumor	73
 Glial-neuronal tumor NOS	Progressive	10
 Glial-neuronal tumor NOS	Recurrence	11
 Glioblastoma	Primary Tumor	3
@@ -128,16 +127,16 @@ Hemangioblastoma	Initial CNS Tumor	21
 Hemangioblastoma	Progressive	7
 Hepatoblastoma	Primary Tumor	5
 Hepatocellular Carcinoma	Primary Tumor	1
-High-grade glioma	Deceased	88
-High-grade glioma	Initial CNS Tumor	287
-High-grade glioma	Progressive	62
+High-grade glioma	Deceased	104
+High-grade glioma	Initial CNS Tumor	303
+High-grade glioma	Progressive	69
 High-grade glioma	Progressive Disease Post-Mortem	1
-High-grade glioma	Recurrence	47
+High-grade glioma	Recurrence	51
 High-grade glioma	Second Malignancy	19
-High-grade glioma/astrocytoma	Deceased	40
-High-grade glioma/astrocytoma	Initial CNS Tumor	104
-High-grade glioma/astrocytoma	Progressive	31
-High-grade glioma/astrocytoma	Recurrence	18
+High-grade glioma/astrocytoma	Deceased	17
+High-grade glioma/astrocytoma	Initial CNS Tumor	86
+High-grade glioma/astrocytoma	Progressive	25
+High-grade glioma/astrocytoma	Recurrence	14
 High-grade glioma/astrocytoma	Second Malignancy	8
 Histiocytic tumor	Initial CNS Tumor	9
 Histiocytic tumor	Primary Tumor	6
@@ -227,7 +226,7 @@ Pineoblastoma	Initial CNS Tumor	51
 Pineoblastoma	Progressive	9
 Pineoblastoma	Recurrence	3
 Pineocytoma	Initial CNS Tumor	2
-Pleomorphic xanthoastrocytoma	Initial CNS Tumor	2
+Pleomorphic xanthoastrocytoma	Initial CNS Tumor	3
 Primary CNS lymphoma	Initial CNS Tumor	3
 Primary mediastinal large B cell lymphoma	Primary Tumor	2
 Retinoblastoma	Recurrence	2
