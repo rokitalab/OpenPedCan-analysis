@@ -168,7 +168,7 @@ Add methylation to all_data_df.
 methyl_df <- hgg_meta %>% 
   filter(experimental_strategy == "Methylation", 
          (grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) |
-             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_LG", "A_IDH_HG", "DGONC", "PXA"))
+             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG"))
          ) %>% 
   # add all samples but only keep subtypes if score >=0.8
   mutate(molecular_subtype_methyl = case_when(
@@ -179,9 +179,6 @@ methyl_df <- hgg_meta %>%
     dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "O_IDH" ~ "Oligo, IDH",
     dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "IHG"  ~ "IHG",
     dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "HGAP"  ~ "HGG, MAPK",
-    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "A_IDH_LG"  ~ "LGG, IDH",
-    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "DGONC"  ~ "GNT",
-    dkfz_v12_methylation_subclass_score >= 0.8 & dkfz_v12_methylation_subclass == "PXA"  ~ "PXA",
     TRUE ~ NA_character_)) %>% 
   select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 composition, id, molecular_subtype_methyl) %>%
@@ -499,13 +496,13 @@ molecular_subtype_table_wt <- molecular_subtype_table %>%
 
 # subtype mapping 
 subtype_map <- molecular_subtype_table_wt %>%
-  select(id, molecular_subtype) %>%
+  select(id, molecular_subtype, molecular_subtype_methyl) %>%
   unique()
 
 # which ids have samples which can be assigned subtypes
 all_subtypes <- subtype_map %>%
   left_join(hgg_meta[,c("Kids_First_Biospecimen_ID", "id")]) %>%
-  select(Kids_First_Biospecimen_ID, id, molecular_subtype)
+  select(Kids_First_Biospecimen_ID, id, molecular_subtype, molecular_subtype_methyl)
 
 # add rest as TO BE CLASSIFIED
 to_be_classified <- hgg_meta %>%
