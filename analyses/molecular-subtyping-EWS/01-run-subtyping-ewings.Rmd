@@ -96,8 +96,19 @@ methyl_bs_ids_with_subtypes <- clinical %>%
   mutate(id = paste(sample_id, composition, sep = "_")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype_methyl, id) 
 
+# add samples with poor methyl score
+
+methy_no_subtype <- clinical %>% 
+  filter(experimental_strategy == "Methylation",
+         dkfz_v12_methylation_subclass == "EWS" & dkfz_v12_methylation_subclass_score < 0.8) %>% 
+  mutate(molecular_subtype_methyl = NA_character_) %>%
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype_methyl, id)
+
+methyl_map <- bind_rows(methyl_bs_ids_with_subtypes, methy_no_subtype)
+
 # methyl map
-methyl_map <- methyl_bs_ids_with_subtypes %>%
+methyl_map <- methyl_map %>%
   select(id, molecular_subtype_methyl) %>%
   unique()
 
