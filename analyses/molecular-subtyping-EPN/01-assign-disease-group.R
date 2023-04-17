@@ -26,7 +26,7 @@ spine = c("spinal", "spine")
 
 # filter for ependymoma samples 
 EP = pbta_histologies %>%
-  filter(pathology_diagnosis =="Ependymoma")
+  filter(pathology_diagnosis =="Ependymoma", sample_type == "Tumor")
 
 # filter for RNA samples
 EP_rnaseq_samples = EP %>%
@@ -43,8 +43,11 @@ WGS_dnaseqsamples = EP %>%
   dplyr::rename("Kids_First_Biospecimen_ID_DNA" = "Kids_First_Biospecimen_ID")
 
 # filter for Methyl samples 
-methy_samples = EP %>%
+# high confidence methylation classification subtypes
+methyl_subtyped = EP %>%
   dplyr::filter(experimental_strategy == "Methylation", 
+                sample_type == "Tumor",
+                cohort != "TARGET",
                 (grepl("EPN_", dkfz_v12_methylation_subclass) & dkfz_v12_methylation_subclass_score >= 0.8)) %>%
   dplyr::mutate(molecular_subtype_methyl = case_when(grepl("EPN_PFA", dkfz_v12_methylation_subclass) ~ "EPN, PF A",
                                                      grepl("EPN_PFB", dkfz_v12_methylation_subclass) ~ "EPN, PF B",
@@ -58,13 +61,31 @@ methy_samples = EP %>%
                                                      dkfz_v12_methylation_subclass == "EPN_ST_SE" ~ "EPN, ST SE",
                                                      dkfz_v12_methylation_subclass == "EPN_YAP" ~ "EPN, ST YAP1")) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, molecular_subtype_methyl) %>%
-  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID")
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
+  dplyr::distinct()
 
-# sample_id is common between both  dataframes and also unique between RNA and DNA, methyl. 
-# Some DNA BSID's are missing for the corresponding RNA samples
+# low confidence methylation classification subtypes
+methyl_not_subtyped = EP %>%
+  dplyr::filter(experimental_strategy == "Methylation", 
+                sample_type == "Tumor",
+                cohort != "TARGET",
+                grepl("EPN_", dkfz_v12_methylation_subclass),
+                !Kids_First_Biospecimen_ID %in% unique(methyl_subtyped$Kids_First_Biospecimen_ID_Methyl)) %>%
+  dplyr::mutate(molecular_subtype_methyl = "EPN, To be classified") %>%
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::distinct()
+
+# merge methyl
+methyl_samples = dplyr::bind_rows(methyl_subtyped, methyl_not_subtyped)
+
+
+
+# merge rnaseq, wgs, methyl
 EP_rnaseq_WGS_methyl = EP_rnaseq_samples %>%
   dplyr::full_join(WGS_dnaseqsamples, by = c("sample_id", "Kids_First_Participant_ID","primary_site", "CNS_region")) %>% 
-  dplyr::full_join(methy_samples, by = c("sample_id", "Kids_First_Participant_ID","primary_site", "CNS_region"))
+  dplyr::full_join(methyl_samples, by = c("sample_id", "Kids_First_Participant_ID","primary_site", "CNS_region"))
   
 
 # add disease group (supra/infra category) inferred from primary_site
