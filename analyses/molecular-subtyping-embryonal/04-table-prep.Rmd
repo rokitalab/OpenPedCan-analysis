@@ -509,13 +509,14 @@ subtypes_df <- all_data_df %>%
 
 ### Methylation subtypes
 
-If CNS Embryonal, NOS", replace high confidence methylation subtype
+If CNS Embryonal, NOS", replace with high confidence methylation subtypes
 
 ```{r}
 subtypes_df <-  readr::read_tsv(methyl_file) %>% 
   dplyr::full_join(subtypes_df, by = c("Kids_First_Participant_ID", "sample_id")) %>% 
   dplyr::mutate(molecular_subtype = case_when(
-    molecular_subtype == "CNS Embryonal, NOS" & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    molecular_subtype == "CNS Embryonal, NOS" & !is.na(molecular_subtype_methyl) & 
+      (molecular_subtype_methyl != "CNS Embryonal, NOS") ~ molecular_subtype_methyl,
     is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
     TRUE ~ molecular_subtype)) %>% 
   dplyr::select(Kids_First_Participant_ID,	sample_id,	Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
