@@ -260,24 +260,42 @@ histologies_df %>%
 Write to file high confidence methylation classification subtypes
 
 ```{r}
-histologies_df %>% 
-  dplyr::filter(experimental_strategy == "Methylation", 
+# high confidence methylation classification subtypes
+emb_methyl_subtyped <- histologies_df %>% 
+  dplyr::filter(pathology_diagnosis %in% path_dx_list$include_path_dx |
+                  pathology_free_text_diagnosis %in% path_dx_list$include_free_text,
+                dkfz_v12_methylation_subclass_score >= 0.8,
+                experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
                 composition == "Solid Tissue",
-                cohort != "TARGET",
-                dkfz_v12_methylation_subclass_score >= 0.8) %>% 
+                cohort != "TARGET") %>% 
   dplyr::mutate(molecular_subtype_methyl = 
                   case_when(dkfz_v12_methylation_subclass == "CNS_NB_FOXR2" ~ "CNS NB-FOXR2",
                             dkfz_v12_methylation_subclass == "ETMR_C19MC" ~ "ETMR, C19MC-altered",
                             dkfz_v12_methylation_subclass == "CNS_BCOR_ITD" ~ "CNS BCOR",
                             dkfz_v12_methylation_subclass == "NET_CXXC5" ~ "CNS HGNET-MN1",
                             dkfz_v12_methylation_subclass == "ABM_MN1" ~ "CNS HGNET-MN1")) %>% 
-  dplyr::filter(pathology_diagnosis %in% path_dx_list$include_path_dx |
-                  pathology_free_text_diagnosis %in% path_dx_list$include_free_text) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
-  dplyr::distinct() %>% 
+  dplyr::distinct()
+  
+# low confidence methylation classification subtypes
+emb_methyl_not_subtyped <- histologies_df %>% 
+  dplyr::filter(pathology_diagnosis %in% path_dx_list$include_path_dx |
+                  pathology_free_text_diagnosis %in% path_dx_list$include_free_text,
+                !Kids_First_Biospecimen_ID %in% unique(emb_methyl_subtyped$Kids_First_Biospecimen_ID_Methyl),
+                experimental_strategy == "Methylation", 
+                sample_type == "Tumor", 
+                composition == "Solid Tissue",
+                cohort != "TARGET") %>% 
+  dplyr::mutate(molecular_subtype_methyl = "CNS Embryonal, NOS") %>% 
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::distinct()
+
+# merge methyl and write to file
+dplyr::bind_rows(emb_methyl_subtyped, emb_methyl_not_subtyped) %>% 
   readr::write_tsv(methly_output_file)
 ```
 

@@ -161,7 +161,8 @@ EPN_final <- EPN_final %>%
          H3C3_HGVSp_Short == "p.K28M" | H3C14_HGVSp_Short == "p.K28M") ~ "EPN, PF A",
     subgroup == "EPN, To be classified" & (`6q_loss` > 0 | `6p_loss` > 0) & 
       (GPBP1_expr_zscore > 3 | IFT46_expr_zscore > 3) ~ "EPN, PF B",
-    subgroup == "EPN, To be classified" & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    subgroup == "EPN, To be classified" & !is.na(molecular_subtype_methyl) &
+      (molecular_subtype_methyl != "EPN, To be classified") ~ molecular_subtype_methyl,
     TRUE ~ subgroup)
     )
                      
