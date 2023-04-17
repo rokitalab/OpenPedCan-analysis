@@ -72,13 +72,25 @@ The values are only "Ventricles", "Parietal Lobe", or "Frontal Lobe;Temporal Lob
 ```{r}
 # Get methylation subtypes
 neurocytoma_subtype <- neurocytoma_from_pathology_diagnosis %>% 
-  filter(experimental_strategy == "Methylation") %>%
+  filter(experimental_strategy == "Methylation", 
+         dkfz_v12_methylation_subclass_score >= 0.8) %>%
   mutate(methyl_subtype = case_when(dkfz_v12_methylation_subclass == "EVNCYT" ~ "EVN",
                                            dkfz_v12_methylation_subclass == "CN" ~ "CNC",
                                            TRUE ~ NA_character_)) %>%
-  select(sample_id, composition, methyl_subtype) %>%
+  select(sample_id, composition, methyl_subtype, Kids_First_Biospecimen_ID) %>%
   unique()
   
+# add methyl with low score (for future analysis)
+
+methyl_no_subtype <- neurocytoma_from_pathology_diagnosis %>% 
+  filter(experimental_strategy == "Methylation", 
+         !Kids_First_Biospecimen_ID %in% neurocytoma_subtype$Kids_First_Biospecimen_ID) %>% 
+  mutate(methyl_subtype = NA_character_) %>%
+  select(sample_id, composition, methyl_subtype, Kids_First_Biospecimen_ID) %>%
+  unique()
+
+neurocytoma_subtype <- bind_rows(neurocytoma_subtype, methyl_no_subtype) %>% 
+  select(sample_id, composition, methyl_subtype)
 
 neurocytoma_subtype <- neurocytoma_from_pathology_diagnosis %>% 
   dplyr::mutate(molecular_subtype= 

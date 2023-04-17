@@ -68,13 +68,17 @@ hist_df <-
   readr::read_tsv(file.path(data_dir, "histologies-base.tsv"), 
                   guess_max = 100000)
 
+# read in the JSON file with pathology diagnosis terms
+path_dx_list <- jsonlite::fromJSON(
+  file.path(subset_dir, "nbl_subtyping_path_dx_strings.json"))
+
 # tmp expression cutoff 
 Suggested_Cutoff <- 140.83 # TARGET-30-PAMEZH-01A-01R	
 
 # MYCN clinical status
 mycn_clincial_status <- alteration_df %>% 
   dplyr::select(Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
-                pathology_free_text_diagnosis) %>% 
+                 pathology_free_text_diagnosis) %>% 
   dplyr::rename(molecular_subtype = pathology_free_text_diagnosis)
 
 ```
@@ -233,8 +237,9 @@ determined based on TPM.
   dplyr::filter(Kids_First_Biospecimen_ID_DNA %in% 
                   unique(c(clincal_amplified_IDs, case_5_ids))) %>% 
   dplyr::select(Kids_First_Biospecimen_ID_DNA, 
-                Kids_First_Biospecimen_ID_RNA, 
-                MYCN_CN,
+                Kids_First_Biospecimen_ID_RNA,
+		Kids_First_Participant_ID,
+		sample_id, cohort, MYCN_CN,
                 pathology_free_text_diagnosis, 
                 MYCN_CN_status, MYCN_TPM,
                 molecular_subtype)
@@ -248,23 +253,24 @@ determined based on TPM.
 # create the final molecular subtyping table 
 molecular_subtype_table <- alteration_df %>% 
   dplyr::select(Kids_First_Biospecimen_ID_DNA, 
-                Kids_First_Biospecimen_ID_RNA, 
-                molecular_subtype) %>% 
+                Kids_First_Biospecimen_ID_RNA,
+                Kids_First_Participant_ID,
+                sample_id, cohort, molecular_subtype) %>% 
   dplyr::mutate(molecular_subtype = 
                   case_when(
                     molecular_subtype == 
                       "Pathology-amp,MYCN_CN_status-non-amp,TPM-NA" ~
-                      "NBL, to be classified",
+                      "NBL, To be classified",
                     TRUE ~ as.character(molecular_subtype)
                   )
                ) %>% 
   dplyr::arrange(molecular_subtype)
 
 mycn_subtyped <- molecular_subtype_table %>% 
-  dplyr::filter(molecular_subtype != "NBL, to be classified")
+  dplyr::filter(molecular_subtype != "NBL, To be classified")
 
 mycn_not_subtyped <- molecular_subtype_table %>% 
-  dplyr::filter(molecular_subtype == "NBL, to be classified") %>% 
+  dplyr::filter(molecular_subtype == "NBL, To be classified") %>% 
   dplyr::select(-molecular_subtype) %>% 
   dplyr::left_join(mycn_clincial_status, 
                    by = c("Kids_First_Biospecimen_ID_DNA",
@@ -273,27 +279,46 @@ mycn_not_subtyped <- molecular_subtype_table %>%
                   case_when(
                     molecular_subtype == "MYCN amp" ~ "NBL, MYCN amplified",
                     molecular_subtype == "MYCN non-amp" ~ "NBL, MYCN non-amplified",
-                    TRUE ~ "NBL, to be classified"
+                    TRUE ~ "NBL, To be classified"
                   )
                )
 
 molecular_subtype_table <- bind_rows(mycn_subtyped, mycn_not_subtyped)
 
+# include methylation samples
+molecular_subtype_table <- hist_df %>% 
+  dplyr::filter(pathology_diagnosis %in% path_dx_list$exact_path_dx,
+                experimental_strategy == "Methylation", 
+                sample_type == "Tumor") %>% 
+  dplyr::mutate(molecular_subtype_methyl = "NBL, To be classified") %>% 
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
+                cohort, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::distinct() %>% 
+  dplyr::full_join(molecular_subtype_table, 
+                   by = c("Kids_First_Participant_ID", "sample_id", "cohort")) %>%
+  dplyr::mutate(molecular_subtype = case_when(
+    is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    TRUE ~ molecular_subtype)) %>% 
+  dplyr::select(Kids_First_Participant_ID, sample_id, cohort, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
+                Kids_First_Biospecimen_ID_Methyl, molecular_subtype, molecular_subtype_methyl) %>% 
+  dplyr::distinct()
+  
 ```
 
 ## Write molecular subtyping table to file
 
 ```{r write to file}
 alteration_df %>% 
-  arrange(Kids_First_Biospecimen_ID_DNA) %>%
+  arrange(Kids_First_Participant_ID) %>%
   readr::write_tsv(file.path(results_dir, 
                              "alteration_table_with_molecular_subtype.tsv"))
 alteration_tmp_df %>% 
-  arrange(Kids_First_Biospecimen_ID_DNA) %>%
+  arrange(Kids_First_Participant_ID) %>%
   readr::write_tsv(file.path(results_dir, 
                              "molecular_subtypes_based_on_cutoff.tsv"))
 molecular_subtype_table %>% 
-  arrange(Kids_First_Biospecimen_ID_DNA) %>%
+  arrange(Kids_First_Participant_ID) %>%
   readr::write_tsv(file.path(results_dir, 
                              "neuroblastoma_molecular_subtypes.tsv"))
 ```
