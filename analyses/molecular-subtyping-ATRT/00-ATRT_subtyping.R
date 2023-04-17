@@ -41,8 +41,16 @@ atrt_df_methyl <- atrt_df %>%
          # create match id
          id = paste(sample_id, composition, sep = "_")) 
 
+methyl_no_subtype <- atrt_df %>% 
+  filter(experimental_strategy == "Methylation",
+         !Kids_First_Biospecimen_ID %in% atrt_df_methyl$Kids_First_Biospecimen_ID) %>% 
+  mutate(molecular_subtype = NA_character_, 
+         id = paste(sample_id, composition, sep = "_")) 
+
+
 # make a methyl map
 methyl_map <- atrt_df_methyl %>%
+  bind_rows(methyl_no_subtype) %>%
   select(id, molecular_subtype) %>%
   unique() %>%
   mutate(molecular_subtype_methyl = molecular_subtype)
