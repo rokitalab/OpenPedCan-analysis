@@ -24,7 +24,8 @@ include_path_dx <- stringr::str_to_lower(
   c(
     "Low-grade glioma/astrocytoma",
     "Ganglioglioma",
-    "Subependymal Giant Cell Astrocytoma"
+    "Subependymal Giant Cell Astrocytoma",
+    "Glial-neuronal tumor NOS"
   ))
 
 # Exclusion criterion from https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/753#issuecomment-697008356
