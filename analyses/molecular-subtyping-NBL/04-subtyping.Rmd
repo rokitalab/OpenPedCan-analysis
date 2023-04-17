@@ -254,23 +254,23 @@ determined based on TPM.
 molecular_subtype_table <- alteration_df %>% 
   dplyr::select(Kids_First_Biospecimen_ID_DNA, 
                 Kids_First_Biospecimen_ID_RNA,
-		Kids_First_Participant_ID,
-		sample_id, cohort, molecular_subtype) %>% 
+                Kids_First_Participant_ID,
+                sample_id, cohort, molecular_subtype) %>% 
   dplyr::mutate(molecular_subtype = 
                   case_when(
                     molecular_subtype == 
                       "Pathology-amp,MYCN_CN_status-non-amp,TPM-NA" ~
-                      "NBL, to be classified",
+                      "NBL, To be classified",
                     TRUE ~ as.character(molecular_subtype)
                   )
                ) %>% 
   dplyr::arrange(molecular_subtype)
 
 mycn_subtyped <- molecular_subtype_table %>% 
-  dplyr::filter(molecular_subtype != "NBL, to be classified")
+  dplyr::filter(molecular_subtype != "NBL, To be classified")
 
 mycn_not_subtyped <- molecular_subtype_table %>% 
-  dplyr::filter(molecular_subtype == "NBL, to be classified") %>% 
+  dplyr::filter(molecular_subtype == "NBL, To be classified") %>% 
   dplyr::select(-molecular_subtype) %>% 
   dplyr::left_join(mycn_clincial_status, 
                    by = c("Kids_First_Biospecimen_ID_DNA",
@@ -279,7 +279,7 @@ mycn_not_subtyped <- molecular_subtype_table %>%
                   case_when(
                     molecular_subtype == "MYCN amp" ~ "NBL, MYCN amplified",
                     molecular_subtype == "MYCN non-amp" ~ "NBL, MYCN non-amplified",
-                    TRUE ~ "NBL, to be classified"
+                    TRUE ~ "NBL, To be classified"
                   )
                )
 
@@ -290,7 +290,7 @@ molecular_subtype_table <- hist_df %>%
   dplyr::filter(pathology_diagnosis %in% path_dx_list$exact_path_dx,
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor") %>% 
-  dplyr::mutate(molecular_subtype_methyl = "NBL, MYCN non-amplified") %>% 
+  dplyr::mutate(molecular_subtype_methyl = "NBL, To be classified") %>% 
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 cohort, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
@@ -298,7 +298,6 @@ molecular_subtype_table <- hist_df %>%
   dplyr::full_join(molecular_subtype_table, 
                    by = c("Kids_First_Participant_ID", "sample_id", "cohort")) %>%
   dplyr::mutate(molecular_subtype = case_when(
-    !is.na(molecular_subtype) & molecular_subtype_methyl == "NBL, MYCN non-amplified" ~ molecular_subtype,
     is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
     TRUE ~ molecular_subtype)) %>% 
   dplyr::select(Kids_First_Participant_ID, sample_id, cohort, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
