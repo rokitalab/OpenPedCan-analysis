@@ -44,8 +44,12 @@ atrt_df_methyl <- atrt_df %>%
 methyl_no_subtype <- atrt_df %>% 
   filter(experimental_strategy == "Methylation",
          !Kids_First_Biospecimen_ID %in% atrt_df_methyl$Kids_First_Biospecimen_ID) %>% 
-  mutate(molecular_subtype = NA_character_, 
-         id = paste(sample_id, composition, sep = "_")) 
+  select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, 
+         dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score) %>%
+  mutate(molecular_subtype = case_when(!sample_id %in% atrt_df_methyl$sample_id ~ "ATRT, To be classified", 
+                                       sample_id %in% atrt_df_methyl$sample_id ~ NA_character_), 
+         id = paste(sample_id, composition, sep = "_")) %>%
+  filter(!is.na(molecular_subtype))
 
 
 # make a methyl map
@@ -56,7 +60,10 @@ methyl_map <- atrt_df_methyl %>%
   mutate(molecular_subtype_methyl = molecular_subtype)
 
 # any dups? no
-length(unique(methyl_map$id))
+length(unique(methyl_map$id)) == length(methyl_map$id)
+
+methyl_map <- methyl_map %>% 
+  group_by(id)
 
 # for the samples, whose cns_methlation_subclass_score >= 0.8 and dkfz_v12_methylation_subclass is one of the three types in ATRT_subtype_list, their molecular subtype are same as dkfz_v12_methylation_subclass
 # for the samples without methylation sequencing, their molecular subtype are "ATRT, To be classified."
