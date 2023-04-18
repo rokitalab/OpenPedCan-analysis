@@ -82,7 +82,7 @@ subtype_df <- histologies_df %>%
   filter(
     # Specifying this avoids including a ganglioglioma sample that includes
     # "glioneuronal" in the pathology free text
-    pathology_diagnosis == "Low-grade glioma/astrocytoma (WHO grade I/II)",
+    pathology_diagnosis %in% c("Low-grade glioma/astrocytoma (WHO grade I/II)", "Glial-neuronal tumor NOS"),
     # Use the exclusion criteria from LGAT as inclusion criteria here
     str_detect(str_to_lower(pathology_free_text_diagnosis),
                paste(lgat_path_dx_list$recode_path_free_text,
