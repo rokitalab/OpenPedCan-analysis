@@ -63,7 +63,10 @@ data_dir <- file.path(root_dir, "data")
 ```{r message=FALSE}
 # Reading in table from results folder without the subgroup column
 EPN_final <- read_tsv("results/EPN_all_data.tsv")
-EPN_final["subgroup"] = "EPN, To be classified"
+EPN_final <- read_tsv("results/EPN_all_data.tsv") %>%
+  mutate(subgroup = case_when(is.na(Kids_First_Biospecimen_ID_DNA) & is.na(Kids_First_Biospecimen_ID_RNA) &
+                                  !is.na(Kids_First_Biospecimen_ID_Methyl) & is.na(molecular_subtype_methyl) ~ NA_character_,
+				                                TRUE ~ as.character("EPN, To be classified")))
 ```
 
 ### Spinal prioritization
@@ -161,8 +164,7 @@ EPN_final <- EPN_final %>%
          H3C3_HGVSp_Short == "p.K28M" | H3C14_HGVSp_Short == "p.K28M") ~ "EPN, PF A",
     subgroup == "EPN, To be classified" & (`6q_loss` > 0 | `6p_loss` > 0) & 
       (GPBP1_expr_zscore > 3 | IFT46_expr_zscore > 3) ~ "EPN, PF B",
-    subgroup == "EPN, To be classified" & !is.na(molecular_subtype_methyl) &
-      (molecular_subtype_methyl != "EPN, To be classified") ~ molecular_subtype_methyl,
+    subgroup == "EPN, To be classified" & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
     TRUE ~ subgroup)
     )
                      
