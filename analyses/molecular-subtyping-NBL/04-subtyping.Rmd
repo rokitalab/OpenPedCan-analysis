@@ -290,16 +290,13 @@ molecular_subtype_table <- hist_df %>%
   dplyr::filter(pathology_diagnosis %in% path_dx_list$exact_path_dx,
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor") %>% 
-  dplyr::mutate(molecular_subtype_methyl = "NBL, To be classified") %>% 
+  dplyr::mutate(molecular_subtype_methyl = NA_character_) %>% 
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 cohort, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::distinct() %>% 
   dplyr::full_join(molecular_subtype_table, 
                    by = c("Kids_First_Participant_ID", "sample_id", "cohort")) %>%
-  dplyr::mutate(molecular_subtype = case_when(
-    is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
-    TRUE ~ molecular_subtype)) %>% 
   dplyr::select(Kids_First_Participant_ID, sample_id, cohort, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
                 Kids_First_Biospecimen_ID_Methyl, molecular_subtype, molecular_subtype_methyl) %>% 
   dplyr::distinct()
