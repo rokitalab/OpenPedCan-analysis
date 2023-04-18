@@ -367,8 +367,12 @@ lgat_methyl_not_subtyped <- clinical %>%
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
                 composition == "Solid Tissue",
-                cohort != "TARGET") %>% 
-  dplyr::mutate(molecular_subtype_methyl = "LGG, To be classified") %>% 
+                cohort != "TARGET") %>%
+  dplyr::left_join(lgat_methyl_subtyped %>% dplyr::select(Kids_First_Participant_ID, sample_id, molecular_subtype_methyl),
+                   by = c("Kids_First_Participant_ID", "sample_id")) %>%
+  dplyr::mutate(molecular_subtype_methyl = case_when(
+    is.na(molecular_subtype_methyl) ~ "LGG, To be classified",
+    TRUE ~ molecular_subtype_methyl)) %>% 
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::distinct()
