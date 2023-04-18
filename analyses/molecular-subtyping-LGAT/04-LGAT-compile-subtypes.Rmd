@@ -347,13 +347,10 @@ all_subtype <- bind_rows(all_rna_subtype,
 all_subtype <- methly_subtyped %>%
   dplyr::full_join(all_subtype, by = c("Kids_First_Participant_ID", "sample_id")) %>%
   dplyr::mutate(molecular_subtype = case_when(
-    grepl("To be classified", molecular_subtype) & !is.na(molecular_subtype_methyl) & 
-      (molecular_subtype_methyl != "LGG, To be classified") ~ molecular_subtype_methyl,
-    is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
-    grepl("wildtype", molecular_subtype) & !is.na(molecular_subtype_methyl) & 
-      (molecular_subtype_methyl != "LGG, To be classified") ~ molecular_subtype_methyl,
+    grepl("To be classified", molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    grepl("wildtype", molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
     TRUE ~ molecular_subtype)) %>%
-  dplyr::select(Kids_First_Participant_ID,	sample_id,	Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
+  dplyr::select(Kids_First_Participant_ID, sample_id, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
                 Kids_First_Biospecimen_ID_Methyl, molecular_subtype, molecular_subtype_methyl)
 
 ```
