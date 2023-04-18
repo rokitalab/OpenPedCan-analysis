@@ -76,9 +76,6 @@ methyl_not_subtyped = EP %>%
                 !Kids_First_Biospecimen_ID %in% unique(methyl_subtyped$Kids_First_Biospecimen_ID_Methyl)) %>%
   dplyr::left_join(methyl_subtyped %>% dplyr::select(Kids_First_Participant_ID, sample_id, molecular_subtype_methyl),
                    by = c("Kids_First_Participant_ID", "sample_id")) %>% 
-  dplyr::mutate(molecular_subtype_methyl = case_when(
-    is.na(molecular_subtype_methyl) ~ "EPN, To be classified",
-    TRUE ~ molecular_subtype_methyl)) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::distinct()
