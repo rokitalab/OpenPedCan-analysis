@@ -510,6 +510,19 @@ list_subtypes <- compiled_df %>%
 list_subtypes
 ```
 
+### exclude "NA" in methyl subtype column where sample has subtype
+
+```{r}
+compiled_df <- compiled_df %>%
+  select(-molecular_subtype_methyl) %>%
+  distinct() %>%
+  left_join(compiled_df %>%
+              select(sample_id, molecular_subtype_methyl) %>%
+	      drop_na() %>%
+	      distinct(),
+            by = "sample_id")	      
+```
+
 ### Write revised table to file
 
 ```{r}
