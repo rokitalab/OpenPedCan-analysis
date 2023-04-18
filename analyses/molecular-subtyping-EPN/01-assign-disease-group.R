@@ -66,21 +66,25 @@ methyl_subtyped = EP %>%
   dplyr::distinct()
 
 # low confidence methylation classification subtypes
+# replace same "patient_id-sample_id" in low confidence set that is  
+# in high confidence set with high confidence classification subtype
 methyl_not_subtyped = EP %>%
   dplyr::filter(experimental_strategy == "Methylation", 
                 sample_type == "Tumor",
                 cohort != "TARGET",
                 grepl("EPN_", dkfz_v12_methylation_subclass),
                 !Kids_First_Biospecimen_ID %in% unique(methyl_subtyped$Kids_First_Biospecimen_ID_Methyl)) %>%
-  dplyr::mutate(molecular_subtype_methyl = "EPN, To be classified") %>%
+  dplyr::left_join(methyl_subtyped %>% dplyr::select(Kids_First_Participant_ID, sample_id, molecular_subtype_methyl),
+                   by = c("Kids_First_Participant_ID", "sample_id")) %>% 
+  dplyr::mutate(molecular_subtype_methyl = case_when(
+    is.na(molecular_subtype_methyl) ~ "EPN, To be classified",
+    TRUE ~ molecular_subtype_methyl)) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, primary_site, CNS_region, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::distinct()
 
 # merge methyl
 methyl_samples = dplyr::bind_rows(methyl_subtyped, methyl_not_subtyped)
-
-
 
 # merge rnaseq, wgs, methyl
 EP_rnaseq_WGS_methyl = EP_rnaseq_samples %>%
