@@ -49,8 +49,7 @@ Chronic Myelogenous Leukemia	Primary Tumor	3
 CIC-DUX4 Sarcoma	Primary Tumor	2
 Clear cell sarcoma of the kidney	Primary Tumor	24
 CNS Burkitt's lymphoma	Initial CNS Tumor	3
-CNS Embryonal tumor	Deceased	1
-CNS Embryonal tumor	Initial CNS Tumor	27
+CNS Embryonal tumor	Initial CNS Tumor	26
 CNS Embryonal tumor	Progressive	6
 CNS Embryonal tumor	Recurrence	9
 CNS Melanoma	Initial CNS Tumor	2
@@ -82,7 +81,8 @@ Dysembryoplastic neuroepithelial tumor	Primary Tumor	2
 Dysembryoplastic neuroepithelial tumor	Progressive	25
 Dysembryoplastic neuroepithelial tumor	Recurrence	11
 Dysgerminoma	Primary Tumor	1
-Embryonal tumor	Initial CNS Tumor	4
+Embryonal tumor	Deceased	1
+Embryonal tumor	Initial CNS Tumor	5
 Embryonal tumor	Progressive	4
 Embryonal tumor	Recurrence	4
 Embryonal Tumor NOS	Primary Tumor	1
@@ -105,7 +105,7 @@ Ewing sarcoma	Progressive	14
 Ewing sarcoma	Recurrence	7
 Extraventricular neurocytoma	Initial CNS Tumor	7
 Fibromyxoid lesion	Second Malignancy	3
-Ganglioglioma	Initial CNS Tumor	210
+Ganglioglioma	Initial CNS Tumor	209
 Ganglioglioma	Progressive	37
 Ganglioglioma	Recurrence	21
 Ganglioneuroblastoma	Initial CNS Tumor	7
@@ -120,10 +120,9 @@ Germinoma	Initial CNS Tumor	23
 Germinoma	Progressive	4
 Germinoma	Recurrence	1
 Glial-neuronal tumor	Initial CNS Tumor	2
-Glial-neuronal tumor	Recurrence	1
 Glial-neuronal tumor NOS	Initial CNS Tumor	34
 Glial-neuronal tumor NOS	Progressive	7
-Glial-neuronal tumor NOS	Recurrence	7
+Glial-neuronal tumor NOS	Recurrence	8
 Glioblastoma	Primary Tumor	3
 Glioblastoma	Recurrence	3
 Gliomatosis Cerebri	Initial CNS Tumor	1
@@ -164,12 +163,12 @@ Langerhans Cell histiocytosis	Primary Tumor	5
 Langerhans Cell histiocytosis	Progressive	1
 Langerhans Cell histiocytosis	Unavailable	1
 Low-grade glioma	Deceased	45
-Low-grade glioma	Initial CNS Tumor	912
+Low-grade glioma	Initial CNS Tumor	910
 Low-grade glioma	Progressive	147
 Low-grade glioma	Recurrence	64
 Low-grade glioma	Second Malignancy	5
 Low-grade glioma/astrocytoma	Deceased	5
-Low-grade glioma/astrocytoma	Initial CNS Tumor	239
+Low-grade glioma/astrocytoma	Initial CNS Tumor	241
 Low-grade glioma/astrocytoma	Primary Tumor	6
 Low-grade glioma/astrocytoma	Progressive	108
 Low-grade glioma/astrocytoma	Recurrence	23
@@ -226,7 +225,7 @@ Osteosarcoma	Progressive	2
 Osteosarcoma	Recurrence	2
 Osteosarcoma	Second Malignancy	1
 Perineuroma	Initial CNS Tumor	3
-Pilocytic astrocytoma	Initial CNS Tumor	59
+Pilocytic astrocytoma	Initial CNS Tumor	60
 Pilocytic astrocytoma	Progressive	10
 Pilocytic astrocytoma	Recurrence	5
 Pineal tumor	Initial CNS Tumor	1
