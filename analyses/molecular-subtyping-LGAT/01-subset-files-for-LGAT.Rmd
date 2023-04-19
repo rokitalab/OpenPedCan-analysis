@@ -116,7 +116,6 @@ lgat_specimens_df <- clinical %>%
                            negate = TRUE),
                 # Tumors
                 sample_type == "Tumor",
-                composition == "Solid Tissue",
                 experimental_strategy != "Methylation")
 
 # Write this intermediate file to the subset directory as it allows for
@@ -344,7 +343,6 @@ lgat_methyl_subtyped <- clinical %>%
                 dkfz_v12_methylation_subclass_score >= 0.8,
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
-                composition == "Solid Tissue",
                 cohort != "TARGET") %>% 
   dplyr::mutate(molecular_subtype_methyl = 
                   case_when(grepl("LGG_MYB", dkfz_v12_methylation_subclass) ~ "LGG, MYB/MYBL1",
