@@ -127,15 +127,17 @@ to specify that multiple callers "Caller1,Caller2" have called it
 
 # aggregate caller 
 fusion_caller.summary <- fusion_calls %>%
-  dplyr::select(Sample,FusionName,Caller,Fusion_Type) %>%
-  group_by(FusionName, Sample ,Fusion_Type) %>%
+  dplyr::select(Sample, FusionName, Caller) %>%
+  group_by(FusionName, Sample, Caller) %>%
   unique() %>%
-  dplyr::mutate(CalledBy = toString(Caller), caller.count = n()) %>%
-  dplyr::select(-Caller)
+  ungroup() %>%
+  group_by(FusionName, Sample) %>%
+  dplyr::summarize(CalledBy = toString(Caller), caller.count = n()) %>%
+  ungroup()
 
 #to add aggregated caller from fusion_caller.summary
 fusion_calls<-fusion_calls %>% 
-  left_join(fusion_caller.summary,by=(c("Sample","FusionName","Fusion_Type"))) %>%
+  left_join(fusion_caller.summary,by=(c("Sample","FusionName"))) %>%
   unique()
 ```
 
@@ -211,11 +213,27 @@ putative_driver_annotated_fusions <- fusion_calls %>%
 ### Other non-Oncogenic fusions filtering
 
 ```{r}
-# remove local rearrangements
-fusion_calls<-fusion_calls %>%
+# remove local rearrangements, resolve duplicate fusion_types, domains_retained
+fusion_calls <- fusion_calls %>%
+  ungroup() %>%
   # remove local rearrangement/adjacent genes
   dplyr::filter(!grepl("LOCAL_REARRANGEMENT|LOCAL_INVERSION",annots)) %>%
-  dplyr::select(-Caller) %>%
+  dplyr::filter(Fusion_Type != "other") %>%
+  # ARRIBA and STARFUSION don't use the same names for FusionType, so if 
+  # different keeping the ARRIBA name because there are more options which are
+  # more descriptive
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  mutate(n_types = n_distinct(Fusion_Type)) %>%
+  ungroup() %>% 
+  dplyr::filter(ifelse(n_types != 1, Caller == 'ARRIBA', Caller == Caller)) %>%
+  dplyr::select(-Caller, -n_types) %>%
+  # annoFuse::fusion_driver() sometimes returns multiple values for 
+  # DomainRetainedGene1X (presumably due to multiple kinase domains in the 
+  # protein). Collapsing into a single line to retain both options
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  dplyr::mutate(DomainRetainedGene1A = toString(unique(DomainRetainedGene1A)), 
+                   DomainRetainedGene1B = toString(unique(DomainRetainedGene1B))) %>%
+  ungroup() %>%
   unique()
 
 
