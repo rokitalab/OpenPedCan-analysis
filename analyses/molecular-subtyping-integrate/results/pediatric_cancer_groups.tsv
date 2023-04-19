@@ -51,7 +51,7 @@ Clear cell sarcoma of the kidney	Primary Tumor	24
 CNS Burkitt's lymphoma	Initial CNS Tumor	3
 CNS Embryonal tumor	Initial CNS Tumor	26
 CNS Embryonal tumor	Progressive	6
-CNS Embryonal tumor	Recurrence	9
+CNS Embryonal tumor	Recurrence	7
 CNS Melanoma	Initial CNS Tumor	2
 CNS neuroblastoma	Initial CNS Tumor	7
 CNS neuroblastoma	Recurrence	2
@@ -121,7 +121,7 @@ Germinoma	Initial CNS Tumor	23
 Germinoma	Progressive	4
 Germinoma	Recurrence	1
 Glial-neuronal tumor	Deceased	20
-Glial-neuronal tumor	Initial CNS Tumor	57
+Glial-neuronal tumor	Initial CNS Tumor	55
 Glial-neuronal tumor	Progressive	4
 Glial-neuronal tumor	Recurrence	11
 Glial-neuronal tumor NOS	Initial CNS Tumor	18

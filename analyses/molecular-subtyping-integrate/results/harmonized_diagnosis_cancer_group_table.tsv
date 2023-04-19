@@ -46,8 +46,8 @@ DGD	CIC-DUX4 Sarcoma	CIC-DUX4 Sarcoma	No	No
 TARGET	Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney	No	Yes
 PBTA	CNS Burkitt's lymphoma	CNS Burkitt's lymphoma	No	No
 PBTA	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
-PBTA	CNS Embryonal tumor, HGNET-MN1	CNS Embryonal tumor	Yes	No
 PBTA	CNS Embryonal tumor	CNS Embryonal tumor	No	No
+PBTA	CNS Embryonal tumor, HGNET-MN1	CNS Embryonal tumor	Yes	No
 DGD	CNS Melanoma	CNS Melanoma	No	No
 PBTA	CNS neuroblastoma	CNS neuroblastoma	No	No
 TCGA	Colon Adenocarcinoma	Colon Adenocarcinoma	No	No
@@ -137,7 +137,6 @@ PBTA	Glial-neuronal tumor, wildtype	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor, other MAPK, CDKN2A/B	Glial-neuronal tumor	Yes	No
 PBTA	Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor	No	Yes
-PBTA	Glial-neuronal tumor, H3	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  wildtype	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor, RTK	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor	Yes	No
