@@ -151,9 +151,9 @@ glioneuronal_df <- subtype_df %>%
                  "rosette forming glioneuronal tumor") ~
     gsub("GNT,","Rosette-forming glioneuronal tumor, ",molecular_subtype),
     # remaining samples "glioneuronal" in pathology free text
-    # ans where molecular_subtype is not NA
+    # ans where molecular_subtype is not NA 
     !is.na(molecular_subtype) ~ 
-      gsub("GNT,","Glial-neuronal tumor NOS, ", molecular_subtype),
+      gsub("GNT,","Glial-neuronal tumor, ", molecular_subtype),
     # when molecular_subtype is NA
     TRUE ~ NA_character_
     ),
