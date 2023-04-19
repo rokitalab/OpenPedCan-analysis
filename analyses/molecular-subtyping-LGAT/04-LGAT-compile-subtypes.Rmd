@@ -327,22 +327,27 @@ all_subtype <- bind_rows(all_rna_subtype,
                paste(path_dx_list$recode_path_free_text,collapse = "|")) &
       pathology_diagnosis == "Low-grade glioma/astrocytoma (WHO grade I/II)" ~ 
       gsub("LGG,","GNT,",molecular_subtype),
+    pathology_diagnosis == "Glial-neuronal tumor NOS" ~
+      gsub("LGG,","GNT,",molecular_subtype),
     pathology_diagnosis == "Ganglioglioma" ~
       gsub("LGG,|GNT,","GNG,",molecular_subtype),
     pathology_diagnosis == "Subependymal Giant Cell Astrocytoma (SEGA)" ~
       gsub("LGG,","SEGA,",molecular_subtype),
-    TRUE ~ molecular_subtype)) %>%
+      TRUE ~ molecular_subtype))  %>%
   dplyr::select(-pathology_free_text_diagnosis,
                 -pathology_diagnosis) %>%
   unique() %>%
-  dplyr::arrange(sample_id) #%>%
-  #write_tsv(file.path(resultDir,"lgat_subtyping.tsv"))
+  dplyr::arrange(sample_id) 
 
 ```
 
 ### Inlcude Methylation subtypes
 
 ```{r}
+
+methyl_clinical <- clinical_file %>%
+  filter(Kids_First_Biospecimen_ID %in% methly_subtyped$Kids_First_Biospecimen_ID_Methyl) %>%
+  select(Kids_First_Biospecimen_ID_Methyl = Kids_First_Biospecimen_ID, pathology_diagnosis)
 
 all_subtype <- methly_subtyped %>%
   dplyr::full_join(all_subtype, by = c("Kids_First_Participant_ID", "sample_id")) %>%
@@ -351,7 +356,19 @@ all_subtype <- methly_subtyped %>%
     grepl("wildtype", molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
     TRUE ~ molecular_subtype)) %>%
   dplyr::select(Kids_First_Participant_ID, sample_id, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
-                Kids_First_Biospecimen_ID_Methyl, molecular_subtype, molecular_subtype_methyl)
+                Kids_First_Biospecimen_ID_Methyl, molecular_subtype, molecular_subtype_methyl) %>%
+  # update GNT subtype == GNT to be classified
+  dplyr::mutate(molecular_subtype = case_when(molecular_subtype == "GNT" ~ "GNT, To be classified",
+                                        TRUE ~ molecular_subtype),
+  # if methyl subtype exists but no molecular subtype exists, make it the mol subtype
+                molecular_subtype = case_when(is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+                                       TRUE ~ molecular_subtype)) %>%
+  # add methyl clinical to get 4 NA subtypes subtyped as TBC
+  left_join(methyl_clinical) %>%
+  dplyr::mutate(molecular_subtype = case_when(is.na(molecular_subtype) & pathology_diagnosis == "Low-grade glioma/astrocytoma (WHO grade I/II)" ~ "LGG, To be classified",
+                                              is.na(molecular_subtype) & pathology_diagnosis == "Glial-neuronal tumor NOS" ~ "GNT, To be classified",
+                                              TRUE ~ molecular_subtype)) %>%
+  select(-pathology_diagnosis)
 
 ```
 

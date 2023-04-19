@@ -337,6 +337,10 @@ write_tsv(lgat_subtypes,file.path(subset_dir, "LGAT_snv_subset.tsv"))
 lgat_methyl_subtyped <- clinical %>% 
   dplyr::filter(str_detect(str_to_lower(pathology_diagnosis), 
                            paste(c(path_dx_list$include_path_dx, "Dysplasia/Gliosis"), collapse = "|")),
+                # Exclusion criteria for pathology diagnosis
+                str_detect(str_to_lower(pathology_diagnosis),
+                           paste(path_dx_list$exclude_path_dx, collapse = "|"),
+                           negate = TRUE),
                 dkfz_v12_methylation_subclass_score >= 0.8,
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
@@ -363,6 +367,10 @@ lgat_methyl_subtyped <- clinical %>%
 lgat_methyl_not_subtyped <- clinical %>% 
   dplyr::filter(str_detect(str_to_lower(pathology_diagnosis), 
                            paste(c(path_dx_list$include_path_dx, "Dysplasia/Gliosis"), collapse = "|")),
+                # Exclusion criteria for pathology diagnosis
+                str_detect(str_to_lower(pathology_diagnosis),
+                           paste(path_dx_list$exclude_path_dx, collapse = "|"),
+                           negate = TRUE),
                 !Kids_First_Biospecimen_ID %in% unique(lgat_methyl_subtyped$Kids_First_Biospecimen_ID_Methyl),
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
