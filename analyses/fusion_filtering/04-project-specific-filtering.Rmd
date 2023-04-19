@@ -234,6 +234,10 @@ fusion_calls <- fusion_calls %>%
   dplyr::mutate(DomainRetainedGene1A = toString(unique(DomainRetainedGene1A)), 
                    DomainRetainedGene1B = toString(unique(DomainRetainedGene1B))) %>%
   ungroup() %>%
+  # collapse any remaining duplicate fusion types
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  dplyr::mutate(Fusion_Type = toString(unique(Fusion_Type))) %>%
+  ungroup() %>%
   unique()
 
 
