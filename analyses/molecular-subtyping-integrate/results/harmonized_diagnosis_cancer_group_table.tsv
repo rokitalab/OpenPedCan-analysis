@@ -65,6 +65,7 @@ DGD	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
 PBTA	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 DGD	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Diffuse leptomeningeal glioneuronal tumor,  MAPK	Diffuse leptomeningeal glioneuronal tumor	Yes	No
+PBTA	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	Diffuse leptomeningeal glioneuronal tumor	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
 DGD	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
@@ -125,19 +126,26 @@ TARGET	Ganglioneuroma, maturing subtype OR Ganglioneuroblastoma, well differenti
 DGD	Germ Cell Tumor	Germ Cell Tumor	No	No
 PBTA	Germinoma	Germinoma	No	No
 DGD	Germinoma	Germinoma	No	No
+PBTA	Glial-neuronal tumor,  RTK	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  FGFR	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  To be classified	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  BRAF V600E	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor, other MAPK	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor, RTK, CDKN2A/B	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  other MAPK	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor, wildtype	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor, other MAPK, CDKN2A/B	Glial-neuronal tumor	Yes	No
 PBTA	Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor	No	Yes
+PBTA	Glial-neuronal tumor, H3	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  wildtype	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor, RTK	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor NOS	Glial-neuronal tumor NOS	No	No
-PBTA	Glial-neuronal tumor NOS,  BRAF V600E	Glial-neuronal tumor NOS	Yes	No
-PBTA	Glial-neuronal tumor NOS,  To be classified	Glial-neuronal tumor NOS	Yes	No
 DGD	Glial-neuronal tumor NOS	Glial-neuronal tumor NOS	No	No
-PBTA	Glial-neuronal tumor NOS,  other MAPK	Glial-neuronal tumor NOS	Yes	No
-PBTA	Glial-neuronal tumor NOS,  RTK	Glial-neuronal tumor NOS	Yes	No
-PBTA	Glial-neuronal tumor NOS,  wildtype	Glial-neuronal tumor NOS	Yes	No
-PBTA	Glial-neuronal tumor NOS,  NF1-somatic, FGFR	Glial-neuronal tumor NOS	Yes	No
 PBTA	Glioblastoma	Glioblastoma	No	No
 TCGA	Glioblastoma Multiforme	Glioblastoma Multiforme	No	No
 PBTA	Gliomatosis Cerebri	Gliomatosis Cerebri	No	No
-PBTA	GNT	GNT	No	No
 TCGA	Head and Neck Squamous Cell Carcinoma	Head and Neck Squamous Cell Carcinoma	No	No
 PBTA	Hemangioblastoma	Hemangioblastoma	No	No
 DGD	Hemangioblastoma	Hemangioblastoma	No	No
@@ -173,11 +181,9 @@ PBTA	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, NF1-germline	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, RTK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, wildtype	Low-grade glioma	Yes	No
-PBTA	Low-grade glioma, RTK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, IDH	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline, FGFR	Low-grade glioma	Yes	No
-PBTA	Low-grade glioma, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, other MAPK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, BRAF V600E	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, BRAF V600E, CDKN2A/B	Low-grade glioma	Yes	No
@@ -185,7 +191,8 @@ PBTA	Low-grade glioma, KIAA1549-BRAF, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, other MAPK, IDH	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, MYB/MYBL1	Low-grade glioma	Yes	No
-PBTA	Low-grade glioma, RTK, CDKN2A/B	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma, FGFR	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma, RTK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, MAPK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, NF1-germline, FGFR	Low-grade glioma	Yes	No
@@ -194,14 +201,14 @@ PBTA	Low-grade glioma, NF1-germline, CDKN2A/B	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, FGFR, NF1-somatic	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, BRAF V600E	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, FGFR, NF1-germline	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma, RTK, CDKN2A/B	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, NF1-germline, CDKN2A/B	Low-grade glioma	Yes	No
-PBTA	Low-grade glioma, other MAPK, CDKN2A/B	Low-grade glioma	Yes	No
-PBTA	Low-grade glioma, H3	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, NF1-germline	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, RTK, BRAF V600E	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, RTK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, MYB/MYBL1, other MAPK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline, BRAF V600E	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma, other MAPK, CDKN2A/B	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, CDKN2A/B	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, CDKN2A/B	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline, RTK, FGFR	Low-grade glioma	Yes	No
@@ -269,6 +276,7 @@ TARGET	Rhabdoid tumor of the kidney	Rhabdoid tumor of the kidney	No	No
 DGD	Rhabdomyosarcoma	Rhabdomyosarcoma	No	No
 PBTA	Rhabdomyosarcoma	Rhabdomyosarcoma	No	No
 PBTA	Rosai-dorfman	Rosai-Dorfman disease	No	Yes
+PBTA	Rosette-forming glioneuronal tumor,  FGFR	Rosette-forming glioneuronal tumor	Yes	No
 PBTA	Rosette-forming glioneuronal tumor,  other MAPK, FGFR	Rosette-forming glioneuronal tumor	Yes	No
 PBTA	Sarcoma	Sarcoma	No	No
 DGD	Sarcoma	Sarcoma	No	No
