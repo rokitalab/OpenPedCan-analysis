@@ -166,7 +166,6 @@ relevant_sample_df <- histologies_df %>%
   filter(sample_id %in% relevant_samples,
          experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
          sample_type == "Tumor",
-         composition == "Solid Tissue",
          is.na(RNA_library))
 
 relevant_sample_df
@@ -186,9 +185,9 @@ fusion_biospecimens <- c(
 First subset to solid **tumors**, excluding any derived cell lines.
 
 ```{r}
+# removed  filter composition == "Solid Tissue"
 embryonal_df <- histologies_df %>%
-  filter(sample_type == "Tumor",
-         composition == "Solid Tissue")
+  filter(sample_type == "Tumor")
 ```
 
 Now filter to include and exclude using the `pathology_diagnosis` and `pathology_free_text_diagnosis` labels.
