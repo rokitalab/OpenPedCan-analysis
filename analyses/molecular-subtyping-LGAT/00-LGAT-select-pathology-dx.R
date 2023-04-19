@@ -31,7 +31,9 @@ include_path_dx <- stringr::str_to_lower(
 # Exclusion criterion from https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/753#issuecomment-697008356
 exclude_path_dx <- stringr::str_to_lower(
   c(
-    "Dysembryoplastic neuroepithelial tumor"
+    "Dysembryoplastic neuroepithelial tumor",
+    "Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma",
+    "Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma"
   ))
 
 # Update:Recode criteria on the basis of pathology_free_text_diagnosis  
