@@ -43,19 +43,19 @@ PT_04X0KGW6	7316-7739	BS_7S2N5ZM8	Ependymal tumor	Ependymoma	Posterior fossa gro
 PT_04YTK82N	7316-746	BS_3JE2T7AR	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group3
 PT_04YTK82N	7316-746	BS_9PB3XH5D	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group3
 PT_04YTK82N	7316-746	BS_M6YZNRVZ	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group3
-PT_062ZW10V	7316-5423	BS_0MQ2XY8K	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_1719EQ53	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_1XSM0T7R	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_3RCKRJB1	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_51FQXETB	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_5RY21RR0	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_CH5WKQAP	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_GM5Y63D2	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_KBGFKE34	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_PW5VPQKX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_QWEGKBAT	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_V9CJXVFQ	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
-PT_062ZW10V	7316-5423	BS_YG6FYM9A	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_0MQ2XY8K	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_1719EQ53	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_1XSM0T7R	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_3RCKRJB1	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_51FQXETB	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_5RY21RR0	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_CH5WKQAP	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_GM5Y63D2	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_KBGFKE34	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_PW5VPQKX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_QWEGKBAT	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_V9CJXVFQ	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
+PT_062ZW10V	7316-5423	BS_YG6FYM9A	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Deceased	Glial-neuronal tumor NOS	NA
 PT_06ERX8Z7	7316-2578	BS_29CPJ040	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	NA	Initial CNS Tumor	NA	SEGA, To be classified
 PT_06ERX8Z7	7316-2578	BS_7VBT9G8F	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	NA	Initial CNS Tumor	NA	SEGA, To be classified
 PT_06ERX8Z7	7316-2578	BS_B1X2SB4P	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	NA	Initial CNS Tumor	NA	SEGA, To be classified
@@ -372,9 +372,9 @@ PT_203ZQ296	7316-5311	BS_0AF1XY2M	Diffuse astrocytic and oligodendroglial tumor	
 PT_203ZQ296	7316-5311	BS_6MFTX7TW	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_20M9P0SD	7316-4845	BS_ECACPSAG	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_20M9P0SD	7316-4845	BS_JKDKZSX8	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
-PT_20ZM6THA	7316-3629	BS_5K9S2PZE	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	GNT, MAPK
-PT_20ZM6THA	7316-3629	BS_9X9E86DY	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	GNT, MAPK
-PT_20ZM6THA	7316-3629	BS_E94QRJDW	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	GNT, MAPK
+PT_20ZM6THA	7316-3629	BS_5K9S2PZE	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	GNT, MAPK
+PT_20ZM6THA	7316-3629	BS_9X9E86DY	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	GNT, MAPK
+PT_20ZM6THA	7316-3629	BS_E94QRJDW	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	GNT, MAPK
 PT_2189ZWKX	7316-5262	BS_9XNVJKVG	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_2189ZWKX	7316-5262	BS_C472KBRC	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_2189ZWKX	7316-5262	BS_HQPHY9RZ	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
@@ -583,8 +583,8 @@ PT_2WVW55DA	7316-2100	BS_RG6JK7ZN	Diffuse astrocytic and oligodendroglial tumor	
 PT_2WVW55DA	7316-502	BS_D8N31T39	Neuronal and mixed neuronal-glial tumor	GNT	Desmoplastic infantile astrocytoma and ganglioglioma, RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Desmoplastic infantile astrocytoma and ganglioglioma	NA
 PT_2WVW55DA	7316-502	BS_JE09WG8W	Neuronal and mixed neuronal-glial tumor	GNT	Desmoplastic infantile astrocytoma and ganglioglioma, RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Desmoplastic infantile astrocytoma and ganglioglioma	NA
 PT_2WVW55DA	7316-502	BS_R94EDP5H	Neuronal and mixed neuronal-glial tumor	GNT	Desmoplastic infantile astrocytoma and ganglioglioma, RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Desmoplastic infantile astrocytoma and ganglioglioma	NA
-PT_2X2Z1MYD	7316-6281	BS_B1SF3H8Z	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	NA
-PT_2X2Z1MYD	7316-6281	BS_R2X8XPC2	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	NA
+PT_2X2Z1MYD	7316-6281	BS_B1SF3H8Z	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	NA
+PT_2X2Z1MYD	7316-6281	BS_R2X8XPC2	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Glial-neuronal tumor NOS	NA
 PT_2XPJXZ8F	7316-4173	BS_P7KE401E	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Second Malignancy	Meningioma	NA
 PT_2XPJXZ8F	7316-4173	BS_R2Q8D5VD	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Second Malignancy	Meningioma	NA
 PT_2YCHME6S	7316-2622	BS_A4771SDM	Low-grade astrocytic tumor	LGAT	Low-grade glioma, FGFR	LGG, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, FGFR	NA
@@ -736,9 +736,9 @@ PT_3GP5H8Z0	7316-3170	BS_TW395V33	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_3GP5H8Z0	7316-3170	BS_XC0PNBG2	Embryonal tumor	Medulloblastoma	Medulloblastoma, WNT-activated	MB, WNT	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, WNT
 PT_3GYW6P6P	7316-4544	BS_7VN1E4D2	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_3GYW6P6P	7316-4544	BS_CPWBFHAC	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_3GYW6P6P	7316-5877	BS_0CNMRHGW	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, FGFR
-PT_3GYW6P6P	7316-5877	BS_2QSSPVGA	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, FGFR
-PT_3GYW6P6P	7316-5877	BS_FN0GD79J	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, FGFR
+PT_3GYW6P6P	7316-5877	BS_0CNMRHGW	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, FGFR
+PT_3GYW6P6P	7316-5877	BS_2QSSPVGA	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, FGFR
+PT_3GYW6P6P	7316-5877	BS_FN0GD79J	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, FGFR
 PT_3GZF248B	NA	BS_20ZRK51D	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
 PT_3GZF248B	NA	BS_BB79SSYS	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
 PT_3GZF248B	NA	BS_GTNFM0TQ	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
@@ -928,8 +928,8 @@ PT_47YEHV75	7316-4294	BS_ZW4HD9ZS	Choroid plexus tumor	CPT	NA	NA	Updated via pat
 PT_48N4Y6YP	7316-1866	BS_3G3KWY18	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
 PT_48N4Y6YP	7316-1866	BS_8B1YF57H	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
 PT_48N4Y6YP	7316-1866	BS_R6ES0HY1	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
-PT_48WWMAAG	7316-6662	BS_0QESMKKG	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_48WWMAAG	7316-6662	BS_T2X8ZD79	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_48WWMAAG	7316-6662	BS_0QESMKKG	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_48WWMAAG	7316-6662	BS_T2X8ZD79	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_48WWMAAG	7316-9805	BS_12BB065J	Neuronal and mixed neuronal-glial tumor	GNT	Desmoplastic infantile astrocytoma and ganglioglioma, wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Desmoplastic infantile astrocytoma and ganglioglioma	NA
 PT_48WWMAAG	7316-9805	BS_MCNKFZDF	Neuronal and mixed neuronal-glial tumor	GNT	Desmoplastic infantile astrocytoma and ganglioglioma, wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Desmoplastic infantile astrocytoma and ganglioglioma	NA
 PT_49KEX2FK	7316-8066	BS_304SPN6B	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
@@ -1119,7 +1119,7 @@ PT_5NS35B66	7316-4491	BS_F0JN3TFM	Diffuse astrocytic and oligodendroglial tumor	
 PT_5P3XJ97K	7316-390	BS_GYXSDZ56	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_5P3XJ97K	7316-390	BS_QZG0024B	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_5P3XJ97K	7316-390	BS_RB8VSEVG	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
-PT_5Q52M9W8	7316-2900	BS_29G6HM88	Low-grade astrocytic tumor	LGAT	NA	NA	NA	Initial CNS Tumor	NA	LGG, FGFR
+PT_5Q52M9W8	7316-2900	BS_29G6HM88	Low-grade astrocytic tumor	LGAT	Low-grade glioma, FGFR	LGG, FGFR	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, FGFR
 PT_5Q52M9W8	7316-37	BS_596QRYFP	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Progressive	NA	NA
 PT_5Q52M9W8	7316-37	BS_PKCV80C3	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Progressive	NA	NA
 PT_5R8EWT55	7316-8030	BS_9TXEDSWB	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1494,7 +1494,7 @@ PT_7S5BVPE2	7316-712	BS_548VV6P6	Diffuse astrocytic and oligodendroglial tumor	H
 PT_7T13FDWK	7316-1082	BS_7BQTBTHZ	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_7T13FDWK	7316-1082	BS_DMBNB0EP	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_7T13FDWK	7316-1082	BS_E054DFJN	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_7T2HQNR7	7316-3958	BS_3GSKH3DB	Neuronal and mixed neuronal-glial tumor	GNT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_7T2HQNR7	7316-3958	BS_3GSKH3DB	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_7TD59X9Q	7316-6764	BS_E6DT3HPT	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_7TD59X9Q	7316-6764	BS_HPTQDKRJ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_7TEHW6VQ	7316-2755	BS_6JTXMCTT	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, FGFR
@@ -1534,8 +1534,8 @@ PT_7Z0FF6A2	7316-7108	BS_TAQ6HBJH	Embryonal tumor	Medulloblastoma	NA	MB, To be c
 PT_7Z0FF6A2	7316-7108	BS_TNDMV4Z5	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	Initial CNS Tumor	NA	MB, Group4
 PT_7Z0FF6A2	7316-7108	BS_W38QE561	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_7Z6XVNH0	7316-4114	BS_V7BJFTRG	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_7ZB8FJ6V	7316-6372	BS_F85WCBFF	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_7ZB8FJ6V	7316-6372	BS_N3PSD3AD	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_7ZB8FJ6V	7316-6372	BS_F85WCBFF	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_7ZB8FJ6V	7316-6372	BS_N3PSD3AD	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_80NVYCBS	7316-765	BS_KSKZ9J7J	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPBTA subtyping	Initial CNS Tumor	NA	NA
 PT_8127P12D	7316-7967	BS_8Q7Z32DD	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_8127P12D	7316-7967	BS_JQ07XY76	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
@@ -1564,9 +1564,9 @@ PT_85RSG67R	7316-2986	BS_1TWCV047	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_85RSG67R	7316-2986	BS_9GEYB3Q3	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_86YTXPJ9	C4106847-Tumor	BS_A76PNWQS	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_86YTXPJ9	C4106847-Tumor	BS_TSCE1B96	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
-PT_870BRQ8M	C4106724-Tumor	BS_93WDWT81	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_870BRQ8M	C4106724-Tumor	BS_DJ05Y3P6	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_870BRQ8M	C4106724-Tumor	BS_EV9MAQXE	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_870BRQ8M	C4106724-Tumor	BS_93WDWT81	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_870BRQ8M	C4106724-Tumor	BS_DJ05Y3P6	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_870BRQ8M	C4106724-Tumor	BS_EV9MAQXE	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_872TSB01	7316-1696	BS_BGFD459T	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_87HZ0PF2	7316-6267	BS_2296JPP5	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Second Malignancy	NA	NA
 PT_87HZ0PF2	7316-6267	BS_MN4WEPS2	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Second Malignancy	NA	NA
@@ -1633,13 +1633,13 @@ PT_8GN3TQRM	7316-2091	BS_WJ9H4NZZ	Diffuse astrocytic and oligodendroglial tumor	
 PT_8GN3TQRM	7316-2737	BS_P0QF87WC	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_8GN3TQRM	7316-2737	BS_S791VC80	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_8GN3TQRM	7316-2737	BS_YMA9N90V	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA	NA
-PT_8GW4J4TD	7316-3630	BS_ARFQ1WG3	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, FGFR
-PT_8GW4J4TD	7316-3630	BS_CVAEDWP3	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, FGFR
-PT_8GW4J4TD	7316-3630	BS_V8G6BZRR	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, FGFR
+PT_8GW4J4TD	7316-3630	BS_ARFQ1WG3	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, FGFR
+PT_8GW4J4TD	7316-3630	BS_CVAEDWP3	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, FGFR
+PT_8GW4J4TD	7316-3630	BS_V8G6BZRR	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, FGFR
 PT_8H667037	7316-2498	BS_52AYVHZ7	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_8HBWG092	7316-7927	BS_160Z1FV0	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
-PT_8HBWG092	7316-7927	BS_FX4WKR2R	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
-PT_8HBWG092	7316-7927	BS_JSC6TW9X	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
+PT_8HBWG092	7316-7927	BS_160Z1FV0	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
+PT_8HBWG092	7316-7927	BS_FX4WKR2R	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
+PT_8HBWG092	7316-7927	BS_JSC6TW9X	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
 PT_8HX2C69R	7316-5904	BS_0J390AHD	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8HZN8J7C	7316-8034	BS_BT83BCEE	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_8HZN8J7C	7316-8034	BS_JTWNJ8T7	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1858,8 +1858,8 @@ PT_9N0SR1D7	7316-249	BS_YEW22W35	Diffuse astrocytic and oligodendroglial tumor	H
 PT_9N0SR1D7	7316-249	BS_Z2T8V6NF	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_9N8B4X3E	7316-6373	BS_S5V1KZRF	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_9N8B4X3E	7316-6373	BS_XAKVGAJT	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_9P7P6YAQ	7316-3052	BS_QB7YGKN1	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_9P7P6YAQ	7316-3052	BS_V75T7X6N	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_9P7P6YAQ	7316-3052	BS_QB7YGKN1	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_9P7P6YAQ	7316-3052	BS_V75T7X6N	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_9PA8EZNG	7316-2570	BS_CRBWHNAP	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_9PC5PXNX	7316-4852	BS_KFDQ9AJK	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_9PDE9KSB	7316-4723	BS_FS31ZQDG	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DHG, H3 G35
@@ -1928,8 +1928,8 @@ PT_A594A46X	7316-91	BS_6Y7FX7QJ	Low-grade astrocytic tumor	Ganglioglioma	Ganglio
 PT_A594A46X	7316-91	BS_DJHKC895	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK	GNG, other MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_A5S5BB3A	7316-3195	BS_FGPTXWAV	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group3
 PT_A5S5BB3A	7316-3195	BS_QE6F8DQW	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group3
-PT_A63KF14B	C4117548-Tumor	BS_AQJKXQ69	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_A63KF14B	C4117548-Tumor	BS_YP0K170J	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_A63KF14B	C4117548-Tumor	BS_AQJKXQ69	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_A63KF14B	C4117548-Tumor	BS_YP0K170J	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  wildtype	GNT, wildtype	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_A64KYWHR	7316-4543	BS_6VRG1XFB	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_A64KYWHR	7316-4543	BS_GWGDB4AM	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_A64KYWHR	7316-4543	BS_XWYBVJ4R	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2042,7 +2042,7 @@ PT_AZAJRK9Z	7316-7958	BS_2E9VDD00	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_AZAJRK9Z	7316-7958	BS_V6XZ7CTK	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_AZFSRAWZ	7316-4553	BS_7Q2WKSSX	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DHG, H3 G35
 PT_AZFSRAWZ	7316-4553	BS_G257VSS9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DHG, H3 G35
-PT_AZNBS4EK	7316-9016	BS_V1E3EXXB	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  NF1-somatic, FGFR	GNT, NF1-somatic, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	NA
+PT_AZNBS4EK	7316-9016	BS_V1E3EXXB	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  NF1-somatic, FGFR	GNT, NF1-somatic, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	NA
 PT_AZQ230WT	7316-443	BS_PND839Z0	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_AZQ230WT	7316-443	BS_XQYHPBFS	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_AZQ230WT	7316-4913	BS_11FNCGD9	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
@@ -2439,7 +2439,7 @@ PT_D4JJMH7V	7316-5153	BS_BGFDW0VM	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoi
 PT_D4JJMH7V	7316-5153	BS_C06NCB64	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, SHH
 PT_D4JJMH7V	7316-5153	BS_J276DA87	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, SHH
 PT_D4VFV3CW	7316-3407	BS_02NHQ9F8	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_D52NM7JY	7316-1110	BS_3SN6JCCB	Low-grade astrocytic tumor	LGAT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
+PT_D52NM7JY	7316-1110	BS_3SN6JCCB	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_D5KHK0SS	7316-882	BS_AJ0T7DJ7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Progressive	Low-grade glioma, wildtype	NA
 PT_D5KHK0SS	7316-882	BS_GNS3DD0V	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Progressive	Low-grade glioma, wildtype	NA
 PT_D5KHK0SS	7316-882	BS_GWCRMKE6	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Progressive	Low-grade glioma, wildtype	NA
@@ -2568,9 +2568,9 @@ PT_DPTMDT4E	7316-6585	BS_6FH33KY0	Ependymal tumor	Ependymoma	Supratentorial epen
 PT_DQ3ZCHB6	7316-2195	BS_258RRGDM	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MAPK	GNG, MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
 PT_DQ3ZCHB6	7316-2195	BS_PMSZKZP7	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MAPK	GNG, MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
 PT_DQ3ZCHB6	7316-2195	BS_QC00MR9J	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MAPK	GNG, MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
-PT_DQE0STN1	7316-3509	BS_52TQWRJN	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
-PT_DQE0STN1	7316-3509	BS_K14K54GX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
-PT_DQE0STN1	7316-3509	BS_Q912G26N	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
+PT_DQE0STN1	7316-3509	BS_52TQWRJN	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
+PT_DQE0STN1	7316-3509	BS_K14K54GX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
+PT_DQE0STN1	7316-3509	BS_Q912G26N	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
 PT_DQERVR60	7316-5163	BS_GMW7F5H5	Histiocytic tumor	JXG	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Juvenile xanthogranuloma	NA
 PT_DQT78GS5	7316-3326	BS_BKWRRMTT	Embryonal tumor	Embryonal tumor	NA	NA	NA	Initial CNS Tumor	NA	ETMR, C19MC-altered
 PT_DR94DMTG	7316-9830	BS_V89KBS0Z	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	NA
@@ -2627,8 +2627,8 @@ PT_DY2GNA83	7316-8419	BS_WKJZJYBG	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_DY2GNA83	7316-8419	BS_YQ09RJ0G	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Deceased	NA	MB, SHH
 PT_DY6QG8QC	7316-2228	BS_33B0BZWS	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, NF1-somatic, BRAF V600E	GNG, NF1-somatic, BRAF V600E	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_DY6QG8QC	7316-2228	BS_NG0CR0EP	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, NF1-somatic, BRAF V600E	GNG, NF1-somatic, BRAF V600E	Updated via OpenPedCan subtyping	Progressive	NA	NA
-PT_DYVAW1K2	7316-1112	BS_75P5BC58	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
-PT_DYVAW1K2	7316-1112	BS_WXT1VK25	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
+PT_DYVAW1K2	7316-1112	BS_75P5BC58	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
+PT_DYVAW1K2	7316-1112	BS_WXT1VK25	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
 PT_DZ0EF6T4	C4110045-Tumor	BS_65A41ZQJ	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_DZ0EF6T4	C4110045-Tumor	BS_ADMV7AV5	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_DZ0X4KM1	7316-3047	BS_0VZDNWC9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
@@ -2668,7 +2668,6 @@ PT_E4TXAYR6	7316-9077	BS_ECNBQ2RA	Diffuse astrocytic and oligodendroglial tumor	
 PT_E50ZPGSJ	7316-6387	BS_1WC7MCRT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Progressive	NA	DMG, H3 K28
 PT_E50ZPGSJ	7316-6387	BS_A746BQ2T	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Progressive	NA	DMG, H3 K28
 PT_E50ZPGSJ	7316-6387	BS_J4JY2F3H	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Progressive	NA	DMG, H3 K28
-PT_E546ZRXA	7316-952	BS_5R5TS5KB	Low-grade astrocytic tumor	LGAT	NA	NA	NA	Initial CNS Tumor	NA	NA
 PT_E5CM6C84	7316-6274	BS_WECC47DH	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_E66N7YBN	7316-35	BS_0XD58YD9	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_E6FTW238	7316-3890	BS_5WK2KXYW	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
@@ -2893,8 +2892,8 @@ PT_F5EG8TK5	7316-4515	BS_J49XSYXM	Tumors of sellar region	Craniopharyngioma	Adam
 PT_F5EG8TK5	7316-4515	BS_TX31A8Z9	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	CRANIO, ADAM
 PT_F6DWBRT6	7316-2676	BS_3TFMJH30	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_F6DWBRT6	7316-2676	BS_JY43K2NQ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
-PT_F6ER2107	7316-5900	BS_BHX4DM2S	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_F6ER2107	7316-5900	BS_CDX945Y7	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_F6ER2107	7316-5900	BS_BHX4DM2S	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_F6ER2107	7316-5900	BS_CDX945Y7	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_F822DBA0	7316-458	BS_JFEZA9KE	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EWS
 PT_F822DBA0	7316-458	BS_KPWRDRFP	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EWS
 PT_F822DBA0	7316-458	BS_KQCXTBDN	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EWS
@@ -3141,7 +3140,7 @@ PT_GCKT4FJX	7316-3919	BS_2HNHCSNB	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_GCKT4FJX	7316-3919	BS_775HDFNY	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_GCKT4FJX	7316-3919	BS_RVAH1AZV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_GCSXY6YK	7316-1639	BS_EJEPC9E8	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-germline, FGFR	LGG, NF1-germline, FGFR	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_GD0TGXM3	7316-3315	BS_3HHCHAMR	Low-grade astrocytic tumor	LGAT	NA	NA	NA	Initial CNS Tumor	NA	GNG, MAPK
+PT_GD0TGXM3	7316-3315	BS_3HHCHAMR	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MAPK	GNG, MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
 PT_GDDWPDMC	7316-2575	BS_3XY76V8T	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
 PT_GDDWPDMC	7316-2575	BS_9PGP77HY	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
 PT_GDDWPDMC	7316-2575	BS_V3ZNXRHK	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
@@ -3666,8 +3665,8 @@ PT_JV9G8MFD	7316-2269	BS_9FHSNVS0	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoi
 PT_JV9G8MFD	7316-2269	BS_ZAT0XJE5	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, SHH
 PT_JV9G8MFD	7316-4292	BS_HCH609PX	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	Recurrence	NA	ATRT, SHH
 PT_JV9G8MFD	7316-4292	BS_VVP8QQX8	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	Recurrence	NA	ATRT, SHH
-PT_JW2FDK4W	7316-334	BS_34SNT6SK	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_JW2FDK4W	7316-334	BS_KVAJYZ6F	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_JW2FDK4W	7316-334	BS_34SNT6SK	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_JW2FDK4W	7316-334	BS_KVAJYZ6F	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_JW6FBEFK	7316-3019	BS_3BVVWHP5	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	NA	Progressive	NA	SEGA, To be classified
 PT_JW6FBEFK	7316-3019	BS_3P96RT4E	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	NA	Progressive	NA	SEGA, To be classified
 PT_JW6FBEFK	7316-3019	BS_M5AC601F	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	NA	Progressive	NA	SEGA, To be classified
@@ -4046,7 +4045,6 @@ PT_MTVXXQTG	7316-8017	BS_S4CG60MW	Diffuse astrocytic and oligodendroglial tumor	
 PT_MTVXXQTG	7316-8017	BS_TSMCMNRT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
 PT_MV5WXTQV	7316-8036	BS_DD2N8CEX	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_MV5WXTQV	7316-8036	BS_YA0KMBRT	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_MV7Y44QQ	7316-157	BS_PTRRVESF	Low-grade astrocytic tumor	LGAT	NA	NA	NA	Initial CNS Tumor	NA	NA
 PT_MVSWHXSR	7316-8734	BS_6W5NPPK8	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_MVSWHXSR	7316-8734	BS_N51EV5FZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_MVSWHXSR	7316-8734	BS_RE5YCEEX	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
@@ -4202,7 +4200,7 @@ PT_NME1D79F	7316-7963	BS_YBZ2DNSK	Diffuse astrocytic and oligodendroglial tumor	
 PT_NNZQ09SH	7316-1109	BS_2SG8JNMB	Neuronal and mixed neuronal-glial tumor	GNT	Rosette-forming glioneuronal tumor,  other MAPK, FGFR	GNT, other MAPK, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Rosette-forming glioneuronal tumor	NA
 PT_NNZQ09SH	7316-1109	BS_8KS2BZR5	Neuronal and mixed neuronal-glial tumor	GNT	Rosette-forming glioneuronal tumor,  other MAPK, FGFR	GNT, other MAPK, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Rosette-forming glioneuronal tumor	NA
 PT_NNZQ09SH	7316-1109	BS_WVS02TZK	Neuronal and mixed neuronal-glial tumor	GNT	Rosette-forming glioneuronal tumor,  other MAPK, FGFR	GNT, other MAPK, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Rosette-forming glioneuronal tumor	NA
-PT_NNZQ09SH	7316-3638	BS_Q9XEFY7D	Neuronal and mixed neuronal-glial tumor	GNT	NA	NA	Updated via pathology_free_text_diagnosis	Recurrence	Rosette-forming glioneuronal tumor	GNT, FGFR
+PT_NNZQ09SH	7316-3638	BS_Q9XEFY7D	Neuronal and mixed neuronal-glial tumor	GNT	Rosette-forming glioneuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Recurrence	Rosette-forming glioneuronal tumor	GNT, FGFR
 PT_NPETR8RY	7316-160	BS_4FZS7TX4	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_NPETR8RY	7316-160	BS_NWASTET4	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_NPETR8RY	7316-160	BS_W5P7SPDH	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
@@ -4326,16 +4324,16 @@ PT_PB4Q0ZX1	7316-3902	BS_GN4KVTPQ	Ependymal tumor	Ependymoma	NA	EPN, To be class
 PT_PB4Q0ZX1	7316-3902	BS_WFQT9J8Q	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_PD7G77HN	7316-4511	BS_3EK4EGFE	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E, CDKN2A/B	LGG, BRAF V600E, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E, CDKN2A/B	NA
 PT_PD7G77HN	7316-4511	BS_PRCG6W20	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E, CDKN2A/B	LGG, BRAF V600E, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E, CDKN2A/B	NA
-PT_PDFP2XFB	7316-6842	BS_S5DT08R4	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
-PT_PDFP2XFB	7316-6842	BS_XAFKCKZR	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
-PT_PDFP2XFB	7316-6842	BS_ZZF7B1MH	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
+PT_PDFP2XFB	7316-6842	BS_S5DT08R4	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
+PT_PDFP2XFB	7316-6842	BS_XAFKCKZR	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
+PT_PDFP2XFB	7316-6842	BS_ZZF7B1MH	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	LGG, FGFR
 PT_PE0SAKT4	C4116195-Tumor	BS_EBPF8GTD	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_PE0SAKT4	C4116195-Tumor	BS_M0FA190Y	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_PEHEAEVT	7316-4552	BS_QTF9XM61	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_PEHEAEVT	7316-4552	BS_WHBEXD5H	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_PF04R0BH	7316-3957	BS_CWYM07MR	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
-PT_PF04R0BH	7316-3957	BS_D0Y8DF51	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
-PT_PF04R0BH	7316-3957	BS_NYEVBZPS	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
+PT_PF04R0BH	7316-3957	BS_CWYM07MR	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
+PT_PF04R0BH	7316-3957	BS_D0Y8DF51	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
+PT_PF04R0BH	7316-3957	BS_NYEVBZPS	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNG, MAPK
 PT_PF04R0BH	7316-5470	BS_2D1R9SBY	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_PF04R0BH	7316-5470	BS_ZT0WA5EX	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_PF9EC93Q	7316-3765	BS_80078QDG	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	HGG, H3 wildtype
@@ -4851,7 +4849,7 @@ PT_SDNP56RH	7316-9509	BS_Z4YCK78X	Embryonal tumor	Medulloblastoma	NA	MB, To be c
 PT_SDPA6AAP	7316-624	BS_3AC3SRWH	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_SDPA6AAP	7316-624	BS_JJZKPXCK	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_SEKXH6HT	7316-4698	BS_08TWG4K0	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_SFGJ7C83	7316-927	BS_H9JCDE5Y	Low-grade astrocytic tumor	LGAT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
+PT_SFGJ7C83	7316-927	BS_H9JCDE5Y	Low-grade astrocytic tumor	LGAT	Low-grade glioma, MAPK	LGG, MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, MAPK	NA
 PT_SGJK5KSB	7316-9140	BS_35DRDAFV	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_SGJK5KSB	7316-9140	BS_SY3J3XR9	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_SGYF4CMN	7316-4551	BS_4ZZTEM70	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -5020,7 +5018,7 @@ PT_TS0FW57Z	7316-2167	BS_AJP26WFT	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_TS0FW57Z	7316-2167	BS_Q0XBZP88	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, other MAPK	LGG, KIAA1549-BRAF, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF, other MAPK	NA
 PT_TS0H697Y	7316-394	BS_5YNY8WRA	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_TS0H697Y	7316-394	BS_AGTPCRR4	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_TTN2SR2Q	7316-7209	BS_24VRW8WX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_TTN2SR2Q	7316-7209	BS_24VRW8WX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_TTQ3KXDH	7316-5336	BS_V7BZ049H	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_TTQ3KXDH	7316-5336	BS_X9B4XHPR	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_TTZFTYB5	7316-6806	BS_ED2G8Z6B	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -5033,8 +5031,8 @@ PT_TVJ5EGMR	7316-8033	BS_G5NHSFD4	Diffuse astrocytic and oligodendroglial tumor	
 PT_TVK2KY36	7316-2626	BS_J71N7D09	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_TVK2KY36	7316-2626	BS_P0KXVQ8K	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_TVK2KY36	7316-2626	BS_S34SCYW4	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_TVTG8E8N	7316-9727	BS_0NPQFPZ9	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_TVTG8E8N	7316-9727	BS_CKM16AHA	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_TVTG8E8N	7316-9727	BS_0NPQFPZ9	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_TVTG8E8N	7316-9727	BS_CKM16AHA	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_TWAHK62W	7316-9055	BS_K9APGGRV	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_TWAHK62W	7316-9055	BS_MD0937XT	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_TWAHK62W	7316-9055	BS_W60PB1DS	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -5170,9 +5168,9 @@ PT_VPEMAQBN	7316-3225	BS_Q6GVRAWK	Diffuse astrocytic and oligodendroglial tumor	
 PT_VPEMAQBN	7316-3235	BS_VXDGXQKZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_VPEMAQBN	A12748	BS_0ZA67BBC	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_VPEMAQBN	A12748	BS_6VTQ3W4M	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_VQDNSYXM	7316-1637	BS_5PEFNDCY	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  KIAA1549-BRAF	GNT, KIAA1549-BRAF	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_VQDNSYXM	7316-1637	BS_JBY9S5D4	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  KIAA1549-BRAF	GNT, KIAA1549-BRAF	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_VQDNSYXM	7316-1637	BS_W9Q586RP	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  KIAA1549-BRAF	GNT, KIAA1549-BRAF	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_VQDNSYXM	7316-1637	BS_5PEFNDCY	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  KIAA1549-BRAF	GNT, KIAA1549-BRAF	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_VQDNSYXM	7316-1637	BS_JBY9S5D4	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  KIAA1549-BRAF	GNT, KIAA1549-BRAF	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_VQDNSYXM	7316-1637	BS_W9Q586RP	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  KIAA1549-BRAF	GNT, KIAA1549-BRAF	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_VR8T8JX8	7316-762	BS_FTKPQ5FZ	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_VR8T8JX8	7316-762	BS_X09QGCHP	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_VT6PJVQN	7316-205	BS_059Y71Y7	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -5239,9 +5237,9 @@ PT_W4M7YD0J	7316-7598	BS_P14GK1PS	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_W4M7YD0J	7316-7598	BS_P3NDA9Z7	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_W4M7YD0J	7316-7598	BS_ZDJEXPYG	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_W4PJKYK7	7316-838	BS_CYJMA6Y7	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_W4SMVJM8	7316-6979	BS_4MKYYMTP	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, MAPK
-PT_W4SMVJM8	7316-6979	BS_AGVWD5K8	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, MAPK
-PT_W4SMVJM8	7316-6979	BS_N9WQE4F6	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, MAPK
+PT_W4SMVJM8	7316-6979	BS_4MKYYMTP	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, MAPK
+PT_W4SMVJM8	7316-6979	BS_AGVWD5K8	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, MAPK
+PT_W4SMVJM8	7316-6979	BS_N9WQE4F6	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK	GNT, other MAPK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT, MAPK
 PT_W4XVT4AJ	7316-548	BS_MKM0EEN1	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Deceased	NA	NA
 PT_W4XVT4AJ	7316-548	BS_QFGWRM7H	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Deceased	NA	NA
 PT_W5GP3F6B	7316-5003	BS_38CD519Z	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -5489,8 +5487,8 @@ PT_XETT8T7M	NA	BS_E309EY4K	Chordoma	Chordoma	NA	NA	NA	Metastatic	NA	NA
 PT_XETT8T7M	NA	BS_PYR24RRT	Chordoma	Chordoma	NA	NA	NA	Metastatic	NA	NA
 PT_XETT8T7M	NA	BS_WDS3VMCB	Chordoma	Chordoma	NA	NA	NA	Metastatic	NA	NA
 PT_XETT8T7M	NA	BS_ZWV0SAMG	Chordoma	Chordoma	NA	NA	NA	Metastatic	NA	NA
-PT_XFH4Q7SC	7316-7755	BS_F6R8R1KN	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_XFH4Q7SC	7316-7755	BS_Y18G3521	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor NOS,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_XFH4Q7SC	7316-7755	BS_F6R8R1KN	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_XFH4Q7SC	7316-7755	BS_Y18G3521	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_XHV730W9	7316-6791	BS_KVPWHDR4	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_XHV730W9	7316-6791	BS_VNHBE5ZV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_XHYBZKCX	7316-2972	BS_0XR7GYAV	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
