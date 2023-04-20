@@ -89,13 +89,13 @@ fusion_calls<-QCGeneFiltered_filtFusion %>% mutate(FusionName=rm_between(.data$F
 
 # get histology file
 if ( params$base_run ==0 ){
-clinical<-read.delim(file.path(root_dir, params$histology), stringsAsFactors = FALSE)
+clinical<-read_tsv(file.path(root_dir, params$histology))
 # get grouping column id
 group<-params$group
 # subset to group
 clinical<-clinical[,c("Kids_First_Biospecimen_ID","Kids_First_Participant_ID",group)]
 } else {
-clinical<-read.delim(file.path(root_dir, params$base_histology), stringsAsFactors = FALSE)
+clinical<-read_tsv(file.path(root_dir, params$base_histology))
 # get grouping column id
 group<-params$group_base
 # subset to group
