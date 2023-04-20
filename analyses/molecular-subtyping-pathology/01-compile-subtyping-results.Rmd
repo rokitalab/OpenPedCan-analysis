@@ -263,7 +263,7 @@ Within LGG, we will add integrated_diagnosis,broad_histology and short_histology
 For Glial neuronal tumors (GNT) will be updated these values using pathology_free_text_diagnosis in the next step.
 
 ```{r}
-lgat_results_df <- bind_exp_strategies(lgat_results_df) %>%
+lgat_results_df <- lgat_results_df %>%
   unique() %>%
   inner_join(select(histologies_df,c(join_cols,
                                      pathology_diagnosis)),
