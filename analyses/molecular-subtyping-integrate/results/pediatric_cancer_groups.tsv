@@ -105,8 +105,8 @@ Ewing sarcoma	Progressive	12
 Ewing sarcoma	Recurrence	7
 Extraventricular neurocytoma	Initial CNS Tumor	6
 Fibromyxoid lesion	Second Malignancy	3
-Ganglioglioma	Initial CNS Tumor	197
-Ganglioglioma	Progressive	39
+Ganglioglioma	Initial CNS Tumor	194
+Ganglioglioma	Progressive	34
 Ganglioglioma	Recurrence	20
 Ganglioneuroblastoma	Initial CNS Tumor	7
 Ganglioneuroblastoma	Primary Tumor	179
@@ -120,10 +120,10 @@ Germinoma	Initial CNS Tumor	20
 Germinoma	Progressive	3
 Germinoma	Recurrence	1
 Glial-neuronal tumor	Deceased	20
-Glial-neuronal tumor	Initial CNS Tumor	64
+Glial-neuronal tumor	Initial CNS Tumor	61
 Glial-neuronal tumor	Progressive	6
 Glial-neuronal tumor	Recurrence	11
-Glial-neuronal tumor NOS	Initial CNS Tumor	5
+Glial-neuronal tumor NOS	Initial CNS Tumor	6
 Glial-neuronal tumor NOS	Recurrence	2
 Glioblastoma	Primary Tumor	3
 Glioblastoma	Recurrence	3
@@ -163,16 +163,16 @@ Langerhans Cell histiocytosis	Initial CNS Tumor	23
 Langerhans Cell histiocytosis	Primary Tumor	4
 Langerhans Cell histiocytosis	Unavailable	1
 Low-grade glioma	Deceased	25
-Low-grade glioma	Initial CNS Tumor	1030
+Low-grade glioma	Initial CNS Tumor	944
 Low-grade glioma	Primary Tumor	1
-Low-grade glioma	Progressive	193
+Low-grade glioma	Progressive	174
 Low-grade glioma	Recurrence	63
 Low-grade glioma	Second Malignancy	6
 Low-grade glioma/astrocytoma	Deceased	5
-Low-grade glioma/astrocytoma	Initial CNS Tumor	23
+Low-grade glioma/astrocytoma	Initial CNS Tumor	34
 Low-grade glioma/astrocytoma	Primary Tumor	2
-Low-grade glioma/astrocytoma	Progressive	15
-Low-grade glioma/astrocytoma	Recurrence	7
+Low-grade glioma/astrocytoma	Progressive	19
+Low-grade glioma/astrocytoma	Recurrence	6
 Low-grade glioma/astrocytoma	Second Malignancy	1
 Malignant peripheral nerve sheath tumor	Deceased	2
 Malignant peripheral nerve sheath tumor	Initial CNS Tumor	7
@@ -225,18 +225,16 @@ Osteosarcoma	Progressive	1
 Osteosarcoma	Recurrence	1
 Osteosarcoma	Second Malignancy	1
 Perineuroma	Initial CNS Tumor	3
-Pilocytic astrocytoma	Initial CNS Tumor	54
-Pilocytic astrocytoma	Progressive	17
+Pilocytic astrocytoma	Initial CNS Tumor	86
+Pilocytic astrocytoma	Progressive	25
 Pilocytic astrocytoma	Recurrence	6
 Pineoblastoma	Initial CNS Tumor	46
 Pineoblastoma	Progressive	8
 Pineoblastoma	Recurrence	3
 Pineocytoma	Initial CNS Tumor	1
-Pleomorphic xanthoastrocytoma	Initial CNS Tumor	10
-Pleomorphic xanthoastrocytoma	Progressive	1
-Pleomorphic xanthoastrocytoma	Recurrence	1
+Pleomorphic xanthoastrocytoma	Initial CNS Tumor	11
+Pleomorphic xanthoastrocytoma	Recurrence	2
 Primary mediastinal large B cell lymphoma	Primary Tumor	1
-PXA	Initial CNS Tumor	3
 Retinoblastoma	Recurrence	1
 Rhabdoid tumor of the kidney	Primary Tumor	64
 Rhabdomyosarcoma	Initial CNS Tumor	7
@@ -256,7 +254,7 @@ Schwannoma	Primary Tumor	2
 Schwannoma	Progressive	9
 Schwannoma	Recurrence	6
 Schwannoma	Unavailable	1
-Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	36
+Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	37
 Subependymal Giant Cell Astrocytoma	Progressive	3
 Subependymal Giant Cell Astrocytoma	Second Malignancy	3
 T Acute Lymphoblastic Leukemia/Lymphoma	Primary Tumor	8
