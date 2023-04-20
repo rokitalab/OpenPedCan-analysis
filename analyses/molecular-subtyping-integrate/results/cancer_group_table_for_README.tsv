@@ -14,7 +14,6 @@ Atypical lymphoid infiltrate	NA
 Atypical meningioma	Meningioma
 Atypical Teratoid Rhabdoid Tumor (ATRT)	Atypical Teratoid Rhabdoid Tumor
 Atypical vascular lesion	NA
-Benign Vascular Neoplasm	NA
 Bone marrow cellularity	NA
 Bone marrow failure	NA
 Brain Lower Grade Glioma	Low-grade glioma
@@ -31,6 +30,7 @@ Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial t
 Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma	NA
 Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	NA
 Dysplasia/Gliosis	NA
+Dysplasia/Gliosis;Low-grade glioma/astrocytoma (WHO grade I/II)	NA
 Embryonal Tumor with Multilayered Rosettes (ETMR)	Embryonal tumor with multilayer rosettes
 Embryonal Tumor with Multilayered Rosettes (ETMR);High-grade glioma/astrocytoma (WHO grade III/IV)	NA
 Ependymoma;Metastatic secondary tumors	NA
@@ -56,7 +56,6 @@ Juvenile Xanthogranuloma	Juvenile xanthogranuloma
 Kidney Chromophobe	Chromophobe renal cell carcinoma
 Kidney Renal Clear Cell Carcinoma	Renal Clear Cell Carcinoma
 Kidney Renal Papillary Cell Carcinoma	Renal Papillary Cell Carcinoma
-Klippel-trenaunay-weber syndrome	NA
 Lipoblastoma	NA
 Lipoma	NA
 Lipomyelomeningocele	NA
@@ -81,14 +80,12 @@ Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor
 Neurofibroma/Plexiform;Schwannoma	NA
 Neutropenia	NA
 Nodular fasciitis	NA
-Non-cancer diagnosis	NA
 Non-germinomatous germ cell tumor;Teratoma	NA
 Noonan syndrome	NA
 Not Reported	NA
 Ossifying fibroma	NA
 Osteoblastoma	NA
 Osteoma	NA
-Ovarian sertoli-leydig cell tumor	NA
 Pilomatricoma	NA
 Pleuropulmonary blastoma	NA
 Portions of white matter with a few reactive astrocytes and rare cells with mild atypia	NA
@@ -97,13 +94,11 @@ Posterior fossa group B (PFB) ependymoma	Ependymoma
 Posterior fossa subependymoma	Ependymoma
 Primary myelofibrosis	NA
 Reactive connective tissue	NA
-Retinal neuroblastoma	NA
 Rosai-dorfman	Rosai-Dorfman disease
 Shwachman-diamond syndrome	NA
 Solid pseudopapillary neoplasm of the pancreas	NA
 Spinal ependymoma	Ependymoma
 Spinal subependymoma	Ependymoma
-Spindle cell neoplasm	NA
 Spinocerebellar ataxia type 7	NA
 Subependymal Giant Cell Astrocytoma (SEGA)	Subependymal Giant Cell Astrocytoma
 Supratentorial ependymoma	Ependymoma
