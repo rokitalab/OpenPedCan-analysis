@@ -287,7 +287,27 @@ putative_driver_fusions<-fusion_calls %>% dplyr::filter(!FusionName %in% FusionI
     )
   ) %>%
   arrange(Sample, FusionName) %>%
-  dplyr::mutate(annots = gsub("\\[], ", "", annots))
+  dplyr::mutate(annots = gsub("\\[], ", "", annots)) %>%
+  unique() %>%
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  mutate(n_types = n_distinct(Fusion_Type)) %>%
+  ungroup() %>%
+  unique() %>%
+  dplyr::filter(ifelse(n_types != 1, Caller == 'ARRIBA', Caller == Caller)) %>%
+  dplyr::select(-Caller, -n_types) %>%
+  # annoFuse::fusion_driver() sometimes returns multiple values for
+  # DomainRetainedGene1X (presumably due to multiple kinase domains in the
+  # protein). Collapsing into a single line to retain both options
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  dplyr::mutate(DomainRetainedGene1A = toString(unique(DomainRetainedGene1A)),
+                DomainRetainedGene1B = toString(unique(DomainRetainedGene1B))) %>%
+  ungroup() %>%
+  unique() %>%
+  # collapse any remaining duplicate fusion types
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  dplyr::mutate(Fusion_Type = toString(unique(Fusion_Type))) %>%
+  ungroup() %>%
+  unique()
 
 write.table(putative_driver_fusions,file.path(outputfolder,"fusion-putative-oncogenic.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
 
