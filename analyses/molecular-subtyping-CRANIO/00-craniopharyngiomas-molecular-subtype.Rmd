@@ -71,17 +71,17 @@ cranio_bs <- metadata %>%
   pull(Kids_First_Biospecimen_ID)
 
 ## Read in snv consensus mutation data, subset for samples of interest
-dgd_maf_file <- file.path(root_dir, "data", "snv-dgd.maf.tsv.gz")
+#dgd_maf_file <- file.path(root_dir, "data", "snv-dgd.maf.tsv.gz")
 snv_file <- file.path(root_dir, "data", "snv-consensus-plus-hotspots.maf.tsv.gz")
 
-dgd_df <- read_tsv(dgd_maf_file, comment = '#') %>%
-    filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID,
-           Hugo_Symbol %in% c("BRAF","CTNNB1"))
+#dgd_df <- read_tsv(dgd_maf_file, comment = '#') %>%
+#    filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID,
+#           Hugo_Symbol %in% c("BRAF","CTNNB1"))
 
 snv_df <- read_tsv(snv_file, comment = '#') %>%
   filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID,
-           Hugo_Symbol %in% c("BRAF","CTNNB1")) %>%
-  bind_rows(dgd_df)
+           Hugo_Symbol %in% c("BRAF","CTNNB1")) #%>%
+#  bind_rows(dgd_df)
 
 ```
 
