@@ -202,7 +202,6 @@ fusion_calls<-merge(fusion_calls,clinical,by.x="Sample",by.y="Kids_First_Biospec
 
 # filter for putative driver genes
 putative_driver_annotated_fusions <- fusion_calls %>%
-  dplyr::select(-Caller) %>%
   unique() %>%
   dplyr::filter(!is.na(Gene1A_anno) | !is.na(Gene1B_anno) | !is.na(Gene2A_anno) | !is.na(Gene2B_anno)) %>%
   unique()
