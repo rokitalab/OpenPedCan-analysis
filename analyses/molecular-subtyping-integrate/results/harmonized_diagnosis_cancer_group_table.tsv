@@ -132,7 +132,9 @@ PBTA	Glial-neuronal tumor,  To be classified	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  BRAF V600E	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor, other MAPK	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor, RTK, CDKN2A/B	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor NOS	Glial-neuronal tumor	No	Yes
 PBTA	Glial-neuronal tumor,  other MAPK	Glial-neuronal tumor	Yes	No
+DGD	Glial-neuronal tumor NOS	Glial-neuronal tumor	No	Yes
 PBTA	Glial-neuronal tumor, wildtype	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor, other MAPK, CDKN2A/B	Glial-neuronal tumor	Yes	No
@@ -145,8 +147,6 @@ DGD	Glial-neuronal tumor,  To be classified	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor,  RTK	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor, FGFR	Glial-neuronal tumor	Yes	No
-PBTA	Glial-neuronal tumor NOS	Glial-neuronal tumor NOS	No	No
-DGD	Glial-neuronal tumor NOS	Glial-neuronal tumor NOS	No	No
 PBTA	Glioblastoma	Glioblastoma	No	No
 TCGA	Glioblastoma Multiforme	Glioblastoma Multiforme	No	No
 PBTA	Gliomatosis Cerebri	Gliomatosis Cerebri	No	No
@@ -157,9 +157,9 @@ DGD	Hepatoblastoma	Hepatoblastoma	No	No
 DGD	Hepatocellular Carcinoma	Hepatocellular Carcinoma	No	No
 TCGA	Hepatocellular Carcinoma	Hepatocellular Carcinoma	No	No
 PBTA	High-grade glioma, IDH-wildtype and H3-wildtype	High-grade glioma	Yes	No
+PBTA	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma	No	Yes
+DGD	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma	No	Yes
 PBTA	High-grade glioma, IDH-mutant	High-grade glioma	Yes	No
-PBTA	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma/astrocytoma	No	Yes
-DGD	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma/astrocytoma	No	Yes
 DGD	Histiocytic tumor	Histiocytic tumor	No	No
 PBTA	Juvenile xanthogranuloma	Histiocytic tumor	No	Yes
 DGD	Histiocytic Tumor	Histiocytic tumor	No	Yes
@@ -183,12 +183,14 @@ PBTA	Low-grade glioma, NF1-somatic, NF1-germline	Low-grade glioma	Yes	No
 DGD	Low-grade glioma, KIAA1549-BRAF	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, RTK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, wildtype	Low-grade glioma	Yes	No
+DGD	Low-grade glioma/astrocytoma (WHO grade I/II)	Low-grade glioma	No	Yes
 PBTA	Low-grade glioma, IDH	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, KIAA1549-BRAF, other MAPK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, BRAF V600E	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, BRAF V600E, CDKN2A/B	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma/astrocytoma (WHO grade I/II)	Low-grade glioma	No	Yes
 PBTA	Low-grade glioma, KIAA1549-BRAF, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-somatic	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, other MAPK, IDH	Low-grade glioma	Yes	No
@@ -221,8 +223,6 @@ PBTA	Low-grade glioma, NF1-germline, RTK, FGFR	Low-grade glioma	Yes	No
 DGD	Low-grade glioma, MYB/MYBL1	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline, other MAPK	Low-grade glioma	Yes	No
 TCGA	Brain Lower Grade Glioma	Low-grade glioma	No	Yes
-DGD	Low-grade glioma/astrocytoma (WHO grade I/II)	Low-grade glioma/astrocytoma	No	Yes
-PBTA	Low-grade glioma/astrocytoma (WHO grade I/II)	Low-grade glioma/astrocytoma	No	Yes
 TCGA	Lung Adenocarcinoma	Lung Adenocarcinoma	No	No
 TCGA	Lung Squamous Cell Carcinoma	Lung Squamous Cell Carcinoma	No	No
 TCGA	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	No	No

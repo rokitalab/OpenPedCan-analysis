@@ -119,11 +119,9 @@ Germinoma	Initial CNS Tumor	20
 Germinoma	Progressive	3
 Germinoma	Recurrence	1
 Glial-neuronal tumor	Deceased	20
-Glial-neuronal tumor	Initial CNS Tumor	61
+Glial-neuronal tumor	Initial CNS Tumor	67
 Glial-neuronal tumor	Progressive	6
-Glial-neuronal tumor	Recurrence	11
-Glial-neuronal tumor NOS	Initial CNS Tumor	6
-Glial-neuronal tumor NOS	Recurrence	2
+Glial-neuronal tumor	Recurrence	13
 Glioblastoma	Primary Tumor	3
 Glioblastoma	Recurrence	3
 Gliomatosis Cerebri	Initial CNS Tumor	3
@@ -131,18 +129,13 @@ Hemangioblastoma	Initial CNS Tumor	18
 Hemangioblastoma	Progressive	6
 Hepatoblastoma	Primary Tumor	4
 Hepatocellular Carcinoma	Primary Tumor	1
-High-grade glioma	Deceased	100
-High-grade glioma	Initial CNS Tumor	275
-High-grade glioma	Progressive	53
+High-grade glioma	Deceased	119
+High-grade glioma	Initial CNS Tumor	390
+High-grade glioma	Primary Tumor	1
+High-grade glioma	Progressive	87
 High-grade glioma	Progressive Disease Post-Mortem	1
-High-grade glioma	Recurrence	45
-High-grade glioma	Second Malignancy	17
-High-grade glioma/astrocytoma	Deceased	19
-High-grade glioma/astrocytoma	Initial CNS Tumor	115
-High-grade glioma/astrocytoma	Primary Tumor	1
-High-grade glioma/astrocytoma	Progressive	34
-High-grade glioma/astrocytoma	Recurrence	20
-High-grade glioma/astrocytoma	Second Malignancy	9
+High-grade glioma	Recurrence	65
+High-grade glioma	Second Malignancy	26
 Histiocytic tumor	Initial CNS Tumor	7
 Histiocytic tumor	Primary Tumor	3
 Histiocytic tumor	Progressive	1
@@ -162,18 +155,12 @@ Juvenile xanthogranuloma	Primary Tumor	1
 Langerhans Cell histiocytosis	Initial CNS Tumor	23
 Langerhans Cell histiocytosis	Primary Tumor	4
 Langerhans Cell histiocytosis	Unavailable	1
-Low-grade glioma	Deceased	25
-Low-grade glioma	Initial CNS Tumor	944
-Low-grade glioma	Primary Tumor	1
-Low-grade glioma	Progressive	174
-Low-grade glioma	Recurrence	63
-Low-grade glioma	Second Malignancy	6
-Low-grade glioma/astrocytoma	Deceased	5
-Low-grade glioma/astrocytoma	Initial CNS Tumor	34
-Low-grade glioma/astrocytoma	Primary Tumor	2
-Low-grade glioma/astrocytoma	Progressive	19
-Low-grade glioma/astrocytoma	Recurrence	6
-Low-grade glioma/astrocytoma	Second Malignancy	1
+Low-grade glioma	Deceased	30
+Low-grade glioma	Initial CNS Tumor	978
+Low-grade glioma	Primary Tumor	3
+Low-grade glioma	Progressive	193
+Low-grade glioma	Recurrence	69
+Low-grade glioma	Second Malignancy	7
 Malignant peripheral nerve sheath tumor	Deceased	2
 Malignant peripheral nerve sheath tumor	Initial CNS Tumor	7
 Malignant peripheral nerve sheath tumor	Primary Tumor	2
