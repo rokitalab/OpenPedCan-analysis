@@ -41,7 +41,7 @@ DGKD--PTMA	Hematologic malignancy	9
 DOT1L--MKNK2	Hematologic malignancy	8
 EIF4A1--ATP6V0C	Hematologic malignancy	11
 EIF4A1--ENSG00000260272	Hematologic malignancy	15
-EIF4A1--GNAS	Hematologic malignancy	22
+EIF4A1--GNAS	Hematologic malignancy	19
 EIF4A1--MDK	Hematologic malignancy	4
 EIF4A1--RBM38	Hematologic malignancy	33
 EIF4A1--SAP25	Hematologic malignancy	10
@@ -59,7 +59,7 @@ ENSG00000285976--SYNCRIP	Hematologic malignancy	9
 EP300--ZNF384	Hematologic malignancy	10
 EPS15L1--KLF2	Hematologic malignancy	9
 ETV6--RUNX1	Hematologic malignancy	15
-EWSR1--FLI1	Mesenchymal non-meningothelial tumor	9
+EWSR1--FLI1	Mesenchymal non-meningothelial tumor	8
 FAM131B--BRAF	Low-grade astrocytic tumor	4
 FBRSL1--NCOR2	Hematologic malignancy	6
 FGF12--CCDC50	Low-grade astrocytic tumor	4
@@ -79,13 +79,13 @@ HMGN2--PTMA	Hematologic malignancy	5
 INPP5A--PPP2R2D	Hematologic malignancy	4
 ITM2C--PTMA	Hematologic malignancy	24
 JARID2--ENSG00000285976	Hematologic malignancy	8
-KIAA1549--BRAF	Low-grade astrocytic tumor	187
+KIAA1549--BRAF	Low-grade astrocytic tumor	186
 KLF10--PTMA	Hematologic malignancy	6
 KLF2--PTMA	Hematologic malignancy	4
 KMT2A--AFDN	Hematologic malignancy	6
 KMT2A--AFF1	Hematologic malignancy	9
 KMT2A--ELL	Hematologic malignancy	4
-KMT2A--MLLT1	Hematologic malignancy	8
+KMT2A--MLLT1	Hematologic malignancy	6
 KMT2A--MLLT10	Hematologic malignancy	10
 KMT2A--MLLT3	Hematologic malignancy	12
 LDLRAD4--TGIF1	Hematologic malignancy	6
@@ -102,7 +102,7 @@ METRNL--CBFA2T3	Hematologic malignancy	5
 METRNL--SLC7A5	Hematologic malignancy	4
 MKNK2--DOT1L	Hematologic malignancy	13
 MKNK2--RNF126	Hematologic malignancy	12
-MLLT10--PICALM	Hematologic malignancy	11
+MLLT10--PICALM	Hematologic malignancy	10
 MYB--QKI	Low-grade astrocytic tumor	5
 N4BP2L1--ZMYM2	Hematologic malignancy	4
 NBAS--CYRIA	Embryonal tumor	6
@@ -113,7 +113,7 @@ NFATC1--SLC66A2	Hematologic malignancy	24
 NOL4L--ASXL1	Hematologic malignancy	14
 NOTCH3--BRD4	Hematologic malignancy	5
 NSD1--NUP98	Hematologic malignancy	5
-NUP214--ABL1	Hematologic malignancy	6
+NUP214--ABL1	Hematologic malignancy	5
 NUP98--KDM5A	Hematologic malignancy	5
 NUP98--NSD1	Hematologic malignancy	7
 OAZ1--BCL7A	Hematologic malignancy	6
@@ -124,13 +124,12 @@ OAZ1--PTBP1	Hematologic malignancy	7
 OAZ1--RBM38	Hematologic malignancy	7
 OAZ1--RNF126	Hematologic malignancy	32
 OAZ1--SAP25	Hematologic malignancy	11
-PAX5--AUTS2	Hematologic malignancy	4
 PAX5--ETV6	Hematologic malignancy	5
 PAX5--NOL4L	Hematologic malignancy	6
 PCNT--PTTG1IP	Hematologic malignancy	6
 PCNT--SUMO3	Hematologic malignancy	4
 PER1--EIF5A	Hematologic malignancy	10
-PHACTR3--RBM38	Hematologic malignancy	9
+PHACTR3--RBM38	Hematologic malignancy	8
 PICALM--MLLT10	Hematologic malignancy	11
 PIM3--BRD1	Hematologic malignancy	54
 PIM3--PLXNB2	Hematologic malignancy	4

@@ -332,7 +332,7 @@ putative_driver_fusions_collapsed <- putative_driver_fusions %>%
   ungroup() %>%
   unique()
 
-write.table(putative_driver_fusions,file.path(outputfolder,"fusion-putative-oncogenic.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
+write.table(putative_driver_fusions_collapsed,file.path(outputfolder,"fusion-putative-oncogenic.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
 
 ```
 
