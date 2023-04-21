@@ -129,9 +129,9 @@ methyl_bs_ids_with_subtypes <- metadata %>%
 methyl_no_subtype <- metadata %>% 
   filter(experimental_strategy == "Methylation", 
          !(Kids_First_Biospecimen_ID %in% methyl_bs_ids_with_subtypes$Kids_First_Biospecimen_ID)) %>%
-  mutate(molecular_subtype = NA_character_) %>% 
-  mutate(id = paste(sample_id, composition, sep = "_")) %>%
-  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
+  mutate(id = paste(sample_id, composition, sep = "_")) %>%	 
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, id) %>%
+  dplyr::left_join(methyl_bs_ids_with_subtypes %>% dplyr::select(molecular_subtype, id), by = "id")  
 
 methyl_bs_ids_with_subtypes <- methyl_bs_ids_with_subtypes %>% 
   bind_rows(methyl_no_subtype)
