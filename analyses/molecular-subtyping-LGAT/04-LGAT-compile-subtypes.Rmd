@@ -312,34 +312,17 @@ all_dna_subtype <- bind_rows(nf1_biospecimen,
                          idh_biospecimen,
                          h3_biospecimen,
                          cdkn_biospecimen
-) #%>%
-  #dplyr::rename(Kids_First_Biospecimen_ID_DNA=Kids_First_Biospecimen_ID) %>%
-  # add Kids_First_Biospecimen_ID_RNA to dna subtypes dataframe
-  #left_join(all_lgat_matched,by="Kids_First_Biospecimen_ID_DNA")
+)
 
 all_rna_subtype <- bind_rows(kiaabraf_biospecimen,
                              otherMAPK_fus_biospecimen,
                              rtk_fus_biospecimen,
                              fgfr_fus_biospecimen,
-                             myb_biospecimen) #%>%
- # dplyr::rename(Kids_First_Biospecimen_ID_RNA=Kids_First_Biospecimen_ID) %>%
-  # add Kids_First_Biospecimen_ID_DNA to rna subtypes dataframe
-#  left_join(all_lgat_matched,by="Kids_First_Biospecimen_ID_RNA")
+                             myb_biospecimen)
 
 all_subtype <- bind_rows(all_rna_subtype,
                          all_dna_subtype) %>%
-#  full_join(all_lgat_matched, #by=c("Kids_First_Biospecimen_ID_RNA","Kids_First_Biospecimen_ID_DNA",
- #                                  "sample_id",
-  #                                 "pathology_free_text_diagnosis",
-   #                                "pathology_diagnosis",
-    #                               "Kids_First_Participant_ID")) %>%
-  # lets group because there are some instances where LGAT DNA/RNA have multiple subtypes
   group_by(id) %>%
-#,Kids_First_Participant_ID,
- #          Kids_First_Biospecimen_ID_RNA,
-  #         Kids_First_Biospecimen_ID_DNA,
-   #        pathology_free_text_diagnosis,
-    #       pathology_diagnosis) %>%
   # merging them here with summarise
   summarise(molecular_subtype= toString(unique(molecular_subtype))) %>%
   ungroup() 
