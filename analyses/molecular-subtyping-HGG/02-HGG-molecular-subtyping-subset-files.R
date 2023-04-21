@@ -244,16 +244,16 @@ keep_cols <- c("Chromosome",
                "HGVSp_Short",
                "Exon_Number")
 
-snv_dgd_maf <- data.table::fread(
-  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
-  select = keep_cols,
-  data.table = FALSE)
+#snv_dgd_maf <- data.table::fread(
+#  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+#  select = keep_cols,
+#  data.table = FALSE)
 
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
   select = keep_cols,
-  data.table = FALSE) %>% 
-  bind_rows(snv_dgd_maf)
+  data.table = FALSE) #%>% 
+#  bind_rows(snv_dgd_maf)
 
 snv_consensus_hotspot_maf <- snv_consensus_hotspot_maf %>%
   left_join(select_metadata,
