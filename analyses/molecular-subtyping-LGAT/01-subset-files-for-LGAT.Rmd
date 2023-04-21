@@ -74,7 +74,7 @@ clinical <- read_tsv(file.path(root_dir,
 ```
 
 ### SNV for subtyping 
- - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contained consensus calling plus hotspot rescued for SNV calling - detialed in [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis)). Also include the DGD MAF, `snv-dgd.maf.tsv.gz` for OpenPedCan.
+ - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contained consensus calling plus hotspot rescued for SNV calling - detailed in [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis)). Also include the DGD MAF, `snv-dgd.maf.tsv.gz` for OpenPedCan.
 
 ```{r load-inputs-please-wait}
 
