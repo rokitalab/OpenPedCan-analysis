@@ -133,17 +133,17 @@ keep_cols <- c("Chromosome",
              "HGVSp_Short",
              "Exon_Number")
 # DGD MAF
-snv_dgd_maf <- data.table::fread(
-  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
-                                   select = keep_cols,
-                                   data.table = FALSE) %>%
-  dplyr::filter(!Tumor_Sample_Barcode %in% lgg_epn_specimens) 
+#snv_dgd_maf <- data.table::fread(
+#  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+#                                   select = keep_cols,
+#                                   data.table = FALSE) %>%
+#  dplyr::filter(!Tumor_Sample_Barcode %in% lgg_epn_specimens) 
 # Add DGD MAF to consensus MAF
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
                                    select = keep_cols,
                                    data.table = FALSE) %>%
-  dplyr::bind_rows(snv_dgd_maf) %>%
+#  dplyr::bind_rows(snv_dgd_maf) %>%
   dplyr::filter(!Tumor_Sample_Barcode %in% lgg_epn_specimens)
 
 ```
