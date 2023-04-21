@@ -60,14 +60,12 @@ PBTA	Desmoplastic infantile astrocytoma and ganglioglioma, BRAF V600E	Desmoplast
 PBTA	Desmoplastic infantile astrocytoma and ganglioglioma, To be classified	Desmoplastic infantile astrocytoma and ganglioglioma	Yes	No
 PBTA	Diffuse fibrillary astrocytoma	Diffuse fibrillary astrocytoma	No	No
 PBTA	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
-DGD	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
 PBTA	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 DGD	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Diffuse leptomeningeal glioneuronal tumor,  MAPK	Diffuse leptomeningeal glioneuronal tumor	Yes	No
 PBTA	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	Diffuse leptomeningeal glioneuronal tumor	Yes	No
 DGD	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	Diffuse leptomeningeal glioneuronal tumor	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
-DGD	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysgerminoma	Dysgerminoma	No	No
@@ -159,8 +157,6 @@ DGD	Hepatoblastoma	Hepatoblastoma	No	No
 DGD	Hepatocellular Carcinoma	Hepatocellular Carcinoma	No	No
 TCGA	Hepatocellular Carcinoma	Hepatocellular Carcinoma	No	No
 PBTA	High-grade glioma, IDH-wildtype and H3-wildtype	High-grade glioma	Yes	No
-DGD	High-grade glioma, IDH-mutant	High-grade glioma	Yes	No
-DGD	High-grade glioma, IDH-wildtype and H3-wildtype	High-grade glioma	Yes	No
 PBTA	High-grade glioma, IDH-mutant	High-grade glioma	Yes	No
 PBTA	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma/astrocytoma	No	Yes
 DGD	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma/astrocytoma	No	Yes
