@@ -67,6 +67,7 @@ fusion_summary_df <- read_tsv(file.path(data_dir,
                                         "fusion_summary_embryonal_foi.tsv"))
 arriba <- read_tsv(file.path(data_dir, "fusion-arriba.tsv.gz"))
 starfusion <- read_tsv(file.path(data_dir, "fusion-starfusion.tsv.gz"))
+dgd_fusion <- read_tsv(file.path(data_dir, "fusion-dgd.tsv.gz"))
 
 # Read in the JSON file that contains the strings we'll use to include or
 # exclude samples for subtyping - see 00-embryonal-select-pathology-dx.Rmd
@@ -124,7 +125,13 @@ arriba_ttyh1_fusions <- arriba %>%
 # v12 starfusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
 starfusion %>% filter(str_detect(FusionName, "^TTYH1"), 
                       str_detect(LeftBreakpoint, "^chr19"), 
-                      str_detect(RightBreakpoint, "^chr19")) 
+                      str_detect(RightBreakpoint, "^chr19"))
+
+dgd_fusion
+# v12 DGD fusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
+dgd_fusion %>% filter(str_detect(FusionName, "^TTYH1"),
+                      str_detect(LeftBreakpoint, "^chr19"),
+		      str_detect(RightBreakpoint, "^chr19"))
 
 # keep samples with with at least one break point within 
 # genomic region: `chr19:53,627,063-53,788,978` 
