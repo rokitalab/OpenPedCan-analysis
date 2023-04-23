@@ -127,8 +127,6 @@ EPN_final <- EPN_final %>%
     TRUE ~ molecular_subtype)
     )
 
-table(EPN_final2$molecular_subtype)
-                     
 epn_pfa_samples_assigned <- EPN_final %>%
   filter(molecular_subtype == "EPN, PF A") %>%
   pull(id) %>%
@@ -173,14 +171,12 @@ EPN_subtypes_by_id <- EPN_final_subtyped %>%
 length(unique(EPN_subtypes_by_id$id)) == nrow(EPN_subtypes_by_id)
 
 EPN_subtypes_by_id <- EPN_subtypes_by_id %>%
-  left_join(pbta_histologies[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "id", "sample_id")]) %>%
+  left_join(epn_samples[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "id", "sample_id")]) %>%
   arrange(Kids_First_Biospecimen_ID) %>%
   write_tsv("results/epn_molecular_subtypes.tsv")
 
+# any missing? no
 missing_subtypes <- setdiff(epn_samples$Kids_First_Biospecimen_ID, EPN_subtypes_by_id$Kids_First_Biospecimen_ID)
-epn_samples %>%
-  filter(Kids_First_Biospecimen_ID %in% missing_subtypes) %>%
-  select(Kids_First_Biospecimen_ID, dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score)
 
 ```
 

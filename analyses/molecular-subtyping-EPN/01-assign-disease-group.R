@@ -99,11 +99,9 @@ methyl_subtyped = EP %>%
 # low confidence methylation classification subtypes
 # replace same "patient_id-sample_id" in low confidence set that is  
 # in high confidence set with high confidence classification subtype
-methyl_not_subtyped = EP %>%
+methyl_not_subtyped <- EP %>%
   dplyr::filter(experimental_strategy == "Methylation", 
-                !is.na(pathology_diagnosis),
                 cohort %in% c("PBTA", "DGD"),
-                grepl("EPN_", dkfz_v12_methylation_subclass),
                 !Kids_First_Biospecimen_ID %in% unique(methyl_subtyped$Kids_First_Biospecimen_ID_Methyl)) %>%
   dplyr::left_join(methyl_subtyped %>% dplyr::select(Kids_First_Participant_ID, sample_id, id, molecular_subtype_methyl),
                    by = c("Kids_First_Participant_ID", "sample_id", "id")) %>% 
