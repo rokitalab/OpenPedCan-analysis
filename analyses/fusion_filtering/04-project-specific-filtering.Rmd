@@ -1,6 +1,6 @@
 ---
 title: "Project specific filtering"
-author: "K S Gaonkar (D3B); Jaclyn Taroni (CCDL)"
+author: "K S Gaonkar (D3B); Jaclyn Taroni (CCDL); Kelsey Keith (DBHI)"
 output: html_notebook
 params:
   histology:
@@ -89,13 +89,13 @@ fusion_calls<-QCGeneFiltered_filtFusion %>% mutate(FusionName=rm_between(.data$F
 
 # get histology file
 if ( params$base_run ==0 ){
-clinical<-read_tsv(file.path(root_dir, params$histology))
+clinical<-read_tsv(file.path(root_dir, params$histology), guess_max = 100000)
 # get grouping column id
 group<-params$group
 # subset to group
 clinical<-clinical[,c("Kids_First_Biospecimen_ID","Kids_First_Participant_ID",group)]
 } else {
-clinical<-read_tsv(file.path(root_dir, params$base_histology))
+clinical<-read_tsv(file.path(root_dir, params$base_histology), guess_max = 100000)
 # get grouping column id
 group<-params$group_base
 # subset to group
