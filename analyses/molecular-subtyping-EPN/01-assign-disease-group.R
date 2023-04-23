@@ -29,6 +29,25 @@ EP = pbta_histologies %>%
   filter(pathology_diagnosis =="Ependymoma") %>%
   mutate(id = paste(sample_id, sample_type, tumor_descriptor, sep = "_"))
 
+
+# update CNS region
+cns_region <- EP %>%
+  select(id, primary_site, CNS_region) %>%
+  group_by(id, primary_site) %>%
+  summarise(CNS_region = toString(unique(CNS_region))) %>%
+  ungroup() %>%
+  mutate(CNS_region = gsub("NA, |, NA", "", CNS_region),
+         CNS_region = case_when(primary_site == "Other locations NOS" ~ "Other",
+                                primary_site == "Ventricles" ~ "Ventricles",
+                                primary_site %in% c("Frontal Lobe", "Parietal Lobe") ~ "Hemispheric",
+                                primary_site == "Meninges/Dura;Ventricles" ~ "Mixed",
+                                CNS_region == "NA" ~ NA_character_,
+                                TRUE ~ CNS_region))
+
+EP <- EP %>%
+  select(-CNS_region) %>%
+  left_join(cns_region)
+
 # filter for RNA samples
 EP_rnaseq_samples = EP %>%
   filter(experimental_strategy == "RNA-Seq" | (experimental_strategy == "Targeted Sequencing"
@@ -70,7 +89,12 @@ methyl_subtyped = EP %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, id, primary_site, CNS_region, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
-  dplyr::distinct()
+  dplyr::distinct() %>%
+  # group these
+  group_by(Kids_First_Participant_ID, sample_id, id, primary_site, CNS_region) %>%
+  summarise(Kids_First_Biospecimen_ID_Methyl = toString(unique(Kids_First_Biospecimen_ID_Methyl)),
+            molecular_subtype_methyl = toString(unique(molecular_subtype_methyl))) %>%
+  ungroup()
 
 # low confidence methylation classification subtypes
 # replace same "patient_id-sample_id" in low confidence set that is  
@@ -85,7 +109,14 @@ methyl_not_subtyped = EP %>%
                    by = c("Kids_First_Participant_ID", "sample_id", "id")) %>% 
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, id, primary_site, CNS_region, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
-  dplyr::distinct()
+  dplyr::distinct() %>%
+  # group these
+  group_by(Kids_First_Participant_ID, sample_id, id, primary_site, CNS_region) %>%
+  summarise(Kids_First_Biospecimen_ID_Methyl = toString(unique(Kids_First_Biospecimen_ID_Methyl)),
+            molecular_subtype_methyl = toString(unique(molecular_subtype_methyl))) %>%
+  ungroup() %>%
+  mutate(molecular_subtype_methyl = case_when(molecular_subtype_methyl == "NA" ~ NA_character_,
+                                              TRUE ~ molecular_subtype_methyl))
 
 # merge methyl
 methyl_samples = dplyr::bind_rows(methyl_subtyped, methyl_not_subtyped)
@@ -94,8 +125,8 @@ methyl_samples = dplyr::bind_rows(methyl_subtyped, methyl_not_subtyped)
 EP_rnaseq_WGS_methyl = EP_rnaseq_samples %>%
   dplyr::full_join(EP_rna_panel_samples, by = c("sample_id", "id", "Kids_First_Participant_ID","primary_site", "CNS_region")) %>% 
   dplyr::full_join(WGS_dnaseqsamples, by = c("sample_id", "id", "Kids_First_Participant_ID","primary_site", "CNS_region")) %>% 
-  dplyr::full_join(methyl_samples, by = c("sample_id", "id", "Kids_First_Participant_ID","primary_site", "CNS_region"))
-  
+  dplyr::full_join(methyl_samples, by = c("sample_id", "id", "Kids_First_Participant_ID","primary_site", "CNS_region")) 
+
 
 # add disease group (supra/infra category) inferred from primary_site
 EP_rnaseq_WGS_methyl <- EP_rnaseq_WGS_methyl %>%
