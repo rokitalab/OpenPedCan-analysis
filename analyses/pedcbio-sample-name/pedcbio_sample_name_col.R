@@ -10,26 +10,52 @@ suppressPackageStartupMessages({
 
 #### Parse command line options ------------------------------------------------
 option_list <- list(
-  make_option(c("-i","--hist_dir"),type="character",
-              help="input directory for the "))
-opt <- parse_args(OptionParser(option_list=option_list,add_help_option = FALSE))
-hist_dir <- opt$hist_dir
+  make_option(c("-i","--hist_file"),type="character",
+              help="Location of histology file to use"),
+  make_option(c("-n","--names"),type="character",
+              help="File from D3b Warehouse export with existing cBio sample names. Must be csv, double quoted")
+    )
+opt <- parse_args(OptionParser(option_list=option_list))
+hist_file <- opt$hist_file
+cbio_names_file = opt$names
 
 ### Define directories
-root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
-data_dir <- file.path(root_dir, "data")
-analysis_dir <- file.path(root_dir, "analyses", "pedcbio-sample-name")
-input_dir <- file.path(analysis_dir, "input")
 
-results_dir <- file.path(analysis_dir, "results")
-if(!dir.exists(results_dir)){
-  dir.create(results_dir)
+get_root_dir <- function(x){
+    tryCatch(
+        expr = {
+            rprojroot::find_root(rprojroot::has_dir(".git"))
+        },
+        error = function(e){
+            message('Likely not in git project, using cwd')
+            return (NULL)
+        }
+    )    
 }
-
+# if in a root dir, set up like typical openpedcan, if not, run as standalone
+root_dir = get_root_dir()
+if (!is.null(root_dir)){
+  data_dir <- file.path(root_dir, "data")
+  analysis_dir <- file.path(root_dir, "analyses", "pedcbio-sample-name")
+  input_dir <- file.path(analysis_dir, "input")
+  results_dir <- file.path(analysis_dir, "results")
+  if(!dir.exists(results_dir)){
+    dir.create(results_dir)
+  }
+  files_list <- list.files(input_dir)
+  result_file <- file.path(results_dir, "histologies-formatted-id-added.tsv")
+}else{
+  files_list <- c(basename(cbio_names_file))
+  input_dir = dirname(cbio_names_file)
+  result_file <- "histologies-formatted-id-added.tsv"
+}
+cbio_names_list <- lapply(files_list, function(cbio_names){
+  cbio_names <- readr::read_csv(file.path(input_dir, cbio_names))
+})
 ### Read in files
 # histology file 
-histology_df <- readr::read_tsv(file.path(hist_dir, "histologies.tsv"), guess_max = 100000)
-
+histology_df <- readr::read_tsv(hist_file, guess_max = 100000)
+message("Read histologies file")
 # tmp update for broad histology bug, to be fixed in v11
 histology_df <- histology_df %>%
   mutate(broad_histology = ifelse(broad_histology == "Hematologic malignancies", 
@@ -45,23 +71,16 @@ histology_df <- histology_df %>%
          # for remaining without a harm dx, use cancer group
          is.na(harmonized_diagnosis) ~ cancer_group, 
            TRUE ~ as.character(harmonized_diagnosis)))
-
+message("Ran bug fix")
 filled_harm_dx <- histology_df %>%
   filter(!is.na(harmonized_diagnosis)) # 32652
 
 table(histology_df$cohort) # 17382 gtex
 table(histology_df$sample_type) # 15270 tumor 
 
-# read in all the pedcbio files
-cbio_names_list <- list.files(input_dir)
-
-files_list <- lapply(cbio_names_list, function(x){
-  x <- readr::read_csv(file.path(input_dir, x))
-})
-
 
 ### Update the ID for those samples if available 
-formatted_specimens_list <- lapply(files_list, function(x){
+formatted_specimens_list <- lapply(cbio_names_list, function(x){
   
   # format them and select relevant columns
   formatted <- x %>% 
@@ -70,7 +89,8 @@ formatted_specimens_list <- lapply(files_list, function(x){
     dplyr::mutate(Kids_First_Biospecimen_ID = strsplit(specimen_id, ",")) %>% 
     tidyr::unnest(Kids_First_Biospecimen_ID) %>%
     dplyr::select(Kids_First_Biospecimen_ID, formatted_sample_id)
-  
+
+message("Formatted input sample IDs")
   # add those to histology file
   histology_formatted_added <- histology_df %>%
     dplyr::filter(Kids_First_Biospecimen_ID %in% formatted$Kids_First_Biospecimen_ID) %>%
@@ -78,7 +98,7 @@ formatted_specimens_list <- lapply(files_list, function(x){
   
   return(histology_formatted_added)
 })
-
+message("Added existing sample IDs to histologies")
 # get the combined data
 combined_histology_formatted_added <- do.call("rbind", formatted_specimens_list)
 
@@ -88,7 +108,7 @@ combined_histology_formatted_added <- do.call("rbind", formatted_specimens_list)
 histology_df_no_format_id <- histology_df %>%
   dplyr::filter(!Kids_First_Biospecimen_ID %in% combined_histology_formatted_added$Kids_First_Biospecimen_ID)
 
-
+message("Collated samples missing a cBio ID")
 #### Handle each cohort at a time - start with PBTA
 # get all sample IDs in the PBTA cohort
 sample_ids_pbta <- histology_df_no_format_id %>% 
@@ -98,7 +118,7 @@ sample_ids_pbta <- histology_df_no_format_id %>%
 
 # find the samples that need additional `tie-breaker`
 specimens_id_need_tiebreak <- c()
-
+message("Tie break PBTA")
 for (i in 1:length(sample_ids_pbta)){
   # deal with one sample at a time
   sample_id_of_interest <- sample_ids_pbta[i]
@@ -131,6 +151,7 @@ pbta_add_tiebreak <- pbta_add_tiebreak %>%
 
 stopifnot(nrow(pbta_add_tiebreak) != unique(pbta_add_tiebreak$formatted_sample_id))
 
+message("Tie break GTEX")
 ### Generate pedcbio ID for GTEx dataset 
 # The format of the sample ID is GTEX-[donor ID]-[tissue site ID]-SM-[aliquot ID].
 # The donor ID (e.g. GTEX-14753) should be used to link between the various RNA-seq and genotype samples that come from the same donor.
@@ -153,7 +174,7 @@ participant_ids_target <- histology_df_no_format_id %>%
 
 # find the samples that need additional `tie-breaker`
 specimens_id_need_tiebreak <- c()
-
+message("Tie break TARGET")
 for (i in 1:length(participant_ids_target)){
   # deal with one sample at a time
   participant_of_interest <- participant_ids_target[i]
@@ -193,7 +214,7 @@ participant_ids_tcga <- histology_df_no_format_id %>%
   dplyr::filter(cohort == "TCGA") %>% 
   pull(Kids_First_Participant_ID) %>% 
   unique()
-
+message("Tie break TCGA")
 # find the samples that need additional `tie-breaker`
 specimens_id_need_tiebreak <- c()
 
@@ -234,7 +255,7 @@ all_tiebreaks <- bind_rows(combined_histology_formatted_added,
                            gtex_add_tiebreak,
                            target_add_tiebreak,
                            tcga_add_tiebreak)
-
+message("FINALIZE NAMES")
 # for samples no need for tie break - use `sample_id` for PBTA and DGD, and participant id for the rest
 no_need_for_tiebreaks <- histology_df %>%
   dplyr::filter(!Kids_First_Biospecimen_ID %in% all_tiebreaks$Kids_First_Biospecimen_ID) %>%
@@ -249,7 +270,4 @@ histology_all_fixed <- bind_rows(all_tiebreaks, no_need_for_tiebreaks)
 
 # write out the results
 histology_all_fixed %>% 
-  readr::write_tsv(file.path(results_dir, "histologies-formatted-id-added.tsv"))
-
-
-
+  readr::write_tsv(result_file)
