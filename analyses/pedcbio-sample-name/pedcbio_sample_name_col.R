@@ -13,7 +13,9 @@ option_list <- list(
   make_option(c("-i","--hist_file"),type="character",
               help="Location of histology file to use"),
   make_option(c("-n","--names"),type="character",
-              help="File from D3b Warehouse export with existing cBio sample names. Must be csv, double quoted")
+              help="File from D3b Warehouse export with existing cBio sample names. Must be csv, double quoted"),
+  make_option(c("-b","--blacklist_strategy"),type="character",
+              help="csv string of experimental_strategy to leave out")
     )
 opt <- parse_args(OptionParser(option_list=option_list))
 hist_file <- opt$hist_file
@@ -56,6 +58,14 @@ cbio_names_list <- lapply(files_list, function(cbio_names){
 # histology file 
 histology_df <- readr::read_tsv(hist_file, guess_max = 100000)
 message("Read histologies file")
+if (!is.null(opt$blacklist_strategy)){
+  drop_list <- strsplit(opt$blacklist_strategy, split = ",")
+  for (drop in drop_list){
+    histology_df <- histology_df %>%
+    dplyr::filter(experimental_strategy != drop)
+    message(paste0("Dropping ", drop," as specified"))
+  }
+}
 # tmp update for broad histology bug, to be fixed in v11
 histology_df <- histology_df %>%
   mutate(broad_histology = ifelse(broad_histology == "Hematologic malignancies", 

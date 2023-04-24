@@ -31,8 +31,8 @@ For DGD, use `aliquot_id`, but remove test name
 
 Usage:
 ```sh
-# In repo:
-Rscript --vanilla pedcbio-sample-name/pedcbio_sample_name_col.R -h path-to-histolgies-file.tsv"
+# In repo (if a different hist file needed, you can still specify another path):
+Rscript --vanilla pedcbio-sample-name/pedcbio_sample_name_col.R -i ../molecular-subtyping-integrate/results/histologies.tsv"
 
 ```
 or
