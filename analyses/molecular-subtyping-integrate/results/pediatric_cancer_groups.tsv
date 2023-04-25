@@ -6,8 +6,8 @@ Acute Myeloid Leukemia	Progressive	1
 Acute Myeloid Leukemia	Recurrence	136
 Acute Myeloid Leukemia	Second Malignancy	2
 Adamantinomatous Craniopharyngioma	Deceased	2
-Adamantinomatous Craniopharyngioma	Initial CNS Tumor	155
-Adamantinomatous Craniopharyngioma	Progressive	36
+Adamantinomatous Craniopharyngioma	Initial CNS Tumor	154
+Adamantinomatous Craniopharyngioma	Progressive	35
 Adamantinomatous Craniopharyngioma	Recurrence	31
 Adenocarcinoma	Primary Tumor	2
 Anaplastic Large Cell Lymphoma	Primary Tumor	2
@@ -49,14 +49,14 @@ Chronic Myelogenous Leukemia	Primary Tumor	2
 CIC-DUX4 Sarcoma	Primary Tumor	1
 Clear cell sarcoma of the kidney	Primary Tumor	24
 CNS Burkitt's lymphoma	Initial CNS Tumor	3
-CNS Embryonal tumor	Initial CNS Tumor	26
-CNS Embryonal tumor	Progressive	6
+CNS Embryonal tumor	Initial CNS Tumor	27
+CNS Embryonal tumor	Progressive	7
 CNS Embryonal tumor	Recurrence	8
 CNS Melanoma	Initial CNS Tumor	1
-CNS neuroblastoma	Initial CNS Tumor	7
+CNS neuroblastoma	Initial CNS Tumor	8
 CNS neuroblastoma	Recurrence	2
-Craniopharyngioma	Initial CNS Tumor	47
-Craniopharyngioma	Progressive	9
+Craniopharyngioma	Initial CNS Tumor	48
+Craniopharyngioma	Progressive	10
 Craniopharyngioma	Recurrence	1
 Desmoplastic infantile astrocytoma and ganglioglioma	Initial CNS Tumor	6
 Desmoplastic infantile astrocytoma and ganglioglioma	Progressive	6
@@ -81,8 +81,8 @@ Dysembryoplastic neuroepithelial tumor	Progressive	22
 Dysembryoplastic neuroepithelial tumor	Recurrence	10
 Dysgerminoma	Primary Tumor	1
 Embryonal tumor	Deceased	1
-Embryonal tumor	Initial CNS Tumor	5
-Embryonal tumor	Progressive	4
+Embryonal tumor	Initial CNS Tumor	3
+Embryonal tumor	Progressive	3
 Embryonal tumor	Recurrence	3
 Embryonal Tumor NOS	Primary Tumor	1
 Embryonal tumor with multilayer rosettes	Deceased	2
@@ -158,8 +158,8 @@ Langerhans Cell histiocytosis	Unavailable	1
 Low-grade glioma	Deceased	30
 Low-grade glioma	Initial CNS Tumor	978
 Low-grade glioma	Primary Tumor	3
-Low-grade glioma	Progressive	193
-Low-grade glioma	Recurrence	69
+Low-grade glioma	Progressive	192
+Low-grade glioma	Recurrence	70
 Low-grade glioma	Second Malignancy	7
 Malignant peripheral nerve sheath tumor	Deceased	2
 Malignant peripheral nerve sheath tumor	Initial CNS Tumor	7
