@@ -18,7 +18,8 @@ output_file <- file.path(root_dir,
 # as we identified in 00-v17-embryonal-select-pathology-dx.Rmd are:
 path_dx_terms<- c(
   "Supratentorial or Spinal Cord PNET",
-  "Embryonal Tumor with Multilayered Rosettes"
+  "Embryonal Tumor with Multilayered Rosettes (ETMR)",
+  "Embryonal Tumor NOS"
 )
 
 
@@ -27,8 +28,14 @@ free_text_dx_terms <- c(
   "embryonal tumor, nos, congenital type",
   "ependymoblastoma",
   "medulloepithelioma",
-  "medullooepithelioma" # It was noted that this misspelling was included in the `pathology_free_text_diagnosis` column of the histologies file so we will add it to the JSON file [per this comment](https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/788#issuecomment-700717514)
-)
+  "medullooepithelioma", # It was noted that this misspelling was included in the `pathology_free_text_diagnosis` column of the histologies file so we will add it to the JSON file [per this comment](https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/788#issuecomment-700717514)
+  "embryonal neoplasm",
+  "embryonal tumor, not otherwise specified, who grade iv",
+  "cns embryonal tumor, nos",
+  "cns embryonal tumor, nos, wnt-activated, who grade iv",
+  "embryonal neoplasm who grade iv",
+  "embryonal tumor, not otherwise specified, who grade iv",
+  "high grade embryonal tumor with rhabdoid features")
 
 terms_list <- list(include_path_dx = path_dx_terms,
                    include_free_text = free_text_dx_terms)
