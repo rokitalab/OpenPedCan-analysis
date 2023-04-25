@@ -61,8 +61,7 @@ message("Read histologies file")
 if (!is.null(opt$blacklist_strategy)){
   drop_list <- strsplit(opt$blacklist_strategy, split = ",")
   for (drop in drop_list){
-    histology_df <- histology_df %>%
-    dplyr::filter(experimental_strategy != drop)
+    histology_df <- dplyr::filter(histology_df, experimental_strategy != drop)
     message(paste0("Dropping ", drop," as specified"))
   }
 }
