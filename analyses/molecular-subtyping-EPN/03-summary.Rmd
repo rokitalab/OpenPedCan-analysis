@@ -4,7 +4,7 @@ output:
   html_notebook:
     toc: TRUE
     toc_float: TRUE
-author: Komal S. Rathi (adapted from python notebook by Teja Koganti)
+author: Komal S. Rathi (adapted from python notebook by Teja Koganti), Ryan Corbett
 date: 2022
 ---
 
@@ -21,34 +21,10 @@ Rscript -e "rmarkdown::render('analyses/molecular-subtyping-EPN/03-summary.Rmd',
 
 ### Libraries and functions
 
-```{r include = FALSE}
-knitr::opts_chunk$set(comment = NA)
-getOption(x = 'DT.warn.size', default = FALSE)
-```
-
 ```{r}
 suppressPackageStartupMessages({
   library(tidyverse)
-  library(DT)
 })
-```
-
-```{r dt_function, echo = FALSE}
-# custom datatable function
-viewDataTable <- function(dat){
-  DT::datatable(dat,
-                rownames = FALSE,
-                filter = "bottom",
-                class = 'cell-border stripe',
-                options = list(pageLength = 5,
-                               searchHighlight = TRUE,
-                               scrollX = TRUE,
-                               dom = 'tpi',
-                               initComplete = JS("function(settings, json) {",
-                                            "$(this.api().table().header()).css({'background-color':
-                                            '#004467', 'color': '#fff'});","}"))
-                )
-}
 ```
 
 ### Directories
@@ -61,135 +37,112 @@ data_dir <- file.path(root_dir, "data")
 ### Read in relevant files
 
 ```{r message=FALSE}
-# Reading in table from results folder without the subgroup column
-EPN_final <- read_tsv("results/EPN_all_data.tsv")
-EPN_final["subgroup"] = "EPN, To be classified"
+# Read in histologies file
+epn_samples <- read_tsv(file.path(data_dir, "histologies-base.tsv"), guess_max = 100000) %>%
+  filter(pathology_diagnosis =="Ependymoma") %>%
+  mutate(id = paste(sample_id, sample_type, tumor_descriptor, sep = "_"))
+
+# Reading in table from results folder without the molecular_subtype column
+EPN_final <- read_tsv("results/EPN_all_data.tsv") %>%
+  mutate(molecular_subtype = case_when((is.na(Kids_First_Biospecimen_ID_DNA) & is.na(Kids_First_Biospecimen_ID_RNA) & is.na(Kids_First_Biospecimen_ID_RNA_panel) &                                  !is.na(Kids_First_Biospecimen_ID_Methyl) & is.na(molecular_subtype_methyl)) ~ "EPN, To be classified",
+                                       TRUE ~ NA_character_))
 ```
 
 ### Spinal prioritization
 
-We will first prioritize samples from spinal cord to be assigned to "EPN, SP" or "EPN, SP-MYCN" (if MYCN amplification also observed) as described in [reference]. These samples will not be considered for further subgrouping. 
+We will first prioritize samples from spinal cord to be assigned to "EPN, SP" or "EPN, SP-MYCN" (if MYCN amplification also observed) as described in [reference]. These samples will not be considered for further molecular_subtypeing. 
 
 ```{r}
 EPN_final <- EPN_final %>%
-  mutate(subgroup = ifelse(disease_group == "spinal" & grepl("amplification", consensus_focal_CN_MYCN), "EPN, SP-MYCN", subgroup))
+  mutate(molecular_subtype = ifelse(disease_group == "spinal" & grepl("amplification", consensus_focal_CN_MYCN), "EPN, SP-MYCN", molecular_subtype))
 sp_mycn_samples_assigned <- EPN_final %>%
-  filter(subgroup == "EPN, SP-MYCN") %>%
-  pull(sample_id)
+  filter(molecular_subtype == "EPN, SP-MYCN") %>%
+  pull(id) %>%
+  unique()
 print(paste("Number of samples assigned for SP-MYCN:", length(sp_mycn_samples_assigned)))
-```
-
-### SP subgroup table
-
-```{r}
-viewDataTable(EPN_final %>%
-                filter(subgroup == "EPN, SP-MYCN"))
 ```
 
 ### Fusion prioritization
 
-We will next prioritize ZFTA (formaerly C11orf95) and YAP1 fusions based on evidence for these subgroups from Pajtler. et al. Fig.6
+We will next prioritize ZFTA (formaerly C11orf95) and YAP1 fusions based on evidence for these molecular_subtypes from Pajtler. et al. Fig.6
 
 ### ZFTA gene fusions
 
 1. Here we are prioritizing ZFTA (formerly C11orf95) fusions, if any of the ZFTA fusions are present for a sample, it is assigned "EPN, ST ZFTA"
-2. These samples will not be considered for further subgrouping
+2. These samples will not be considered for further molecular_subtypeing
 
 ```{r}
-st_epn_zfta_fusions = c("ZFTA--RELA", "ZFTA--MAML2")
-df <- EPN_final[,st_epn_zfta_fusions]
-df[] <- lapply(df, as.logical)
-EPN_final$tmp <- apply(df, MARGIN = 1, any)
-EPN_final$tmp[is.na(EPN_final$tmp)] <- FALSE
 EPN_final <- EPN_final %>%
-  mutate(subgroup = ifelse(subgroup == "EPN, To be classified" & tmp == TRUE, "EPN, ST ZFTA", subgroup)) %>%
-  dplyr::select(-c(tmp))
+  mutate(molecular_subtype = case_when(`ZFTA--RELA` == 1 | `ZFTA--MAML2` == 1 ~ "EPN, ST ZFTA",
+                                      TRUE ~ molecular_subtype),
+         # if any NA mol subtype, then add methyl subtype
+         molecular_subtype = case_when(is.na(molecular_subtype) & molecular_subtype_methyl == "EPN, ST ZFTA" ~ "EPN, ST ZFTA",
+                                              TRUE ~ molecular_subtype))
 zfta_samples_assigned <- EPN_final %>%
-  filter(subgroup == "EPN, ST ZFTA") %>%
-  pull(sample_id)
+  filter(molecular_subtype == "EPN, ST ZFTA") %>%
+  pull(id) %>%
+  unique()
 print(paste("Number of samples assigned for ZFTA:", length(zfta_samples_assigned)))
 ```
 
-### ZFTA subgroup table
-
-```{r}
-viewDataTable(EPN_final %>%
-                filter(subgroup == "EPN, ST ZFTA"))
-```
 
 ### YAP1 gene fusions
 
-1. Here we are prioritizing YAP1 fusions, if any of the YAP1 fusions are present for a sample that has not been subgrouped, it is assigned "EPN, ST YAP1"
-2. These samples will not be considered for further subgrouping
+1. Here we are prioritizing YAP1 fusions, if any of the YAP1 fusions are present for a sample that has not been molecular_subtypeed, it is assigned "EPN, ST YAP1"
+2. These samples will not be considered for further molecular_subtypeing
 
 ```{r}
-st_epn_yap1_fusions = c("YAP1--MAMLD1", "YAP1--MAML2", "YAP1--FAM118B")
-df <- EPN_final[,st_epn_yap1_fusions]
-df[] <- lapply(df, as.logical)
-EPN_final$tmp <- apply(df, MARGIN = 1, any)
-EPN_final$tmp[is.na(EPN_final$tmp)] <- FALSE
 EPN_final <- EPN_final %>%
-  mutate(subgroup = ifelse(subgroup == "EPN, To be classified" & tmp == TRUE, "EPN, ST YAP1", subgroup)) %>%
-  dplyr::select(-c(tmp))
+  mutate(molecular_subtype = case_when(`YAP1--MAMLD1` == 1 | `YAP1--MAML2` == 1 | `YAP1--FAM118B` == 1 ~ "EPN, ST YAP1",
+                                       TRUE ~ molecular_subtype),
+         # if any NA mol subtype, then add methyl subtype
+         molecular_subtype = case_when(is.na(molecular_subtype) & molecular_subtype_methyl == "EPN, ST YAP1" ~ "EPN, ST YAP1",
+                                              TRUE ~ molecular_subtype))
+
 yap1_samples_assigned <- EPN_final %>%
-  filter(subgroup == "EPN, ST YAP1") %>%
-  pull(sample_id)
+  filter(molecular_subtype == "EPN, ST YAP1") %>%
+  pull(id) %>%
+  unique()
 print(paste("Number of samples assigned for YAP1:", length(yap1_samples_assigned)))
 ```
-### YAP1 subgroup table
 
-```{r}
-viewDataTable(EPN_final %>%
-                filter(subgroup == "EPN, ST YAP1"))
-```
+### PT_EPN molecular_subtypes
 
-### PT_EPN subgroups
-
-1. Here we will assign the PT_EPN_A and PT_EPN_B subgroups to the sample that have not been subgrouped before. 
-2. Based on Pajtler et al. fig. 4, over expression of EZHIP (formerly CXorf67) and TKTL1 along with 1q gain is seen under PT_EPN_A subgroup
-
-3. Similarly GPBP1 and IFT46 shows over expression along with 6p and 6q loss in PT_EPN_B subgroup
+1. Here we will assign the PT_EPN_A and PT_EPN_B molecular_subtypes to the sample that have not been molecular_subtyped before. 
+2. Based on Pajtler et al. fig. 4, over expression of EZHIP (formerly CXorf67) and TKTL1 along with 1q gain is seen under PT_EPN_A molecular_subtype
+3. Similarly GPBP1 and IFT46 shows over expression along with 6p and 6q loss in PT_EPN_B molecular_subtype
 
 
 ```{r}
 EPN_final <- EPN_final %>%
-  mutate(subgroup = case_when(
-    subgroup == "EPN, To be classified" & `1q_gain` > 0 & TKTL1_expr_zscore > 3 ~  "EPN, PF A",
-    subgroup == "EPN, To be classified" & EZHIP_expr_zscore > 3 ~ "EPN, PF A",
-    subgroup == "EPN, To be classified"  & CNS_region == "Posterior fossa" & 
+  mutate(molecular_subtype = case_when(
+    is.na(molecular_subtype) & `1q_gain` > 0 & TKTL1_expr_zscore > 3 ~  "EPN, PF A",
+    is.na(molecular_subtype) & EZHIP_expr_zscore > 3 ~ "EPN, PF A",
+    is.na(molecular_subtype) & CNS_region == "Posterior fossa" & 
       (EPN_final$`H3-3A_HGVSp_Short` == "p.K28M" | EPN_final$`H3-3B_HGVSp_Short` == "p.K28M" | H3C2_HGVSp_Short == "p.K28M" | 
          H3C3_HGVSp_Short == "p.K28M" | H3C14_HGVSp_Short == "p.K28M") ~ "EPN, PF A",
-    subgroup == "EPN, To be classified" & (`6q_loss` > 0 | `6p_loss` > 0) & 
+    is.na(molecular_subtype) & (`6q_loss` > 0 | `6p_loss` > 0) & 
       (GPBP1_expr_zscore > 3 | IFT46_expr_zscore > 3) ~ "EPN, PF B",
-    subgroup == "EPN, To be classified" & !is.na(molecular_subtype_methyl) &
-      (molecular_subtype_methyl != "EPN, To be classified") ~ molecular_subtype_methyl,
-    TRUE ~ subgroup)
+    is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    TRUE ~ molecular_subtype)
     )
-                     
+
 epn_pfa_samples_assigned <- EPN_final %>%
-  filter(subgroup == "EPN, PF A") %>%
-  pull(sample_id)
+  filter(molecular_subtype == "EPN, PF A") %>%
+  pull(id) %>%
+  unique()
 print(paste("Number of samples assigned for PT_EPN_A:", length(epn_pfa_samples_assigned)))
 
 epn_pfb_samples_assigned <- EPN_final %>%
-  filter(subgroup == "EPN, PF B") %>%
-  pull(sample_id)
+  filter(molecular_subtype == "EPN, PF B") %>%
+  pull(id) %>%
+  unique()
 print(paste("Number of samples assigned for PT_EPN_B:", length(epn_pfb_samples_assigned)))
-```
-
-### PT_EPN table
-
-```{r}
-viewDataTable(EPN_final %>%
-                filter(subgroup %in% c("EPN, PF A", "EPN, PF B")))
 ```
 
 ### Adding `SV_instability` and `CNV_instability` columns to the final dataframe
 
 ```{r}
-# print dataframe without the columns
-viewDataTable(EPN_final %>% head())
-
 # add columns
 sv_iqr <- IQR(EPN_final$`breaks_density-chromosomal_instability_SV`, na.rm = T)
 sv_median <- median(EPN_final$`breaks_density-chromosomal_instability_SV`, na.rm = T)
@@ -201,23 +154,38 @@ EPN_final$CNV_instability <- sapply(EPN_final$`breaks_density-chromosomal_instab
                                      FUN = function(x) x-cnv_median/cnv_iqr)
 
 # sort final table
-EPN_final <- EPN_final %>% 
-  mutate(subgroup = ifelse(is.na(subgroup), "N/A", subgroup)) %>%
-  arrange(Kids_First_Participant_ID, sample_id)
+EPN_final_subtyped <- EPN_final %>% 
+  mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "EPN, To be classified",
+                                             TRUE ~ molecular_subtype)) %>%
+  arrange(Kids_First_Participant_ID, id)
 
 # write out final file 
-write_tsv(EPN_final, "results/EPN_all_data_withsubgroup.tsv")
+write_tsv(EPN_final_subtyped, "results/EPN_all_data_withmolecular_subtype.tsv")
 
-# print full dataframe after adding the columns
-viewDataTable(EPN_final)
+# generate easy table for compile
+EPN_subtypes_by_id <- EPN_final_subtyped %>%
+  select(id, molecular_subtype, molecular_subtype_methyl) %>%
+  unique()
+
+# do we have 1 subtype per id?
+length(unique(EPN_subtypes_by_id$id)) == nrow(EPN_subtypes_by_id)
+
+EPN_subtypes_by_id <- EPN_subtypes_by_id %>%
+  left_join(epn_samples[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "id", "sample_id")]) %>%
+  arrange(Kids_First_Biospecimen_ID) %>%
+  write_tsv("results/epn_molecular_subtypes.tsv")
+
+# any missing? no
+missing_subtypes <- setdiff(epn_samples$Kids_First_Biospecimen_ID, EPN_subtypes_by_id$Kids_First_Biospecimen_ID)
+
 ```
 
 ### Summary of final subtype counts
 
 ```{r}
-viewDataTable(EPN_final %>%
-                group_by(subgroup) %>%
-                summarise(n = n()))
+EPN_subtypes_by_id %>%
+  group_by(molecular_subtype) %>%
+  summarise(n = n())
 
 ```
 

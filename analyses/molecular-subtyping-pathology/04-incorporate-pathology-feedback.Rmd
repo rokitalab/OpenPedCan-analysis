@@ -496,7 +496,67 @@ compiled_df <- compiled_df %>%
 
 ```
 
+### PT `PT_7HGY5W67`
+This patient subtyped as HGNET-MN1 via methylation, but GNT otherwise. Needs pathology review, keeping path dx for now.
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_7HGY5W67")
 
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      sample_id == "7316-6044" ~ "Glial-neuronal tumor, wildtype",
+      TRUE ~ integrated_diagnosis
+    ),
+    short_histology = case_when(
+      sample_id == "7316-6044" ~ "GNT",
+      TRUE ~ short_histology
+    ),
+    broad_histology = case_when(
+      sample_id == "7316-6044" ~ "Neuronal and mixed neuronal-glial tumor",
+      TRUE ~ broad_histology
+    ),
+    molecular_subtype = case_when(
+      sample_id == "7316-6044" ~ "GNT, wildtype",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      sample_id == "7316-6044" ~ "Updated via OpenPedCan subtyping",
+      TRUE ~ Notes
+    )
+  )
+```
+
+### PT `PT_45E5JA1P`
+This patient has path free text high grade glial neoplasm, so looks to be mistakenly GNT as path dx. Combined with H3 subtype, make this DMG.
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_45E5JA1P")
+
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      sample_id == "7316-4463" ~ "Diffuse midline glioma, H3 K28-mutant",
+      TRUE ~ integrated_diagnosis
+    ),
+    short_histology = case_when(
+      sample_id == "7316-4463" ~ "HGAT",
+      TRUE ~ short_histology
+    ),
+    broad_histology = case_when(
+      sample_id == "7316-4463" ~ "Diffuse astrocytic and oligodendroglial tumor",
+      TRUE ~ broad_histology
+    ),
+    molecular_subtype = case_when(
+      sample_id == "7316-4463" ~ "DMG, H3 K28",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      sample_id == "7316-4463" ~ "Updated via OpenPedCan subtyping",
+      TRUE ~ Notes
+    )
+  )
+```
 
 
 ###Check list of subtypes look as expected at this point in time
@@ -508,6 +568,19 @@ list_subtypes <- compiled_df %>%
   distinct() %>%
   arrange(integrated_diagnosis)
 list_subtypes
+```
+
+### exclude "NA" in methyl subtype column where sample has subtype
+
+```{r}
+compiled_df <- compiled_df %>%
+  select(-molecular_subtype_methyl) %>%
+  distinct() %>%
+  left_join(compiled_df %>%
+              select(sample_id, molecular_subtype_methyl) %>%
+	      drop_na() %>%
+	      distinct(),
+            by = "sample_id")	      
 ```
 
 ### Write revised table to file

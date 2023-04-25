@@ -74,7 +74,7 @@ clinical <- read_tsv(file.path(root_dir,
 ```
 
 ### SNV for subtyping 
- - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contained consensus calling plus hotspot rescued for SNV calling - detialed in [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis)). Also include the DGD MAF, `snv-dgd.maf.tsv.gz` for OpenPedCan.
+ - We will use the `snv-consensus-plus-hotspots.maf.tsv.gz` which contained consensus calling plus hotspot rescued for SNV calling - detailed in [here](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers#snv-caller-comparison-analysis)). Also include the DGD MAF, `snv-dgd.maf.tsv.gz` for OpenPedCan.
 
 ```{r load-inputs-please-wait}
 
@@ -92,16 +92,16 @@ keep_cols <- c("Chromosome",
              "PolyPhen",
              "DOMAINS")
 
-snv_dgd_maf <- data.table::fread(
-  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
-  select = keep_cols,
-  data.table = FALSE) 
+#snv_dgd_maf <- data.table::fread(
+ # file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+  #select = keep_cols,
+  #data.table = FALSE) 
 
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
   select = keep_cols,
-  data.table = FALSE) %>% 
-  dplyr::bind_rows(snv_dgd_maf)
+  data.table = FALSE) #%>% 
+  #dplyr::bind_rows(snv_dgd_maf)
 
 ```
 
@@ -116,7 +116,6 @@ lgat_specimens_df <- clinical %>%
                            negate = TRUE),
                 # Tumors
                 sample_type == "Tumor",
-                composition == "Solid Tissue",
                 experimental_strategy != "Methylation")
 
 # Write this intermediate file to the subset directory as it allows for
@@ -337,10 +336,13 @@ write_tsv(lgat_subtypes,file.path(subset_dir, "LGAT_snv_subset.tsv"))
 lgat_methyl_subtyped <- clinical %>% 
   dplyr::filter(str_detect(str_to_lower(pathology_diagnosis), 
                            paste(c(path_dx_list$include_path_dx, "Dysplasia/Gliosis"), collapse = "|")),
+                # Exclusion criteria for pathology diagnosis
+                str_detect(str_to_lower(pathology_diagnosis),
+                           paste(path_dx_list$exclude_path_dx, collapse = "|"),
+                           negate = TRUE),
                 dkfz_v12_methylation_subclass_score >= 0.8,
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
-                composition == "Solid Tissue",
                 cohort != "TARGET") %>% 
   dplyr::mutate(molecular_subtype_methyl = 
                   case_when(grepl("LGG_MYB", dkfz_v12_methylation_subclass) ~ "LGG, MYB/MYBL1",
@@ -363,12 +365,17 @@ lgat_methyl_subtyped <- clinical %>%
 lgat_methyl_not_subtyped <- clinical %>% 
   dplyr::filter(str_detect(str_to_lower(pathology_diagnosis), 
                            paste(c(path_dx_list$include_path_dx, "Dysplasia/Gliosis"), collapse = "|")),
+                # Exclusion criteria for pathology diagnosis
+                str_detect(str_to_lower(pathology_diagnosis),
+                           paste(path_dx_list$exclude_path_dx, collapse = "|"),
+                           negate = TRUE),
                 !Kids_First_Biospecimen_ID %in% unique(lgat_methyl_subtyped$Kids_First_Biospecimen_ID_Methyl),
                 experimental_strategy == "Methylation", 
                 sample_type == "Tumor", 
                 composition == "Solid Tissue",
-                cohort != "TARGET") %>% 
-  dplyr::mutate(molecular_subtype_methyl = "LGG, To be classified") %>% 
+                cohort != "TARGET") %>%
+  dplyr::left_join(lgat_methyl_subtyped %>% dplyr::select(Kids_First_Participant_ID, sample_id, molecular_subtype_methyl),
+                   by = c("Kids_First_Participant_ID", "sample_id")) %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
   dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
   dplyr::distinct()

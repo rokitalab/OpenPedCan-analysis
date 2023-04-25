@@ -178,9 +178,9 @@ histology_cg <- histology %>%
     cancer_group %in% c("Wilms Tumor", "Juvenile Xanthogranuloma", "Clear Cell Sarcoma of the Kidney") ~ stringr::str_to_sentence(cancer_group),
     cancer_group == "Ependymoma;Metastatic secondary tumors" ~ "Ependymoma",
     cancer_group %in% c("Acute Promyelocytic Leukemia", "Therapy-Related Acute Myeloid Leukemia") ~ "Acute Myeloid Leukemia",
-    cancer_group %in% c("Mixed Lineage Leukemia") ~ "Acute Lymphoblastic Leukemia",
-    cancer_group == "Brain Lower Grade Glioma" ~ "Low-grade glioma",
-    cancer_group == "congenital malignant brain tumor" ~ "High-grade glioma",
+    cancer_group == "Mixed Lineage Leukemia" ~ "Acute Lymphoblastic Leukemia",
+    cancer_group %in% c("Brain Lower Grade Glioma", "Low-grade glioma/astrocytoma (WHO grade I/II)") ~ "Low-grade glioma",
+    cancer_group %in% c("congenital malignant brain tumor", "High-grade glioma/astrocytoma (WHO grade III/IV)") ~ "High-grade glioma",
     cancer_group == "Kidney Chromophobe" ~ "Chromophobe renal cell carcinoma",
     cancer_group == "Kidney Renal Clear Cell Carcinoma" ~ "Renal Clear Cell Carcinoma",
     cancer_group == "Kidney Renal Papillary Cell Carcinoma" ~ "Renal Papillary Cell Carcinoma",    
@@ -193,12 +193,12 @@ histology_cg <- histology %>%
     short_histology == "JXG" ~ "Histiocytic tumor",
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
     cancer_group == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor",
-    cancer_group == "Glioneuronal tumor" ~ "Glial-neuronal tumor",
+    cancer_group %in% c("Glioneuronal tumor", "Glial-neuronal tumor NOS") ~ "Glial-neuronal tumor",
     harmonized_diagnosis == "Neuroepithelial neoplasm with EWSR1--PLAG1 fusion" ~ "Glial-neuronal tumor",
     harmonized_diagnosis == "Rosai-dorfman" ~ "Rosai-Dorfman disease",
     short_histology == "LIHC" ~ "Hepatocellular Carcinoma",
     broad_histology == "Ependymal tumor" ~ "Ependymoma",
-    TRUE ~ as.character(cancer_group))
+    TRUE ~ cancer_group)
   ) %>%
   # Additional update to clean up terms that we will use in plots
   # harmonize myofibroblastic tumors - all inflammatory; take care of organ later
@@ -207,7 +207,7 @@ histology_cg <- histology %>%
   # remove short forms in the brackets
   dplyr::mutate(cancer_group = str_extract(cancer_group, "[^(]*")) %>%
   # remove space at the ends
-  dplyr::mutate(cancer_group = gsub(" $","",cancer_group))
+  dplyr::mutate(cancer_group = gsub(" $","", cancer_group))
 
 ```
 
