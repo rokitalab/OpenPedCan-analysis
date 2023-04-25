@@ -48,7 +48,6 @@ TARGET	Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney	No	Yes
 PBTA	CNS Burkitt's lymphoma	CNS Burkitt's lymphoma	No	No
 PBTA	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 PBTA	CNS Embryonal tumor, HGNET-MN1	CNS Embryonal tumor	Yes	No
-PBTA	CNS Embryonal tumor	CNS Embryonal tumor	No	No
 DGD	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 DGD	CNS Melanoma	CNS Melanoma	No	No
 PBTA	CNS neuroblastoma	CNS neuroblastoma	No	No
@@ -71,12 +70,8 @@ PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysgerminoma	Dysgerminoma	No	No
-PBTA	Embryonal tumor	Embryonal tumor	No	No
-PBTA	Supratentorial or Spinal Cord PNET	Embryonal tumor	No	Yes
-DGD	Embryonal Tumor NOS	Embryonal Tumor NOS	No	No
-PBTA	Embryonal Tumor with Multilayered Rosettes (ETMR)	Embryonal tumor with multilayer rosettes	No	Yes
 PBTA	Embryonal tumor with multilayer rosettes, C19MC-altered	Embryonal tumor with multilayer rosettes	Yes	No
-DGD	Embryonal Tumor with Multilayered Rosettes (ETMR)	Embryonal tumor with multilayer rosettes	No	Yes
+PBTA	Embryonal tumor with multilayer rosettes, NOS	Embryonal tumor with multilayer rosettes	Yes	No
 PBTA	Posterior fossa group A (PFA) ependymoma	Ependymoma	No	Yes
 PBTA	Ependymoma	Ependymoma	No	No
 PBTA	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
