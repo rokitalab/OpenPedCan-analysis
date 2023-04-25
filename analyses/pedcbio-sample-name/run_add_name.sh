@@ -16,4 +16,4 @@ hist_file="../molecular-subtyping-integrate/results/histologies.tsv"
 
 # Compare all methods and
 Rscript --vanilla pedcbio_sample_name_col.R \
---hist_file $hist_file
+--hist_file $hist_file -b Methylation
