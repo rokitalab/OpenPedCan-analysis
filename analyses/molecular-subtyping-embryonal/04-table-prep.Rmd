@@ -123,7 +123,8 @@ Read in files.
 histologies_df <- read_tsv(histologies_file, 
                            col_types = cols(
                              molecular_subtype = col_character()
-                          ))
+                          )) %>%
+  dplyr::mutate(match_id = paste(sample_id, composition, sep = "_"))
 
 # manta data for BCOR tandem duplication
 manta_sv_df <- read_tsv(manta_file)
@@ -277,32 +278,6 @@ rm(bcor_sv_df, manta_sv_df, consensus_sex_chr)
 
 ## Final table
 
-### Add `Kids_First_Participant_ID` and `sample_id`
-
-```{r}
-identifiers_df <- histologies_df %>%
-  select(Kids_First_Participant_ID, 
-         sample_id, 
-         Kids_First_Biospecimen_ID) %>%
-  distinct()
-# add IDs to chromosome 19 data
-chr19_cn_df <- identifiers_df %>%
-  inner_join(chr19_cn_df, by = "Kids_First_Biospecimen_ID")
-# add IDs to RNA data 
-rna_df <- identifiers_df %>%
-  inner_join(rna_df)
-```
-
-### Join molecular data
-
-```{r}
-molecular_data_df <- full_join(chr19_cn_df, rna_df,
-                               by = c("Kids_First_Participant_ID",
-                                      "sample_id")) %>%
-  rename(Kids_First_Biospecimen_ID_DNA = Kids_First_Biospecimen_ID.x,
-         Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID.y)
-```
-
 ### Add clinical data
 
 The following were mentioned in [`AlexsLemonade/OpenPBTA-analysis#251`](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/251):
@@ -314,23 +289,49 @@ The following were mentioned in [`AlexsLemonade/OpenPBTA-analysis#251`](https://
 > **CNS Embryonal, NOS**: Tumors previously called PNET that do not fit into other groups above.
 
 ```{r}
+# relevant embyronal clinical metadata
 relevant_clinical_data <- histologies_df %>% 
   filter(Kids_First_Biospecimen_ID %in% biospecimen_ids) %>%
-  select(Kids_First_Participant_ID, 
-         sample_id,
-         age_at_diagnosis_days,
-         germline_sex_estimate,
-         primary_site,
-         pathology_diagnosis,
-         pathology_free_text_diagnosis) %>%
-  distinct() %>%
   # convert age to years
   mutate(age_at_diagnosis_yrs = 
            floor(as.numeric(age_at_diagnosis_days) / 365)) %>%
   select(-age_at_diagnosis_days)
 
-all_data_df <- inner_join(relevant_clinical_data,
-                          molecular_data_df)
+# get relevant embyronal dna clinical metadata
+emb_dna <- relevant_clinical_data %>%
+  filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
+         is.na(RNA_library)) %>%
+  select(Kids_First_Biospecimen_ID, 
+         Kids_First_Participant_ID, 
+         sample_id, composition, match_id,
+         age_at_diagnosis_yrs,
+         germline_sex_estimate,
+         primary_site,
+         pathology_diagnosis,
+         pathology_free_text_diagnosis) %>%
+  # add dna molecular data
+  left_join(chr19_cn_df, by = "Kids_First_Biospecimen_ID") %>% 
+  rename(Kids_First_Biospecimen_ID_DNA = Kids_First_Biospecimen_ID)
+
+# get relevant embyronal rna clinical metadata
+emb_rna <- relevant_clinical_data %>%
+  filter(experimental_strategy %in% c("RNA-Seq", "Targeted Sequencing"),
+         !is.na(RNA_library)) %>%
+  select(Kids_First_Biospecimen_ID,
+         Kids_First_Participant_ID, 
+         sample_id, composition, match_id,
+         age_at_diagnosis_yrs,
+         germline_sex_estimate,
+         primary_site,
+         pathology_diagnosis,
+         pathology_free_text_diagnosis) %>%
+  # add rna molecular data
+  left_join(rna_df, by = "Kids_First_Biospecimen_ID") %>% 
+  rename(Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID)
+  
+# merge all relevant embyronal dna and rna 
+all_data_df <- full_join(emb_dna, emb_rna)
+
 ```
 
 Write to file.
@@ -338,7 +339,7 @@ Write to file.
 ```{r}
 all_data_df %>%
   select(Kids_First_Participant_ID, 
-         sample_id,
+         sample_id, composition, match_id,
          Kids_First_Biospecimen_ID_DNA,
          Kids_First_Biospecimen_ID_RNA,
          age_at_diagnosis_yrs,
@@ -352,7 +353,7 @@ all_data_df %>%
          FOXR2_fusions,
          MN1_fusions,
          CIC_fusions) %>%
-  arrange(Kids_First_Participant_ID, sample_id) %>%
+  arrange(Kids_First_Participant_ID, sample_id, composition, match_id) %>%
   write_tsv(output_all)
 ```
 
