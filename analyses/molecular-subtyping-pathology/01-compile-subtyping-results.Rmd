@@ -65,37 +65,45 @@ bind_exp_strategies <- function(results_df) {
   dna_rna_cols <- c("Kids_First_Biospecimen_ID_DNA", "Kids_First_Biospecimen_ID_RNA")
   long_cols <- c("Kids_First_Biospecimen_ID_Methyl", "Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA")
   
-    # if only DNA and RNA present:
+  # if only DNA and RNA present:
   if (!"Kids_First_Biospecimen_ID_Methyl" %in% names(results_df)) {
-    rna_df <- results_df %>%
-    dplyr::select(-Kids_First_Biospecimen_ID_DNA) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_RNA)
-  
-    dna_df <- results_df %>%
-    dplyr::select(-Kids_First_Biospecimen_ID_RNA) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA)
     
-    return(bind_rows(rna_df, dna_df) %>% distinct())
+    # All experimental strategies in one column - special case: EPN
+    if ("Kids_First_Biospecimen_ID" %in% names(results_df)) {
+      all_df <- results_df %>%
+        dplyr::filter(!is.na(Kids_First_Biospecimen_ID))
+      return(all_df %>% distinct())
+      
+    } else {
+      rna_df <- results_df %>%
+        dplyr::select(-Kids_First_Biospecimen_ID_DNA) %>%
+        dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA)) %>%
+        dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_RNA)
+      
+      dna_df <- results_df %>%
+        dplyr::select(-Kids_First_Biospecimen_ID_RNA) %>%
+        dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA)) %>%
+        dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA)
+      return(bind_rows(rna_df, dna_df) %>% distinct())
+    }
   }
   
     # if all the things - DNA, RNA, methyl, DNA and RNA panel - are present:
   if ("Kids_First_Biospecimen_ID_Methyl" %in% names(results_df)) {
     rna_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_Methyl, Kids_First_Biospecimen_ID_DNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_RNA)
+      dplyr::select(-c(Kids_First_Biospecimen_ID_Methyl, Kids_First_Biospecimen_ID_DNA)) %>%
+      dplyr::filter(!is.na(Kids_First_Biospecimen_ID_RNA)) %>%
+      dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_RNA)
     
     dna_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_Methyl, Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA)
+      dplyr::select(-c(Kids_First_Biospecimen_ID_Methyl, Kids_First_Biospecimen_ID_RNA)) %>%
+      dplyr::filter(!is.na(Kids_First_Biospecimen_ID_DNA)) %>%
+      dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA)
     
     methyl_df <- results_df %>%
-    dplyr::select(-c(Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA)) %>%
-    dplyr::filter(!is.na(Kids_First_Biospecimen_ID_Methyl)) %>%
-    dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_Methyl)
+      dplyr::select(-c(Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA)) %>%
+      dplyr::filter(!is.na(Kids_First_Biospecimen_ID_Methyl)) %>%
+      dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_Methyl)
     
     return(bind_rows(rna_df, dna_df, methyl_df) %>% distinct())
   }
@@ -157,7 +165,7 @@ Results files from individual modules.
 ```{r}
 cranio_results_file <- file.path(cranio_dir, results_dir, "CRANIO_molecular_subtype.tsv")
 ews_results_file <- file.path(ews_dir, results_dir, "EWS_results.tsv")
-epn_results_file <- file.path(epn_dir, results_dir, "EPN_all_data_withsubgroup.tsv")
+epn_results_file <- file.path(epn_dir, results_dir, "epn_molecular_subtypes.tsv")
 hgg_results_file <- file.path(hgg_dir, results_dir, "HGG_molecular_subtype_tp53.tsv")
 lgat_results_file <- file.path(lgat_dir, results_dir, "lgat_subtyping.tsv")
 mb_results_file <- file.path(mb_dir, results_dir, "MB_molecular_subtype.tsv")
@@ -293,13 +301,12 @@ epn_results_df <- bind_exp_strategies(epn_results_df) %>%
   unique() %>%
   inner_join(select(histologies_df,join_cols),
            by = "Kids_First_Biospecimen_ID") %>%
-  mutate(molecular_subtype = subgroup) %>%
   mutate(molecular_subtype = if_else(is.na(molecular_subtype), "EPN, To be classified", molecular_subtype), 
          integrated_diagnosis = case_when(molecular_subtype == "EPN, PF A" ~ "Posterior fossa group A (PFA) ependymoma",
                                           molecular_subtype == "EPN, PF B" ~ "Posterior fossa group B (PFB) ependymoma",
                                           molecular_subtype == "EPN, PF SE" ~ "Posterior fossa subependymoma",
                                           molecular_subtype == "EPN, ST ZFTA" ~ "Supratentorial ependymoma, ZFTA fusion-positive",
-                                          molecular_subtype == "EPN, ST YAP1" ~ "Supratentorial ependymoma, YAP1 fusion-positive", 
+                                          molecular_subtype == "EPN, ST YAP1" ~ "Supratentorial ependymoma, YAP1 fusion-positive",
                                           molecular_subtype == "EPN, SP" ~ "Spinal ependymoma",
                                           molecular_subtype == "EPN, SP-SE" ~ "Spinal subependymoma",
                                           molecular_subtype == "EPN, SP-MYCN" ~ "Spinal ependymoma, MYCN-amplified",
