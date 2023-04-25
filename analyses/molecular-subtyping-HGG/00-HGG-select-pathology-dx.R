@@ -24,7 +24,9 @@ histo <- read_tsv(file.path(root_dir, "data", "histologies-base.tsv")) %>%
 # as we identified in 00-v9-HGG-select-pathology-dx.Rmd are:
 exact_path_dx<- c(
   "High-grade glioma/astrocytoma (WHO grade III/IV)",
-  "Brainstem glioma- Diffuse intrinsic pontine glioma"
+  "Brainstem glioma- Diffuse intrinsic pontine glioma",
+  "Glioblastoma",
+  "Astrocytoma;Oligoastrocytoma"
 )
 
 # Gliomatosis Cerebri can be high grade glioma or low grade 
