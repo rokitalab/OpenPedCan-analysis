@@ -12,7 +12,7 @@ Adamantinomatous Craniopharyngioma	Recurrence	31
 Adenocarcinoma	Primary Tumor	2
 Anaplastic Large Cell Lymphoma	Primary Tumor	2
 Angiosarcoma	Primary Tumor	1
-Astroblastoma	Initial CNS Tumor	1
+Astroblastoma	Initial CNS Tumor	3
 Astrocytoma	Primary Tumor	1
 Atypical choroid plexus papilloma	Initial CNS Tumor	7
 Atypical choroid plexus papilloma	Progressive	3
@@ -49,7 +49,7 @@ Chronic Myelogenous Leukemia	Primary Tumor	2
 CIC-DUX4 Sarcoma	Primary Tumor	1
 Clear cell sarcoma of the kidney	Primary Tumor	24
 CNS Burkitt's lymphoma	Initial CNS Tumor	3
-CNS Embryonal tumor	Initial CNS Tumor	28
+CNS Embryonal tumor	Initial CNS Tumor	27
 CNS Embryonal tumor	Progressive	7
 CNS Embryonal tumor	Recurrence	8
 CNS Melanoma	Initial CNS Tumor	1
@@ -124,13 +124,12 @@ Glial-neuronal tumor	Progressive	6
 Glial-neuronal tumor	Recurrence	13
 Glioblastoma	Primary Tumor	3
 Glioblastoma	Recurrence	3
-Gliomatosis Cerebri	Initial CNS Tumor	3
 Hemangioblastoma	Initial CNS Tumor	18
 Hemangioblastoma	Progressive	6
 Hepatoblastoma	Primary Tumor	4
 Hepatocellular Carcinoma	Primary Tumor	1
 High-grade glioma	Deceased	119
-High-grade glioma	Initial CNS Tumor	390
+High-grade glioma	Initial CNS Tumor	393
 High-grade glioma	Primary Tumor	1
 High-grade glioma	Progressive	87
 High-grade glioma	Progressive Disease Post-Mortem	1

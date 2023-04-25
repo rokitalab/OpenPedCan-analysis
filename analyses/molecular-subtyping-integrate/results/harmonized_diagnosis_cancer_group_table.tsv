@@ -13,7 +13,8 @@ DGD	Adenocarcinoma	Adenocarcinoma	No	No
 TCGA	Adrenocortical Carcinoma	Adrenocortical Carcinoma	No	No
 DGD	Anaplastic Large Cell Lymphoma	Anaplastic Large Cell Lymphoma	No	No
 DGD	Angiosarcoma	Angiosarcoma	No	No
-PBTA	Astroblastoma	Astroblastoma	No	No
+PBTA	Other	Astroblastoma	No	Yes
+PBTA	CNS Embryonal tumor, HGNET-MN1	Astroblastoma	Yes	Yes
 PBTA	Astrocytoma	Astrocytoma	No	No
 PBTA	Atypical choroid plexus papilloma	Atypical choroid plexus papilloma	No	No
 PBTA	Atypical Teratoid Rhabdoid Tumor, MYC	Atypical Teratoid Rhabdoid Tumor	Yes	No
@@ -153,7 +154,6 @@ PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor, FGFR	Glial-neuronal tumor	Yes	No
 PBTA	Glioblastoma	Glioblastoma	No	No
 TCGA	Glioblastoma Multiforme	Glioblastoma Multiforme	No	No
-PBTA	Gliomatosis Cerebri	Gliomatosis Cerebri	No	No
 TCGA	Head and Neck Squamous Cell Carcinoma	Head and Neck Squamous Cell Carcinoma	No	No
 PBTA	Hemangioblastoma	Hemangioblastoma	No	No
 DGD	Hemangioblastoma	Hemangioblastoma	No	No

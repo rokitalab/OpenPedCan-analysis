@@ -147,7 +147,8 @@ Are there NA in broad_histology, short_histology or harmonized_diagnosis
 
 ```{r}
 histology %>% 
-  filter(sample_type=="Tumor",
+  filter(cohort %in% c("GMKF", "PBTA", "DGD",
+                       is.na(pathology_diagnosis)),
          (is.na(broad_histology)| is.na(short_histology)| is.na(harmonized_diagnosis))) %>%
   tally() 
 ```
@@ -171,6 +172,8 @@ histology_cg <- histology %>%
     # if multiple cancers, make NA unless otherwise specified below
     grepl(";", cancer_group) ~ NA_character_,
     cancer_group == "Brainstem glioma- Diffuse intrinsic pontine glioma" ~ "Diffuse intrinsic pontine glioma",
+    pathology_diagnosis %in% c("Astrocytoma", "Glioblastoma", "Astrocytoma;Oligoastrocytoma") ~ pathology_diagnosis,
+    pathology_free_text_diagnosis == "astroblastoma" ~ "Astroblastoma",
     cancer_group == "Non-germinomatous germ cell tumor;Teratoma" ~ "Mixed germ cell tumor",
     cancer_group %in% c("Meningothelial meningioma", "Clear cell meningioma", "Atypical meningioma", "Anaplastic (malignant) meningioma") ~ "Meningioma",
     cancer_group %in% c("Supratentorial or Spinal Cord PNET", "Embryonal tumor", "Embryonal Tumor", "CNS Embryonal tumor, NEC/NOS", "CNS with BCOR ITD") ~ "Embryonal tumor",
