@@ -79,10 +79,10 @@ path_dx_list <- jsonlite::fromJSON(
 
 # Samples included on the basis of the pathology diagnosis fields
 path_dx_df <- metadata %>%
-  # Inclusion on the basis of CBTTC harmonized pathology diagnoses
+  # Inclusion on the basis of CBTN harmonized pathology diagnoses
   filter(pathology_diagnosis %in% path_dx_list$exact_path_dx |
          # Inclusion based on pathology free text diagnosis
-         pathology_free_text_diagnosis == path_dx_list$gliomatosis_path_free_text_exact |
+         pathology_free_text_diagnosis %in% path_dx_list$path_free_text_exact |
          # Inclusion based on pathology free text diagnosis for IHG
          pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx)
   
