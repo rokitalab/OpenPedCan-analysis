@@ -4446,6 +4446,7 @@ PT_GTHZF21E	7316-9066	BS_N6EPKXEX	Diffuse astrocytic and oligodendroglial tumor	
 PT_32ZYBW32	7316-3495	BS_N6GH19XT	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	NA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E
 PT_N53GPH3G	7316-424	BS_N6KM1Y2K	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_E99F32RF	7316-8420	BS_N6KS1KA7	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA
+PT_X648RVMK	7316-238	BS_N6N147BY	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping	Progressive	NA
 PT_H0HWHRPB	7316-1679	BS_N6NE6B3W	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	NA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF
 PT_N13MXT13	7316-7758	BS_N6TQBQ8M	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_47YEHV75	7316-4294	BS_N6VK1ZRF	Choroid plexus tumor	CPT	NA	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma
