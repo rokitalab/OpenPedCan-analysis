@@ -209,7 +209,7 @@ if ( params$base_run ==0 ){
 ```{r get fusions that are found in more than 4 grouping variable of interest}
 if ( params$base_run ==0 ){
   # count number of fusions in putative oncogene annotated fused gene are in more than N (countGroup) cancer groups
-  FusionInNcg<-fusion_calls %>% dplyr::select(FusionName,group) %>% unique() %>% group_by(FusionName) %>% tally(name="count")
+  FusionInNcg <-fusion_calls %>% dplyr::select(FusionName,group) %>% unique() %>% group_by(FusionName) %>% tally(name="count")
   
   FusionInNcg<-FusionInNcg[FusionInNcg$count>countGroup,]
   FusionInNcg
@@ -247,7 +247,7 @@ FusionInNbh <- FusionInNbh  %>%
   dplyr::select(-GeneA, -GeneB)
 FusionInNbh
 
-putative_driver_fusions<-fusion_calls %>% dplyr::filter(!FusionName %in% FusionInNbh$FusionName) %>%
+putative_driver_fusions<- fusion_calls %>% dplyr::filter(!FusionName %in% FusionInNbh$FusionName) %>%
   # we want to aggregate annots column since there is difference in arriba annotation (uniquely has duplication/translocation/deletion values) and StarFusion annotation which will be counted twice since they are not unique
   # Example for fusion BRAF--ANTXR1 with the same breakpoint the annots per caller are:
   # Arriba "[\"INTERCHROMOSOMAL[chr7--chr2]\"],translocation"
@@ -289,7 +289,50 @@ putative_driver_fusions<-fusion_calls %>% dplyr::filter(!FusionName %in% FusionI
   arrange(Sample, FusionName) %>%
   dplyr::mutate(annots = gsub("\\[], ", "", annots))
 
-write.table(putative_driver_fusions,file.path(outputfolder,"fusion-putative-oncogenic.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
+# collapse annots, Fusion_Type, DomainRetainedGene1A, DomanRetainedGene1B columns
+putative_driver_fusions_collapsed <- putative_driver_fusions %>%
+  unique() %>%
+  arrange(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  mutate(n_fusion_types = n_distinct(Fusion_Type)) %>%
+  ungroup() %>%
+  # dedups Fusion_Type to retain more descriptive ARRIBA label
+  dplyr::filter(ifelse(n_fusion_types != 1, Caller == 'ARRIBA', Caller == Caller)) %>%
+  unique() %>%
+  select(-n_fusion_types) %>%
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint) %>%
+  mutate(n_annot_types = n_distinct(annots)) %>%
+  ungroup() %>%
+  # dedups annots to retain more descriptive ARRIBA label
+  dplyr::filter(ifelse(n_annot_types != 1, 
+                       str_detect(annots, ', [a-z]+$'), 
+                       annots == annots)) %>%
+  unique() %>%
+  dplyr::select(-Caller, -n_annot_types) %>%
+  # annoFuse::fusion_driver() sometimes returns multiple values for
+  # DomainRetainedGene1X (presumably due to multiple kinase domains in the
+  # protein). Collapsing into a single line to retain both options
+  group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint,
+           Fusion_Type, Gene1A, Gene2A, Gene1B, Gene2B, Gene1A_anno,
+           Gene1B_anno, Gene2A_anno, Gene2B_anno, Fusion_anno, CalledBy,
+           caller.count, reciprocal_exists, Kids_First_Participant_ID,
+           annots, BreakpointLocation) %>%
+  dplyr::summarize(DomainRetainedGene1A = toString(unique(DomainRetainedGene1A)),
+                   DomainRetainedGene1B = toString(unique(DomainRetainedGene1B))) %>%
+  ungroup() %>%
+  unique() %>%
+  # collapse any remaining duplicate fusion types
+   group_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint,
+           DomainRetainedGene1A, DomainRetainedGene1B,
+           Gene1A, Gene2A, Gene1B, Gene2B, Gene1A_anno,
+           Gene1B_anno, Gene2A_anno, Gene2B_anno, Fusion_anno, CalledBy,
+           caller.count, reciprocal_exists, Kids_First_Participant_ID,
+           annots, BreakpointLocation) %>%
+  dplyr::summarize(Fusion_Type = toString(unique(Fusion_Type))) %>%
+  ungroup() %>%
+  unique()
+
+write.table(putative_driver_fusions_collapsed,file.path(outputfolder,"fusion-putative-oncogenic.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
 
 ```
 
