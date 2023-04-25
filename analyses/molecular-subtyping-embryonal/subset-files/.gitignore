@@ -1,0 +1,5 @@
+# Ignore everything in this directory
+embryonal_manta_sv.tsv
+embryonal_zscored_exp.rds
+# Except this file
+!.gitignore
