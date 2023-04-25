@@ -46,8 +46,8 @@ DGD	CIC-DUX4 Sarcoma	CIC-DUX4 Sarcoma	No	No
 TARGET	Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney	No	Yes
 PBTA	CNS Burkitt's lymphoma	CNS Burkitt's lymphoma	No	No
 PBTA	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
-PBTA	CNS Embryonal tumor	CNS Embryonal tumor	No	No
 PBTA	CNS Embryonal tumor, HGNET-MN1	CNS Embryonal tumor	Yes	No
+PBTA	CNS Embryonal tumor	CNS Embryonal tumor	No	No
 DGD	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 DGD	CNS Melanoma	CNS Melanoma	No	No
 PBTA	CNS neuroblastoma	CNS neuroblastoma	No	No
@@ -80,12 +80,16 @@ PBTA	Posterior fossa group A (PFA) ependymoma	Ependymoma	No	Yes
 PBTA	Ependymoma	Ependymoma	No	No
 PBTA	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
 DGD	Ependymoma	Ependymoma	No	No
+DGD	Posterior fossa group A (PFA) ependymoma	Ependymoma	No	Yes
 PBTA	Myxopapillary ependymoma	Ependymoma	No	Yes
 PBTA	Supratentorial ependymoma, YAP1 fusion-positive	Ependymoma	Yes	Yes
 PBTA	Posterior fossa group B (PFB) ependymoma	Ependymoma	No	Yes
+DGD	Myxopapillary ependymoma	Ependymoma	No	Yes
 PBTA	Spinal ependymoma	Ependymoma	No	Yes
 DGD	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
 PBTA	Spinal ependymoma, MYCN-amplified	Ependymoma	Yes	Yes
+DGD	Posterior fossa group B (PFB) ependymoma	Ependymoma	No	Yes
+DGD	Supratentorial ependymoma, YAP1 fusion-positive	Ependymoma	Yes	Yes
 PBTA	Posterior fossa subependymoma	Ependymoma	No	Yes
 PBTA	Spinal subependymoma	Ependymoma	No	Yes
 PBTA	Epstein-Barr virus-related tumor	Epstein-Barr virus-related tumor	No	No
