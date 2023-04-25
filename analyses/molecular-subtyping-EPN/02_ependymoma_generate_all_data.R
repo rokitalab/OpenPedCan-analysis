@@ -189,6 +189,7 @@ fusion_df <- fusion_df[,fusions_list]
 for(i in 1:length(fusions_list)){
   fusion <- fusions_list[i]
   EPN_notebook[,fusion] <- sapply(EPN_notebook$Kids_First_Biospecimen_ID_RNA, function(x) fill_df(sample = x, ref_df = fusion_df, col_name = fusion))
+  EPN_notebook[,fusion] <- sapply(EPN_notebook$Kids_First_Biospecimen_ID_RNA_panel, function(x) fill_df(sample = x, ref_df = fusion_df, col_name = fusion))
 }
 
 # Adding breakpoints density for chromosomal instability to the dataframe
