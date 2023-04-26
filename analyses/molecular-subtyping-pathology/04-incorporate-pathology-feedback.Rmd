@@ -567,7 +567,7 @@ compiled_df %>%
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-4463" ~ NA_character_,
+      sample_id == "7316-6047" ~ NA_character_,
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
