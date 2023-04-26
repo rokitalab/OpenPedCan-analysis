@@ -247,14 +247,14 @@ So, we can try to supplement the Manta calls with the annotated sex chromosome f
 # https://github.com/Illumina/manta/blob/75b5c38d4fcd2f6961197b28a41eb61856f2d976/docs/userGuide/README.md#vcf-format-fields
 # and are recorded as tandem duplication events
 bcor_sv_df <- manta_sv_df %>%
-  filter(str_detect(Gene.name, "BCOR"),
+  filter(str_detect(Gene_name, "BCOR"),
          FILTER == "PASS",
          ALT == "<DUP:TANDEM>")
 
 # take a look at the genes 
 bcor_sv_df %>% 
   head(n = 2) %>%
-  pull(Gene.name)
+  pull(Gene_name)
 ```
 
 Not necessarily specific to _BCOR_ alterations.
