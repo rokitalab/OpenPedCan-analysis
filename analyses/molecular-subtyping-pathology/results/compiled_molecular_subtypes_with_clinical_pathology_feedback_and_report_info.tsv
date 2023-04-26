@@ -1,4 +1,10 @@
 Kids_First_Participant_ID	sample_id	Kids_First_Biospecimen_ID	broad_histology	short_histology	integrated_diagnosis	molecular_subtype	Notes	tumor_descriptor	harmonized_diagnosis	molecular_subtype_methyl
+PT_00G007DM	7316-2577	BS_AQMKA8NC	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Recurrence	NA	NA
+PT_00G007DM	7316-2577	BS_FEPRNEXX	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Recurrence	NA	NA
+PT_00G007DM	7316-272	BS_K07KNTFY	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPBTA subtyping	Initial CNS Tumor	NA	NA
+PT_00G007DM	7316-272	BS_QWNBZ9RJ	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPBTA subtyping	Initial CNS Tumor	NA	NA
+PT_017WC8PS	C4114227-Tumor	BS_A6E869SH	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_017WC8PS	C4114227-Tumor	BS_K7S00RTR	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_01HNFSBZ	C4115334-Tumor	BS_3J89DCN0	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_01HNFSBZ	C4115334-Tumor	BS_VGXWS93R	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_01SH4F1X	7316-6365	BS_4Y2JAQTS	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -196,7 +202,7 @@ PT_0XN6EYXZ	7316-3512	BS_69KSKWE4	Tumors of sellar region	Craniopharyngioma	Adam
 PT_0XN6EYXZ	7316-3512	BS_9F2J6VS1	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_101VYN5T	7316-5298	BS_CZKR2J79	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_101VYN5T	7316-5298	BS_G9HG8G81	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_101VYN5T	7316-5298	BS_PF5JDJJV	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_101VYN5T	7316-5298	BS_PF5JDJJV	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_11DZQ3HH	7316-7097	BS_ADVAQ07T	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_11DZQ3HH	7316-7097	BS_K7HBDY7X	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_12JTZFC2	7316-3504	BS_42DY6WS7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
@@ -211,6 +217,7 @@ PT_13MKXR8G	7316-2251	BS_8R0WBGMK	Choroid plexus tumor	CPT	NA	NA	Updated via pat
 PT_13MKXR8G	7316-2251	BS_CXCKHP3Z	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_13MKXR8G	7316-2251	BS_FEYMKEK8	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_14Z5353Q	7316-6359	BS_E1QWNESV	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_14Z5353Q	7316-6359	BS_KRQS22S1	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_14Z5353Q	7316-6359	BS_KS2HY842	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_1608FN5A	C4113858-Tumor	BS_SBMAM00V	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_1608FN5A	C4113858-Tumor	BS_SDKP0388	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -444,6 +451,8 @@ PT_27FDWCVZ	7316-184	BS_D09VWF8H	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_27FDWCVZ	7316-184	BS_G5QBBHDV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_27W8WJVR	7316-8877	BS_NVRC3B1A	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_27YHK492	7316-3929	BS_89C07SJ2	Low-grade astrocytic tumor	Ganglioglioma	NA	GNG, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_287JKJ5R	7316-7138	BS_9ANMMYJS	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Deceased	NA	NA
+PT_287JKJ5R	7316-7138	BS_B9V9296D	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_288PVQGZ	7316-4284	BS_78SCX2N9	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_288PVQGZ	7316-4284	BS_90WXJSJY	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_288PVQGZ	7316-4284	BS_MTYNW7BX	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
@@ -621,7 +630,7 @@ PT_32CD03EE	7316-4345	BS_KMFX23ZZ	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_32CD03EE	7316-4345	BS_MJVTJK0F	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_32H0CD1P	7316-5326	BS_4N3EXDB0	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_32H0CD1P	7316-5326	BS_D48301X5	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
-PT_32H0CD1P	7316-5326	BS_ERQEFR9J	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, MPE
+PT_32H0CD1P	7316-5326	BS_ERQEFR9J	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_32H0CD1P	7316-5326	BS_TDKWCJ43	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_32J909WM	7316-2688	BS_1BDNZYMM	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, To be classified
 PT_32J909WM	7316-2688	BS_JDMM2XG4	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, To be classified
@@ -678,6 +687,8 @@ PT_39X3ZWVJ	7316-8966	BS_Y4WZY3G3	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_3A2Q62RD	7316-2243	BS_NKJCKV8X	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_3A2Q62RD	7316-2243	BS_R5H6KFDW	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_3A2Q62RD	7316-2243	BS_RGPSEMHC	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
+PT_3A2Q62RD	7316-4449	BS_4Y7JTA35	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
+PT_3A2Q62RD	7316-4449	BS_CQ9KWJ8S	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
 PT_3A2Q62RD	7316-4849	BS_6Q2REZCD	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_3A2Q62RD	7316-4849	BS_99ZAJDYN	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_3A2Q62RD	7316-4849	BS_GG98K7W0	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
@@ -795,6 +806,8 @@ PT_3P3HARZ2	7316-720	BS_RSB4R1C7	Low-grade astrocytic tumor	LGAT	NA	LGG, To be c
 PT_3PK66TJY	7316-2609	BS_4BYJ109R	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_3PK66TJY	7316-2609	BS_F5V8CWXT	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_3PK66TJY	7316-2609	BS_PRAEF32W	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
+PT_3PVE9CBR	7316UP-2058	BS_6BGES4ZG	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Primary Tumor	NA	NA
+PT_3PVE9CBR	7316UP-2333	BS_VWYA7FAH	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Recurrence	NA	NA
 PT_3QFBAXAN	7316-8101	BS_3ZPJAK9A	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_3QFBAXAN	7316-8101	BS_4K7SDXC7	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_3QP5FWMC	7316-4846	BS_6HXD39AM	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -845,7 +858,7 @@ PT_3VQ5CZ5A	7316-8024	BS_BVMYEQ8W	Diffuse astrocytic and oligodendroglial tumor	
 PT_3VQEVNDD	7316-1680	BS_9G7ETYHR	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_3VQEVNDD	7316-1680	BS_AMZ70B6F	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_3VQEVNDD	7316-1680	BS_HMWNCF3E	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
-PT_3VVNQSB6	7316-524	BS_1GQZ81B4	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_3VVNQSB6	7316-524	BS_1GQZ81B4	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_3WA1XB8G	7316-70	BS_7Y1A2J3B	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_3WA1XB8G	7316-70	BS_K049HVGR	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_3WA1XB8G	7316-70	BS_ME3HKN2C	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -967,7 +980,7 @@ PT_4FQHQDEE	NA	BS_91K445V7	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
 PT_4FQHQDEE	NA	BS_EJKW2X3Y	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
 PT_4FQHQDEE	NA	BS_M807A6K2	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
 PT_4FQHQDEE	NA	BS_RZVGW00A	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
-PT_4HBWTZM1	7316-774	BS_N0ZY3NAM	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_4HBWTZM1	7316-774	BS_N0ZY3NAM	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_4J24F353	7316-1137	BS_GAGRGSSX	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, To be classified
 PT_4J24F353	7316-1137	BS_NDRBA7M5	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, To be classified
 PT_4J766Q6K	7316-6785	BS_95EMTN3E	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	Initial CNS Tumor	NA	NA
@@ -975,6 +988,8 @@ PT_4J766Q6K	7316-6785	BS_EXZ4ZMMH	Embryonal tumor	Medulloblastoma	NA	MB, To be c
 PT_4JG5KWE8	7316-50	BS_9YNS9WZJ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, FGFR
 PT_4JG5KWE8	7316-50	BS_JKXA3FQC	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, FGFR
 PT_4JG5KWE8	7316-50	BS_N9N1X78X	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, FGFR
+PT_4M81AYHH	C4120746-Tumor	BS_8FVF27TH	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_4M81AYHH	C4120746-Tumor	BS_KQM96PHV	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_4N0FTRQS	7316-5314	BS_864W8E4X	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_4N0FTRQS	7316-5314	BS_R8FG9AN8	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_4N0FTRQS	7316-5314	BS_TNDYEP8Z	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1084,6 +1099,11 @@ PT_5CKDR2SF	7316-525	BS_X2FVRH45	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid
 PT_5CNZ47XV	7316-1926	BS_JMHG7GCN	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_5CNZ47XV	7316-1926	BS_QM1Z8R38	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_5CNZ47XV	7316-1926	BS_VK5DAZCB	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
+PT_5CYJ3NZ9	7316-3397	BS_7NXX6BKF	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_5CYJ3NZ9	7316-3397	BS_VRDQTVHR	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_5CYJ3NZ9	7316-8767	BS_2VF759DR	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Progressive	NA	NA
+PT_5CYJ3NZ9	7316-8767	BS_7M145V8M	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Progressive	NA	NA
+PT_5CYJ3NZ9	7316-8767	BS_MJJRE059	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_5D439P2D	7316-9945	BS_B8TG51S6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_5D439P2D	7316-9945	BS_KFD5128N	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_5D439P2D	7316-9945	BS_QJHY513X	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1132,6 +1152,7 @@ PT_5R8EWT55	7316-8030	BS_X0KN4VVW	Diffuse astrocytic and oligodendroglial tumor	
 PT_5R8KC1A1	7316-5482	BS_196W36QM	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_5R8KC1A1	7316-5482	BS_GW0J1049	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_5R8KC1A1	7316-5482	BS_WAN02YNZ	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
+PT_5S029SZM	7316-2070	BS_BWZGR3T4	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_5SKQHRC5	7316-10219	BS_HSXARQ1K	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_5SKQHRC5	7316-9013	BS_0GS82Q3E	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_5SKQHRC5	7316-9013	BS_M0XGZ53Z	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1149,7 +1170,7 @@ PT_5VAKED5F	7316-2689	BS_7M5272WN	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_5VAKED5F	7316-2689	BS_Z12A6M41	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_5VMBPWYG	7316-3945	BS_8Y232GZY	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_5VMBPWYG	7316-3945	BS_NQ97XYXC	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
-PT_5W2PKFK6	7316-1729	BS_YKWSNZ5A	Ependymal tumor	Ependymoma	NA	N/A	NA	Recurrence	NA	NA
+PT_5W2PKFK6	7316-1729	BS_YKWSNZ5A	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_5XV23PWB	7316-4738	BS_42RM9E3E	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_5XV23PWB	7316-4738	BS_A22Q96VJ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_5XV23PWB	7316-4738	BS_JGKZ54SA	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
@@ -1193,10 +1214,11 @@ PT_673WYA9X	7316-7595	BS_EFRXNDWX	Meningioma	Meningioma	NA	NA	Updated via OpenPB
 PT_673WYA9X	7316-7595	BS_WZY34KWZ	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_67JEDH01	7316-6661	BS_0ZPC12J7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_67JEDH01	7316-7524	BS_JFKESZ0A	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Progressive	Low-grade glioma, KIAA1549-BRAF	NA
-PT_67R1AF5R	7316-4680	BS_0PHW7PMV	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	EPN, PF A
+PT_67R1AF5R	7316-4680	BS_0PHW7PMV	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_67R1AF5R	7316-4680	BS_MWTH7NNH	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_67R1AF5R	7316-4680	BS_NK4W3X54	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_67R1AF5R	7316-5481	BS_3A9BTVZJ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
+PT_67R1AF5R	7316-5481	BS_7GR7VZ1K	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_67R1AF5R	7316-889	BS_4PAE19ZC	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_67R1AF5R	7316-889	BS_B5Y1FDFX	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_67R1AF5R	7316-889	BS_PSW27ZTE	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
@@ -1263,6 +1285,7 @@ PT_6N825561	7316-4814	BS_JYJFGVXK	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoi
 PT_6N825561	7316-4814	BS_KZTMGEMZ	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	Deceased	NA	ATRT, SHH
 PT_6N825561	7316-4814	BS_YTCYVVY9	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	Deceased	NA	ATRT, SHH
 PT_6NSPR99T	7316-7442	BS_DZTJC1GJ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Deceased	NA	NA
+PT_6NSPR99T	7316-7442	BS_V9YC31VQ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Deceased	NA	NA
 PT_6PJ126FF	7316-8812	BS_AMKQKHJ6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_6PJ126FF	7316-8815	BS_05CHNS17	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_6PJ126FF	7316-8815	BS_4C6B11E4	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1289,6 +1312,7 @@ PT_6QPZ4NP2	C4117671-Tumor	BS_6TR1TNS7	Diffuse astrocytic and oligodendroglial t
 PT_6QPZ4NP2	C4117671-Tumor	BS_VF3NVT4G	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_6QXP9GQT	7316-6283	BS_4XK24YWX	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_6QXP9GQT	7316-6283	BS_KT3C0XCA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_6QXP9GQT	7316-6283	BS_YE50GZ8R	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_6R95FQT2	7316-459	BS_2PJ73SPC	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_6R95FQT2	7316-459	BS_8VAZSJEN	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_6R95FQT2	7316-459	BS_YXCVR90M	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
@@ -1296,6 +1320,7 @@ PT_6RRWZ8CK	7316-8929	BS_8CZS2A3E	Embryonal tumor	ATRT	NA	ATRT, To be classified
 PT_6RRWZ8CK	7316-8929	BS_YFKQYA50	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Recurrence	NA	NA
 PT_6RX3FNT4	7316-7101	BS_3D0XD278	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_6RX3FNT4	7316-7101	BS_HJ25AR0W	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
+PT_6RZ363TJ	7316UP-2035	BS_0C00AYTE	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Primary Tumor	NA	NA
 PT_6SC3MY4H	7316-6652	BS_1F58T7MG	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_6SC3MY4H	7316-6652	BS_E0BFHSF6	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E	NA
 PT_6SH7PV1N	7316-535	BS_0EXCT8V6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1327,10 +1352,11 @@ PT_6WZ8RVRQ	7316-6758	BS_9FN0417M	Ependymal tumor	Ependymoma	Supratentorial epen
 PT_6WZ8RVRQ	7316-6758	BS_AMJRV0NK	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_6WZ8RVRQ	7316-6758	BS_QP7FX3N3	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_6WZ8RVRQ	7316-6758	BS_SZBPACG3	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
-PT_6WZ8RVRQ	7316-6758	BS_Z7Y12BZC	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, ST ZFTA
+PT_6WZ8RVRQ	7316-6758	BS_Z7Y12BZC	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_6XT5HH0S	7316-9450	BS_3RGJ4VP1	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_6XT5HH0S	7316-9450	BS_PR38DGDZ	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_6XT5HH0S	7316-9450	BS_SWRH6FKE	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_6XWCT04R	7316-130	BS_0DG68A8N	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_6ZENTV3N	NA	BS_1KWNKPFZ	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
 PT_6ZENTV3N	NA	BS_2NDYT6AT	Chordoma	Chordoma	NA	NA	NA	Metastatic	NA	NA
 PT_6ZENTV3N	NA	BS_4F08YDA3	Chordoma	Chordoma	NA	NA	NA	Primary Tumor	NA	NA
@@ -1497,6 +1523,7 @@ PT_7RMS6K08	7316-1748	BS_ACE6QKVF	Tumors of sellar region	Craniopharyngioma	Adam
 PT_7RMS6K08	7316-1748	BS_B53Z0T1Q	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_7RMS6K08	7316-1748	BS_SKGSC6PE	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_7S5BVPE2	7316-712	BS_548VV6P6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
+PT_7SM25BDW	7316-4311	BS_AFRXFE5X	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_7T13FDWK	7316-1082	BS_7BQTBTHZ	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_7T13FDWK	7316-1082	BS_DMBNB0EP	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_7T13FDWK	7316-1082	BS_E054DFJN	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
@@ -1542,6 +1569,7 @@ PT_7Z0FF6A2	7316-7108	BS_W38QE561	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_7Z6XVNH0	7316-4114	BS_V7BJFTRG	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_7ZB8FJ6V	7316-6372	BS_F85WCBFF	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_7ZB8FJ6V	7316-6372	BS_N3PSD3AD	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
+PT_80NVYCBS	7316-765	BS_5C2TBN5R	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPBTA subtyping	Initial CNS Tumor	NA	NA
 PT_80NVYCBS	7316-765	BS_KSKZ9J7J	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPBTA subtyping	Initial CNS Tumor	NA	NA
 PT_8127P12D	7316-7967	BS_8Q7Z32DD	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_8127P12D	7316-7967	BS_GJEBYP1N	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
@@ -1599,6 +1627,7 @@ PT_8ATS9ATC	7316-8754	BS_KKDTW11T	Diffuse astrocytic and oligodendroglial tumor	
 PT_8ATS9ATC	7316-8754	BS_X1TRW9RH	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_8BEC0M1Z	7316-503	BS_J2RJH3WP	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_8BES19QQ	7316-3900	BS_16Q57NBD	Ependymal tumor	Ependymoma	Supratentorial ependymoma, YAP1 fusion-positive	EPN, ST YAP1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST YAP1
+PT_8BXEQY0V	7316-4621	BS_CCC607HX	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8D8V9PBH	7316-6816	BS_6AFD49QR	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8D8V9PBH	7316-6816	BS_PPV9X2VE	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8DY03F6V	C4111521-Tumor	BS_KJ13ZTP4	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Atypical meningioma	NA
@@ -1674,6 +1703,7 @@ PT_8NRH7W3N	7316-7105	BS_JR0BT8A5	Mesenchymal non-meningothelial tumor	EWS	Ewing
 PT_8NRH7W3N	7316-7105	BS_SBG1T91R	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EWS
 PT_8P368R5B	7316-4998	BS_CD7AXQM8	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_8P368R5B	7316-4998	BS_FXJY0MNH	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_8PRBVAA8	7316-4329	BS_F68QXW20	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8PV84CNE	7316-532	BS_74G5K7JF	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_8PV84CNE	7316-532	BS_HNY2ZZMR	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_8R00BMHH	7316-1845	BS_EBMCTR80	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, RTK	NA
@@ -1683,13 +1713,14 @@ PT_8RB3EKNP	7316-4028	BS_5KFAEMQJ	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_8RB3EKNP	7316-4028	BS_MVWMFRQR	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_8RB3EKNP	7316-4028	BS_W9AT0MR7	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_8RB7TPS2	7316-3	BS_3F4FQJMR	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_8RB7TPS2	7316-3	BS_W435B0S2	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8RB7TPS2	7316-3	BS_ZS1QRMXS	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8RB7TPS2	7316-322	BS_8SETK1J4	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8RB7TPS2	7316-322	BS_HC44ZA0V	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_8SDJXNFR	7316-3755	BS_6Z4WHYDG	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
-PT_8SDJXNFR	7316-3755	BS_8G87RFQE	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	EPN, ST ZFTA
+PT_8SDJXNFR	7316-3755	BS_8G87RFQE	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
 PT_8SDJXNFR	7316-3755	BS_BZHNA3TX	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
-PT_8SDJXNFR	7316-3755	BS_TRGW0XPY	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	EPN, ST ZFTA
+PT_8SDJXNFR	7316-3755	BS_TRGW0XPY	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
 PT_8SDJXNFR	7316-3755	BS_TZ5D0A7R	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
 PT_8SF8D0M9	7316-8100	BS_4KNBXM3C	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_8SF8D0M9	7316-8100	BS_Z8GRJ71M	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -1714,7 +1745,7 @@ PT_8ZKFTBZS	7316-6087	BS_MH8S62B8	Diffuse astrocytic and oligodendroglial tumor	
 PT_90W4HCNR	7316-2672	BS_4CTSVRTB	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_90W4HCNR	7316-2672	BS_JX449BF5	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_90W4HCNR	7316-2672	BS_M1TDS9CT	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
-PT_91EV3A87	7316-5094	BS_3ST1V7JB	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_91EV3A87	7316-5094	BS_3ST1V7JB	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_91PDAFH0	7316-5267	BS_CD906YAB	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DHG, H3 G35
 PT_91PDAFH0	7316-5267	BS_FGW8SD9T	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	DHG, H3 G35
 PT_91PDAFH0	7316-5267	BS_FYP2B298	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DHG, H3 G35
@@ -1723,7 +1754,7 @@ PT_91WW504A	7316-6197	BS_W95SFE00	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_94BFYTVZ	7316-6768	BS_238MGRTM	Ependymal tumor	Ependymoma	Posterior fossa group B (PFB) ependymoma	EPN, PF B	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF B
 PT_94BFYTVZ	7316-6768	BS_7M4R9HV9	Ependymal tumor	Ependymoma	Posterior fossa group B (PFB) ependymoma	EPN, PF B	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF B
 PT_94BFYTVZ	7316-6768	BS_9MTN0TJX	Ependymal tumor	Ependymoma	Posterior fossa group B (PFB) ependymoma	EPN, PF B	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF B
-PT_94BFYTVZ	7316-6768	BS_AW59EVGQ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF B
+PT_94BFYTVZ	7316-6768	BS_AW59EVGQ	Ependymal tumor	Ependymoma	Posterior fossa group B (PFB) ependymoma	EPN, PF B	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF B
 PT_94EHCMXA	7316-217	BS_S88G7BXH	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-germline	LGG, NF1-germline	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_94EHCMXA	7316-217	BS_V7BJM89K	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-germline	LGG, NF1-germline	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_94EHCMXA	7316-217	BS_ZSJEHWJM	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-germline	LGG, NF1-germline	Updated via OpenPedCan subtyping	Progressive	NA	NA
@@ -1927,6 +1958,7 @@ PT_A325EYR2	7316-2557	BS_YB99Q6TN	Diffuse astrocytic and oligodendroglial tumor	
 PT_A3DQ8BM8	7316-3089	BS_22078RXH	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	CRANIO, ADAM
 PT_A3DQ8BM8	7316-3089	BS_AHJSANTX	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	CRANIO, ADAM
 PT_A3DQ8BM8	7316-3089	BS_J33ZKHQ5	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	CRANIO, ADAM
+PT_A3N82JTH	7316-9726	BS_PCMHH474	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_A4DXSFVG	7316-4690	BS_CRX87C2V	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_A4Q2TSC5	C4105125-Tumor	BS_AVXJSWEN	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_A4Q2TSC5	C4105125-Tumor	BS_Z9BBQBA7	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2096,6 +2128,7 @@ PT_B5VQ16GW	7316-488	BS_QRNSKFMS	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_B5ZZP9YS	7316-8448	BS_WV897Z15	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningothelial meningioma	NA
 PT_B5ZZP9YS	7316-8448	BS_X21QDRGN	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningothelial meningioma	NA
 PT_B7BBE5DV	7316-3166	BS_F0HZ7VMV	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPedCan subtyping	Recurrence	NA	NA
+PT_B7BBE5DV	7316-3166	BS_JQZWFWFK	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_B7BBE5DV	7316-3166	BS_MF8YNTC4	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_B7QRTN72	7316-1802	BS_EFBDT6ZE	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_B7QRTN72	7316-1802	BS_TA9WP4TH	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2166,6 +2199,7 @@ PT_BNARR0N6	7316-1954	BS_PH6CH643	Ependymal tumor	Ependymoma	Posterior fossa gro
 PT_BNARR0N6	7316-1976	BS_HXJK25E5	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_BNARR0N6	7316-1976	BS_JAHKJPN0	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_BNARR0N6	7316-3660	BS_6XNJ9TG0	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
+PT_BNARR0N6	7316-3660	BS_ZSKZPBHN	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_BNARR0N6	7316-5903	BS_1X3HZXSC	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
 PT_BNARR0N6	7316-5903	BS_V4D4YPV1	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
 PT_BNME8PG4	C4119762-Tumor	BS_37P1RE8J	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2184,6 +2218,10 @@ PT_BQJK7KPK	7316-6574	BS_PKNW2TTK	Diffuse astrocytic and oligodendroglial tumor	
 PT_BRTVGGRK	7316-2893	BS_FENJEHZ7	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_BRTVGGRK	7316-2893	BS_QHTDJG77	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_BRTVGGRK	7316-2893	BS_S1M423AB	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
+PT_BRVGRXQY	7316-6569	BS_3PATZ29V	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_BRVGRXQY	7316-6569	BS_AYRXWKQV	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_BRVGRXQY	7316-7218	BS_WMXKD55A	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Recurrence	NA	NA
+PT_BRVGRXQY	7316-7218	BS_XRQXGEXB	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_BT43XECV	C4110660-Tumor	BS_T2ASQ6ZF	Low-grade astrocytic tumor	LGAT	Low-grade glioma, CDKN2A/B	LGG, CDKN2A/B	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_BT43XECV	C4110660-Tumor	BS_WVRX4C9Z	Low-grade astrocytic tumor	LGAT	Low-grade glioma, CDKN2A/B	LGG, CDKN2A/B	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_BTS1T9E8	7316-4976	BS_3X3951CM	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-somatic	LGG, NF1-somatic	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Progressive	Low-grade glioma, NF1-somatic	NA
@@ -2256,6 +2294,7 @@ PT_C37ATQ8H	C4109922-Tumor	BS_K88T8SW7	Diffuse astrocytic and oligodendroglial t
 PT_C3CKECKT	C4114350-Tumor	BS_1ZX8B4H6	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_C3CKECKT	C4114350-Tumor	BS_W7379M7V	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_C3NQTXD7	7316-3643	BS_HPRHK4WS	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Recurrence	NA	NA
+PT_C4P0F36E	7316-3653	BS_8GFRJ12Y	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_C4P0F36E	7316-3653	BS_PJTQHTRA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_C4P0F36E	7316-3653	BS_Y571A481	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_C52RFPB9	7316-8044	BS_02VZJ0QK	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Deceased	NA	NA
@@ -2276,7 +2315,9 @@ PT_C6NDFST5	7316-5273	BS_J17HK8QB	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_C6NDFST5	7316-5273	BS_VM548G8F	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_C71G98K3	7316-8658	BS_E7NVYA6G	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_C71G98K3	7316-8658	BS_WPV7N6NQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_C73C5BBZ	7316-2658	BS_GFNG58B3	Embryonal tumor	Embryonal tumor	NA	NA	NA	Initial CNS Tumor	NA	NA
+PT_C73C5BBZ	7316-2658	BS_0HW7W7SD	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_C73C5BBZ	7316-2658	BS_FWP19HZG	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_C73C5BBZ	7316-2658	BS_GFNG58B3	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_C7B1TXJM	7316-2604	BS_MH8HE4GP	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_C7HHJG7Z	7316-4516	BS_3FDXMB1Q	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_C7HHJG7Z	7316-4516	BS_9ZJT0CP0	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
@@ -2366,7 +2407,7 @@ PT_CMPNS3BQ	7316-4174	BS_1ZWSD3YQ	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_CMPNS3BQ	7316-4174	BS_B5AQJ9XV	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_CMPNS3BQ	7316-4174	BS_XQ33BNV0	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_CPYZVCN8	7316-7922	BS_18M3RHYN	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_CPYZVCN8	7316-7922	BS_90NXV63H	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_CPYZVCN8	7316-7922	BS_90NXV63H	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_CPYZVCN8	7316-7922	BS_GMKEEYR1	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_CPYZVCN8	7316-7922	BS_TG9V8P1M	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_CPZ0A4WC	7316-7921	BS_Y2KBZN1Q	Low-grade astrocytic tumor	LGAT	Low-grade glioma, MYB/MYBL1	LGG, MYB/MYBL1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2433,7 +2474,7 @@ PT_CYBYN18G	7316-2567	BS_T1SNKF50	Ependymal tumor	Ependymoma	Supratentorial epen
 PT_CYBYN18G	7316-3502	BS_871VFVQE	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
 PT_CYBYN18G	7316-3502	BS_SHKBM12T	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
 PT_CYVVA9AB	7316-3299	BS_01DQH017	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
-PT_CYVVA9AB	7316-3299	BS_BBKQVYTE	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, ST ZFTA
+PT_CYVVA9AB	7316-3299	BS_BBKQVYTE	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_CYVVA9AB	7316-3299	BS_CXVJK2FY	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_CYVVA9AB	7316-3299	BS_DXGMJJJK	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_CZRDBM1Q	7316-435	BS_8H4AWHDV	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
@@ -2463,7 +2504,7 @@ PT_D5KKHPAE	7316-4337	BS_RZ4SDMXA	Diffuse astrocytic and oligodendroglial tumor	
 PT_D5KKHPAE	7316-4740	BS_0BBCFXDQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Recurrence	NA	NA
 PT_D5KKHPAE	7316-4740	BS_6WPS513V	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Recurrence	NA	NA
 PT_D5PE7B2H	7316-45	BS_7VRTRJRE	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
-PT_D6AJHDST	7316-5161	BS_AS9XV7XG	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	EPN, PF A
+PT_D6AJHDST	7316-5161	BS_AS9XV7XG	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_D6AJHDST	7316-5161	BS_TDXY6H8G	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_D6AJHDST	7316-5161	BS_WCEE5B97	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_D6AJHDST	7316-7962	BS_E7BAT11E	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
@@ -2500,6 +2541,7 @@ PT_DACV00WF	7316-489	BS_PVZJCXS1	Embryonal tumor	Medulloblastoma	Medulloblastoma
 PT_DAKPNP7K	7316-6643	BS_1DA3F1K1	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Progressive	NA	MB, Group3
 PT_DAKPNP7K	7316-6643	BS_5NFX4ZRQ	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Progressive	NA	MB, Group3
 PT_DAKPNP7K	7316-6643	BS_NXDCQRZJ	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	Progressive	NA	MB, Group3
+PT_DB281Z4K	7316UP-310	BS_0XHT9W4Q	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Primary Tumor	NA	NA
 PT_DB800CE1	7316-261	BS_593HEWBF	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK	GNG, other MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_DB800CE1	7316-261	BS_S0MW751E	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK	GNG, other MAPK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_DBKC0M6Z	C4123698-Tumor	BS_30YWQ3FY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2555,7 +2597,7 @@ PT_DKMVGV69	7316-9845	BS_QH30P0AR	Diffuse astrocytic and oligodendroglial tumor	
 PT_DKMVGV69	7316-9845	BS_SR2RGDXJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
 PT_DKRVS07M	7316-8926	BS_53KFK3G0	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_DKRVS07M	7316-8926	BS_KHZVZECY	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_DM9H29QD	7316-513	BS_EATRXC4S	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_DM9H29QD	7316-513	BS_EATRXC4S	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_DMAF1J4A	7316-5006	BS_JD05XR6E	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_DMAF1J4A	A18552	BS_H97S5SQN	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_DMAF1J4A	A18552	BS_JCWD4DMA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -2567,9 +2609,11 @@ PT_DMMKT7X1	7316-1635	BS_8VBXKGMD	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_DMMKT7X1	7316-1635	BS_C51RB0YR	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E	NA
 PT_DMMKT7X1	7316-1635	BS_QMG7XNEW	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E	NA
 PT_DNAJYFZT	7316-4035	BS_EJ1H9PZY	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
+PT_DNAJYFZT	7316-4035	BS_P8BTR3QS	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_DNAJYFZT	7316-4035	BS_WGK8ZMVA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_DNAJYFZT	7316-4274	BS_8XJJVBQP	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Deceased	NA	NA
 PT_DNAJYFZT	7316-4274	BS_99BJN8NC	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Deceased	NA	NA
+PT_DNAJYFZT	7316-4274	BS_SZ9SVSBH	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
 PT_DNCNEQCV	7316-5220	BS_6F3TENEM	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Progressive	NA	CRANIO, PAP
 PT_DNCNEQCV	7316-5220	BS_ADEJ9BFW	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	Progressive	NA	CRANIO, PAP
 PT_DNH1VP67	7316-1062	BS_6YAX2HSE	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
@@ -2584,7 +2628,9 @@ PT_DQ3ZCHB6	7316-2195	BS_QC00MR9J	Low-grade astrocytic tumor	Ganglioglioma	Gangl
 PT_DQE0STN1	7316-3509	BS_52TQWRJN	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
 PT_DQE0STN1	7316-3509	BS_K14K54GX	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
 PT_DQE0STN1	7316-3509	BS_Q912G26N	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  To be classified	GNT, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	GNT
-PT_DQT78GS5	7316-3326	BS_BKWRRMTT	Embryonal tumor	Embryonal tumor	NA	NA	NA	Initial CNS Tumor	NA	ETMR, C19MC-altered
+PT_DQT78GS5	7316-3326	BS_37GTVG4N	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ETMR, C19MC-altered
+PT_DQT78GS5	7316-3326	BS_69VS8PS1	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ETMR, C19MC-altered
+PT_DQT78GS5	7316-3326	BS_BKWRRMTT	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ETMR, C19MC-altered
 PT_DR94DMTG	7316-9830	BS_V89KBS0Z	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_DR94DMTG	C3984954-Tumor	BS_33FDZ9QY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_DR94DMTG	C3984954-Tumor	BS_JP95KMRD	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	NA
@@ -2790,6 +2836,7 @@ PT_EN4G7A9Z	7316-7102	BS_E2VFCQF7	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_EN4G7A9Z	7316-9713	BS_0A5H37YE	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_EN4G7A9Z	7316-9713	BS_0RN1W1Q3	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_EN4G7A9Z	7316-9713	BS_K2N1WEZ7	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
+PT_EP0C760T	7316-4518	BS_A3AHDTEP	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_EP0C760T	7316-4518	BS_J61Q9P3N	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_EPFX7V9H	7316-2571	BS_9JBGVQ0M	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK, BRAF V600E	GNG, other MAPK, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
 PT_EPFX7V9H	7316-2571	BS_FAQQ0GCQ	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK, BRAF V600E	GNG, other MAPK, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
@@ -2807,10 +2854,10 @@ PT_EQ5C5TEA	7316-3922	BS_KEA474HN	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_EQ5C5TEA	7316-3922	BS_QQ96KZ3W	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, other MAPK	LGG, KIAA1549-BRAF, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF, other MAPK	NA
 PT_EQ5C5TEA	7316-7507	BS_QK96S7ZD	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	Recurrence	NA	NA
 PT_EQ5C5TEA	7316-7507	BS_XV4GV9Y9	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	Recurrence	NA	NA
-PT_EQX0VT4F	7316-6777	BS_37XTWG7A	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_EQX0VT4F	7316-6777	BS_37XTWG7A	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_EQX0VT4F	7316-6777	BS_6SVS6CRT	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_EQX0VT4F	7316-6777	BS_9DRWBVV9	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_EQX0VT4F	7316-6777	BS_ANSVC5T8	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_EQX0VT4F	7316-6777	BS_ANSVC5T8	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_EQX0VT4F	7316-8838	BS_3SE7P41D	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_EQX0VT4F	7316-8838	BS_C3H1GKM5	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_EQX0VT4F	7316-8838	BS_HJVKKWGP	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
@@ -3028,7 +3075,7 @@ PT_FSPYCARW	7316-9072	BS_8RY3JEYQ	Diffuse astrocytic and oligodendroglial tumor	
 PT_FSPYCARW	7316-9072	BS_RJ0YDAGQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_FSR10RSN	7316-7061	BS_47KWXVXE	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_FSR10RSN	7316-7061	BS_6CG1C04V	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_FSR10RSN	7316-7061	BS_B78E81YZ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_FSR10RSN	7316-7061	BS_B78E81YZ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_FSR10RSN	7316-7061	BS_X1S67ZEA	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_FV2TNKY5	7316-7929	BS_99SZG5H0	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_FVBANNK9	7316-6395	BS_54H90JW2	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, other MAPK	NA
@@ -3135,12 +3182,14 @@ PT_G9XKWA3N	7316-5463	BS_4XX4YX6D	Embryonal tumor	Medulloblastoma	NA	MB, To be c
 PT_G9XKWA3N	7316-5463	BS_DH9NX6ZR	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_G9XKWA3N	7316-5463	BS_FPZ63KF4	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_G9XKWA3N	7316-5463	BS_RYRWBV7K	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
+PT_GAEP6C9D	C4123083-Tumor	BS_8QVFVG0A	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Recurrence	NA	NA
+PT_GAEP6C9D	C4123083-Tumor	BS_Z8X2WQFH	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_GAKHC0Y2	7316-7063	BS_3RNPMRT5	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_GAKHC0Y2	7316-7063	BS_5FHTNJCD	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
 PT_GAM3E6M3	7316-872	BS_9E632VPJ	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_GAM3E6M3	7316-872	BS_E8B2JNAK	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_GAM3E6M3	7316-872	BS_XF0ZX2B3	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
-PT_GB5MHYE2	7316-1474	BS_37T009DG	Ependymal tumor	Ependymoma	NA	N/A	NA	Progressive	NA	NA
+PT_GB5MHYE2	7316-1474	BS_37T009DG	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
 PT_GB5MHYE2	7316-1475	BS_S2XWRWNT	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Progressive	NA	EPN, ST ZFTA
 PT_GB5MHYE2	7316-2289	BS_Q4ZSATCT	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Progressive	NA	EPN, ST ZFTA
 PT_GB5MHYE2	7316-761	BS_W7KHEVBY	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, ST ZFTA
@@ -3165,6 +3214,7 @@ PT_GD0TGXM3	7316-3315	BS_SY60ZGJY	Low-grade astrocytic tumor	LGAT	NA	LGG, To be 
 PT_GDDWPDMC	7316-2575	BS_3XY76V8T	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
 PT_GDDWPDMC	7316-2575	BS_9PGP77HY	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
 PT_GDDWPDMC	7316-2575	BS_V3ZNXRHK	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNT, MAPK
+PT_GDE98S17	7316-3159	BS_08TS9717	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_GDE98S17	7316-3159	BS_9PSJ10YY	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_GDZXK2AG	7316-4672	BS_4Y10FCTC	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_GDZXK2AG	7316-4672	BS_K1R6MJPB	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
@@ -3208,6 +3258,7 @@ PT_GK4GVW7A	7316-9037	BS_5VD3BNNV	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_GK4GVW7A	7316-9037	BS_7KJ58J6A	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_GK4GVW7A	7316-9037	BS_C853MJT4	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_GK725SCY	7316-5155	BS_2F4BJR0W	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_GK725SCY	7316-5155	BS_3A7KKC1V	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_GK725SCY	7316-5155	BS_XQ5ES56G	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_GKFQN9WV	7316-5261	BS_03D8KK86	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_GKFQN9WV	7316-5261	BS_KF27XVEJ	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
@@ -3491,6 +3542,8 @@ PT_HNZNZ635	7316-2151	BS_BFFK7M53	Diffuse astrocytic and oligodendroglial tumor	
 PT_HNZNZ635	7316-2151	BS_GXTFW99H	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_HNZNZ635	7316-2151	BS_SKRY0BJ4	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_HNZNZ635	7316-2151	BS_TX8C5VAJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Progressive	NA	NA
+PT_HP7WQNW4	7316UP-1962	BS_0D5XCM8E	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Recurrence	NA	NA
+PT_HP7WQNW4	7316UP-2403	BS_VZJ7403W	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Recurrence	NA	NA
 PT_HRHWFPW7	7316-5238	BS_1A406WSZ	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_HRHWFPW7	7316-5238	BS_8G3PYYR7	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_HSHPZAEZ	7316-545	BS_9CA93S6D	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
@@ -3522,7 +3575,7 @@ PT_HXDCHQ9Y	7316-2171	BS_WEGGXVYA	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be
 PT_HXEDE0JJ	7316-3644	BS_3ZEXZFSP	Low-grade astrocytic tumor	Ganglioglioma	NA	GNG, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_HXF3X28C	C4115088-Tumor	BS_981ME2R1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_HXF3X28C	C4115088-Tumor	BS_KS8HMGA6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_HXRGX93V	7316-777	BS_RCBCFYWA	Ependymal tumor	Ependymoma	NA	N/A	NA	Recurrence	NA	NA
+PT_HXRGX93V	7316-777	BS_RCBCFYWA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_HXV713W6	7316-9439	BS_M500BT9F	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_HXV713W6	7316-9439	BS_VSSBS981	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_HXV713W6	7316-9815	BS_E10P4XYZ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Recurrence	Low-grade glioma, KIAA1549-BRAF	NA
@@ -3612,7 +3665,7 @@ PT_JGTXEKNV	7316-9742	BS_CKKY5S4M	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_JGTXEKNV	7316-9742	BS_DWSKVGZ9	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_JJ8QNAM8	7316-714	BS_AW4FGY4C	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA	HGG, H3 wildtype
 PT_JJ8QNAM8	7316-714	BS_DFGS950G	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Deceased	NA	HGG, H3 wildtype
-PT_JJKK6YFQ	7316-7516	BS_C7NABWVW	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_JJKK6YFQ	7316-7516	BS_C7NABWVW	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_JJKK6YFQ	7316-7516	BS_EZASVCQJ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_JJKK6YFQ	7316-7516	BS_S902QEAA	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_JJZ5PN64	7316-8964	BS_15QDNQ4X	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -3703,8 +3756,8 @@ PT_JXSDFPNM	7316-2142	BS_39DNBN15	Meningioma	Meningioma	NA	NA	Updated via OpenPB
 PT_JXSDFPNM	7316-2142	BS_F5641KTR	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Second Malignancy	Meningioma	NA
 PT_JXSDFPNM	7316-2142	BS_MM20BVW9	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Second Malignancy	Meningioma	NA
 PT_JXSTA5HB	7316-5293	BS_3DE052QS	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_JXSTA5HB	7316-5293	BS_52VS6HDC	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_JXSTA5HB	7316-5293	BS_M3C0MZC9	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_JXSTA5HB	7316-5293	BS_52VS6HDC	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_JXSTA5HB	7316-5293	BS_M3C0MZC9	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_JXSTA5HB	7316-7065	BS_YKEK4YWT	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_JXSTA5HB	7316-8128	BS_91PQ311R	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_JXSTA5HB	7316-8128	BS_CRWF3CZQ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
@@ -3851,6 +3904,8 @@ PT_KRMVPYJ9	7316-5467	BS_PA5MWGZN	Tumors of sellar region	Craniopharyngioma	Adam
 PT_KSP2DSPE	7316-5468	BS_154HZX0A	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma	NA
 PT_KSP2DSPE	7316-5468	BS_6NBTFA33	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma	NA
 PT_KSP2DSPE	7316-5468	BS_MESNJRN8	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma	NA
+PT_KT1TR9JH	7316-8072	BS_KHHXRWMZ	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, NOS	ETMR, NOS	Updated via OpenPedCan subtyping	Progressive	NA	NA
+PT_KT1TR9JH	7316-8072	BS_R11RSZDN	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, NOS	ETMR, NOS	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_KTRJ8TFY	7316-3223	BS_3VKW5988	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_KTRJ8TFY	7316-3223	BS_BQ81D2BP	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_KTRJ8TFY	7316-3230	BS_5968GBGT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Progressive Disease Post-Mortem	NA	NA
@@ -3937,6 +3992,7 @@ PT_M72FHJXN	7316-6756	BS_N27CGYZB	Diffuse astrocytic and oligodendroglial tumor	
 PT_M72FHJXN	7316-6756	BS_V8QWBVS3	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
 PT_M72FHJXN	7316-6756	BS_XJJ2X547	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
 PT_M72FHJXN	7316-6756	BS_ZKMABATZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	DMG, H3 K28
+PT_M7ZBZJ43	7316-3897	BS_6M8GG1M8	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_M8MDJNZB	7316-8965	BS_5XC635HW	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_M8MDJNZB	7316-8965	BS_TVH33J9Q	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_M91MGM4K	7316-8938	BS_E67QTP84	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -4003,6 +4059,7 @@ PT_MGZXMQD8	7316-6363	BS_63F8QR26	Low-grade astrocytic tumor	LGAT	NA	LGG, To be 
 PT_MGZXMQD8	7316-6363	BS_F01Y8VYV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_MKDQZ17N	7316-3292	BS_QP6MSKRE	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Deceased	NA	NA
 PT_MKDQZ17N	7316-3300	BS_1J2WQ08M	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_MKDQZ17N	7316-3300	BS_S3CZSQSA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_MKKTQHP5	7316-1984	BS_27MJ4W3N	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_MKKTQHP5	7316-1984	BS_GHZJ8FX3	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype	NA
 PT_MKZ7ESSF	7316-7753	BS_93DGTKHY	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
@@ -4052,6 +4109,7 @@ PT_MSQ6GSVP	7316-2274	BS_KP735TJ6	Diffuse astrocytic and oligodendroglial tumor	
 PT_MSWWCWZP	C4120869-Tumor	BS_HRAPJC76	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_MSWWCWZP	C4120869-Tumor	BS_YWHJY99A	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Recurrence	NA	NA
 PT_MT27S7S4	7316-1969	BS_9GJHMA3J	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_MT27S7S4	7316-1969	BS_AGVA3E45	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_MT27S7S4	7316-1969	BS_VJ2S5DVS	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_MTE126WM	7316-376	BS_74A1TB03	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Progressive	NA	ATRT, MYC
 PT_MTE126WM	7316-376	BS_FARP2SQ9	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Progressive	NA	ATRT, MYC
@@ -4139,8 +4197,8 @@ PT_N9CGVG02	7316-2197	BS_V89HGTET	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_N9KYV4WB	7316-749	BS_9PQPZPGM	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_N9KYV4WB	7316-749	BS_HAVHXW0G	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_N9KYV4WB	7316-749	BS_T4P3J13C	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_N9P7RARB	7316-1479	BS_KH679HCS	Ependymal tumor	Ependymoma	NA	N/A	NA	Recurrence	NA	NA
-PT_N9P7RARB	7316-537	BS_YREMKDJA	Ependymal tumor	Ependymoma	NA	N/A	NA	Recurrence	NA	NA
+PT_N9P7RARB	7316-1479	BS_KH679HCS	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
+PT_N9P7RARB	7316-537	BS_YREMKDJA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_N9SG16EC	7316-1958	BS_4Y6BCYK5	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_N9SG16EC	7316-1958	BS_AYVAZ31P	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_N9SG16EC	7316-1958	BS_FHFVCQ41	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
@@ -4154,7 +4212,7 @@ PT_NA8NZ0BN	7316-2135	BS_YEQVW4ND	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_NAYJ2G2E	7316-8741	BS_28GWNXKN	Ependymal tumor	Ependymoma	Supratentorial ependymoma, YAP1 fusion-positive	EPN, ST YAP1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST YAP1
 PT_NAYJ2G2E	7316-8741	BS_4FXPXSR4	Ependymal tumor	Ependymoma	Supratentorial ependymoma, YAP1 fusion-positive	EPN, ST YAP1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST YAP1
 PT_NAYJ2G2E	7316-8741	BS_EMPP6N9Q	Ependymal tumor	Ependymoma	Supratentorial ependymoma, YAP1 fusion-positive	EPN, ST YAP1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST YAP1
-PT_NAYJ2G2E	7316-8741	BS_QY48KHDX	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, ST YAP1
+PT_NAYJ2G2E	7316-8741	BS_QY48KHDX	Ependymal tumor	Ependymoma	Supratentorial ependymoma, YAP1 fusion-positive	EPN, ST YAP1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST YAP1
 PT_NAYJ2G2E	7316-8741	BS_WQ0K79EA	Ependymal tumor	Ependymoma	Supratentorial ependymoma, YAP1 fusion-positive	EPN, ST YAP1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST YAP1
 PT_NBSRQAMS	7316-1079	BS_2H4A2AK9	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EWS
 PT_NBSRQAMS	7316-1079	BS_Q9NHTR7G	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EWS
@@ -4271,7 +4329,7 @@ PT_NXNCY5KD	7316-4025	BS_104JAZ50	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoi
 PT_NXNCY5KD	7316-4025	BS_M31DEPFZ	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
 PT_NYBH025T	7316-3069	BS_67Z63A2K	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_NYBH025T	7316-3069	BS_6NPSZJ4C	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
-PT_NYBH025T	7316-3069	BS_8PKNSM80	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	EPN, PF A
+PT_NYBH025T	7316-3069	BS_8PKNSM80	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_NYBH025T	7316-3069	BS_DYMT3JZG	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_NYXTSK8K	7316-5426	BS_4T3J92HK	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_NYXTSK8K	7316-5426	BS_71GFQYV5	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPedCan subtyping	Deceased	NA	NA
@@ -4331,7 +4389,7 @@ PT_PABK01H0	7316-1669	BS_185Q218S	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_PABK01H0	7316-1669	BS_AM70R8RG	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_PABK01H0	7316-1669	BS_TRDMP775	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_PAPEQ0T0	7316-5457	BS_K7HGW2FJ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_PAPEQ0T0	7316-5457	BS_S2XGY5RN	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_PAPEQ0T0	7316-5457	BS_S2XGY5RN	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_PAPEQ0T0	7316-5457	BS_W7SF8HSD	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_PAPEQ0T0	7316-5458	BS_6AQ5RR83	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_PAPEQ0T0	7316-5458	BS_C51P611V	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
@@ -4365,7 +4423,7 @@ PT_PFA762TK	7316-368	BS_XHAQXDR0	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_PFA762TK	7316-462	BS_32JF8TPP	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Recurrence	NA	LGG, FGFR
 PT_PFA762TK	7316-462	BS_JQD0V916	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Recurrence	NA	LGG, FGFR
 PT_PFA762TK	7316-462	BS_K2VYFVKZ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Recurrence	NA	LGG, FGFR
-PT_PFKHS5BR	7316-6888	BS_4AD9TXWQ	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_PFKHS5BR	7316-6888	BS_4AD9TXWQ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_PFP1ZVHD	7316-2310	BS_DEHJF4C7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E, CDKN2A/B	LGG, BRAF V600E, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E, CDKN2A/B	NA
 PT_PFP1ZVHD	7316-2310	BS_JFMJ6PH9	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E, CDKN2A/B	LGG, BRAF V600E, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E, CDKN2A/B	NA
 PT_PFP1ZVHD	7316-2310	BS_Z9PKZ4RT	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E, CDKN2A/B	LGG, BRAF V600E, CDKN2A/B	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, BRAF V600E, CDKN2A/B	NA
@@ -4475,7 +4533,7 @@ PT_Q0N3AG4D	7316-9804	BS_NK9XQ95W	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_Q25V9Y6M	7316-1668	BS_55P8HPYD	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, FGFR	LGG, KIAA1549-BRAF, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF, FGFR	NA
 PT_Q25V9Y6M	7316-1668	BS_9HDPJT21	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, FGFR	LGG, KIAA1549-BRAF, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF, FGFR	NA
 PT_Q25V9Y6M	7316-1668	BS_FNQVK8W6	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, FGFR	LGG, KIAA1549-BRAF, FGFR	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF, FGFR	NA
-PT_Q35ZZD2W	7316-4638	BS_KJM08ZYE	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_Q35ZZD2W	7316-4638	BS_KJM08ZYE	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_Q36SCWF3	C4117056-Tumor	BS_7MGXMG6S	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_Q36SCWF3	C4117056-Tumor	BS_NBW2EEMA	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_Q37KKTVP	7316-6985	BS_DAZVXFNQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
@@ -4533,7 +4591,7 @@ PT_QEP13FH4	7316-3025	BS_Y5DA59M3	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_QF2ZH1V5	7316-680	BS_EQKYB3JB	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_QF2ZH1V5	7316-680	BS_ESEAV1TN	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_QF2ZH1V5	7316-680	BS_V8M4STE2	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
-PT_QG30VHAB	7316-840	BS_YTXEHFFW	Embryonal tumor	Embryonal tumor	NA	NA	NA	Initial CNS Tumor	NA	ETMR, C19MC-altered
+PT_QG30VHAB	7316-840	BS_YTXEHFFW	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ETMR, C19MC-altered
 PT_QGT8YPVX	7316-7757	BS_B57HF0PX	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	Second Malignancy	NA	NA
 PT_QH1MHYD6	7316-4953	BS_2ZBTJ8FB	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_QH1MHYD6	7316-4953	BS_C2P690E3	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
@@ -4587,7 +4645,7 @@ PT_QVQC3KY1	7316-5887	BS_FAVZAZHE	Ependymal tumor	Ependymoma	Posterior fossa gro
 PT_QVQC3KY1	7316-5887	BS_GEX9KAKM	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QVQC3KY1	7316-5887	BS_NWNTY3FZ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QVWCRKZM	7316-5331	BS_1XFFNFY0	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_QVWCRKZM	7316-5331	BS_4CADZHM6	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_QVWCRKZM	7316-5331	BS_4CADZHM6	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QVWCRKZM	7316-5331	BS_8XZ95YPG	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QVWCRKZM	7316-5331	BS_X8KW23DG	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QW5VW2PY	7316-313	BS_A4KYP5H0	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
@@ -4597,14 +4655,14 @@ PT_QW5XF224	7316-4532	BS_G7PYDGEJ	Low-grade astrocytic tumor	Ganglioglioma	Gangl
 PT_QWN0G1GH	7316-8047	BS_KNZY0HB9	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Deceased	NA	NA
 PT_QWR0EECG	7316-1480	BS_EANQNMYY	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
 PT_QWR0EECG	7316-1480	BS_J70GK8SM	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	NA
-PT_QWR0EECG	7316-540	BS_2Q8Q7P8V	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_QWR0EECG	7316-540	BS_2Q8Q7P8V	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_QYEF3JAT	7316-1460	BS_AYDPTJZ2	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_QYEF3JAT	7316-1460	BS_H4B5Y6S0	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_QZ3KCBSC	7316-4939	BS_22WVSVNE	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_QZ3KCBSC	7316-4939	BS_A96FKXN5	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_QZN7FZER	7316-2757	BS_7BTZQKYY	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QZN7FZER	7316-2757	BS_7ZC1599X	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_QZN7FZER	7316-2757	BS_RBSQNHXB	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_QZN7FZER	7316-2757	BS_RBSQNHXB	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_QZN7FZER	7316-2757	BS_VK46N40F	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_R0H2D2KX	7316-8057	BS_YM9EJZYF	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_R0H8JTQR	7316-4265	BS_2M4174KG	Embryonal tumor	Medulloblastoma	Medulloblastoma, WNT-activated	MB, WNT	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, WNT
@@ -4730,6 +4788,8 @@ PT_RM8V31DA	7316-5539	BS_R06ABMXP	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_RMK36R2E	7316-2275	BS_NS7GSHB9	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, other MAPK	NA
 PT_RMK36R2E	7316-2275	BS_RGSJMSRE	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, other MAPK	NA
 PT_RMK36R2E	7316-2275	BS_XT819MS0	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, other MAPK	NA
+PT_RNHJMDVV	7316-2564	BS_3K04VX4H	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
+PT_RNVACT1Q	7316-5105	BS_JTXHT7QJ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_RNVACT1Q	7316-5105	BS_KW18Q4QG	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_RNVACT1Q	7316-5105	BS_NFJPYMET	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_RPC00TAJ	7316-231	BS_2EJCW07F	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Progressive	NA	NA
@@ -4953,7 +5013,7 @@ PT_T4VKB29K	7316-2125	BS_8ZP3CBQA	Ependymal tumor	Ependymoma	Posterior fossa gro
 PT_T4VKB29K	7316-2125	BS_MFTAVQ5C	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_T4VKB29K	7316-2125	BS_XFR2X7D2	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_T4VN7ZRB	7316-5295	BS_68X75R4G	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
-PT_T4VN7ZRB	7316-5295	BS_HDDK62FX	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	EPN, PF A
+PT_T4VN7ZRB	7316-5295	BS_HDDK62FX	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_T4VN7ZRB	7316-5295	BS_MS63PBQZ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_T4VN7ZRB	7316-5295	BS_TA6KZ7QQ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_T4VN7ZRB	7316-947	BS_BPKRC55C	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
@@ -4992,7 +5052,7 @@ PT_TB8HPJBN	7316-2663	BS_ZPCX9PC7	Low-grade astrocytic tumor	LGAT	NA	LGG, To be 
 PT_TD6ST5MG	7316-235	BS_2YCJV2VV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
 PT_TD6ST5MG	7316-235	BS_7GRCE406	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
 PT_TD6ST5MG	7316-235	BS_SE82EQF8	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
-PT_TE19K10J	7316-5231	BS_S5GPNBBW	Ependymal tumor	Ependymoma	NA	N/A	NA	Second Malignancy	NA	NA
+PT_TE19K10J	7316-5231	BS_S5GPNBBW	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Second Malignancy	NA	NA
 PT_TE4DP9BW	C4123206-Tumor	BS_KY0N6ZCY	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_TE4DP9BW	C4123206-Tumor	BS_S56VRTCE	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_TEBD1SES	7316-3054	BS_EFJ7JWGY	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Pilocytic astrocytoma	NA
@@ -5028,7 +5088,7 @@ PT_TP58N40V	7316-6396	BS_VQFB0WDW	Tumors of sellar region	Craniopharyngioma	Adam
 PT_TP6GS00H	7316-5456	BS_3AQ7V6ZQ	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_TP6GS00H	7316-5456	BS_6KRWM6Q5	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_TP6GS00H	7316-5456	BS_8Q7W9NSR	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
-PT_TP6GS00H	7316-5456	BS_SAEMBCPN	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, ST ZFTA
+PT_TP6GS00H	7316-5456	BS_SAEMBCPN	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_TP6GS00H	7316-7096	BS_3RWMC6WD	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_TP6GS00H	7316-7096	BS_5J7Z8DSZ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_TP6GS00H	7316-7096	BS_AWXQ0YP4	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
@@ -5087,7 +5147,7 @@ PT_V07ZH5JS	7316-472	BS_V72GX2AZ	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_V07ZH5JS	7316-472	BS_ZJWVAEAA	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	LGG, MAPK
 PT_V0C2E99Z	7316-6991	BS_CN0GW92K	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_V0C2E99Z	7316-6991	BS_Z5QBHB6Z	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
-PT_V0SSS1CT	7316-509	BS_J3V76W4V	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_V0SSS1CT	7316-509	BS_J3V76W4V	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_V0TQ0P66	7316-129	BS_2AWCKNB3	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_V0TQ0P66	7316-129	BS_NE7CH6GG	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_V0X73HEQ	7316-2182	BS_34201DKZ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
@@ -5098,8 +5158,8 @@ PT_V1HNAC2Q	7316-3215	BS_NNFDFAFM	Diffuse astrocytic and oligodendroglial tumor	
 PT_V1HNAC2Q	7316-3240	BS_YZD4SSMA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_V1HNAC2Q	A07150	BS_7KR13R3P	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_V1HNAC2Q	A07150	BS_8ZY4GST0	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_V1PVYRHP	7316-804	BS_7BRX0YCQ	Embryonal tumor	Embryonal tumor	NA	NA	NA	Deceased	NA	NA
-PT_V29SWCXF	7316-538	BS_38TKJC25	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_V1PVYRHP	7316-804	BS_7BRX0YCQ	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Deceased	NA	NA
+PT_V29SWCXF	7316-538	BS_38TKJC25	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_V2F0865M	7316-642	BS_0Y66ZBWE	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-somatic, FGFR	LGG, NF1-somatic, FGFR	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_V2F0865M	7316-642	BS_C1JWJ626	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-somatic, FGFR	LGG, NF1-somatic, FGFR	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_V2F0865M	7316-642	BS_JSMAT49K	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-somatic, FGFR	LGG, NF1-somatic, FGFR	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
@@ -5221,6 +5281,7 @@ PT_VT6QDTP4	7316-3962	BS_NY6YP0V5	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_VTF65Y63	7316-3513	BS_MSGYZ69T	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_VTF65Y63	7316-3513	BS_S6NJRR5W	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_VTF65Y63	7316-3513	BS_V9R0SQ4W	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_VTFBA8FE	ET_9HQ43WW5	BS_J3A5TY0Q	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Primary Tumor	NA	NA
 PT_VTG1S395	7316-5268	BS_9N3DMZKB	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Initial CNS Tumor	NA	ATRT, MYC
 PT_VTG1S395	7316-5268	BS_A86314EJ	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
 PT_VTG1S395	7316-5268	BS_DS1HY9A0	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
@@ -5235,7 +5296,11 @@ PT_VTM2STE3	7316-2189	BS_ERFMPQN3	Diffuse astrocytic and oligodendroglial tumor	
 PT_VTM2STE3	7316-2189	BS_HJRTC9JQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_VTM2STE3	7316-2189	BS_MQ55A0TN	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Progressive	NA	NA
 PT_VTM2STE3	7316-2189	BS_PGK832G2	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Progressive	NA	NA
-PT_VVCN8DXT	7316-71	BS_X4X1SFSE	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_VVCN8DXT	7316-71	BS_MSB1RDAJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	HGG, H3 wildtype
+PT_VVCN8DXT	7316-71	BS_PNS8DGQR	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	HGG, H3 wildtype
+PT_VVCN8DXT	7316-71	BS_X4X1SFSE	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	HGG, H3 wildtype
+PT_VVW1FYSK	C4125297-Tumor	BS_HTV7WWZJ	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_VVW1FYSK	C4125297-Tumor	BS_J4X5M7X8	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_VW5Y6N97	7316-5515	BS_DPRBAXTR	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_VW5Y6N97	7316-5515	BS_NK7H671N	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_VWZZTK38	7316-1844	BS_DQ4MMXWD	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Initial CNS Tumor	NA	NA
@@ -5255,7 +5320,8 @@ PT_VZ32W7M8	7316-5263	BS_8GBH4QYB	Tumors of sellar region	Craniopharyngioma	NA	C
 PT_VZ32W7M8	7316-5263	BS_BQFG5VKJ	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma	NA
 PT_VZ32W7M8	7316-5263	BS_F95H15HC	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma	NA
 PT_VZ32W7M8	7316-5263	BS_J39Y0TCB	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma	NA
-PT_VZEREHVW	7316-6047	BS_DB75RPCD	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_VZEREHVW	7316-6047	BS_D6HWJ3H8	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	Updated by manual curation of pathology_free_text_diagnosis	Initial CNS Tumor	NA	NA
+PT_VZEREHVW	7316-6047	BS_DB75RPCD	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	Updated by manual curation of pathology_free_text_diagnosis	Initial CNS Tumor	NA	NA
 PT_VZT2KXZ6	7316-5752	BS_ZE5SA1H4	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_VZTTTP3Q	7316-167	BS_16FT8V4B	Low-grade astrocytic tumor	LGAT	Low-grade glioma, IDH	LGG, IDH	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, IDH	NA
 PT_VZTTTP3Q	7316-167	BS_E4QK839R	Low-grade astrocytic tumor	LGAT	Low-grade glioma, IDH	LGG, IDH	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, IDH	NA
@@ -5264,6 +5330,7 @@ PT_VZX6KV61	7316-4847	BS_ZQ04SDG9	Low-grade astrocytic tumor	LGAT	NA	LGG, To be 
 PT_W027TV1R	7316-1634	BS_RC2451PY	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	Progressive	NA	NA
 PT_W17NV5YG	7316-2079	BS_FVPMPMRJ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_W17NV5YG	7316-2079	BS_V4W81SFC	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_W17NV5YG	7316-2106	BS_5H0FNCFG	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_W17NV5YG	7316-2106	BS_B4DY7ET3	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_W17NV5YG	7316-2106	BS_TCGEZJ5F	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_W2AGRJWS	7316-8618	BS_3Y6PF79N	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	Recurrence	NA	ATRT, To be classified
@@ -5332,7 +5399,7 @@ PT_WEY5N1C5	7316-5461	BS_WHNYFSKJ	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_WF4Q4SF2	7316-8860	BS_3RAM3K7B	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_WF4Q4SF2	7316-8860	BS_PRKJWXS8	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
 PT_WF4Q4SF2	7316-8860	BS_X2VRDBVG	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, SHH
-PT_WFD5FHAS	7316-5098	BS_WY2HPA89	Ependymal tumor	Ependymoma	NA	N/A	NA	Initial CNS Tumor	NA	NA
+PT_WFD5FHAS	7316-5098	BS_WY2HPA89	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_WFQNVJ4Z	7316-3925	BS_4Y93HVP4	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_WFQNVJ4Z	7316-3925	BS_CKX8RW1J	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_WFQNVJ4Z	7316-3925	BS_VFEE3ACW	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
@@ -5386,7 +5453,7 @@ PT_WPQF0B3M	7316-5328	BS_TTDNZTZ0	Diffuse astrocytic and oligodendroglial tumor	
 PT_WPYCXMDA	7316-3891	BS_QSDKJM8T	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma	NA
 PT_WPYCXMDA	7316-3891	BS_VPMKHW9X	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma	NA
 PT_WPYCXMDA	7316-3891	BS_ZTWT62DX	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma	NA
-PT_WQ2EJVF5	7316-8119	BS_1C71D5CH	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, MPE
+PT_WQ2EJVF5	7316-8119	BS_1C71D5CH	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_WQ2EJVF5	7316-8119	BS_G0RPJHA9	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_WQ2EJVF5	7316-8119	BS_HAG8H8N1	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
 PT_WQ2EJVF5	7316-8119	BS_VKSTCHRC	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, MPE
@@ -5458,14 +5525,16 @@ PT_X4PV4FBS	7316-9445	BS_J6B8ARCR	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_X4TT75N8	7316-3659	BS_4RJKBMPY	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_X4TT75N8	7316-3659	BS_ECP485VV	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_X4TT75N8	7316-3659	BS_T45AJSTV	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
+PT_X5SGG610	7316UP-1104	BS_8E8JKP01	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Primary Tumor	NA	NA
 PT_X5TQR8V2	7316-343	BS_BMMY0H73	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_X5TQR8V2	7316-343	BS_C19DFVR5	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_X5TQR8V2	7316-343	BS_TME3CH5P	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
+PT_X648RVMK	7316-238	BS_N6N147BY	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, C19MC-altered	ETMR, C19MC-altered	Updated via OpenPBTA subtyping	Progressive	NA	NA
 PT_X71D7G5S	7316-1105	BS_2ETZRJQ6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPBTA subtyping	Recurrence	NA	DHG, H3 G35
 PT_X71D7G5S	7316-1105	BS_C6ZZ3FY5	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPBTA subtyping	Recurrence	NA	DHG, H3 G35
 PT_X71D7G5S	7316-1105	BS_P8WN8XEQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	Updated via OpenPBTA subtyping	Recurrence	NA	DHG, H3 G35
 PT_X7GTQR9N	7316-7959	BS_CWTTDDTX	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
-PT_X7GTQR9N	7316-7959	BS_H4P8P54E	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	EPN, PF A
+PT_X7GTQR9N	7316-7959	BS_H4P8P54E	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_X7GTQR9N	7316-7959	BS_Q04D7JVF	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_X7GTQR9N	7316-7959	BS_V2QN65XA	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
 PT_X7GTQR9N	7316-7959	BS_ZC1194Z8	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, PF A
@@ -5555,7 +5624,7 @@ PT_XPGJ239Y	C4120500-Tumor	BS_SEFYKVEW	Low-grade astrocytic tumor	LGAT	Low-grade
 PT_XPS6EJCM	7316-4727	BS_1MG2BRXM	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_XPS6EJCM	7316-4727	BS_RNANA568	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
 PT_XPS6EJCM	7316-4727	BS_T57TTPMZ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, KIAA1549-BRAF	NA
-PT_XQVKV373	7316-3370	BS_JCSHMADP	Ependymal tumor	Ependymoma	NA	N/A	NA	Recurrence	NA	NA
+PT_XQVKV373	7316-3370	BS_JCSHMADP	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_XRQHMBHB	7316-3937	BS_2XKEWVAT	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
 PT_XRQHMBHB	7316-3937	BS_QX12J6W1	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
 PT_XRQHMBHB	7316-3937	BS_R5G3QP11	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, MYC	ATRT, MYC	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	ATRT, MYC
@@ -5614,10 +5683,11 @@ PT_XZGWKXC5	7316-8831	BS_6GPWAQ5R	Low-grade astrocytic tumor	LGAT	NA	LGG, To be 
 PT_Y0XPQ1SZ	7316-8870	BS_43EZNGJ1	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_Y0XPQ1SZ	7316-8870	BS_H6K3MGTB	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_Y0XPQ1SZ	7316-8870	BS_ZQSPP1JM	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
+PT_Y34NXFN6	7316UP-759	BS_67V4F080	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Recurrence	NA	NA
 PT_Y3T7H1R2	7316-547	BS_4MNBDGES	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	Deceased	NA	NA
 PT_Y4FN0XN1	7316-1252	BS_3GWGMS4G	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
 PT_Y4FN0XN1	7316-1252	BS_4NWHYH53	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	EPN, ST ZFTA
-PT_Y4MGJ7AJ	7316-4330	BS_FM4GT39Z	Ependymal tumor	Ependymoma	NA	N/A	NA	Unavailable	NA	NA
+PT_Y4MGJ7AJ	7316-4330	BS_FM4GT39Z	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Unavailable	NA	NA
 PT_Y572BRC1	7316-2147	BS_EN2VK7NY	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Progressive	NA	LGG, MAPK
 PT_Y572BRC1	7316-2147	BS_JA3XXP1Y	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Progressive	NA	LGG, MAPK
 PT_Y572BRC1	7316-2147	BS_MYT6NAAB	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	Progressive	NA	LGG, MAPK
@@ -5747,6 +5817,7 @@ PT_YKVK5HTK	7316-441	BS_M4TTKPNR	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_YM51XZH0	7316-5929	BS_122BPTBJ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
 PT_YM51XZH0	7316-5929	BS_1RS20EMZ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
 PT_YM51XZH0	7316-5929	BS_2ESN6Q0D	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
+PT_YM51XZH0	7316-5929	BS_32TK5JR8	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
 PT_YM51XZH0	7316-5929	BS_4BJMWMF2	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
 PT_YM51XZH0	7316-5929	BS_6N7YE1A4	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
 PT_YM51XZH0	7316-5929	BS_9SJB1XRH	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Deceased	NA	EPN, PF A
@@ -5854,6 +5925,7 @@ PT_Z4BF2NSB	7316-6477	BS_RREMNJJB	Diffuse astrocytic and oligodendroglial tumor	
 PT_Z4BF2NSB	7316-6477	BS_WDD8VE0Z	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	Deceased	NA	HGG, H3 wildtype
 PT_Z4GS3ZQQ	7316-740	BS_6ZP2KRPW	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_Z4GS3ZQQ	7316-740	BS_EVCAC3NH	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_Z4GS3ZQQ	7316-740	BS_ZH0HTV7S	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_Z4PJA6KT	7316-1763	BS_6WP1FHTE	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_Z4PJA6KT	7316-1763	BS_853PNV7P	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
 PT_Z4PJA6KT	7316-1763	BS_DRY58DTF	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
@@ -5922,6 +5994,7 @@ PT_ZMKMKCFQ	7316-2988	BS_2R9TCR03	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_ZMKMKCFQ	7316-2988	BS_E900B9S5	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_ZMKMKCFQ	7316-2988	BS_GRS3T427	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK	LGG, RTK	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_ZNYCHPNG	7316-6394	BS_F8QBB0AK	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_ZNYCHPNG	7316-6394	BS_JE0V6WMZ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_ZP4W7JN6	7316-1074	BS_SPJCNAT7	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_ZP4W7JN6	7316-1074	BS_WJK28RGB	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
 PT_ZPE3RXF0	7316-3398	BS_D0KV2X28	Meningioma	Meningioma	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma	NA
@@ -5970,18 +6043,19 @@ PT_ZZRBX5JT	7316-2661	BS_HZ707C55	Ependymal tumor	Ependymoma	NA	EPN, To be class
 PT_ZZRBX5JT	7316-2661	BS_JE1DF581	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_ZZRBX5JT	7316-3319	BS_9N3B3HZB	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_ZZRBX5JT	7316-3319	BS_FJC1RB8X	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
-PT_ZZRBX5JT	7316-3319	BS_WCFGW07E	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	EPN, PF A
+PT_ZZRBX5JT	7316-3319	BS_WCFGW07E	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_ZZRBX5JT	7316-3319	BS_YE1MAQYJ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Recurrence	NA	EPN, PF A
 PT_ZZRBX5JT	7316-4423	BS_5ZECW8YX	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-4423	BS_672V4AHJ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
-PT_ZZRBX5JT	7316-4423	BS_PR9JVJSD	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	EPN, PF A
+PT_ZZRBX5JT	7316-4423	BS_PR9JVJSD	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-4423	BS_SB0GXSZA	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-496	BS_AGD2ATY1	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
 PT_ZZRBX5JT	7316-496	BS_PJPGVD62	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
-PT_ZZRBX5JT	7316-5188	BS_71M3ZGM6	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	EPN, PF A
+PT_ZZRBX5JT	7316-496	BS_T89RQNXB	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Initial CNS Tumor	NA	NA
+PT_ZZRBX5JT	7316-5188	BS_71M3ZGM6	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-5188	BS_PJ2S96H1	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-5188	BS_ZGAEK877	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
-PT_ZZRBX5JT	7316-5484	BS_7576V83X	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Progressive	NA	EPN, PF A
+PT_ZZRBX5JT	7316-5484	BS_7576V83X	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-5484	BS_AWQWQMJR	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-5484	BS_GSA8PYNF	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A
 PT_ZZRBX5JT	7316-6666	BS_6PJ5AWNE	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA	EPN, PF A

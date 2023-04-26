@@ -12,7 +12,7 @@ Adamantinomatous Craniopharyngioma	Recurrence	31
 Adenocarcinoma	Primary Tumor	2
 Anaplastic Large Cell Lymphoma	Primary Tumor	2
 Angiosarcoma	Primary Tumor	1
-Astroblastoma	Initial CNS Tumor	1
+Astroblastoma	Initial CNS Tumor	2
 Astrocytoma	Primary Tumor	1
 Atypical choroid plexus papilloma	Initial CNS Tumor	7
 Atypical choroid plexus papilloma	Progressive	3
@@ -49,9 +49,11 @@ Chronic Myelogenous Leukemia	Primary Tumor	2
 CIC-DUX4 Sarcoma	Primary Tumor	1
 Clear cell sarcoma of the kidney	Primary Tumor	24
 CNS Burkitt's lymphoma	Initial CNS Tumor	3
-CNS Embryonal tumor	Initial CNS Tumor	27
-CNS Embryonal tumor	Progressive	7
-CNS Embryonal tumor	Recurrence	8
+CNS Embryonal tumor	Deceased	3
+CNS Embryonal tumor	Initial CNS Tumor	39
+CNS Embryonal tumor	Primary Tumor	1
+CNS Embryonal tumor	Progressive	10
+CNS Embryonal tumor	Recurrence	13
 CNS Melanoma	Initial CNS Tumor	1
 CNS neuroblastoma	Initial CNS Tumor	8
 CNS neuroblastoma	Recurrence	2
@@ -80,17 +82,10 @@ Dysembryoplastic neuroepithelial tumor	Primary Tumor	1
 Dysembryoplastic neuroepithelial tumor	Progressive	22
 Dysembryoplastic neuroepithelial tumor	Recurrence	10
 Dysgerminoma	Primary Tumor	1
-Embryonal tumor	Deceased	1
-Embryonal tumor	Initial CNS Tumor	3
-Embryonal tumor	Progressive	3
-Embryonal tumor	Recurrence	3
-Embryonal Tumor NOS	Primary Tumor	1
-Embryonal tumor with multilayer rosettes	Deceased	2
-Embryonal tumor with multilayer rosettes	Initial CNS Tumor	17
-Embryonal tumor with multilayer rosettes	Progressive	2
-Embryonal tumor with multilayer rosettes	Recurrence	2
+Embryonal tumor with multilayer rosettes	Initial CNS Tumor	8
+Embryonal tumor with multilayer rosettes	Progressive	3
 Ependymoma	Deceased	38
-Ependymoma	Initial CNS Tumor	449
+Ependymoma	Initial CNS Tumor	448
 Ependymoma	Not Reported	2
 Ependymoma	Progressive	108
 Ependymoma	Recurrence	116
@@ -124,13 +119,12 @@ Glial-neuronal tumor	Progressive	6
 Glial-neuronal tumor	Recurrence	13
 Glioblastoma	Primary Tumor	3
 Glioblastoma	Recurrence	3
-Gliomatosis Cerebri	Initial CNS Tumor	3
 Hemangioblastoma	Initial CNS Tumor	18
 Hemangioblastoma	Progressive	6
 Hepatoblastoma	Primary Tumor	4
 Hepatocellular Carcinoma	Primary Tumor	1
 High-grade glioma	Deceased	119
-High-grade glioma	Initial CNS Tumor	390
+High-grade glioma	Initial CNS Tumor	393
 High-grade glioma	Primary Tumor	1
 High-grade glioma	Progressive	87
 High-grade glioma	Progressive Disease Post-Mortem	1

@@ -13,7 +13,7 @@ DGD	Adenocarcinoma	Adenocarcinoma	No	No
 TCGA	Adrenocortical Carcinoma	Adrenocortical Carcinoma	No	No
 DGD	Anaplastic Large Cell Lymphoma	Anaplastic Large Cell Lymphoma	No	No
 DGD	Angiosarcoma	Angiosarcoma	No	No
-PBTA	Astroblastoma	Astroblastoma	No	No
+PBTA	Other	Astroblastoma	No	Yes
 PBTA	Astrocytoma	Astrocytoma	No	No
 PBTA	Atypical choroid plexus papilloma	Atypical choroid plexus papilloma	No	No
 PBTA	Atypical Teratoid Rhabdoid Tumor, MYC	Atypical Teratoid Rhabdoid Tumor	Yes	No
@@ -46,7 +46,6 @@ DGD	CIC-DUX4 Sarcoma	CIC-DUX4 Sarcoma	No	No
 TARGET	Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney	No	Yes
 PBTA	CNS Burkitt's lymphoma	CNS Burkitt's lymphoma	No	No
 PBTA	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
-PBTA	CNS Embryonal tumor	CNS Embryonal tumor	No	No
 PBTA	CNS Embryonal tumor, HGNET-MN1	CNS Embryonal tumor	Yes	No
 DGD	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 DGD	CNS Melanoma	CNS Melanoma	No	No
@@ -70,22 +69,22 @@ PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysgerminoma	Dysgerminoma	No	No
-PBTA	Embryonal tumor	Embryonal tumor	No	No
-PBTA	Supratentorial or Spinal Cord PNET	Embryonal tumor	No	Yes
-DGD	Embryonal Tumor NOS	Embryonal Tumor NOS	No	No
-PBTA	Embryonal Tumor with Multilayered Rosettes (ETMR)	Embryonal tumor with multilayer rosettes	No	Yes
 PBTA	Embryonal tumor with multilayer rosettes, C19MC-altered	Embryonal tumor with multilayer rosettes	Yes	No
-DGD	Embryonal Tumor with Multilayered Rosettes (ETMR)	Embryonal tumor with multilayer rosettes	No	Yes
+PBTA	Embryonal tumor with multilayer rosettes, NOS	Embryonal tumor with multilayer rosettes	Yes	No
 PBTA	Posterior fossa group A (PFA) ependymoma	Ependymoma	No	Yes
 PBTA	Ependymoma	Ependymoma	No	No
 PBTA	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
 DGD	Ependymoma	Ependymoma	No	No
+DGD	Posterior fossa group A (PFA) ependymoma	Ependymoma	No	Yes
 PBTA	Myxopapillary ependymoma	Ependymoma	No	Yes
 PBTA	Supratentorial ependymoma, YAP1 fusion-positive	Ependymoma	Yes	Yes
 PBTA	Posterior fossa group B (PFB) ependymoma	Ependymoma	No	Yes
+DGD	Myxopapillary ependymoma	Ependymoma	No	Yes
 PBTA	Spinal ependymoma	Ependymoma	No	Yes
 DGD	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
 PBTA	Spinal ependymoma, MYCN-amplified	Ependymoma	Yes	Yes
+DGD	Posterior fossa group B (PFB) ependymoma	Ependymoma	No	Yes
+DGD	Supratentorial ependymoma, YAP1 fusion-positive	Ependymoma	Yes	Yes
 PBTA	Posterior fossa subependymoma	Ependymoma	No	Yes
 PBTA	Spinal subependymoma	Ependymoma	No	Yes
 PBTA	Epstein-Barr virus-related tumor	Epstein-Barr virus-related tumor	No	No
@@ -149,7 +148,6 @@ PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor, FGFR	Glial-neuronal tumor	Yes	No
 PBTA	Glioblastoma	Glioblastoma	No	No
 TCGA	Glioblastoma Multiforme	Glioblastoma Multiforme	No	No
-PBTA	Gliomatosis Cerebri	Gliomatosis Cerebri	No	No
 TCGA	Head and Neck Squamous Cell Carcinoma	Head and Neck Squamous Cell Carcinoma	No	No
 PBTA	Hemangioblastoma	Hemangioblastoma	No	No
 DGD	Hemangioblastoma	Hemangioblastoma	No	No
@@ -373,7 +371,6 @@ DGD	Hypophyseal stalk thickening	NA	No	Yes
 DGD	Nodular fasciitis	NA	No	Yes
 DGD	Undifferentiated malignant neoplasm	NA	No	Yes
 PBTA	Non-germinomatous germ cell tumor;Teratoma	NA	No	Yes
-PBTA	Embryonal Tumor with Multilayered Rosettes (ETMR);High-grade glioma/astrocytoma (WHO grade III/IV)	NA	No	Yes
 PBTA	Fibroma	NA	No	Yes
 DGD	Neuroblastic tumor	NA	No	Yes
 PBTA	Vascular malformation	NA	No	Yes
