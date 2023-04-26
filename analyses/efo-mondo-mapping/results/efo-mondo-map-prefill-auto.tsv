@@ -6,6 +6,9 @@ Adenocarcinoma	EFO_0000228	MONDO_0004970	NCIT_C2852	EFO_0000228	MONDO_0004970	NC
 Adrenocortical Carcinoma	EFO_1000796	MONDO_0006639	NCIT_C9325	MONDO_0008734	MONDO_0008734	NCIT_C9325	adrenocortical carcinoma, hereditary	adrenocortical carcinoma, hereditary	Adrenal Cortical Carcinoma	False	False	False	False	False	True
 Anaplastic Large Cell Lymphoma	EFO_0003032	MONDO_0020325	NCIT_C3720	EFO_0003032	MONDO_0020325	NCIT_C3720	anaplastic large cell lymphoma	anaplastic large cell lymphoma	Anaplastic Large Cell Lymphoma	True	True	True	True	True	True
 Angiosarcoma	EFO_0003968	MONDO_0016982	NCIT_C3088	EFO_0003968	MONDO_0016982	NCIT_C3088	angiosarcoma	angiosarcoma	Angiosarcoma	True	True	True	True	True	True
+Astroblastoma	MONDO_0016707	MONDO_0016707	NCIT_C4324	MONDO_0016707	MONDO_0016707	NCIT_C4324	astroblastoma	astroblastoma	Astroblastoma, MN1-Altered	True	True	False	True	True	True
+Astrocytoma	EFO_0000272	MONDO_0019781	NCIT_C6958	EFO_0000272	MONDO_0003165	NCIT_C60781	astrocytoma	cerebellar astrocytoma	Astrocytoma	True	False	True	True	False	False
+Atypical Choroid Plexus Papilloma	MONDO_0002684	MONDO_0002684	NCIT_C53686	EFO_1000177	MONDO_0002684	NCIT_C53686	Choroid Plexus Papilloma	atypical choroid plexus papilloma	Atypical Choroid Plexus Papilloma	False	True	True	False	True	True
 Atypical Teratoid Rhabdoid Tumor	EFO_1002008	MONDO_0020560	NCIT_C6906	EFO_1002008	MONDO_0020560	NCIT_C6906	atypical teratoid rhabdoid tumor	atypical teratoid rhabdoid tumor	Atypical Teratoid/Rhabdoid Tumor	True	True	False	True	True	True
 B Acute Lymphoblastic Leukemia/Lymphoma	EFO_0000094	MONDO_0004967	NCIT_C8644	EFO_0000094	MONDO_0003538	NCIT_C8936	B-cell acute lymphoblastic leukemia	precursor lymphoblastic lymphoma/leukemia	B Lymphoblastic Leukemia/Lymphoma	False	False	False	True	False	False
 Bladder Urothelial Carcinoma	EFO_0006544	MONDO_0005611	NCIT_C39851	MONDO_0004163	MONDO_0004056	NCIT_C39851	bladder urachal urothelial carcinoma	bladder papillary urothelial carcinoma	Bladder Urothelial Carcinoma	False	False	True	False	False	True
@@ -24,6 +27,7 @@ Chromophobe renal cell carcinoma	EFO_0000335	MONDO_0017885	NCIT_C4146	EFO_000033
 Chronic Myelogenous Leukemia	EFO_0000339	MONDO_0011996	NCIT_C3174	EFO_0000339	HP_0005506	NCIT_C3174	chronic myelogenous leukemia	Chronic myelogenous leukemia	Chronic Myelogenous Leukemia, BCR-ABL1 Positive	True	True	False	True	False	True
 CIC-DUX4 Sarcoma	EFO_0000691	MONDO_0005089	NCIT_C165663	EFO_0000691	MONDO_0005089	NCIT_C165663	sarcoma	sarcoma	CIC-DUX4 Sarcoma	False	False	True	True	True	True
 Clear cell sarcoma of the kidney	EFO_0000350	MONDO_0005006	NCIT_C4264	EFO_0000350	MONDO_0005006	NCIT_C4264	clear cell sarcoma of the kidney	clear cell sarcoma of kidney	Clear Cell Sarcoma of the Kidney	True	False	True	True	True	True
+CNS Burkitt's Lymphoma	EFO_0000309	MONDO_0007243	NCIT_C2912	EFO_0000309	MONDO_0007243	NCIT_C7187	Burkitts lymphoma	Burkitt lymphoma	Non-Burkitt's Lymphoma	False	False	False	True	True	False
 CNS Embryonal tumor	EFO_0005784	MONDO_0018843	NCIT_C5398	EFO_0005784	MONDO_0003141	NCIT_C6990	embryonal neoplasm	cerebellopontine angle embryonal tumor	Central Nervous System Embryonal Tumor	False	False	False	True	False	False
 CNS Melanoma	EFO_0002617	MONDO_0005191	NCIT_C133504	MONDO_0016747	MONDO_0005105	NCIT_C5505	primary melanoma of the central nervous system	melanoma	Central Nervous System Melanoma	False	False	False	False	False	False
 CNS neuroblastoma	EFO_0000621	MONDO_0006130	NCIT_C4826	EFO_0000621	MONDO_0005072	NCIT_C186547	neuroblastoma	neuroblastoma	Central Nervous System Neuroblastoma, FOXR2-Activated	False	False	False	True	False	False
@@ -32,6 +36,7 @@ Craniopharyngioma	EFO_1000209	MONDO_0002787	NCIT_C2964	EFO_1000209	MONDO_0018907
 Cutaneous Melanoma	EFO_0000389	MONDO_0005012	NCIT_C3510	EFO_0000389	MONDO_0005012	NCIT_C3510	cutaneous melanoma	cutaneous melanoma	Cutaneous Melanoma	True	True	True	True	True	True
 Desmoid-type fibromatosis	EFO_0009907	Orphanet_873	NCIT_C9182	EFO_0009907	MONDO_0007608	NCIT_C9182	Desmoid-type fibromatosis	desmoid tumor	Desmoid Fibromatosis	True	False	False	True	False	True
 Desmoplastic infantile astrocytoma and ganglioglioma	MONDO_0016731	MONDO_0016731	NCIT_C4747	MONDO_0016729	MONDO_0016731	NCIT_C21969	mixed neuronal-glial tumor	desmoplastic infantile astrocytoma/ganglioglioma	Mouse Desmoplastic Infantile Astrocytoma / Ganglioglioma	False	False	False	False	True	False
+Diffuse fibrillary astrocytoma	NA	NA	NA	EFO_0000272	MONDO_0016688	NCIT_C4322	astrocytoma	fibrillary astrocytoma	Fibrillary Astrocytoma	False	False	False	False	False	False
 Diffuse hemispheric glioma	NA	NA	NA	EFO_1000026	MONDO_0006033	NCIT_C185371	diffuse intrinsic pontine glioma	diffuse intrinsic pontine glioma	Diffuse Hemispheric Glioma, H3 G34-Mutant	False	False	False	False	False	False
 Diffuse intrinsic pontine glioma	EFO_1000026	MONDO_0006033	NCIT_C94764	EFO_1000026	MONDO_0006033	NCIT_C94764	diffuse intrinsic pontine glioma	diffuse intrinsic pontine glioma	Diffuse Intrinsic Pontine Glioma	True	True	True	True	True	True
 Diffuse leptomeningeal glioneuronal tumor	MONDO_0016745	MONDO_0016745	NCIT_C129424	EFO_1001012	MONDO_0016745	NCIT_C129424	leptomeningeal metastasis	diffuse leptomeningeal melanocytosis	Diffuse Leptomeningeal Glioneuronal Tumor	False	False	True	False	True	True
@@ -54,6 +59,7 @@ Germ Cell Tumor	EFO_0000514	MONDO_0005040	NCIT_C3708	EFO_0000514	MONDO_0005040	N
 Germinoma	MONDO_0020580	MONDO_0020580	NCIT_C121618	EFO_0004281	MONDO_0002598	NCIT_C8712	testicular neoplasm	germinoma	Pineal Region Germinoma	False	True	False	False	False	False
 Glial-neuronal tumor	NA	NA	NA	MONDO_0016729	MONDO_0016729	NCIT_C7372	mixed neuronal-glial tumor	mixed neuronal-glial tumor	Cerebellar Glioneuronal and Neuronal Tumors	False	False	False	False	False	False
 Glial-neuronal tumor NOS	MONDO_0016729	MONDO_0016729	NCIT_C4747	MONDO_0016729	MONDO_0016729	NCIT_C3716	mixed neuronal-glial tumor	mixed neuronal-glial tumor	Primitive Neuroectodermal Tumor	False	False	False	True	True	False
+Glioblastoma	MONDO_0018177	MONDO_0018177	NCIT_C3058	MONDO_0018177	MONDO_0018177	NCIT_C3058	glioblastoma	glioblastoma	Glioblastoma	True	True	True	True	True	True
 Glioblastoma Multiforme	EFO_0000519	MONDO_0018177	NCIT_C3058	EFO_0000519	MONDO_0018177	NCIT_C3058	glioblastoma multiforme	glioblastoma	Glioblastoma	True	False	False	True	True	True
 Gliomatosis Cerebri	MONDO_0016683	MONDO_0016683	NCIT_C4318	MONDO_0016683	MONDO_0016683	NCIT_C4318	gliomatosis cerebri	gliomatosis cerebri	Gliomatosis Cerebri	True	True	True	True	True	True
 Head and Neck Squamous Cell Carcinoma	EFO_0000181	MONDO_0010150	NCIT_C34447	EFO_0000181	MONDO_0010150	NCIT_C34447	head and neck squamous cell carcinoma	head and neck squamous cell carcinoma	Head and Neck Squamous Cell Carcinoma	True	True	True	True	True	True
@@ -97,6 +103,7 @@ Ovarian Serous Cystadenocarcinoma	EFO_1000043	MONDO_0006046	NCIT_C7978	EFO_10000
 Pancreatic Adenocarcinoma	EFO_1000044	MONDO_0006047	NCIT_C8294	EFO_1000044	MONDO_0006047	NCIT_C8294	pancreatic adenocarcinoma	pancreatic adenocarcinoma	Pancreatic Adenocarcinoma	True	True	True	True	True	True
 Perineuroma	NA	NA	NA	Not found	Not found	Not found	Not found	Not found	Not found	False	False	False	False	False	False
 Pheochromocytoma and Paraganglioma	EFO_0020005	MONDO_0035540	NA	EFO_0020005	MONDO_0035540	NCIT_C136560	pheochromocytoma-paraganglioma	pheochromocytoma-paraganglioma	Apparent Sporadic Paraganglioma or Pheochromocytoma	False	False	False	True	True	False
+Pilocytic astrocytoma	MONDO_0016691	MONDO_0016691	NCIT_C4047	MONDO_0016691	MONDO_0016691	NCIT_C4047	pilocytic astrocytoma	pilocytic astrocytoma	Pilocytic Astrocytoma	True	True	True	True	True	True
 Pineal tumor	MONDO_0021232	MONDO_0021232	NCIT_C3328	MONDO_0021232	MONDO_0003248	NCIT_C3328	pineal body neoplasm	adult pineal parenchymal tumor	Pineal Region Neoplasm	False	False	False	True	False	True
 Pineoblastoma	EFO_1000475	MONDO_0016722	NCIT_C9344	EFO_1000475	MONDO_0016722	NCIT_C9344	Pineoblastoma	pineoblastoma	Pineoblastoma	True	True	True	True	True	True
 Pineocytoma	EFO_1000476	MONDO_0016723	NCIT_C6966	EFO_1000476	MONDO_0016723	NCIT_C6966	Pineocytoma	pineocytoma	Pineocytoma	True	True	True	True	True	True
