@@ -26,7 +26,7 @@ spine = c("spinal", "spine")
 
 # filter for ependymoma samples 
 EP = pbta_histologies %>%
-  filter(pathology_diagnosis =="Ependymoma") %>%
+  filter(grepl("Ependymoma", pathology_diagnosis)) %>%
   mutate(id = paste(sample_id, sample_type, tumor_descriptor, sep = "_"))
 
 
