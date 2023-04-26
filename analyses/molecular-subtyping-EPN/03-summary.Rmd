@@ -39,7 +39,7 @@ data_dir <- file.path(root_dir, "data")
 ```{r message=FALSE}
 # Read in histologies file
 epn_samples <- read_tsv(file.path(data_dir, "histologies-base.tsv"), guess_max = 100000) %>%
-  filter(pathology_diagnosis =="Ependymoma") %>%
+  filter(grepl("Ependymoma", pathology_diagnosis)) %>%
   mutate(id = paste(sample_id, sample_type, tumor_descriptor, sep = "_"))
 
 # Reading in table from results folder without the molecular_subtype column
