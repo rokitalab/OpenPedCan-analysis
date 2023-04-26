@@ -919,8 +919,8 @@ PT_44EJ9T07	7316-4205	BS_DC7RQ790	Mesenchymal non-meningothelial tumor	EWS	Ewing
 PT_44HPG5YT	7316-3067	BS_680K119G	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
 PT_44HPG5YT	7316-3067	BS_BZWM455T	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
 PT_44HPG5YT	7316-3067	BS_J8KXGDXJ	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	GNG, MAPK
-PT_45E5JA1P	7316-4463	BS_9B41DFBH	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
-PT_45E5JA1P	7316-4463	BS_MFWDM961	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_45E5JA1P	7316-4463	BS_9B41DFBH	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
+PT_45E5JA1P	7316-4463	BS_MFWDM961	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	NA
 PT_45P9F9MD	7316-314	BS_0E16EN6E	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_45P9F9MD	7316-314	BS_0RF0G9SQ	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_45P9F9MD	7316-314	BS_GNV89A5P	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
