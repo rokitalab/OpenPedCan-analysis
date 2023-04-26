@@ -213,7 +213,7 @@ PT_GGZVT7NJ	BS_3KHY7S7N	PBTA	Medulloblastoma	WXS	Initial CNS Tumor
 PAVIZV	BS_3KPKZVGX	GMKF	Ganglioneuroblastoma	WGS	Primary Tumor
 PT_HQSVFBPH	BS_3MJT93EX	PBTA	Dysembryoplastic neuroepithelial tumor	WGS	Initial CNS Tumor
 PT_S4YNE17X	BS_3MYQP7P5	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
-PT_BRVGRXQY	BS_3PATZ29V	PBTA	Embryonal tumor	WGS	Initial CNS Tumor
+PT_BRVGRXQY	BS_3PATZ29V	PBTA	CNS Embryonal tumor	WGS	Initial CNS Tumor
 PT_BZCJMEX8	BS_3PRZ5AVW	PBTA	Ependymoma	WGS	Initial CNS Tumor
 PT_5JMNQAY8	BS_3PWMTKET	PBTA	Ewing sarcoma	WGS	Initial CNS Tumor
 PT_YKVK5HTK	BS_3QDRWJCF	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
@@ -602,7 +602,7 @@ PT_QW5VW2PY	BS_A4KYP5H0	PBTA	Medulloblastoma	WGS	Initial CNS Tumor
 PATZRF	BS_A527Y2QF	GMKF	Neuroblastoma	WGS	Primary Tumor
 PATLKI	BS_A5AQFAFA	GMKF	Ganglioneuroblastoma	WGS	Primary Tumor
 PT_C1HRBJJD	BS_A68G6S29	PBTA	Schwannoma	WGS	Initial CNS Tumor
-PT_017WC8PS	BS_A6E869SH	PBTA	Embryonal tumor with multilayer rosettes	WXS	Initial CNS Tumor
+PT_017WC8PS	BS_A6E869SH	PBTA	CNS Embryonal tumor	WXS	Initial CNS Tumor
 PT_C5FKRB1P	BS_A6YJ3WG2	PBTA	High-grade glioma	WXS	Initial CNS Tumor
 PT_VTG1S395	BS_A86314EJ	PBTA	Atypical Teratoid Rhabdoid Tumor	WGS	Initial CNS Tumor
 PT_9XAA8PF6	BS_A9S5HT6P	PBTA	NA	WGS	Initial CNS Tumor
@@ -1062,7 +1062,7 @@ PASAVJ	BS_J3707KE2	GMKF	Neuroblastoma	WGS	Primary Tumor
 PT_55CW8W22	BS_J47SXWH0	PBTA	Subependymal Giant Cell Astrocytoma	WGS	Initial CNS Tumor
 PT_F5EG8TK5	BS_J49XSYXM	PBTA	Adamantinomatous Craniopharyngioma	WGS	Initial CNS Tumor
 PT_T8V9ES93	BS_J4E9SW51	PBTA	Pleomorphic xanthoastrocytoma	WGS	Initial CNS Tumor
-PT_VVW1FYSK	BS_J4X5M7X8	PBTA	Embryonal tumor with multilayer rosettes	WXS	Initial CNS Tumor
+PT_VVW1FYSK	BS_J4X5M7X8	PBTA	CNS Embryonal tumor	WXS	Initial CNS Tumor
 PAUPSP	BS_J5C6FMYZ	GMKF	Neuroblastoma	WGS	Primary Tumor
 PT_360E6Z0S	BS_J5VK3B8C	PBTA	Ependymoma	WGS	Initial CNS Tumor
 PT_EP0C760T	BS_J61Q9P3N	PBTA	Ependymoma	WGS	Initial CNS Tumor
@@ -1160,7 +1160,7 @@ PT_GVDMG7KC	BS_KM878Y43	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
 PT_32CD03EE	BS_KMFX23ZZ	PBTA	Medulloblastoma	WGS	Initial CNS Tumor
 PT_Y74CVASJ	BS_KPG4WCHS	PBTA	Diffuse midline glioma	WXS	Initial CNS Tumor
 PT_F822DBA0	BS_KPWRDRFP	PBTA	Ewing sarcoma	WGS	Initial CNS Tumor
-PT_4M81AYHH	BS_KQM96PHV	PBTA	Embryonal tumor with multilayer rosettes	WXS	Initial CNS Tumor
+PT_4M81AYHH	BS_KQM96PHV	PBTA	CNS Embryonal tumor	WXS	Initial CNS Tumor
 PT_RH59ET3M	BS_KRYYDC2X	PBTA	Medulloblastoma	WGS	Initial CNS Tumor
 PT_JK7BAVGR	BS_KS1Q0JMA	PBTA	Diffuse midline glioma	WXS	Initial CNS Tumor
 PT_VAJN5QP8	BS_KSHETTQC	PBTA	High-grade glioma	WGS	Initial CNS Tumor
@@ -1219,7 +1219,7 @@ PASSFD	BS_MQ6RKJCD	GMKF	Neuroblastoma	WGS	Primary Tumor
 PT_0449KSQ3	BS_MQFW7E1K	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
 PT_AYV78KT9	BS_MQH4G1NZ	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
 PT_H4H6RD7Y	BS_MS87PMR7	PBTA	Glial-neuronal tumor	WGS	Initial CNS Tumor
-PT_VVCN8DXT	BS_MSB1RDAJ	PBTA	Gliomatosis Cerebri	WGS	Initial CNS Tumor
+PT_VVCN8DXT	BS_MSB1RDAJ	PBTA	High-grade glioma	WGS	Initial CNS Tumor
 PT_VTF65Y63	BS_MSGYZ69T	PBTA	Craniopharyngioma	WGS	Initial CNS Tumor
 PT_ZR8MQRVG	BS_MT5ZSRG4	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
 PASFNY	BS_MTQ7F28J	GMKF	Neuroblastoma	WGS	Primary Tumor
@@ -1325,7 +1325,7 @@ PT_H5R0M2P6	BS_P9P1N48D	PBTA	Diffuse midline glioma	WGS	Initial CNS Tumor
 PT_JCFBT5TR	BS_PC1SQ3P7	PBTA	Ependymoma	WGS	Initial CNS Tumor
 PT_E24DN34J	BS_PC2FAWCJ	PBTA	Diffuse midline glioma	WGS	Initial CNS Tumor
 PT_YJBPEF4V	BS_PC2YQ4F6	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
-PT_A3N82JTH	BS_PCMHH474	PBTA	Embryonal tumor with multilayer rosettes	WGS	Initial CNS Tumor
+PT_A3N82JTH	BS_PCMHH474	PBTA	CNS Embryonal tumor	WGS	Initial CNS Tumor
 PT_5SKQHRC5	BS_PCVV9GJG	PBTA	High-grade glioma	WXS	Initial CNS Tumor
 PT_CTC9ZDNY	BS_PD37THK0	PBTA	Low-grade glioma	WGS	Initial CNS Tumor
 PT_XZGWKXC5	BS_PDF449DD	PBTA	Low-grade glioma	WGS	Initial CNS Tumor

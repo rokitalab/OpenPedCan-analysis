@@ -299,7 +299,7 @@ PT_TKWF5MDW	BS_F7HXBZH4	PBTA	NA	RNA-Seq	Recurrence
 PT_3FH27J1X	BS_FA3JYABA	PBTA	Oligodendroglioma	RNA-Seq	Recurrence
 PT_FMK5VFYW	BS_FBJ5Q54N	PBTA	CNS Embryonal tumor	RNA-Seq	Progressive
 PT_3KM9W8S8	BS_FBR1YZVA	PBTA	Atypical Teratoid Rhabdoid Tumor	RNA-Seq	Deceased
-PT_00G007DM	BS_FEPRNEXX	PBTA	Embryonal tumor with multilayer rosettes	RNA-Seq	Recurrence
+PT_00G007DM	BS_FEPRNEXX	PBTA	CNS Embryonal tumor	RNA-Seq	Recurrence
 PT_0KTVJ74J	BS_FHM1TKTT	PBTA	Medulloblastoma	RNA-Seq	Deceased
 PT_F0CH8F8M	BS_FJ2H219D	PBTA	High-grade glioma	RNA-Seq	Deceased
 PT_3T3VGWC6	BS_FJZPQZ2C	PBTA	Low-grade glioma	RNA-Seq	Recurrence
@@ -421,7 +421,7 @@ PT_QZWDK114	BS_MEHK6P0P	DGD	Acute Myeloid Leukemia	Targeted Sequencing	Recurrenc
 PT_CWXSP19D	BS_MF1YWFMX	DGD	Schwannoma	Targeted Sequencing	Recurrence
 PT_B7BBE5DV	BS_MF8YNTC4	PBTA	CNS Embryonal tumor	RNA-Seq	Recurrence
 PT_BABHMV9E	BS_MH8RAG4A	PBTA	Medulloblastoma	RNA-Seq	Recurrence
-PT_5CYJ3NZ9	BS_MJJRE059	PBTA	Embryonal tumor	RNA-Seq	Progressive
+PT_5CYJ3NZ9	BS_MJJRE059	PBTA	CNS Embryonal tumor	RNA-Seq	Progressive
 PT_5JCY0JFD	BS_MJMZZ1EY	PBTA	Oligodendroglioma	RNA-Seq	Recurrence
 PT_DF9T1B5G	BS_MKGP8P5A	PBTA	Oligodendroglioma	RNA-Seq	Recurrence
 PT_MPESH3X8	BS_MKJWKQB5	DGD	NA	Targeted Sequencing	Progressive
@@ -433,7 +433,7 @@ PT_FCM7XPVR	BS_MQCKXD60	PBTA	Ependymoma	RNA-Seq	Recurrence
 PT_ESHACWF6	BS_MV6ASWV9	PBTA	Atypical Teratoid Rhabdoid Tumor	RNA-Seq	Progressive
 PT_AX5NM47X	BS_MX6A841K	DGD	Low-grade glioma	Targeted Sequencing	Progressive
 PT_3D74J8RZ	BS_N1E2DCBH	DGD	Meningioma	Targeted Sequencing	Progressive
-PT_X648RVMK	BS_N6N147BY	PBTA	NA	RNA-Seq	Progressive
+PT_X648RVMK	BS_N6N147BY	PBTA	Embryonal tumor with multilayer rosettes	RNA-Seq	Progressive
 PT_QAJRK2W9	BS_N7SW36FD	PBTA	High-grade glioma	RNA-Seq	Progressive
 PT_HFQNKP5X	BS_N9ZSB4B7	DGD	Chordoma	Targeted Sequencing	Progressive
 PT_4TFTQXJ8	BS_NA6SPY6X	DGD	Diffuse leptomeningeal glioneuronal tumor	Targeted Sequencing	Progressive
@@ -639,7 +639,7 @@ PT_9JA20YPN	BS_XD20PN3M	DGD	Low-grade glioma	Targeted Sequencing	Progressive
 PT_Y9JGD26R	BS_XHXRM8YS	DGD	B Acute Lymphoblastic Leukemia/Lymphoma	Targeted Sequencing	Recurrence
 PT_N32BYY8A	BS_XQ5SFW35	PBTA	High-grade glioma	RNA-Seq	Progressive
 PT_HMK5D470	BS_XQASH9X8	DGD	B Acute Lymphoblastic Leukemia/Lymphoma	Targeted Sequencing	Recurrence
-PT_BRVGRXQY	BS_XRQXGEXB	PBTA	Embryonal tumor	RNA-Seq	Recurrence
+PT_BRVGRXQY	BS_XRQXGEXB	PBTA	CNS Embryonal tumor	RNA-Seq	Recurrence
 PT_3BCCR1WZ	BS_XSPB2XTH	DGD	Pilocytic astrocytoma	Targeted Sequencing	Progressive
 PT_YA6YN7NT	BS_XTH0NPVQ	PBTA	Diffuse intrinsic pontine glioma	RNA-Seq	Deceased
 PT_V5PCYAFJ	BS_XV40PE3Q	DGD	Neuroblastoma	Targeted Sequencing	Recurrence

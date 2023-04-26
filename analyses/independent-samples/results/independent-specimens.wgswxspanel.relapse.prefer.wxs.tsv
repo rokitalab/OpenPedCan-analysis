@@ -93,7 +93,7 @@ PT_KZ8GB7VY	BS_7B12V9S0	PBTA	Hemangioblastoma	WGS	Progressive
 PT_7ECBYH4W	BS_7BN22JGJ	PBTA	Diffuse hemispheric glioma	WGS	Deceased
 PT_9CCEQ57K	BS_7F2P5CBJ	PBTA	Dysembryoplastic neuroepithelial tumor	WGS	Progressive
 PT_1PZC01QF	BS_7GSBXDZ4	PBTA	Ependymoma	WGS	Progressive
-PT_5CYJ3NZ9	BS_7M145V8M	PBTA	Embryonal tumor	WGS	Progressive
+PT_5CYJ3NZ9	BS_7M145V8M	PBTA	CNS Embryonal tumor	WGS	Progressive
 PT_9CQA1W10	BS_7NFEBJ9X	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_5Y0CE4WK	BS_7SV64RVZ	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_NJQ26FHN	BS_7XEEQM3X	PBTA	Ependymoma	WGS	Deceased
@@ -121,7 +121,7 @@ PT_DNAJYFZT	BS_8XJJVBQP	PBTA	Ependymoma	WGS	Deceased
 PT_MXASQ2GW	BS_922YMFYK	PBTA	Neurofibroma/Plexiform	WGS	Progressive
 PT_RDJ40M73	BS_928HWFFM	PBTA	Diffuse hemispheric glioma	WGS	Recurrence
 PT_MYNKT1TK	BS_95ERKNCZ	PBTA	Medulloblastoma	WGS	Deceased
-PT_287JKJ5R	BS_9ANMMYJS	PBTA	Embryonal tumor with multilayer rosettes	WGS	Deceased
+PT_287JKJ5R	BS_9ANMMYJS	PBTA	CNS Embryonal tumor	WGS	Deceased
 PT_SYHB12RN	BS_9DM8H1RX	PBTA	High-grade glioma	WGS	Deceased
 PT_KZ56XHJT	BS_9DN4QR6E	PBTA	Diffuse midline glioma	WXS	Progressive
 PT_WHK1MYQG	BS_9E2FF9ZP	PBTA	Sarcoma	WGS	Recurrence
@@ -142,7 +142,7 @@ PT_D5KHK0SS	BS_AJ0T7DJ7	PBTA	Low-grade glioma	WGS	Progressive
 PT_2WA5PM32	BS_AJFG2QDD	PBTA	Adamantinomatous Craniopharyngioma	WGS	Recurrence
 PT_NH8CJ84W	BS_AM2TZPNS	PBTA	Craniopharyngioma	WGS	Progressive
 PT_HEVH2ZQ1	BS_AM8HDWQZ	PBTA	High-grade glioma	WGS	Deceased
-PT_00G007DM	BS_AQMKA8NC	PBTA	Embryonal tumor with multilayer rosettes	WGS	Recurrence
+PT_00G007DM	BS_AQMKA8NC	PBTA	CNS Embryonal tumor	WGS	Recurrence
 PT_A0F23R7E	BS_AR2BH0Z4	PBTA	Ganglioglioma	WGS	Progressive
 PT_SNJ1YR1R	BS_AT709G19	PBTA	Diffuse midline glioma	WXS	Deceased
 PT_Z4GS3ZQQ	BS_AWV1EDYB	PBTA	Dysembryoplastic neuroepithelial tumor	WGS	Recurrence
@@ -390,7 +390,7 @@ PT_N4563ERM	BS_WCX9HT5Y	PBTA	Low-grade glioma	WGS	Progressive
 PT_ZMKMKCFQ	BS_WDTT7PG2	PBTA	Low-grade glioma	WGS	Progressive
 PT_94952PCP	BS_WH6B39KJ	PBTA	Neurofibroma/Plexiform	WGS	Progressive
 PT_9PJR0ZK7	BS_WH8KWW5J	PBTA	Malignant peripheral nerve sheath tumor	WGS	Recurrence
-PT_BRVGRXQY	BS_WMXKD55A	PBTA	Embryonal tumor	WGS	Recurrence
+PT_BRVGRXQY	BS_WMXKD55A	PBTA	CNS Embryonal tumor	WGS	Recurrence
 PT_1JP2ANQK	BS_WN6EX9EK	PBTA	Ewing sarcoma	WGS	Progressive
 PT_75HRTX4S	BS_WTGPN218	PBTA	Chordoma	WGS	Deceased
 PT_89XRZBSG	BS_X1DSETVE	PBTA	High-grade glioma	WGS	Recurrence
