@@ -1796,20 +1796,26 @@ results_dir &lt;- file.path(root_dir,
 
 histology_df &lt;- readr::read_tsv(file.path(integrate_dir, &quot;histologies.tsv&quot;), guess_max=100000)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgT1NfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2xhc3RfdXBkYXRlX2RheXMgPSBjb2xfZG91YmxlKCksXG4gIGNuc19tZXRoeWxhdGlvbl9jbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgY25zX21ldGh5bGF0aW9uX3N1YmNsYXNzX3Njb3JlID0gY29sX2RvdWJsZSgpLFxuICBSRl9wdXJpdHlfQUJTT0xVVEUgPSBjb2xfZG91YmxlKCksXG4gIFJGX3B1cml0eV9FU1RJTUFURSA9IGNvbF9kb3VibGUoKSxcbiAgUkZfcHVyaXR5X0xVTVAgPSBjb2xfZG91YmxlKCksXG4gIG5vcm1hbF9mcmFjdGlvbiA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX3Bsb2lkeSA9IGNvbF9kb3VibGUoKVxuKVxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgYWdlX2F0X2RpYWdub3Npc19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBPU19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBFRlNfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2xhc3RfdXBkYXRlX2RheXMgPSBjb2xfZG91YmxlKCksXG4gIG5vcm1hbF9mcmFjdGlvbiA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX3Bsb2lkeSA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2F0X2V2ZW50X2RheXMgPSBjb2xfZG91YmxlKCksXG4gIGFnZV9hdF9jaGVtb19zdGFydCA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2F0X3JhZGlhdGlvbl9zdGFydCA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb25fUkZwdXJpZnlfQUJTT0xVVEUgPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uX1JGcHVyaWZ5X0VTVElNQVRFID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9mcmFjdGlvbl9MVU1QID0gY29sX2RvdWJsZSgpLFxuICBka2Z6X3YxMV9tZXRoeWxhdGlvbl9zdWJjbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgZGtmel92MTJfbWV0aHlsYXRpb25fc3ViY2xhc3Nfc2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIGRrZnpfdjEyX21ldGh5bGF0aW9uX21nbXRfZXN0aW1hdGVkID0gY29sX2RvdWJsZSgpXG4pXG4ifQ== -->
 <pre><code>Parsed with column specification:
 cols(
   .default = col_character(),
+  age_at_diagnosis_days = col_double(),
   OS_days = col_double(),
+  EFS_days = col_double(),
   age_last_update_days = col_double(),
-  cns_methylation_class_score = col_double(),
-  cns_methylation_subclass_score = col_double(),
-  RF_purity_ABSOLUTE = col_double(),
-  RF_purity_ESTIMATE = col_double(),
-  RF_purity_LUMP = col_double(),
   normal_fraction = col_double(),
   tumor_fraction = col_double(),
-  tumor_ploidy = col_double()
+  tumor_ploidy = col_double(),
+  age_at_event_days = col_double(),
+  age_at_chemo_start = col_double(),
+  age_at_radiation_start = col_double(),
+  tumor_fraction_RFpurify_ABSOLUTE = col_double(),
+  tumor_fraction_RFpurify_ESTIMATE = col_double(),
+  tumor_fraction_LUMP = col_double(),
+  dkfz_v11_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_mgmt_estimated = col_double()
 )</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-message-begin eyJkYXRhIjoiU2VlIHNwZWMoLi4uKSBmb3IgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbnMuXG4ifQ== -->
@@ -1827,11 +1833,6 @@ cols(
   ncit_code = col_character()
 )</code></pre>
 <!-- rnb-message-end -->
-<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZzogMSBwYXJzaW5nIGZhaWx1cmUuXG5yb3cgY29sICBleHBlY3RlZCAgICBhY3R1YWwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsZVxuIDY0ICAtLSA0IGNvbHVtbnMgNSBjb2x1bW5zICcvaG9tZS9yc3R1ZGlvL09wZW5QZWRDYW4tYW5hbHlzaXMvYW5hbHlzZXMvZWZvLW1vbmRvLW1hcHBpbmcvcmVzdWx0cy9lZm8tbW9uZG8tbWFwLnRzdidcbiJ9 -->
-<pre><code>Warning: 1 parsing failure.
-row col  expected    actual                                                                                     file
- 64  -- 4 columns 5 columns '/home/rstudio/OpenPedCan-analysis/analyses/efo-mondo-mapping/results/efo-mondo-map.tsv'</code></pre>
-<!-- rnb-warning-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1859,11 +1860,13 @@ all(cancer_group_effective %in% efo_mondo_map$cancer_group)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZVshY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZSAlaW4lIGVmb19tb25kb19tYXAkY2FuY2VyX2dyb3VwXSAifQ== -->
 <pre class="r"><code>cancer_group_effective[!cancer_group_effective %in% efo_mondo_map$cancer_group] </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQ2VudHJhbCBuZXVyb2N5dG9tYVwiXG4ifQ== -->
-<pre><code>[1] &quot;Central neurocytoma&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU3VwcmF0ZW50b3JpYWwgZXBlbmR5bW9tYVwiIFwiU3BpbmFsIGVwZW5keW1vbWFcIiAgICAgICAgXG4ifQ== -->
+<pre><code>[1] &quot;Supratentorial ependymoma&quot; &quot;Spinal ependymoma&quot;        </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiQ2VudHJhbCBuZXVyb2N5dG9tYVxuIn0= -->
-<pre><code>Central neurocytoma</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjpbIlN1cHJhdGVudG9yaWFsIGVwZW5keW1vbWFcbiIsIlNwaW5hbCBlcGVuZHltb21hXG4iXX0= -->
+<pre><code>Supratentorial ependymoma
+
+Spinal ependymoma</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
