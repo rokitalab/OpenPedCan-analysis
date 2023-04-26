@@ -14,7 +14,6 @@ TCGA	Adrenocortical Carcinoma	Adrenocortical Carcinoma	No	No
 DGD	Anaplastic Large Cell Lymphoma	Anaplastic Large Cell Lymphoma	No	No
 DGD	Angiosarcoma	Angiosarcoma	No	No
 PBTA	Other	Astroblastoma	No	Yes
-PBTA	CNS Embryonal tumor, HGNET-MN1	Astroblastoma	Yes	Yes
 PBTA	Astrocytoma	Astrocytoma	No	No
 PBTA	Atypical choroid plexus papilloma	Atypical choroid plexus papilloma	No	No
 PBTA	Atypical Teratoid Rhabdoid Tumor, MYC	Atypical Teratoid Rhabdoid Tumor	Yes	No
