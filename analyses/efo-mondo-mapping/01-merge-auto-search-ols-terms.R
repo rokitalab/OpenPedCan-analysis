@@ -1,3 +1,8 @@
+# Author: Sangeeta Shukla (shuklas1@chop.edu)
+# Purpose: This scripts automates the seach to retrieve EFO, MONDO, and NCIT ontology codes for all cancer_groups found in the histologies.tsv file.
+# This reduces the manual work to only have to review the potential edge cases where the codes may not be perfect match for the cancer_groups.
+
+
 # Load required libraries
 
 suppressPackageStartupMessages({
