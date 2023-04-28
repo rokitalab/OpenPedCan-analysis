@@ -221,8 +221,8 @@ def get_annotations(cnv_frequency_df, CNV_FILE):
      cnv_annot_freq_df = pd.read_csv(cnv_annot_freq_tsv, sep="\t", na_filter=False, dtype=str)
      #1 rename "Gene_Ensembl_Id" to "targetFromSourceId", "EFO" to "diseaseFromSourceMappedId"
      cnv_annot_freq_df.rename(columns={"Gene_Ensembl_ID": "targetFromSourceId", "EFO": "diseaseFromSourceMappedId"}, inplace=True)
-     #2 add "datatypeId" column  with value for every row set to "somatic_mutation"
-     cnv_annot_freq_df["datatypeId"] = "somatic_mutation"
+     #2 add "datatypeId" column  with value for every row set to "pediatric_cancer"
+     cnv_annot_freq_df["datatypeId"] = "pediatric_cancer"
      #3 add "chop_uuid" column - the uuid value for each row should be unique
      cnv_annot_freq_df["chop_uuid"] = [uuid.uuid4() for x in range(len(cnv_annot_freq_df))]
      #4 add "datasourceId" column with value for each row set to "chop_gene_level_cnv"
