@@ -114,7 +114,7 @@ Add `Gene_type`, `PedcBio_PedOT_oncoprint_plot_URL` and `PedcBio_PedOT_mutations
 The PedcBioPortal `case_set_id`s in the URLs are obtained from [the `sample-lists` PedcBioPortal web API](https://pedcbioportal.kidsfirstdrc.org/api/swagger-ui.html#/Sample_Lists), with the following command, where you have to specify the PedcBio STUDY_NAME, ex: `openpedcan_v11`, and your API-ACCESS-TOKEN:
 
 ```bash
-curl -X GET "https://pedcbioportal.kidsfirstdrc.org/api/studies/STUDY_NAME/sample-lists" -H "accept: application/json" -H "Authorization: Bearer API-ACCESS-TOKEN" > ped_opentargets_2021_pedcbio_case_set_ids.json
+curl -X GET "https://pedcbioportal.kidsfirstdrc.org/api/studies/STUDY_NAME/sample-lists" -H "accept: application/json" -H "Authorization: Bearer API-ACCESS-TOKEN" > ped_opentargets_pedcbio_case_set_ids.json
 ```
 
 To update the `case_set_id`s, rerun the `curl` command with your own PedcBioPortal web API access token. The token can be requested and downloaded at <https://pedcbioportal.kidsfirstdrc.org/webAPI>. More information about the access token is at <https://docs.cbioportal.org/2.2-authorization-and-authentication/authenticating-users-via-tokens#using-data-access-tokens>.
@@ -170,7 +170,7 @@ Input:
 - `../../data/independent-specimens.wgswxspanel.relapse.prefer.wxs.tsv`
 - `../../data/independent-specimens.wgswxspanel.primary.eachcohort.prefer.wxs.tsv`
 - `../../data/independent-specimens.wgswxspanel.relapse.eachcohort.prefer.wxs.tsv`
-- `input/ped_opentargets_2021_pedcbio_case_set_ids.json`
+- `input/ped_opentargets_pedcbio_case_set_ids.json`
 
 Output:
 
