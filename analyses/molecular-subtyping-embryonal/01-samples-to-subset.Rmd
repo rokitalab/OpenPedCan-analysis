@@ -114,28 +114,52 @@ cluster genomic region: `chr19:53,627,063-53,788,978` to keep the sample
 arriba_ttyh1_fusions <- arriba %>% 
   filter(str_detect(`gene1--gene2`, "^TTYH1"), 
          str_detect(breakpoint1, "^chr19"), 
-         str_detect(breakpoint2, "^chr19")) %>%  
-  select(breakpoint1, breakpoint2, tumor_id) %>% 
-  mutate(breakpoint1 = str_split(breakpoint1, ":")[[1]][2], 
-         breakpoint2 = str_split(breakpoint2, ":")[[1]][2]) %>%  
-  filter(between(as.integer(breakpoint1), 53627062, 53788979) | 
-           between(as.integer(breakpoint2), 53627062, 53788979)) %>% 
-  pull(tumor_id) %>% unique()
+         str_detect(breakpoint2, "^chr19"))
+if (length(arriba_ttyh1_fusions$tumor_id) > 0 ) {
+  ttyh1_fusions <- arriba_ttyh1_fusions %>% 
+    select(breakpoint1, breakpoint2, tumor_id) %>% 
+    mutate(breakpoint1 = str_split(breakpoint1, ":")[[1]][2], 
+           breakpoint2 = str_split(breakpoint2, ":")[[1]][2]) %>%  
+    filter(between(as.integer(breakpoint1), 53627062, 53788979) | 
+             between(as.integer(breakpoint2), 53627062, 53788979)) %>% 
+    pull(tumor_id) %>% unique()
+}
 
 # v12 starfusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
-starfusion %>% filter(str_detect(FusionName, "^TTYH1"), 
-                      str_detect(LeftBreakpoint, "^chr19"), 
-                      str_detect(RightBreakpoint, "^chr19"))
+starfusion_ttyh1_fusions <- starfusion %>% 
+  filter(str_detect(FusionName, "^TTYH1"), 
+         str_detect(LeftBreakpoint, "^chr19"), 
+         str_detect(RightBreakpoint, "^chr19"))
+if (length(starfusion_ttyh1_fusions$tumor_id) > 0 ) {
+  starfusion_ttyh1_fusions <- starfusion_ttyh1_fusions %>% 
+    select(LeftBreakpoint, RightBreakpoint, tumor_id) %>% 
+    mutate(LeftBreakpoint = str_split(LeftBreakpoint, ":")[[1]][2], 
+           RightBreakpoint = str_split(RightBreakpoint, ":")[[1]][2]) %>%  
+    filter(between(as.integer(LeftBreakpoint), 53627062, 53788979) | 
+             between(as.integer(RightBreakpoint), 53627062, 53788979)) %>% 
+    pull(tumor_id) %>% unique()
+  ttyh1_fusions <- c(starfusion_ttyh1_fusions, ttyh1_fusions)
+}
 
-dgd_fusion
 # v12 DGD fusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
-dgd_fusion %>% filter(str_detect(FusionName, "^TTYH1"),
-                      str_detect(LeftBreakpoint, "^chr19"),
-		      str_detect(RightBreakpoint, "^chr19"))
+dgd_ttyh1_fusions <- dgd_fusion %>% 
+  filter(str_detect(FusionName, "^TTYH1"),
+         str_detect(LeftBreakpoint, "^chr19"),
+         str_detect(RightBreakpoint, "^chr19"))
+if (length(dgd_ttyh1_fusions$tumor_id) > 0 ) {
+  dgd_ttyh1_fusions <- dgd_ttyh1_fusions %>% 
+    select(LeftBreakpoint, RightBreakpoint, tumor_id) %>% 
+    mutate(LeftBreakpoint = str_split(LeftBreakpoint, ":")[[1]][2], 
+           RightBreakpoint = str_split(RightBreakpoint, ":")[[1]][2]) %>%  
+    filter(between(as.integer(LeftBreakpoint), 53627062, 53788979) | 
+             between(as.integer(RightBreakpoint), 53627062, 53788979)) %>% 
+    pull(tumor_id) %>% unique()
+  ttyh1_fusions <- c(dgd_ttyh1_fusions, ttyh1_fusions)
+}
 
 # keep samples with with at least one break point within 
 # genomic region: `chr19:53,627,063-53,788,978` 
-ttyh1_fusion_biospecimens <-  ttyh1_fusion_biospecimens %in% arriba_ttyh1_fusions
+ttyh1_fusion_biospecimens <-  ttyh1_fusion_biospecimens %in% ttyh1_fusions
 ```
 
 ### _MN1_ fusions
