@@ -131,8 +131,8 @@ jobs:
           - name: TMB calculation
             entrypoint: tmb-calculation/run_tmb_calculation.sh
 
-          - name: Immune Deconvolution
-            entrypoint: immune-deconv/run-immune-deconv.sh
+          #- name: Immune Deconvolution
+          #  entrypoint: immune-deconv/run-immune-deconv.sh
 
           #- name: EFO/MONDO annotation
           #  entrypoint: efo-mondo-mapping/run_search_and_qc.sh
