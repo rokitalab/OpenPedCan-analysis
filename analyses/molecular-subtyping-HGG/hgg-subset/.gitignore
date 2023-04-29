@@ -1,0 +1,8 @@
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+!hgg_subtyping_path_dx_strings.json
+!hgg_metadata.tsv
+!hgg_gistic_braod_values.tsv
+!hgg_fusion.tsv

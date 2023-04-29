@@ -67,7 +67,7 @@ mycn_dna_df <- mycn_df %>%
                   mycn_dna_rna_df$Kids_First_Biospecimen_ID_DNA)) %>% 
   dplyr::rename(Kids_First_Biospecimen_ID_DNA = Kids_First_Biospecimen_ID) %>% 
   dplyr::select(Kids_First_Biospecimen_ID_DNA, Kids_First_Participant_ID, MYCN_TPM,
-                MYCN_CN, MYCN_CN_status, pathology_free_text_diagnosis, cohort) %>% 
+                MYCN_CN, MYCN_CN_status, pathology_free_text_diagnosis, sample_id, cohort) %>% 
   dplyr::mutate(Kids_First_Biospecimen_ID_RNA = NA_character_)
   
 # unmatched rna biospecimen
@@ -78,7 +78,7 @@ mycn_rna_df <- mycn_df %>%
                   mycn_dna_rna_df$Kids_First_Biospecimen_ID_RNA)) %>%
   dplyr::rename(Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID) %>% 
   dplyr::select(Kids_First_Biospecimen_ID_RNA, Kids_First_Participant_ID, MYCN_TPM,
-                MYCN_CN, MYCN_CN_status, pathology_free_text_diagnosis, cohort) %>% 
+                MYCN_CN, MYCN_CN_status, pathology_free_text_diagnosis, sample_id, cohort) %>% 
   dplyr::mutate(Kids_First_Biospecimen_ID_DNA = NA_character_)
 
 ```
@@ -90,7 +90,7 @@ mycn_rna_df <- mycn_df %>%
 mycn_dna_rna_df <- mycn_dna_rna_df %>% 
   dplyr::select(Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
                 Kids_First_Participant_ID, MYCN_TPM, MYCN_CN ,MYCN_CN_status,
-                pathology_free_text_diagnosis, cohort) 
+                pathology_free_text_diagnosis,sample_id, cohort) 
 
 # bind matched and unmatched biospecimen 
 alteration_df <- dplyr::bind_rows(mycn_dna_rna_df, mycn_dna_df, mycn_rna_df)

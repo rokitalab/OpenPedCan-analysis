@@ -1830,22 +1830,28 @@ hist_df &lt;- readr::read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quo
          sample_type == &quot;Tumor&quot;,
          pathology_diagnosis %in% path_dx_list$exact_path_dx)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgaW50ZWdyYXRlZF9kaWFnbm9zaXMgPSBjb2xfbG9naWNhbCgpLFxuICBPU19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBhZ2VfbGFzdF91cGRhdGVfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgbW9sZWN1bGFyX3N1YnR5cGUgPSBjb2xfbG9naWNhbCgpLFxuICBjbnNfbWV0aHlsYXRpb25fY2xhc3Nfc2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIGNuc19tZXRoeWxhdGlvbl9zdWJjbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgUkZfcHVyaXR5X0FCU09MVVRFID0gY29sX2RvdWJsZSgpLFxuICBSRl9wdXJpdHlfRVNUSU1BVEUgPSBjb2xfZG91YmxlKCksXG4gIFJGX3B1cml0eV9MVU1QID0gY29sX2RvdWJsZSgpLFxuICBub3JtYWxfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9wbG9pZHkgPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgYWdlX2F0X2RpYWdub3Npc19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBpbnRlZ3JhdGVkX2RpYWdub3NpcyA9IGNvbF9sb2dpY2FsKCksXG4gIE9TX2RheXMgPSBjb2xfZG91YmxlKCksXG4gIEVGU19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBhZ2VfbGFzdF91cGRhdGVfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgbW9sZWN1bGFyX3N1YnR5cGUgPSBjb2xfbG9naWNhbCgpLFxuICBub3JtYWxfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9wbG9pZHkgPSBjb2xfZG91YmxlKCksXG4gIGFnZV9hdF9ldmVudF9kYXlzID0gY29sX2RvdWJsZSgpLFxuICBhZ2VfYXRfY2hlbW9fc3RhcnQgPSBjb2xfZG91YmxlKCksXG4gIGFnZV9hdF9yYWRpYXRpb25fc3RhcnQgPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uX1JGcHVyaWZ5X0FCU09MVVRFID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9mcmFjdGlvbl9SRnB1cmlmeV9FU1RJTUFURSA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb25fTFVNUCA9IGNvbF9kb3VibGUoKSxcbiAgZGtmel92MTFfbWV0aHlsYXRpb25fc3ViY2xhc3Nfc2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIGRrZnpfdjEyX21ldGh5bGF0aW9uX3N1YmNsYXNzX3Njb3JlID0gY29sX2RvdWJsZSgpLFxuICBka2Z6X3YxMl9tZXRoeWxhdGlvbl9tZ210X2VzdGltYXRlZCA9IGNvbF9kb3VibGUoKVxuKVxuIn0= -->
 <pre><code>Parsed with column specification:
 cols(
   .default = col_character(),
+  age_at_diagnosis_days = col_double(),
   integrated_diagnosis = col_logical(),
   OS_days = col_double(),
+  EFS_days = col_double(),
   age_last_update_days = col_double(),
   molecular_subtype = col_logical(),
-  cns_methylation_class_score = col_double(),
-  cns_methylation_subclass_score = col_double(),
-  RF_purity_ABSOLUTE = col_double(),
-  RF_purity_ESTIMATE = col_double(),
-  RF_purity_LUMP = col_double(),
   normal_fraction = col_double(),
   tumor_fraction = col_double(),
-  tumor_ploidy = col_double()
+  tumor_ploidy = col_double(),
+  age_at_event_days = col_double(),
+  age_at_chemo_start = col_double(),
+  age_at_radiation_start = col_double(),
+  tumor_fraction_RFpurify_ABSOLUTE = col_double(),
+  tumor_fraction_RFpurify_ESTIMATE = col_double(),
+  tumor_fraction_LUMP = col_double(),
+  dkfz_v11_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_mgmt_estimated = col_double()
 )</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-message-begin eyJkYXRhIjoiU2VlIHNwZWMoLi4uKSBmb3IgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbnMuXG4ifQ== -->
@@ -1861,7 +1867,7 @@ consensus_df &lt;-
   dplyr::filter(gene_symbol == &quot;MYCN&quot;,
          Kids_First_Biospecimen_ID %in% hist_df$Kids_First_Biospecimen_ID)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBiaW9zcGVjaW1lbl9pZCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgc3RhdHVzID0gY29sX2NoYXJhY3RlcigpLFxuICBjb3B5X251bWJlciA9IGNvbF9kb3VibGUoKSxcbiAgcGxvaWR5ID0gY29sX2RvdWJsZSgpLFxuICBlbnNlbWJsID0gY29sX2NoYXJhY3RlcigpLFxuICBnZW5lX3N5bWJvbCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgY3l0b2JhbmQgPSBjb2xfY2hhcmFjdGVyKClcbilcbiJ9 -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBiaW9zcGVjaW1lbl9pZCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgc3RhdHVzID0gY29sX2NoYXJhY3RlcigpLFxuICBjb3B5X251bWJlciA9IGNvbF9kb3VibGUoKSxcbiAgcGxvaWR5ID0gY29sX2RvdWJsZSgpLFxuICBlbnNlbWJsID0gY29sX2NoYXJhY3RlcigpLFxuICBnZW5lX3N5bWJvbCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgY3l0b2JhbmQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIHBjdF9vdmVybGFwID0gY29sX2RvdWJsZSgpXG4pXG4ifQ== -->
 <pre><code>Parsed with column specification:
 cols(
   biospecimen_id = col_character(),
@@ -1870,7 +1876,8 @@ cols(
   ploidy = col_double(),
   ensembl = col_character(),
   gene_symbol = col_character(),
-  cytoband = col_character()
+  cytoband = col_character(),
+  pct_overlap = col_double()
 )</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-source-begin eyJkYXRhIjpbIiMgdHBtIGV4cHJlc3Npb24gbWF0cml4IiwidHBtX2RmIDwtIFxuICByZWFkcjo6cmVhZF9yZHMoZmlsZS5wYXRoKGRhdGFfZGlyLFwiZ2VuZS1leHByZXNzaW9uLXJzZW0tdHBtLWNvbGxhcHNlZC5yZHNcIikpICU+JVxuICB0aWJibGU6OnJvd25hbWVzX3RvX2NvbHVtbihcIktpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURcIikgJT4lIFxuICBkcGx5cjo6ZmlsdGVyKEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgPT0gXCJNWUNOXCIpICU+JVxuICB0aWJibGU6OmNvbHVtbl90b19yb3duYW1lcyhcIktpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURcIikgJT4lIFxuICB0aWR5cjo6Z2F0aGVyKGNvbG5hbWVzKC4pLCBcbiAgICAgICAgICAgICAgICAgICAgICBrZXkgPSBcIktpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURcIixcbiAgICAgICAgICAgICAgICAgICAgICB2YWx1ZSA9IFwiTVlDTl9UUE1cIikiXX0= -->
