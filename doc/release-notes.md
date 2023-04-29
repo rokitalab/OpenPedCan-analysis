@@ -11,9 +11,8 @@
         - 16 TARGET samples (6 normal, 10 tumor)
       - 1264 RNA-seq samples
         - 1264 PBTA samples (3 normal, 1261 tumor)
-      - 2759 WGS/WXS samples
-        - 3 Kentucky samples (3 normal)
-        - 2441 PBTA WGS samples (1171 normal, 1270 tumor)
+      - 2762 WGS/WXS samples
+        - 2444 PBTA WGS samples (1174 normal, 1270 tumor)
         - 315 PBTA WXS samples (160 normal, 155 tumor)
 
     - This release reprocessed these data: 
