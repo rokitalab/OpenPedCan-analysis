@@ -79,7 +79,9 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     biospecimen_ids <- unique(bed_file$Kids_First_Biospecimen_ID)
   } else if (grepl("cnv", filename)) {
     # the two CNV files now have different structures
-    cnv_file <- readr::read_tsv(filename)
+    if (stringr::str_detect(filename, "gistic", negate = TRUE)) {
+      cnv_file <- readr::read_tsv(filename)
+    }
     if (grepl("controlfreec|cnvkit_with_status", filename)) {
       biospecimen_ids <- unique(cnv_file$Kids_First_Biospecimen_ID)
     } else if (grepl("consensus_wgs_plus_cnvkit_wxs", filename)) {
@@ -96,10 +98,8 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     fusion_file <- readr::read_tsv(filename)
     # the biospecimen IDs in the filtered/prioritize fusion list included with
     # the download are in a column called 'Sample'
-    if (grepl("putative-oncogenic", filename)) {
+    if (grepl("putative-oncogenic|dgd|annoFuse", filename)) {
       biospecimen_ids <- unique(fusion_file$Sample)
-    } else if(grepl("dgd", filename)) {
-      biospecimen_ids <- unique(fusion_file$Tumor_Sample_Barcode)
     } else if (grepl("fusion_summary", filename)) {
       biospecimen_ids <- unique(fusion_file$Kids_First_Biospecimen_ID)
     } else {
@@ -502,7 +502,7 @@ matched_participant_id_list <- purrr::map(
 nonmatched_participant_id_list <-
   purrr::map(participant_id_list,
              ~ setdiff(.x, matched_participant_id_list)) %>%
-  purrr::map(~ sample(.x, num_nonmatched_participants))
+  purrr::map(~ sample(.x, min(length(.x),num_nonmatched_participants)))
 
 # combine matched and nonmatched lists of ids for subsetting
 participant_ids_for_subset <- 
