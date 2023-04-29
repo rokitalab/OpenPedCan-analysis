@@ -20,7 +20,6 @@
     - Harmonize TARGET and GMKF cohorts using GENCODE v39 [Ticket 428](https://github.com/PediatricOpenTargets/ticket-tracker/issues/428)
     - Remap TCGA expression matrix to GENCODE v39 [Ticket 521](https://github.com/PediatricOpenTargets/ticket-tracker/issues/521)
     - Remap GTEx TPM matrix to GENCODE v39 gene symbols [Ticket 522](https://github.com/PediatricOpenTargets/ticket-tracker/issues/522)
-      - Re-process DGD panel data [Ticket 429](https://github.com/PediatricOpenTargets/ticket-tracker/issues/429)
   
   - files changed
     - files added
@@ -73,11 +72,7 @@
     - Create bixu-generated fields for v12 release [Ticket 481](https://github.com/PediatricOpenTargets/ticket-tracker/issues/481)
     - v12 WGS germline sex estimate [Ticket 492](https://github.com/PediatricOpenTargets/ticket-tracker/issues/492)
   - Updates to help with creation and QC of histologies file
-    - Creat automated workflow for `histologies-base.tsv` [Ticket 399](https://github.com/PediatricOpenTargets/ticket-tracker/issues/399)
     - Histologies QC to check germline sex estimate [Ticket 426](https://github.com/PediatricOpenTargets/ticket-tracker/issues/426)
-    - Create data warehous dbt tables for OpenTargets histologies mapping files [Ticket 445](https://github.com/PediatricOpenTargets/ticket-tracker/issues/445)
-    - Create PPTC PDX study base histologies file [Ticket 479](https://github.com/PediatricOpenTargets/ticket-tracker/issues/479)
-    - Create chordoma base histologies file [Ticket 484](https://github.com/PediatricOpenTargets/ticket-tracker/issues/484)
  
   - Molecular subtyping updates
     - Update EPN fusions [Ticket 287](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/pull/287)
@@ -91,7 +86,6 @@
     - Remove manual override of patient ID "PT_7E3V3JFX" subtying [Ticket 449](https://github.com/PediatricOpenTargets/ticket-tracker/issues/449)
     - Update EPN subtyping fusion pairs to include the `YAP1--MAML2` fusion [Ticket 451](https://github.com/PediatricOpenTargets/ticket-tracker/issues/451)
     - Add Infant-Type Hemispheric Glioma to HGG subtyping module [Ticket 474](https://github.com/PediatricOpenTargets/ticket-tracker/issues/474)
-    - Incorrect subtypes [Ticket 489](https://github.com/PediatricOpenTargets/ticket-tracker/issues/489)
     - Update ATRT subtyping to assign samples to one of 3 subtypes, `ATRT, MYC`, `ATRT, SHH`, or `ATRT, TYR` [Ticket 496](https://github.com/PediatricOpenTargets/ticket-tracker/issues/496)
     - Update modules using manta file for v12 release due to column name changes [Ticket](https://github.com/PediatricOpenTargets/ticket-tracker/issues/499)
     - Update mol subtyping integrate to include ATRT + NBL [Ticket 504](https://github.com/PediatricOpenTargets/ticket-tracker/issues/504)
@@ -107,11 +101,6 @@
     - Preprocess CBTN methylation arrays [Ticket 430](https://github.com/PediatricOpenTargets/ticket-tracker/issues/430)
     - Update methylation subtyping information for D3b warehouse import [Ticket 434](https://github.com/PediatricOpenTargets/ticket-tracker/issues/434)
     - Create methylation summary tables for display and download on the MTP portal [Ticket 456](https://github.com/PediatricOpenTargets/ticket-tracker/issues/456) and [Ticket 478](https://github.com/PediatricOpenTargets/ticket-tracker/issues/456)
-  
-  - CHOP Panel data updates
-    - Update DGD MAF with updated BS IDs for v12 OPC release [Ticket 406](https://github.com/PediatricOpenTargets/ticket-tracker/issues/406)
-    - KMT2C 100% Mutation Frequency in DGD Samples [Ticket 416](https://github.com/PediatricOpenTargets/ticket-tracker/issues/416)
-    
   
   - v12 data release updates
     - Update gene_match module for v12 data release [Ticket 525](https://github.com/PediatricOpenTargets/ticket-tracker/issues/525)
