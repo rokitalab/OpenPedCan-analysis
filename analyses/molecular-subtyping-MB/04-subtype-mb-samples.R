@@ -92,13 +92,13 @@ dups <- rna_map %>%
   filter(duplicated(.[["id"]])) 
 
 if (nrow(dups) > 0) {
-  mb_results_updated <- mb_results %>%
+  mb_results <- mb_results %>%
   mutate(molecular_subtype = case_when(id %in% dups$id ~ NA_character_,
                                        TRUE ~ as.character(molecular_subtype)))
   tmp_df <- methyl_subtype_map %>%
     filter(id %in% dups$id)
     
-  mb_results_updated <- mb_results_updated %>%
+  mb_results <- mb_results %>%
     left_join(tmp_df, by = c("id", "sample_id", "composition", "tumor_descriptor")) %>%
     mutate(Values=coalesce(molecular_subtype.x,molecular_subtype.y)) %>%
     select(-molecular_subtype.x,-molecular_subtype.y) %>%
@@ -113,7 +113,7 @@ methyl_bs_with_mb_subtypes_norna <- methyl_bs_with_mb_subtypes %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, composition, tumor_descriptor, molecular_subtype, id) 
 
 # these results will be the basis for all other bs_ids
-base_results_map <- mb_results_updated %>%
+base_results_map <- mb_results %>%
   bind_rows(methyl_bs_with_mb_subtypes_norna) %>%
   select(molecular_subtype, id) %>%
   unique()

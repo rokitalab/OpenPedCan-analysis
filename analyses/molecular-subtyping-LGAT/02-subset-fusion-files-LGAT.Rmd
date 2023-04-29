@@ -66,13 +66,16 @@ lgat_specimens_df<-read_tsv(file.path(subset_dir, "lgat_metadata.tsv"))
 
 # Filter to RNA-Seq samples
 lgat_rna_df <- lgat_specimens_df %>%
-  dplyr::filter(experimental_strategy == "RNA-Seq") %>%
-  dplyr::select(Kids_First_Biospecimen_ID,sample_id)
+  dplyr::filter(experimental_strategy == "RNA-Seq" | 
+                  experimental_strategy == "Targeted Sequencing"
+                & (!is.na(RNA_library) & 
+                     experimental_strategy == "Targeted Sequencing")) %>%
+  dplyr::select(Kids_First_Biospecimen_ID, sample_id)
 
 # get putative oncogene fusion list
 putativeFusion <- readr::read_tsv(file.path(root_dir,
                                             "data",
-                                            "fusion_summary_lgat_foi.tsv")) %>%
+                                            "fusion_summary_lgg_hgg_foi.tsv")) %>%
   # add sample_id for LGAT RNA-Seq biospecimen
   dplyr::left_join(lgat_rna_df, by=c("Kids_First_Biospecimen_ID")) %>%
   # filter to keep only LGAT RNA 
@@ -152,6 +155,7 @@ subsetFusion <- putativeFusion %>%
 write_tsv(subsetFusion,file.path(subset_dir, "LGAT_fusion_subset.tsv"))
 ```
 
+## Session Info
 
 ```{r}
 sessionInfo()
