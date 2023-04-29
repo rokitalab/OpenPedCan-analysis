@@ -105,7 +105,7 @@ metadata <-
   readr::read_tsv(file.path("..","..","data", "histologies-base.tsv"), 
                   guess_max = 100000) %>%
   dplyr::filter(sample_type == "Tumor") %>% 
-  dplyr::filter(cohort == "PBTA")
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD"))
 
 # File from 00-LGAT-select-pathology-dx that is used for inclusion/exclusion
 path_dx_list_lgat <- jsonlite::fromJSON(
@@ -142,12 +142,12 @@ stranded_tsne_aligned_scores <- stranded_tsne_aligned_scores %>%
   dplyr::left_join(mutation_df) %>%
   mutate(subtype_class = case_when(
     BRAF_V600E == "p.V600E" &
-      H3F3A.K28M == "No" & 
-      HIST1H3B.K28M == "No" &
-      HIST1H3C.K28M == "No" &
-      HIST2H3C.K28M == "No" &
-      H3F3A.G35R == "No" &
-      H3F3A.G35V == "No" ~ "HGAT_NO_HISTONE_BRAF",
+      `H3F3A_H3-3A.K28M` == "No" & 
+      HIST1H3B_H3C2.K28M == "No" &
+      HIST1H3C_H3C3.K28M == "No" &
+      HIST2H3C_H3C14.K28M == "No" &
+      `H3F3A_H3-3A.G35R` == "No" &
+      `H3F3A_H3-3A.G35V` == "No" ~ "HGAT_NO_HISTONE_BRAF",
     sample_id %in% mutation_df$sample_id & BRAF_V600E != "p.V600E" ~ "OTHER_HGAT",
     sample_id %in% lgat_specimens ~ "LGAT")
   )  %>%
@@ -165,12 +165,12 @@ stranded_umap_aligned_scores <- stranded_umap_aligned_scores %>%
   dplyr::left_join(mutation_df) %>%
   mutate(subtype_class = case_when(
     BRAF_V600E == "p.V600E" &
-      H3F3A.K28M == "No" & 
-      HIST1H3B.K28M == "No" &
-      HIST1H3C.K28M == "No" &
-      HIST2H3C.K28M == "No" &
-      H3F3A.G35R == "No" &
-      H3F3A.G35V == "No" ~ "HGAT_NO_HISTONE_BRAF",
+      `H3F3A_H3-3A.K28M` == "No" & 
+      HIST1H3B_H3C2.K28M == "No" &
+      HIST1H3C_H3C3.K28M == "No" &
+      HIST2H3C_H3C14.K28M == "No" &
+      `H3F3A_H3-3A.G35R` == "No" &
+      `H3F3A_H3-3A.G35V` == "No" ~ "HGAT_NO_HISTONE_BRAF",
     sample_id %in% mutation_df$sample_id & BRAF_V600E != "p.V600E" ~ "OTHER_HGAT",
     sample_id %in% lgat_specimens ~ "LGAT")
   )  %>%
