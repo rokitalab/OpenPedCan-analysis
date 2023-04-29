@@ -54,7 +54,7 @@ epn_exp_samples <- histologies %>%
   filter(experimental_strategy == "RNA-Seq",
          # All Ependymoma samples are captured in pathology_diagnosis
          # pathology_free_text_diagnosis adds no additional samples
-         pathology_diagnosis == "Ependymoma",
+         grepl("Ependymoma", pathology_diagnosis),
          cohort %in% c("PBTA", "DGD", "Kentucky")) %>%
   pull(Kids_First_Biospecimen_ID)
 epn_exp_samples <- intersect(epn_exp_samples, colnames(expression))

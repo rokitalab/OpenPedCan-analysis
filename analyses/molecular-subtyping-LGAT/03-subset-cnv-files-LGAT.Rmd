@@ -68,7 +68,7 @@ cnv_anno <- read_tsv(file.path(
 # Code used to generate pfamDataBioMart.RDS in https://gist.github.com/kgaonkar6/02b3fbcfeeddfa282a1cdf4803704794
 
 bioMartDataPfamFGFR1 <-
-  readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuse")) %>%
+  readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuseData")) %>%
   # to check if biospecimen harbors FGFR1 TKD (tyrosine kinase domain tandem duplication)
   dplyr::filter(
     hgnc_symbol == "FGFR1",
@@ -83,9 +83,12 @@ bioMartDataPfamFGFR1 <-
 # was used to subset clinical file
 lgat_specimens_df <- read_tsv(file.path(subset_dir, "lgat_metadata.tsv"))
 
-# Filter to RNA-Seq samples
+# Filter to DNA samples
 lgat_wgs_biospecimen_ids <- lgat_specimens_df %>%
-  dplyr::filter(experimental_strategy == "WGS") %>%
+  dplyr::filter(experimental_strategy == "WGS" | 
+                  experimental_strategy == "WXS" | 
+                  experimental_strategy == "Targeted Sequencing", 
+                is.na(RNA_library)) %>%
   dplyr::pull(Kids_First_Biospecimen_ID)
 
 # Filter CNV calls
@@ -148,10 +151,10 @@ SV should be annotated as tandem duplicate and overlap
 manta_gr <- manta_lgat %>%
   # format
   dplyr::rename(
-    chr = SV.chrom, start = SV.start, end = SV.end,
+    chr = SV_chrom, start = SV_start, end = SV_end,
     ALT = ALT
   ) %>%
-  filter(Gene.name == "FGFR1" ,
+  filter(Gene_name == "FGFR1" ,
   # filter for tandem duplication
   ALT == "<DUP:TANDEM>") %>%
   # format with chr to match to cnv
@@ -226,7 +229,7 @@ Only BS_MW6YMRBJ shows tandem duplication in manta and duplication in consensus 
 txdb <- GenomicFeatures::makeTxDbFromGFF(
   file = file.path(
     root_dir, "data",
-    "gencode.v27.primary_assembly.annotation.gtf.gz"
+    "gencode.v39.primary_assembly.annotation.gtf.gz"
   ),
   format = "gtf"
 )
@@ -237,7 +240,7 @@ fgfr1_tx_id <- ensembldb::select(txdb,
                                  columns="TXNAME", keytype="TXID") %>%
   # FGFR1 canonical transcript
   # genocode canonical transcript https://genome.ucsc.edu/cgi-bin/hgGene?db=hg38&hgg_gene=FGFR1
-  dplyr::filter(TXNAME == "ENST00000447712.6") %>%
+  dplyr::filter(TXNAME == "ENST00000397091.9") %>%
   pull(TXID)
 
 # GRList is ordered using tx_ids so using 
@@ -324,4 +327,10 @@ CNV_by_part %>%
   tally(CDKN2A_DEL == "Yes") / nrow(CNV_by_part) * 100
 
 write_tsv(LGAT_cnv_subset, file.path(subset_dir, "LGAT_cnv_subset.tsv"))
+```
+
+## Session Info
+
+```{r}
+sessionInfo()
 ```
