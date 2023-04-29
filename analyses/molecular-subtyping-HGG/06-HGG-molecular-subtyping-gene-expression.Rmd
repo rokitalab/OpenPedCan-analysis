@@ -4,7 +4,7 @@ output:
   html_notebook:
     toc: TRUE
     toc_float: TRUE
-author: Chante Bethell and Jaclyn Taroni for ALSF CCDL
+author: Chante Bethell and Jaclyn Taroni for ALSF CCDL, Jo Lynne Rokita for D3b
 date: 2020
 ---
 
@@ -75,6 +75,7 @@ For the IDH mutant HGG subtype:
 
 * _OLIG2_ and _FOXG1_ should be highly expressed.
 * _TP73-AS1_ methylation and downregulation cooccur with _TP53_ mutations.
+* _EGFR_ and _EZHIP_ are over-expressed and/or mutated in H3 K38-altered, but not mutated, DMG
 
 ## Clean and Wrangle Expression Data
 
@@ -93,7 +94,9 @@ clean_wrangle_expression <-
       dplyr::select(Kids_First_Biospecimen_ID,
              FOXG1_expression_zscore = FOXG1,
              OLIG2_expression_zscore = OLIG2,
-             TP73_AS1_expression_zscore = `TP73-AS1`) %>%
+             TP73_AS1_expression_zscore = `TP73-AS1`,
+             EGFR_expression_zscore = EGFR,
+             EZHIP_expression_zscore = EZHIP) %>%
       distinct()
     
     # Save expression data to file

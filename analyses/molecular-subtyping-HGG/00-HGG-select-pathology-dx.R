@@ -18,20 +18,24 @@ output_file <- file.path(root_dir,
 
 # Read histologies_base.tsv file
 histo <- read_tsv(file.path(root_dir, "data", "histologies-base.tsv")) %>% 
-  dplyr::filter(cohort == "PBTA")
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD"))
 
 # The `pathology_diagnosis` fields for HGG
 # as we identified in 00-v9-HGG-select-pathology-dx.Rmd are:
 exact_path_dx<- c(
   "High-grade glioma/astrocytoma (WHO grade III/IV)",
-  "Brainstem glioma- Diffuse intrinsic pontine glioma"
+  "Brainstem glioma- Diffuse intrinsic pontine glioma",
+  "Glioblastoma",
+  "Astrocytoma;Oligoastrocytoma",
+  "Astrocytoma"
 )
 
 # Gliomatosis Cerebri can be high grade glioma or low grade 
 # glioma so we will add an inclusion criteria for v9 release 
 # to only keep `Gliomatosis Cerebri` samples if pathology_free_text_diagnosis
 # as `anaplastic gliomatosis cerebri (who grade 4)`
-gliomatosis_path_free_text_exact <- "anaplastic gliomatosis cerebri (who grade 4)"
+path_free_text_exact <- c("anaplastic gliomatosis cerebri (who grade 4)",
+                                      "astroblastoma")
 
 #Identify which samples are IHGs and bring them into the HGG module for subtyping. 
 #This can be done by either searching 
@@ -44,9 +48,8 @@ IHG_path_free_path_dx <- histo %>%
 
 # Create a list with the strings we'll use for inclusion.
 terms_list <- list(exact_path_dx = exact_path_dx,
-                   gliomatosis_path_free_text_exact = gliomatosis_path_free_text_exact, 
-                   IHG_path_free_path_dx = IHG_path_free_path_dx, 
-                   IHG_cns_methylation_subclass = "IHG")
+                   path_free_text_exact = path_free_text_exact, 
+                   IHG_path_free_path_dx = IHG_path_free_path_dx)
 
 
 #Save this list as JSON.
