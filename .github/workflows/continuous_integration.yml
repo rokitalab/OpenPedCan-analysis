@@ -66,12 +66,10 @@ jobs:
 
           - name: Molecular Subtyping - EPN
             entrypoint: molecular-subtyping-EPN/run-molecular-subtyping-EPN.sh
-            openpbta_subset: 0
 
           - name: Molecular Subtyping - EMBRYONAL
             entrypoint: molecular-subtyping-embryonal/run-embryonal-subtyping.sh
             openpbta_testing: 1
-            openpbta_subset: 0
 
           - name: Molecular Subtyping - CHORDOMA
             entrypoint: molecular-subtyping-chordoma/run-molecular-subtyping-chordoma.sh
@@ -85,7 +83,6 @@ jobs:
 
           - name: Molecular Subtyping - HGG
             entrypoint: molecular-subtyping-HGG/run-molecular-subtyping-HGG.sh
-            openpbta_subset: 0
 
           - name: Molecular Subtyping - LGG
             entrypoint: molecular-subtyping-LGAT/run_subtyping.sh
@@ -134,8 +131,8 @@ jobs:
           - name: TMB calculation
             entrypoint: tmb-calculation/run_tmb_calculation.sh
 
-          - name: Immune Deconvolution
-            entrypoint: immune-deconv/run-immune-deconv.sh
+          #- name: Immune Deconvolution
+          #  entrypoint: immune-deconv/run-immune-deconv.sh
 
           #- name: EFO/MONDO annotation
           #  entrypoint: efo-mondo-mapping/run_search_and_qc.sh
