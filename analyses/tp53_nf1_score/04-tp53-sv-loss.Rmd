@@ -49,7 +49,7 @@ if ( params$base_run ==0 ){
 }
 
 # recording of "BS_ETC8R0TD" GMKF NBL sample; needs to be remove once updated in v12
-clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
+#clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
 
 histology <- dplyr::select(clinical,c("Kids_First_Biospecimen_ID", "sample_id"))
 
@@ -88,14 +88,14 @@ Since we want to capture TP53 loss phenotypes we will only keep breakpoints that
  
 ```{r}
 manta_sv_tp53 <- manta_sv %>%
-  dplyr::select(SV.chrom, SV.start, SV.end, SV.length, Kids.First.Biospecimen.ID.Tumor, SV.type, Gene.name, ALT) %>%
+  dplyr::select(SV_chrom, SV_start, SV_end, SV_length, Kids.First.Biospecimen.ID.Tumor, SV_type, Gene_name, ALT) %>%
   # Distribution of TP53 SVs
   filter(
     # only overlaps TP53 gene
-    grepl("^TP53$", Gene.name) |
+    grepl("^TP53$", Gene_name) |
       # part of larger region also encompasing TP53
-      grepl("/TP53/", Gene.name),
-    SV.type %in% c("BND", "INV", "DEL")
+      grepl("/TP53/", Gene_name),
+    SV_type %in% c("BND", "INV", "DEL")
   ) %>%
   left_join(histology,
     by = c("Kids.First.Biospecimen.ID.Tumor" = "Kids_First_Biospecimen_ID")

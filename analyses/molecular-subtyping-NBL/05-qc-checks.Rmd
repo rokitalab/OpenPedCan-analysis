@@ -44,9 +44,9 @@ hist_df <- readr::read_tsv(file.path(data_dir, "histologies-base.tsv"),
 # read molecular subtypes
 subtypes_df <- readr::read_tsv(file.path(results_dir, 
                             "alteration_table_with_molecular_subtype.tsv"), 
-                            guess_max = 100000) %>% 
+                            guess_max = 100000) %>%
   dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_DNA) %>% 
-  dplyr::select(-cohort)
+  dplyr::select(-sample_id, -cohort)
 
 ```
 
