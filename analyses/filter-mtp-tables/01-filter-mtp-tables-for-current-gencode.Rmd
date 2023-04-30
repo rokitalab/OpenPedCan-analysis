@@ -91,42 +91,29 @@ Function to filter for required Ensembl gene identifiers and write to file
 ```{r}
 
 filter_mtp_table <- function(mtp_table, ensg_ids, file_name) {
-  if ("Gene_Ensembl_ID" %in% colnames(mtp_table)) { 
-    # filter mtp table and write to file
-    mtp_table <- mtp_table %>%
-      dplyr::filter(Gene_Ensembl_ID %in% ensg_ids) %>%
-      dplyr::mutate(EFO = 
-                      case_when(Disease == "Chordoma" ~ "MONDO_0008978",
-                                Disease == "Meningioma" ~ "MONDO_0016642",
-                                Disease == "Perineuroma" ~ "MONDO_0019404",
-                                Disease == "Wilms tumor" ~ "MONDO_0006058",
-                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
-                                TRUE ~ EFO)) %>% 
-      dplyr::mutate(MONDO = 
-                      case_when(Disease == "Perineuroma" ~ "MONDO_0019404",
-                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
-                                TRUE ~ MONDO)) %>% 
-      readr::write_tsv(file.path(output_dir, file_name))
-  } else {
-    # filter tsv mtp table
-    mtp_table <- mtp_table %>% 
-      dplyr::filter(targetFromSourceId %in% ensg_ids) %>%
-      dplyr::mutate(diseaseFromSourceMappedId = 
-                      case_when(Disease == "Chordoma" ~ "MONDO_0008978",
-                                Disease == "Meningioma" ~ "MONDO_0016642",
-                                Disease == "Perineuroma" ~ "MONDO_0019404",
-                                Disease == "Wilms tumor" ~ "MONDO_0006058", 
-                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
-                                TRUE ~ diseaseFromSourceMappedId)) %>% 
-      dplyr::mutate(MONDO = 
-                      case_when(Disease == "Perineuroma" ~ "MONDO_0019404",
-                                Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
-                                TRUE ~ MONDO)) %>% 
-      readr::write_tsv(file.path(output_dir, file_name))
-     if (grepl("methyl|deseq", file_name)) {
-       rds_file <- paste(unlist(str_split(file_name, "\\."))[1], "rds", sep = ".")
-       mtp_table %>% readr::write_rds(file.path(output_dir, rds_file), compress = "gz")
-     }
+  # filter mtp table and write to file
+  mtp_table <- mtp_table %>% 
+    dplyr::filter(targetFromSourceId %in% ensg_ids) %>%
+    dplyr::filter(!is.na(Disease)) %>%
+    dplyr::mutate(diseaseFromSourceMappedId = 
+                    case_when(Disease == "Chordoma" ~ "MONDO_0008978",
+                              Disease == "Meningioma" ~ "MONDO_0016642",
+                              Disease == "Perineuroma" ~ "MONDO_0019404",
+                              Disease == "Wilms tumor" ~ "MONDO_0006058",
+                              Disease == "Pilocytic astrocytoma" ~ "MONDO_0016691",
+                              Disease == "Atypical choroid plexus papilloma" ~ "EFO_1000177",
+                              Disease == "Diffuse fibrillary astrocytoma" ~ "MONDO_0016685",
+                              Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
+                              TRUE ~ diseaseFromSourceMappedId)) %>% 
+    dplyr::mutate(MONDO = 
+                    case_when(Disease == "Perineuroma" ~ "MONDO_0019404",
+                              Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
+                              Disease == "Diffuse fibrillary astrocytoma" ~ "MONDO_0016685",
+                              TRUE ~ MONDO)) %>% 
+    readr::write_tsv(file.path(output_dir, file_name))
+  if (grepl("methyl|deseq", file_name)) {
+    rds_file <- paste(unlist(str_split(file_name, "\\."))[1], "rds", sep = ".")
+    mtp_table %>% readr::write_rds(file.path(output_dir, rds_file), compress = "gz")
   }
 return(mtp_table)
 }
@@ -419,9 +406,9 @@ filter_mtp_table(tpm_group_wise_stats, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
 filtered_ensg <- tpm_group_wise_stats %>%
-  dplyr::filter(!Gene_Ensembl_ID %in% ensg_ids) %>%
-  dplyr::select(Gene_symbol, Gene_Ensembl_ID, cohort) %>%
-  dplyr::rename(Ensembl_ID = Gene_Ensembl_ID) %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
+  dplyr::select(Gene_symbol, targetFromSourceId, Dataset) %>%
+  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>%
   dplyr::distinct()
 
 # write to file
@@ -457,9 +444,9 @@ filter_mtp_table(tpm_gene_wise_stats, ensg_ids, file_name)
 
 # Ensembl gene identifiers removed
 filtered_ensg <- tpm_gene_wise_stats %>%
-  dplyr::filter(!Gene_Ensembl_ID %in% ensg_ids) %>%
-  dplyr::select(Gene_symbol, Gene_Ensembl_ID, cohort) %>%
-  dplyr::rename(Ensembl_ID = Gene_Ensembl_ID) %>%
+  dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
+  dplyr::select(Gene_symbol, targetFromSourceId, Dataset) %>%
+  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>%
   dplyr::distinct()
 
 # write to file
@@ -484,7 +471,8 @@ cancer groups and can't not associate with samples. Therefore, samples associate
 with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz")
+mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz") %>% 
+  dplyr::filter( Gene_Feature != "intergenic")
 gene_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
     tibble::as_tibble()
@@ -514,13 +502,14 @@ filtered_ensg %>% dplyr::select(Ensembl_ID, cohort) %>%
 rm(gene_level_methyl, filtered_ensg)
 ```
 
-#### Methylation gene-level summary
+#### Methylation isoform-level summary
 OpenPedCan methylation tables contains methylation and rnaseq summaries of cohort
 cancer groups and can't not associate with samples. Therefore, samples associated
 with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz")
+mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz") %>% 
+  dplyr::filter( Gene_Feature != "intergenic")
 isoform_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
     tibble::as_tibble()
@@ -569,8 +558,8 @@ filter_mtp_table(gene_level_deseq, ensg_ids, file_name)
 # Ensembl gene identifiers removed
 filtered_ensg <- gene_level_deseq %>%
   dplyr::filter(!targetFromSourceId %in% ensg_ids) %>%
-  dplyr::select(Gene_symbol, targetFromSourceId, cohort) %>%
-  dplyr::rename(Ensembl_ID = targetFromSourceId) %>%
+  dplyr::select(Gene_symbol, targetFromSourceId, Dataset) %>%
+  dplyr::rename(Ensembl_ID = targetFromSourceId, cohort = Dataset) %>%
   dplyr::distinct()
 
 # write to file
