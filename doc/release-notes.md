@@ -1,7 +1,7 @@
 # release notes
 
 ## current release
-- release date: 2023-04-XX
+- release date: 2023-04-30
 - status: available
 - overview of changes (See [Ticket 431](https://github.com/PediatricOpenTargets/ticket-tracker/issues/431) for additional details):
   - MAJOR UPDATE
@@ -50,6 +50,7 @@
       
     - files removed 
       - `tcga-gene-counts-rsem-expected_count-collapsed.rds`
+      - `snv-dgd.maf.tsv.gz`
  
   - Updated data to use GENCODE v39 GDC
     - Update gene_match module GENCODE versions [Ticket 400](https://github.com/PediatricOpenTargets/ticket-tracker/issues/400)
