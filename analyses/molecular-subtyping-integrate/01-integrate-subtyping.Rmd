@@ -42,7 +42,6 @@ library(tidyverse)
 library(stringr)
 data_dir <- "../../data/"
 
-
 base_histology <- read_tsv(file.path(data_dir,"histologies-base.tsv"),
                            col_types = readr::cols(molecular_subtype = readr::col_character(),
                                                    short_histology = readr::col_character(),
@@ -125,7 +124,8 @@ histology <- base_histology %>%
                                                  TRUE ~ as.character(harmonized_diagnosis))) %>%
     dplyr::mutate(harmonized_diagnosis = case_when(molecular_subtype == "CNC" ~ "Central neurocytoma",
                                                    molecular_subtype == "EVN" ~ "Extraventricular neurocytoma",
-                                                   TRUE ~ as.character(harmonized_diagnosis)))
+                                                   TRUE ~ as.character(harmonized_diagnosis))) %>%
+  unique()
 ```
 
 
@@ -135,7 +135,8 @@ histology <- base_histology %>%
 ```{r}
 dup_ids<-histology$Kids_First_Biospecimen_ID[duplicated(histology$Kids_First_Biospecimen_ID)]
 
-histology[which(histology$Kids_First_Biospecimen_ID %in% dup_ids),]
+histology[which(histology$Kids_First_Biospecimen_ID %in% dup_ids),] %>%
+    readr::write_tsv("results/discrepancies_to_check.tsv")
 ```
 
 No duplicates
@@ -146,7 +147,8 @@ Are there NA in broad_histology, short_histology or harmonized_diagnosis
 
 ```{r}
 histology %>% 
-  filter(sample_type=="Tumor",
+  filter(cohort %in% c("GMKF", "PBTA", "DGD",
+                       is.na(pathology_diagnosis)),
          (is.na(broad_histology)| is.na(short_histology)| is.na(harmonized_diagnosis))) %>%
   tally() 
 ```
@@ -170,17 +172,18 @@ histology_cg <- histology %>%
     # if multiple cancers, make NA unless otherwise specified below
     grepl(";", cancer_group) ~ NA_character_,
     cancer_group == "Brainstem glioma- Diffuse intrinsic pontine glioma" ~ "Diffuse intrinsic pontine glioma",
+    pathology_diagnosis %in% c("Astrocytoma", "Glioblastoma", "Astrocytoma;Oligoastrocytoma") ~ pathology_diagnosis,
+    pathology_free_text_diagnosis == "astroblastoma" ~ "Astroblastoma",
     cancer_group == "Non-germinomatous germ cell tumor;Teratoma" ~ "Mixed germ cell tumor",
     cancer_group %in% c("Meningothelial meningioma", "Clear cell meningioma", "Atypical meningioma", "Anaplastic (malignant) meningioma") ~ "Meningioma",
-    cancer_group == "Supratentorial or Spinal Cord PNET" ~ "CNS Embryonal tumor",
-    cancer_group == "Embryonal tumor" ~ "Embryonal tumor",
+    cancer_group %in% c("Supratentorial or Spinal Cord PNET", "Embryonal tumor", "Embryonal Tumor", "CNS Embryonal tumor, NEC/NOS", "CNS with BCOR ITD") ~ "Embryonal tumor",
     cancer_group == "Embryonal Tumor with Multilayered Rosettes (ETMR)" ~ "Embryonal tumor with multilayer rosettes",
     cancer_group %in% c("Wilms Tumor", "Juvenile Xanthogranuloma", "Clear Cell Sarcoma of the Kidney") ~ stringr::str_to_sentence(cancer_group),
     cancer_group == "Ependymoma;Metastatic secondary tumors" ~ "Ependymoma",
     cancer_group %in% c("Acute Promyelocytic Leukemia", "Therapy-Related Acute Myeloid Leukemia") ~ "Acute Myeloid Leukemia",
-    cancer_group %in% c("Mixed Lineage Leukemia") ~ "Acute Lymphoblastic Leukemia",
-    cancer_group == "Brain Lower Grade Glioma" ~ "Low-grade glioma/astrocytoma",
-    cancer_group == "congenital malignant brain tumor" ~ "High-grade glioma/astrocytoma",
+    cancer_group == "Mixed Lineage Leukemia" ~ "Acute Lymphoblastic Leukemia",
+    cancer_group %in% c("Brain Lower Grade Glioma", "Low-grade glioma/astrocytoma (WHO grade I/II)") ~ "Low-grade glioma",
+    cancer_group %in% c("congenital malignant brain tumor", "High-grade glioma/astrocytoma (WHO grade III/IV)") ~ "High-grade glioma",
     cancer_group == "Kidney Chromophobe" ~ "Chromophobe renal cell carcinoma",
     cancer_group == "Kidney Renal Clear Cell Carcinoma" ~ "Renal Clear Cell Carcinoma",
     cancer_group == "Kidney Renal Papillary Cell Carcinoma" ~ "Renal Papillary Cell Carcinoma",    
@@ -189,22 +192,29 @@ histology_cg <- histology %>%
     cancer_group %in% c("Adamantinomatous craniopharyngioma", "Gliomatosis cerebri") ~ str_to_title(cancer_group),
     #typo
     cancer_group == "Fibromixoid lesion" ~ "Fibromyxoid lesion",
-    cancer_group == "Glioneuronal tumor" ~ "Glial-neuronal tumor NOS",
     cancer_group == "Histiocytic Tumor" ~ str_to_sentence(cancer_group),
+    short_histology == "JXG" ~ "Histiocytic tumor",
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
     cancer_group == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor",
-    short_histology == "LIHC" ~ "Hepatocellular Carcinoma",
+    cancer_group %in% c("Glioneuronal tumor", "Glial-neuronal tumor NOS") ~ "Glial-neuronal tumor",
+    harmonized_diagnosis == "Neuroepithelial neoplasm with EWSR1--PLAG1 fusion" ~ "Glial-neuronal tumor",
     harmonized_diagnosis == "Rosai-dorfman" ~ "Rosai-Dorfman disease",
-    TRUE ~ as.character(cancer_group))
+    short_histology == "LIHC" ~ "Hepatocellular Carcinoma",
+    broad_histology == "Ependymal tumor" ~ "Ependymoma",
+    TRUE ~ cancer_group)
   ) %>%
   # Additional update to clean up terms that we will use in plots
   # harmonize myofibroblastic tumors - all inflammatory; take care of organ later
     mutate(short_histology = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(short_histology)),
-           harmonized_diagnosis = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(harmonized_diagnosis))) %>%
+           harmonized_diagnosis = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(harmonized_diagnosis)),
+           # update typo
+           broad_histology = case_when(broad_histology == "Vasculaar tumor" ~ "Vascular tumor",
+                                        TRUE ~ broad_histology)) %>%
   # remove short forms in the brackets
   dplyr::mutate(cancer_group = str_extract(cancer_group, "[^(]*")) %>%
   # remove space at the ends
-  dplyr::mutate(cancer_group = gsub(" $","",cancer_group))
+  dplyr::mutate(cancer_group = gsub(" $","", cancer_group))
+
 ```
 
 #### Write out table for `harmonized_diagnosis` -> `cancer_group` mapping
@@ -218,8 +228,6 @@ We'll only include a subset of the mappings in the README (those that we think r
 # explain whether or not the subtype is stripped and whether not additional 
 # modifications beyond that have been performed.
 mapping_table <- histology_cg %>% 
-  # Consider removing this sample? -- seems to be a special case, see chunk above
-  # dplyr::filter(sample_id != "7316-2577") %>%
   dplyr::select(cohort, harmonized_diagnosis, 
                 cancer_group) %>%
   dplyr::distinct() %>%
@@ -335,7 +343,7 @@ all_cg  <- ped_cancer_groups %>%
 
 efo_mondo <- read_tsv(file.path(data_dir, "efo-mondo-map.tsv"))
 
-efo_v11 <- all_cg %>%
+efo_new_release <- all_cg %>%
   left_join(efo_mondo) %>%
   unique() %>%
   arrange(cancer_group) %>%
