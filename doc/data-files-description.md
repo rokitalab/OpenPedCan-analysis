@@ -13,7 +13,7 @@ This document contains information about all data files associated with this pro
 + **File description**
 	+ A *brief* one sentence description of what the file contains (e.g., bed files contain coordinates for features XYZ).
 
-### current release (v11)
+### current release (v12)
 | **File name** |  **File Type** | **Origin** | **File Description** |
 |---------------|----------------|------------------------|-----------------------|
 |`histologies-base.tsv` | Data file | Cohort-specific data files and databases | Clinical and sequencing metadata for each biospecimen
@@ -26,21 +26,20 @@ This document contains information about all data files associated with this pro
 |`*.bed` | Reference file | [Manual collation](https://github.com/PediatricOpenTargets/ticket-tracker/issues/258) | Bed files used for variant calling and are used for tmb calculation
 |`uberon-map-gtex-group.tsv` | Reference mapping file | [Manual collation](https://github.com/PediatricOpenTargets/ticket-tracker/issues/85) | Mapping of UBERON codes to tissue types in GTEx broad groups
 |`uberon-map-gtex-subgroup.tsv` | Reference mapping file | [Manual collation](https://github.com/PediatricOpenTargets/ticket-tracker/issues/85) | Mapping of UBERON codes to tissue types in GTEx subgroups
-|`methyl-beta-values.rds` | Processed data file | [methylation beta valeues](https://github.com/PediatricOpenTargets/ticket-tracker/issues/269)| Methylation beta values
-|`methyl-m-values.rds` | Processed data file | [methylation m valeues](https://github.com/PediatricOpenTargets/ticket-tracker/issues/269)| Methylation m values
+|`methyl-beta-values.rds` | Processed data file | [methylation beta values](https://github.com/PediatricOpenTargets/ticket-tracker/issues/269)| Methylation beta values
+|`methyl-m-values.rds` | Processed data file | [methylation m values](https://github.com/PediatricOpenTargets/ticket-tracker/issues/269)| Methylation m values
 |`rna-isoform-expression-rsem-tpm.rds` | Processed data file | [RNA isoform TPM files](https://github.com/PediatricOpenTargets/ticket-tracker/issues/341)| RNA isoform TPM files
-|`snv-dgd.maf.tsv.gz` | Processed data file | [DGD merged SNV MAF results](https://github.com/PediatricOpenTargets/ticket-tracker/issues/248)| DGD merged SNV MAF results
 |`fusion-dgd.tsv` | Processed data file | [DGD merged fusion results](https://github.com/PediatricOpenTargets/ticket-tracker/issues/249)| DGD merged fusion results
 |`fusion-arriba.tsv.gz` | Processed data file | [Gene fusion detection](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#gene-fusion-detection); [Workflow](https://github.com/kids-first/kf-rnaseq-workflow/blob/master/workflow/kfdrc_RNAseq_workflow.cwl) | Fusion - [Arriba TSV](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/doc/format/arriba-tsv-header.md), annotated with FusionAnnotator
 |`fusion-starfusion.tsv.gz` | Processed data file | [Gene fusion detection](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#gene-fusion-detection); [Workflow](https://github.com/kids-first/kf-rnaseq-workflow/blob/master/workflow/kfdrc_RNAseq_workflow.cwl) | Fusion - [STARFusion TSV](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/doc/format/starfusion-tsv-header.md)
+|`fusion-annoFuse.tsv.gz` | Processed data file | AnnoFuse QC filtered fusion file | 
 |`fusion_summary_embryonal_foi.tsv` | Analysis file | [`fusion-summary`](ttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/master/analyses/fusion-summary) | Summary file for presence of embryonal tumor fusions of interest |
 |`fusion_summary_ependymoma_foi.tsv` | Analysis file | [`fusion-summary`](ttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/master/analyses/fusion-summary) | Summary file for presence of ependymal tumor fusions of interest |
 |`fusion_summary_ewings_foi.tsv` | Analysis file | [`fusion-summary`](ttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/master/analyses/fusion-summary) | Summary file for presence of Ewing's sarcoma fusions of interest |
-|`fusion_summary_ewings_lgat.tsv` | Analysis file | [`fusion-summary`](ttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/master/analyses/fusion-summary) | Summary file for presence of LGAT fusions of interest |
+|`fusion_summary_lgg_hgg_foi.tsv` | Analysis file | [`fusion-summary`](ttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/master/analyses/fusion-summary) | Summary file for presence of LGG and HGG fusions of interest |
 |`fusion-putative-oncogenic.tsv` | Analysis file | [`fusion_filtering`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/master/analyses/fusion_filtering) | Filtered and prioritized fusions
 |`gene-counts-rsem-expected_count-collapsed.rds` | Analysis file | PBTA+GMKF+TARGET+GTEx [`collapse-rnaseq`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/collapse-rnaseq) ;GTEx v8 release| Gene expression - RSEM expected_count for each samples collapsed to gene symbol (gene-level)
 |`gene-expression-rsem-tpm-collapsed.rds` | Analysis file | PBTA+GMKF+TARGET+GTEx [`collapse-rnaseq`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/collapse-rnaseq);GTEx v8 release | Gene expression - RSEM TPM for each samples collapsed to gene symbol (gene-level)
-|`tcga-gene-counts-rsem-expected_count-collapsed.rds` | Modified reference file | TCGA samples - manually curated to include 10414 TCGA RNA samples that are in diseaseXpress and has GDC clinical information| Gene expression - RSEM expected_count for each samples collapsed to gene symbol (gene-level)
 |`tcga-gene-expression-rsem-tpm-collapsed.rds` | Modified reference file | TCGA samples - manually curated to include 10414 TCGA RNA samples that are in diseaseXpress and has GDC clinical information | Gene expression - RSEM TPM for each samples collapsed to gene symbol (gene-level)
 |`WGS.hg38.lancet.300bp_padded.bed` | Reference Target/Baits File | [SNV and INDEL calling](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#snv-and-indel-calling) | WGS.hg38.lancet.unpadded.bed file with each region padded by 300 bp
 |`WGS.hg38.lancet.unpadded.bed` | Reference Regions File | [SNV and INDEL calling](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#snv-and-indel-calling) |  hg38 WGS regions created using UTR, exome, and start/stop codon features of the GENCODE 31 reference, augmented with PASS variant calls from Strelka2 and Mutect2
@@ -53,7 +52,7 @@ This document contains information about all data files associated with this pro
 |`cnvkit_with_status.tsv` <br> `consensus_seg_with_status.tsv` | Analysis files | [`copy_number_consensus_call`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/copy_number_consensus_call) | CNVkit calls for WXS or CNV consensus calls for WGS with gain/loss status
 |`cnv-consensus-gistic.gz` | Analysis file | [`run-gistic`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/run-gistic) | GISTIC results - WGS samples only
 |`cnv-controlfreec.tsv.gz` | Processed data file | [Copy number variant calling](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#somatic-copy-number-variant-calling); [Workflow](https://github.com/d3b-center/OpenPBTA-workflows/blob/master/cwl/kfdrc_combined_somatic_wgs_cnv_wf.cwl) | Somatic Copy Number Variant - TSV file that is a merge of [ControlFreeC `*_CNVs` files](http://boevalab.inf.ethz.ch/FREEC/tutorial.html#OUTPUT)
-|`consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz` | Analysis file | [`focal-cn-file-preparation`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/focal-cn-file-preparation) | [TSV file](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/46cf6ccb119312ccae6122ac94c51710df01f6da/analyses/focal-cn-file-preparation#scripts-and-notebooks) containing genes with copy number changes per biospecimen; autosomes only
+|`cnv-gatk.seg.gz` | Processed data file | Copy number variant calling | Somatic Copy Number Variant - TSV SEG file produced by GATK CNV | Analysis file | 
 |`consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz` | Analysis file | [`focal-cn-file-preparation`](hhttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/focal-cn-file-preparation) | [TSV file](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/46cf6ccb119312ccae6122ac94c51710df01f6da/analyses/focal-cn-file-preparation#scripts-and-notebooks) containing genes with copy number changes per biospecimen; sex chromosomes only
 |`consensus_wgs_plus_cnvkit_wxs.tsv.gz` | Analysis file | [`focal-cn-file-preparation`](hhttps://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/focal-cn-file-preparation) | [TSV file](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/46cf6ccb119312ccae6122ac94c51710df01f6da/analyses/focal-cn-file-preparation#scripts-and-notebooks) containing genes with copy number changes per biospecimen; both autosomes and sex chromosomes
 |`snv-mutation-tmb-all.tsv` | Analysis file | [`tmb-calculation`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/tmb-calculation) | TSV file with sample names and their tumor mutation burden counting all variants
@@ -67,7 +66,7 @@ This document contains information about all data files associated with this pro
 `independent-specimens.rnaseq.relapse-pre-release.tsv` <br>
 `independent-specimens.rnaseq.relapse.eachcohort.tsv` <br>
 `independent-specimens.rnaseq.relapse.tsv` <br>
-`independent-specimens.rnaseqpanel.primary-plus.eachcohort.tsv` <br>
+`independent-specimens.rnaseq.primary-plus-pre-release.tsv` <br>
 `independent-specimens.rnaseqpanel.primary-plus.pre-release.tsv` <br>
 `independent-specimens.rnaseqpanel.primary-plus.tsv` <br>
 `independent-specimens.rnaseqpanel.primary.eachcohort.tsv` <br>
@@ -95,8 +94,11 @@ This document contains information about all data files associated with this pro
 `independent-specimens.wgswxspanel.relapse.eachcohort.tsv` <br>
 `independent-specimens.wgswxspanel.relapse.prefer.wgs.tsv` <br>
 `independent-specimens.wgswxspanel.relapse.prefer.wxs.tsv` <br>
-`independent-specimens.wgswxspanel.relapse.tsv`| Analysis files | [`independent-samples`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/independent-samples) | Independent (non-redundant) sample list of DNA, RNA, or methylation samples of all sequencing methods, from primary, primary-plus, or relapse tumors within each or across all cohorts
+`independent-specimens.wgswxspanel.relapse.tsv` <br>
+`independent-specimens.methyl.primary-plus.eachcohort.tsv` <br>
+`independent-specimens.methyl.primary.eachcohort.tsv` <br>
+`independent-specimens.methyl.relapse.eachcohort.tsv`| Analysis files | [`independent-samples`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/independent-samples) | Independent (non-redundant) sample list of DNA, RNA, or methylation samples of all sequencing methods, from primary, primary-plus, or relapse tumors within each or across all cohorts
 `independent-specimens.rnaseq.primary-plus-pre-release.tsv` <br>
 `independent-specimens.rnaseq.primary-pre-release.tsv` <br>
-`independent-specimens.rnaseqpanel.primary.pre-release.tsv` <br>
-`independent-specimens.rnaseqpanel.relapse.pre-release.tsv` | Analysis files | [`independent-samples`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/independent-samples) | Independent (non-redundant) sample list of RNA samples of all sequencing methods, from primary, primary-plus, or relapse tumors across all cohorts for the purposes of running `fusion_filtering` pre-release
+`independent-specimens.rnaseq.primary-pre-release.tsv` <br>
+`independent-specimens.rnaseq.relapse-pre-release.tsv` | Analysis files | [`independent-samples`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/independent-samples) | Independent (non-redundant) sample list of RNA samples of all sequencing methods, from primary, primary-plus, or relapse tumors across all cohorts for the purposes of running `fusion_filtering` pre-release
