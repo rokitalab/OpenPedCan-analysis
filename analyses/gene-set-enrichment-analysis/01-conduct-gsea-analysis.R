@@ -106,8 +106,8 @@ histology_rna_df <- histology_df %>%
   dplyr::filter(cohort != "TCGA") %>%
   dplyr::filter(!is.na(broad_histology)) %>%
   dplyr::filter(broad_histology != "Non-tumor") %>%  
-  dplyr::filter(broad_histology != "Other tumor") %>%
-  dplyr::filter(!is.na(cancer_group)) 
+  dplyr::filter(broad_histology != "Other tumor") #%>%
+  #dplyr::filter(!is.na(cancer_group)) # using histologies base for won't work 
   
 
 # First filter expression data to exclude GTEx and TCGA

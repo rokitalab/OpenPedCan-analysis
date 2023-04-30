@@ -101,10 +101,10 @@ if(seg){
 
 if(controlfreec){
   # TODO: filter based on the p-values rather than just dropping them?
-  cnv_df <- readr::read_tsv(cnv_file) %>%
-    dplyr::rename(copy_number = copy.number) %>%
+  cnv_df <- readr::read_tsv(cnv_file, col_types = cols(chr = col_character())) %>%
+    dplyr::rename(copy_number = "copy number") %>%
     dplyr::mutate(chr = paste0("chr", chr)) %>%
-    dplyr::select(-segment_genotype, -uncertainty, -WilcoxonRankSumTestPvalue, -KolmogorovSmirnovPvalue) %>%
+    dplyr::select(-genotype, -uncertainty, -WilcoxonRankSumTestPvalue, -KolmogorovSmirnovPvalue) %>%
     dplyr::select(-Kids_First_Biospecimen_ID, dplyr::everything())
 }
 
@@ -172,8 +172,17 @@ gencode_gr <- makeGRangesFromDataFrame(gencode_df, keep.extra.columns = TRUE)
 gencode_gr <- sort(gencode_gr)
 
 #### Addressing autosomes first ------------------------------------------------
+
+# Exclude the X and Y chromosomes and some other contigs
+# Removing copy neutral segments saves on the RAM required to run this step
+# and file size
+cnv_no_xy_df <- cnv_df %>%
+  dplyr::filter(!(chr %in% c("chrX", "chrY")),
+                !grepl("_", chr)) %>%
+  dplyr::distinct()
+
 # slice the df to avoid memory exhaust issues
-cnv_df_ids <- cnv_df %>% 
+cnv_df_ids <- cnv_no_xy_df %>% 
   dplyr::pull(Kids_First_Biospecimen_ID) %>% 
   unique()
 
@@ -197,16 +206,8 @@ for (i in 1:length(slice_vector)){
   cnv_df_ids_each <- cnv_df_ids[start_id:end_id]
   
   # get the matching CNV dataframe
-  cnv_df_each <- cnv_df %>% 
+  cnv_no_xy_each <- cnv_no_xy_df %>% 
     dplyr::filter(Kids_First_Biospecimen_ID %in% cnv_df_ids_each)
-  
-  # Exclude the X and Y chromosomes and some other contigs
-  # Removing copy neutral segments saves on the RAM required to run this step
-  # and file size
-  cnv_no_xy_each <- cnv_df_each %>%
-    dplyr::filter(!(chr %in% c("chrX", "chrY")),
-                  !grepl("_", chr)) %>%
-    distinct()
   
   # Merge and annotated no X&Y
   autosome_annotated_cn_each <- process_annotate_overlaps(cnv_df = cnv_no_xy_each, exon_granges = gencode_gr, gene_df = gencode_df) %>%
@@ -228,7 +229,6 @@ for (i in 1:length(slice_vector)){
   
   autosome_annotated_cn_resolved <- bind_rows(autosome_annotated_cn_resolved, autosome_resolved)
   autosome_annotated_cn_unresolved <- bind_rows(autosome_annotated_cn_unresolved, autosome_unresolved)
-
 }
 
 # Output file name
@@ -251,6 +251,21 @@ readr::write_tsv(autosome_annotated_cn_unresolved, file.path(results_dir, autoso
 #### X&Y -----------------------------------------------------------------------
 
 if(xy_flag){
+  # Filter to just the X and Y chromosomes and remove neutral segments
+  # Removing copy neutral segments saves on the RAM required to run this step
+  # and file size
+  cnv_sex_chrom_df <- cnv_df %>%
+    dplyr::filter(chr %in% c("chrX", "chrY")) %>%
+    dplyr::distinct()
+    	
+  # slice the df to avoid memory exhaust issues
+  cnv_df_ids <- cnv_sex_chrom_df %>%
+    dplyr::pull(Kids_First_Biospecimen_ID) %>%
+    unique()
+
+  # slice to 100 samples each
+  slice_vector <- seq(1, length(cnv_df_ids), 100)
+
   # define combined dataframe
   #sex_chrom_annotated_cn <- data.frame()
   sex_chrom_annotated_cn_resolved <- data.frame()
@@ -267,15 +282,9 @@ if(xy_flag){
     cnv_df_ids_each <- cnv_df_ids[start_id:end_id]
     
     # get the matching CNV dataframe
-    cnv_df_each <- cnv_df %>% 
-      dplyr::filter(Kids_First_Biospecimen_ID %in% cnv_df_ids_each)
-    
-    # Filter to just the X and Y chromosomes and remove neutral segments
-    # Removing copy neutral segments saves on the RAM required to run this step
-    # and file size
-    cnv_sex_chrom_each <- cnv_df_each %>%
-      dplyr::filter(chr %in% c("chrX", "chrY"))
-    
+    cnv_sex_chrom_each <- cnv_sex_chrom_df %>% 
+      dplyr::filter(Kids_First_Biospecimen_ID %in% cnv_df_ids_each)   
+  
     # Merge and annotated X&Y
     sex_chrom_annotated_cn_each <- process_annotate_overlaps(cnv_df = cnv_sex_chrom_each, exon_granges = gencode_gr, gene_df = gencode_df) %>%
       # mark possible deep loss in sex chromosome

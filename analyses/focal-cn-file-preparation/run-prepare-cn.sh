@@ -26,8 +26,8 @@ scratch_dir=../../scratch
 data_dir=../../data
 results_dir=../../analyses/focal-cn-file-preparation/results
 gtf_file=${data_dir}/gencode.v39.primary_assembly.annotation.gtf.gz
-goi_file=../../analyses/oncoprint-landscape/driver-lists/brain-goi-list-long.txt
-independent_specimens_file=${data_dir}/independent-specimens.wgswxspanel.primary.prefer.wgs.tsv
+#goi_file=../../analyses/oncoprint-landscape/driver-lists/brain-goi-list-long.txt
+#independent_specimens_file=${data_dir}/independent-specimens.wgswxspanel.primary.prefer.wgs.tsv
 
 if [[ "$RUN_FOR_SUBTYPING" -eq "1" ]]
 then

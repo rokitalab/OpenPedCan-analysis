@@ -50,17 +50,18 @@ histologies <- readr::read_tsv(opts$histology, guess_max = 100000)
 expression <- readr::read_rds(opts$expression)
 
 
-epn_samples <- histologies %>%
+epn_exp_samples <- histologies %>%
   filter(experimental_strategy == "RNA-Seq",
          # All Ependymoma samples are captured in pathology_diagnosis
          # pathology_free_text_diagnosis adds no additional samples
-         pathology_diagnosis == "Ependymoma") %>%
+         grepl("Ependymoma", pathology_diagnosis),
+         cohort %in% c("PBTA", "DGD", "Kentucky")) %>%
   pull(Kids_First_Biospecimen_ID)
-epn_samples <- intersect(epn_samples, colnames(expression))
+epn_exp_samples <- intersect(epn_exp_samples, colnames(expression))
 
 # Subsetting expression columns with column names/BSIDs that are in the list of ependymoma samples
 epn_expression <- expression %>%
-  select(epn_samples) %>%
+  select(epn_exp_samples) %>%
   tibble::rownames_to_column("GENE")
 
 # write the expression file out
