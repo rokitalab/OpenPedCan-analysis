@@ -455,6 +455,7 @@ add_cg_ch_pedcbio_pedot_plot_urls <- function(mut_freq_tbl,
 #   Gene,
 #   ENSP,
 #   HGVSp_Short,
+#   HGVSg,
 #   HotSpotAllele.
 # - overall_histology_df: the histology tibble that contains all samples. Must
 #   contain the following fields: Kids_First_Biospecimen_ID,
@@ -525,6 +526,7 @@ get_cg_ch_var_level_mut_freq_tbl <- function(maf_df, overall_histology_df,
               Protein_Ensembl_ID = paste(
                 discard(unique(ENSP), is.na), collapse = ','),
               Protein_change = unique(HGVSp_Short),
+              HGVSg = unique(HGVSg),
               HotSpotAllele = unique(HotSpotAllele)) %>%
     left_join(ss_mut_freq_df, by = 'Variant_ID') %>%
     mutate(Disease = ss_cancer_group,
@@ -534,7 +536,7 @@ get_cg_ch_var_level_mut_freq_tbl <- function(maf_df, overall_histology_df,
     select(Gene_symbol, Dataset, Disease, Variant_ID, dbSNP_ID,
            VEP_impact, SIFT_impact, PolyPhen_impact, Variant_classification,
            Variant_type, Gene_Ensembl_ID, Protein_Ensembl_ID, Protein_change,
-           Total_mutations_over_subjects_in_dataset,
+           HGVSg, Total_mutations_over_subjects_in_dataset,
            Frequency_in_overall_dataset,
            Total_primary_tumors_mutated_over_primary_tumors_in_dataset,
            Frequency_in_primary_tumors,
@@ -623,9 +625,16 @@ get_cg_ch_gene_level_mut_freq_tbl <- function(maf_df, overall_histology_df,
   #            mRNA_RefSeq_ID = unique(RefSeq),
   output_var_df <- ss_maf_df %>%
     group_by(Gene) %>%
+    # 2023-03 Because of the switch to Gencode v39 annotation, some noncoding 
+    # genes now map to multiple transcript ids in the Hugo_Symbol/Gene_symbol
+    # column. At time of update this applies to 2 genes, so arbitrarily picking
+    # the first transcript ID, but will want a better way of handling duplicates
+    # in the future
+    filter(row_number() == 1) %>%
     summarise(Gene_symbol = unique(Hugo_Symbol),
               Protein_Ensembl_ID = paste(
-                discard(unique(ENSP), is.na), collapse = ',')) %>%
+              discard(unique(ENSP), is.na), collapse = ',')) %>%
+    ungroup() %>%
     left_join(ss_mut_freq_df, by = 'Gene') %>%
     rename(Gene_Ensembl_ID = Gene) %>%
     mutate(Disease = ss_cancer_group,
@@ -702,17 +711,17 @@ maf_df <- read_tsv('../../data/snv-consensus-plus-hotspots.maf.tsv.gz',
                                     SOMATIC = col_character(),
                                     PHENO = col_character()))
 # read in DGD MAF; has a slightly different format than the MAF above
-maf_df_dgd <- read_tsv('../../data/snv-dgd.maf.tsv.gz', 
-                       comment = '#', 
-                       col_types = cols(.default = col_guess(), 
-                                        CLIN_SIG = col_character(), 
-                                        PUBMED = col_character(),
-                                        SOMATIC = col_character(),
-                                        PHENO = col_character()))
+#maf_df_dgd <- read_tsv('../../data/snv-dgd.maf.tsv.gz', 
+#                       comment = '#', 
+#                       col_types = cols(.default = col_guess(), 
+#                                        CLIN_SIG = col_character(), 
+#                                        PUBMED = col_character(),
+#                                        SOMATIC = col_character(),
+#                                        PHENO = col_character()))
 # combine MAFs by binding rows since the DGD MAF is missing a couple columns
-maf_df <- bind_rows(maf_df, maf_df_dgd)
+#maf_df <- bind_rows(maf_df, maf_df_dgd)
 # remove DGD MAF as it's no longer needed and doesn't need to be in memory
-rm(maf_df_dgd)
+#rm(maf_df_dgd)
 
 # assert all NCBI_Build values are GRCh38
 stopifnot(all(maf_df$NCBI_Build == 'GRCh38'))
@@ -871,13 +880,13 @@ maf_df <- maf_df %>%
                             Tumor_Seq_Allele2, sep = '_')) %>%
   select(Kids_First_Biospecimen_ID, Variant_ID,
          Hugo_Symbol, dbSNP_RS, IMPACT, SIFT, PolyPhen, Variant_Classification,
-         Variant_Type, RefSeq, Gene, ENSP, HGVSp_Short, HotSpotAllele)
+         Variant_Type, RefSeq, Gene, ENSP, HGVSp_Short, HGVSg, HotSpotAllele)
 
 
 # Compute mutation frequencies -------------------------------------------------
 message('Compute mutation frequencies...')
 cancer_group_cohort_summary_df <- get_cg_cs_tbl(td_htl_dfs$overall_htl_df,
-                                                c('TARGET', 'PBTA', 'GMKF'))
+                                                c('TARGET', 'PBTA', 'GMKF', 'Kentucky'))
 
 # nf = n_samples filtered
 nf_cancer_group_cohort_summary_df <- cancer_group_cohort_summary_df %>%
@@ -976,7 +985,7 @@ var_level_mut_freq_tbl <- var_level_mut_freq_tbl %>%
   select(Gene_symbol, Dataset, Disease, EFO, MONDO, Variant_ID, dbSNP_ID,
          VEP_impact, SIFT_impact, PolyPhen_impact, Variant_classification,
          Variant_type, Gene_full_name, Protein_RefSeq_ID,
-         Gene_Ensembl_ID, Protein_Ensembl_ID, Protein_change,
+         Gene_Ensembl_ID, Protein_Ensembl_ID, Protein_change, HGVSg,
          Total_mutations_over_subjects_in_dataset,
          Frequency_in_overall_dataset,
          Total_primary_tumors_mutated_over_primary_tumors_in_dataset,
@@ -987,7 +996,7 @@ var_level_mut_freq_tbl <- var_level_mut_freq_tbl %>%
   rename(Variant_ID_hg38 = Variant_ID,
          targetFromSourceId = Gene_Ensembl_ID,
          diseaseFromSourceMappedId = EFO) %>%
-  mutate(datatypeId = "somatic_mutation",
+  mutate(datatypeId = "pediatric_cancer",
          datasourceId = "chop_variant_level_snv") %>%
   mutate(Dataset = replace(Dataset,
          Dataset == "all_cohorts", "All Cohorts"))
@@ -1015,7 +1024,7 @@ gene_level_mut_freq_tbl <- gene_level_mut_freq_tbl %>%
          PedcBio_PedOT_oncoprint_plot_URL, PedcBio_PedOT_mutations_plot_URL) %>%
   rename(targetFromSourceId = Gene_Ensembl_ID,
          diseaseFromSourceMappedId = EFO) %>%
-  mutate(datatypeId = "somatic_mutation",
+  mutate(datatypeId = "pediatric_cancer",
          datasourceId = "chop_gene_level_snv") %>%
   mutate(Dataset = replace(Dataset,
          Dataset == "all_cohorts", "All Cohorts"))

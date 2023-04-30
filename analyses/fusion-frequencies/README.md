@@ -70,7 +70,7 @@ Additionallly, some field names were changed for OT compatbiitliy:
 - `EFO` to `diseaseFromSourceMappedId`
 Three additional columns added: 
 - `chop_uuid` includes 32 digit UUIDs that are unique for each row of the file 
-- `datatypeId` column with `somatic_mutation` in each row
+- `datatypeId` column with `pediatric_cancer` in each row
 - `datasourceId` column with `chop_putative_oncogene_fusion` in each row
 
 The combined table was written out as `putative-oncogene-fusion-freq.jsonl.gz`.
@@ -84,7 +84,7 @@ After merging fusion frequency tables of all `cancer_group_cohort`s, some field 
 - `EFO` to `diseaseFromSourceMappedId`
 Three additional columns added: 
 - `chop_uuid` includes 32 digit UUIDs that are unique for each row of the file 
-- `datatypeId` column with `somatic_mutation` in each row
+- `datatypeId` column with `pediatric_cancer` in each row
 - `datasourceId` column with `chop_putative_oncogene_fused_gene` in each row
 
 the combined table was written out as `putative-oncogene-fused-gene-freq.jsonl.gz`.
