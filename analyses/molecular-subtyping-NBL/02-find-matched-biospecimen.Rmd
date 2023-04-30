@@ -50,9 +50,9 @@ mycn_df <- readr::read_tsv(file.path(subset_dir, "mycn_nbl_subset_data.tsv"),
   dplyr::mutate(match_id = paste(Kids_First_Participant_ID, 
                                  sample_id, cohort, sep = "_")) %>%
   # select columns of interest
-  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, aliquot_id, 
-                experimental_strategy, RNA_library,  pathology_diagnosis, cohort,
-                pathology_free_text_diagnosis, gene_symbol, MYCN_CN, MYCN_TPM,
+  dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, 
+                aliquot_id, experimental_strategy, RNA_library,  pathology_diagnosis,
+                cohort, pathology_free_text_diagnosis, gene_symbol, MYCN_CN, MYCN_TPM,
                 MYCN_CN_status, match_id)
 ```
 
@@ -80,7 +80,7 @@ mycn_rna_df <- mycn_df %>%
 mycn_dna_rna_df <- mycn_dna_df %>% 
   dplyr::select(Kids_First_Participant_ID, gene_symbol, pathology_diagnosis,
                 pathology_free_text_diagnosis, MYCN_CN, MYCN_CN_status,
-                Kids_First_Biospecimen_ID_DNA, match_id, aliquot_id, cohort) %>% 
+                Kids_First_Biospecimen_ID_DNA, match_id, sample_id, aliquot_id, cohort) %>% 
   dplyr::inner_join(
     mycn_rna_df %>% 
       dplyr::select(Kids_First_Biospecimen_ID_RNA, MYCN_TPM, match_id),

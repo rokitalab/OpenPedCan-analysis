@@ -44,7 +44,8 @@ independent_methyl_samples <- function(independent_rna_sample_df = NULL,
   independent_level <- match.arg(independent_level)
   if(!missing(seed)){set.seed(seed)}
   primary_descs <- c("Initial CNS Tumor", "Primary Tumor")
-  relapse_descs <- c("Recurrence", "Progressive", "Progressive Disease Post-Mortem")
+  relapse_descs <- c("Recurrence", "Progressive", 
+                     "Progressive Disease Post-Mortem", "Deceased")
   
   # add rna-methy match_id column comprising of "Kids_First_Participant_ID" and "sample_id" to histology_df
   # because some Kids_First_Participant_ID might have more than one sample_id

@@ -35,7 +35,7 @@ if ( params$base_run ==0 ){
 }
 
 # recording of "BS_ETC8R0TD" GMKF NBL sample; needs to be remove once updated in v12
-clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
+#clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
 ```
 
 ### Classifier scores
@@ -77,6 +77,7 @@ clinical_filtered <- clinical %>%
 if ( params$ci_run == 1 ){
 # Generate RNA library list that can be used to iterate 
 rna_library_list <- clinical_filtered %>% pull(RNA_library) %>% unique()
+rna_library_list <- rna_library_list[!is.na(rna_library_list)]
 
 } else{
 rna_library_list <- c("stranded", "poly-A")
@@ -94,7 +95,6 @@ expression_matrix_list <- lapply(rna_library_list, function(x){
   expression_matrix_library <- expressionMatrix %>% dplyr::select(samples_library) %>%
     rownames_to_column()
 })
-  
 ```
 
 

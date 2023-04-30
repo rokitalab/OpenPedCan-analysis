@@ -5,7 +5,7 @@
 # oncogenic drivers of a tumor and in some cases, appropriate therapy
 
 # Example run:
-# Rscript analyses/fusion_filtering/02-fusion-filtering.R -S scratch/arriba.tsv --expressionMatrix data/gene-expression-rsem-tpm-collapsed.rds --readthroughFilter --artifactFilter "GTEx_Recurrent|DGD_PARALOGS|Normal|BodyMap" --junctionReadCountFilter 1 --spanningFragCountFilter 100 --readingFrameFilter "in-frame|frameshift|other" --referenceFolder analyses/fusion_filtering/references/ --outputFile scratch/standardFusionExp -t 1
+# Rscript analyses/fusion_filtering/02-fusion-filtering.R -S scratch/arriba.tsv --expressionMatrix data/gene-expression-rsem-tpm-collapsed.rds --readthroughFilter --artifactFilter "GTEx_Recurrent|DGD_PARALOGS|Normal|BodyMap" --junctionReadCountFilter 1 --spanningFragCountFilter 100 --readingFrameFilter "in-frame|frameshift|other" --outputFile scratch/standardFusionExp -t 1
 #
 # Command line arguments
 #
@@ -19,9 +19,6 @@
 # artifactFilter		      :Comma separated values to remove fusions annotated as potential red flag as per
 #				                   annotation in "annots" column (in OpenPBTA annotation is from FusionAnnotator)
 # readingFrameFilter		  :Reading frame to keep in final set of QC fusion calls ( regex to capture inframe|frameshift|other)
-# referenceFolder		      :Path to folder with all reference gene list and fusion file list with the following files
-#                          genelistreference.txt A dataframe of genes of interest ; columns 1 : GeneNames 2: Source file 3: Type
-#                          fusionreference.txt A dataframe of fusion of interest ; columns 1 : FusionName 2: Source file 3: Type
 # outputFile			        :Filename prefix for QC filtered and gene of interest annotated fusion calls (prefix for _QC_expression_filtered_annotated.RDS)")
 #
 
@@ -53,8 +50,6 @@ option_list <- list(
               help="threshold for  (SpanningFragCount - JunctionReadCount)",default=100),
   make_option(c("-i","--readingFrameFilter"),type="character",
                help="reading frame filtering ( regex to capture inframe|frameshift|other)"),
-  make_option(c("-R","--referenceFolder"),type="character",
-                help="reference folder with required gene lists"),
   make_option(c("-o","--outputFile"),type="character",
               help="Filtered fusion calls (prefix for _QC_expression_filtered_annotated.RDS)")
 )
@@ -75,7 +70,6 @@ artifactFilter<-opt$artifactFilter
 clinicalFile<-opt$clinicalFile
 junctionReadCountFilter<-opt$junctionReadCountFilter
 spanningFragCountFilter<-opt$spanningFragCountFilter
-referenceFolder<-opt$referenceFolder
 readingFrameFilter<-opt$readingFrameFilter
 
 

@@ -154,7 +154,7 @@ After randomizing the histology file subset to tumor samples:
 ```
 tumor_samples <- histology_df %>%
   dplyr::filter(sample_type == "Tumor", 
-                composition != "Derived Cell Line", 
+                !composition %in% c("Derived Cell Line", "PDX"), 
                 experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
                 !grepl("Metastatic secondary tumors", pathology_diagnosis, ignore.case = FALSE, perl = FALSE, 
                         fixed = FALSE, useBytes = FALSE))
