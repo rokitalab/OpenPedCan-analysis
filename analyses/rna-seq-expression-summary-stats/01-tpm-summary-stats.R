@@ -638,8 +638,8 @@ gene_wise_zscore_m_tpm_ss_long_tbl <- select(
   m_tpm_ss_long_tbl, -tpm_mean_cancer_group_wise_zscore)
 
 # change the column name of output files
-colnames(group_wise_zscore_m_tpm_ss_long_tbl) <-  c("Gene_symbol", "targetFromSourceID", "Disease", "diseaseFromSourceMappedId", "MONDO", "n_sample", "Dataset", "tpm_mean", "tpm_sd", "tpm_mean_gene_wise_zscore", "tpm_mean_cancer_group_wise_quantiles")
-colnames(gene_wise_zscore_m_tpm_ss_long_tbl) <-  c("Gene_symbol", "targetFromSourceID", "Disease", "diseaseFromSourceMappedId", "MONDO", "n_sample", "Dataset", "tpm_mean", "tpm_sd", "tpm_mean_gene_wise_zscore", "tpm_mean_cancer_group_wise_quantiles")
+colnames(group_wise_zscore_m_tpm_ss_long_tbl) <-  c("Gene_symbol", "targetFromSourceId", "Disease", "diseaseFromSourceMappedId", "MONDO", "n_sample", "Dataset", "tpm_mean", "tpm_sd", "tpm_mean_gene_wise_zscore", "tpm_mean_cancer_group_wise_quantiles")
+colnames(gene_wise_zscore_m_tpm_ss_long_tbl) <-  c("Gene_symbol", "targetFromSourceId", "Disease", "diseaseFromSourceMappedId", "MONDO", "n_sample", "Dataset", "tpm_mean", "tpm_sd", "tpm_mean_gene_wise_zscore", "tpm_mean_cancer_group_wise_quantiles")
 
 write_tsv(
   group_wise_zscore_m_tpm_ss_long_tbl,
