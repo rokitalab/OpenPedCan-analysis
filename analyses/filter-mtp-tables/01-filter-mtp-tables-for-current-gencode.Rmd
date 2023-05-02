@@ -103,10 +103,14 @@ filter_mtp_table <- function(mtp_table, ensg_ids, file_name) {
                               Disease == "Pilocytic astrocytoma" ~ "MONDO_0016691",
                               Disease == "Atypical choroid plexus papilloma" ~ "EFO_1000177",
                               Disease == "Diffuse fibrillary astrocytoma" ~ "MONDO_0016685",
+                              Disease == "Diffuse leptomeningeal glioneuronal tumor" ~ "MONDO_0016729",
+                              Disease == "Extraventricular neurocytoma" ~ "MONDO_0016729",
                               Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
                               TRUE ~ diseaseFromSourceMappedId)) %>% 
     dplyr::mutate(MONDO = 
                     case_when(Disease == "Perineuroma" ~ "MONDO_0019404",
+                              Disease == "Diffuse leptomeningeal glioneuronal tumor" ~ "MONDO_0016729",
+                              Disease == "Extraventricular neurocytoma" ~ "MONDO_0016729",
                               Disease == "Desmoplastic infantile astrocytoma and ganglioglioma" ~ "MONDO_0022963",
                               Disease == "Diffuse fibrillary astrocytoma" ~ "MONDO_0016685",
                               TRUE ~ MONDO)) %>% 
@@ -471,7 +475,7 @@ cancer groups and can't not associate with samples. Therefore, samples associate
 with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz") %>% 
+mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz") %>%
   dplyr::filter( Gene_Feature != "intergenic")
 gene_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
@@ -508,7 +512,7 @@ cancer groups and can't not associate with samples. Therefore, samples associate
 with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz") %>% 
+mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz") %>%
   dplyr::filter( Gene_Feature != "intergenic")
 isoform_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
