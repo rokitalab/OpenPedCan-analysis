@@ -105,6 +105,11 @@ exp_file <- file.path(subset_dir, "embryonal_zscored_exp.rds")
 # file that contains the biospecimen IDs that met criteria for subtyping
 biospecimen_file <- file.path(results_dir, 
                               "biospecimen_ids_embryonal_subtyping.tsv")
+
+# file that contains the methylation classification subtypes
+methyl_file <- file.path(results_dir, 
+                              "methyl_embryonal_subtyping.tsv")
+
 # cleaned chr19 data
 chr19_file <- file.path(results_dir, "cleaned_chr19_cn.tsv")
 # annotated sex chromosomes copy number alterations
@@ -118,7 +123,8 @@ Read in files.
 histologies_df <- read_tsv(histologies_file, 
                            col_types = cols(
                              molecular_subtype = col_character()
-                          ))
+                          )) %>%
+  dplyr::mutate(match_id = paste(sample_id, composition, sep = "_"))
 
 # manta data for BCOR tandem duplication
 manta_sv_df <- read_tsv(manta_file)
@@ -247,14 +253,14 @@ So, we can try to supplement the Manta calls with the annotated sex chromosome f
 # https://github.com/Illumina/manta/blob/75b5c38d4fcd2f6961197b28a41eb61856f2d976/docs/userGuide/README.md#vcf-format-fields
 # and are recorded as tandem duplication events
 bcor_sv_df <- manta_sv_df %>%
-  filter(str_detect(Gene.name, "BCOR"),
+  filter(str_detect(Gene_name, "BCOR"),
          FILTER == "PASS",
          ALT == "<DUP:TANDEM>")
 
 # take a look at the genes 
 bcor_sv_df %>% 
   head(n = 2) %>%
-  pull(Gene.name)
+  pull(Gene_name)
 ```
 
 Not necessarily specific to _BCOR_ alterations.
@@ -272,32 +278,6 @@ rm(bcor_sv_df, manta_sv_df, consensus_sex_chr)
 
 ## Final table
 
-### Add `Kids_First_Participant_ID` and `sample_id`
-
-```{r}
-identifiers_df <- histologies_df %>%
-  select(Kids_First_Participant_ID, 
-         sample_id, 
-         Kids_First_Biospecimen_ID) %>%
-  distinct()
-# add IDs to chromosome 19 data
-chr19_cn_df <- identifiers_df %>%
-  inner_join(chr19_cn_df, by = "Kids_First_Biospecimen_ID")
-# add IDs to RNA data 
-rna_df <- identifiers_df %>%
-  inner_join(rna_df)
-```
-
-### Join molecular data
-
-```{r}
-molecular_data_df <- full_join(chr19_cn_df, rna_df,
-                               by = c("Kids_First_Participant_ID",
-                                      "sample_id")) %>%
-  rename(Kids_First_Biospecimen_ID_DNA = Kids_First_Biospecimen_ID.x,
-         Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID.y)
-```
-
 ### Add clinical data
 
 The following were mentioned in [`AlexsLemonade/OpenPBTA-analysis#251`](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/251):
@@ -309,23 +289,49 @@ The following were mentioned in [`AlexsLemonade/OpenPBTA-analysis#251`](https://
 > **CNS Embryonal, NOS**: Tumors previously called PNET that do not fit into other groups above.
 
 ```{r}
+# relevant embyronal clinical metadata
 relevant_clinical_data <- histologies_df %>% 
   filter(Kids_First_Biospecimen_ID %in% biospecimen_ids) %>%
-  select(Kids_First_Participant_ID, 
-         sample_id,
-         age_at_diagnosis_days,
-         germline_sex_estimate,
-         primary_site,
-         pathology_diagnosis,
-         pathology_free_text_diagnosis) %>%
-  distinct() %>%
   # convert age to years
   mutate(age_at_diagnosis_yrs = 
            floor(as.numeric(age_at_diagnosis_days) / 365)) %>%
   select(-age_at_diagnosis_days)
 
-all_data_df <- inner_join(relevant_clinical_data,
-                          molecular_data_df)
+# get relevant embyronal dna clinical metadata
+emb_dna <- relevant_clinical_data %>%
+  filter(experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
+         is.na(RNA_library)) %>%
+  select(Kids_First_Biospecimen_ID, 
+         Kids_First_Participant_ID, 
+         sample_id, composition, match_id,
+         age_at_diagnosis_yrs,
+         germline_sex_estimate,
+         primary_site,
+         pathology_diagnosis,
+         pathology_free_text_diagnosis) %>%
+  # add dna molecular data
+  left_join(chr19_cn_df, by = "Kids_First_Biospecimen_ID") %>% 
+  rename(Kids_First_Biospecimen_ID_DNA = Kids_First_Biospecimen_ID)
+
+# get relevant embyronal rna clinical metadata
+emb_rna <- relevant_clinical_data %>%
+  filter(experimental_strategy %in% c("RNA-Seq", "Targeted Sequencing"),
+         !is.na(RNA_library)) %>%
+  select(Kids_First_Biospecimen_ID,
+         Kids_First_Participant_ID, 
+         sample_id, composition, match_id,
+         age_at_diagnosis_yrs,
+         germline_sex_estimate,
+         primary_site,
+         pathology_diagnosis,
+         pathology_free_text_diagnosis) %>%
+  # add rna molecular data
+  left_join(rna_df, by = "Kids_First_Biospecimen_ID") %>% 
+  rename(Kids_First_Biospecimen_ID_RNA = Kids_First_Biospecimen_ID)
+  
+# merge all relevant embyronal dna and rna 
+all_data_df <- full_join(emb_dna, emb_rna)
+
 ```
 
 Write to file.
@@ -333,7 +339,7 @@ Write to file.
 ```{r}
 all_data_df %>%
   select(Kids_First_Participant_ID, 
-         sample_id,
+         sample_id, composition, match_id,
          Kids_First_Biospecimen_ID_DNA,
          Kids_First_Biospecimen_ID_RNA,
          age_at_diagnosis_yrs,
@@ -347,7 +353,7 @@ all_data_df %>%
          FOXR2_fusions,
          MN1_fusions,
          CIC_fusions) %>%
-  arrange(Kids_First_Participant_ID, sample_id) %>%
+  arrange(Kids_First_Participant_ID, sample_id, composition, match_id) %>%
   write_tsv(output_all)
 ```
 
@@ -486,11 +492,7 @@ We're going to use the `sample_id` to exclude from the subtyping table.
 ```{r}
 exclude_sample_id <- other_nbl_df %>%
   pull(sample_id)
-```
 
-### Subtyping file
-
-```{r}
 subtypes_df <- bind_rows(
   etmr_c19mc_df,
   etmr_nos_df,
@@ -505,6 +507,28 @@ subtypes_df <- all_data_df %>%
   full_join(subtypes_df) %>%
   replace_na(list(molecular_subtype = "CNS Embryonal, NOS"))
 ```
+
+### Methylation subtypes
+
+If CNS Embryonal, NOS", replace with high confidence methylation subtypes
+
+```{r}
+subtypes_df <-  readr::read_tsv(methyl_file) %>% 
+  dplyr::full_join(subtypes_df, by = c("Kids_First_Participant_ID", "sample_id")) %>% 
+  dplyr::mutate(molecular_subtype = case_when(
+    molecular_subtype == "CNS Embryonal, NOS" & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    is.na(molecular_subtype) & !is.na(molecular_subtype_methyl) ~ molecular_subtype_methyl,
+    is.na(molecular_subtype) & is.na(molecular_subtype_methyl) ~ "CNS Embryonal, NOS", 
+    TRUE ~ molecular_subtype)) %>% 
+  dplyr::select(Kids_First_Participant_ID, sample_id, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID_RNA,
+                Kids_First_Biospecimen_ID_Methyl, molecular_subtype, molecular_subtype_methyl) %>% 
+  dplyr::distinct()
+
+```
+
+### Subtyping file
+
+Write to file
 
 ```{r}
 subtypes_df %>%

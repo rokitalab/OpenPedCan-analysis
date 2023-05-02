@@ -17,6 +17,6 @@ results_path="results"
 
 printf '\nStart data pre-release QC analysis...'
 
-Rscript -e "rmarkdown::render('data-pre-release-qc.Rmd', clean = TRUE)"
+Rscript -e "rmarkdown::render('01-data-harmonization-qc.Rmd', clean = TRUE)"
 
 printf '\nAnalysis Done...\n'

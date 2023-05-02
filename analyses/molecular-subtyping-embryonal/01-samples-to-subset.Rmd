@@ -61,9 +61,14 @@ subset_dir <- "subset-files"
 ### Read in relevant files
 
 ```{r message=FALSE}
-histologies_df <- read_tsv(file.path(data_dir, "histologies-base.tsv"), guess_max = 100000)
+histologies_df <- read_tsv(file.path(data_dir, "histologies-base.tsv"), 
+                           guess_max = 100000)
 fusion_summary_df <- read_tsv(file.path(data_dir, 
                                         "fusion_summary_embryonal_foi.tsv"))
+arriba <- read_tsv(file.path(data_dir, "fusion-arriba.tsv.gz"))
+starfusion <- read_tsv(file.path(data_dir, "fusion-starfusion.tsv.gz"))
+dgd_fusion <- read_tsv(file.path(data_dir, "fusion-dgd.tsv.gz"))
+
 # Read in the JSON file that contains the strings we'll use to include or
 # exclude samples for subtyping - see 00-embryonal-select-pathology-dx.Rmd
 path_dx_list <- jsonlite::fromJSON(
@@ -76,6 +81,7 @@ path_dx_list <- jsonlite::fromJSON(
 
 ```{r}
 output_file <- file.path(results_dir, "biospecimen_ids_embryonal_subtyping.tsv")
+methly_output_file <- file.path(results_dir, "methyl_embryonal_subtyping.tsv")
 ```
 
 ## Identify relevant samples
@@ -99,6 +105,61 @@ ttyh1_fusion_biospecimens <- ttyh1_fusions %>%
   # if there's any TTYH1 fusion - pull out the biospecimen ID
   filter(fusion_count > 0) %>%
   pull(Kids_First_Biospecimen_ID)
+```
+
+make sure that at least one TTYH1 fusion breakpoint is in only the C19MC miRNA 
+cluster genomic region: `chr19:53,627,063-53,788,978` to keep the sample
+```{r}
+# TTYHI fusions in ariba
+arriba_ttyh1_fusions <- arriba %>% 
+  filter(str_detect(`gene1--gene2`, "^TTYH1"), 
+         str_detect(breakpoint1, "^chr19"), 
+         str_detect(breakpoint2, "^chr19"))
+if (length(arriba_ttyh1_fusions$tumor_id) > 0 ) {
+  ttyh1_fusions <- arriba_ttyh1_fusions %>% 
+    select(breakpoint1, breakpoint2, tumor_id) %>% 
+    mutate(breakpoint1 = str_split(breakpoint1, ":")[[1]][2], 
+           breakpoint2 = str_split(breakpoint2, ":")[[1]][2]) %>%  
+    filter(between(as.integer(breakpoint1), 53627062, 53788979) | 
+             between(as.integer(breakpoint2), 53627062, 53788979)) %>% 
+    pull(tumor_id) %>% unique()
+}
+
+# v12 starfusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
+starfusion_ttyh1_fusions <- starfusion %>% 
+  filter(str_detect(FusionName, "^TTYH1"), 
+         str_detect(LeftBreakpoint, "^chr19"), 
+         str_detect(RightBreakpoint, "^chr19"))
+if (length(starfusion_ttyh1_fusions$tumor_id) > 0 ) {
+  starfusion_ttyh1_fusions <- starfusion_ttyh1_fusions %>% 
+    select(LeftBreakpoint, RightBreakpoint, tumor_id) %>% 
+    mutate(LeftBreakpoint = str_split(LeftBreakpoint, ":")[[1]][2], 
+           RightBreakpoint = str_split(RightBreakpoint, ":")[[1]][2]) %>%  
+    filter(between(as.integer(LeftBreakpoint), 53627062, 53788979) | 
+             between(as.integer(RightBreakpoint), 53627062, 53788979)) %>% 
+    pull(tumor_id) %>% unique()
+  ttyh1_fusions <- c(starfusion_ttyh1_fusions, ttyh1_fusions)
+}
+
+# v12 DGD fusion does not have TTYHI fusions where _TTYH1_ is the 5' fusion partner
+dgd_ttyh1_fusions <- dgd_fusion %>% 
+  filter(str_detect(FusionName, "^TTYH1"),
+         str_detect(LeftBreakpoint, "^chr19"),
+         str_detect(RightBreakpoint, "^chr19"))
+if (length(dgd_ttyh1_fusions$tumor_id) > 0 ) {
+  dgd_ttyh1_fusions <- dgd_ttyh1_fusions %>% 
+    select(LeftBreakpoint, RightBreakpoint, tumor_id) %>% 
+    mutate(LeftBreakpoint = str_split(LeftBreakpoint, ":")[[1]][2], 
+           RightBreakpoint = str_split(RightBreakpoint, ":")[[1]][2]) %>%  
+    filter(between(as.integer(LeftBreakpoint), 53627062, 53788979) | 
+             between(as.integer(RightBreakpoint), 53627062, 53788979)) %>% 
+    pull(tumor_id) %>% unique()
+  ttyh1_fusions <- c(dgd_ttyh1_fusions, ttyh1_fusions)
+}
+
+# keep samples with with at least one break point within 
+# genomic region: `chr19:53,627,063-53,788,978` 
+ttyh1_fusion_biospecimens <-  ttyh1_fusion_biospecimens %in% ttyh1_fusions
 ```
 
 ### _MN1_ fusions
@@ -134,9 +195,9 @@ relevant_samples <- histologies_df %>%
 
 relevant_sample_df <- histologies_df %>%
   filter(sample_id %in% relevant_samples,
-         experimental_strategy %in% c("WGS", "WXS"),
+         experimental_strategy %in% c("WGS", "WXS", "Targeted Sequencing"),
          sample_type == "Tumor",
-         composition == "Solid Tissue")
+         is.na(RNA_library))
 
 relevant_sample_df
 ```
@@ -155,9 +216,9 @@ fusion_biospecimens <- c(
 First subset to solid **tumors**, excluding any derived cell lines.
 
 ```{r}
+# removed  filter composition == "Solid Tissue"
 embryonal_df <- histologies_df %>%
-  filter(sample_type == "Tumor",
-         composition == "Solid Tissue")
+  filter(sample_type == "Tumor")
 ```
 
 Now filter to include and exclude using the `pathology_diagnosis` and `pathology_free_text_diagnosis` labels.
@@ -222,6 +283,51 @@ histologies_df %>%
   dplyr::filter(!cohort %in% c("GMKF", "TARGET")) %>% 
   dplyr::select(Kids_First_Biospecimen_ID) %>%
   write_tsv(output_file)
+```
+
+### Methylation embryonal subtypes
+
+Write to file high confidence methylation classification subtypes
+
+```{r}
+# high confidence methylation classification subtypes
+emb_methyl_subtyped <- histologies_df %>% 
+  dplyr::filter(pathology_diagnosis %in% path_dx_list$include_path_dx |
+                  pathology_free_text_diagnosis %in% path_dx_list$include_free_text,
+                dkfz_v12_methylation_subclass_score >= 0.8,
+                experimental_strategy == "Methylation", 
+                sample_type == "Tumor", 
+                composition == "Solid Tissue",
+                cohort != "TARGET") %>% 
+  dplyr::mutate(molecular_subtype_methyl = 
+                  case_when(dkfz_v12_methylation_subclass == "CNS_NB_FOXR2" ~ "CNS NB-FOXR2",
+                            dkfz_v12_methylation_subclass == "ETMR_C19MC" ~ "ETMR, C19MC-altered",
+                            dkfz_v12_methylation_subclass == "CNS_BCOR_ITD" ~ "CNS BCOR",
+                            dkfz_v12_methylation_subclass == "NET_CXXC5" ~ "CNS HGNET-MN1",
+                            dkfz_v12_methylation_subclass == "ABM_MN1" ~ "CNS HGNET-MN1")) %>% 
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::filter(!is.na(molecular_subtype_methyl)) %>% 
+  dplyr::distinct()
+  
+# low confidence methylation classification subtypes
+emb_methyl_not_subtyped <- histologies_df %>% 
+  dplyr::filter(pathology_diagnosis %in% path_dx_list$include_path_dx |
+                  pathology_free_text_diagnosis %in% path_dx_list$include_free_text,
+                !Kids_First_Biospecimen_ID %in% unique(emb_methyl_subtyped$Kids_First_Biospecimen_ID_Methyl),
+                experimental_strategy == "Methylation", 
+                sample_type == "Tumor", 
+                composition == "Solid Tissue",
+                cohort != "TARGET") %>%
+  dplyr::left_join(emb_methyl_subtyped %>% dplyr::select(Kids_First_Participant_ID, sample_id, molecular_subtype_methyl),
+                   by = c("Kids_First_Participant_ID", "sample_id")) %>% 
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, molecular_subtype_methyl) %>%
+  dplyr::rename("Kids_First_Biospecimen_ID_Methyl" = "Kids_First_Biospecimen_ID") %>% 
+  dplyr::distinct()
+
+# merge methyl and write to file
+dplyr::bind_rows(emb_methyl_subtyped, emb_methyl_not_subtyped) %>% 
+  readr::write_tsv(methly_output_file)
 ```
 
 ## Session Info

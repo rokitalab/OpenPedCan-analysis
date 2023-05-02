@@ -68,8 +68,8 @@ The second output file, `embryonal_tumor_molecular_subtypes.tsv`, contains the m
 The information in this file is represented in table with the following columns:
 
 
-| `Kids_First_Participant_ID` | `sample_id` | `Kids_First_Biospecimen_ID_DNA` | `Kids_First_Biospecimen_ID_RNA` | `molecular_subtype` |
-|-----------------------------|-------------|---------------------------------|---------------------------------|---------------------|
+| `Kids_First_Participant_ID` | `sample_id` | `Kids_First_Biospecimen_ID_DNA` | `Kids_First_Biospecimen_ID_RNA` | `Kids_First_Biospecimen_ID_Methyl` | `molecular_subtype` | `molecular_subtype_methyl` |
+|-----------------------------|-------------|---------------------------------|---------------------------------|------------------------------------|---------------------|----------------------------|
 
 
 
@@ -91,6 +91,7 @@ The information in this file is represented in table with the following columns:
 │   ├── cleaned_chr19_cn.tsv
 │   ├── embryonal_tumor_molecular_subtypes.tsv
 │   └── embryonal_tumor_subtyping_relevant_data.tsv
+\u2502   \u2514\u2500\u2500  methyl_embryonal_subtyping.tsv
 ├── run-embryonal-subtyping.sh
 └── subset-files
     ├── embryonal_manta_sv.tsv

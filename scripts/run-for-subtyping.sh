@@ -31,11 +31,6 @@ scratch_dir="$BASEDIR/scratch"
 commit_dir="${scratch_dir}/analysis-files-pre-release-commit"
 mkdir -p ${commit_dir}
 
-# Create the independent sample list using the *base* histology file (i.e. - histologies-base.tsv)
-echo "Create independent sample list for fusion filtering module"
-cd ${analyses_dir}/independent-samples
-OPENPBTA_BASE_SUBTYPING=1 bash run-independent-samples.sh
-
 ## Run subtyping modules
 
 # Run MB subtyping
