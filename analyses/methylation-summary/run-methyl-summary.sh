@@ -22,16 +22,29 @@ printf '\nStarting Analysis...\n'
 # Create tmp/ directory for R scripts
 mkdir -p -m777 ./tmp
 
-####################### Create methylation array probe annotations ########################
-TMP=./tmp TMPDIR=./tmp Rscript --vanilla 01-create-probe-annotations.R \
---probes_manifest ${data_dir}/infinium-methylationepic-v-1-0-b5-manifest-file-csv.zip \
---annotation_mapping ${data_dir}/infinium-annotation-mapping.tsv \
---gencode_gtf ${data_dir}/gencode.v39.primary_assembly.annotation.gtf.gz
+###################### Calculate gene-level tmp median expression ##########################
+TMP=./tmp TMPDIR=./tmp Rscript --vanilla 01-calculate-tpm-medians.R  \
+--histologies ${data_dir}/histologies.tsv \
+--rnaseq_matrix ${data_dir}/gene-expression-rsem-tpm-collapsed.rds \
+--methyl_probe_annot ${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz \
+--methyl_independent_samples ${data_dir}/independent-specimens.methyl.primary.eachcohort.tsv \
+--rnaseq_independent_samples ${data_dir}/independent-specimens.rnaseqpanel.primary.eachcohort.tsv \
+--exp_values gene
+
+###################### Calculate isoform-level tmp median expression ##########################
+TMP=./tmp TMPDIR=./tmp Rscript --vanilla 01-calculate-tpm-medians.R  \
+--histologies ${data_dir}/histologies.tsv \
+--rnaseq_matrix ${data_dir}/rna-isoform-expression-rsem-tpm.rds \
+--methyl_probe_annot ${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz \
+--methyl_independent_samples ${data_dir}/independent-specimens.methyl.primary.eachcohort.tsv \
+--rnaseq_independent_samples ${data_dir}/independent-specimens.rnaseqpanel.primary.eachcohort.tsv \
+--exp_values isoform
 
 ###################### Calculate probe-level beta quantiles #################################
 TMP=./tmp TMPDIR=./tmp Rscript --vanilla 02-calculate-methly-quantiles.R \
 --histologies ${data_dir}/histologies.tsv \
 --methyl_matrix ${data_dir}/methyl-beta-values.rds \
+--methyl_probe_annot ${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz \
 --independent_samples ${data_dir}/independent-specimens.methyl.primary.eachcohort.tsv \
 --methyl_values beta
 
@@ -44,7 +57,7 @@ ${data_dir}/independent-specimens.rnaseqpanel.primary.eachcohort.tsv \
 ${data_dir}/independent-specimens.methyl.primary.eachcohort.tsv \
 ${data_dir}/methyl-beta-values.rds \
 ${data_dir}/gene-expression-rsem-tpm-collapsed.rds \
-${results_dir}/methyl-probe-annotations.tsv.gz
+${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz
 
 ###################### Calculate correlations between beta and isoform tpm values ###########
 python3 03-methyl-tpm-correlation.py \
@@ -55,7 +68,7 @@ ${data_dir}/independent-specimens.rnaseqpanel.primary.eachcohort.tsv \
 ${data_dir}/independent-specimens.methyl.primary.eachcohort.tsv \
 ${data_dir}/methyl-beta-values.rds \
 ${data_dir}/rna-isoform-expression-rsem-tpm.rds \
-${results_dir}/methyl-probe-annotations.tsv.gz
+${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz
 
 ############################ Create expression tpm transcript representation ################
 python3 04-tpm-transcript-representation.py \
@@ -64,13 +77,14 @@ ${data_dir}/independent-specimens.rnaseqpanel.primary.eachcohort.tsv \
 ${data_dir}/independent-specimens.methyl.primary.eachcohort.tsv \
 ${data_dir}/gene-expression-rsem-tpm-collapsed.rds \
 ${data_dir}/rna-isoform-expression-rsem-tpm.rds \
-${results_dir}/methyl-probe-annotations.tsv.gz
+${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz
 
 ############################ Create gene-level beta methylation summary table ################
 TMP=./tmp TMPDIR=./tmp Rscript --vanilla 05-create-methyl-summary-table.R \
 --methyl_tpm_corr ${results_dir}/gene-methyl-probe-beta-tpm-correlations.tsv.gz \
 --methyl_probe_qtiles ${results_dir}/methyl-probe-beta-quantiles.tsv.gz \
---methyl_probe_annot ${results_dir}/methyl-probe-annotations.tsv.gz \
+--methyl_probe_annot ${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz \
+--rnaseq_tpm_medians ${results_dir}/gene-median-tpm-expression.tsv.gz \
 --efo_mondo_annot ${data_dir}/efo-mondo-map.tsv \
 --exp_values gene \
 --methyl_values beta
@@ -79,11 +93,13 @@ TMP=./tmp TMPDIR=./tmp Rscript --vanilla 05-create-methyl-summary-table.R \
 TMP=./tmp TMPDIR=./tmp Rscript --vanilla 05-create-methyl-summary-table.R \
 --methyl_tpm_corr ${results_dir}/isoform-methyl-probe-beta-tpm-correlations.tsv.gz \
 --methyl_probe_qtiles ${results_dir}/methyl-probe-beta-quantiles.tsv.gz \
---methyl_probe_annot ${results_dir}/methyl-probe-annotations.tsv.gz \
+--methyl_probe_annot ${data_dir}/infinium.gencode.v39.probe.annotations.tsv.gz \
+--rnaseq_tpm_medians ${results_dir}/isoform-median-tpm-expression.tsv.gz \
+--tpm_transcript_rep ${results_dir}/methyl-tpm-transcript-representation.tsv.gz \
 --efo_mondo_annot ${data_dir}/efo-mondo-map.tsv \
 --exp_values isoform \
---methyl_values beta \
---tpm_transcript_rep ${results_dir}/methyl-tpm-transcript-representation.tsv.gz
+--methyl_values beta
+
 
 ########################### Convert methytion summary table from TSV to (JSONL) ###############
 python3 06-methly-summary-tsv2jsonl.py \
