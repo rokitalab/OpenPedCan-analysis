@@ -475,11 +475,11 @@ cancer groups and can't not associate with samples. Therefore, samples associate
 with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz") %>%
-  dplyr::filter( Gene_Feature != "intergenic")
+mtp_file <- file.path(input_dir, "gene-methyl-beta-values-summary.tsv.gz")
 gene_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble()
+    tibble::as_tibble() %>%
+  dplyr::filter( Gene_Feature != "intergenic") 
 # filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(gene_level_methyl, ensg_ids, file_name)
@@ -512,11 +512,11 @@ cancer groups and can't not associate with samples. Therefore, samples associate
 with removed ENSEMBL identifiers cannot be listed.
 ```{r}
 # read mtp table
-mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz") %>%
-  dplyr::filter( Gene_Feature != "intergenic")
+mtp_file <- file.path(input_dir, "isoform-methyl-beta-values-summary.tsv.gz")
 isoform_level_methyl <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble()
+    tibble::as_tibble() %>%
+  dplyr::filter( Gene_Feature != "intergenic")    
 # filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(isoform_level_methyl, ensg_ids, file_name)
