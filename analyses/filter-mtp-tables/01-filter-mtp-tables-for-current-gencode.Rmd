@@ -553,8 +553,8 @@ mtp_file <-
   file.path(input_dir, "gene-counts-rsem-expected_count-collapsed-deseq.tsv.gz")
 gene_level_deseq <-
   data.table::fread(mtp_file, sep = "\t", showProgress = FALSE) %>%
-    tibble::as_tibble() %>%
-  dplyr::rename(Disease = cancer_group)
+    tibble::as_tibble()
+    
 # filter mtp table
 file_name <- basename(mtp_file)
 filter_mtp_table(gene_level_deseq, ensg_ids, file_name)
