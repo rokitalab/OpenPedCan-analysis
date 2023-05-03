@@ -19,6 +19,9 @@ option_list <- list(
   make_option(opt_str = "--methyl_matrix", type = "character", default = NULL,
               help = "OPenPedCan methyl beta-values or m-values matrix file",
               metavar = "character"),
+  make_option(opt_str = "--methyl_probe_annot", type = "character", default = NULL,
+              help = "Methyl gencode array probe annotation results file",
+              metavar = "character"),
   make_option(opt_str = "--independent_samples", type = "character", default = NULL,
               help = "OpenPedCan methyl independent biospecimen list file",
               metavar = "character"),
@@ -31,6 +34,7 @@ option_list <- list(
 opt <- parse_args(OptionParser(option_list = option_list))
 histologies <- opt$histologies
 methyl_matrix <- opt$methyl_matrix
+methyl_probe_annot <- opt$methyl_probe_annot
 independent_samples <- opt$independent_samples
 methyl_values <- opt$methyl_values
 stopifnot(methyl_values %in% c("beta","m"))
@@ -50,9 +54,7 @@ independent_samples <-
   unique()
 
 # Get required columns from histologies file for primary tumors
-required_cols <- c("Kids_First_Biospecimen_ID", "Kids_First_Participant_ID", 
-                   "experimental_strategy", "sample_type", "tumor_descriptor",
-                   "cohort", "cancer_group")
+required_cols <- c("Kids_First_Biospecimen_ID", "cohort", "cancer_group")
 histologies <- data.table::fread(histologies, sep = "\t", 
                                  select = required_cols, 
                                  showProgress = FALSE) %>% 
@@ -60,9 +62,15 @@ histologies <- data.table::fread(histologies, sep = "\t",
   dplyr::filter(!is.na(cancer_group),
     Kids_First_Biospecimen_ID %in% independent_samples)
 
+# Get grch38 lifted methyl probe
+lifted_probe_id <- readr::read_tsv(methyl_probe_annot) %>% 
+  dplyr::pull(Probe_ID) %>% 
+  unique()
+
 # Get methyl values and only keep samples in independent sample list
 methyl_matrix_df <- readr::read_rds(methyl_matrix) %>%
-  dplyr::select(tidyselect::any_of(c("Probe_ID", independent_samples)))
+  dplyr::select(tidyselect::any_of(c("Probe_ID", independent_samples))) %>% 
+  dplyr::filter(Probe_ID %in% lifted_probe_id)
 
 # Calculating probe-level methyl values quantiles for all pre-processed samples
 message("===============================================================")
