@@ -1783,9 +1783,9 @@ $(document).ready(function () {
 <h2>Read efo-mondo-map.tsv and histologies file</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbInJvb3RfZGlyIDwtIHJwcm9qcm9vdDo6ZmluZF9yb290KHJwcm9qcm9vdDo6aGFzX2RpcihcIi5naXRcIikpIiwiaW50ZWdydGVfZGlyIDwtIGZpbGUucGF0aChyb290X2RpciwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIFwiYW5hbHlzZXNcIiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIFwibW9sZWN1bGFyLXN1YnR5cGluZy1pbnRlZ3JhdGVcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgXCJyZXN1bHRzXCIpIiwicmVzdWx0c19kaXIgPC0gZmlsZS5wYXRoKHJvb3RfZGlyLFxuICAgICAgICAgICAgICAgICAgICAgICAgIFwiYW5hbHlzZXNcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICBcImVmby1tb25kby1tYXBwaW5nXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgXCJyZXN1bHRzXCIpIiwiIiwiaGlzdG9sb2d5X2RmIDwtIHJlYWRyOjpyZWFkX3RzdihmaWxlLnBhdGgoaW50ZWdydGVfZGlyLCBcImhpc3RvbG9naWVzLnRzdlwiKSwgZ3Vlc3NfbWF4PTEwMDAwMCkiXX0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbInJvb3RfZGlyIDwtIHJwcm9qcm9vdDo6ZmluZF9yb290KHJwcm9qcm9vdDo6aGFzX2RpcihcIi5naXRcIikpIiwiaW50ZWdyYXRlX2RpciA8LSBmaWxlLnBhdGgocm9vdF9kaXIsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBcImFuYWx5c2VzXCIsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBcIm1vbGVjdWxhci1zdWJ0eXBpbmctaW50ZWdyYXRlXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIFwicmVzdWx0c1wiKSIsInJlc3VsdHNfZGlyIDwtIGZpbGUucGF0aChyb290X2RpcixcbiAgICAgICAgICAgICAgICAgICAgICAgICBcImFuYWx5c2VzXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgXCJlZm8tbW9uZG8tbWFwcGluZ1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIFwicmVzdWx0c1wiKSIsIiIsImhpc3RvbG9neV9kZiA8LSByZWFkcjo6cmVhZF90c3YoZmlsZS5wYXRoKGludGVncmF0ZV9kaXIsIFwiaGlzdG9sb2dpZXMudHN2XCIpLCBndWVzc19tYXg9MTAwMDAwKSJdfQ== -->
 <pre class="r"><code>root_dir &lt;- rprojroot::find_root(rprojroot::has_dir(&quot;.git&quot;))
-integrte_dir &lt;- file.path(root_dir, 
+integrate_dir &lt;- file.path(root_dir, 
                           &quot;analyses&quot;, 
                           &quot;molecular-subtyping-integrate&quot;,
                           &quot;results&quot;)
@@ -1794,22 +1794,28 @@ results_dir &lt;- file.path(root_dir,
                          &quot;efo-mondo-mapping&quot;,
                          &quot;results&quot;)
 
-histology_df &lt;- readr::read_tsv(file.path(integrte_dir, &quot;histologies.tsv&quot;), guess_max=100000)</code></pre>
+histology_df &lt;- readr::read_tsv(file.path(integrate_dir, &quot;histologies.tsv&quot;), guess_max=100000)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgT1NfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2xhc3RfdXBkYXRlX2RheXMgPSBjb2xfZG91YmxlKCksXG4gIGNuc19tZXRoeWxhdGlvbl9jbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgY25zX21ldGh5bGF0aW9uX3N1YmNsYXNzX3Njb3JlID0gY29sX2RvdWJsZSgpLFxuICBSRl9wdXJpdHlfQUJTT0xVVEUgPSBjb2xfZG91YmxlKCksXG4gIFJGX3B1cml0eV9FU1RJTUFURSA9IGNvbF9kb3VibGUoKSxcbiAgUkZfcHVyaXR5X0xVTVAgPSBjb2xfZG91YmxlKCksXG4gIG5vcm1hbF9mcmFjdGlvbiA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX3Bsb2lkeSA9IGNvbF9kb3VibGUoKVxuKVxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgYWdlX2F0X2RpYWdub3Npc19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBPU19kYXlzID0gY29sX2RvdWJsZSgpLFxuICBFRlNfZGF5cyA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2xhc3RfdXBkYXRlX2RheXMgPSBjb2xfZG91YmxlKCksXG4gIG5vcm1hbF9mcmFjdGlvbiA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb24gPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX3Bsb2lkeSA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2F0X2V2ZW50X2RheXMgPSBjb2xfZG91YmxlKCksXG4gIGFnZV9hdF9jaGVtb19zdGFydCA9IGNvbF9kb3VibGUoKSxcbiAgYWdlX2F0X3JhZGlhdGlvbl9zdGFydCA9IGNvbF9kb3VibGUoKSxcbiAgdHVtb3JfZnJhY3Rpb25fUkZwdXJpZnlfQUJTT0xVVEUgPSBjb2xfZG91YmxlKCksXG4gIHR1bW9yX2ZyYWN0aW9uX1JGcHVyaWZ5X0VTVElNQVRFID0gY29sX2RvdWJsZSgpLFxuICB0dW1vcl9mcmFjdGlvbl9MVU1QID0gY29sX2RvdWJsZSgpLFxuICBka2Z6X3YxMV9tZXRoeWxhdGlvbl9zdWJjbGFzc19zY29yZSA9IGNvbF9kb3VibGUoKSxcbiAgZGtmel92MTJfbWV0aHlsYXRpb25fc3ViY2xhc3Nfc2NvcmUgPSBjb2xfZG91YmxlKCksXG4gIGRrZnpfdjEyX21ldGh5bGF0aW9uX21nbXRfZXN0aW1hdGVkID0gY29sX2RvdWJsZSgpXG4pXG4ifQ== -->
 <pre><code>Parsed with column specification:
 cols(
   .default = col_character(),
+  age_at_diagnosis_days = col_double(),
   OS_days = col_double(),
+  EFS_days = col_double(),
   age_last_update_days = col_double(),
-  cns_methylation_class_score = col_double(),
-  cns_methylation_subclass_score = col_double(),
-  RF_purity_ABSOLUTE = col_double(),
-  RF_purity_ESTIMATE = col_double(),
-  RF_purity_LUMP = col_double(),
   normal_fraction = col_double(),
   tumor_fraction = col_double(),
-  tumor_ploidy = col_double()
+  tumor_ploidy = col_double(),
+  age_at_event_days = col_double(),
+  age_at_chemo_start = col_double(),
+  age_at_radiation_start = col_double(),
+  tumor_fraction_RFpurify_ABSOLUTE = col_double(),
+  tumor_fraction_RFpurify_ESTIMATE = col_double(),
+  tumor_fraction_LUMP = col_double(),
+  dkfz_v11_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_subclass_score = col_double(),
+  dkfz_v12_methylation_mgmt_estimated = col_double()
 )</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-message-begin eyJkYXRhIjoiU2VlIHNwZWMoLi4uKSBmb3IgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbnMuXG4ifQ== -->
@@ -1848,21 +1854,26 @@ cancer_group_effective &lt;- cancer_group_summary %&gt;%
 
 all(cancer_group_effective %in% efo_mondo_map$cancer_group)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZVshY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZSAlaW4lIGVmb19tb25kb19tYXAkY2FuY2VyX2dyb3VwXSAifQ== -->
 <pre class="r"><code>cancer_group_effective[!cancer_group_effective %in% efo_mondo_map$cancer_group] </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2hhcmFjdGVyKDApXG4ifQ== -->
-<pre><code>character(0)</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU3VwcmF0ZW50b3JpYWwgZXBlbmR5bW9tYVwiIFwiU3BpbmFsIGVwZW5keW1vbWFcIiAgICAgICAgXG4ifQ== -->
+<pre><code>[1] &quot;Supratentorial ependymoma&quot; &quot;Spinal ependymoma&quot;        </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjpbIlN1cHJhdGVudG9yaWFsIGVwZW5keW1vbWFcbiIsIlNwaW5hbCBlcGVuZHltb21hXG4iXX0= -->
+<pre><code>Supratentorial ependymoma
+
+Spinal ependymoma</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUUMgRUZPIE1PTkRPIE1hcCBmaWxlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIyBMb2FkIGxpYnJhcmllcwoKYGBge3IgbG9hZF9saWJyYXJpZXN9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CiAgbGlicmFyeSh0aWR5dmVyc2UpCn0pCmBgYAoKIyMgUmVhZCBlZm8tbW9uZG8tbWFwLnRzdiBhbmQgaGlzdG9sb2dpZXMgZmlsZQoKYGBge3IgcmVhZCB0aGUgdHdvIGZpbGVzfQpyb290X2RpciA8LSBycHJvanJvb3Q6OmZpbmRfcm9vdChycHJvanJvb3Q6Omhhc19kaXIoIi5naXQiKSkKaW50ZWdydGVfZGlyIDwtIGZpbGUucGF0aChyb290X2RpciwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgImFuYWx5c2VzIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIm1vbGVjdWxhci1zdWJ0eXBpbmctaW50ZWdyYXRlIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAicmVzdWx0cyIpCnJlc3VsdHNfZGlyIDwtIGZpbGUucGF0aChyb290X2RpciwKICAgICAgICAgICAgICAgICAgICAgICAgICJhbmFseXNlcyIsCiAgICAgICAgICAgICAgICAgICAgICAgICAiZWZvLW1vbmRvLW1hcHBpbmciLAogICAgICAgICAgICAgICAgICAgICAgICAgInJlc3VsdHMiKQoKaGlzdG9sb2d5X2RmIDwtIHJlYWRyOjpyZWFkX3RzdihmaWxlLnBhdGgoaW50ZWdydGVfZGlyLCAiaGlzdG9sb2dpZXMudHN2IiksIGd1ZXNzX21heD0xMDAwMDApCmVmb19tb25kb19tYXAgPC0gcmVhZHI6OnJlYWRfdHN2KGZpbGUucGF0aChyZXN1bHRzX2RpciwgImVmby1tb25kby1tYXAudHN2IikpCgpgYGAKCiMjIENoZWNrIHRvIG1ha2Ugc3VyZSBhbGwgY2FuY2VyIGdyb3VwcyBpbiBoaXN0b2xvZ2llcyBhcmUgaW4gZWZvIG1vbmRvIG1hcCBmaWxlCgpgYGB7cn0KY2FuY2VyX2dyb3VwX3N1bW1hcnkgPC0gaGlzdG9sb2d5X2RmICU+JSAKICBkcGx5cjo6ZmlsdGVyKCFpcy5uYShjYW5jZXJfZ3JvdXApKSAlPiUgCiAgZHBseXI6Omdyb3VwX2J5KGNhbmNlcl9ncm91cCkgJT4lIAogIGRwbHlyOjptdXRhdGUobj1uKCkpICU+JSAKICBkcGx5cjo6c2VsZWN0KGNhbmNlcl9ncm91cCwgbikgJT4lCiAgdW5pcXVlKCkKCmNhbmNlcl9ncm91cF9lZmZlY3RpdmUgPC0gY2FuY2VyX2dyb3VwX3N1bW1hcnkgJT4lIAogIGRwbHlyOjpmaWx0ZXIobj49MykgJT4lIAogIHB1bGwoY2FuY2VyX2dyb3VwKQoKYWxsKGNhbmNlcl9ncm91cF9lZmZlY3RpdmUgJWluJSBlZm9fbW9uZG9fbWFwJGNhbmNlcl9ncm91cCkKY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZVshY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZSAlaW4lIGVmb19tb25kb19tYXAkY2FuY2VyX2dyb3VwXSAKCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUUMgRUZPIE1PTkRPIE1hcCBmaWxlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIyBMb2FkIGxpYnJhcmllcwoKYGBge3IgbG9hZF9saWJyYXJpZXN9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CiAgbGlicmFyeSh0aWR5dmVyc2UpCn0pCmBgYAoKIyMgUmVhZCBlZm8tbW9uZG8tbWFwLnRzdiBhbmQgaGlzdG9sb2dpZXMgZmlsZQoKYGBge3IgcmVhZCB0aGUgdHdvIGZpbGVzfQpyb290X2RpciA8LSBycHJvanJvb3Q6OmZpbmRfcm9vdChycHJvanJvb3Q6Omhhc19kaXIoIi5naXQiKSkKaW50ZWdyYXRlX2RpciA8LSBmaWxlLnBhdGgocm9vdF9kaXIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICJhbmFseXNlcyIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICJtb2xlY3VsYXItc3VidHlwaW5nLWludGVncmF0ZSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgInJlc3VsdHMiKQpyZXN1bHRzX2RpciA8LSBmaWxlLnBhdGgocm9vdF9kaXIsCiAgICAgICAgICAgICAgICAgICAgICAgICAiYW5hbHlzZXMiLAogICAgICAgICAgICAgICAgICAgICAgICAgImVmby1tb25kby1tYXBwaW5nIiwKICAgICAgICAgICAgICAgICAgICAgICAgICJyZXN1bHRzIikKCmhpc3RvbG9neV9kZiA8LSByZWFkcjo6cmVhZF90c3YoZmlsZS5wYXRoKGludGVncmF0ZV9kaXIsICJoaXN0b2xvZ2llcy50c3YiKSwgZ3Vlc3NfbWF4PTEwMDAwMCkKZWZvX21vbmRvX21hcCA8LSByZWFkcjo6cmVhZF90c3YoZmlsZS5wYXRoKHJlc3VsdHNfZGlyLCAiZWZvLW1vbmRvLW1hcC50c3YiKSkKCmBgYAoKIyMgQ2hlY2sgdG8gbWFrZSBzdXJlIGFsbCBjYW5jZXIgZ3JvdXBzIGluIGhpc3RvbG9naWVzIGFyZSBpbiBlZm8gbW9uZG8gbWFwIGZpbGUKCmBgYHtyfQpjYW5jZXJfZ3JvdXBfc3VtbWFyeSA8LSBoaXN0b2xvZ3lfZGYgJT4lIAogIGRwbHlyOjpmaWx0ZXIoIWlzLm5hKGNhbmNlcl9ncm91cCkpICU+JSAKICBkcGx5cjo6Z3JvdXBfYnkoY2FuY2VyX2dyb3VwKSAlPiUgCiAgZHBseXI6Om11dGF0ZShuPW4oKSkgJT4lIAogIGRwbHlyOjpzZWxlY3QoY2FuY2VyX2dyb3VwLCBuKSAlPiUKICB1bmlxdWUoKQoKY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZSA8LSBjYW5jZXJfZ3JvdXBfc3VtbWFyeSAlPiUgCiAgZHBseXI6OmZpbHRlcihuPj0zKSAlPiUgCiAgcHVsbChjYW5jZXJfZ3JvdXApCgphbGwoY2FuY2VyX2dyb3VwX2VmZmVjdGl2ZSAlaW4lIGVmb19tb25kb19tYXAkY2FuY2VyX2dyb3VwKQpjYW5jZXJfZ3JvdXBfZWZmZWN0aXZlWyFjYW5jZXJfZ3JvdXBfZWZmZWN0aXZlICVpbiUgZWZvX21vbmRvX21hcCRjYW5jZXJfZ3JvdXBdIAoKYGBgCgo=</div>
 
 
 

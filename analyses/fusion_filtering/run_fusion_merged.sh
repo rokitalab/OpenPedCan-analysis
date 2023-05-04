@@ -22,7 +22,6 @@ cd "$script_directory" || exit
 # Set up paths to data files consumed by analysis, and path to result output
 data_path="../../data"
 scratch_path="../../scratch"
-references_path="references"
 results_path="results/"
 
 
@@ -46,8 +45,8 @@ normal_expression_adrenal_gland="${references_path}/gtex_adrenal_gland_TPM_hg38.
 normal_expression_brain="${references_path}/gtex_brain_TPM_hg38.rds"
 
 # independent sample list
-independent_RNA_primary="${data_path}/independent-specimens.rnaseqpanel.primary.pre-release.tsv"
-independent_RNA_relapse="${data_path}/independent-specimens.rnaseqpanel.relapse.pre-release.tsv"
+independent_RNA_primary="${data_path}/independent-specimens.rnaseq.primary-pre-release.tsv"
+independent_RNA_relapse="${data_path}/independent-specimens.rnaseq.relapse-pre-release.tsv"
    
 # metadata files
 if [[ "$RUN_FOR_SUBTYPING" -eq "0" ]]
@@ -93,7 +92,6 @@ Rscript 02-fusion-filtering.R --standardFusionFiles $standard_starfusion_file,$s
                               --artifactFilter $artifact_filter  \
                               --spanningFragCountFilter $spanningFragCountFilter \
                               --readingFrameFilter $reading_frame_filter \
-                              --referenceFolder $references_path \
                               --outputFile "${scratch_path}/standardFusionExp" \
                               --readthroughFilter
 

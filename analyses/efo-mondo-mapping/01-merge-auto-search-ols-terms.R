@@ -1,3 +1,8 @@
+# Author: Sangeeta Shukla (shuklas1@chop.edu)
+# Purpose: This scripts automates the seach to retrieve EFO, MONDO, and NCIT ontology codes for all cancer_groups found in the histologies.tsv file.
+# This reduces the manual work to only have to review the potential edge cases where the codes may not be perfect match for the cancer_groups.
+
+
 # Load required libraries
 
 suppressPackageStartupMessages({
@@ -66,11 +71,13 @@ map_prefill_auto <- dplyr::inner_join(map_prefill,efo_auto_prefill,by="cancer_gr
   dplyr::inner_join(.,ncit_auto_prefill,by="cancer_group") %>%
   rename(efo_code_prefill=efo_code.x, 
          mondo_code_prefill=mondo_code.x,
+         ncit_code_prefill=ncit_code.x,
          efo_code_auto=efo_code.y,
          mondo_code_auto=mondo_code.y,
-         ncit_code_auto=ncit_code) %>%
-  select(cancer_group, efo_code_prefill,mondo_code_prefill,efo_code_auto,
-         mondo_code_auto,ncit_code_auto,efo_OntoDesc,mondo_OntoDesc,ncit_OntoDesc) %>%
+         ncit_code_auto=ncit_code.y) %>%
+  select(cancer_group, efo_code_prefill, mondo_code_prefill, ncit_code_prefill,
+         efo_code_auto, mondo_code_auto, ncit_code_auto,
+         efo_OntoDesc,mondo_OntoDesc,ncit_OntoDesc) %>%
   mutate(efo_desc_match = case_when(tolower(cancer_group) == tolower(efo_OntoDesc) ~ "True",
                                     TRUE ~ as.character("False"))) %>%
   mutate(mondo_desc_match = case_when(tolower(cancer_group) == tolower(mondo_OntoDesc) ~ "True",
@@ -81,7 +88,8 @@ map_prefill_auto <- dplyr::inner_join(map_prefill,efo_auto_prefill,by="cancer_gr
                                     TRUE ~ as.character("False"))) %>%
   mutate(mondo_code_match = case_when(mondo_code_prefill == mondo_code_auto ~ "True",
                                       TRUE ~ as.character("False"))) %>%
-  mutate(ncit_code_match = "False")  #ncit_code_match is hard-coded "False" since it does not exist in prefill table
+  mutate(ncit_code_match = case_when(ncit_code_prefill == ncit_code_auto ~ "True",
+                                      TRUE ~ as.character("False")))
 
 
 

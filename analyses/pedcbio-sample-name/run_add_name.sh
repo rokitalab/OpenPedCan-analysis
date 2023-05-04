@@ -12,8 +12,8 @@ script_directory="$(perl -e 'use File::Basename;
  print dirname(abs_path(@ARGV[0]));' -- "$0")"
 cd "$script_directory" || exit
 
-hist_dir="../../data"
+hist_file="../molecular-subtyping-integrate/results/histologies.tsv"
 
 # Compare all methods and
 Rscript --vanilla pedcbio_sample_name_col.R \
---hist_dir $hist_dir
+--hist_file $hist_file -b Methylation

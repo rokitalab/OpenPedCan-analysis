@@ -13,6 +13,9 @@ COPY scripts/install_bioc.r .
 
 ### Install apt-getable packages to start
 #########################################
+
+# stretch is EOL, so we need to use the archive
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils dialog
 
 # Add curl, bzip2 and some dev libs
@@ -458,11 +461,15 @@ RUN ./install_bioc.r \
     ids
 
 WORKDIR /home/rstudio/
-# AWS sCLI installation
+# AWS CLI installation
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
     sudo ./aws/install && \
     rm -rf aws*
+
+# Install Desal latest release (v2.1.1)- converter for JSON, TOML, YAML, XML and CSV data formats
+RUN sudo wget -qO /usr/local/bin/dasel "https://github.com/TomWright/dasel/releases/download/v2.1.1/dasel_linux_amd64" && \
+    sudo chmod a+x /usr/local/bin/dasel
 
 WORKDIR /rocker-build/
 # R package creating .xlsx

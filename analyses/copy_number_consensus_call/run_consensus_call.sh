@@ -23,7 +23,7 @@ python3 scripts/merged_to_individual_files.py \
     --gatk ../../data/cnv-gatk.seg.gz \
     --cnvkit ../../data/cnv-cnvkit.seg.gz \
     --freec ../../data/cnv-controlfreec.tsv.gz \
-    --histologies ../../data/histologies.tsv \
+    --histologies ../../data/histologies-base.tsv \
     --snake $SCRATCHDIR/config_snakemake.yaml \
     --scratch $SCRATCHDIR \
     --uncalled results/uncalled_samples.tsv
