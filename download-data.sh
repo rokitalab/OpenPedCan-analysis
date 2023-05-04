@@ -17,27 +17,7 @@ curl --create-dirs $URL/$RELEASE/md5sum.txt -o data/$RELEASE/md5sum.txt -z data/
 # Consider the filenames in the md5sum file and the release notes
 FILES=(`tr -s ' ' < data/$RELEASE/md5sum.txt | cut -d ' ' -f 2` release-notes.md)
 
-if [ -d "data/$PREVIOUS" ]
-then
-  # Find unchanged files
-  echo "Checking for unchanged files..."
-  cd data/$PREVIOUS
-  UNCHANGED=(`md5sum -c ../$RELEASE/md5sum.txt 2>/dev/null | grep OK |cut -d ':' -f 1  || true`)
-  echo $UNCHANGED
-  cd ../../
-
-  # Hard link unchanged files
-  for oldfile in "${UNCHANGED[@]}"
-  do
-    if [ ! -e "data/$RELEASE/$oldfile" ]
-    then
-      echo "Hard linking $oldfile"
-      ln data/$PREVIOUS/$oldfile data/$RELEASE/$oldfile
-    fi
-  done
-fi
-
-# Download the items in FILES if not already present
+# Download the items in FILES
 for file in "${FILES[@]}"
 do
   if [ ! -e "data/$RELEASE/$file" ]
