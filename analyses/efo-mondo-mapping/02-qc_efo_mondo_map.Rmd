@@ -15,7 +15,7 @@ suppressPackageStartupMessages({
 
 ```{r read the two files}
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
-integrte_dir <- file.path(root_dir, 
+integrate_dir <- file.path(root_dir, 
                           "analyses", 
                           "molecular-subtyping-integrate",
                           "results")
@@ -24,7 +24,7 @@ results_dir <- file.path(root_dir,
                          "efo-mondo-mapping",
                          "results")
 
-histology_df <- readr::read_tsv(file.path(integrte_dir, "histologies.tsv"), guess_max=100000)
+histology_df <- readr::read_tsv(file.path(integrate_dir, "histologies.tsv"), guess_max=100000)
 efo_mondo_map <- readr::read_tsv(file.path(results_dir, "efo-mondo-map.tsv"))
 
 ```

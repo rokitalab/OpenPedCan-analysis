@@ -9,8 +9,8 @@ printf "Start generating mtp tables...\n\n"
 
 # Use the bucket that contains mtp files
 URL="s3://d3b-openaccess-us-east-1-prd-pbta/open-targets"
-RELEASE="v11"   
-MTP_DIR="mtp-tables"
+RELEASE="v12"   
+MTP_DIR="mtp-tables/commit"
 
 # This script should always run as if it were being called from
 # the directory it lives in.
