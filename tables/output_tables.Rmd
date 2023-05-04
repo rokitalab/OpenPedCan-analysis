@@ -70,6 +70,7 @@ readme <- tribble(
 "cancer_predispositions","Reported cancer predisposition syndromes",paste(unique(histology_df$cancer_predispositions), collapse = "; "),
 "cell_line_composition","Cell line media",paste(unique(histology_df$cell_line_composition), collapse = "; "),
 "cell_line_passage","Cell line passage at collection","numeric",
+"clinical_status_at_event","Patient status at the time of sample collection", paste(unique(histology_df$clinical_status_at_event), collapse = "; "),
 "CNS_region","Harmonized brain region based on `primary_site`",paste(unique(histology_df$CNS_region), collapse = "; "),
 "cohort","Scientific cohort",paste(unique(histology_df$cohort), collapse = "; "),
 "cohort_participant_id","Scientific cohort participant ID","C#####-C######",
