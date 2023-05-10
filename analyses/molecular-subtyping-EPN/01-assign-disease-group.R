@@ -32,10 +32,7 @@ spine = c("spinal", "spine")
 
 # filter for ependymoma samples 
 EP = pbta_histologies %>%
-  filter(pathology_diagnosis %in% path_dx_list$exact_path_dx | 
-           # All Ependymoma samples are captured in pathology_diagnosis
-           # Inclusion based on pathology free text diagnosis
-           pathology_free_text_diagnosis %in% path_dx_list$path_free_text_exact) %>%
+  filter(pathology_diagnosis %in% path_dx_list$exact_path_dx) %>%
   mutate(id = paste(sample_id, sample_type, tumor_descriptor, sep = "_"))
 
 
