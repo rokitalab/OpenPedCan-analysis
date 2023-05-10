@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:3.6.0
+FROM rocker/tidyverse:4.2.3
 MAINTAINER ccdl@alexslemonade.org
 WORKDIR /rocker-build/
 
@@ -6,17 +6,10 @@ ARG github_pat=$GITHUB_PAT
 
 ENV GITHUB_PAT=$github_pat
 
-RUN RSPM="https://packagemanager.rstudio.com/cran/2019-07-07" \
-    && echo "options(repos = c(CRAN='$RSPM'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
-
 COPY scripts/install_bioc.r .
 
 ### Install apt-getable packages to start
 #########################################
-
-# stretch is EOL, so we need to use the archive
-RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
-RUN apt-get update && apt-get install -y --no-install-recommends apt-utils dialog
 
 # Add curl, bzip2 and some dev libs
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
@@ -111,7 +104,8 @@ RUN ./install_bioc.r \
     rpart \
     rprojroot \
     survival \
-    viridis 
+    viridis \
+    vroom
 
 
 # Required for interactive sample distribution plots
