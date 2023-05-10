@@ -268,88 +268,88 @@ RUN R -e "remotes::install_github('Nik-Zainal-Group/signature.tools.lib', ref = 
 # Install python3 tools and ALL dependencies
 RUN pip3 install \
     "appdirs==1.4.4" \
-    "attrs==20.3.0" \
+    "attrs==23.1.0" \
     "backcall==0.2.0" \
-    "bleach==3.3.0" \
-    "bx-python==0.8.8" \
-    "certifi==2020.12.5" \
-    "chardet==4.0.0" \
-    "ConfigArgParse==1.4" \
-    "CrossMap==0.3.9" \
-    "cycler==0.10.0" \
+    "bleach==6.0.0" \
+    "bx-python==0.9.0" \
+    "certifi==2023.5.7" \
+    "chardet==5.1.0" \
+    "ConfigArgParse==1.5.3" \
+    "CrossMap==0.6.5" \
+    "cycler==0.11.0" \
     "datrie==0.8.2" \
-    "decorator==4.4.2" \
+    "decorator==5.1.1" \
     "defusedxml==0.7.1" \
-    "docutils==0.16" \
-    "entrypoints==0.3" \
-    "gitdb==4.0.7" \
-    "GitPython==3.1.14" \
-    "idna==2.10" \
-    "importlib-metadata==2.1.1" \
-    "ipykernel==4.8.1" \
-    "ipython==7.9.0" \
+    "docutils==0.20" \
+    "entrypoints==0.4" \
+    "gitdb==4.0.10" \
+    "GitPython==3.1.31" \
+    "idna==3.4" \
+    "importlib-metadata==6.6.0" \
+    "ipykernel==6.23.0" \
+    "ipython==8.13.2" \
     "ipython-genutils==0.2.0" \
-    "jedi==0.17.2" \
-    "Jinja2==2.11.3" \
-    "jsonschema==3.2.0" \
-    "jupyter-client==6.1.12" \
-    "jupyter-core==4.6.3" \
-    "kiwisolver==1.1.0" \
-    "MarkupSafe==1.1.1" \
-    "matplotlib==3.0.3" \
-    "mistune==0.8.4" \
-    "mizani==0.5.4" \
-    "nbconvert==5.6.1" \
-    "nbformat==5.1.2" \
-    "notebook==6.0.0" \
-    "numpy==1.17.3" \
-    "packaging==20.9" \
-    "palettable==3.3.0" \
-    "pandas==0.25.3" \
-    "pandocfilters==1.4.3" \
-    "parso==0.7.1" \
-    "patsy==0.5.1" \
+    "jedi==0.18.2" \
+    "Jinja2==3.1.2" \
+    "jsonschema==4.17.3" \
+    "jupyter-client==8.2.0" \
+    "jupyter-core==5.3.0" \
+    "kiwisolver==1.4.4" \
+    "MarkupSafe==2.1.2" \
+    "matplotlib==3.7.1" \
+    "mistune==2.0.5" \
+    "mizani==0.9.0" \
+    "nbconvert==7.4.0" \
+    "nbformat==5.8.0" \
+    "notebook==6.5.4" \
+    "numpy==1.24.3" \
+    "packaging==23.1" \
+    "palettable==3.3.3" \
+    "pandas==2.0.1" \
+    "pandocfilters==1.5.0" \
+    "parso==0.8.3" \
+    "patsy==0.5.3" \
     "pexpect==4.8.0" \
     "pickleshare==0.7.5" \
-    "plotnine==0.3.0" \
-    "prometheus-client==0.9.0" \
-    "prompt-toolkit==2.0.10" \
-    "psutil==5.8.0" \
+    "plotnine==0.12.1" \
+    "prometheus-client==0.16.0" \
+    "prompt-toolkit==3.0.38" \
+    "psutil==5.9.5" \
     "ptyprocess==0.7.0" \
-    "pyarrow==0.16.0" \
-    "pybedtools==0.8.1" \
-    "pyBigWig==0.3.17" \
-    "Pygments==2.8.1" \
-    "pyparsing==2.4.5" \
-    "pyreadr==0.2.1" \
-    "pyrsistent==0.17.3" \
-    "pysam==0.15.4" \
-    "python-dateutil==2.8.1" \
-    "pytz==2019.3" \
-    "PyYAML==5.3.1" \
-    "pyzmq==20.0.0" \
+    "pyarrow==12.0.0" \
+    "pybedtools==0.9.0" \
+    "pyBigWig==0.3.22" \
+    "Pygments==2.15.1" \
+    "pyparsing==3.0.9" \
+    "pyreadr==0.4.7" \
+    "pyrsistent==0.19.3" \
+    "pysam==0.21.0" \
+    "python-dateutil==2.8.2" \
+    "pytz==2023.3" \
+    "PyYAML==6.0" \
+    "pyzmq==25.0.2" \
     "ratelimiter==1.2.0.post0" \
-    "requests==2.25.1" \
-    "rpy2==2.9.3" \
-    "scikit-learn==0.19.1" \
-    "scipy==1.3.2" \
-    "seaborn==0.8.1" \
-    "Send2Trash==1.5.0" \
-    "six==1.14.0" \
-    "smmap==4.0.0" \
-    "snakemake==5.8.1" \
-    "statsmodels==0.10.2" \
-    "terminado==0.8.3" \
-    "testpath==0.4.4" \
-    "tornado==6.1" \
-    "traitlets==4.3.3" \
-    "tzlocal==2.0.0" \
-    "urllib3==1.26.4" \
-    "wcwidth==0.2.5" \
+    "requests==2.30.0" \
+    "rpy2==3.4.1" \
+    "scikit-learn==1.2.2" \
+    "scipy==1.10.1" \
+    "seaborn==0.12.2" \
+    "Send2Trash==1.8.2" \
+    "six==1.16.0" \
+    "smmap==5.0.0" \
+    "snakemake==7.25.3" \
+    "statsmodels==0.14.0" \
+    "terminado==0.17.1" \
+    "testpath==0.6.0" \
+    "tornado==6.3.1" \
+    "traitlets==5.9.0" \
+    "tzlocal==4.3" \
+    "urllib3==2.0.2" \
+    "wcwidth==0.2.6" \
     "webencodings==0.5.1" \
-    "widgetsnbextension==2.0.0" \
-    "wrapt==1.12.1" \
-    "zipp==1.2.0" \
+    "widgetsnbextension==4.0.7" \
+    "wrapt==1.15.0" \
+    "zipp==3.15.0" \
     && rm -rf /root/.cache/pip/wheels
 
 
