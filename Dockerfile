@@ -106,7 +106,10 @@ RUN ./install_bioc.r \
     rprojroot \
     survival \
     viridis \
-    vroom
+    vroom \
+    openxlsx \
+    ids 
+    
 
 
 # Required for interactive sample distribution plots
@@ -350,6 +353,7 @@ RUN pip3 install \
     "widgetsnbextension==4.0.7" \
     "wrapt==1.15.0" \
     "zipp==3.15.0" \
+    "openpyxl=3.1.2" \
     && rm -rf /root/.cache/pip/wheels
 
 
@@ -447,14 +451,6 @@ RUN R -e 'BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))'
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     jq
 
-# Package for python pandas to read and write xlsx files
-RUN pip3 install \
-    "openpyxl==2.6.4"
-
-# Package for generating UUIDs
-RUN ./install_bioc.r \
-    ids
-
 WORKDIR /home/rstudio/
 # AWS CLI installation
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -465,11 +461,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 # Install Desal latest release (v2.1.1)- converter for JSON, TOML, YAML, XML and CSV data formats
 RUN sudo wget -qO /usr/local/bin/dasel "https://github.com/TomWright/dasel/releases/download/v2.1.1/dasel_linux_amd64" && \
     sudo chmod a+x /usr/local/bin/dasel
-
-WORKDIR /rocker-build/
-# R package creating .xlsx
-RUN ./install_bioc.r \
-    openxlsx
 
 #### Please install your dependencies immediately above this comment.
 #### Add a comment to indicate what analysis it is required for
