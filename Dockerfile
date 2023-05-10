@@ -37,6 +37,7 @@ RUN apt-get -y --no-install-recommends install \
 # Install pip3 and low-level python installation reqs
 RUN apt-get -y --no-install-recommends install \
     python3-pip  python3-dev
+RUN ln -s /usr/bin/python3 /usr/bin/python    
 RUN pip3 install \
     "Cython==0.29.15" \
     "setuptools==46.3.0" \
