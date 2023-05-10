@@ -112,7 +112,7 @@ RUN ./install_bioc.r \
 # Required for interactive sample distribution plots
 # map view is needed to create HTML outputs of the interactive plots
 RUN ./install_bioc.r \
-    gdalUtils \
+    #gdalUtils \
     leafem \
     leafpop \
     lwgeom \
