@@ -27,8 +27,7 @@ path_dx_list_atrt <- jsonlite::fromJSON(atrt_subset_file)
 # select all ATRT biospecimens from PBTA and/DGD
 atrt_df <- histo %>%
   dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD")) %>%
-  dplyr::filter(pathology_free_text_diagnosis %in% path_dx_list_atrt$path_free_text_exact | 
-                  pathology_diagnosis %in% path_dx_list_atrt$exact_path_dx) %>%
+  dplyr::filter(pathology_diagnosis %in% path_dx_list_atrt$exact_path_dx) %>%
   # create match id
   mutate(id = paste(sample_id, composition, sep = "_"))
 
