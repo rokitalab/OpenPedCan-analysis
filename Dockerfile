@@ -409,7 +409,7 @@ RUN R -e "remotes::install_github('jtleek/sva-devel@123be9b2b9fd7c7cd495fab7d7d9
 # Packages required for de novo mutational signatures
 RUN install2.r --error --deps TRUE \
     lsa
-in
+    
 # Package for kinase domain retention for fusions
 RUN ./install_bioc.r \
     EnsDb.Hsapiens.v86 \
