@@ -230,7 +230,7 @@ RUN ./install_bioc.r \
 
 
 # package required for immune deconvolution
-RUN R -e "remotes::install_github('icbi-lab/immunedeconv', ref = '493bcaa9e1f73554ac2d25aff6e6a7925b0ea7a6', dependencies = TRUE)"
+RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a2bdf31d39111e46c7cefc03ebdbb28457a0d08c', dependencies = TRUE)"
 
 # package to read yaml file
 RUN ./install_bioc.r \
