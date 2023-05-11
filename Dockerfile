@@ -353,7 +353,7 @@ RUN pip3 install \
     "widgetsnbextension==4.0.7" \
     "wrapt==1.15.0" \
     "zipp==3.15.0" \
-    "openpyxl=3.1.2" \
+    "openpyxl==3.1.2" \
     && rm -rf /root/.cache/pip/wheels
 
 
