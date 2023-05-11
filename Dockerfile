@@ -33,6 +33,11 @@ RUN apt-get -y --no-install-recommends install \
 # Required for installing pdftools, which is a dependency of gridGraphics
 RUN apt-get -y --no-install-recommends install \
     libpoppler-cpp-dev
+    
+# Required for installing  MM2S, which is a dependency of igraph 
+RUN apt-get -y --no-install-recommends install \
+    libglpk-dev
+
 
 # Install pip3 and low-level python installation reqs
 RUN apt-get -y --no-install-recommends install \
@@ -108,7 +113,7 @@ RUN ./install_bioc.r \
     viridis \
     vroom \
     openxlsx \
-    ids 
+    ids
     
 
 
@@ -404,7 +409,7 @@ RUN R -e "remotes::install_github('jtleek/sva-devel@123be9b2b9fd7c7cd495fab7d7d9
 # Packages required for de novo mutational signatures
 RUN install2.r --error --deps TRUE \
     lsa
-
+in
 # Package for kinase domain retention for fusions
 RUN ./install_bioc.r \
     EnsDb.Hsapiens.v86 \
