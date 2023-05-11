@@ -338,7 +338,7 @@ RUN pip3 install \
     "pyzmq==25.0.2" \
     "ratelimiter==1.2.0.post0" \
     "requests==2.30.0" \
-    "rpy2==3.4.1" \
+    "rpy2==3.5.0" \
     "scikit-learn==1.2.2" \
     "scipy==1.10.1" \
     "seaborn==0.12.2" \
@@ -353,6 +353,7 @@ RUN pip3 install \
     "traitlets==5.9.0" \
     "tzlocal==4.3" \
     "urllib3==2.0.2" \
+    "utils=1.0.1" \
     "wcwidth==0.2.6" \
     "webencodings==0.5.1" \
     "widgetsnbextension==4.0.7" \
