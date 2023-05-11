@@ -17,23 +17,22 @@ if(!dir.exists(output_dir)){
   dir.create(output_dir)
 }
 
-output_file <- file.path(output_dir, "CRANO_subtyping_path_dx_strings.json")                         
+output_file <- file.path(output_dir, "CRANIO_subtyping_path_dx_strings.json")                         
 
+## pathology diagnosis is sufficient to subset CRANO sample. Therefore, we don't need to include pathology_free_text in json file
 ## Read histologies file
-histo <- readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv")) 
+#histo <- readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv")) 
+
+#path_free_text_exact <- histo %>% 
+#  filter(pathology_diagnosis == exact_path_dx) %>%
+#  pull(pathology_free_text_diagnosis) %>% 
+#  unique()
 
 ## The `pathology_diagnosis` fields for CRANIO
 exact_path_dx <- "Craniopharyngioma"
 
-
-path_free_text_exact <- histo %>% 
-  filter(pathology_diagnosis == exact_path_dx) %>%
-  pull(pathology_free_text_diagnosis) %>% 
-  unique()
-
 ## Create a list with the strings we'll use for inclusion
-term_list <- list(exact_path_dx = exact_path_dx, 
-                  path_free_text_exact = path_free_text_exact)
+term_list <- list(exact_path_dx = exact_path_dx)
 
 # Save the list as json
 writeLines(jsonlite::prettify(jsonlite::toJSON(term_list)), output_file)

@@ -64,7 +64,7 @@ output_subtype <- file.path(results_dir, "CRANIO_molecular_subtype.tsv")
 ## Read pathology diagnosis json file
 path_dx_list <- jsonlite::fromJSON(
   file.path(root_dir, "analyses", "molecular-subtyping-CRANIO", "cranio-subset",
-            "CRANO_subtyping_path_dx_strings.json")
+            "CRANIO_subtyping_path_dx_strings.json")
 )
 
 ## Read in metadata
