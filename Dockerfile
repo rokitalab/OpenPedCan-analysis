@@ -353,7 +353,7 @@ RUN pip3 install \
     "traitlets==5.9.0" \
     "tzlocal==4.3" \
     "urllib3==2.0.2" \
-    "utils=1.0.1" \
+    "utils==1.0.1" \
     "wcwidth==0.2.6" \
     "webencodings==0.5.1" \
     "widgetsnbextension==4.0.7" \
