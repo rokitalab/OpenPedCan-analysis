@@ -6,16 +6,14 @@ Acute Myeloid Leukemia	Progressive	1
 Acute Myeloid Leukemia	Recurrence	136
 Acute Myeloid Leukemia	Second Malignancy	2
 Adamantinomatous Craniopharyngioma	Deceased	2
-Adamantinomatous Craniopharyngioma	Initial CNS Tumor	154
-Adamantinomatous Craniopharyngioma	Progressive	35
-Adamantinomatous Craniopharyngioma	Recurrence	31
+Adamantinomatous Craniopharyngioma	Initial CNS Tumor	121
+Adamantinomatous Craniopharyngioma	Progressive	19
+Adamantinomatous Craniopharyngioma	Recurrence	26
 Adenocarcinoma	Primary Tumor	2
 Anaplastic Large Cell Lymphoma	Primary Tumor	2
 Angiosarcoma	Primary Tumor	1
 Astroblastoma	Initial CNS Tumor	2
 Astrocytoma	Primary Tumor	1
-Atypical choroid plexus papilloma	Initial CNS Tumor	7
-Atypical choroid plexus papilloma	Progressive	3
 Atypical Teratoid Rhabdoid Tumor	Deceased	36
 Atypical Teratoid Rhabdoid Tumor	Initial CNS Tumor	164
 Atypical Teratoid Rhabdoid Tumor	Progressive	31
@@ -42,13 +40,12 @@ Chordoma	NA	5
 Choroid plexus carcinoma	Initial CNS Tumor	34
 Choroid plexus carcinoma	Progressive	5
 Choroid plexus carcinoma	Recurrence	11
-Choroid plexus papilloma	Initial CNS Tumor	87
-Choroid plexus papilloma	Progressive	5
+Choroid plexus papilloma	Initial CNS Tumor	94
+Choroid plexus papilloma	Progressive	8
 Choroid plexus tumor	Initial CNS Tumor	3
 Chronic Myelogenous Leukemia	Primary Tumor	2
 CIC-DUX4 Sarcoma	Primary Tumor	1
 Clear cell sarcoma of the kidney	Primary Tumor	24
-CNS Burkitt's lymphoma	Initial CNS Tumor	3
 CNS Embryonal tumor	Deceased	3
 CNS Embryonal tumor	Initial CNS Tumor	39
 CNS Embryonal tumor	Primary Tumor	1
@@ -57,12 +54,11 @@ CNS Embryonal tumor	Recurrence	13
 CNS Melanoma	Initial CNS Tumor	1
 CNS neuroblastoma	Initial CNS Tumor	8
 CNS neuroblastoma	Recurrence	2
-Craniopharyngioma	Initial CNS Tumor	48
-Craniopharyngioma	Progressive	10
-Craniopharyngioma	Recurrence	1
+Craniopharyngioma	Initial CNS Tumor	81
+Craniopharyngioma	Progressive	26
+Craniopharyngioma	Recurrence	6
 Desmoplastic infantile astrocytoma and ganglioglioma	Initial CNS Tumor	6
 Desmoplastic infantile astrocytoma and ganglioglioma	Progressive	6
-Diffuse fibrillary astrocytoma	Initial CNS Tumor	1
 Diffuse hemispheric glioma	Deceased	7
 Diffuse hemispheric glioma	Initial CNS Tumor	57
 Diffuse hemispheric glioma	Recurrence	11
@@ -103,11 +99,10 @@ Ganglioglioma	Initial CNS Tumor	194
 Ganglioglioma	Progressive	34
 Ganglioglioma	Recurrence	20
 Ganglioneuroblastoma	Initial CNS Tumor	7
-Ganglioneuroblastoma	Primary Tumor	179
+Ganglioneuroblastoma	Primary Tumor	185
 Ganglioneuroblastoma	Progressive	1
 Ganglioneuroblastoma	Recurrence	6
 Ganglioneuroma	Initial CNS Tumor	7
-Ganglioneuroma	Primary Tumor	6
 Ganglioneuroma	Progressive	5
 Germ Cell Tumor	Primary Tumor	2
 Germinoma	Initial CNS Tumor	20
@@ -150,10 +145,10 @@ Langerhans Cell histiocytosis	Initial CNS Tumor	23
 Langerhans Cell histiocytosis	Primary Tumor	4
 Langerhans Cell histiocytosis	Unavailable	1
 Low-grade glioma	Deceased	30
-Low-grade glioma	Initial CNS Tumor	978
+Low-grade glioma	Initial CNS Tumor	1090
 Low-grade glioma	Primary Tumor	3
-Low-grade glioma	Progressive	192
-Low-grade glioma	Recurrence	70
+Low-grade glioma	Progressive	217
+Low-grade glioma	Recurrence	78
 Low-grade glioma	Second Malignancy	7
 Malignant peripheral nerve sheath tumor	Deceased	2
 Malignant peripheral nerve sheath tumor	Initial CNS Tumor	7
@@ -206,15 +201,12 @@ Osteosarcoma	Progressive	1
 Osteosarcoma	Recurrence	1
 Osteosarcoma	Second Malignancy	1
 Perineuroma	Initial CNS Tumor	3
-Pilocytic astrocytoma	Initial CNS Tumor	86
-Pilocytic astrocytoma	Progressive	25
-Pilocytic astrocytoma	Recurrence	6
 Pineoblastoma	Initial CNS Tumor	46
 Pineoblastoma	Progressive	8
 Pineoblastoma	Recurrence	3
 Pineocytoma	Initial CNS Tumor	1
-Pleomorphic xanthoastrocytoma	Initial CNS Tumor	11
-Pleomorphic xanthoastrocytoma	Recurrence	2
+Pleomorphic xanthoastrocytoma	Initial CNS Tumor	3
+Primary CNS lymphoma	Initial CNS Tumor	3
 Primary mediastinal large B cell lymphoma	Primary Tumor	1
 Retinoblastoma	Recurrence	1
 Rhabdoid tumor of the kidney	Primary Tumor	64
@@ -235,7 +227,7 @@ Schwannoma	Primary Tumor	2
 Schwannoma	Progressive	9
 Schwannoma	Recurrence	6
 Schwannoma	Unavailable	1
-Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	37
+Subependymal Giant Cell Astrocytoma	Initial CNS Tumor	20
 Subependymal Giant Cell Astrocytoma	Progressive	3
 Subependymal Giant Cell Astrocytoma	Second Malignancy	3
 T Acute Lymphoblastic Leukemia/Lymphoma	Primary Tumor	8

@@ -3000,7 +3000,7 @@ base_histology &lt;- read_tsv(file.path(data_dir,&quot;histologies-base.tsv&quot
 <!-- rnb-source-begin eyJkYXRhIjoiY29tcGlsZWRfc3VidHlwaW5nPC1yZWFkX3RzdihmaWxlLnBhdGgoXCIuLlwiLCBcIm1vbGVjdWxhci1zdWJ0eXBpbmctcGF0aG9sb2d5XCIsIFwicmVzdWx0c1wiLCBcImNvbXBpbGVkX21vbGVjdWxhcl9zdWJ0eXBlc193aXRoX2NsaW5pY2FsX3BhdGhvbG9neV9mZWVkYmFja19hbmRfcmVwb3J0X2luZm8udHN2XCIpKSJ9 -->
 <pre class="r"><code>compiled_subtyping&lt;-read_tsv(file.path(&quot;..&quot;, &quot;molecular-subtyping-pathology&quot;, &quot;results&quot;, &quot;compiled_molecular_subtypes_with_clinical_pathology_feedback_and_report_info.tsv&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBLaWRzX0ZpcnN0X1BhcnRpY2lwYW50X0lEID0gY29sX2NoYXJhY3RlcigpLFxuICBzYW1wbGVfaWQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIGJyb2FkX2hpc3RvbG9neSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgc2hvcnRfaGlzdG9sb2d5ID0gY29sX2NoYXJhY3RlcigpLFxuICBpbnRlZ3JhdGVkX2RpYWdub3NpcyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgbW9sZWN1bGFyX3N1YnR5cGUgPSBjb2xfY2hhcmFjdGVyKCksXG4gIE5vdGVzID0gY29sX2NoYXJhY3RlcigpLFxuICB0dW1vcl9kZXNjcmlwdG9yID0gY29sX2NoYXJhY3RlcigpLFxuICBoYXJtb25pemVkX2RpYWdub3NpcyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgbW9sZWN1bGFyX3N1YnR5cGVfbWV0aHlsID0gY29sX2NoYXJhY3RlcigpXG4pXG4ifQ== -->
+<!-- rnb-message-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBLaWRzX0ZpcnN0X1BhcnRpY2lwYW50X0lEID0gY29sX2NoYXJhY3RlcigpLFxuICBzYW1wbGVfaWQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgPSBjb2xfY2hhcmFjdGVyKCksXG4gIGJyb2FkX2hpc3RvbG9neSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgc2hvcnRfaGlzdG9sb2d5ID0gY29sX2NoYXJhY3RlcigpLFxuICBpbnRlZ3JhdGVkX2RpYWdub3NpcyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgbW9sZWN1bGFyX3N1YnR5cGUgPSBjb2xfY2hhcmFjdGVyKCksXG4gIE5vdGVzID0gY29sX2NoYXJhY3RlcigpLFxuICB0dW1vcl9kZXNjcmlwdG9yID0gY29sX2NoYXJhY3RlcigpLFxuICBoYXJtb25pemVkX2RpYWdub3NpcyA9IGNvbF9sb2dpY2FsKCksXG4gIG1vbGVjdWxhcl9zdWJ0eXBlX21ldGh5bCA9IGNvbF9sb2dpY2FsKClcbilcbiJ9 -->
 <pre><code>Parsed with column specification:
 cols(
   Kids_First_Participant_ID = col_character(),
@@ -3012,10 +3012,21 @@ cols(
   molecular_subtype = col_character(),
   Notes = col_character(),
   tumor_descriptor = col_character(),
-  harmonized_diagnosis = col_character(),
-  molecular_subtype_methyl = col_character()
+  harmonized_diagnosis = col_logical(),
+  molecular_subtype_methyl = col_logical()
 )</code></pre>
 <!-- rnb-message-end -->
+<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZzogMTQ0MyBwYXJzaW5nIGZhaWx1cmVzLlxuIHJvdyAgICAgICAgICAgICAgICAgIGNvbCAgICAgICAgICAgZXhwZWN0ZWQgICAgICAgICAgICAgICAgICAgICAgICAgIGFjdHVhbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGVcbjE2NjQgaGFybW9uaXplZF9kaWFnbm9zaXMgMS8wL1QvRi9UUlVFL0ZBTFNFIE1lbmluZ2lvbWEgICAgICAgICAgICAgICAgICAgICAgJy4uL21vbGVjdWxhci1zdWJ0eXBpbmctcGF0aG9sb2d5L3Jlc3VsdHMvY29tcGlsZWRfbW9sZWN1bGFyX3N1YnR5cGVzX3dpdGhfY2xpbmljYWxfcGF0aG9sb2d5X2ZlZWRiYWNrX2FuZF9yZXBvcnRfaW5mby50c3YnXG4xNjY1IGhhcm1vbml6ZWRfZGlhZ25vc2lzIDEvMC9UL0YvVFJVRS9GQUxTRSBNZW5pbmdpb21hICAgICAgICAgICAgICAgICAgICAgICcuLi9tb2xlY3VsYXItc3VidHlwaW5nLXBhdGhvbG9neS9yZXN1bHRzL2NvbXBpbGVkX21vbGVjdWxhcl9zdWJ0eXBlc193aXRoX2NsaW5pY2FsX3BhdGhvbG9neV9mZWVkYmFja19hbmRfcmVwb3J0X2luZm8udHN2J1xuMTY2NiBoYXJtb25pemVkX2RpYWdub3NpcyAxLzAvVC9GL1RSVUUvRkFMU0UgTWVuaW5naW9tYSAgICAgICAgICAgICAgICAgICAgICAnLi4vbW9sZWN1bGFyLXN1YnR5cGluZy1wYXRob2xvZ3kvcmVzdWx0cy9jb21waWxlZF9tb2xlY3VsYXJfc3VidHlwZXNfd2l0aF9jbGluaWNhbF9wYXRob2xvZ3lfZmVlZGJhY2tfYW5kX3JlcG9ydF9pbmZvLnRzdidcbjE2NzIgaGFybW9uaXplZF9kaWFnbm9zaXMgMS8wL1QvRi9UUlVFL0ZBTFNFIExvdy1ncmFkZSBnbGlvbWEsIEtJQUExNTQ5LUJSQUYgJy4uL21vbGVjdWxhci1zdWJ0eXBpbmctcGF0aG9sb2d5L3Jlc3VsdHMvY29tcGlsZWRfbW9sZWN1bGFyX3N1YnR5cGVzX3dpdGhfY2xpbmljYWxfcGF0aG9sb2d5X2ZlZWRiYWNrX2FuZF9yZXBvcnRfaW5mby50c3YnXG4xNjczIGhhcm1vbml6ZWRfZGlhZ25vc2lzIDEvMC9UL0YvVFJVRS9GQUxTRSBMb3ctZ3JhZGUgZ2xpb21hLCBLSUFBMTU0OS1CUkFGICcuLi9tb2xlY3VsYXItc3VidHlwaW5nLXBhdGhvbG9neS9yZXN1bHRzL2NvbXBpbGVkX21vbGVjdWxhcl9zdWJ0eXBlc193aXRoX2NsaW5pY2FsX3BhdGhvbG9neV9mZWVkYmFja19hbmRfcmVwb3J0X2luZm8udHN2J1xuLi4uLiAuLi4uLi4uLi4uLi4uLi4uLi4uLiAuLi4uLi4uLi4uLi4uLi4uLi4gLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi5cblNlZSBwcm9ibGVtcyguLi4pIGZvciBtb3JlIGRldGFpbHMuXG4ifQ== -->
+<pre><code>Warning: 1443 parsing failures.
+ row                  col           expected                          actual                                                                                                                        file
+1664 harmonized_diagnosis 1/0/T/F/TRUE/FALSE Meningioma                      '../molecular-subtyping-pathology/results/compiled_molecular_subtypes_with_clinical_pathology_feedback_and_report_info.tsv'
+1665 harmonized_diagnosis 1/0/T/F/TRUE/FALSE Meningioma                      '../molecular-subtyping-pathology/results/compiled_molecular_subtypes_with_clinical_pathology_feedback_and_report_info.tsv'
+1666 harmonized_diagnosis 1/0/T/F/TRUE/FALSE Meningioma                      '../molecular-subtyping-pathology/results/compiled_molecular_subtypes_with_clinical_pathology_feedback_and_report_info.tsv'
+1672 harmonized_diagnosis 1/0/T/F/TRUE/FALSE Low-grade glioma, KIAA1549-BRAF '../molecular-subtyping-pathology/results/compiled_molecular_subtypes_with_clinical_pathology_feedback_and_report_info.tsv'
+1673 harmonized_diagnosis 1/0/T/F/TRUE/FALSE Low-grade glioma, KIAA1549-BRAF '../molecular-subtyping-pathology/results/compiled_molecular_subtypes_with_clinical_pathology_feedback_and_report_info.tsv'
+.... .................... .................. ............................... ...........................................................................................................................
+See problems(...) for more details.</code></pre>
+<!-- rnb-warning-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Update “Other” sample broad/short histology and harmonized_diagnosis and add to <code>compiled_subtyping</code></p>
