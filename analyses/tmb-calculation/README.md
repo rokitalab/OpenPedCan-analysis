@@ -1,22 +1,30 @@
-# OpenPencan Tumor Mutation Burden calculation
+# OpenPedCan Tumor Mutation Burden calculation
 
-This analysis utilizes the SNV consensus MAF file, `../../data/snv-consensus-plus-hotspots.maf.tsv.gz` from [Pediatric Open Targets, OPenPedCan-analysis](https://github.com/PediatricOpenTargets/OpenPedCan-analysis) datasets generated using [Kids First DRC Consensus Calling Workflow](https://github.com/kids-first/kf-somatic-workflow/blob/master/docs/kfdrc-consensus-calling.md)to calculate Tumor Mutation Burden (TMB). TMB is calculated for tumor sample in each experimental strategy (WGS, WXS, and Targeted Sequencing) using SNV calls for all cohorts and cancer types evaluated in the project. The TMB calculation is adapted from [snv-callers module](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers) of the OpenPBTA-analyses, but uses nucleotide variants (SNVs) in the consensus file called in at least 2 of the 4 caller (Mutect2, Strelka2, Lancet, and Vardict) utilized in the consensus calling workflow and/or 1 of the 4 callers if SNVs are considered hotspots. The SNV consensus is split into two subsets of SNVs and multinucleotide variants (MNVs). The MNVs subset is split into SNVs, merged to the SNVs subset, and sample-specific redundant calls removed. The resulting merged and non-redundant SNV consensus calls togther with sample-specific BED files are utilized for TMB calculation as described below. 
+This analysis utilizes the SNV consensus MAF file, `../../data/snv-consensus-plus-hotspots.maf.tsv.gz` from [Pediatric Open Targets, OPenPedCan-analysis](https://github.com/PediatricOpenTargets/OpenPedCan-analysis) datasets generated using [Kids First DRC Consensus Calling Workflow](https://github.com/kids-first/kf-somatic-workflow/blob/master/docs/kfdrc-consensus-calling.md) to calculate Tumor Mutation Burden (TMB). 
+TMB is calculated for tumor samples in each experimental strategy (WGS and WXS) using SNV calls for all cohorts and cancer types evaluated in the project. 
+The TMB calculation is adapted from [snv-callers module](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers) of the OpenPBTA-analyses, but uses nucleotide variants (SNVs) in the consensus file called in at least 2 of the 4 caller (Mutect2, Strelka2, Lancet, and Vardict) utilized in the consensus calling workflow and/or 1 of the 4 callers if the SNV was a hotspot mutation. 
+The SNV consensus is split into two subsets of SNVs and multinucleotide variants (MNVs). 
+The MNVs subset is split into SNVs, merged to the SNVs subset, and sample-specific redundant calls removed. 
+The resulting merged and non-redundant SNV consensus calls togther with sample-specific BED files are utilized for TMB calculation as described below. 
 
 
 ## TMB Calculation
 
-For each experimental strategy and TMB calculation, the intersection of the genomic regions effectively being surveyed are used. All calls whether consensus or hotspots are used for TMB calculations. These genomic regions are used for first filtering mutations to these regions and then for using the size in bp of the genomic regions surveyed as the TMB denominator.
+For each experimental strategy and TMB calculation, the intersection of the genomic regions effectively being surveyed are used. 
+All calls in the consensus file are used for TMB calculations. 
+These genomic regions are used to first filter mutations to these regions and then the size in bp of the effectively surveyed genomic regions is used as the TMB denominator.
 
 ### All mutations TMB
 
-For all mutation TMBs, all callers are used. For WGS samples, the size of the genome covered by the intersection of Strelka2 and Mutect2's surveyed areas which are considered representative of all callers is used for the denominator.
+For all mutation TMBs, consensus calls are used. 
+For WGS samples, the size of the genome covered by the intersection of Strelka2 and Mutect2's surveyed areas which are considered representative of all callers is used for the denominator.
 
 ```
-WGS_all_mutations_TMB = (total # consensus and hotspots SNVs called by all callers) / intersection_strelka_mutect_genome_size
+WGS_all_mutations_TMB = (total # mutations in consensus MAF) / intersection_strelka_mutect_genome_size
 ```
 For WXS samples, the size of the genome for each the WXS bed region file is used for the denominator with the associated tumor samples.
 ```
-WXS_all_mutations_TMB = (total # consensus and hotspots SNVs called by all callers)) / wxs_genome_size
+WXS_all_mutations_TMB = (total # mutations in consensus MAF)) / wxs_genome_size
 ```
 ### Coding only TMB
 
@@ -25,11 +33,11 @@ This file is included in the OpenPedCan data download.
 SNVs outside of these coding sequences are filtered out before being summed and used for TMB calculations as follows:
 
 ```
-WGS_coding_only_TMB = (total # consensus and hotspots SNVs called by all callers) / intersection_wgs_strelka_mutect_CDS_genome_size
+WGS_coding_only_TMB = (total # coding mutations in consensus MAF) / intersection_wgs_strelka_mutect_CDS_genome_size
 ```
 For WXS samples, each the WXS bed region file is intersected with the coding sequences for filtering and for determining the denominator to be used with the with the associated tumor samples.
 ```
-WXS_coding_only_TMB = (total # consensus and hotspots SNVs called by all callers) / intersection_wxs_CDS_genome_size
+WXS_coding_only_TMB = (total # coding mutations in consensus MAF) / intersection_wxs_CDS_genome_size
 ```
 
 ## General usage of scripts
@@ -40,7 +48,8 @@ This is a bash script wrapper for setting input file paths for the main anlysis 
 
 
 #### 01-calculate_tmb.R
-Uses the OpenPedCan SNV consensus file to calculate TMB for all WGS, WXS, and Targeted Sequencing samples. Two TMB files are created, one including *all SNVs* and a *coding SNVs only*, both utilizing consensus and hotpots mutations called by all callers.
+Uses the OpenPedCan SNV consensus file to calculate TMB for all WGS and WXS samples. 
+Two TMB files are created, one including *all SNVs* and a *coding SNVs only*, both utilizing the consensus MAF.
 
 **Argument descriptions**
 ```
