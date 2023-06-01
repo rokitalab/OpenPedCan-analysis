@@ -20,13 +20,6 @@ if(!dir.exists(output_dir)){
 output_file <- file.path(output_dir, "CRANIO_subtyping_path_dx_strings.json")                         
 
 ## pathology diagnosis is sufficient to subset CRANO sample. Therefore, we don't need to include pathology_free_text in json file
-## Read histologies file
-#histo <- readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv")) 
-
-#path_free_text_exact <- histo %>% 
-#  filter(pathology_diagnosis == exact_path_dx) %>%
-#  pull(pathology_free_text_diagnosis) %>% 
-#  unique()
 
 ## The `pathology_diagnosis` fields for CRANIO
 exact_path_dx <- "Craniopharyngioma"

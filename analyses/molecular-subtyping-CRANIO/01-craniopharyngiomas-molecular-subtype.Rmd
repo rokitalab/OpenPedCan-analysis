@@ -70,7 +70,7 @@ path_dx_list <- jsonlite::fromJSON(
 ## Read in metadata
 metadata <-
   read_tsv(file.path(root_dir, "data", "histologies-base.tsv")) %>%
-  filter(pathology_diagnosis %in% path_dx_list$exact_path_dx)
+  filter(pathology_diagnosis == path_dx_list$exact_path_dx)
 
 #cranio biospecimens
 cranio_bs <- metadata %>%
