@@ -29,15 +29,9 @@ exact_path_dx <- histo %>%
   pull(pathology_diagnosis) %>%
   unique()
 
-path_free_text_exact <- histo %>% 
-  filter(cohort %in% c("PBTA", "Kentucky", "DGD"), 
-         grepl("Ependymoma", pathology_diagnosis)) %>%
-  pull(pathology_free_text_diagnosis) %>%
-  unique()
 
 ## Create a list with the strings we'll use for inclusion
-term_list <- list(exact_path_dx = exact_path_dx, 
-                  path_free_text_exact = path_free_text_exact)
+term_list <- list(exact_path_dx = exact_path_dx)
 
 # Save the list as json
 writeLines(jsonlite::prettify(jsonlite::toJSON(term_list)), output_file)
