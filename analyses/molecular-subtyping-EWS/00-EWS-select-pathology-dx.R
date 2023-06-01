@@ -25,16 +25,8 @@ histo <- readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"))
 ## The `pathology_diagnosis` fields for EWS
 exact_path_dx <- "Ewings Sarcoma"
 
-path_free_text_exact <- histo %>% 
-  filter(cohort %in% c("PBTA", "Kentucky", "DGD"), 
-         pathology_diagnosis == "Ewings Sarcoma" | 
-           (dkfz_v12_methylation_subclass == "EWS" & dkfz_v12_methylation_subclass_score >= 0.8)) %>%
-  pull(pathology_free_text_diagnosis) %>%
-  unique()
-
 ## Create a list with the strings we'll use for inclusion
-term_list <- list(exact_path_dx = exact_path_dx, 
-                  path_free_text_exact = path_free_text_exact)
+term_list <- list(exact_path_dx = exact_path_dx)
 
 # Save the list as json
 writeLines(jsonlite::prettify(jsonlite::toJSON(term_list)), output_file)
