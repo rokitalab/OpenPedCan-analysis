@@ -135,9 +135,7 @@ rm(exp_df)
 Create one table with the all cleaned data.
 
 ```{r}
-all_data_df <- full_join(dna_df, rna_df,
-                         by = c("Kids_First_Participant_ID", "sample_id", "composition", "id"),
-                         suffix = c("_DNA", "_RNA"))
+all_data_df <- bind_rows(dna_df, rna_df)
 ```
 
 Add in brain region and age.
@@ -181,15 +179,15 @@ methyl_df <- hgg_meta %>%
     TRUE ~ NA_character_)) %>% 
   select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 composition, id, molecular_subtype_methyl) %>%
-  dplyr::rename(Kids_First_Biospecimen_ID_Methyl = Kids_First_Biospecimen_ID) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID) %>%
   distinct()
 
 # add remaining methyl without the subtypes of interest 
 methyl_not_subtyped <- hgg_meta %>%
   filter(experimental_strategy == "Methylation",
-         !Kids_First_Biospecimen_ID %in% methyl_df$Kids_First_Biospecimen_ID_Methyl) %>%
-  dplyr::rename(Kids_First_Biospecimen_ID_Methyl = Kids_First_Biospecimen_ID) %>%
-  select(Kids_First_Biospecimen_ID_Methyl, Kids_First_Participant_ID, sample_id, 
+         !Kids_First_Biospecimen_ID %in% methyl_df$Kids_First_Biospecimen_ID) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID) %>%
+  select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 composition, id) %>%
   left_join(methyl_df[, c("id", "molecular_subtype_methyl", "Kids_First_Participant_ID")]) %>%
   distinct()
@@ -199,11 +197,10 @@ methyl_df <- methyl_df %>%
   distinct()
 
 all_data_df <-  all_data_df %>% 
-  full_join(methyl_df, by = c("Kids_First_Participant_ID", "sample_id", "composition", "id"))  %>% 
+  bind_rows(methyl_df)  %>% 
   select(starts_with("Kids_First"), sample_id, everything())
 
 ```
-
 
 ## Tables by Molecular Subtype
 
@@ -423,11 +420,11 @@ ihg_df_biospecimen <- all_data_df %>%
   filter(molecular_subtype_methyl == "IHG" | grepl("infant type hemispheric glioma with ALK fusion", pathology_free_text_diagnosis)) %>%
   mutate(tmp_tag = "ihg_sample") %>%
   unique() %>%
-  mutate(molecular_subtype = case_when((!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% NTRK ~ "IHG, NTRK-altered"),
-                                       (!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% ALK ~ "IHG, ALK-altered"),
-                                       (!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% ROS1 ~ "IHG, ROS1-altered"),
-                                       (!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% MET ~ "IHG, MET-altered"),
-                                       (!is.na(tmp_tag) & !Kids_First_Biospecimen_ID_RNA %in% c(NTRK, ALK, MET, ROS1) & molecular_subtype_methyl == "IHG") ~ "IHG, To be classified")) %>%
+  mutate(molecular_subtype = case_when((!is.na(tmp_tag) & Kids_First_Biospecimen_ID %in% NTRK ~ "IHG, NTRK-altered"),
+                                       (!is.na(tmp_tag) & Kids_First_Biospecimen_ID %in% ALK ~ "IHG, ALK-altered"),
+                                       (!is.na(tmp_tag) & Kids_First_Biospecimen_ID %in% ROS1 ~ "IHG, ROS1-altered"),
+                                       (!is.na(tmp_tag) & Kids_First_Biospecimen_ID %in% MET ~ "IHG, MET-altered"),
+                                       (!is.na(tmp_tag) & !Kids_First_Biospecimen_ID %in% c(NTRK, ALK, MET, ROS1) & molecular_subtype_methyl == "IHG") ~ "IHG, To be classified")) %>%
   select(-c(tmp_tag, pathology_free_text_diagnosis)) %>%
   unique()
 ```
@@ -476,7 +473,7 @@ wildtype_df <- all_data_df %>%
 
 # add wildtype methyl not already there
 wildtype_methyl <- all_data_df %>%
-  filter(!Kids_First_Biospecimen_ID_Methyl %in% wildtype_df$Kids_First_Biospecimen_ID_Methyl,
+  filter(!Kids_First_Biospecimen_ID %in% wildtype_df$Kids_First_Biospecimen_ID,
          molecular_subtype_methyl == "HGG, H3 wildtype") %>%
   mutate(molecular_subtype = molecular_subtype_methyl)
 
