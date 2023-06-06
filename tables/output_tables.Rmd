@@ -7,7 +7,7 @@ output:
     toc: TRUE
     toc_float: TRUE
 params:
-  release: v11
+  release: v12
 ---
 
 Code adapted from: https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/tables/output_tables.Rmd
@@ -51,28 +51,36 @@ table_s1_file <- file.path(results_dir, "TableS1-histologies.xlsx")
 
 # Read files
 ```{r}
-histology_df <- read_tsv(histology_file, guess_max =10000)
+histology_df <- read_tsv(histology_file, guess_max =100000)
 ```
 
-## Table S1: V11 histologies table
+## Table S1: histologies table
 
 ```{r}
 readme <- tribble(
 ~`Histology column`,~Definition,~`Possible values`,
+"age_at_chemo_start","Patient age at chemotherapy start in days","numeric",
 "age_at_diagnosis_days","Patient age at diagnosis in days","numeric",
+"age_at_event_days","Patient age at sample collection event in days","numeric",
+"age_at_radiation_start","Patient age at radiation start in days","numeric",
 "age_last_update_days","Patient age at the last clinical event/update in days","numeric",
 "aliquot_id","External aliquot identifier","alphanumeric",
-"broad_histology","Broad WHO 2016 classification of cancer type",paste(unique(histology_df$broad_histology), collapse = "; "),
+"broad_histology","Broad WHO classification of cancer type",paste(unique(histology_df$broad_histology), collapse = "; "),
 "cancer_group","Harmonized cancer groupings for plots",paste(unique(histology_df$cancer_group), collapse = "; "),
 "cancer_predispositions","Reported cancer predisposition syndromes",paste(unique(histology_df$cancer_predispositions), collapse = "; "),
-"cns_methylation_class","methylation-based CNS tumor class",paste(unique(histology_df$cns_methylation_class), collapse = "; "),
-"cns_methylation_class_score","methylation-based CNS tumor class score","numeric",
-"cns_methylation_subclass","methylation-based CNS tumor sub-class",paste(unique(histology_df$cns_methylation_subclass), collapse = "; "),
-"cns_methylation_subclass_score","methylation-based tumor subclass score","numeric",
+"cell_line_composition","Cell line media",paste(unique(histology_df$cell_line_composition), collapse = "; "),
+"cell_line_passage","Cell line passage at collection","numeric",
+"clinical_status_at_event","Patient status at the time of sample collection", paste(unique(histology_df$clinical_status_at_event), collapse = "; "),
 "CNS_region","Harmonized brain region based on `primary_site`",paste(unique(histology_df$CNS_region), collapse = "; "),
 "cohort","Scientific cohort",paste(unique(histology_df$cohort), collapse = "; "),
 "cohort_participant_id","Scientific cohort participant ID","C#####-C######",
 "composition","Sample composition",paste(unique(histology_df$composition), collapse = "; "),
+"dkfz_v11_methylation_subclass","v11 DKFZ methylation-based CNS tumor subclass","text",
+"dkfz_v11_methylation_subclass_score","v11 DKFZ methylation-based CNS tumor subclass score","numeric",
+"dkfz_v12_methylation_subclass","v12 DKFZ methylation-based CNS tumor subclass score","text",
+"dkfz_v12_methylation_subclass_score","v12 DKFZ methylation-based CNS tumor subclass","numeric",
+"dkfz_v12_methylation_mgmt_status","v12 DKFZ MGMT promoter methylation status",paste(unique(histology_df$dkfz_v11_methylation_subclass), collapse = "; "),
+"dkfz_v12_methylation_mgmt_estimated","v12 DKFZ MGMT promoter methylation fraction","numeric",
 "ethnicity","Patient reported ethnicity",paste(unique(histology_df$ethnicity), collapse = "; "),
 "experimental_strategy","Sequencing strategy",paste(unique(histology_df$experimental_strategy), collapse = "; "),
 # leaving this non-programmatic because of the duplicates that would come up (eg two selections in one patient, needing data cleanup)
@@ -84,28 +92,29 @@ readme <- tribble(
 "integrated_diagnosis","2016 WHO diagnosis integrated from pathology diagnosis and molecular subtyping","text",
 "Kids_First_Biospecimen_ID","KidsFirst biospecimen identifier","BS_########",
 "Kids_First_Participant_ID","KidsFirst patient identifier","PT_########",
-"molecular_subtype","Molecular subtype defined by WHO 2016 guidelines","text",
+"molecular_subtype","Molecular subtype defined by WHO 2021 guidelines","text",
+"molecular_subtype_methyl","DKFZ v12 methylation class aligned to WHO 2021 subtypes","text",
 "normal_fraction","Theta2 normal DNA fraction estimate","numeric",
 "Notes","Free text field describing changes from `pathology_diagnosis` to `integrated_diagnosis` or manner in which molecular_subtype was determined","text",
 "OS_days","Overall survival in days","numeric",
 "OS_status","Overall survival status",paste(unique(histology_df$OS_status), collapse = "; "),
 "pathology_diagnosis","Reported and/or harmonized patient diagnosis from pathology reports","text",
 "pathology_free_text_diagnosis","Free text patient diagnosis from pathology reports","text",
-"PFS_days","Progression-free survival in days","numeric",
+"EFS_days","Event-free survival in days","numeric",
 "primary_site","Bodily site(s) from which specimen was derived","text",
 "race","Patient reported race",paste(unique(histology_df$race), collapse = "; "),
 "reported_gender","Patient reported gender",paste(unique(histology_df$reported_gender), collapse = "; "),
-"RF_purity_ABSOLUTE","tumor purity fraction estimated using ABSOLUTE","numeric",
-"RF_purity_ESTIMATE","tumor purity fraction estimated using ESTIMATE dataset","numeric",
-"RF_purity_LUMP","tumor purity fraction estimated using LUMP","numeric",
 "RNA_library","Type of RNA-Sequencing library preparation",paste(unique(histology_df$RNA_library), collapse = "; "),
 "sample_id","External biospecimen identifier","alphanumeric",
 "sample_type","Broad sample type",paste(unique(histology_df$sample_type), collapse = "; "),
 "seq_center","Sequencing center",paste(unique(histology_df$seq_center), collapse = "; "),
-"short_histology","Abbreviated `integrated_diagnosis` or `broad_histology` for plotting purposes",paste(unique(histology_df$short_histology), collapse = "; "),
+"short_histology","Abbreviated `cancer_group` or `broad_histology` for plotting purposes",paste(unique(histology_df$short_histology), collapse = "; "),
 "tumor_descriptor","Phase of therapy from which tumor was derived",paste(unique(histology_df$tumor_descriptor), collapse = "; "),
 "tumor_fraction","Theta2 tumor DNA fraction estimate","numeric",
-"tumor_ploidy","Control-FREEC ploidy","numeric"
+"tumor_fraction_LUMP","LUMP tumor DNA fraction estimate from methylation","numeric",
+"tumor_fraction_RFpurify_ABSOLUTE","RFpurify ABSOLUTE tumor DNA fraction estimate from methylation","numeric",
+"tumor_fraction_RFpurify_ESTIMATE","RFpurify ESTIMATE tumor DNA fraction estimate from methylation","numeric",
+"tumor_ploidy","Control-FREEC ploidy estimate","numeric"
 )
 
 # Combine and output
