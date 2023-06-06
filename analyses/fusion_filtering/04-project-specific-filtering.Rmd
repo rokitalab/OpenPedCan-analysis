@@ -1,6 +1,6 @@
 ---
 title: "Project specific filtering"
-author: "K S Gaonkar (D3B); Jaclyn Taroni (CCDL)"
+author: "K S Gaonkar (D3B); Jaclyn Taroni (CCDL); Kelsey Keith (DBHI)"
 output: html_notebook
 params:
   histology:
@@ -89,13 +89,13 @@ fusion_calls<-QCGeneFiltered_filtFusion %>% mutate(FusionName=rm_between(.data$F
 
 # get histology file
 if ( params$base_run ==0 ){
-clinical<-read.delim(file.path(root_dir, params$histology), stringsAsFactors = FALSE)
+clinical<-read_tsv(file.path(root_dir, params$histology), guess_max = 100000)
 # get grouping column id
 group<-params$group
 # subset to group
 clinical<-clinical[,c("Kids_First_Biospecimen_ID","Kids_First_Participant_ID",group)]
 } else {
-clinical<-read.delim(file.path(root_dir, params$base_histology), stringsAsFactors = FALSE)
+clinical<-read_tsv(file.path(root_dir, params$base_histology), guess_max = 100000)
 # get grouping column id
 group<-params$group_base
 # subset to group
@@ -127,15 +127,17 @@ to specify that multiple callers "Caller1,Caller2" have called it
 
 # aggregate caller 
 fusion_caller.summary <- fusion_calls %>%
-  dplyr::select(Sample,FusionName,Caller,Fusion_Type) %>%
-  group_by(FusionName, Sample ,Fusion_Type) %>%
+  dplyr::select(Sample, FusionName, Caller) %>%
+  group_by(FusionName, Sample, Caller) %>%
   unique() %>%
-  dplyr::mutate(CalledBy = toString(Caller), caller.count = n()) %>%
-  dplyr::select(-Caller)
+  ungroup() %>%
+  group_by(FusionName, Sample) %>%
+  dplyr::summarize(CalledBy = toString(Caller), caller.count = n()) %>%
+  ungroup()
 
 #to add aggregated caller from fusion_caller.summary
 fusion_calls<-fusion_calls %>% 
-  left_join(fusion_caller.summary,by=(c("Sample","FusionName","Fusion_Type"))) %>%
+  left_join(fusion_caller.summary,by=(c("Sample","FusionName"))) %>%
   unique()
 ```
 
@@ -144,8 +146,8 @@ fusion_calls<-fusion_calls %>%
 Kinase domainIDs are obtained pfam by a simple grep "kinase" in their Name
 
 ```{r}
-# identify kinase domain from bioMartPfam dataframe provided with annoFuse
-bioMartDataPfam <- readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuse"))
+# identify kinase domain from bioMartPfam dataframe provided with annoFuseData
+bioMartDataPfam <- readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuseData"))
 
 # look for domains with "kinase" in their domain Name
 kinaseid<-unique(bioMartDataPfam[grep("kinase",bioMartDataPfam$NAME),
@@ -200,7 +202,6 @@ fusion_calls<-merge(fusion_calls,clinical,by.x="Sample",by.y="Kids_First_Biospec
 
 # filter for putative driver genes
 putative_driver_annotated_fusions <- fusion_calls %>%
-  dplyr::select(-Caller) %>%
   unique() %>%
   dplyr::filter(!is.na(Gene1A_anno) | !is.na(Gene1B_anno) | !is.na(Gene2A_anno) | !is.na(Gene2B_anno)) %>%
   unique()
@@ -211,11 +212,12 @@ putative_driver_annotated_fusions <- fusion_calls %>%
 ### Other non-Oncogenic fusions filtering
 
 ```{r}
-# remove local rearrangements
-fusion_calls<-fusion_calls %>%
+# remove local rearrangements, resolve duplicate fusion_types, domains_retained
+fusion_calls <- fusion_calls %>%
+  ungroup() %>%
   # remove local rearrangement/adjacent genes
   dplyr::filter(!grepl("LOCAL_REARRANGEMENT|LOCAL_INVERSION",annots)) %>%
-  dplyr::select(-Caller) %>%
+  dplyr::filter(Fusion_Type != "other") %>%
   unique()
 
 
@@ -324,4 +326,9 @@ putative_driver_fusions<-rbind(QCGeneFiltered_recFusionUniq,putative_driver_anno
 
 write.table(putative_driver_fusions,file.path(root_dir,"scratch","fusion-putative-oncogenic-preQC.tsv"),sep="\t",quote=FALSE,row.names = FALSE)
 
+```
+
+### session info
+```{r session info}
+sessionInfo()
 ```

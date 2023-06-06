@@ -1,6 +1,7 @@
 ## Add formatted sample id column for PedCBio upload
 
 **Module author:** Run Jin ([@runjin326](https://github.com/runjin326)) & Jo Lynne Rokita
+Modified by Miguel Brown
 
 Pre-sample name updates include (temporary):
 - Adding GTEx group --> `cancer_group` (HISTOLOGY on pedcbio)
@@ -26,23 +27,24 @@ For TARGET, TCGA, and GTEx samples, `Kids_First_Participant_ID` column is used a
   - For TCGA, `Kids_First_Participant_ID` + `sample_id` + `aliquot_id` is used as formatted sample ID
   - For GTEx, `Kids_First_Participant_ID` + `aliquot_id` is used as formatted sample ID
 
+For DGD, use `aliquot_id`, but remove test name
+
 Usage:
-  ```
-Rscript -e "rmarkdown::render('pedcbio_sample_name_col.Rmd', clean = TRUE)"
+```sh
+# In repo (if a different hist file needed, you can still specify another path):
+Rscript --vanilla pedcbio-sample-name/pedcbio_sample_name_col.R -i ../molecular-subtyping-integrate/results/histologies.tsv -b Methylation"
 
 ```
 or
-```
-bash run_add_name.sh
+```sh
+# As standanlone in any env with required R packages
+Rscript --vanilla pedcbio_sample_name_col.R -i path-to-histolgies-file.tsv -n path-to-cbio-names.csv -b Methylation
 ```
 
 Input:
-- `input/cbtn_cbio_sample.csv`
-- `input/oligo_nation_cbio_sample.csv`
-- `input/dgd_cbio_sample.csv`
-- `input/x01_fy16_nbl_maris_cbio_sample.csv`
+- `input/cbio_sample_ids.csv`
 
 Output:
 - `results/histologies-formatted-id-added.tsv`
 
-The output files are directly uploaded to S3 buckets for loading into PedCBio.
+The output files can directly uploaded to S3 buckets for loading into PedCBio or used locally.

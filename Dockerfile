@@ -13,6 +13,9 @@ COPY scripts/install_bioc.r .
 
 ### Install apt-getable packages to start
 #########################################
+
+# stretch is EOL, so we need to use the archive
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils dialog
 
 # Add curl, bzip2 and some dev libs
@@ -408,7 +411,9 @@ RUN ./install_bioc.r \
     EnsDb.Hsapiens.v86 \
     ensembldb
 
-RUN R -e "remotes::install_github('d3b-center/annoFuse',ref = 'c6a2111b5949ca2aae3853f7f34de3d0db4ffa33', dependencies = TRUE)"
+RUN R -e "remotes::install_github('d3b-center/annoFuseData',ref = '321bc4f6db6e9a21358f0d09297142f6029ac7aa', dependencies = TRUE)"
+
+RUN R -e "remotes::install_github('d3b-center/annoFuse',ref = '55b4b862429fe886790d087b2f1c654689c691c4', dependencies = TRUE)"
 
 # Package for RNA-seq differential gene expression analysis
 RUN ./install_bioc.r \
@@ -456,11 +461,15 @@ RUN ./install_bioc.r \
     ids
 
 WORKDIR /home/rstudio/
-# AWS sCLI installation
+# AWS CLI installation
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
     sudo ./aws/install && \
     rm -rf aws*
+
+# Install Desal latest release (v2.1.1)- converter for JSON, TOML, YAML, XML and CSV data formats
+RUN sudo wget -qO /usr/local/bin/dasel "https://github.com/TomWright/dasel/releases/download/v2.1.1/dasel_linux_amd64" && \
+    sudo chmod a+x /usr/local/bin/dasel
 
 WORKDIR /rocker-build/
 # R package creating .xlsx

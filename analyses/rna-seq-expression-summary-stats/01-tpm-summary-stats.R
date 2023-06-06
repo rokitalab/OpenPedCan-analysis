@@ -346,7 +346,13 @@ if (!dir.exists(tables_dir)) {
 # in the future
 message('Read data...')
 
-tpm_df <- readRDS('../../data/gene-expression-rsem-tpm-collapsed.rds')
+# read OpenPedCan tpm matrix
+opc_tpm_df <- readRDS('../../data/gene-expression-rsem-tpm-collapsed.rds')
+# read TCGA tpm matrix
+tcga_tpm_df <- readRDS('../../data/tcga-gene-expression-rsem-tpm-collapsed.rds')
+# merge to keep common genes between the two matrices
+tpm_df <- merge(opc_tpm_df, tcga_tpm_df, by=0) %>%
+  tibble::column_to_rownames('Row.names')
 # assert read count matrix column naems are unique
 stopifnot(identical(
   ncol(tpm_df),
@@ -631,6 +637,10 @@ group_wise_zscore_m_tpm_ss_long_tbl <- select(
 gene_wise_zscore_m_tpm_ss_long_tbl <- select(
   m_tpm_ss_long_tbl, -tpm_mean_cancer_group_wise_zscore)
 
+# change the column name of output files
+colnames(group_wise_zscore_m_tpm_ss_long_tbl) <-  c("Gene_symbol", "targetFromSourceId", "Disease", "diseaseFromSourceMappedId", "MONDO", "n_sample", "Dataset", "tpm_mean", "tpm_sd", "tpm_mean_gene_wise_zscore", "tpm_mean_cancer_group_wise_quantiles")
+colnames(gene_wise_zscore_m_tpm_ss_long_tbl) <-  c("Gene_symbol", "targetFromSourceId", "Disease", "diseaseFromSourceMappedId", "MONDO", "n_sample", "Dataset", "tpm_mean", "tpm_sd", "tpm_mean_gene_wise_zscore", "tpm_mean_cancer_group_wise_quantiles")
+
 write_tsv(
   group_wise_zscore_m_tpm_ss_long_tbl,
   file.path(tables_dir, 'long_n_tpm_mean_sd_quantile_group_wise_zscore.tsv'))
@@ -638,14 +648,5 @@ write_tsv(
 write_tsv(
   gene_wise_zscore_m_tpm_ss_long_tbl,
   file.path(tables_dir, 'long_n_tpm_mean_sd_quantile_gene_wise_zscore.tsv'))
-
-jsonlite::write_json(
-  group_wise_zscore_m_tpm_ss_long_tbl,
-  file.path(tables_dir, 'long_n_tpm_mean_sd_quantile_group_wise_zscore.json'))
-
-jsonlite::write_json(
-  gene_wise_zscore_m_tpm_ss_long_tbl,
-  file.path(tables_dir, 'long_n_tpm_mean_sd_quantile_gene_wise_zscore.json'))
-
 
 message('Done running 01-tpm-summary-stats.R.')

@@ -36,7 +36,7 @@ if (!dir.exists(subset_dir)) {
 metadata <-
   read_tsv(file.path(root_dir, "data", "histologies-base.tsv"),
            guess_max = 100000) %>% 
-  dplyr::filter(cohort == "PBTA")
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD"))
 
 # Select wanted columns in metadata for merging and assign to a new object
 select_metadata <- metadata %>%
@@ -77,25 +77,22 @@ path_dx_list <- jsonlite::fromJSON(
 # Filter metadata based on pathology diagnosis fields and include samples that
 # should be classified as high-grade glioma based on defining lesions
 
-# First, filter to exclude cell lines
-tumor_metadata_df <- metadata %>%
-  filter(
-    sample_type == "Tumor"
-  )
-
 # Samples included on the basis of the pathology diagnosis fields
-path_dx_df <- tumor_metadata_df %>%
-  # Inclusion on the basis of CBTTC harmonized pathology diagnoses
+path_dx_df <- metadata %>%
+  # Inclusion on the basis of CBTN harmonized pathology diagnoses
   filter(pathology_diagnosis %in% path_dx_list$exact_path_dx |
          # Inclusion based on pathology free text diagnosis
-         pathology_free_text_diagnosis ==path_dx_list$gliomatosis_path_free_text_exact)
+         pathology_free_text_diagnosis %in% path_dx_list$path_free_text_exact |
+         # Inclusion based on pathology free text diagnosis for IHG
+         pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx)
   
 
 # Now samples on the basis of the defining lesions
 hgg_sample_ids <- hgg_lesions_df %>%
   filter(defining_lesion) %>%
   pull(sample_id)
-lesions_df <- tumor_metadata_df %>%
+
+lesions_df <- metadata %>%
   filter(sample_id %in% hgg_sample_ids)
 
 # Putting it all together now
@@ -104,9 +101,7 @@ hgg_metadata_df <- bind_rows(
   lesions_df
 ) %>%
   # Remove duplicates
-  distinct() %>%
-  # remove methylation 
-  dplyr::filter(experimental_strategy != "Methylation")
+  distinct() 
 
 # Add a TSV that's the metadata for the samples that will be included in
 # the subtyping
@@ -181,11 +176,16 @@ rm(cn_metadata)
 
 #### Filter fusion data --------------------------------------------------------
 # Read in fusion data
+dgd_fusion_df <- read_tsv(
+  file.path(root_dir, "data","fusion-dgd.tsv.gz")) %>% 
+  select(Sample, FusionName)
 fusion_df <- read_tsv(
-  file.path(root_dir, "data","fusion-putative-oncogenic.tsv"))
+  file.path(root_dir, "data","fusion-putative-oncogenic.tsv")) %>% 
+  select(Sample, FusionName) %>% 
+  bind_rows(dgd_fusion_df) %>% 
+  distinct()
 
 fusion_df <- fusion_df %>%
-  select(Sample, FusionName) %>%
   left_join(select_metadata,
             by = c("Sample" = "Kids_First_Biospecimen_ID")) %>%
   filter(Sample %in% hgg_metadata_df$Kids_First_Biospecimen_ID) %>%
@@ -244,10 +244,16 @@ keep_cols <- c("Chromosome",
                "HGVSp_Short",
                "Exon_Number")
 
+#snv_dgd_maf <- data.table::fread(
+#  file.path(root_dir, "data" , "snv-dgd.maf.tsv.gz"),
+#  select = keep_cols,
+#  data.table = FALSE)
+
 snv_consensus_hotspot_maf <- data.table::fread(
   file.path(root_dir, "data" , "snv-consensus-plus-hotspots.maf.tsv.gz"),
   select = keep_cols,
-  data.table = FALSE) 
+  data.table = FALSE) #%>% 
+#  bind_rows(snv_dgd_maf)
 
 snv_consensus_hotspot_maf <- snv_consensus_hotspot_maf %>%
   left_join(select_metadata,
@@ -259,3 +265,4 @@ snv_consensus_hotspot_maf <- snv_consensus_hotspot_maf %>%
 write_tsv(snv_consensus_hotspot_maf,
           file.path(subset_dir, "hgg_snv_maf.tsv.gz"))
 rm(snv_consensus_hotspot_maf)
+

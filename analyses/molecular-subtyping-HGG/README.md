@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Molecular Subtyping High-grade Gliomas
 
 **Module authors:** Chante Bethell ([@cbethell](https://github.com/cbethell)), Stephanie J. Spielman([@sjspielman](https://github.com/sjspielman)), and Jaclyn Taroni ([@jaclyn-taroni](https://github.com/jaclyn-taroni))
@@ -33,7 +38,7 @@ This notebook looks at what `pathology_diagnosis` and `pathology_free_text_diagn
 [`00-HGG-select-pathology-dx.R`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/00-HGG-select-pathology-dx.R) gathers the exact matches for inclusion in the `pathology_diagnosis` and `pathology_free_text_diagnosis` which are saved in [`hgg-subset/hgg_subtyping_path_dx_strings.json`](hgg-subset/hgg_subtyping_path_dx_strings.json), which is used downstream in `02-HGG-molecular-subtyping-subset-files` to generate subset files.
 
 
-[`01-HGG-molecular-subtyping-defining-lesions.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/01-HGG-molecular-subtyping-defining-lesions.nb.html) is a notebook written to look at the high-grade glioma defining lesions (_H3F3A_ K28M, _H3F3A_ G35R/V, _HIST1H3B_ K28M, _HIST1H3C_ K28M, _HIST2H3C_ K28M) for all tumor samples except LGAT in the PBTA dataset. This notebook produces a results table found at `results/HGG_defining_lesions.tsv`.
+[`01-HGG-molecular-subtyping-defining-lesions.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/01-HGG-molecular-subtyping-defining-lesions.nb.html) is a notebook written to look at the high-grade glioma defining lesions (_H3-3A_ K28M, _H3-3A_ G35R/V, _H3C2_ K28M, _H3C3_ K28M, _H3C14_ K28M) for all tumor samples except LGAT in the PBTA dataset. This notebook produces a results table found at `results/HGG_defining_lesions.tsv`.
 
 `02-HGG-molecular-subtyping-subset-files.R` is a script written to subset the copy number, gene expression, fusion, mutation, SNV and GISTIC's broad values files to include only samples that meet one of the following criteria: 1) with defining lesions 2) have `pathology_diagnosis` values that match those in [`hgg-subset/hgg_subtyping_path_dx_strings.json`](hgg-subset/hgg_subtyping_path_dx_strings.json).
 This script produces the relevant subset files that can be found in the `hgg-subset` directory.
@@ -58,8 +63,9 @@ The cleaned table is found at `results/HGG_cleaned_mutation.tsv`.
 
 [`05-HGG-molecular-subtyping-fusion.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/05-HGG-molecular-subtyping-fusion.nb.html) is a notebook written to prepare the putative oncogenic fusion data relevant to HGG molecular subtyping.
 Per [issue #249](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/249), we filtered the data to the two fusions of interest: _FGFR1_ fusions, which should be mutually exclusive of H3 K28 mutants, and _NTRK_ fusions, which are co-occurring with H3 G35 mutants.
-There is no mention of specific fusion partners or orientations, so we look at _any_ instances of fusions that include _FGFR1_ or _NTRK_.
 **Note:** _NTRK_ refers to a [family of receptor kinases](https://www.biooncology.com/pathways/cancer-tumor-targets/ntrk/ntrk-oncogenesis.html), so we include the full fusion name to account for various individual _NTRK_ gene symbols.
+Per [issue #474] (https://github.com/PediatricOpenTargets/ticket-tracker/issues/474), more gene fusions ( _ROS1_, _ALK_, and _MET_) were included as there is new 2021 entity within HGGs called "Infant-type hemispheric glioma" (IHG). This HGG is cerebral (hemispheric), arises in early childhood, and is characterized by RTK (receptor tyrosine kinase) alterations, typically fusions, in the _NTRK_ family, which has been included before, or in _ROS1_, _ALK_, or _MET_.
+There is no mention of specific fusion partners or orientations, so we look at _any_ instances of fusions that include the genes mentioned above.
 This notebook produces a fusion results table found at `results/HGG_cleaned_fusion.tsv`.
 
 [`06-HGG-molecular-subtyping-gene-expression.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/06-HGG-molecular-subtyping-gene-expression.nb.html) is a notebook written to prepare the gene expression data relevant to HGG molecular subtyping.
@@ -70,10 +76,16 @@ This notebook produces two expression results table (one for each selection stra
 This notebook produces one table with the cleaned data found at `results/HGG_cleaned_all_table.tsv`.
 A table with the molecular subtype information for each HGG sample at `results/HGG_molecular_subtype.tsv` is also produced, where the subtype values in the `molecular_subtype` column are determined as follows:
 
-1. If there was an _H3F3A_ K28M, _HIST1H3B_ K28M, _HIST1H3C_ K28M, or _HIST2H3C_ K28M mutation -> `DMG, H3K28`
-2. If there was an _H3F3A_ G35V or G35R mutation -> `HGG, H3 G35`
+1. If there was an _H3-3A_ K28M, _H3C2_ K28M, _H3C3_ K28M, or _H3C14_ K28M mutation -> `DMG, H3K28`
+2. If there was an _H3-3A_ G35V or G35R mutation -> `HGG, H3 G35`
 3. If there was an _IDH1_ R132 mutation -> `HGG, IDH`
-4. All other samples that did not meet any of these criteria were marked as `HGG, H3 wildtype`
+4. All other samples that did not meet any of these criteria were marked as `HGG, H3 wildtype` if there was no canonical histone variant the DNA sample, the methylation classification subtype if present, or else `HGG, To be classified` 
+5. In `histologies_base.tsv`, column `pathology_free_text_diagnosis` contains "infant type hemispheric glioma" or `cns_methylation_subclass` == "IHG" -> `IHG`
+    1. If there was a _NTRK_ fusion -> `IHG, NTRK-altered`
+    2. If there was a _ROS1_ fusion -> `IHG, ROS1-altered`
+    3. If there was a _ALK_ fusion -> `IHG, ALK-altered`
+    4. If there was a _MET_ fusion -> `IHG, MET-altered`
+    5. If there was no fusion -> `IHG, To be classified` based on IHG methylation classification and sample clinical report in the `pathology_diagnosis_free_text` stated as `infant type hemispheric glioma`
 
 [`08-1p19q-codeleted-oligodendrogliomas.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-HGG/08-1p19q-codeleted-oligodendrogliomas.nb.html) is a notebook written to identify samples in the OpenPBTA dataset that should be classified as 1p/19q co-deleted oligodendrogliomas.
 The GISTIC `broad_values_by_arm.txt` file is used to identify samples with `1p` and `19q` loss, then the consensus mutation file is filtered to the identified samples in order to check for _IDH1_ mutations.

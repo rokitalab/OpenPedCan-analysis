@@ -8,7 +8,7 @@ set -o pipefail
 
 # Set defaults for release and biospecimen file name
 BIOSPECIMEN_FILE=${BIOSPECIMEN_FILE:-biospecimen_ids_for_subset.RDS}
-RELEASE=${RELEASE:-v11}
+RELEASE=${RELEASE:-v12}
 NUM_MATCHED=${NUM_MATCHED:-15}
 
 # This option controls whether or not the two larger MAF files are skipped as
@@ -76,6 +76,7 @@ cp $FULL_DIRECTORY/histologies-base.tsv $SUBSET_DIRECTORY
 cp $FULL_DIRECTORY/uberon-map-gtex-*.tsv $SUBSET_DIRECTORY
 cp $FULL_DIRECTORY/efo-mondo-map.tsv $SUBSET_DIRECTORY
 cp $FULL_DIRECTORY/ensg-hugo-pmtl-mapping.tsv $SUBSET_DIRECTORY
+cp $FULL_DIRECTORY/infinium.gencode.v39.probe.annotations.tsv.gz $SUBSET_DIRECTORY
 
 # GISTIC output
 cp $FULL_DIRECTORY/cnv-consensus-gistic.zip $SUBSET_DIRECTORY
