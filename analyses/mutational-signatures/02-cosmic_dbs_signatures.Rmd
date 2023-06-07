@@ -192,7 +192,7 @@ cosmic_dbs_weights <- lapply(sample_dbs_sigs_cosmic, "[[", "weights")
 cosmic_dbs_wide <- do.call(dplyr::bind_rows, cosmic_dbs_weights) %>%
   add_column('Kids_First_Biospecimen_ID' = unlist(lapply(cosmic_dbs_weights, rownames)), .before = 1) %>%
   tibble::as_tibble() %>%
-  readr::write_tsv(file.path(results_dir, 'COSMICv3.3_DBS_signature_exposures.tsv')) 
+  readr::write_tsv(file.path(results_dir, 'cosmicv3.3_DBS_signature_exposure_matrix.tsv')) 
 ```
 
 
