@@ -38,6 +38,9 @@ RUN apt-get -y --no-install-recommends install \
 RUN apt-get -y --no-install-recommends install \
     libglpk-dev
 
+# Required dependency for running GISTIC
+RUN apt-get -y --no-install-recommends install \
+    libncurses5
 
 # Install pip3 and low-level python installation reqs
 RUN apt-get -y --no-install-recommends install \
