@@ -4,13 +4,15 @@ Acute Promyelocytic Leukemia	Acute Myeloid Leukemia
 Adamantinomatous craniopharyngioma	Adamantinomatous Craniopharyngioma
 Adenoma	NA
 Adrenal mass	NA
+Anaplastic (malignant) meningioma	Meningioma
 Aneurismal bone cyst (abc) with col1a1-usp6 fusion	NA
 Aneurysmal bone cyst (abc)	NA
 Aplastic anemia	NA
 Arteriovenous malformation	NA
 Astrocytoma;Oligoastrocytoma	NA
-Atypical lymphoid infiltrate	NA
 Atypical Teratoid Rhabdoid Tumor (ATRT)	Atypical Teratoid Rhabdoid Tumor
+Atypical lymphoid infiltrate	NA
+Atypical meningioma	Meningioma
 Atypical vascular lesion	NA
 Bone marrow cellularity	NA
 Bone marrow failure	NA
@@ -20,6 +22,7 @@ Cholesterol granuloma	NA
 Chondroma	NA
 Chronic myeloid leukemia pathway	NA
 Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney
+Clear cell meningioma	Meningioma
 Cranial fasciitis	NA
 Cyst	NA
 Dermoid cyst	NA
@@ -48,6 +51,7 @@ Hypophyseal stalk thickening	NA
 Inclusion cyst	NA
 Inflammatory lesion	NA
 Juvenile Xanthogranuloma	Juvenile xanthogranuloma
+Juvenile xanthogranuloma	Histiocytic tumor
 Kidney Chromophobe	Chromophobe renal cell carcinoma
 Kidney Renal Clear Cell Carcinoma	Renal Clear Cell Carcinoma
 Kidney Renal Papillary Cell Carcinoma	Renal Papillary Cell Carcinoma
@@ -61,6 +65,7 @@ Malignant peripheral nerve sheath tumor (MPNST);Neurofibroma/Plexiform	NA
 Melanocytoma	Melanocytic tumor
 Meningioma;Neurofibroma/Plexiform	NA
 Meningioma;Schwannoma	NA
+Meningothelial meningioma	Meningioma
 Mixed Lineage Leukemia	Acute Lymphoblastic Leukemia
 Myelodysplastic syndrome	NA
 Myofibroblastic tumor	Inflammatory Myofibroblastic Tumor
@@ -81,7 +86,6 @@ Ossifying fibroma	NA
 Osteoblastoma	NA
 Osteoma	NA
 Other	Astroblastoma
-Other	Histiocytic tumor
 Pilomatricoma	NA
 Pleuropulmonary blastoma	NA
 Portions of white matter with a few reactive astrocytes and rare cells with mild atypia	NA
