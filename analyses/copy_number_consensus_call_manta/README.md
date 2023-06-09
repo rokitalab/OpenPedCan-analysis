@@ -15,7 +15,7 @@ The analysis produces the following output files
 * `results/cnv_consensus.tsv`:  A tab separated file of consensus copy number variants, including the original calls used for each consensus call.
   *Note: only samples that pass QC are included, see below*
 * `results/uncalled_samples.tsv`: A table of sample-caller pairs excluded from the consensus due to QC failure (usually too many CNV calls, see [Methods: Consensus CNV creation](#consensus-cnv-creation)) If a sample fails QC from two or more callers, it will not appear in downstream files.
-* `results/pbta-cnv-consensus.seg.gz`: A `.seg` formatted file for downstream processing. *Only includes samples that pass QC*
+* `results/cnv-consensus.seg.gz`: A `.seg` formatted file for downstream processing. *Only includes samples that pass QC*
 
 * `ref/cnv_excluded_regions.bed`: A `.bed` file of error-prone regions that were filtered from copy number calls
 * `ref/cnv_callable.bed`: A `.bed` file of regions considered "callable" by the analysis pipeline
