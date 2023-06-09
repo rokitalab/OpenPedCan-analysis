@@ -6,9 +6,9 @@ The PedCan data set contains CNVs called from different callers, ie. Manta, CNVk
 The goal is to use all of these callers to reduce false positives and come up with a final consensus list of CNVs.
 This analysis uses information from the following files generated from the 3 callers
 
-* `pbta-cnv-cnvkit.seg.gz`
-* `pbta-cnv-controlfreec.tsv.gz`
-* `pbta-sv-manta.tsv.gz`
+* `cnv-cnvkit.seg.gz`
+* `cnv-controlfreec.tsv.gz`
+* `sv-manta.tsv.gz`
 
 The analysis produces the following output files
 
