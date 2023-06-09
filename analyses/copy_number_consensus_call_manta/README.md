@@ -23,7 +23,7 @@ The analysis produces the following output files
 ## Running the pipeline
 
 To run the entire pipeline, make sure to have the latest release of the three input files mentioned in the Overview section.
-Go to OpenPedCan-analysis/analyses/copy_number_consensus_call and run `bash run_consensus_call.sh`
+Go to OpenPedCan-analysis/analyses/copy_number_consensus_call_manta and run `bash run_consensus_call.sh`
 
 ## Methods
 
