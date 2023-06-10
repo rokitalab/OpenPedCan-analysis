@@ -33,7 +33,7 @@ mkdir -p ${release_dir}
 
 
 # Run step to generate cnv consensus file
-echo "Run focal CN file preparation"
+echo "Run copy number consensus calls"
 cd ${analyses_dir}/copy_number_consensus_call
 bash run_consensus_call.s
 
