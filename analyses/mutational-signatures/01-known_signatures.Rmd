@@ -49,9 +49,15 @@ input_dir <- "input"
 results_dir <- "results"
 plots_dir <- "plots"
 figures_dir <- file.path("..", "..", "figures")
+
 cosmicv2_plots <- file.path(plots_dir, "cosmicv2")
 nature_plots <- file.path(plots_dir, "nature")
 cosmicv3_plots <- file.path(plots_dir, "cosmicv3")
+
+scratch_dir <- file.path("..", "..", "scratch", "mutational-signatures")
+cosmicv2_scratch <- file.path(scratch_dir, "cosmicv2")
+cosmicv3_scratch <- file.path(scratch_dir, "cosmicv3")
+nature_scratch <- file.path(scratch_dir, "nature")
 ```
 
 Make new directories for the results. 
@@ -68,6 +74,19 @@ if (!dir.exists(nature_plots)) {
 }
 if (!dir.exists(cosmicv3_plots)) {
   dir.create(cosmicv3_plots, recursive = TRUE)
+}
+
+if (!dir.exists(scratch_dir)) {
+  dir.create(scratch_dir)
+}
+if (!dir.exists(cosmicv2_scratch)) {
+  dir.create(cosmicv2_scratch)
+}
+if (!dir.exists(cosmicv3_scratch)) {
+  dir.create(cosmicv3_scratch)
+}
+if (!dir.exists(nature_scratch)) {
+  dir.create(nature_scratch)
 }
 ```
 
@@ -119,20 +138,9 @@ metadata_df <- readr::read_tsv(file.path(data_dir, "histologies.tsv"), guess_max
   dplyr::inner_join(histology_label_mapping, by = "Kids_First_Biospecimen_ID") %>% 
   dplyr::rename(Tumor_Sample_Barcode = "Kids_First_Biospecimen_ID") 
 
-pretx_tumors <- readr::read_tsv(file.path(input_dir, "CBTN_all_therapy_20220922.tsv")) %>%
-  mutate(Pretreatment = case_when(`Age at Diagnosis` < `Age at Chemotherapy Start` ~ "yes",
-                                  `Age at Diagnosis` > `Age at Chemotherapy Start` ~ "no",
-                                  TRUE ~ as.character(NA))) %>%
-  filter(Pretreatment == "yes") %>%
-  pull(cohort_participant_id)
-
 initial_pretx_tumors <- metadata_df %>%
-  filter(tumor_descriptor == "Initial CNS Tumor" & cohort_participant_id %in% pretx_tumors) %>%
+  filter(tumor_descriptor == "Initial CNS Tumor" & age_at_diagnosis_days < age_at_chemo_start) %>%
   pull(Tumor_Sample_Barcode)
-
-#other_tumors <- metadata_df %>%
-#  filter(tumor_descriptor != "Initial CNS Tumor") %>%
-#  pull(Tumor_Sample_Barcode)
 ```
 
 Read in tmb-all file with WGS and WXS region lengths so they can be used for the Mb denominator. 
@@ -326,7 +334,8 @@ cosmic_sigs_df <- calc_mut_per_sig(
   muts_per_sample = total_muts,
   region_size = region_sizes,
   metadata = metadata_df
-) 
+)  %>%
+  dplyr::filter(grepl("Signature", signature))
 
 # Write this to a file but drop the color column
 cosmic_sigs_df %>% 
@@ -346,10 +355,12 @@ cosmicv3_sigs_df <- calc_mut_per_sig(
   muts_per_sample = total_muts,
   region_size = region_sizes,
   metadata = metadata_df
-) 
+) %>%
+  dplyr::filter(grepl("SBS", signature))
 
 # Write this to a file but drop the color column
 cosmicv3_sigs_df %>% 
+#  dplyr::filter(grepl("SBS", signature)) %>%
   dplyr::select(-hex_codes) %>% 
   readr::write_tsv(file.path(results_dir, "cosmicv3.3_signatures_results.tsv"))
 
@@ -366,10 +377,12 @@ nature_sigs_df <- calc_mut_per_sig(
   muts_per_sample = total_muts,
   region_size = region_sizes,
   metadata = metadata_df
-) 
+)  %>%
+  dplyr::filter(grepl("Signature", signature))
 
 # Write this to a file but drop the color column
 nature_sigs_df %>% 
+#  dplyr::filter(grepl("SBS", signature)) %>%
   dplyr::select(-hex_codes) %>% 
   readr::write_tsv(file.path(results_dir, "nature_signatures_results.tsv"))
 
@@ -435,7 +448,7 @@ Lets make these for COSMIC mutation signatures first.
 lapply(unique(cosmic_sigs_df$display_group),
   grouped_sig_barplot,
   sig_num_df = cosmic_sigs_df,
-  output_dir = file.path(cosmicv2_plots, "signature_grouped_barplots"), 
+  output_dir = file.path(cosmicv2_scratch, "signature_grouped_barplots"), 
   label = "cosmic_v2"
 )
 ```
@@ -447,7 +460,7 @@ Make these plots for Alexandrov et al, 2013 signatures.
 lapply(unique(nature_sigs_df$display_group),
   grouped_sig_barplot,
   sig_num_df = nature_sigs_df,
-  output_dir = file.path(nature_plots, "signature_grouped_barplots"),
+  output_dir = file.path(nature_scratch, "signature_grouped_barplots"),
   label = "nature"
 )
 ```
@@ -459,7 +472,7 @@ Make these plots for COSMIC v3.3 signatures.
 lapply(unique(cosmicv3_sigs_df$display_group),
   grouped_sig_barplot,
   sig_num_df = cosmicv3_sigs_df,
-  output_dir = file.path(cosmicv3_plots, "signature_grouped_barplots"),
+  output_dir = file.path(cosmicv3_scratch, "signature_grouped_barplots"),
   label = "cosmic_v3.3"
 )
 ```

@@ -49,6 +49,9 @@ results_dir <- "results"
 plots_dir <- "plots"
 figures_dir <- file.path("..", "..", "figures")
 cosmic_dbs_plots <- file.path(plots_dir, "cosmicv3_dbs")
+
+scratch_dir <- file.path("..", "..", "scratch", "mutational-signatures")
+cosmicv3_dbs_scratch <- file.path(scratch_dir, "cosmicv3_dbs")
 ```
 
 Make new directories for the results. 
@@ -59,6 +62,13 @@ if (!dir.exists(results_dir)) {
 }
 if (!dir.exists(cosmic_dbs_plots)) {
   dir.create(cosmic_dbs_plots, recursive = TRUE)
+}
+
+if (!dir.exists(scratch_dir)) {
+  dir.create(scratch_dir)
+}
+if (!dir.exists(cosmicv3_dbs_scratch)) {
+  dir.create(cosmicv3_dbs_scratch)
 }
 ```
 
@@ -204,7 +214,8 @@ cosmic_dbs_sigs_df <- calc_mut_per_sig(
   muts_per_sample = total_muts,
   region_size = region_sizes,
   metadata = metadata_df
-) 
+)  %>%
+  dplyr::filter(grepl("DBS", signature))
 
 # Write this to a file but drop the color column
 cosmic_dbs_sigs_df %>% 
@@ -239,7 +250,7 @@ Mutation signature grouped bar plots for each histology group
 lapply(unique(cosmic_dbs_sigs_df$display_group),
   grouped_sig_barplot,
   sig_num_df = cosmic_dbs_sigs_df,
-  output_dir = file.path(cosmic_dbs_plots, "signature_grouped_barplots"), 
+  output_dir = file.path(cosmicv3_dbs_scratch, "signature_grouped_barplots"), 
   label = "cosmicv3_dbs"
 )
 ```
