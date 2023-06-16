@@ -128,23 +128,19 @@ PBTA	Glial-neuronal tumor,  RTK	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  FGFR	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  To be classified	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  BRAF V600E	Glial-neuronal tumor	Yes	No
-PBTA	Glial-neuronal tumor, other MAPK	Glial-neuronal tumor	Yes	No
-PBTA	Glial-neuronal tumor, RTK, CDKN2A/B	Glial-neuronal tumor	Yes	No
-PBTA	Glial-neuronal tumor NOS	Glial-neuronal tumor	No	Yes
 PBTA	Glial-neuronal tumor,  other MAPK	Glial-neuronal tumor	Yes	No
-DGD	Glial-neuronal tumor NOS	Glial-neuronal tumor	No	Yes
+PBTA	Glial-neuronal tumor,  RTK, CDKN2A/B	Glial-neuronal tumor	Yes	No
+DGD	Glial-neuronal tumor,  To be classified	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor, wildtype	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
-PBTA	Glial-neuronal tumor, other MAPK, CDKN2A/B	Glial-neuronal tumor	Yes	No
+PBTA	Glial-neuronal tumor,  other MAPK, CDKN2A/B	Glial-neuronal tumor	Yes	No
 PBTA	Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor	No	Yes
 PBTA	Glial-neuronal tumor,  wildtype	Glial-neuronal tumor	Yes	No
-DGD	Glial-neuronal tumor, KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
+DGD	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor,  other MAPK	Glial-neuronal tumor	Yes	No
-PBTA	Glial-neuronal tumor, RTK	Glial-neuronal tumor	Yes	No
-DGD	Glial-neuronal tumor,  To be classified	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor,  RTK	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor	Yes	No
-DGD	Glial-neuronal tumor, FGFR	Glial-neuronal tumor	Yes	No
+DGD	Glial-neuronal tumor,  FGFR	Glial-neuronal tumor	Yes	No
 PBTA	Glioblastoma	Glioblastoma	No	No
 TCGA	Glioblastoma Multiforme	Glioblastoma Multiforme	No	No
 TCGA	Head and Neck Squamous Cell Carcinoma	Head and Neck Squamous Cell Carcinoma	No	No
