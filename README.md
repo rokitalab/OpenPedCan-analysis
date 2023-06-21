@@ -34,7 +34,7 @@ OpenPedCan project includes 17,382 GTEx RNA-Seq samples from GTEx v8 release, wh
 The Cancer Genome Atlas Program [(TCGA)](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga)
 TCGA is a landmark cancer genomics program that molecularly characterized over 20,000 primary cancer and matched normal samples spanning 33 cancer types.
 It is a joint effort between NCI and the National Human Genome Research Institute.
-OpenPedCan project includes 10414 TCGA RNA-Seq samples (716 normal and 9698 tumor) from [33 cancer types](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/blob/0a5c14705a385c99a6a16e34e932e94009b7a11c/analyses/molecular-subtyping-integrate/results/tcga_cancer_groups.tsv) in the v11 release.
+OpenPedCan project includes 10,414 TCGA RNA-Seq samples (716 normal and 9698 tumor) from [33 cancer types](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/blob/0a5c14705a385c99a6a16e34e932e94009b7a11c/analyses/molecular-subtyping-integrate/results/tcga_cancer_groups.tsv) in the v12 release.
 
 DGD [(CHOP P30 Panel)](https://www.chop.edu/cancer-panels)
 CHOP's [Division of Genome Diagnostics](https://www.chop.edu/centers-programs/division-genomic-diagnostics) has partnered with CCDI to add somatic panel sequencing data to OpenPedCan and the Molecular Targets Platform.
@@ -106,7 +106,7 @@ Below is a summary of biospecimens by sequencing strategy in v12 release:
 | WGS                   | 2311   | 2575  |
 | WXS                   | 1293   | 1339  |
 
-[Here](https://github.com/d3b-center/OpenPedCan-analysis/blob/dev/analyses/molecular-subtyping-integrate/results/pediatric_cancer_groups.tsv) is a detailed table of pediatric cancer groups in the v12 release.
+[Here](https://github.com/d3b-center/OpenPedCan-analysis/blob/660cf72a1446a6518b48883cec9c8a72073947b5/analyses/molecular-subtyping-integrate/results/pediatric_cancer_groups.tsv) is a detailed table of pediatric cancer groups in the v12 release.
 
 ## Data Release Process
 
