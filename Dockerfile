@@ -115,6 +115,7 @@ RUN ./install_bioc.r \
     survival \
     viridis \
     vroom \
+    arrow \
     openxlsx \
     ids
     

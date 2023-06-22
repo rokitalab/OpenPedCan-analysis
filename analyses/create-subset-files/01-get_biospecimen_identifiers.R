@@ -39,6 +39,7 @@ suppressWarnings(
 )
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(arrow))
 suppressPackageStartupMessages(options(readr.show_col_types = FALSE))
 
 `%>%` <- dplyr::`%>%`
@@ -108,7 +109,8 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     }  
   } else if (grepl("sv-manta", filename)) {
     # in a column 'Kids.First.Biospecimen.ID.Tumor'
-    sv_file <- data.table::fread(filename, data.table = FALSE, showProgress = FALSE)
+    sv_file <- data.table::fread(filename, data.table = FALSE, 
+                                 showProgress = FALSE)
     biospecimen_ids <- unique(sv_file$Kids.First.Biospecimen.ID.Tumor)
   } else if (grepl(".rds", filename)) {
     # RNA-Seq matrices column names
@@ -128,6 +130,10 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     # in a column 'Kids_First_Biospecimen_ID'
     independent_file <- readr::read_tsv(filename)
     biospecimen_ids <- unique(independent_file$Kids_First_Biospecimen_ID)
+  } else if (grepl("splice-events-rmats", filename)) {
+    # in a column 'sample_id'
+    rmats_file <- arrow::read_tsv_arrow(filename)
+    biospecimen_ids <- unique(rmats_file$sample_id)
   } else {
     # error-handling
     stop("File type unrecognized by 'get_biospecimen_ids'")
@@ -261,7 +267,7 @@ option_list <- list(
   make_option(
     c("-r", "--supported_string"),
     type = "character",
-    default = "snv|biospecimen|cnv|consensus_seg_with_status|fusion|sv-manta|.rds|independent",
+    default = "snv|biospecimen|cnv|consensus_seg_with_status|fusion|sv-manta|.rds|independent|splice",
     help = "string for pattern matching used to subset to only supported files"
   ),
   make_option(

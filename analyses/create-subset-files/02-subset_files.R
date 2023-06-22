@@ -16,6 +16,7 @@ suppressWarnings(
 )
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(arrow))
 suppressPackageStartupMessages(options(readr.show_col_types = FALSE))
 
 write_maf_file <- function(maf_df, file_name, version_string) {
@@ -180,6 +181,12 @@ subset_files <- function(filename, biospecimen_ids, output_directory) {
     independent_file <- readr::read_tsv(filename)
     independent_file %>% 
       dplyr::filter(Kids_First_Biospecimen_ID %in% biospecimen_ids) %>%
+      readr::write_tsv(output_file)
+  } else if (grepl("splice-events-rmats", filename)) {
+    # in a column 'sample_id'
+    rmats_file <- arrow::read_tsv_arrow(filename)
+    rmats_file %>% 
+      dplyr::filter(sample_id %in% biospecimen_ids) %>%
       readr::write_tsv(output_file)
   } else {
     # error-handling
