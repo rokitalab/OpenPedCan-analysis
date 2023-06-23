@@ -32,6 +32,8 @@ histology_file="${data_dir}/histologies-base.tsv"
 
 ############# Create intersection BED files for TMB calculations ###############
 # Make All mutations BED files
+# NOTE: `hg38_strelka.bed` is equivalent to `WGS.hg38.strelka2.unpadded.bed`
+# and `wgs_canonical_calling_regions.hg38.bed` is equivalent to `WGS.hg38.mutect2.vardict.unpadded.bed`
 bedtools intersect \
   -a ${data_dir}/hg38_strelka.bed \
   -b ${data_dir}/wgs_canonical_calling_regions.hg38.bed \
