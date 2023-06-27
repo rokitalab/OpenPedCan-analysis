@@ -54,7 +54,7 @@ bedtools intersect -loj \
 
 
 # create methyl probe annotations file
-Rscript --vanilla 02-parse-bedtools-interect.R \
+Rscript --vanilla 02-parse-bedtools-intersect.R \
   --bed_intersect ${results}/infinium.gencode.v39.probe.annotations.bedtools.tsv.gz
 
 
