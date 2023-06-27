@@ -27,7 +27,7 @@ python3 scripts/merged_to_individual_files.py \
     --manta ../../data/sv-manta.tsv.gz \
     --cnvkit ../../data/cnv-cnvkit.seg.gz \
     --freec ../../data/cnv-controlfreec.tsv.gz \
-    --histologies ../missing_wgs \
+    --histologies ../missing_wgs.tsv \
     --snake $SCRATCHDIR/config_snakemake.yaml \
     --scratch $SCRATCHDIR \
     --uncalled results/uncalled_samples.tsv
