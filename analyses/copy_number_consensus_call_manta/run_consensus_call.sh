@@ -19,11 +19,16 @@ mkdir -p input
 
 ## Run the Rscript to select the samples which are not present in the cnv-gatk.seg.gz file
 
+<<<<<<< HEAD
 Rscript --vanilla scripts/gatk-missing-wgs.R \
  --histologies ../../data/histologies-base.tsv \
  --cnv_gatk ../../data/cnv-gatk.seg.gz \
  --output input/gatk-missing-wgs.tsv
  
+=======
+Rscript --vanilla script/Missing_WGS.R
+
+>>>>>>> 7979cad71385d66738a7babef993ae68832edbb3
 ## Run the python script to go from 1 big manta file, cnvkit file and freec file into 3 directories. 
 ## Each directory with individual sample files.
 
@@ -31,7 +36,11 @@ python3 scripts/merged_to_individual_files.py \
     --manta ../../data/sv-manta.tsv.gz \
     --cnvkit ../../data/cnv-cnvkit.seg.gz \
     --freec ../../data/cnv-controlfreec.tsv.gz \
+<<<<<<< HEAD
     --histologies input/gatk-missing-wgs.tsv \
+=======
+    --histologies ../missing_wgs.tsv \
+>>>>>>> 7979cad71385d66738a7babef993ae68832edbb3
     --snake $SCRATCHDIR/config_snakemake.yaml \
     --scratch $SCRATCHDIR \
     --uncalled results/uncalled_samples.tsv
