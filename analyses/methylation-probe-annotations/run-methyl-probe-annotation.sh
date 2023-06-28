@@ -23,10 +23,23 @@ results_dir="results"
 mkdir -p -m775 ${results_dir}
 
 
-printf '\nStarting Analysis...\n'
+printf '\nStarting Analysis...\n\n'
 
 
-# Set up paths output files
+# download Illumina methylation CpG probe manifest to the inputs directory
+# from the OpenPedCan data v12 data release s3 bucket
+URL="https://d3b-openaccess-us-east-1-prd-pbta.s3.amazonaws.com/open-targets"
+RELEASE="v12"
+MANIFEST="infinium-methylationepic-v-1-0-b5-manifest-file-csv.zip"
+if [ -f "${inputs_dir}/${MANIFEST}" ]; then
+    echo "${MANIFEST} exists, skip downloading"
+else 
+    echo "${MANIFEST} does not exist, downloading..."
+    wget ${URL}/${RELEASE}/${MANIFEST} -P ${inputs_dir}/
+fi
+
+
+# set up paths output files
 gencode_introns_gff="${inputs_dir}/gencode.v39.primary_assembly.introns.annotation.gff3.gz"
 bedtools_intersect="${results_dir}/infinium.gencode.v39.probe.annotations.bedtools.tsv.gz"
 
@@ -42,7 +55,7 @@ gt gff3 -retainids -addintrons \
 Rscript --vanilla 01-create-bed-files.R \
   --gencode_gtf ${data_dir}/gencode.v39.primary_assembly.annotation.gtf.gz \
   --gencode_gff ${inputs_dir}/gencode.v39.primary_assembly.introns.annotation.gff3.gz \
-  --cpg_map ${data_dir}/infinium-methylationepic-v-1-0-b5-manifest-file-csv.zip
+  --cpg_map ${inputs_dir}/infinium-methylationepic-v-1-0-b5-manifest-file-csv.zip
 
 
 # create intersection bed file between gene features and cpg grch38 liftover bed files
