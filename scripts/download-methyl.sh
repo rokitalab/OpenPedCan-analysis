@@ -9,7 +9,7 @@ URL="https://d3b-openaccess-us-east-1-prd-pbta.s3.amazonaws.com/open-targets"
 RELEASE="v13"
 
 # check if the release folder exists, if not, create a release folder
-[ ! -h "../data/$RELEASE/" ] && mkdir ../data/$RELEASE/
+[ ! -d "../data/$RELEASE/" ] && mkdir ../data/$RELEASE/
 
 FILES=(`tr -s ' ' < ../data/$RELEASE/methyl-md5sum.txt | cut -d ' ' -f 2` release-notes.md)
 for file in "${FILES[@]}"
