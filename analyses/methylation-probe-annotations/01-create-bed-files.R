@@ -94,14 +94,25 @@ gencode_bed <- dplyr::bind_rows(exons_introns, plus_five_utrs, minus_five_utrs,
   dplyr::arrange(seqid, start, end, transcript) |> 
   dplyr::distinct() 
 
-# extend 3'-UTR by 1kb
-gencode_bed <- gencode_bed |>
-  dplyr::mutate(start = case_when(type == "three_prime_UTR" &
-                                    strand == "-" ~ as.integer(start - 1000),
-                                  TRUE ~ as.integer(start)),
-                end = case_when(type == "three_prime_UTR" &
-                                  strand == "+" ~ as.integer(end + 1000),
-                                TRUE ~ as.integer(end)))
+# # extend 3'-UTR by 1kb
+# gencode_bed <- gencode_bed |>
+#   dplyr::mutate(start = case_when(type == "three_prime_UTR" &
+#                                     strand == "-" ~ as.integer(start - 1000),
+#                                   TRUE ~ as.integer(start)),
+#                 end = case_when(type == "three_prime_UTR" &
+#                                   strand == "+" ~ as.integer(end + 1000),
+#                                 TRUE ~ as.integer(end)))
+
+
+# add three_prime_UTR_extension - 1kb extension beyond the 3'-UTR
+three_prime_UTR_extensions <- gencode_bed |>
+  dplyr::filter(type == "three_prime_UTR") |>
+  dplyr::mutate(type = "three_prime_UTR_extension",
+                start = case_when(strand == "-" ~ as.integer(start - 1001), 
+                                  strand == "+" ~  as.integer(end + 1)),
+                end = case_when(strand == "-" ~ as.integer(start + 1000),
+                                strand == "+" ~ as.integer(end + 1001)))
+
 
 # add promoter region - 1kb extension beyond the 5'-UTR
 promoters <- gencode_bed |>
@@ -114,7 +125,8 @@ promoters <- gencode_bed |>
 
 # merge promoters to all other features
 gencode_features_bed <- gencode_bed |> 
-  dplyr::bind_rows(promoters) |> 
+  dplyr::bind_rows(promoters) |>
+  dplyr::bind_rows(three_prime_UTR_extensions) |>
   dplyr::mutate(start = case_when(start < 1 ~ as.integer(1),
                                   TRUE ~ as.integer(start)),
                 end = case_when(end < 1 ~ as.integer(1),
