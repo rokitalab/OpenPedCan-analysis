@@ -58,7 +58,6 @@ root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
 data_dir <- file.path(root_dir, "data")
 module_dir <- file.path(root_dir, "analyses", "tmb-calculation")
 results_dir <- file.path(module_dir, "results")
-input_dir <- file.path(module_dir, "input")
 
 # source functions splitting MNVs and computing TMB scores
 source(file.path(root_dir, "analyses", "tmb-calculation", 
