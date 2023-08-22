@@ -14,6 +14,7 @@ cd "$script_directory" || exit
 # Set up paths to data files consumed by analysis
 data_dir="../../data"
 scratch_dir="../../scratch"
+input_dir="input"
 
 # BED and GTF file paths
 cds_file="${scratch_dir}/gencode.v39.primary_assembly.annotation.bed"
@@ -23,7 +24,8 @@ wgs_bed="${scratch_dir}/intersect_strelka_mutect2_vardict_WGS.bed"
 variant_file="${data_dir}/snv-consensus-plus-hotspots.maf.tsv.gz"
 
 # sample to BED mapping file
-mapping_file="${data_dir}/biospecimen_id_to_bed_map.tsv"
+#mapping_file="${data_dir}/biospecimen_id_to_bed_map.tsv"
+mapping_file="${input_dir}/biospecimen_id_to_bed_map.tsv"
 
 # Histology file
 histology_file="${data_dir}/histologies-base.tsv"
