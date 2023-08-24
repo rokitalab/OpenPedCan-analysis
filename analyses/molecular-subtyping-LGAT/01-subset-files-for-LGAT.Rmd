@@ -348,7 +348,7 @@ lgat_methyl_subtyped <- clinical %>%
                   case_when(grepl("LGG_MYB", dkfz_v12_methylation_subclass) ~ "LGG, MYB/MYBL1",
                             dkfz_v12_methylation_subclass == "SEGA" ~ "SEGA, To be classified",
                             dkfz_v12_methylation_subclass == "A_IDH_LG" ~ "LGG, IDH",
-                            dkfz_v12_methylation_subclass %in% c("PA_INF_FGFR", "PA_INF")  ~ "LGG, FGFR",
+                            dkfz_v12_methylation_subclass == "PA_INF_FGFR"  ~ "LGG, FGFR",
                             dkfz_v12_methylation_subclass == "PA_INF"  ~ "LGG, BRAF/MAPK",
 			                      dkfz_v12_methylation_subclass %in% c("PA_MID", "PLNTY")  ~ "LGG, MAPK",
                             dkfz_v12_methylation_subclass == "AG_MYB" ~ "LGG, MYB/MYBL1",
