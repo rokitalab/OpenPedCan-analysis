@@ -16,6 +16,7 @@ SCRATCHDIR=../../scratch/copy_consensus
 mkdir -p $SCRATCHDIR
 mkdir -p results
 mkdir -p input
+<<<<<<< HEAD
 
 ## Run the Rscript to select the samples which are not present in the cnv-gatk.seg.gz file
 
@@ -23,7 +24,16 @@ Rscript --vanilla scripts/gatk-missing-wgs.R \
  --histologies ../../data/histologies-base.tsv \
  --cnv_gatk ../../data/cnv-gatk.seg.gz \
  --output input/gatk-missing-wgs.tsv
+=======
+>>>>>>> origin
 
+## Run the Rscript to select the samples which are not present in the cnv-gatk.seg.gz file
+
+Rscript --vanilla scripts/gatk-missing-wgs.R \
+ --histologies ../../data/histologies-base.tsv \
+ --cnv_gatk ../../data/cnv-gatk.seg.gz \
+ --output input/gatk-missing-wgs.tsv
+ 
 ## Run the python script to go from 1 big manta file, cnvkit file and freec file into 3 directories. 
 ## Each directory with individual sample files.
 
