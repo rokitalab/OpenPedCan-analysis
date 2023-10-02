@@ -221,7 +221,9 @@ In this section, we'll divide up the table based on the molecular subtypes descr
 h3_k28_df <- all_data_df %>%
   # Only rows with H3 K28M mutations or methyl subtype of H3 K28M
   filter(`H3F3A_H3-3A.K28M` == "Yes" | HIST1H3B_H3C2.K28M == "Yes" |
-           HIST1H3C_H3C3.K28M == "Yes" | HIST2H3C_H3C14.K28M == "Yes" | 
+           HIST1H3C_H3C3.K28M == "Yes" | HIST2H3C_H3C14.K28M == "Yes" |
+           `H3F3A_H3-3A.K28I` == "Yes" | HIST1H3B_H3C2.K28I == "Yes" |
+           HIST1H3C_H3C3.K28I == "Yes" | HIST2H3C_H3C14.K28I == "Yes" |
            molecular_subtype_methyl == "DMG, H3 K28") %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
@@ -230,6 +232,10 @@ h3_k28_df <- all_data_df %>%
          HIST1H3B_H3C2.K28M,
          HIST1H3C_H3C3.K28M,
          HIST2H3C_H3C14.K28M,
+         `H3F3A_H3-3A.K28I`,
+         HIST1H3B_H3C2.K28I,
+         HIST1H3C_H3C3.K28I,
+         HIST2H3C_H3C14.K28I,
          `H3F3A_H3-3A.G35R`,
          `H3F3A_H3-3A.G35V`,
          age_at_diagnosis_yr,
