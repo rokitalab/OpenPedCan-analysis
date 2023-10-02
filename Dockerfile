@@ -104,9 +104,9 @@ RUN ./install_bioc.r \
     lattice \
     MASS \
     Matrix \
-    mgcv \
-    nlme \
-    nnet \
+    #mgcv \
+    #nlme \
+    #nnet \
     optparse \
     R.utils \
     RColorBrewer \
@@ -123,15 +123,15 @@ RUN ./install_bioc.r \
 
 # Required for interactive sample distribution plots
 # map view is needed to create HTML outputs of the interactive plots
-RUN ./install_bioc.r \
-    #gdalUtils \
-    leafem \
-    leafpop \
-    lwgeom \
-    mapview \
-    plainview \
-    sf \
-    stars
+#RUN ./install_bioc.r \
+#    #gdalUtils \
+#    leafem \
+#    leafpop \
+#    lwgeom \
+#    mapview \
+#    plainview \
+#   sf \
+#    stars
 
 # Installs packages needed for plottings
 # treemap, interactive plots, and hex plots
@@ -141,15 +141,15 @@ RUN ./install_bioc.r \
     d3r \
     ggfortify \
     ggpubr \
-    ggrepel \
-    ggsci \
+    #ggrepel \
+    #ggsci \
     ggsignif \
     gridGraphics \
     hexbin \
     pheatmap \
     Rtsne \
     spatial \
-    treemap \
+    #treemap \
     umap  \
     UpSetR \
     VennDiagram 
@@ -179,9 +179,9 @@ RUN ./install_bioc.r \
 # These packages are for the genomic region analysis for snv-callers
 RUN ./install_bioc.r \
     annotatr \
-    TxDb.Hsapiens.UCSC.hg38.knownGene \
+    #TxDb.Hsapiens.UCSC.hg38.knownGene \
     org.Hs.eg.db \
-    BSgenome.Hsapiens.UCSC.hg19 \
+    #BSgenome.Hsapiens.UCSC.hg19 \
     BSgenome.Hsapiens.UCSC.hg38
 
 # Packages for expression normalization and batch correction
@@ -241,10 +241,10 @@ RUN ./install_bioc.r \
 RUN R -e "remotes::install_github('const-ae/ggupset', ref = '7a33263cc5fafdd72a5bfcbebe5185fafe050c73', dependencies = TRUE)"
 
 # This is needed to create the interactive pie chart
-RUN R -e "remotes::install_github('timelyportfolio/sunburstR', ref = 'd40d7ed71ee87ca4fbb9cb8b7cf1e198a23605a9', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('timelyportfolio/sunburstR', ref = 'd40d7ed71ee87ca4fbb9cb8b7cf1e198a23605a9', dependencies = TRUE)"
 
 # This is needed to create the interactive treemap
-RUN R -e "remotes::install_github('timelyportfolio/d3treeR', ref = '0eaba7f1c6438e977f8a5c082f1474408ac1fd80', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('timelyportfolio/d3treeR', ref = '0eaba7f1c6438e977f8a5c082f1474408ac1fd80', dependencies = TRUE)"
 
 # Need this package to make plots colorblind friendly
 RUN R -e "remotes::install_github('clauswilke/colorblindr', ref = '1ac3d4d62dad047b68bb66c06cee927a4517d678', dependencies = TRUE)"
@@ -264,7 +264,7 @@ RUN ./install_bioc.r \
 RUN R -e "remotes::install_github('thomasp85/patchwork', ref = 'c67c6603ba59dd46899f17197f9858bc5672e9f4')"
 
 # This is required for creating a treemap of the broad histology and integrated diagnoses
-RUN R -e "remotes::install_github('wilkox/treemapify', ref = 'e70adf727f4d13223de8146458db9bef97f872cb', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('wilkox/treemapify', ref = 'e70adf727f4d13223de8146458db9bef97f872cb', dependencies = TRUE)"
 
 # Need this specific version of circlize so it has hg38
 RUN R -e "remotes::install_github('jokergoo/circlize', ref = 'b7d86409d7f893e881980b705ba1dbc758df847d', dependencies = TRUE)"
@@ -299,8 +299,8 @@ RUN pip3 install \
     "ipykernel==6.23.0" \
     "ipython==8.13.2" \
     "ipython-genutils==0.2.0" \
-    "jedi==0.18.2" \
-    "Jinja2==3.1.2" \
+    #"jedi==0.18.2" \
+    #"Jinja2==3.1.2" \
     "jsonschema==4.17.3" \
     "jupyter-client==8.2.0" \
     "jupyter-core==5.3.0" \
@@ -327,11 +327,11 @@ RUN pip3 install \
     "psutil==5.9.5" \
     "ptyprocess==0.7.0" \
     "pyarrow==12.0.0" \
-    "pybedtools==0.9.0" \
-    "pyBigWig==0.3.22" \
+    #"pybedtools==0.9.0" \
+    #"pyBigWig==0.3.22" \
     "Pygments==2.15.1" \
     "pyparsing==3.0.9" \
-    "pyreadr==0.4.7" \
+    #"pyreadr==0.4.7" \
     "pyrsistent==0.19.3" \
     "pysam==0.21.0" \
     "python-dateutil==2.8.2" \
@@ -346,14 +346,14 @@ RUN pip3 install \
     "seaborn==0.12.2" \
     "Send2Trash==1.8.2" \
     "six==1.16.0" \
-    "smmap==5.0.0" \
+    #"smmap==5.0.0" \
     "snakemake==7.25.3" \
     "statsmodels==0.14.0" \
     "terminado==0.17.1" \
     "testpath==0.6.0" \
     "tornado==6.3.1" \
     "traitlets==5.9.0" \
-    "tzlocal==4.3" \
+    #"tzlocal==4.3" \
     "urllib3==2.0.2" \
     "utils==1.0.1" \
     "wcwidth==0.2.6" \
