@@ -145,7 +145,7 @@ RUN ./install_bioc.r \
     #ggsci \
     ggsignif \
     gridGraphics \
-    hexbin \
+    #hexbin \
     pheatmap \
     Rtsne \
     spatial \
@@ -160,7 +160,7 @@ RUN ./install_bioc.r \
 
 # Need for survminer for doing survival analysis
 RUN ./install_bioc.r \
-    cmprsk \
+    #cmprsk \
     survMisc \
     survminer
 
@@ -179,9 +179,9 @@ RUN ./install_bioc.r \
 # These packages are for the genomic region analysis for snv-callers
 RUN ./install_bioc.r \
     annotatr \
-    #TxDb.Hsapiens.UCSC.hg38.knownGene \
+    TxDb.Hsapiens.UCSC.hg38.knownGene \
     org.Hs.eg.db \
-    #BSgenome.Hsapiens.UCSC.hg19 \
+    BSgenome.Hsapiens.UCSC.hg19 \
     BSgenome.Hsapiens.UCSC.hg38
 
 # Packages for expression normalization and batch correction
@@ -256,9 +256,9 @@ RUN R -e "remotes::install_github('NNoureen/EXTEND', ref = '467c2724e1324ef05ad9
 RUN R -e "withr::with_envvar(c(R_REMOTES_NO_ERRORS_FROM_WARNINGS='true'), remotes::install_github('parklab/ShatterSeek', ref = '83ab3effaf9589cc391ecc2ac45a6eaf578b5046', dependencies = TRUE))"
 
 # Packages required for rna-seq-composition
-RUN ./install_bioc.r \
-    EnvStats \
-    janitor 
+#RUN ./install_bioc.r \
+#    EnvStats \
+#    janitor 
 
 # Patchwork for plot compositions
 RUN R -e "remotes::install_github('thomasp85/patchwork', ref = 'c67c6603ba59dd46899f17197f9858bc5672e9f4')"
@@ -279,19 +279,19 @@ RUN R -e "remotes::install_github('Nik-Zainal-Group/signature.tools.lib', ref = 
 RUN pip3 install \
     "appdirs==1.4.4" \
     "attrs==23.1.0" \
-    "backcall==0.2.0" \
-    "bleach==6.0.0" \
-    "bx-python==0.9.0" \
+    #"backcall==0.2.0" \
+    #"bleach==6.0.0" \
+    #"bx-python==0.9.0" \
     "certifi==2023.5.7" \
     "chardet==5.1.0" \
     "ConfigArgParse==1.5.3" \
     "CrossMap==0.6.5" \
-    "cycler==0.11.0" \
-    "datrie==0.8.2" \
-    "decorator==5.1.1" \
+    #"cycler==0.11.0" \
+    #"datrie==0.8.2" \
+    #"decorator==5.1.1" \
     "defusedxml==0.7.1" \
     "docutils==0.20" \
-    "entrypoints==0.4" \
+    #"entrypoints==0.4" \
     "gitdb==4.0.10" \
     "GitPython==3.1.31" \
     "idna==3.4" \
@@ -304,11 +304,11 @@ RUN pip3 install \
     "jsonschema==4.17.3" \
     "jupyter-client==8.2.0" \
     "jupyter-core==5.3.0" \
-    "kiwisolver==1.4.4" \
+    #"kiwisolver==1.4.4" \
     "MarkupSafe==2.1.2" \
     "matplotlib==3.7.1" \
-    "mistune==2.0.5" \
-    "mizani==0.9.0" \
+    #"mistune==2.0.5" \
+    #"mizani==0.9.0" \
     "nbconvert==7.4.0" \
     "nbformat==5.8.0" \
     "notebook==6.5.4" \
@@ -322,18 +322,18 @@ RUN pip3 install \
     "pexpect==4.8.0" \
     "pickleshare==0.7.5" \
     "plotnine==0.12.1" \
-    "prometheus-client==0.16.0" \
+    #"prometheus-client==0.16.0" \
     "prompt-toolkit==3.0.38" \
     "psutil==5.9.5" \
     "ptyprocess==0.7.0" \
-    "pyarrow==12.0.0" \
+    #"pyarrow==12.0.0" \
     #"pybedtools==0.9.0" \
     #"pyBigWig==0.3.22" \
     "Pygments==2.15.1" \
     "pyparsing==3.0.9" \
     #"pyreadr==0.4.7" \
-    "pyrsistent==0.19.3" \
-    "pysam==0.21.0" \
+    #"pyrsistent==0.19.3" \
+    #"pysam==0.21.0" \
     "python-dateutil==2.8.2" \
     "pytz==2023.3" \
     "PyYAML==6.0" \
@@ -344,19 +344,19 @@ RUN pip3 install \
     "scikit-learn==1.2.2" \
     "scipy==1.10.1" \
     "seaborn==0.12.2" \
-    "Send2Trash==1.8.2" \
+    #"Send2Trash==1.8.2" \
     "six==1.16.0" \
     #"smmap==5.0.0" \
     "snakemake==7.25.3" \
     "statsmodels==0.14.0" \
-    "terminado==0.17.1" \
-    "testpath==0.6.0" \
+    #"terminado==0.17.1" \
+    #"testpath==0.6.0" \
     "tornado==6.3.1" \
     "traitlets==5.9.0" \
     #"tzlocal==4.3" \
     "urllib3==2.0.2" \
     "utils==1.0.1" \
-    "wcwidth==0.2.6" \
+    #"wcwidth==0.2.6" \
     "webencodings==0.5.1" \
     "widgetsnbextension==4.0.7" \
     "wrapt==1.15.0" \
