@@ -92,6 +92,18 @@ RUN wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar
 #### R packages
 ###############
 
+# Install BiocManager and the desired version of Bioconductor
+RUN R -e "install.packages('BiocManager', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "BiocManager::install(version = '3.16')"
+
+# These packages are for the genomic region analysis for snv-callers
+RUN ./install_bioc.r \
+    annotatr \
+    TxDb.Hsapiens.UCSC.hg38.knownGene \
+    org.Hs.eg.db \
+    BSgenome.Hsapiens.UCSC.hg19 \
+    BSgenome.Hsapiens.UCSC.hg38
+
 # Commonly used R packages
 RUN ./install_bioc.r \
     class \
@@ -175,14 +187,6 @@ RUN ./install_bioc.r \
 # This is needed for the CNV frequency and proportion aberration plots
 RUN ./install_bioc.r \
     GenVisR
-
-# These packages are for the genomic region analysis for snv-callers
-RUN ./install_bioc.r \
-    annotatr \
-    TxDb.Hsapiens.UCSC.hg38.knownGene \
-    org.Hs.eg.db \
-#    BSgenome.Hsapiens.UCSC.hg19 \
-    BSgenome.Hsapiens.UCSC.hg38
 
 # Packages for expression normalization and batch correction
 RUN ./install_bioc.r \
