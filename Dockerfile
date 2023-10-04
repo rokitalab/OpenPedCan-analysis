@@ -181,7 +181,7 @@ RUN ./install_bioc.r \
     annotatr \
     TxDb.Hsapiens.UCSC.hg38.knownGene \
     org.Hs.eg.db \
-    BSgenome.Hsapiens.UCSC.hg19 \
+#    BSgenome.Hsapiens.UCSC.hg19 \
     BSgenome.Hsapiens.UCSC.hg38
 
 # Packages for expression normalization and batch correction
