@@ -93,8 +93,8 @@ RUN wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar
 ###############
 
 # Install BiocManager and the desired version of Bioconductor
-RUN R -e "install.packages('BiocManager', dependencies=TRUE, repos='http://cran.rstudio.com/')"
-RUN R -e "BiocManager::install(version = '3.16')"
+RUN R -e "install.packages('BiocManager', dependencies=TRUE, repos='https://bioconductor.org/packages/3.16/bioc')"
+RUN R -e "BiocManager::install(version = '3.16', repos = 'https://bioconductor.org/packages/3.16/bioc')"
 
 # These packages are for the genomic region analysis for snv-callers
 RUN R -e 'BiocManager::install(c("annotatr", "TxDb.Hsapiens.UCSC.hg38.knownGene", "org.Hs.eg.db", "BSgenome.Hsapiens.UCSC.hg19", "BSgenome.Hsapiens.UCSC.hg38"))'
