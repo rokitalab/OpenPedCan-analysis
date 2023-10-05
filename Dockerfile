@@ -92,6 +92,23 @@ RUN wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar
 #### R packages
 ###############
 
+# Set the Bioconductor repository as the primary repository
+RUN R -e "options(repos = BiocManager::repositories())"
+
+# Install BiocManager and the desired version of Bioconductor
+RUN R -e "install.packages('BiocManager', dependencies=TRUE)"
+RUN R -e "BiocManager::install(version = '3.16')"
+
+# These packages are for the genomic region analysis for snv-callers
+RUN R -e 'BiocManager::install(c("annotatr", "TxDb.Hsapiens.UCSC.hg38.knownGene", "org.Hs.eg.db", "BSgenome.Hsapiens.UCSC.hg19", "BSgenome.Hsapiens.UCSC.hg38"))'
+
+#RUN ./install_bioc.r \
+#    annotatr \
+#    TxDb.Hsapiens.UCSC.hg38.knownGene \
+#    org.Hs.eg.db \
+#    BSgenome.Hsapiens.UCSC.hg19 \
+#    BSgenome.Hsapiens.UCSC.hg38
+
 # Commonly used R packages
 RUN ./install_bioc.r \
     class \
@@ -104,9 +121,9 @@ RUN ./install_bioc.r \
     lattice \
     MASS \
     Matrix \
-    mgcv \
-    nlme \
-    nnet \
+    #mgcv \
+    #nlme \
+    #nnet \
     optparse \
     R.utils \
     RColorBrewer \
@@ -123,15 +140,15 @@ RUN ./install_bioc.r \
 
 # Required for interactive sample distribution plots
 # map view is needed to create HTML outputs of the interactive plots
-RUN ./install_bioc.r \
-    #gdalUtils \
-    leafem \
-    leafpop \
-    lwgeom \
-    mapview \
-    plainview \
-    sf \
-    stars
+#RUN ./install_bioc.r \
+#    #gdalUtils \
+#    leafem \
+#    leafpop \
+#    lwgeom \
+#    mapview \
+#    plainview \
+#   sf \
+#    stars
 
 # Installs packages needed for plottings
 # treemap, interactive plots, and hex plots
@@ -141,15 +158,15 @@ RUN ./install_bioc.r \
     d3r \
     ggfortify \
     ggpubr \
-    ggrepel \
-    ggsci \
+    #ggrepel \
+    #ggsci \
     ggsignif \
     gridGraphics \
-    hexbin \
+    #hexbin \
     pheatmap \
     Rtsne \
     spatial \
-    treemap \
+    #treemap \
     umap  \
     UpSetR \
     VennDiagram 
@@ -160,7 +177,7 @@ RUN ./install_bioc.r \
 
 # Need for survminer for doing survival analysis
 RUN ./install_bioc.r \
-    cmprsk \
+    #cmprsk \
     survMisc \
     survminer
 
@@ -175,14 +192,6 @@ RUN ./install_bioc.r \
 # This is needed for the CNV frequency and proportion aberration plots
 RUN ./install_bioc.r \
     GenVisR
-
-# These packages are for the genomic region analysis for snv-callers
-RUN ./install_bioc.r \
-    annotatr \
-    TxDb.Hsapiens.UCSC.hg38.knownGene \
-    org.Hs.eg.db \
-    BSgenome.Hsapiens.UCSC.hg19 \
-    BSgenome.Hsapiens.UCSC.hg38
 
 # Packages for expression normalization and batch correction
 RUN ./install_bioc.r \
@@ -241,10 +250,10 @@ RUN ./install_bioc.r \
 RUN R -e "remotes::install_github('const-ae/ggupset', ref = '7a33263cc5fafdd72a5bfcbebe5185fafe050c73', dependencies = TRUE)"
 
 # This is needed to create the interactive pie chart
-RUN R -e "remotes::install_github('timelyportfolio/sunburstR', ref = 'd40d7ed71ee87ca4fbb9cb8b7cf1e198a23605a9', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('timelyportfolio/sunburstR', ref = 'd40d7ed71ee87ca4fbb9cb8b7cf1e198a23605a9', dependencies = TRUE)"
 
 # This is needed to create the interactive treemap
-RUN R -e "remotes::install_github('timelyportfolio/d3treeR', ref = '0eaba7f1c6438e977f8a5c082f1474408ac1fd80', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('timelyportfolio/d3treeR', ref = '0eaba7f1c6438e977f8a5c082f1474408ac1fd80', dependencies = TRUE)"
 
 # Need this package to make plots colorblind friendly
 RUN R -e "remotes::install_github('clauswilke/colorblindr', ref = '1ac3d4d62dad047b68bb66c06cee927a4517d678', dependencies = TRUE)"
@@ -256,15 +265,15 @@ RUN R -e "remotes::install_github('NNoureen/EXTEND', ref = '467c2724e1324ef05ad9
 RUN R -e "withr::with_envvar(c(R_REMOTES_NO_ERRORS_FROM_WARNINGS='true'), remotes::install_github('parklab/ShatterSeek', ref = '83ab3effaf9589cc391ecc2ac45a6eaf578b5046', dependencies = TRUE))"
 
 # Packages required for rna-seq-composition
-RUN ./install_bioc.r \
-    EnvStats \
-    janitor 
+#RUN ./install_bioc.r \
+#    EnvStats \
+#    janitor 
 
 # Patchwork for plot compositions
 RUN R -e "remotes::install_github('thomasp85/patchwork', ref = 'c67c6603ba59dd46899f17197f9858bc5672e9f4')"
 
 # This is required for creating a treemap of the broad histology and integrated diagnoses
-RUN R -e "remotes::install_github('wilkox/treemapify', ref = 'e70adf727f4d13223de8146458db9bef97f872cb', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('wilkox/treemapify', ref = 'e70adf727f4d13223de8146458db9bef97f872cb', dependencies = TRUE)"
 
 # Need this specific version of circlize so it has hg38
 RUN R -e "remotes::install_github('jokergoo/circlize', ref = 'b7d86409d7f893e881980b705ba1dbc758df847d', dependencies = TRUE)"
@@ -279,19 +288,19 @@ RUN R -e "remotes::install_github('Nik-Zainal-Group/signature.tools.lib', ref = 
 RUN pip3 install \
     "appdirs==1.4.4" \
     "attrs==23.1.0" \
-    "backcall==0.2.0" \
-    "bleach==6.0.0" \
-    "bx-python==0.9.0" \
+    #"backcall==0.2.0" \
+    #"bleach==6.0.0" \
+    #"bx-python==0.9.0" \
     "certifi==2023.5.7" \
     "chardet==5.1.0" \
     "ConfigArgParse==1.5.3" \
     "CrossMap==0.6.5" \
-    "cycler==0.11.0" \
-    "datrie==0.8.2" \
-    "decorator==5.1.1" \
+    #"cycler==0.11.0" \
+    #"datrie==0.8.2" \
+    #"decorator==5.1.1" \
     "defusedxml==0.7.1" \
     "docutils==0.20" \
-    "entrypoints==0.4" \
+    #"entrypoints==0.4" \
     "gitdb==4.0.10" \
     "GitPython==3.1.31" \
     "idna==3.4" \
@@ -299,16 +308,16 @@ RUN pip3 install \
     "ipykernel==6.23.0" \
     "ipython==8.13.2" \
     "ipython-genutils==0.2.0" \
-    "jedi==0.18.2" \
-    "Jinja2==3.1.2" \
+    #"jedi==0.18.2" \
+    #"Jinja2==3.1.2" \
     "jsonschema==4.17.3" \
     "jupyter-client==8.2.0" \
     "jupyter-core==5.3.0" \
-    "kiwisolver==1.4.4" \
+    #"kiwisolver==1.4.4" \
     "MarkupSafe==2.1.2" \
     "matplotlib==3.7.1" \
-    "mistune==2.0.5" \
-    "mizani==0.9.0" \
+    #"mistune==2.0.5" \
+    #"mizani==0.9.0" \
     "nbconvert==7.4.0" \
     "nbformat==5.8.0" \
     "notebook==6.5.4" \
@@ -322,18 +331,18 @@ RUN pip3 install \
     "pexpect==4.8.0" \
     "pickleshare==0.7.5" \
     "plotnine==0.12.1" \
-    "prometheus-client==0.16.0" \
+    #"prometheus-client==0.16.0" \
     "prompt-toolkit==3.0.38" \
     "psutil==5.9.5" \
     "ptyprocess==0.7.0" \
-    "pyarrow==12.0.0" \
-    "pybedtools==0.9.0" \
-    "pyBigWig==0.3.22" \
+    #"pyarrow==12.0.0" \
+    #"pybedtools==0.9.0" \
+    #"pyBigWig==0.3.22" \
     "Pygments==2.15.1" \
     "pyparsing==3.0.9" \
-    "pyreadr==0.4.7" \
-    "pyrsistent==0.19.3" \
-    "pysam==0.21.0" \
+    #"pyreadr==0.4.7" \
+    #"pyrsistent==0.19.3" \
+    #"pysam==0.21.0" \
     "python-dateutil==2.8.2" \
     "pytz==2023.3" \
     "PyYAML==6.0" \
@@ -344,19 +353,19 @@ RUN pip3 install \
     "scikit-learn==1.2.2" \
     "scipy==1.10.1" \
     "seaborn==0.12.2" \
-    "Send2Trash==1.8.2" \
+    #"Send2Trash==1.8.2" \
     "six==1.16.0" \
-    "smmap==5.0.0" \
+    #"smmap==5.0.0" \
     "snakemake==7.25.3" \
     "statsmodels==0.14.0" \
-    "terminado==0.17.1" \
-    "testpath==0.6.0" \
+    #"terminado==0.17.1" \
+    #"testpath==0.6.0" \
     "tornado==6.3.1" \
     "traitlets==5.9.0" \
-    "tzlocal==4.3" \
+    #"tzlocal==4.3" \
     "urllib3==2.0.2" \
     "utils==1.0.1" \
-    "wcwidth==0.2.6" \
+    #"wcwidth==0.2.6" \
     "webencodings==0.5.1" \
     "widgetsnbextension==4.0.7" \
     "wrapt==1.15.0" \
