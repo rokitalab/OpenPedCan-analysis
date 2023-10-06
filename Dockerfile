@@ -88,6 +88,13 @@ RUN wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar
     make install && \
     cd .. && rm -rf htslib-1.9
 
+# GenomeTools
+RUN wget http://genometools.org/pub/genometools-1.6.2.tar.gz  && \
+    tar -zxvf genometools-1.6.2.tar.gz  && rm -f genometools-1.6.2.tar.gz && \
+    cd genometools-1.6.2 && \
+    make cairo=no && \
+    make prefix=/usr/local cairo=no install && \
+    cd .. && rm -rf genometools-1.6.2
 
 #### R packages
 ###############
