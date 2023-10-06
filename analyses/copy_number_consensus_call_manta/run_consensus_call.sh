@@ -57,4 +57,3 @@ snakemake \
     --configfile $SCRATCHDIR/config_snakemake.yaml \
     -j \
     --restart-times 2 
-
