@@ -1,55 +1,12 @@
-name: CI
+name: Analysis
 
 on:
-  push:
-    branches:
-      - dev
   pull_request:
   workflow_dispatch:
 
 jobs:
-  build_and_publish_image:
-    name: Build and Publish Image
-    runs-on: ubuntu-latest-m
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: pgc-images.sbgenomics.com/d3b-bixu/open-pedcan
-          tags: |
-            type=raw,value=analysisjob
-            # Only tag the image with latest if we're building on the default
-            # branch (e.g., dev).
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v2
-        with:
-          registry: pgc-images.sbgenomics.com
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: github_pat=${{ secrets.GITHUB_TOKEN }}
-
   run_analysis:
     name: Run Analysis
-    needs: build_and_publish_image
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -166,7 +123,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download Data
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:analysisjob
+        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
           entrypoint: ./download-data.sh
         env:
@@ -174,7 +131,7 @@ jobs:
           OPENPEDCAN_RELEASE: testing
 
       - name: Run Analysis
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:analysisjob
+        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
           entrypoint: analyses/${{ matrix.entrypoint }}
         env:
