@@ -174,7 +174,7 @@ final_hgg_cn_df_wxs <- final_hgg_cn_df %>%
   filter(!Kids_First_Biospecimen_ID %in% WGS_bsid) %>% 
   dplyr::mutate(MYCN_focal_status = replace_na(MYCN_focal_status, "neutral"), 
                 PDGFRA_focal_status = replace_na(PDGFRA_focal_status, "neutral"),
-                PTEN_focal_status = replace_na(PDGFRA_focal_status, "neutral"),
+                PTEN_focal_status = replace_na(PTEN_focal_status, "neutral"),
                 EGFR_focal_status = replace_na(EGFR_focal_status, "neutral"))
 
 final_hgg_cn_df <- bind_rows(final_hgg_cn_df_wgs, final_hgg_cn_df_wxs)

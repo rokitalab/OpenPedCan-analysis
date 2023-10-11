@@ -192,6 +192,7 @@ PBTA	Low-grade glioma, MYB/MYBL1	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, FGFR	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, RTK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, MAPK	Low-grade glioma	Yes	No
+PBTA	Low-grade glioma, BRAF/MAPK	Low-grade glioma	Yes	No
 DGD	Low-grade glioma, RTK	Low-grade glioma	Yes	No
 DGD	Low-grade glioma, other MAPK	Low-grade glioma	Yes	No
 PBTA	Low-grade glioma, NF1-germline	Low-grade glioma	Yes	No
