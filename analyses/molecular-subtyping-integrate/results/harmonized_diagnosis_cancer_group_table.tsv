@@ -135,6 +135,7 @@ PBTA	Glial-neuronal tumor, wildtype	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  other MAPK, CDKN2A/B	Glial-neuronal tumor	Yes	No
 PBTA	Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor	No	Yes
+PBTA	Glial-neuronal tumor,  H3	Glial-neuronal tumor	Yes	No
 PBTA	Glial-neuronal tumor,  wildtype	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor	Yes	No
 DGD	Glial-neuronal tumor,  other MAPK	Glial-neuronal tumor	Yes	No
