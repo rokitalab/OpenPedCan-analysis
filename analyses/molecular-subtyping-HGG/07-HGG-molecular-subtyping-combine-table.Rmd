@@ -168,7 +168,9 @@ Add methylation to all_data_df.
 methyl_df <- hgg_meta %>% 
   filter(experimental_strategy == "Methylation", 
          (grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) |
-             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG")), 
+             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG", 
+                                                  ## Add PXA methylation molecular subtype
+                                                  "PXA")), 
          dkfz_v12_methylation_subclass_score >= 0.8) %>% 
   # add all samples but only keep subtypes if score >=0.8
   mutate(molecular_subtype_methyl = case_when(grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
@@ -178,6 +180,7 @@ methyl_df <- hgg_meta %>%
     dkfz_v12_methylation_subclass == "O_IDH" ~ "Oligo, IDH",
     dkfz_v12_methylation_subclass == "IHG"  ~ "IHG",
     dkfz_v12_methylation_subclass == "HGAP"  ~ "HGG, MAPK",
+    dkfz_v12_methylation_subclass == "PXA"  ~ "PXA",
     TRUE ~ NA_character_)) %>% 
   select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 composition, id, molecular_subtype_methyl) %>%
@@ -438,6 +441,21 @@ ihg_df_biospecimen <- all_data_df %>%
   unique()
 ```
 
+## PXA subtype
+
+PXA have BRAF mutation or MAPK pathway gene and 
+homozygous deletion of CDKN2A and/or CDKN2B
+
+DNA methyaltion profile of "PXA"
+
+```{r}
+pxa_df_biospecimen <- all_data_df %>% 
+  filter(molecular_subtype_methyl == "PXA" & relevant_coding_mutations == "BRAF" & 
+           (CDKN2A_focal_status == "loss" | CDKN2B_focal_status == "loss")) %>% 
+  mutate(molecular_subtype = "PXA") %>% 
+  unique()
+  
+```
 
 ## Biospecimen Table
 
@@ -447,7 +465,8 @@ Join all the tables that contain the biospecimen ids and `molecular_subtype` col
 molecular_subtype_table <- bind_rows(h3_g35_df_biospecimen,
                                      h3_k28_df_biospecimen,
                                      idh_df_biospecimen,
-                                     ihg_df_biospecimen) %>% 
+                                     ihg_df_biospecimen, 
+                                     pxa_df_biospecimen) %>% 
   distinct()
 
 as.data.frame(table(molecular_subtype_table$molecular_subtype)) %>%
