@@ -173,7 +173,8 @@ methyl_df <- hgg_meta %>%
   # add all samples but only keep subtypes if score >=0.8
   mutate(molecular_subtype_methyl = case_when(grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
     dkfz_v12_methylation_subclass == "DHG_G34"  ~ "DHG, H3 G35",
-    dkfz_v12_methylation_subclass %in% c("DMG_K27", "DMG_EGFR")  ~ "DMG, H3 K28",
+    dkfz_v12_methylation_subclass == "DMG_K27"  ~ "DMG, H3 K28",
+    dkfz_v12_methylation_subclass == "DMG_EGFR"  ~ "DMG, EGFR",
     dkfz_v12_methylation_subclass == "A_IDH_HG"  ~ "HGG, IDH",
     dkfz_v12_methylation_subclass == "O_IDH" ~ "Oligo, IDH",
     dkfz_v12_methylation_subclass == "IHG"  ~ "IHG",

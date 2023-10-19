@@ -3876,9 +3876,9 @@ PT_BQ8BQ01J	7316-183	BS_0DKPGQWD	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_BQ8BQ01J	7316-183	BS_0T17SY47	Low-grade astrocytic tumor	LGAT	Low-grade glioma, IDH	LGG, IDH	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, IDH	NA
 PT_BQ8BQ01J	7316-183	BS_EB5F9SDD	Low-grade astrocytic tumor	LGAT	Low-grade glioma, IDH	LGG, IDH	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, IDH	NA
 PT_BQAR0KHK	7316-7585	BS_KWHEFBG0	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Deceased	NA	NA
-PT_BQJK7KPK	7316-6574	BS_4WKWBFEM	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
-PT_BQJK7KPK	7316-6574	BS_P4PMWFMV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
-PT_BQJK7KPK	7316-6574	BS_PKNW2TTK	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
+PT_BQJK7KPK	7316-6574	BS_4WKWBFEM	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, EGFR
+PT_BQJK7KPK	7316-6574	BS_P4PMWFMV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, EGFR
+PT_BQJK7KPK	7316-6574	BS_PKNW2TTK	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, EGFR
 PT_BRTVGGRK	7316-2893	BS_FENJEHZ7	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_BRTVGGRK	7316-2893	BS_QHTDJG77	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
 PT_BRTVGGRK	7316-2893	BS_S1M423AB	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	MB, Group4
@@ -4669,8 +4669,8 @@ PT_FC0EF5ZT	7316-3572	BS_WJ7GMQTF	Low-grade astrocytic tumor	Ganglioglioma	Gangl
 PT_FCM7XPVR	7316-2285	BS_4GKH983E	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_FCM7XPVR	7316-2285	BS_554AS76R	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
 PT_FCM7XPVR	7316-2285	BS_MQCKXD60	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	Recurrence	NA	NA
-PT_FCWMT41S	7316-7133	BS_4Q7PQHS8	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
-PT_FCWMT41S	7316-7133	BS_XK482X70	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, H3 K28
+PT_FCWMT41S	7316-7133	BS_4Q7PQHS8	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, EGFR
+PT_FCWMT41S	7316-7133	BS_XK482X70	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA	DMG, EGFR
 PT_FDQHEKJB	7316-5310	BS_2CW8AGZ2	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma	NA
 PT_FDQHEKJB	7316-5310	BS_8QS7G327	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma	NA
 PT_FDQHEKJB	7316-5310	BS_G2Y7FCXS	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma	NA
