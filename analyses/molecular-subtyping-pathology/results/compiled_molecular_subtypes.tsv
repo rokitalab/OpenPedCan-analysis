@@ -4544,8 +4544,8 @@ PT_FC0EF5ZT	7316-3572	BS_WJ7GMQTF	Low-grade astrocytic tumor	Ganglioglioma	Gangl
 PT_FCM7XPVR	7316-2285	BS_4GKH983E	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
 PT_FCM7XPVR	7316-2285	BS_554AS76R	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
 PT_FCM7XPVR	7316-2285	BS_MQCKXD60	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
-PT_FCWMT41S	7316-7133	BS_XK482X70	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	DMG, EGFR	Updated via OpenPedCan subtyping
-PT_FCWMT41S	7316-7133	BS_4Q7PQHS8	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	DMG, EGFR	Updated via OpenPedCan subtyping
+PT_FCWMT41S	7316-7133	BS_XK482X70	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	DMG, EGFR	DMG, EGFR	NA
+PT_FCWMT41S	7316-7133	BS_4Q7PQHS8	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	DMG, EGFR	DMG, EGFR	NA
 PT_FDQHEKJB	7316-5310	BS_M5YAF092	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	NA
 PT_FDQHEKJB	7316-5310	BS_2CW8AGZ2	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	NA
 PT_FDQHEKJB	7316-5310	BS_8QS7G327	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	NA

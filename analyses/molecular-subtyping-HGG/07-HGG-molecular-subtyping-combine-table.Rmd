@@ -478,7 +478,9 @@ wildtype_df <- all_data_df %>%
          IDH1_mutation == "No R132 or R172",
          # and not re-classified by methyl
          !molecular_subtype_methyl %in% c("DMG, H3 K28", "DHG, H3 G35", "IHG")) %>%
-  mutate(molecular_subtype = "HGG, H3 wildtype") %>%
+  ## if there is no H3 mutation and methylation molecular subtype == "DMG, EFGR", assign sample molecular subtype as "DMG, EFGR"
+  mutate(molecular_subtype = case_when(molecular_subtype_methyl == "DMG, EGFR" ~ "DMG, EGFR", 
+                                       TRUE ~"HGG, H3 wildtype")) %>%
   distinct()
 
 # add wildtype methyl not already there
