@@ -75,6 +75,9 @@ These strings are stored in `lgat-subset/lgat_subtyping_path_dx_strings.json`, w
 
 Prior to `release-v17-20200908`, we used `short_histology == "LGAT"` as our inclusion criteria.
 
+## Molecular subtyping HGG workflow
+
+![LGG molecular subtyping workflow](./plots/LGAT_subtyping_workflow.png)
 
 ### Preprocessing
 
