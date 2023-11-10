@@ -15,6 +15,10 @@ This module can be run with the following:
 bash run-molecular-subtyping-cranio.sh
 ```
 
+## Molecular subtyping CRANIO workflow
+
+ ![CRANIO molecular subtyping workflow](./plot/CRANIO_subtyping.png)
+
 ### Module contents
 
 `00-craniopharyngiomas-molecular-subtype.Rmd` identifies Kids_First_Biospecimen_ID with relevant mutations, matches WGS sample_id with RNA-Seq sample, and adds molecular_subtypes `CRANIO, ADAM` or `CRANIO, PAP`.
