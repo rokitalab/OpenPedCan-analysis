@@ -7,6 +7,10 @@ amplified or MYCN non-amplified ([Ticket#417](https://github.com/PediatricOpenTa
 MYCN is located on chromosone 2p and the subtyping is done by checking the CNV calls and the
 clinically-reported MYCN status. We also perform QC by checking the consistency between TARGET and GMKF NBL samples.
 
+## Molecular subtyping NBL workflow
+
+ ![NBL molecular subtyping workflow](./plots/NBL_subtyping.png)
+
 **Subtyping criteria**:
 
 **case 1**:
