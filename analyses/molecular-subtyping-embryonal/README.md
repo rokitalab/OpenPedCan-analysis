@@ -29,6 +29,11 @@ bash run-embryonal-subtyping.sh
 
 `00-embryonal-select-pathology-dx.Rmd` is not run via this module's shell script, as it should be run locally, tied to `release-v17-20200908`, and should not be re-rendered when there are changes to the underlying `pbta-histologies.tsv` file in future releases (see [Folder content](#folder-content) and [#748](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/748)).
 
+## Molecular subtyping HGG workflow
+
+ ![embryonal molecular subtyping workflow](./plot/embryonal_subtyping.png)
+
+
 ## Folder Content
 
 [`00-v17-embryonal-select-pathology-dx.Rmd`](https://alexslemonade.github.io/OpenPBTA-analysis/analyses/molecular-subtyping-embryonal/00-embryonal-select-pathology-dx.nb.html) is a notebook used to explore the `pathology_diagnosis` and `pathology_free_text_diagnosis` fields in the `release-v17-20200908` version of `pbta-histologies.tsv`. 
