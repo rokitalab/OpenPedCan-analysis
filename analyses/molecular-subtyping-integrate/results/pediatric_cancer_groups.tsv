@@ -122,10 +122,10 @@ Hemangioblastoma	Initial CNS Tumor	18
 Hemangioblastoma	Progressive	6
 Hepatoblastoma	Primary Tumor	4
 Hepatocellular Carcinoma	Primary Tumor	1
-High-grade glioma	Deceased	117
-High-grade glioma	Initial CNS Tumor	389
+High-grade glioma	Deceased	119
+High-grade glioma	Initial CNS Tumor	393
 High-grade glioma	Primary Tumor	1
-High-grade glioma	Progressive	84
+High-grade glioma	Progressive	87
 High-grade glioma	Progressive Disease Post-Mortem	1
 High-grade glioma	Recurrence	65
 High-grade glioma	Second Malignancy	26
@@ -212,9 +212,7 @@ Pineoblastoma	Initial CNS Tumor	46
 Pineoblastoma	Progressive	8
 Pineoblastoma	Recurrence	3
 Pineocytoma	Initial CNS Tumor	1
-Pleomorphic xanthoastrocytoma	Deceased	2
-Pleomorphic xanthoastrocytoma	Initial CNS Tumor	15
-Pleomorphic xanthoastrocytoma	Progressive	3
+Pleomorphic xanthoastrocytoma	Initial CNS Tumor	11
 Pleomorphic xanthoastrocytoma	Recurrence	2
 Primary mediastinal large B cell lymphoma	Primary Tumor	1
 Retinoblastoma	Recurrence	1

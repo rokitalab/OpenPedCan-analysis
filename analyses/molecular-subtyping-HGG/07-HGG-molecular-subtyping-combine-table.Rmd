@@ -443,14 +443,14 @@ ihg_df_biospecimen <- all_data_df %>%
 
 ## PXA subtype
 
-PXA have BRAF mutation or MAPK pathway gene and 
+PXA have BRAF V600E mutation or MAPK pathway gene and 
 homozygous deletion of CDKN2A and/or CDKN2B
 
 DNA methyaltion profile of "PXA"
 
 ```{r}
 pxa_df_biospecimen <- all_data_df %>% 
-  filter(molecular_subtype_methyl == "PXA" & relevant_coding_mutations == "BRAF" & 
+  filter(molecular_subtype_methyl == "PXA" & BRAF_V600E == "p.V600E" & 
            (CDKN2A_focal_status == "loss" | CDKN2B_focal_status == "loss")) %>% 
   mutate(molecular_subtype = "PXA") %>% 
   unique()
