@@ -13,6 +13,11 @@ This module can be run with the following:
 bash run_subtyping.sh
 ```
 
+## Molecular subtyping EWS workflow
+
+ ![EWS molecular subtyping workflow](./plot/EWS_subtyping.png)
+ 
+
 ### Module contents
 
 `01-run-subtyping-ewings.Rmd` identifies sample_id for RNA-Seq samples with hallmark _EWSR1_ fusions and matches sample_id with WGS sample and adds molecular_subtype as "EWS" (Ewing Sarcoma) 
