@@ -10,6 +10,7 @@ clinically-reported MYCN status. We also perform QC by checking the consistency 
 ## Molecular subtyping NBL workflow
 
  ![NBL molecular subtyping workflow](./plots/NBL_subtyping.png)
+Note: * TPM cutoff for MYCN is 140.83 in this case, which was identified based on the [barplot](./plots/tpm_biospecimen_all_samples_with_tpm.png) of MYCN gene expression across all NBL samples.
 
 **Subtyping criteria**:
 
