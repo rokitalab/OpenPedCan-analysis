@@ -12,6 +12,7 @@ Here in OpenPedCan, we utilize [medulloPackage](https://github.com/d3b-center/me
 
  ![MB molecular subtyping workflow](./plot/MB_subtyping.png)
 
+Note: the detailed information about `medulloPackage` can be found in our [paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008263). 
 
 ### Running the full analysis
 
