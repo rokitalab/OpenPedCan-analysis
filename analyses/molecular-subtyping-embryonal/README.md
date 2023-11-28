@@ -39,7 +39,7 @@ bash run-embryonal-subtyping.sh
 First, samples was selected based on the pathology-diagnosis and pathologies_free_text-diagnosis in this [script](./00-embryonal-select-pathology-dx.R). To molecular subtype embryonal tumors, following criteria is used based on WHO cancer guidebook: 
 
 - **ETMR, C19MC-altered**: samples contain chromosome 19 amplification or the overexpression of _LIN28A_ and contain _TTYH1_ gene fusion;
-- **ETMR, NOS**: samples contain NO _TTYH1_ gene sufion and the verexpression of _LIN28A_. 
+- **ETMR, NOS**: samples contain NO _TTYH1_ gene sufion and the overexpression of _LIN28A_. 
 - **CNS HGNET-MN1**: samples contain _MN1_ gene fusion.
 - **CNS NB-FOXR2**: samples contain _FOXR2_ gene fusion or the overexpression of _FOXR2_.
 - **CNS Embryonal, NOS**: Pathology diagnosis is "Neuroblastoma" and do NOT have high confidence methylation subtypes.
