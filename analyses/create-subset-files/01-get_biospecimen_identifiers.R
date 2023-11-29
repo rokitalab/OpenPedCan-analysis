@@ -39,6 +39,7 @@ suppressWarnings(
 )
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(arrow))
 suppressPackageStartupMessages(options(readr.show_col_types = FALSE))
 
 `%>%` <- dplyr::`%>%`
@@ -108,7 +109,8 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     }  
   } else if (grepl("sv-manta", filename)) {
     # in a column 'Kids.First.Biospecimen.ID.Tumor'
-    sv_file <- data.table::fread(filename, data.table = FALSE, showProgress = FALSE)
+    sv_file <- data.table::fread(filename, data.table = FALSE, 
+                                 showProgress = FALSE)
     biospecimen_ids <- unique(sv_file$Kids.First.Biospecimen.ID.Tumor)
   } else if (grepl(".rds", filename)) {
     # RNA-Seq matrices column names
@@ -128,6 +130,10 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     # in a column 'Kids_First_Biospecimen_ID'
     independent_file <- readr::read_tsv(filename)
     biospecimen_ids <- unique(independent_file$Kids_First_Biospecimen_ID)
+  } else if (grepl("splice-events-rmats", filename)) {
+    # in a column 'sample_id'
+    rmats_file <- arrow::read_tsv_arrow(filename)
+    biospecimen_ids <- unique(rmats_file$sample_id)
   } else {
     # error-handling
     stop("File type unrecognized by 'get_biospecimen_ids'")
@@ -261,7 +267,7 @@ option_list <- list(
   make_option(
     c("-r", "--supported_string"),
     type = "character",
-    default = "snv|biospecimen|cnv|consensus_seg_with_status|fusion|sv-manta|.rds|independent",
+    default = "snv|biospecimen|cnv|consensus_seg_with_status|fusion|sv-manta|.rds|independent|splice",
     help = "string for pattern matching used to subset to only supported files"
   ),
   make_option(
@@ -373,6 +379,8 @@ rnaseq_samples <- c("TARGET-40-PANVJJ-01A-01R", "TARGET-40-PAKUZU-01A-01R",
                     "TARGET-40-0A4I48-01A-01R", "BS_JT82QGXF", "BS_AGTPCRR4", 
                     "BS_R244Z0WX", "BS_NGHK9RZP", "BS_6R7SFVV2")
 
+#### Two non-GATK samples 
+non_GATK_sample <- c("BS_A9Q65W4Q", "BS_JTNTWJMD")
 
 ### Histologies and participants IDs mapping -----------------------------------
 
@@ -567,6 +575,10 @@ snv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "snv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
   purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq, nf1_dnaseq)))
 
+## add non-GATK samples to cnv file 
+  cnv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "cnv")
+biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
+  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample)))
 
 # remove any redundant that might result combining and appending to the 
 # biospecimen IDs lists for subsetting 

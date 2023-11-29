@@ -14,7 +14,7 @@ The OpenPedCan analyses currently include the following datasets, described more
 Open Pediatric Brain Tumor Atlas (OpenPBTA)
 In September of 2018, the [Children's Brain Tumor Network (CBTN)](https://cbtn.org/) released the [Pediatric Brain Tumor Atlas (PBTA)](https://cbtn.org/pediatric-brain-tumor-atlas/), a genomic dataset (whole genome sequencing, whole exome sequencing, RNA sequencing, proteomic, and clinical data) for nearly 1,000 tumors, available from the [Gabriella Miller Kids First Portal](https://kidsfirstdrc.org/).
 In September of 2019, the Open Pediatric Brain Tumor Atlas (OpenPBTA) Project was launched.
-OpenPBTA was a global open science initiative to comprehensively define the molecular landscape of tumors of 943 patients from the CBTN and the PNOC003 DIPG clinical trial from the [Pediatric Pacific Neuro-oncology Consortium](http://www.pnoc.us/) through real-time, collaborative analyses and [collaborative manuscript writing](https://github.com/AlexsLemonade/OpenPBTA-manuscript/) on GitHub.
+OpenPBTA was a global open science initiative to comprehensively define the molecular landscape of tumors of 943 patients from the CBTN and the PNOC003 DIPG clinical trial from the [Pediatric Pacific Neuro-oncology Consortium](http://www.pnoc.us/) through real-time, collaborative analyses and [collaborative manuscript writing](https://github.com/AlexsLemonade/OpenPBTA-manuscript/) on GitHub, now published in [_Cell Genomics_](10.1016/j.xgen.2023.100340).
 Additional PBTA data has been, and will be continually added to OpenPedCan.
 
 Therapeutically Applicable Research to Generate Effective Treatments [(TARGET)](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000218.v23.p8)
@@ -29,12 +29,12 @@ OpenPedCan analyses include Neuroblastoma data from the Kids First project.
 The Genotype-Tissue Expression [(GTEx)](https://gtexportal.org/home/)
 GTEx project is an ongoing effort to build a comprehensive public data resource and tissue bank to study tissue-specific gene expression, regulation and their relationship with genetic variants.
 Samples were collected from 54 non-diseased tissue sites across nearly 1000 individuals, primarily for molecular assays including WGS, WES, and RNA-Seq.
-OpenPedCan project includes 17382 GTEx RNA-Seq samples from GTEx v8 release, which span across 31 GTEx groups in the v11 release.
+OpenPedCan project includes 17,382 GTEx RNA-Seq samples from GTEx v8 release, which span across 31 GTEx groups in the v11 release.
 
 The Cancer Genome Atlas Program [(TCGA)](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga)
 TCGA is a landmark cancer genomics program that molecularly characterized over 20,000 primary cancer and matched normal samples spanning 33 cancer types.
 It is a joint effort between NCI and the National Human Genome Research Institute.
-OpenPedCan project includes 10414 TCGA RNA-Seq samples (716 normal and 9698 tumor) from [33 cancer types](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/blob/0a5c14705a385c99a6a16e34e932e94009b7a11c/analyses/molecular-subtyping-integrate/results/tcga_cancer_groups.tsv) in the v11 release.
+OpenPedCan project includes 10,414 TCGA RNA-Seq samples (716 normal and 9698 tumor) from [33 cancer types](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/blob/0a5c14705a385c99a6a16e34e932e94009b7a11c/analyses/molecular-subtyping-integrate/results/tcga_cancer_groups.tsv) in the v12 release.
 
 DGD [(CHOP P30 Panel)](https://www.chop.edu/cancer-panels)
 CHOP's [Division of Genome Diagnostics](https://www.chop.edu/centers-programs/division-genomic-diagnostics) has partnered with CCDI to add somatic panel sequencing data to OpenPedCan and the Molecular Targets Platform.
@@ -42,7 +42,7 @@ CHOP's [Division of Genome Diagnostics](https://www.chop.edu/centers-programs/di
 The OpenPedCan operates on a pull request model to accept contributions from community participants.
 The maintainers have set up continuous integration software via GitHub Actions to confirm the reproducibility of analyses within the project’s Docker container.
 
-The project maintainers include scientists from [Department of Biomedical and Health Informatics at the Children's Hospital of Philadelphia ](https://www.research.chop.edu/department-of-biomedical-and-health-informatics) and the [Center for Data-Driven Discovery in Biomedicine at the Children's Hospital of Philadelphia](https://d3b.center/).
+The project maintainers include scientists from the [Center for Data-Driven Discovery in Biomedicine at the Children's Hospital of Philadelphia](https://d3b.center/).
 We invite researchers to join OpenPedCan to help rigorously characterize the genomic landscape of these diseases to enable more rapid discovery of additional mechanisms contributing to the pathogenesis of pediatric brain and spinal cord tumors and overall accelerate clinical translation on behalf of patients.
 
 **New to the project? Please be sure to read the following documentation before contributing:**
@@ -96,17 +96,17 @@ We invite researchers to join OpenPedCan to help rigorously characterize the gen
 
 The OpenPedCan dataset includes methylation array, gene expression, fusion, as well as somatic mutation, copy number, structural and variant results in combined tsv or matrix format.
 
-Below is a summary of biospecimens by sequencing strategy in v11 release:
+Below is a summary of biospecimens by sequencing strategy in v12 release:
 
 | Experimental Strategy | Normal | Tumor |
 | --------------------- | ------ | ----- |
-| Methylation           | 151    | 1763  |
-| Targeted Sequencing   | 500    | 2299  |
-| RNA-Seq               | 18110  | 12310 |
-| WGS                   | 1137   | 1305  |
-| WXS                   | 1133   | 1184  |
+| Methylation           | 176    | 2481  |
+| Targeted Sequencing   | 500    | 1370  |
+| RNA-Seq               | 18113  | 13571 |
+| WGS                   | 2311   | 2575  |
+| WXS                   | 1293   | 1339  |
 
-[Here](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/blob/bbbcdea63a03a48d2847140efb104e159590fd21/analyses/molecular-subtyping-integrate/results/pediatric_cancer_groups.tsv) is a detailed table of pediatric cancer groups in the v11 release.
+[Here](https://github.com/d3b-center/OpenPedCan-analysis/blob/660cf72a1446a6518b48883cec9c8a72073947b5/analyses/molecular-subtyping-integrate/results/pediatric_cancer_groups.tsv) is a detailed table of pediatric cancer groups in the v12 release.
 
 ## Data Release Process
 
@@ -160,6 +160,7 @@ _Note: the `download-data.sh` script now has the ability to skip downloads of un
 Once this has been done, run `bash download-data.sh` to acquire the latest release.
 This will create symlinks in `data/` to the latest files.
 It's safe to re-run `bash download-data.sh` to check that you have the most recent release of the data.
+For downloading DNA methylation-related data, run `bash download-methyl.sh`  in `scripts` folder. 
 We will update the default release number whenever we produce a new release.
 
 ### Data Access via CAVATICA

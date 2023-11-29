@@ -17,10 +17,10 @@ These genomic regions are used to first filter mutations to these regions and th
 ### All mutations TMB
 
 For all mutation TMBs, consensus calls are used. 
-For WGS samples, the size of the genome covered by the intersection of Strelka2 and Mutect2's surveyed areas which are considered representative of all callers is used for the denominator.
+For WGS samples, the size of the genome covered by the intersection of Strelka2, Mutect2, and Vardict's surveyed areas, which are considered representative of all callers, is used for the denominator.
 
 ```
-WGS_all_mutations_TMB = (total # mutations in consensus MAF) / intersection_strelka_mutect_genome_size
+WGS_all_mutations_TMB = (total # mutations in consensus MAF) / intersection_strelka_mutect_vardict_genome_size
 ```
 For WXS samples, the size of the genome for each the WXS bed region file is used for the denominator with the associated tumor samples.
 ```
@@ -33,7 +33,7 @@ This file is included in the OpenPedCan data download.
 SNVs outside of these coding sequences are filtered out before being summed and used for TMB calculations as follows:
 
 ```
-WGS_coding_only_TMB = (total # coding mutations in consensus MAF) / intersection_wgs_strelka_mutect_CDS_genome_size
+WGS_coding_only_TMB = (total # coding mutations in consensus MAF) / intersection_wgs_strelka_mutect_vardict_CDS_genome_size
 ```
 For WXS samples, each the WXS bed region file is intersected with the coding sequences for filtering and for determining the denominator to be used with the with the associated tumor samples.
 ```
