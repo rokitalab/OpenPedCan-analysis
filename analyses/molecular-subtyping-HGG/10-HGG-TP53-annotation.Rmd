@@ -28,13 +28,10 @@ tp53_status <- read_tsv(file.path(
   "analyses",
   "tp53_nf1_score",
   "results",
-  "tp53_altered_status.tsv"), guess_max = 100000)
-
-tp53_status$Kids_First_Biospecimen_ID_RNA <- as.character(tp53_status$Kids_First_Biospecimen_ID_RNA)
-
+  "tp53_altered_status.tsv"), guess_max = 100000) %>% 
+  select(-Kids_First_Biospecimen_ID_DNA, -Kids_First_Biospecimen_ID_RNA)
 
 hgg_subtypes <- read_tsv(file.path(results_dir,"HGG_cleaned_all_table.tsv")) 
-hgg_subtypes$Kids_First_Biospecimen_ID_RNA <- as.character(hgg_subtypes$Kids_First_Biospecimen_ID_RNA)
 
 ```
 
@@ -42,10 +39,7 @@ hgg_subtypes$Kids_First_Biospecimen_ID_RNA <- as.character(hgg_subtypes$Kids_Fir
 ```{r}
 
 hgg_subtypes <- hgg_subtypes %>%
-  left_join(tp53_status,by=c(
-                             "sample_id",
-                             "Kids_First_Biospecimen_ID_RNA",
-                             "Kids_First_Biospecimen_ID_DNA")) %>%
+  left_join(tp53_status,by=c("sample_id")) %>%
   rename("tp53_SNV_indel_counts"="SNV_indel_counts",
          "tp53_CNV_loss_counts"="CNV_loss_counts",
          "tp53_HGVSp_Short"="HGVSp_Short" , 
