@@ -257,6 +257,8 @@ hgg_results_df <- bind_exp_strategies(hgg_results_df) %>%
                                           grepl("IHG, ROS1-altered", molecular_subtype) ~ "Infant-type hemispheric glioma, ROS1-altered",
                                           grepl("IHG, MET-altered", molecular_subtype) ~ "Infant-type hemispheric glioma, MET-altered",
                                           molecular_subtype == "IHG, To be classified" ~ "Infant-type hemispheric glioma",
+                                          ## Add PXA
+                                          grepl("PXA", molecular_subtype) ~ "Pleomorphic xanthoastrocytoma",
                                           TRUE~ NA_character_),
                   broad_histology = "Diffuse astrocytic and oligodendroglial tumor",
                   short_histology = "HGAT",
