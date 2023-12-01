@@ -1764,14 +1764,14 @@ mutations co-occurring with H3 mutations.</p>
 <pre class="r"><code># Load in tidyverse functions
 library(tidyverse)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoi4pSA4pSAIEF0dGFjaGluZyBjb3JlIHRpZHl2ZXJzZSBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDIuMC4wIOKUgOKUgFxu4pyUIGRwbHlyICAgICAxLjEuMSAgICAg4pyUIHJlYWRyICAgICAyLjEuNFxu4pyUIGZvcmNhdHMgICAxLjAuMCAgICAg4pyUIHN0cmluZ3IgICAxLjUuMFxu4pyUIGdncGxvdDIgICAzLjQuMiAgICAg4pyUIHRpYmJsZSAgICAzLjIuMVxu4pyUIGx1YnJpZGF0ZSAxLjkuMiAgICAg4pyUIHRpZHlyICAgICAxLjMuMFxu4pyUIHB1cnJyICAgICAxLjAuMSAgICAgXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG7inJYgZHBseXI6OmZpbHRlcigpIG1hc2tzIHN0YXRzOjpmaWx0ZXIoKVxu4pyWIGRwbHlyOjpsYWcoKSAgICBtYXNrcyBzdGF0czo6bGFnKClcbuKEuSBVc2UgdGhlIGNvbmZsaWN0ZWQgcGFja2FnZSAoPGh0dHA6Ly9jb25mbGljdGVkLnItbGliLm9yZy8+KSB0byBmb3JjZSBhbGwgY29uZmxpY3RzIHRvIGJlY29tZSBlcnJvcnNcbiJ9 -->
-<pre><code>── Attaching core tidyverse packages ──────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<!-- rnb-message-begin eyJkYXRhIjoi4pSA4pSAIEF0dGFjaGluZyBjb3JlIHRpZHl2ZXJzZSBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDIuMC4wIOKUgOKUgFxu4pyUIGRwbHlyICAgICAxLjEuMSAgICAg4pyUIHJlYWRyICAgICAyLjEuNFxu4pyUIGZvcmNhdHMgICAxLjAuMCAgICAg4pyUIHN0cmluZ3IgICAxLjUuMFxu4pyUIGdncGxvdDIgICAzLjQuMiAgICAg4pyUIHRpYmJsZSAgICAzLjIuMVxu4pyUIGx1YnJpZGF0ZSAxLjkuMiAgICAg4pyUIHRpZHlyICAgICAxLjMuMFxu4pyUIHB1cnJyICAgICAxLjAuMSAgICAgXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG7inJYgZHBseXI6OmZpbHRlcigpIG1hc2tzIHN0YXRzOjpmaWx0ZXIoKVxu4pyWIGRwbHlyOjpsYWcoKSAgICBtYXNrcyBzdGF0czo6bGFnKClcbuKEuSBVc2UgdGhlIGNvbmZsaWN0ZWQgcGFja2FnZSAoPGh0dHA6Ly9jb25mbGljdGVkLnItbGliLm9yZy8+KSB0byBmb3JjZSBhbGwgY29uZmxpY3RzIHRvIGJlY29tZSBlcnJvcnNcbiJ9 -->
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.1     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
 ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ✔ purrr     1.0.1     
-── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
@@ -1801,9 +1801,9 @@ tp53_status &lt;- read_tsv(file.path(
   &quot;tp53_altered_status.tsv&quot;), guess_max = 100000) %&gt;% 
   select(-Kids_First_Biospecimen_ID_DNA, -Kids_First_Biospecimen_ID_RNA)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogOTI2MCBDb2x1bW5zOiAxNlxu4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDgpOiBzYW1wbGVfaWQsIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURfRE5BLCBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELi4uXG5kYmwgKDgpOiB0cDUzX3Njb3JlLCBTTlZfaW5kZWxfY291bnRzLCBDTlZfbG9zc19jb3VudHMsIFNWX2NvdW50cywgRnVzaW9uX2NvLi4uXG5cbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogOTI2MCBDb2x1bW5zOiAxNlxu4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDgpOiBzYW1wbGVfaWQsIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURfRE5BLCBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELi4uXG5kYmwgKDgpOiB0cDUzX3Njb3JlLCBTTlZfaW5kZWxfY291bnRzLCBDTlZfbG9zc19jb3VudHMsIFNWX2NvdW50cywgRnVzaW9uX2NvLi4uXG5cbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
 <pre><code>Rows: 9260 Columns: 16
-── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+── Column specification ────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
 chr (8): sample_id, Kids_First_Biospecimen_ID_DNA, Kids_First_Biospecimen_ID...
 dbl (8): tp53_score, SNV_indel_counts, CNV_loss_counts, SV_counts, Fusion_co...
@@ -1814,11 +1814,11 @@ dbl (8): tp53_score, SNV_indel_counts, CNV_loss_counts, SV_counts, Fusion_co...
 <!-- rnb-source-begin eyJkYXRhIjoiaGdnX3N1YnR5cGVzIDwtIHJlYWRfdHN2KGZpbGUucGF0aChyZXN1bHRzX2RpcixcIkhHR19jbGVhbmVkX2FsbF90YWJsZS50c3ZcIikpICJ9 -->
 <pre class="r"><code>hgg_subtypes &lt;- read_tsv(file.path(results_dir,&quot;HGG_cleaned_all_table.tsv&quot;)) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTUxMiBDb2x1bW5zOiA0NVxu4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDM4KTogS2lkc19GaXJzdF9QYXJ0aWNpcGFudF9JRCwgS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCwgc2FtcGxlX2lkLCBpLi4uXG5kYmwgICg3KTogYWdlX2F0X2RpYWdub3Npc195ciwgRk9YRzFfZXhwcmVzc2lvbl96c2NvcmUsIE9MSUcyX2V4cHJlc3Npb25fenNjLi4uXG5cbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>Rows: 1512 Columns: 45
-── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMTUxMiBDb2x1bW5zOiA0N1xu4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIlxcdFwiXG5jaHIgKDQwKTogS2lkc19GaXJzdF9QYXJ0aWNpcGFudF9JRCwgS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCwgc2FtcGxlX2lkLCBpLi4uXG5kYmwgICg3KTogYWdlX2F0X2RpYWdub3Npc195ciwgRk9YRzFfZXhwcmVzc2lvbl96c2NvcmUsIE9MSUcyX2V4cHJlc3Npb25fenNjLi4uXG5cbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 1512 Columns: 47
+── Column specification ────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
-chr (38): Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, i...
+chr (40): Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, i...
 dbl  (7): age_at_diagnosis_yr, FOXG1_expression_zscore, OLIG2_expression_zsc...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
@@ -1856,11 +1856,12 @@ dbl  (7): age_at_diagnosis_yr, FOXG1_expression_zscore, OLIG2_expression_zsc...
   arrange(Kids_First_Participant_ID, sample_id) %&gt;%
   write_tsv(file.path(results_dir,&quot;HGG_molecular_subtype_tp53.tsv&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZyBpbiBsZWZ0X2pvaW4oLiwgdHA1M19zdGF0dXMsIGJ5ID0gYyhcInNhbXBsZV9pZFwiKSk6IERldGVjdGVkIGFuIHVuZXhwZWN0ZWQgbWFueS10by1tYW55IHJlbGF0aW9uc2hpcCBiZXR3ZWVuIGB4YCBhbmQgYHlgLlxu4oS5IFJvdyAyOCBvZiBgeGAgbWF0Y2hlcyBtdWx0aXBsZSByb3dzIGluIGB5YC5cbuKEuSBSb3cgMzE4NiBvZiBgeWAgbWF0Y2hlcyBtdWx0aXBsZSByb3dzIGluIGB4YC5cbuKEuSBJZiBhIG1hbnktdG8tbWFueSByZWxhdGlvbnNoaXAgaXMgZXhwZWN0ZWQsIHNldCBgcmVsYXRpb25zaGlwID0gXCJtYW55LXRvLW1hbnlcImAgdG8gc2lsZW5jZSB0aGlzIHdhcm5pbmcuXG4ifQ== -->
+<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZyBpbiBsZWZ0X2pvaW4oLiwgdHA1M19zdGF0dXMsIGJ5ID0gYyhcInNhbXBsZV9pZFwiKSk6IERldGVjdGVkIGFuIHVuZXhwZWN0ZWQgbWFueS10by1tYW55IHJlbGF0aW9uc2hpcCBiZXR3ZWVuIGB4YCBhbmQgYHlgLlxu4oS5IFJvdyAyOCBvZiBgeGAgbWF0Y2hlcyBtdWx0aXBsZSByb3dzIGluIGB5YC5cbuKEuSBSb3cgMzE4NiBvZiBgeWAgbWF0Y2hlcyBtdWx0aXBsZSByb3dzIGluIGB4YC5cbuKEuSBJZiBhIG1hbnktdG8tbWFueSByZWxhdGlvbnNoaXAgaXMgZXhwZWN0ZWQsIHNldCBgcmVsYXRpb25zaGlwID1cbiAgXCJtYW55LXRvLW1hbnlcImAgdG8gc2lsZW5jZSB0aGlzIHdhcm5pbmcuXG4ifQ== -->
 <pre><code>Warning in left_join(., tp53_status, by = c(&quot;sample_id&quot;)): Detected an unexpected many-to-many relationship between `x` and `y`.
 ℹ Row 28 of `x` matches multiple rows in `y`.
 ℹ Row 3186 of `y` matches multiple rows in `x`.
-ℹ If a many-to-many relationship is expected, set `relationship = &quot;many-to-many&quot;` to silence this warning.</code></pre>
+ℹ If a many-to-many relationship is expected, set `relationship =
+  &quot;many-to-many&quot;` to silence this warning.</code></pre>
 <!-- rnb-warning-end -->
 <!-- rnb-chunk-end -->
 </div>
