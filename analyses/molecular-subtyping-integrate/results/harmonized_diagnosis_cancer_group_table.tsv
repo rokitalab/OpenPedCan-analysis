@@ -156,7 +156,6 @@ PBTA	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma	No	Yes
 DGD	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma	No	Yes
 PBTA	High-grade glioma, IDH-mutant	High-grade glioma	Yes	No
 DGD	Histiocytic tumor	Histiocytic tumor	No	No
-PBTA	Juvenile xanthogranuloma	Histiocytic tumor	No	Yes
 DGD	Histiocytic Tumor	Histiocytic tumor	No	Yes
 DGD	Hodgkin's lymphoma	Hodgkin's lymphoma	No	No
 PBTA	Infant-type hemispheric glioma, ALK-altered	Infant-type hemispheric glioma	Yes	No
@@ -167,6 +166,7 @@ DGD	Inflammatory Myofibroblastic Tumor	Inflammatory Myofibroblastic Tumor	No	No
 PBTA	Myofibroblastic tumor	Inflammatory Myofibroblastic Tumor	No	Yes
 DGD	Intrahepatic Cholangiocarcinoma	Intrahepatic Cholangiocarcinoma	No	No
 PBTA	Intraneural perineuroma	Intraneural perineuroma	No	No
+PBTA	Juvenile xanthogranuloma	Juvenile xanthogranuloma	No	No
 DGD	Juvenile Xanthogranuloma	Juvenile xanthogranuloma	No	Yes
 PBTA	Langerhans Cell histiocytosis	Langerhans Cell histiocytosis	No	No
 DGD	Langerhans Cell histiocytosis	Langerhans Cell histiocytosis	No	No
