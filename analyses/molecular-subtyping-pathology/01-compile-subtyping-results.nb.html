@@ -3108,22 +3108,14 @@ nbl_results_file &lt;- file.path(nbl_dir, results_dir, &quot;neuroblastoma_molec
 <h2>Read in data</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbIiMgc3BsaXQgIiwiaGlzdG9sb2dpZXNfZGYgPC0gcmVhZF90c3YoaGlzdG9sb2dpZXNfZmlsZSwgZ3Vlc3NfbWF4ID0gMTAwMDAwLCBjb2xfdHlwZXMgPSBjb2xzKC5kZWZhdWx0ID0gXCJjXCIpKSIsImNyYW5pb19yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGNyYW5pb19yZXN1bHRzX2ZpbGUpIiwiZXdzX3Jlc3VsdHNfZGYgPC0gcmVhZF90c3YoZXdzX3Jlc3VsdHNfZmlsZSkiLCJlcG5fcmVzdWx0c19kZiA8LSByZWFkX3RzdihlcG5fcmVzdWx0c19maWxlKSIsImhnZ19yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGhnZ19yZXN1bHRzX2ZpbGUpIl19 -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgc3BsaXQgIiwiaGlzdG9sb2dpZXNfZGYgPC0gcmVhZF90c3YoaGlzdG9sb2dpZXNfZmlsZSwgZ3Vlc3NfbWF4ID0gMTAwMDAwLCBjb2xfdHlwZXMgPSBjb2xzKC5kZWZhdWx0ID0gXCJjXCIpKSIsImNyYW5pb19yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGNyYW5pb19yZXN1bHRzX2ZpbGUpIiwiZXdzX3Jlc3VsdHNfZGYgPC0gcmVhZF90c3YoZXdzX3Jlc3VsdHNfZmlsZSkiLCJlcG5fcmVzdWx0c19kZiA8LSByZWFkX3RzdihlcG5fcmVzdWx0c19maWxlKSIsImhnZ19yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGhnZ19yZXN1bHRzX2ZpbGUpIiwibGdhdF9yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGxnYXRfcmVzdWx0c19maWxlKSIsIm1iX3Jlc3VsdHNfZGYgPC0gcmVhZF90c3YobWJfcmVzdWx0c19maWxlKSIsIm5ldXJvY3l0b21hX3Jlc3VsdHNfZGYgPC0gcmVhZF90c3YobmV1cm9jeXRvbWFfcmVzdWx0c19maWxlKSIsImVtYnJ5b25hbF9yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGVtYnJ5b25hbF9yZXN1bHRzX2ZpbGUpIiwiY2hvcmRvbWFfcmVzdWx0c19kZiA8LSByZWFkX3RzdihjaG9yZG9tYV9yZXN1bHRzX2ZpbGUpIiwiYXRydF9yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KGF0cnRfcmVzdWx0c19maWxlKSIsIm5ibF9yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KG5ibF9yZXN1bHRzX2ZpbGUpIl19 -->
 <pre class="r"><code># split 
 histologies_df &lt;- read_tsv(histologies_file, guess_max = 100000, col_types = cols(.default = &quot;c&quot;))
 cranio_results_df &lt;- read_tsv(cranio_results_file)
 ews_results_df &lt;- read_tsv(ews_results_file)
 epn_results_df &lt;- read_tsv(epn_results_file)
-hgg_results_df &lt;- read_tsv(hgg_results_file)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZzogT25lIG9yIG1vcmUgcGFyc2luZyBpc3N1ZXMsIGNhbGwgYHByb2JsZW1zKClgIG9uIHlvdXIgZGF0YSBmcmFtZSBmb3IgZGV0YWlscyxcbmUuZy46XG4gIGRhdCA8LSB2cm9vbSguLi4pXG4gIHByb2JsZW1zKGRhdClcbiJ9 -->
-<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
-e.g.:
-  dat &lt;- vroom(...)
-  problems(dat)</code></pre>
-<!-- rnb-warning-end -->
-<!-- rnb-source-begin eyJkYXRhIjpbImxnYXRfcmVzdWx0c19kZiA8LSByZWFkX3RzdihsZ2F0X3Jlc3VsdHNfZmlsZSkiLCJtYl9yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KG1iX3Jlc3VsdHNfZmlsZSkiLCJuZXVyb2N5dG9tYV9yZXN1bHRzX2RmIDwtIHJlYWRfdHN2KG5ldXJvY3l0b21hX3Jlc3VsdHNfZmlsZSkiLCJlbWJyeW9uYWxfcmVzdWx0c19kZiA8LSByZWFkX3RzdihlbWJyeW9uYWxfcmVzdWx0c19maWxlKSIsImNob3Jkb21hX3Jlc3VsdHNfZGYgPC0gcmVhZF90c3YoY2hvcmRvbWFfcmVzdWx0c19maWxlKSIsImF0cnRfcmVzdWx0c19kZiA8LSByZWFkX3RzdihhdHJ0X3Jlc3VsdHNfZmlsZSkiLCJuYmxfcmVzdWx0c19kZiA8LSByZWFkX3RzdihuYmxfcmVzdWx0c19maWxlKSJdfQ== -->
-<pre class="r"><code>lgat_results_df &lt;- read_tsv(lgat_results_file)
+hgg_results_df &lt;- read_tsv(hgg_results_file)
+lgat_results_df &lt;- read_tsv(lgat_results_file)
 mb_results_df &lt;- read_tsv(mb_results_file)
 neurocytoma_results_df &lt;- read_tsv(neurocytoma_results_file)
 embryonal_results_df &lt;- read_tsv(embryonal_results_file)
