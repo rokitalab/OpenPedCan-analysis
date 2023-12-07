@@ -1396,7 +1396,6 @@ PT_YM51XZH0	7316-5929	BS_6N7YE1A4	Ependymal tumor	Ependymoma	Posterior fossa gro
 PT_SYSCTVT8	7316-7113	BS_6N8TEKH6	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Progressive	Adamantinomatous craniopharyngioma
 PT_KSP2DSPE	7316-5468	BS_6NBTFA33	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Adamantinomatous craniopharyngioma
 PT_NYBH025T	7316-3069	BS_6NPSZJ4C	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping	Progressive	NA
-PT_98QMQZY7	7316-464	BS_6NRTJSYK	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_98QMQZY7	7316-464	BS_6NRTJSYK	Tumor of pineal region	Pineoblastoma	Pineoblastoma, Group 1	PB, Group 1	PB, Group 1A	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_9AHA6KW3	7316-395	BS_6NTXGQAC	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	NA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_2ECVKTTQ	7316-2154	BS_6P50QTPP	Low-grade astrocytic tumor	LGAT	Low-grade glioma, FGFR, NF1-germline	LGG, FGFR, NF1-germline	NA	Updated via OpenPedCan subtyping	Recurrence	NA
@@ -3867,7 +3866,6 @@ PT_VQDNSYXM	7316-1637	BS_JBY9S5D4	Neuronal and mixed neuronal-glial tumor	GNT	Gl
 PT_2CJ31SBX	7316-3624	BS_JC2187NA	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	Initial CNS Tumor	NA
 PT_R5T773FS	7316-8029	BS_JC7E55BV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_K32CWBQF	7316-5893	BS_JC7WDK1A	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	NA	Initial CNS Tumor	NA
-PT_98QMQZY7	7316-464	BS_JC8YV5V9	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_98QMQZY7	7316-464	BS_JC8YV5V9	Tumor of pineal region	Pineoblastoma	Pineoblastoma, Group 1	PB, Group 1	PB, Group 1A	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_AH6K40Q7	7316-7808	BS_JCKGMNR0	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	Initial CNS Tumor	NA
 PT_GY0QSY4H	7316-1075	BS_JCPKYHKY	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	CRANIO, ADAM	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
@@ -4781,7 +4779,6 @@ PT_ZZTQQVCT	7316-2723	BS_PDD77KMJ	Low-grade astrocytic tumor	LGAT	NA	LGG, To be 
 PT_XZGWKXC5	7316-7494	BS_PDF449DD	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Low-grade glioma, wildtype
 PT_MFF8XQES	NA	BS_PDH51MYK	Chordoma	Chordoma	NA	NA	NA	NA	Primary Tumor	NA
 PT_J9B6VRH8	7316-6988	BS_PDK85C2J	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	NA	Updated via OpenPedCan subtyping	Recurrence	NA
-PT_98QMQZY7	7316-464	BS_PDNXHWQ8	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_98QMQZY7	7316-464	BS_PDNXHWQ8	Tumor of pineal region	Pineoblastoma	Pineoblastoma, Group 1	PB, Group 1	PB, Group 1A	Subtype based on methylation;Updated via OpenPedCan subtyping	Initial CNS Tumor	NA
 PT_A9CDRD3E	NA	BS_PDPMDS47	Chordoma	Chordoma	NA	NA	NA	NA	Primary Tumor	NA
 PT_23NZGSRJ	7316-4509	BS_PDPN598X	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	Deceased	NA
