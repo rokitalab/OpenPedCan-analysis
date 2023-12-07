@@ -1,4 +1,4 @@
-SV_chrom	SV_start	SV_end	SV_length	Kids.First.Biospecimen.ID.Tumor	SV_type	Gene_name	ALT	sample_id	tumor_descriptor	composition
+SV_chrom	SV_start	SV_end	SV_length	Kids_First_Biospecimen_ID	SV_type	Gene_name	ALT	sample_id	tumor_descriptor	composition
 17	7354503	7802588	-448084	BS_YG6FYM9A	DEL	TP53	<DEL>	7316-5423	Deceased	Solid Tissue
 17	4668982	81970414	-77300981	BS_544KFC5J	DEL	TP53	<DEL>	7316-5304	Progressive	Solid Tissue
 17	1931889	13210487	11278598	BS_28HAR2FT	INV	TP53	<INV>	7316-8044	Deceased	Solid Tissue

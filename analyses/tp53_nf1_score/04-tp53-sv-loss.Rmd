@@ -120,10 +120,12 @@ putative_onco_tp53_fusion <- putative_onco_fusion %>%
   ) %>%
   dplyr::select("Sample",
                 "sample_id",
+                "tumor_descriptor",
+                "composition",
                 "FusionName",
                 "RightBreakpoint",
                 "LeftBreakpoint") %>%
-  reshape2::melt(c("Sample","sample_id","FusionName"))
+  reshape2::melt(c("Sample","sample_id", "tumor_descriptor", "composition", "FusionName"))
 ```
 
 ### Generate Granges and overlaps
@@ -152,28 +154,36 @@ if(nrow(putative_onco_tp53_fusion) > 0) {
     tidyr::unnest(exon_rank) %>% # split into new rows
     dplyr::filter(exon_rank=="1") %>%
     dplyr::select(starts_with("putative_onco")) %>%
-    dplyr::rename_at(vars(starts_with("putative_onco")),~stringr::str_remove(.,"putative_onco_tp53_fusion_gr."))
+    dplyr::rename_at(vars(starts_with("putative_onco")),~stringr::str_remove(.,"putative_onco_tp53_fusion_gr.")) %>%
+    select(-value)
   
   # Check for intron overlap
   bk_overlaps_intron <- IRanges::mergeByOverlaps(putative_onco_tp53_fusion_gr,intron) %>%
     as.data.frame() %>%
     dplyr::filter(grepl("ENSG00000141510",gene_id)) %>%
     dplyr::select(starts_with("putative_onco")) %>%
-    dplyr::rename_at(vars(starts_with("putative_onco")),~str_remove(.,"putative_onco_tp53_fusion_gr.")) 
+    dplyr::rename_at(vars(starts_with("putative_onco")),~str_remove(.,"putative_onco_tp53_fusion_gr."))  %>%
+    select(-value)
   
   # Save
   if (nrow(bk_overlaps_intron) == 0) {
     # only saving fusion calls overlapping exon 1
-    bk_overlaps_exon %>% 
+    bk_overlaps_exon %>%
+      unique() %>%
+      dplyr::rename(Kids_First_Biospecimen_ID = Sample) %>%
       write_tsv(file.path(results_dir, "fusion_bk_tp53_loss.tsv"))
   }else if (nrow(bk_overlaps_exon) == 0) {
     # only saving fusion calls overlapping intron 1
     bk_overlaps_intron %>% 
+      unique() %>%
+      dplyr::rename(Kids_First_Biospecimen_ID = Sample) %>%
       write_tsv(file.path(results_dir, "fusion_bk_tp53_loss.tsv"))
   } else {
     # bind calls overlapping exon1 or intron1
     bind_rows(bk_overlaps_exon,
               bk_overlaps_intron) %>%
+      unique() %>%
+      dplyr::rename(Kids_First_Biospecimen_ID = Sample) %>%
       write_tsv(file.path(results_dir, "fusion_bk_tp53_loss.tsv"))
   }
   
@@ -193,7 +203,8 @@ sv_with_loss_cnv <- manta_sv_tp53 %>%
   filter(sample_id %in% cnv_tp53_loss$sample_id)
 
 sv_with_loss_cnv
-sv_with_loss_cnv %>% dplyr::pull(Kids.First.Biospecimen.ID.Tumor)%>% unique()
+sv_with_loss_cnv %>% dplyr::pull(Kids.First.Biospecimen.ID.Tumor) %>% 
+  unique()
 ```
 BS_3NX3RBCX have a CNV loss and multiple SV breakpoints overlapping TP53 locus!
 
@@ -244,6 +255,7 @@ if (nrow(sv_with_lowexpr) == 0) {
     sv_with_loss_cnv,
     sv_with_lowexpr
   ) %>%
+    dplyr::rename(Kids_First_Biospecimen_ID = Kids.First.Biospecimen.ID.Tumor) %>%
     write_tsv(file.path(results_dir, "sv_overlap_tp53.tsv"))
 }
 ```

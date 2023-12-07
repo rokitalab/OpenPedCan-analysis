@@ -48,6 +48,7 @@ if ( params$base_run ==0 ){
 }
 
 histology <- clinical %>%
+  filter(!is.na(pathology_diagnosis)) %>%
   dplyr::select("Kids_First_Biospecimen_ID",
         "sample_id",
         "Kids_First_Participant_ID",
@@ -55,6 +56,7 @@ histology <- clinical %>%
         "sample_type",
         "experimental_strategy",
         "composition",
+        "tumor_descriptor",
         "cohort")
  
 
@@ -94,7 +96,8 @@ cnv_domain_overlap <- read_tsv(
 sv_overlap <- read_tsv(
   file.path(
     results_dir,
-    "sv_overlap_tp53.tsv"))
+    "sv_overlap_tp53.tsv")) %>%
+  left_join(histology, by=c("Kids_First_Biospecimen_ID", "sample_id", "tumor_descriptor", "composition"))
 
 # Structural variant as a fusion in exon1/intron1
 fusion_overlap <- read_tsv(
@@ -167,28 +170,25 @@ consensus_tp53_snv_indel <- consensus_tp53_snv_indel %>%
 
 ## Gather SNV,CNV, classifier and cancer_predisposition values
 
-We will gather values per sample_id since DNA and RNA samples can be only matched by `sample_id`
+We will gather values per sample_id, composition, and tumor descriptor to match DNA and RNA
 
 
 ```{r}
 
 tp53_alterations <- histology %>%
   filter(experimental_strategy != "RNA-Seq") %>%
-  # filter for Tumors
-  filter(sample_type=="Tumor") %>%
   # join consensus calls overlapping hotspots
   left_join(consensus_tp53_snv_indel, 
             by=c("Kids_First_Biospecimen_ID"="Tumor_Sample_Barcode")) %>%
   # join filtered cnv losses
   left_join(cnv_domain_overlap,by=c("Kids_First_Biospecimen_ID"="biospecimen_id",
-                                    "sample_id", "Kids_First_Participant_ID", 
+                                    "sample_id", "tumor_descriptor", "Kids_First_Participant_ID", 
                                     "composition")) %>%
   # join SV 
-  left_join(sv_overlap,by=c("Kids_First_Biospecimen_ID"="Kids.First.Biospecimen.ID.Tumor",
-                            "sample_id")) %>%
+  left_join(sv_overlap,by=c("Kids_First_Biospecimen_ID", "sample_id", "tumor_descriptor", "composition")) %>%
   dplyr::rename(Kids_First_Biospecimen_ID_DNA = Kids_First_Biospecimen_ID) %>%
   # join fusion
-  left_join(fusion_overlap,by="sample_id") 
+  left_join(fusion_overlap,by=c("sample_id", "tumor_descriptor", "composition")) 
 
 tp53_alterations_score <- tp53_alterations %>%
   # add classifier score
