@@ -11,6 +11,10 @@ bash run-molecular-subtyping-PB.sh
 
 `run-molecular-subtyping-PB.sh` is designed to be run as if it was called from this module directory even when called from outside of this directory.
 
+## Workflow of PB molecular subtyping
+
+![PB molecular subtyping workflow](./plot/pb_subtyping.png)
+
 
 ## Folder content
 
