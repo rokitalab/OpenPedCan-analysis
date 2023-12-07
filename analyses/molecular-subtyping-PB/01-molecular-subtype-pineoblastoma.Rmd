@@ -42,34 +42,34 @@ pb_meta <- histo %>%
   filter(pathology_diagnosis %in% path_dx_list_pb$exact_path_dx & 
            pathology_free_text_diagnosis %in% path_dx_list_pb$path_free_text_exact) %>% 
   mutate(molecular_subtype_methyl = case_when(
-    dkfz_v12_methylation_subclass == "PB_FOXR2" ~ "PB, FOXR2", 
-    dkfz_v12_methylation_subclass == "PIN_RB" ~ "PIN, RB1",
-    dkfz_v12_methylation_subclass == "PB_GRP1A" ~ "PB, group 1A",
-    dkfz_v12_methylation_subclass == "PB_GRP1B" ~ "PB, group 1B",
-    dkfz_v12_methylation_subclass == "PB_GRP2" ~ "PB, group 2")) 
+    dkfz_v12_methylation_subclass == "PB_FOXR2" ~ "PB, MYC/FOXR2", 
+    dkfz_v12_methylation_subclass == "PIN_RB" ~ "PB, RB1",
+    dkfz_v12_methylation_subclass == "PB_GRP1A" ~ "PB, Group 1A",
+    dkfz_v12_methylation_subclass == "PB_GRP1B" ~ "PB, Group 1B",
+    dkfz_v12_methylation_subclass == "PB_GRP2" ~ "PB, Group 2")) 
 
 ```
 
 ## there are four subtypes: 
-### pineoblastoma, miRNA processing-altered 1 (PB, group 1)
-### pineoblastoma, miRNA processing-altered 2 (PB, group 2)
+### pineoblastoma, miRNA processing-altered 1 (PB, Group 1)
+### pineoblastoma, miRNA processing-altered 2 (PB, Group 2)
 ### pineoblastoma, RB1-altered (PB, RB1)
-### pineoblastoma, MYC/FOXR2-activated (PB, MYC)
+### pineoblastoma, MYC/FOXR2-activated (PB, MYC/FOXR2)
 
 ## for now, subtyping is based on the methylation classification 
-## PB_FOXR2: pineoblastoma, MYC/FOXR2-activated (PB, FOXR2)
-## PB_GRP1A, PB_GRP1B: pineoblastoma, miRNA processing-altered 1 (PB, group 1)
-## PB_GRP2: pineoblastoma, miRNA processing-altered 2 (PB, group 2)
+## PB_FOXR2: pineoblastoma, MYC/FOXR2-activated (PB, MYC/FOXR2)
+## PB_GRP1A, PB_GRP1B: pineoblastoma, miRNA processing-altered 1 (PB, Group 1)
+## PB_GRP2: pineoblastoma, miRNA processing-altered 2 (PB, Group 2)
 ## PIN_RB: pineoblastoma, RB1-altered (PB, RB1)
 
 ```{r}
 
 pb_methy_with_subtype <- pb_meta %>% 
   filter(experimental_strategy == "Methylation" & dkfz_v12_methylation_subclass_score >= 0.8) %>% 
-  mutate(molecular_subtype = case_when(molecular_subtype_methyl == "PB, FOXR2" ~ "PB, FOXR2", 
-                                       molecular_subtype_methyl == "PIN, RB1" ~ "PB, RB1",
-                                       molecular_subtype_methyl %in% c("PB, group 1A", "PB, group 1B") ~ "PB, group 1",
-                                       molecular_subtype_methyl == "PB, group 2" ~ "PB, group 2"))
+  mutate(molecular_subtype = case_when(molecular_subtype_methyl == "PB, MYC/FOXR2" ~ "PB, MYC/FOXR2", 
+                                       molecular_subtype_methyl == "PB, RB1" ~ "PB, RB1",
+                                       molecular_subtype_methyl %in% c("PB, Group 1A", "PB, Group 1B") ~ "PB, Group 1",
+                                       molecular_subtype_methyl == "PB, Group 2" ~ "PB, Group 2"))
   
 
 pb_methy_without_subtype <- pb_meta %>% 
@@ -92,7 +92,8 @@ pb_meta_with_mol <- pb_meta %>%
   ## Assign samples without subtype as "PB, To be classified"
   mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "PB, To be classified", 
                                        TRUE ~ molecular_subtype)) %>%
-  write_tsv(file.path(result_dir, "pb-molelar-subtype.tsv"))
+  arrange(sample_id) %>%
+  write_tsv(file.path(result_dir, "pineo-molecular-subtypes.tsv"))
 
 ```
 

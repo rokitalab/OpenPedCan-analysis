@@ -25,7 +25,7 @@ histo <- readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"))
 ## the path dx and path free text is based on the methylation subypes:  
 ##  "PB_FOXR2", "PB_GRP1A", "PB_GRP1B", "PB_GRP2", "PIN_RB"
 ## The `pathology_diagnosis` fields for PB
-exact_path_dx <- c("Pineoblastoma", "Supratentorial or Spinal Cord PNET")
+exact_path_dx <- "Pineoblastoma"
 
 ## The `pathology_diagnosis` fields for PB
 path_free_text_exact <- c("pineoblastoma, who grade iv",                     
