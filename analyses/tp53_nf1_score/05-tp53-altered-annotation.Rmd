@@ -40,23 +40,12 @@ input_dir <- file.path(root_dir,
                          "analyses",
                          "tp53_nf1_score",
                          "input")
-# cell composition
-cell_line_composition <- read_tsv(file.path("..",
-                                            "molecular-subtyping-HGG",
-                                            "input",
-                                            "cell-line-composition.tsv"),
-                                  col_types = 
-                                    readr::cols( aliquot_id  = readr::col_character())) 
-
 # histology
 if ( params$base_run ==0 ){
   clinical<-read.delim(file.path(data_dir,"histologies.tsv"), stringsAsFactors = FALSE)
 } else{
   clinical<-read.delim(file.path(data_dir,"histologies-base.tsv"), stringsAsFactors = FALSE)  
 }
-
-# recording of "BS_ETC8R0TD" GMKF NBL sample; needs to be remove once updated in v12
-#clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
 
 histology <- clinical %>%
   dplyr::select("Kids_First_Biospecimen_ID",
@@ -66,9 +55,7 @@ histology <- clinical %>%
         "sample_type",
         "experimental_strategy",
         "composition",
-        "cohort") %>%
-   # merge cell line composition
-  left_join(cell_line_composition)
+        "cohort")
  
 
 # Cancer database
@@ -208,6 +195,7 @@ tp53_alterations_score <- tp53_alterations %>%
   full_join(classifier_score,by=c("sample_id",
                                   "composition",
                                   "cell_line_composition",
+                                  "cell_line_passage",
                                   "cancer_predispositions",
                                   "sample_type",
                                   "Kids_First_Participant_ID",

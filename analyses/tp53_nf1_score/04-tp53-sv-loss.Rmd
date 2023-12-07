@@ -52,7 +52,8 @@ if ( params$base_run ==0 ){
 # recording of "BS_ETC8R0TD" GMKF NBL sample; needs to be remove once updated in v12
 #clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
 
-histology <- dplyr::select(clinical,c("Kids_First_Biospecimen_ID", "sample_id"))
+histology <- clinical %>%
+  select(Kids_First_Biospecimen_ID, sample_id, tumor_descriptor, composition)
 
 # high confidence cnv losses from `03-tp53-cnv-loss-domain.Rmd`
 cnv_tp53_loss <- read_tsv(file.path(results_dir, "loss_overlap_domains_tp53.tsv"))

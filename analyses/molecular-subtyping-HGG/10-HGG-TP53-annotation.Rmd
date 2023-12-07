@@ -71,6 +71,7 @@ hgg_subtypes_2 <- hgg_subtypes %>%
                                                  "7316-6477_Derived Cell Line_Serum-free_11") ~ "HGG, H3 wildtype, TP53",
                                        TRUE ~ molecular_subtype)) %>%
   arrange(Kids_First_Participant_ID, sample_id) %>%
+  unique() %>%
   write_tsv(file.path(results_dir,"HGG_molecular_subtype_tp53.tsv"))
 
 ```
