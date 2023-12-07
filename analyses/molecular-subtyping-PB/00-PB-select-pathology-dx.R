@@ -28,17 +28,8 @@ histo <- readr::read_tsv(file.path(root_dir, "data", "histologies-base.tsv"))
 exact_path_dx <- "Pineoblastoma"
 
 ## The `pathology_diagnosis` fields for PB
-path_free_text_exact <- c("pineoblastoma, who grade iv",                     
-                         "pineoblastoma who iv",                            
-                         "pineoblastoma",                                   
-                         "embryonal tumor in keeping with pineoblastoma",   
-                         "pineoblastoma (who grade iv)",                    
-                         "pineoblastoma with dicer1 mutation, who grade iv",
-                         "pineoblastoma who grade iv",                      
-                         "pnet - pineoblastoma with calcification",         
-                         "pnet",                                            
-                         "pineal anlage tumor",                             
-                         "pineoblastoma, who grade 4")
+path_free_text_exact <- unique(histo$pathology_free_text_diagnosis[
+  grepl("pineoblastoma", histo$pathology_free_text_diagnosis, ignore.case = TRUE)], )
 
 ## Create a list with the strings we'll use for inclusion
 term_list <- list(exact_path_dx = exact_path_dx,

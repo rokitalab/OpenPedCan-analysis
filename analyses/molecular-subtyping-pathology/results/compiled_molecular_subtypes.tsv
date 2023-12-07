@@ -3412,6 +3412,9 @@ PT_97F1YCGF	7316-3026	BS_7YFAMEK4	Diffuse astrocytic and oligodendroglial tumor	
 PT_98QMQZY7	7316-464	BS_6NRTJSYK	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
 PT_98QMQZY7	7316-464	BS_JC8YV5V9	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
 PT_98QMQZY7	7316-464	BS_PDNXHWQ8	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
+PT_98QMQZY7	7316-464	BS_6NRTJSYK	Tumor of pineal region	Pineoblastoma	Pineoblastoma, Group 1	PB, Group 1	PB, Group 1A	Subtype based on methylation;Updated via OpenPedCan subtyping
+PT_98QMQZY7	7316-464	BS_JC8YV5V9	Tumor of pineal region	Pineoblastoma	Pineoblastoma, Group 1	PB, Group 1	PB, Group 1A	Subtype based on methylation;Updated via OpenPedCan subtyping
+PT_98QMQZY7	7316-464	BS_PDNXHWQ8	Tumor of pineal region	Pineoblastoma	Pineoblastoma, Group 1	PB, Group 1	PB, Group 1A	Subtype based on methylation;Updated via OpenPedCan subtyping
 PT_98T18T3B	7316-6686	BS_JK22KD4A	Tumor of pineal region	Pineoblastoma	NA	PB, To be classified	NA	NA
 PT_98T18T3B	7316-6686	BS_PKBE5QX6	Tumor of pineal region	Pineoblastoma	NA	PB, To be classified	NA	NA
 PT_98T18T3B	7316-6686	BS_R9WTTH5P	Tumor of pineal region	Pineoblastoma	NA	PB, To be classified	NA	NA
@@ -4782,6 +4785,7 @@ PT_G4N67N0D	7316-1057	BS_Y6CXCPED	Diffuse astrocytic and oligodendroglial tumor	
 PT_G4YH2YTZ	7316-6897	BS_0MV6XKWC	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
 PT_G65ZS4RM	7316-7071	BS_GN7RYJB8	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA
 PT_G65ZS4RM	ET_9ZWK8CA2	BS_3YJB85S7	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA
+PT_G6FP5J9Y	7316-7067	BS_AZJ4ED6K	Tumor of pineal region	Pineoblastoma	NA	PB, To be classified	NA	NA
 PT_G6H7DC0C	C4119147-Tumor	BS_6SY64H5J	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
 PT_G6H7DC0C	C4119147-Tumor	BS_09983DA9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
 PT_G6ZR8BCV	ET_BT68092D	BS_T2DG8VFJ	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA

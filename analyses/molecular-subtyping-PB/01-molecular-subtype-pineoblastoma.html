@@ -406,7 +406,7 @@ path_dx_list_pb &lt;- jsonlite::fromJSON(
 <div id="select-pb-samples-from-histologies" class="section level2">
 <h2>select PB samples from histologies</h2>
 <pre class="r"><code>pb_meta &lt;- histo %&gt;% 
-  filter(pathology_diagnosis %in% path_dx_list_pb$exact_path_dx &amp; 
+  filter(pathology_diagnosis %in% path_dx_list_pb$exact_path_dx | 
            pathology_free_text_diagnosis %in% path_dx_list_pb$path_free_text_exact) %&gt;% 
   mutate(molecular_subtype_methyl = case_when(
     dkfz_v12_methylation_subclass == &quot;PB_FOXR2&quot; ~ &quot;PB, MYC/FOXR2&quot;, 

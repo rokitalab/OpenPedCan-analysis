@@ -39,7 +39,7 @@ path_dx_list_pb <- jsonlite::fromJSON(
 ## select PB samples from histologies
 ```{r}
 pb_meta <- histo %>% 
-  filter(pathology_diagnosis %in% path_dx_list_pb$exact_path_dx & 
+  filter(pathology_diagnosis %in% path_dx_list_pb$exact_path_dx | 
            pathology_free_text_diagnosis %in% path_dx_list_pb$path_free_text_exact) %>% 
   mutate(molecular_subtype_methyl = case_when(
     dkfz_v12_methylation_subclass == "PB_FOXR2" ~ "PB, MYC/FOXR2", 
