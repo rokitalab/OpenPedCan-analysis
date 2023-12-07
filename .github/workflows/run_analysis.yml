@@ -45,13 +45,13 @@ jobs:
             entrypoint: molecular-subtyping-LGAT/run_subtyping.sh
             openpbta_subset: 0
             
-            - name: Molecular Subtyping - ATRT
+          - name: Molecular Subtyping - ATRT
             entrypoint: molecular-subtyping-ATRT/run-molecular-subtyping-ATRT.sh
             
-            - name: Molecular Subtyping - PB
+          - name: Molecular Subtyping - PB
             entrypoint: molecular-subtyping-PB/run-molecular-subtyping-PB.sh
             
-            - name: Molecular Subtyping - NBL
+          - name: Molecular Subtyping - NBL
             entrypoint: molecular-subtyping-NBL/run-molecular-subtyping-NBL.sh
 
           - name: Molecular Subtyping - PATHOLOGY/COMPILE
