@@ -527,7 +527,7 @@ biospecimen_ids_for_subset <- purrr::map(
 message(paste0("\nAppending biospecimen IDs of interest to lists..."))
 
 # for each rnaseq rds instance, add in biospecimen IDs for samples we know have
-# a positive example of NF1 mutation and TP53 for tp53_nf1_score, samples that 
+# a positive example of TP53 mutation for tp53_nf1_score, samples that 
 # can fully test the batch correction module, and of samples for patients 
 # we know have both methylation and rnaseq data 
 rds_files <- 
@@ -535,7 +535,7 @@ rds_files <-
 rds_files <- rds_files[-grep("tcga", rds_files)]
 rds_files <- rds_files[-grep("methyl", rds_files)]
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(rds_files, ~ append(.x, c(tp53_rnaseq, nf1_rnaseq, 
+  purrr::modify_at(rds_files, ~ append(.x, c(tp53_rnaseq, 
                                              polya_mycn_amp, polya_mycn_nonamp, 
                                              stranded_dmg, polya_dmg, 
                                              stranded_hgg, polya_hgg, 
@@ -567,10 +567,10 @@ biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
   purrr::modify_at(independent_files, ~ append(.x, rnaseq_samples))
 
 # for each snv instance, add in biospecimen IDs for samples we know have a
-# positive example of NF1 mutation and TP53 for tp53_nf1_score
+# positive example of TP53 mutation for tp53_nf1_score
 snv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "snv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq, nf1_dnaseq)))
+  purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq)))
 
 ## add non-GATK samples to cnv file 
   cnv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "cnv")
