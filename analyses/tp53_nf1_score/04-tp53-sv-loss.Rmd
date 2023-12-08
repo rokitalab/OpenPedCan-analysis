@@ -56,7 +56,7 @@ clinical_rna <- clinical %>%
 putative_onco_fusion <- read_tsv(file.path(data_dir, "fusion-putative-oncogenic.tsv"))
 manta_sv <- vroom(file.path(data_dir, "sv-manta.tsv.gz"))
 rna_expr <- readRDS(file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds")) %>%
-  select(clinical_rna$Kids_First_Biospecimen_ID)
+  dplyr::select(clinical_rna$Kids_First_Biospecimen_ID)
 
 # high confidence cnv losses from `03-tp53-cnv-loss-domain.Rmd`
 cnv_tp53_loss <- read_tsv(file.path(results_dir, "loss_overlap_domains_tp53.tsv"))
@@ -105,10 +105,6 @@ manta_sv_tp53 <- manta_sv %>%
   left_join(clinical,
     by = c("Kids.First.Biospecimen.ID.Tumor" = "Kids_First_Biospecimen_ID")
   )
-
-manta_sv_tp53 %>%
-  arrange(Kids.First.Biospecimen.ID.Tumor) %>%
-  knitr::kable()
 ```
 
 
@@ -202,10 +198,6 @@ High confidence cnv losses from `03-tp53-cnv-loss-domain.Rmd` overlap TP53 domai
 sv_with_loss_cnv <- manta_sv_tp53 %>%
   # filter to samples with SV within or overlapping TP53
   filter(sample_id %in% cnv_tp53_loss$sample_id)
-
-sv_with_loss_cnv
-sv_with_loss_cnv %>% dplyr::pull(Kids.First.Biospecimen.ID.Tumor) %>% 
-  unique()
 ```
 BS_3NX3RBCX have a CNV loss and multiple SV breakpoints overlapping TP53 locus!
 
@@ -232,7 +224,6 @@ sv_with_lowexpr <- manta_sv_tp53 %>%
   # filter to samples with SV within or overlapping TP53
   filter(sample_id %in% lowexpr_tp53_with_sv$sample_id)
 
-sv_with_lowexpr
 ```
 No sample_ids with a SV within or overlapping TP53 have low expression of TP53!
 
