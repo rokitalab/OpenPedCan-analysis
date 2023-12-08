@@ -4,7 +4,7 @@ author: "K S Gaonkar (D3B)"
 output: html_notebook
 params:
   base_run:
-    label: "1/0 to run with base histology"
+    label: "1/0 to run with base clinical"
     value: 0
     input: integer
 ---
@@ -18,6 +18,7 @@ We want to subset SV calls which will possibly	lead to loss of function to use f
 ### Setup
 ```{r}
 library("ggpubr")
+library("vroom")
 library("ggthemes")
 library(data.table)
 library("tidyverse")
@@ -39,21 +40,23 @@ if (!dir.exists(results_dir)) {
 
 ### Input files
 ```{r}
-putative_onco_fusion <- read_tsv(file.path(data_dir, "fusion-putative-oncogenic.tsv"))
-manta_sv <- fread(file.path(data_dir, "sv-manta.tsv.gz"), sep = "\t") %>% as_tibble()
-rna_expr <- readRDS(file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds"))
-
 if ( params$base_run ==0 ){
-  clinical<-read.delim(file.path(data_dir,"histologies.tsv"), stringsAsFactors = FALSE)
+  clinical<-read_tsv(file.path(data_dir,"histologies.tsv"), guess_max = 100000) %>%
+  filter(!is.na(pathology_diagnosis),
+         !cohort %in% c("TCGA", "GTEx"))
 } else{
-  clinical<-read.delim(file.path(data_dir,"histologies-base.tsv"), stringsAsFactors = FALSE)  
+  clinical<-read_tsv(file.path(data_dir,"histologies-base.tsv"), guess_max = 100000) %>%
+  filter(!is.na(pathology_diagnosis),
+         !cohort %in% c("TCGA", "GTEx"))
 }
 
-# recording of "BS_ETC8R0TD" GMKF NBL sample; needs to be remove once updated in v12
-#clinical$RNA_library[clinical$Kids_First_Biospecimen_ID == "BS_ETC8R0TD"] <- "stranded"
+clinical_rna <- clinical %>%
+  filter(experimental_strategy == "RNA-Seq")
 
-histology <- clinical %>%
-  select(Kids_First_Biospecimen_ID, sample_id, tumor_descriptor, composition)
+putative_onco_fusion <- read_tsv(file.path(data_dir, "fusion-putative-oncogenic.tsv"))
+manta_sv <- vroom(file.path(data_dir, "sv-manta.tsv.gz"))
+rna_expr <- readRDS(file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds")) %>%
+  select(clinical_rna$Kids_First_Biospecimen_ID)
 
 # high confidence cnv losses from `03-tp53-cnv-loss-domain.Rmd`
 cnv_tp53_loss <- read_tsv(file.path(results_dir, "loss_overlap_domains_tp53.tsv"))
@@ -86,7 +89,7 @@ intron <- GenomicFeatures::intronicParts(txdb, linked.to.single.gene.only=FALSE)
 ```
 
 ## SV breakpoints associated with TP53 loss 
-Since we want to capture TP53 loss phenotypes we will only keep breakpoints that are either DEL: deletion, INV: inversion and BND: translocations which are breakpoint notations with with 2 breakpoints in different chromosomes
+Since we want to capture TP53 loss phenotypes we will only keep breakpoints that are either DEL: deletion, INV: inversion and BND: translocations which are breakpoint notations with 2 breakpoints in different chromosomes
  
 ```{r}
 manta_sv_tp53 <- manta_sv %>%
@@ -99,7 +102,7 @@ manta_sv_tp53 <- manta_sv %>%
       grepl("/TP53/", Gene_name),
     SV_type %in% c("BND", "INV", "DEL")
   ) %>%
-  left_join(histology,
+  left_join(clinical,
     by = c("Kids.First.Biospecimen.ID.Tumor" = "Kids_First_Biospecimen_ID")
   )
 
@@ -115,7 +118,7 @@ We will also add exon and intron information to this fusion call.
 ```{r}
 putative_onco_tp53_fusion <- putative_onco_fusion %>%
   filter(stringr::str_detect(FusionName,"^TP53--|--TP53$")) %>%
-  left_join(histology,
+  left_join(clinical,
             by = c("Sample" = "Kids_First_Biospecimen_ID")
   ) %>%
   dplyr::select("Sample",
@@ -154,16 +157,14 @@ if(nrow(putative_onco_tp53_fusion) > 0) {
     tidyr::unnest(exon_rank) %>% # split into new rows
     dplyr::filter(exon_rank=="1") %>%
     dplyr::select(starts_with("putative_onco")) %>%
-    dplyr::rename_at(vars(starts_with("putative_onco")),~stringr::str_remove(.,"putative_onco_tp53_fusion_gr.")) %>%
-    select(-value)
+    dplyr::rename_at(vars(starts_with("putative_onco")),~stringr::str_remove(.,"putative_onco_tp53_fusion_gr."))
   
   # Check for intron overlap
   bk_overlaps_intron <- IRanges::mergeByOverlaps(putative_onco_tp53_fusion_gr,intron) %>%
     as.data.frame() %>%
     dplyr::filter(grepl("ENSG00000141510",gene_id)) %>%
     dplyr::select(starts_with("putative_onco")) %>%
-    dplyr::rename_at(vars(starts_with("putative_onco")),~str_remove(.,"putative_onco_tp53_fusion_gr."))  %>%
-    select(-value)
+    dplyr::rename_at(vars(starts_with("putative_onco")),~str_remove(.,"putative_onco_tp53_fusion_gr.")) 
   
   # Save
   if (nrow(bk_overlaps_intron) == 0) {
@@ -220,7 +221,7 @@ lowexpr_tp53_with_sv <- rna_expr["TP53", ] %>%
   as.data.frame() %>%
   rownames_to_column(var = "Kids_First_Biospecimen_ID") %>%
   # add sample_id to expression df
-  left_join(histology,
+  left_join(clinical,
     by = c("Kids_First_Biospecimen_ID")
   ) %>%
   # filter to keep only low expressed TP53 sample_ids
