@@ -55,8 +55,7 @@ clinical_rna <- clinical %>%
 
 putative_onco_fusion <- read_tsv(file.path(data_dir, "fusion-putative-oncogenic.tsv"))
 manta_sv <- vroom(file.path(data_dir, "sv-manta.tsv.gz"))
-rna_expr <- readRDS(file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds")) %>%
-  dplyr::select(clinical_rna$Kids_First_Biospecimen_ID)
+rna_expr <- readRDS(file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds"))
 
 # high confidence cnv losses from `03-tp53-cnv-loss-domain.Rmd`
 cnv_tp53_loss <- read_tsv(file.path(results_dir, "loss_overlap_domains_tp53.tsv"))
