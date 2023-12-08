@@ -362,7 +362,8 @@ Adding biospecimen ids to `tp53_alterations_score_wide` and saving
 
 tp53_alterations_score_wide %>% 
   left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
-  select("Kids_First_Biospecimen_ID", "match_id", names(tp53_alterations_score_wide)) %>%
+  left_join(clinical[,c("Kids_First_Biospecimen_ID", "sample_id")]) %>%
+  select("Kids_First_Biospecimen_ID", "match_id", "sample_id", names(tp53_alterations_score_wide)) %>%
   arrange(match_id) %>%
   write_tsv(file.path(results_dir,"tp53_altered_status.tsv"))
 
