@@ -1,6 +1,6 @@
 ---
 title: "Tp53 SNV hotspots"
-author: "K S Gaonkar (D3B)"
+author: "K S Gaonkar, Jo Lynne Rokita"
 output: html_notebook
 params:
   base_run:
