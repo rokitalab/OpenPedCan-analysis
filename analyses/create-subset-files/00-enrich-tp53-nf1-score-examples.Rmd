@@ -36,6 +36,10 @@ The histologies file contains the information we need for identifying samples th
 ```{r}
 mutations_table <- read_tsv(file.path(results_dir, 
                                       "TP53_NF1_snv_alteration.tsv"))
+
+sv_table <- read_tsv(file.path(results_dir, 
+                                      "sv_overlap_tp53.tsv"))
+
 histologies_df <- read_tsv(file.path(data_dir, "histologies.tsv"),
                            col_types = cols(
                              molecular_subtype = col_character()
@@ -48,6 +52,8 @@ Get biospecimen identifiers for samples with mutations of interest.
 tp53_examples <- mutations_table %>%
   filter(Hugo_Symbol == "TP53") %>%
   pull(Tumor_Sample_Barcode)
+tp53_examples_sv <- sv_table %>%
+  pull(Kids.First.Biospecimen.ID.Tumor)
 nf1_examples <- mutations_table %>%
   filter(Hugo_Symbol == "NF1") %>%
   pull(Tumor_Sample_Barcode)
@@ -57,8 +63,24 @@ nf1_examples <- mutations_table %>%
 
 ```{r}
 # samples that also have RNA-seq data
-tp53_samples <- histologies_df %>%
+tp53_samples_mut <- histologies_df %>%
   filter(Kids_First_Biospecimen_ID %in% tp53_examples) %>%
+  group_by(group_id = paste(sample_id, Kids_First_Participant_ID, sep ="-")) %>%
+  ungroup() %>% 
+  inner_join(histologies_df %>%
+               filter(RNA_library == "stranded" | 
+                        RNA_library == "poly-A stranded" |
+                        RNA_library == "poly-A",
+                      sample_type == "Tumor", 
+                      experimental_strategy != "Methylation") %>%
+               group_by(group_id = paste(sample_id, 
+                                         Kids_First_Participant_ID, sep ="-")) %>%
+               ungroup() %>% 
+               select(group_id)) %>%
+  distinct()
+
+tp53_samples_sv <- histologies_df %>%
+  filter(Kids_First_Biospecimen_ID %in% tp53_examples_sv) %>%
   group_by(group_id = paste(sample_id, Kids_First_Participant_ID, sep ="-")) %>%
   ungroup() %>% 
   inner_join(histologies_df %>%
@@ -78,7 +100,7 @@ tp53_samples <- histologies_df %>%
 
 ```{r}
 # randomly selected PBTA positive examples
-histologies_df %>%
+tp53_mut_pbta <- histologies_df %>%
   filter(cohort == "PBTA",
          sample_type == "Tumor",
          experimental_strategy != "Methylation") %>% 
@@ -91,13 +113,30 @@ histologies_df %>%
                                  size = 3)
          ) %>% 
   arrange(group_id)
+
+tp53_sv_pbta <- histologies_df %>%
+  filter(cohort == "PBTA",
+         sample_type == "Tumor",
+         experimental_strategy == "WGS") %>% 
+  group_by(group_id = paste(sample_id, 
+                            Kids_First_Participant_ID, sep ="-")) %>% 
+  ungroup() %>% 
+  filter(group_id %in% sample(tp53_samples_sv %>% 
+                                 filter(cohort == "PBTA") %>% 
+                                 pull(group_id) %>% unique(),
+                                 size = 3)
+         ) %>% 
+  arrange(group_id)
+
+
+
 ```
 
 #### GMKF _TP53_ positive examples
 
 ```{r}
 # randomly selected GMKF positive examples
-histologies_df %>%
+tp53_mut_gmkf <- histologies_df %>%
   filter(cohort == "GMKF",
          sample_type == "Tumor",
          experimental_strategy != "Methylation") %>% 
@@ -116,7 +155,7 @@ histologies_df %>%
 
 ```{r}
 # randomly selected TARGET positive examples
-histologies_df %>%
+tp53_mut_target <-histologies_df %>%
   filter(cohort == "TARGET",
          sample_type == "Tumor",
          experimental_strategy != "Methylation") %>% 
@@ -131,87 +170,22 @@ histologies_df %>%
   arrange(group_id)
 ```
 
-### _NF1_ positive examples
 
-```{r}
-# randomly select samples that also have stranded RNA-seq data
-# samples that also have RNA-seq data
-nf1_samples <- histologies_df %>%
-  filter(Kids_First_Biospecimen_ID %in% nf1_examples) %>%
-  group_by(group_id = paste(sample_id, Kids_First_Participant_ID, sep ="-")) %>%
-  ungroup() %>% 
-  inner_join(histologies_df %>%
-               filter(RNA_library == "stranded" | 
-                        RNA_library == "poly-A stranded" |
-                        RNA_library == "poly-A",
-                      sample_type == "Tumor", 
-                      experimental_strategy != "Methylation") %>%
-               group_by(group_id = paste(sample_id, 
-                                         Kids_First_Participant_ID, sep ="-")) %>% 
-               ungroup() %>% 
-               select(group_id)) %>%
-  distinct()
+#### TP53 DNA
+```{r combine all samples}
+c(tp53_mut_pbta$Kids_First_Biospecimen_ID, tp53_sv_pbta$Kids_First_Biospecimen_ID, tp53_mut_gmkf$Kids_First_Biospecimen_ID, tp53_mut_target$Kids_First_Biospecimen_ID)
 ```
 
-#### PBTA _NF1_ positive examples
+#### TP53 RNA
+```{r combine all samples}
+rnaseq <- histologies_df %>%
+  filter(experimental_strategy == "RNA-Seq")
 
-```{r}
-# randomly selected PBTA positive examples
 histologies_df %>%
-  filter(cohort == "PBTA",
-         sample_type == "Tumor",
-         experimental_strategy != "Methylation") %>% 
-  group_by(group_id = paste(sample_id, 
-                            Kids_First_Participant_ID, sep ="-")) %>% 
-  ungroup() %>%
-  filter(group_id %in% sample(nf1_samples %>% 
-                                 filter(cohort == "PBTA") %>% 
-                                 pull(group_id) %>% unique(),
-                                 size = 3)
-         ) %>% 
-  arrange(group_id)
-```
-
-#### GMKF _NF1_ positive examples
-
-```{r}
-# randomly selected GMKF positive examples
-histologies_df %>%
-  filter(cohort == "GMKF",
-         sample_type == "Tumor",
-         experimental_strategy != "Methylation") %>% 
-  group_by(group_id = paste(sample_id, 
-                            Kids_First_Participant_ID, sep ="-")) %>% 
-  ungroup() %>%
-  filter(group_id %in% (nf1_samples %>% 
-                                 filter(cohort == "GMKF") %>% 
-                                 pull(group_id) %>% unique())
-         ) %>% 
-  arrange(group_id)
-```
-
-#### TARGET _NF1_ positive examples
-
-```{r}
-# randomly selected TARGET positive examples
-histologies_df %>%
-  filter(cohort == "TARGET",
-         sample_type == "Tumor",
-         experimental_strategy != "Methylation") %>% 
-  group_by(group_id = paste(sample_id, 
-                            Kids_First_Participant_ID, sep ="-")) %>% 
-  ungroup() %>%
-  filter(group_id %in% sample(nf1_samples %>% 
-                                 filter(cohort == "TARGET") %>% 
-                                 pull(group_id) %>% unique(),
-                                 size = 3)
-         ) %>% 
-  arrange(group_id)
-```
-
-### Session Info
-
-```{r}
-sessionInfo()
+  filter(Kids_First_Biospecimen_ID %in% c(tp53_mut_pbta$Kids_First_Biospecimen_ID, tp53_sv_pbta$Kids_First_Biospecimen_ID, tp53_mut_gmkf$Kids_First_Biospecimen_ID, tp53_mut_target$Kids_First_Biospecimen_ID)) %>%
+  select(Kids_First_Participant_ID, sample_id, composition, tumor_descriptor) %>%
+  unique() %>%
+  left_join(rnaseq[c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "sample_id", "composition", "tumor_descriptor")]) %>%
+  select(Kids_First_Biospecimen_ID)
 ```
 
