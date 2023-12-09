@@ -331,10 +331,11 @@ tp53_dnaseq <- c("BS_PPY0EWPG", "BS_RXN5T5YT", "BS_BA6AZWB3","BS_JSNJZERZ",
                  "BS_B8TG51S6", "BS_K62HBS01", "BS_WFCVBVDS", "TARGET-50-PAJNUP-01A-01D",
                  "TARGET-50-PAJNUP-01A-01R", "TARGET-40-PAKZZK-01A-01R",
                  "TARGET-40-PAKZZK-01A-01Y", "TARGET-40-PARKAF-01A-01D",
-                 "TARGET-40-PARKAF-01A-01R")
+                 "TARGET-40-PARKAF-01A-01R", "BS_B6E0477K", "BS_3NX3RBCX", "BS_YETTZ1NC", "TARGET-40-PATEEM-01A-01Y")
 tp53_rnaseq <- c("BS_WKESC3XN", "BS_KFD5128N", "BS_BA6AZWB3", "BS_WFCVBVDS",				
                  "BS_KGXP2KJE", "BS_RXN5T5YT", "BS_3RAM3K7B", "TARGET-40-PAKZZK-01A-01R",
-                 "TARGET-40-PARKAF-01A-01R", "TARGET-50-PAJNUP-01A-01R")
+                 "TARGET-40-PARKAF-01A-01R", "TARGET-50-PAJNUP-01A-01R", "BS_23QW0BBA", "BS_N13KZYRR", 
+                 "BS_NJ4WPQVK", "TARGET-40-PATEEM-01A-01R")
 
 #### Samples we need to include to run rnaseq-batch-correct module -------------
 
