@@ -573,10 +573,16 @@ snv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "snv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
   purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq)))
 
-## add non-GATK samples to cnv file 
-  cnv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "cnv")
+# for each SV instance, add in biospecimen IDs for samples we know have a
+# positive example of TP53 mutation for tp53_nf1_score
+sv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "sv-manta")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample)))
+  purrr::modify_at(sv_index, ~ append(.x, c(tp53_dnaseq)))
+
+## add non-GATK samples to cnv file 
+cnv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "cnv")
+biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
+  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample, tp53_dnaseq)))
 
 # remove any redundant that might result combining and appending to the 
 # biospecimen IDs lists for subsetting 
