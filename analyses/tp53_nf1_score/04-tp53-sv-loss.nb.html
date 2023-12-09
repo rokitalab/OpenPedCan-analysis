@@ -1945,34 +1945,95 @@ if (!file.exists(annotation_file)) {
   txdb &lt;- AnnotationDbi::loadDb(annotation_file)
 }</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiSW1wb3J0IGdlbm9taWMgZmVhdHVyZXMgZnJvbSB0aGUgZmlsZSBhcyBhIEdSYW5nZXMgb2JqZWN0IC4uLiBPS1xuUHJlcGFyZSB0aGUgJ21ldGFkYXRhJyBkYXRhIGZyYW1lIC4uLiBPS1xuTWFrZSB0aGUgVHhEYiBvYmplY3QgLi4uIFxuIn0= -->
-<pre><code>Import genomic features from the file as a GRanges object ... OK
-Prepare the &#39;metadata&#39; data frame ... OK
-Make the TxDb object ... </code></pre>
+<!-- rnb-message-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBHZW5vbWljRmVhdHVyZXNcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogQmlvY0dlbmVyaWNzXG5cbkF0dGFjaGluZyBwYWNrYWdlOiAnQmlvY0dlbmVyaWNzJ1xuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOmx1YnJpZGF0ZSc6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHVuaW9uXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20gJ3BhY2thZ2U6ZHBseXInOlxuXG4gICAgY29tYmluZSwgaW50ZXJzZWN0LCBzZXRkaWZmLCB1bmlvblxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOnN0YXRzJzpcblxuICAgIElRUiwgbWFkLCBzZCwgdmFyLCB4dGFic1xuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOmJhc2UnOlxuXG4gICAgYW55RHVwbGljYXRlZCwgYXBlcm0sIGFwcGVuZCwgYXMuZGF0YS5mcmFtZSwgYmFzZW5hbWUsIGNiaW5kLFxuICAgIGNvbG5hbWVzLCBkaXJuYW1lLCBkby5jYWxsLCBkdXBsaWNhdGVkLCBldmFsLCBldmFscSwgRmlsdGVyLCBGaW5kLFxuICAgIGdldCwgZ3JlcCwgZ3JlcGwsIGludGVyc2VjdCwgaXMudW5zb3J0ZWQsIGxhcHBseSwgTWFwLCBtYXBwbHksXG4gICAgbWF0Y2gsIG1nZXQsIG9yZGVyLCBwYXN0ZSwgcG1heCwgcG1heC5pbnQsIHBtaW4sIHBtaW4uaW50LFxuICAgIFBvc2l0aW9uLCByYW5rLCByYmluZCwgUmVkdWNlLCByb3duYW1lcywgc2FwcGx5LCBzZXRkaWZmLCBzb3J0LFxuICAgIHRhYmxlLCB0YXBwbHksIHVuaW9uLCB1bmlxdWUsIHVuc3BsaXQsIHdoaWNoLm1heCwgd2hpY2gubWluXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogUzRWZWN0b3JzXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IHN0YXRzNFxuXG5BdHRhY2hpbmcgcGFja2FnZTogJ1M0VmVjdG9ycydcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSAncGFja2FnZTpsdWJyaWRhdGUnOlxuXG4gICAgc2Vjb25kLCBzZWNvbmQ8LVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOmRwbHlyJzpcblxuICAgIGZpcnN0LCByZW5hbWVcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20gJ3BhY2thZ2U6dGlkeXInOlxuXG4gICAgZXhwYW5kXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20gJ3BhY2thZ2U6ZGF0YS50YWJsZSc6XG5cbiAgICBmaXJzdCwgc2Vjb25kXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20gJ3BhY2thZ2U6YmFzZSc6XG5cbiAgICBleHBhbmQuZ3JpZCwgSSwgdW5uYW1lXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogSVJhbmdlc1xuXG5BdHRhY2hpbmcgcGFja2FnZTogJ0lSYW5nZXMnXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tICdwYWNrYWdlOmx1YnJpZGF0ZSc6XG5cbiAgICAld2l0aGluJVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOmRwbHlyJzpcblxuICAgIGNvbGxhcHNlLCBkZXNjLCBzbGljZVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSAncGFja2FnZTpwdXJycic6XG5cbiAgICByZWR1Y2VcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20gJ3BhY2thZ2U6ZGF0YS50YWJsZSc6XG5cbiAgICBzaGlmdFxuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IEdlbm9tZUluZm9EYlxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBHZW5vbWljUmFuZ2VzXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IEFubm90YXRpb25EYmlcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogQmlvYmFzZVxuV2VsY29tZSB0byBCaW9jb25kdWN0b3JcblxuICAgIFZpZ25ldHRlcyBjb250YWluIGludHJvZHVjdG9yeSBtYXRlcmlhbDsgdmlldyB3aXRoXG4gICAgJ2Jyb3dzZVZpZ25ldHRlcygpJy4gVG8gY2l0ZSBCaW9jb25kdWN0b3IsIHNlZVxuICAgICdjaXRhdGlvbihcIkJpb2Jhc2VcIiknLCBhbmQgZm9yIHBhY2thZ2VzICdjaXRhdGlvbihcInBrZ25hbWVcIiknLlxuXG5cbkF0dGFjaGluZyBwYWNrYWdlOiAnQW5ub3RhdGlvbkRiaSdcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20gJ3BhY2thZ2U6ZHBseXInOlxuXG4gICAgc2VsZWN0XG4ifQ== -->
+<pre><code>Loading required package: GenomicFeatures
+Loading required package: BiocGenerics
+
+Attaching package: &#39;BiocGenerics&#39;
+
+The following objects are masked from &#39;package:lubridate&#39;:
+
+    intersect, setdiff, union
+
+The following objects are masked from &#39;package:dplyr&#39;:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from &#39;package:stats&#39;:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from &#39;package:base&#39;:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: &#39;S4Vectors&#39;
+
+The following objects are masked from &#39;package:lubridate&#39;:
+
+    second, second&lt;-
+
+The following objects are masked from &#39;package:dplyr&#39;:
+
+    first, rename
+
+The following object is masked from &#39;package:tidyr&#39;:
+
+    expand
+
+The following objects are masked from &#39;package:data.table&#39;:
+
+    first, second
+
+The following objects are masked from &#39;package:base&#39;:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: &#39;IRanges&#39;
+
+The following object is masked from &#39;package:lubridate&#39;:
+
+    %within%
+
+The following objects are masked from &#39;package:dplyr&#39;:
+
+    collapse, desc, slice
+
+The following object is masked from &#39;package:purrr&#39;:
+
+    reduce
+
+The following object is masked from &#39;package:data.table&#39;:
+
+    shift
+
+Loading required package: GenomeInfoDb
+Loading required package: GenomicRanges
+Loading required package: AnnotationDbi
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    &#39;browseVignettes()&#39;. To cite Bioconductor, see
+    &#39;citation(&quot;Biobase&quot;)&#39;, and for packages &#39;citation(&quot;pkgname&quot;)&#39;.
+
+
+Attaching package: &#39;AnnotationDbi&#39;
+
+The following object is masked from &#39;package:dplyr&#39;:
+
+    select</code></pre>
 <!-- rnb-message-end -->
-<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZyBpbiAuZ2V0X2Nkc19JRFgobWNvbHMwJHR5cGUsIG1jb2xzMCRwaGFzZSk6IFRoZSBcInBoYXNlXCIgbWV0YWRhdGEgY29sdW1uIGNvbnRhaW5zIG5vbi1OQSB2YWx1ZXMgZm9yIGZlYXR1cmVzIG9mIHR5cGVcbiAgc3RvcF9jb2Rvbi4gVGhpcyBpbmZvcm1hdGlvbiB3YXMgaWdub3JlZC5cbiJ9 -->
-<pre><code>Warning in .get_cds_IDX(mcols0$type, mcols0$phase): The &quot;phase&quot; metadata column contains non-NA values for features of type
-  stop_codon. This information was ignored.</code></pre>
-<!-- rnb-warning-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiT0tcbiJ9 -->
-<pre><code>OK</code></pre>
-<!-- rnb-message-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVHhEYiBvYmplY3Q6XG4jIERiIHR5cGU6IFR4RGJcbiMgU3VwcG9ydGluZyBwYWNrYWdlOiBHZW5vbWljRmVhdHVyZXNcbiMgRGF0YSBzb3VyY2U6IC9ob21lL3JzdHVkaW8vT3BlblBlZENhbi1hbmFseXNpcy9kYXRhL2dlbmNvZGUudjM5LnByaW1hcnlfYXNzZW1ibHkuYW5ub3RhdGlvbi5ndGYuZ3pcbiMgT3JnYW5pc206IE5BXG4jIFRheG9ub215IElEOiBOQVxuIyBtaVJCYXNlIGJ1aWxkIElEOiBOQVxuIyBHZW5vbWU6IE5BXG4jIE5iIG9mIHRyYW5zY3JpcHRzOiAyNDQ5OThcbiMgRGIgY3JlYXRlZCBieTogR2Vub21pY0ZlYXR1cmVzIHBhY2thZ2UgZnJvbSBCaW9jb25kdWN0b3JcbiMgQ3JlYXRpb24gdGltZTogMjAyMy0xMi0wOSAxOTo1NTowOCArMDAwMCAoU2F0LCAwOSBEZWMgMjAyMylcbiMgR2Vub21pY0ZlYXR1cmVzIHZlcnNpb24gYXQgY3JlYXRpb24gdGltZTogMS41MC40XG4jIFJTUUxpdGUgdmVyc2lvbiBhdCBjcmVhdGlvbiB0aW1lOiAyLjMuMVxuIyBEQlNDSEVNQVZFUlNJT046IDEuMlxuIn0= -->
-<pre><code>TxDb object:
-# Db type: TxDb
-# Supporting package: GenomicFeatures
-# Data source: /home/rstudio/OpenPedCan-analysis/data/gencode.v39.primary_assembly.annotation.gtf.gz
-# Organism: NA
-# Taxonomy ID: NA
-# miRBase build ID: NA
-# Genome: NA
-# Nb of transcripts: 244998
-# Db created by: GenomicFeatures package from Bioconductor
-# Creation time: 2023-12-09 19:55:08 +0000 (Sat, 09 Dec 2023)
-# GenomicFeatures version at creation time: 1.50.4
-# RSQLite version at creation time: 2.3.1
-# DBSCHEMAVERSION: 1.2</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjpbIiMgZXhvbiByZWdpb25zIiwiZXhvbiA8LSBHZW5vbWljRmVhdHVyZXM6OmV4b25pY1BhcnRzKHR4ZGIsIGxpbmtlZC50by5zaW5nbGUuZ2VuZS5vbmx5PUZBTFNFKSIsIiMgaW50cm9uIHJlZ2lvbnMiLCJpbnRyb24gPC0gR2Vub21pY0ZlYXR1cmVzOjppbnRyb25pY1BhcnRzKHR4ZGIsIGxpbmtlZC50by5zaW5nbGUuZ2VuZS5vbmx5PUZBTFNFKSJdfQ== -->
 <pre class="r"><code># exon regions
 exon &lt;- GenomicFeatures::exonicParts(txdb, linked.to.single.gene.only=FALSE)
