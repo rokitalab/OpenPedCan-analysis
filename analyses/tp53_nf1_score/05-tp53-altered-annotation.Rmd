@@ -312,9 +312,8 @@ tp53_alterations_score_wide <- tp53_alterations_score_wide %>%
               # check if more than 1 SNV is present
               # suggesting both alleles are mutated
               SNV_indel_counts > 1 |
-              # CN < ploidy and the framaeshift del or nonsense SNV overlaps a 
-              # functional domain
-              (overlap_domain >=1 & cn_less_ploidy == "yes") |
+              # framaeshift del or nonsense SNV overlaps a functional domain
+              (overlap_domain >=1) |
               # check if SNV mutant and has
               # Li-Fraumeni syndrome suggesting
               # germline TP53 mutant as cancer predisposition 
