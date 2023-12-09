@@ -115,7 +115,7 @@ cnv_domain_overlap[duplicated(cnv_domain_overlap$match_id) | duplicated(cnv_doma
 # or within gene locus of TP53
 ```{r SV overlaps}
 sv_overlap <- read_tsv(file.path(results_dir, "sv_overlap_tp53.tsv")) %>%
-  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
+  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")], by = "Kids_First_Biospecimen_ID") %>%
   select(match_id, Gene_name, SV_chrom, SV_start, SV_end, SV_length, SV_type) %>%
   unique() %>%
   # collapse SVs per match id
@@ -133,7 +133,7 @@ sv_overlap[duplicated(sv_overlap$match_id) | duplicated(sv_overlap$match_id, fro
 # Structural variant as a fusion in exon1/intron1
 ```{r fusions}
 fusion_overlap <- read_tsv(file.path(results_dir,"fusion_bk_tp53_loss.tsv")) %>%
-  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
+  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")], by = "Kids_First_Biospecimen_ID") %>%
   select(match_id, FusionName) %>%
   group_by(match_id) %>%
   summarize(Fusions = str_c(unique(FusionName), collapse = ";")) %>%
@@ -206,7 +206,7 @@ PF07710 <- bioMartDataPfamTp53 %>%
   select(domain_start, domain_end)
 
 consensus_tp53_snv_indel_match <- consensus_tp53_snv_indel %>%
-  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
+  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")], by = "Kids_First_Biospecimen_ID") %>%
   select(-Kids_First_Biospecimen_ID) %>%
   mutate(
     hotspot = case_when(
@@ -386,8 +386,8 @@ Adding biospecimen ids to `tp53_alterations_score_wide` and saving
 ```{r}
 
 tp53_alterations_score_wide %>% 
-  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
-  left_join(clinical[,c("Kids_First_Biospecimen_ID", "sample_id")]) %>%
+  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")], by = "match_id") %>%
+  left_join(clinical[,c("Kids_First_Biospecimen_ID", "sample_id")], by = "Kids_First_Biospecimen_ID") %>%
   select("Kids_First_Biospecimen_ID", "match_id", "sample_id", names(tp53_alterations_score_wide)) %>%
   arrange(match_id) %>%
   write_tsv(file.path(results_dir,"tp53_altered_status.tsv"))
