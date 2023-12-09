@@ -1790,8 +1790,8 @@ PT_0MJEAART	7316-549	BS_93W1TAZP	Diffuse astrocytic and oligodendroglial tumor	H
 PT_0MXPTTM3	7316-3220	BS_8SYN7GXG	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH, TP53	NA	Updated via OpenPedCan subtyping
 PT_0MXPTTM3	A09410	BS_R7NTZR4C	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH, TP53	NA	Updated via OpenPedCan subtyping
 PT_0MXPTTM3	A09410	BS_H3TYF6GD	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH, TP53	NA	Updated via OpenPedCan subtyping
-PT_0NHK26KP	C4116441-Tumor	BS_RN0VAY51	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_0NHK26KP	C4116441-Tumor	BS_SQ2FFGA1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
+PT_0NHK26KP	C4116441-Tumor	BS_RN0VAY51	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_0NHK26KP	C4116441-Tumor	BS_SQ2FFGA1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
 PT_0NMQYN1W	C4122468-Tumor	BS_ENP5SS80	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PT_0NMQYN1W	C4122468-Tumor	BS_YTMHB7J1	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PT_0NY38X3W	7316-1706	BS_FJKZ7952	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
@@ -2196,8 +2196,8 @@ PT_2S6A3RV8	7316-2711	BS_VYQSFAKR	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_2SCVQ2N6	7316-3631	BS_DKTVT34S	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
 PT_2SCVQ2N6	7316-3631	BS_NGHK9RZP	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
 PT_2SCVQ2N6	7316-3631	BS_ST3Z2B9B	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
-PT_2SFE7WGQ	7316-9497	BS_NNYXMSTX	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_2SFE7WGQ	7316-9497	BS_9HMAQJ93	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
+PT_2SFE7WGQ	7316-9497	BS_NNYXMSTX	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_2SFE7WGQ	7316-9497	BS_9HMAQJ93	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_2V5GJG0F	7316-6077	BS_MXXN64DR	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	NA	Updated via OpenPedCan subtyping
 PT_2V5GJG0F	7316-6077	BS_R3AJB6VS	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	NA	Updated via OpenPedCan subtyping
 PT_2VSDT9CK	7316-3575	BS_88V70PJ2	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA
@@ -2215,9 +2215,9 @@ PT_2WSNYKAC	7316-5320	BS_P3VBY9TH	Embryonal tumor	Medulloblastoma	Medulloblastom
 PT_2WVW55DA	7316-1890	BS_J0WD5KF2	Low-grade astrocytic tumor	LGAT	Glial-neuronal tumor, RTK	GNT, RTK	NA	Updated via OpenPedCan subtyping
 PT_2WVW55DA	7316-1890	BS_NYVVN7SD	Low-grade astrocytic tumor	LGAT	Glial-neuronal tumor, RTK	GNT, RTK	NA	Updated via OpenPedCan subtyping
 PT_2WVW55DA	7316-1890	BS_QAG1RDXN	Low-grade astrocytic tumor	LGAT	Glial-neuronal tumor, RTK	GNT, RTK	NA	Updated via OpenPedCan subtyping
-PT_2WVW55DA	7316-2092	BS_M7HCF7DW	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, NTRK-altered	IHG, NTRK-altered	IHG	Updated via OpenPedCan subtyping
-PT_2WVW55DA	7316-2092	BS_M28HG0NT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, NTRK-altered	IHG, NTRK-altered	IHG	Updated via OpenPedCan subtyping
-PT_2WVW55DA	7316-2092	BS_ZS0NAJHV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, NTRK-altered	IHG, NTRK-altered	IHG	Updated via OpenPedCan subtyping
+PT_2WVW55DA	7316-2092	BS_M7HCF7DW	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, NTRK-altered	IHG, NTRK-altered, TP53	IHG	Updated via OpenPedCan subtyping
+PT_2WVW55DA	7316-2092	BS_M28HG0NT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, NTRK-altered	IHG, NTRK-altered, TP53	IHG	Updated via OpenPedCan subtyping
+PT_2WVW55DA	7316-2092	BS_ZS0NAJHV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, NTRK-altered	IHG, NTRK-altered, TP53	IHG	Updated via OpenPedCan subtyping
 PT_2WVW55DA	7316-2100	BS_CXVGG342	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, ROS1-altered	IHG, ROS1-altered, TP53	IHG	Updated via OpenPedCan subtyping
 PT_2WVW55DA	7316-2100	BS_RG6JK7ZN	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, ROS1-altered	IHG, ROS1-altered, TP53	IHG	Updated via OpenPedCan subtyping
 PT_2WVW55DA	7316-2100	BS_KBRRF2J1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Infant-type hemispheric glioma, ROS1-altered	IHG, ROS1-altered, TP53	IHG	Updated via OpenPedCan subtyping
@@ -2304,10 +2304,10 @@ PT_38FS37DP	7316-2686	BS_D7WTD252	Mesenchymal non-meningothelial tumor	EWS	Ewing
 PT_38FS37DP	7316-2686	BS_DBEX7AG2	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	EWS	Updated via OpenPedCan subtyping
 PT_38FS37DP	7316-2686	BS_JX1PK0VW	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	EWS	Updated via OpenPedCan subtyping
 PT_38FS37DP	7316-2686	BS_M0FN1D8Y	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	NA	Updated via OpenPedCan subtyping
-PT_394ZA6P7	7316-5741	BS_WBPTY8NH	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_394ZA6P7	7316-5741	BS_1KP6JADZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_394ZA6P7	7316-6910	BS_028YFYJ6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_394ZA6P7	7316-6910	BS_Q41J76W9	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
+PT_394ZA6P7	7316-5741	BS_WBPTY8NH	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_394ZA6P7	7316-5741	BS_1KP6JADZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_394ZA6P7	7316-6910	BS_028YFYJ6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_394ZA6P7	7316-6910	BS_Q41J76W9	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_39HBKSGG	7316-908	BS_61E80SD6	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping
 PT_39HBKSGG	7316-908	BS_EKJTEJAR	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping
 PT_39HBKSGG	7316-908	BS_Z5D6G1S6	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping
@@ -3114,8 +3114,8 @@ PT_7MZRW1DH	7316-2582	BS_VKGX1F8Z	Embryonal tumor	ATRT	NA	ATRT, To be classified
 PT_7P6J57H3	7316-3226	BS_2X60Q1ET	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
 PT_7P6J57H3	7316-3226	BS_7G3AFSCR	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
 PT_7P6J57H3	7316-3226	BS_B4PPG3X5	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_7P6J57H3	A12911	BS_XM1AHBDJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_7P6J57H3	A12911	BS_Y0DGBKTY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
+PT_7P6J57H3	A12911	BS_XM1AHBDJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_7P6J57H3	A12911	BS_Y0DGBKTY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
 PT_7PWX8MC2	7316-3564	BS_130PVKA7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-somatic	LGG, NF1-somatic	NA	Updated via OpenPedCan subtyping
 PT_7PWX8MC2	7316-3564	BS_5B4D76CC	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-somatic	LGG, NF1-somatic	NA	Updated via OpenPedCan subtyping
 PT_7PWX8MC2	7316-3564	BS_JPCC1B0Q	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA
@@ -3221,8 +3221,8 @@ PT_89HXDTTW	7316-4844	BS_DSZSFTR6	Diffuse astrocytic and oligodendroglial tumor	
 PT_89XRZBSG	7316-1789	BS_49FQXT2E	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_89XRZBSG	7316-1789	BS_X1DSETVE	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_89XRZBSG	7316-1789	BS_2N7G3R27	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
-PT_89XRZBSG	7316-445	BS_3JQDQR52	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_89XRZBSG	7316-445	BS_WF90N975	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PT_89XRZBSG	7316-445	BS_3JQDQR52	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified, TP53	NA	NA
+PT_89XRZBSG	7316-445	BS_WF90N975	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified, TP53	NA	NA
 PT_89XRZBSG	7316-445	BS_ZD5HN296	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping
 PT_89XRZBSG	7316-445	BS_G9MQM1KK	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping
 PT_89XRZBSG	7316-445	BS_7R0JWX21	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping
@@ -5189,11 +5189,11 @@ PT_J9B6VRH8	7316-6988	BS_PDK85C2J	Tumors of sellar region	Craniopharyngioma	Adam
 PT_J9B6VRH8	7316-6988	BS_2QHBMM9W	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	NA	Updated via OpenPedCan subtyping
 PT_J9B6VRH8	7316-6988	BS_K47QA8XB	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	NA	Updated via OpenPedCan subtyping
 PT_JA91W5FP	7316-7191	BS_3XN092AQ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
-PT_JBYZJRNM	7316-9062	BS_89R91NRQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_JBYZJRNM	7316-9062	BS_AYSXRQWY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_JBYZJRNM	7316-9062	BS_D2MXJVAW	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_JBYZJRNM	7316-9062	BS_F4CJJFW1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_JBYZJRNM	7316-9062	BS_VYDJK425	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
+PT_JBYZJRNM	7316-9062	BS_89R91NRQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_JBYZJRNM	7316-9062	BS_AYSXRQWY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_JBYZJRNM	7316-9062	BS_D2MXJVAW	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_JBYZJRNM	7316-9062	BS_F4CJJFW1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_JBYZJRNM	7316-9062	BS_VYDJK425	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
 PT_JC3FDHBS	7316-6484	BS_3XYJBBHQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_JC3FDHBS	7316-6484	BS_GG9T6CXD	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_JC4DHFJR	7316-2536	BS_QB84TBA3	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
@@ -5231,14 +5231,14 @@ PT_JMW6Q6NH	7316-1648	BS_YDXYS3Y2	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_JN3EN2HR	7316-2267	BS_MAVSJH2Y	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
 PT_JN3EN2HR	7316-2267	BS_PM2MVP4E	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
 PT_JN3EN2HR	7316-2267	BS_RHD7XPNP	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
-PT_JNEV57VK	7316-2594	BS_VF5XWFXD	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
-PT_JNEV57VK	7316-2594	BS_85Q5P8GF	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
-PT_JNEV57VK	7316-2594	BS_8SWRSV8D	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
+PT_JNEV57VK	7316-2594	BS_VF5XWFXD	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
+PT_JNEV57VK	7316-2594	BS_85Q5P8GF	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
+PT_JNEV57VK	7316-2594	BS_8SWRSV8D	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_JNEV57VK	7316-3058	BS_BWBDH9GM	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
 PT_JNEV57VK	7316-3058	BS_QWM9BPDY	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
 PT_JNEV57VK	7316-3058	BS_MJ3ZTWB7	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_JNEV57VK	7316-3058	BS_2A162JH9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_JNEV57VK	7316-3058	BS_HM5GFJN8	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
+PT_JNEV57VK	7316-3058	BS_2A162JH9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_JNEV57VK	7316-3058	BS_HM5GFJN8	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
 PT_JNEV57VK	7316-3058	BS_8Q7NWJ22	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PT_JNEV57VK	7316-3058	BS_DPW5XME3	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PT_JNEV57VK	7316-3058	BS_D29RPBSZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
@@ -5275,9 +5275,9 @@ PT_JSFBMK5V	7316-1769	BS_9FKT8K0G	Diffuse astrocytic and oligodendroglial tumor	
 PT_JSFBMK5V	7316-392	BS_T3DGY9J9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_JSFBMK5V	7316-392	BS_H0638GZT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_JSFBMK5V	7316-392	BS_N07YNNW7	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
-PT_JT9HH7M6	7316-1455	BS_HE0WJRW6	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_JT9HH7M6	7316-1455	BS_HWGWYCY7	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_JT9HH7M6	7316-1455	BS_F0FV7NE3	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PT_JT9HH7M6	7316-1455	BS_HE0WJRW6	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified, TP53	NA	NA
+PT_JT9HH7M6	7316-1455	BS_HWGWYCY7	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified, TP53	NA	NA
+PT_JT9HH7M6	7316-1455	BS_F0FV7NE3	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified, TP53	NA	NA
 PT_JTWBNX91	7316-6375	BS_QTMN8HYC	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA
 PT_JV9G8MFD	7316-2269	BS_0Q1FFAM2	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping
 PT_JV9G8MFD	7316-2269	BS_9FHSNVS0	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping
@@ -5742,8 +5742,8 @@ PT_N9SG16EC	7316-1958	BS_AYVAZ31P	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_N9SG16EC	7316-1958	BS_FHFVCQ41	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	LGG, BRAF/MAPK	Updated via OpenPedCan subtyping
 PT_N9W4GT6D	7316-174	BS_AVS4DSZW	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	EPN, MPE	Updated via OpenPedCan subtyping
 PT_N9W4GT6D	7316-174	BS_RZDHPRJB	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	EPN, MPE	Updated via OpenPedCan subtyping
-PT_NA02P280	C4121607-Tumor	BS_N5NA83D2	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_NA02P280	C4121607-Tumor	BS_XSVH0JEV	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
+PT_NA02P280	C4121607-Tumor	BS_N5NA83D2	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_NA02P280	C4121607-Tumor	BS_XSVH0JEV	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_NA8NZ0BN	7316-2135	BS_7KDV25PK	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK, CDKN2A/B	LGG, RTK, CDKN2A/B	NA	Updated via OpenPedCan subtyping
 PT_NA8NZ0BN	7316-2135	BS_B6K0N6HS	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK, CDKN2A/B	LGG, RTK, CDKN2A/B	NA	Updated via OpenPedCan subtyping
 PT_NA8NZ0BN	7316-2135	BS_YEQVW4ND	Low-grade astrocytic tumor	LGAT	Low-grade glioma, RTK, CDKN2A/B	LGG, RTK, CDKN2A/B	NA	Updated via OpenPedCan subtyping
@@ -6029,8 +6029,8 @@ PT_PRSP252Y	7316-5256	BS_CFCWWFKG	Tumors of sellar region	Craniopharyngioma	Adam
 PT_PRSP252Y	7316-5256	BS_DXCHRCF6	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	NA	Updated via OpenPedCan subtyping
 PT_PRSP252Y	7316-6767	BS_X4W33YT2	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	NA	Updated via OpenPedCan subtyping
 PT_PRSP252Y	7316-6767	BS_VNST53WV	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	NA	Updated via OpenPedCan subtyping
-PT_PSJV28KG	C4109430-Tumor	BS_056Q8577	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	NA	Updated via OpenPedCan subtyping
-PT_PSJV28KG	C4109430-Tumor	BS_SYQ1GRJA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35	NA	Updated via OpenPedCan subtyping
+PT_PSJV28KG	C4109430-Tumor	BS_056Q8577	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35, TP53	NA	Updated via OpenPedCan subtyping
+PT_PSJV28KG	C4109430-Tumor	BS_SYQ1GRJA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35, TP53	NA	Updated via OpenPedCan subtyping
 PT_PSX2CSYX	7316-46	BS_AFAHY6HP	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
 PT_PTTBTPS6	7316-5452	BS_3GFX9VHB	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA
 PT_PTTBTPS6	7316-5452	BS_R0G2S8WH	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA
@@ -6159,9 +6159,9 @@ PT_QNMBRAKM	7316-4450	BS_55X1W2MR	Low-grade astrocytic tumor	Ganglioglioma	Gangl
 PT_QNMBRAKM	7316-4450	BS_954APB7K	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	NA	Updated via OpenPedCan subtyping
 PT_QP4BVCX4	7316-6135	BS_14P5D735	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	NA
 PT_QP4BVCX4	7316-6135	BS_10N6X5N8	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, To be classified	NA	NA
-PT_QQZXYR4M	7316-1946	BS_8PNA0V6R	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH	NA	Updated via OpenPedCan subtyping
-PT_QQZXYR4M	7316-1946	BS_58X7SKJS	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH	NA	Updated via OpenPedCan subtyping
-PT_QQZXYR4M	7316-1946	BS_6AS03QVQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH	NA	Updated via OpenPedCan subtyping
+PT_QQZXYR4M	7316-1946	BS_8PNA0V6R	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH, TP53	NA	Updated via OpenPedCan subtyping
+PT_QQZXYR4M	7316-1946	BS_58X7SKJS	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH, TP53	NA	Updated via OpenPedCan subtyping
+PT_QQZXYR4M	7316-1946	BS_6AS03QVQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-mutant	HGG, IDH, TP53	NA	Updated via OpenPedCan subtyping
 PT_QT3MK7BZ	7316-1977	BS_9XBGGK0F	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	SEGA, To be classified	NA
 PT_QT3MK7BZ	7316-1977	BS_B6M763JS	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	SEGA, To be classified	NA
 PT_QT3MK7BZ	7316-1977	BS_F9ZTZ4YS	Low-grade astrocytic tumor	LGAT	NA	SEGA, To be classified	SEGA, To be classified	NA
@@ -7226,14 +7226,14 @@ PT_Y572BRC1	7316-485	BS_V0Q1G94N	Low-grade astrocytic tumor	LGAT	Low-grade gliom
 PT_Y585X1BS	7316-622	BS_W1385R8Y	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PT_Y585X1BS	7316-622	BS_PKYWRC61	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PT_Y5KY6KN9	7316-195	BS_5YF9GK7D	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_Y5KY6KN9	7316-195	BS_P9JP6JFA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_Y5KY6KN9	7316-195	BS_XMP9XNR9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_P9JP6JFA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_XMP9XNR9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
 PT_Y5KY6KN9	7316-195	BS_GF8MHY11	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_Y5KY6KN9	7316-195	BS_MX23ZY0Y	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_Y5KY6KN9	7316-195	BS_JGKRN7NA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	NA	Updated via OpenPedCan subtyping
-PT_Y5KY6KN9	7316-195	BS_4QW2S1Q8	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
-PT_Y5KY6KN9	7316-195	BS_AYPBAHJ6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
-PT_Y5KY6KN9	7316-195	BS_BJ9ACB1Q	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_MX23ZY0Y	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_JGKRN7NA	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	NA	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_4QW2S1Q8	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_AYPBAHJ6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
+PT_Y5KY6KN9	7316-195	BS_BJ9ACB1Q	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_Y5YHX20Q	ET_06Q9BSNT	BS_V8AE965P	Embryonal tumor	Neuroblastoma	NA	NBL, To be classified	NA	NA
 PT_Y660CKCB	7316-3122	BS_XG0DBWVT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_Y660CKCB	7316-3122	BS_FKQ7F6D1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	DMG, H3 K28	Updated via OpenPedCan subtyping
@@ -7364,7 +7364,7 @@ PT_YND59052	7316-9832	BS_BANCTAV6	Low-grade astrocytic tumor	LGAT	Low-grade glio
 PT_YND59052	7316-9832	BS_FVJF260X	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	NA	Updated via OpenPedCan subtyping
 PT_YND59052	C3985200-Tumor	BS_FWVSVP0T	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPedCan subtyping
 PT_YND59052	C3985200-Tumor	BS_M62BBERH	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPedCan subtyping
-PT_YP8FN6MS	7316-8459	BS_R8ZAB797	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PT_YP8FN6MS	7316-8459	BS_R8ZAB797	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified, TP53	NA	NA
 PT_YPCR2XRS	7316-554	BS_MY9D8XZ1	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	LGG, BRAF/MAPK	Updated via OpenPedCan subtyping
 PT_YPCR2XRS	7316-554	BS_V3WDSJY3	Low-grade astrocytic tumor	LGAT	Low-grade glioma, other MAPK	LGG, other MAPK	LGG, BRAF/MAPK	Updated via OpenPedCan subtyping
 PT_YQNXB5KV	7316-4326	BS_BVY22A4P	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
@@ -7469,9 +7469,9 @@ PT_ZA95JQEB	7316-384	BS_8RHPJ740	Ependymal tumor	Ependymoma	Posterior fossa grou
 PT_ZA95JQEB	7316-384	BS_E29VV9AZ	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
 PT_ZA95JQEB	7316-384	BS_ZZJF26C4	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
 PT_ZBFGMNXT	7316-5465	BS_PK682VBW	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
-PT_ZBHAAB3G	7316-7498	BS_CXAQDK7S	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_ZBHAAB3G	7316-7498	BS_HPVAR2P6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
-PT_ZBHAAB3G	7316-7498	BS_RRA4GWN4	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping
+PT_ZBHAAB3G	7316-7498	BS_CXAQDK7S	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_ZBHAAB3G	7316-7498	BS_HPVAR2P6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
+PT_ZBHAAB3G	7316-7498	BS_RRA4GWN4	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	NA	Updated via OpenPedCan subtyping
 PT_ZD45GXZ0	7316-2109	BS_1WW4VNXC	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
 PT_ZD45GXZ0	7316-2109	BS_J33YVP27	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
 PT_ZD45GXZ0	7316-2109	BS_NH7K4CD9	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping
