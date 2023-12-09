@@ -101,7 +101,7 @@ classifier_score <- classifier_score_initial %>%
 ```{r CNV overlaps}
 cnv_domain_overlap <- read_tsv(file.path(results_dir, "loss_overlap_domains_tp53.tsv")) %>%
   dplyr::rename(Kids_First_Biospecimen_ID=biospecimen_id) %>%
-  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
+  left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")], by = "Kids_First_Biospecimen_ID") %>%
   select(match_id, copy_number, ploidy, domain) %>%
   unique()
 
