@@ -13,7 +13,7 @@ In this notebook we will add TP53 alteration status as discussed in [#837](https
 
 **TP53 altered - loss**, if :
 
- - A sample contains a TP53 hotspot SNV mutation. (Cancer hotspot database and downloadable file available). Please also crosscheck that all mutations from this table are included.
+ - A sample contains a TP53 hotspot SNV mutation. (Cancer hotspot database and downloadable file available). Please also crosscheck that all mutations from this table are included. Source: https://cavatica.sbgenomics.com/u/kfdrc-harmonization/kf-reference-pipeline/files/#q?search=hot
  - A sample contains two TP53 alterations, suggesting (but not confirming) that both alleles are affected (SNV+SNV, (CNV or SV) + SNV).
  - A sample contains one alteration (SNV or (CNV or SV)) + has cancer_predispositions == "Li-Fraumeni syndrome", suggesting there is a germline variant in addition to the somatic variant we observe.
  - A sample does not have a TP53 alterations, but has cancer_predispositions == "Li-Fraumeni syndrome" and TP53 classifier score for matched RNA-Seq > 0.5 (or higher cutoff we decide upon later).
@@ -57,9 +57,9 @@ histology <- clinical %>%
     unique()
 
 # Cancer database
-hotspot_database_2017_tp53_snv <- readxl::read_xls(file.path(input_dir,"hotspots_v2.xls"),sheet = 1) %>%
+hotspot_database_2017_tp53_snv <- read_tsv(file.path(input_dir,"protein_snv_cancer_hotspots_v2.ENS105_liftover.tsv")) %>%
   filter(Hugo_Symbol == "TP53")
-hotspot_database_2017_tp53_indel <- readxl::read_xls(file.path(input_dir,"hotspots_v2.xls"),sheet = 2) %>%
+hotspot_database_2017_tp53_indel <- read_tsv(file.path(input_dir,"protein_indel_cancer_hotspots_v2.ENS105_liftover.tsv")) %>%
   filter(Hugo_Symbol == "TP53")
 
 # p53, p63 and p73 functional sites
@@ -188,6 +188,22 @@ hotspots : overlaps AA position which are statistically significant SNV/Indels
 activating : overlaps AA position which are found to act as gain-of-function according to literature
 
 ```{r}
+# Gene location and domain overlap file 
+bioMartDataPfamTp53 <- 
+  readRDS(system.file("extdata", "pfamDataBioMart.RDS", package = "annoFuseData")) %>%
+  dplyr::filter(hgnc_symbol=="TP53")
+
+PF08563 <- bioMartDataPfamTp53 %>%
+  filter(pfam_id == "PF08563") %>%
+  select(domain_start, domain_end)
+
+PF00870 <- bioMartDataPfamTp53 %>%
+  filter(pfam_id == "PF00870") %>%
+  select(domain_start, domain_end)
+
+PF07710 <- bioMartDataPfamTp53 %>%
+  filter(pfam_id == "PF07710") %>%
+  select(domain_start, domain_end)
 
 consensus_tp53_snv_indel_match <- consensus_tp53_snv_indel %>%
   left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")]) %>%
@@ -205,7 +221,11 @@ consensus_tp53_snv_indel_match <- consensus_tp53_snv_indel %>%
          # if overlaps the activating  Amino_Acid_Position 
          c("273","248"))  ~ 1,
       TRUE ~ 0
-    )
+    ),
+    overlap_domain = case_when(Variant_Classification %in% c("Frame_Shift_Del", "In_Frame_Del", "Nonsense_Mutation") & PF08563$domain_start >= Start_Position & Start_Position <= PF08563$domain_end ~ 1,
+                               Variant_Classification %in% c("Frame_Shift_Del", "In_Frame_Del", "Nonsense_Mutation") & PF00870$domain_start >= Start_Position & Start_Position <= PF00870$domain_end ~ 1,
+                               Variant_Classification %in% c("Frame_Shift_Del", "In_Frame_Del", "Nonsense_Mutation") & PF07710$domain_start >= Start_Position & Start_Position <= PF07710$domain_end ~ 1,
+                                       TRUE ~ 0)
   ) 
 
 ```
@@ -230,10 +250,10 @@ tp53_alterations <- histology %>%
   left_join(fusion_overlap) %>%
   left_join(classifier_score) %>%
   # select useful columns
-  dplyr::select(match_id, tp53_score, cancer_predispositions, HGVSp_Short, names(cnv_domain_overlap), names(sv_overlap), names(fusion_overlap), hotspot, activating) %>%
+  dplyr::select(match_id, tp53_score, cancer_predispositions, HGVSp_Short, names(cnv_domain_overlap), names(sv_overlap), names(fusion_overlap), hotspot, activating, overlap_domain) %>%
   arrange(match_id) %>%
   unique() %>%
-  replace_na(list(hotspot = 0, activating = 0))
+  replace_na(list(hotspot = 0, activating = 0, overlap_domain = 0))
 
 ```
 
@@ -242,6 +262,7 @@ Convert the above to wide format
 ```{r}
 
 tp53_alterations_score_wide <- tp53_alterations %>%
+  mutate(cn_less_ploidy = ifelse(copy_number < ploidy, "yes", "no")) %>%
   # group 
   group_by(match_id,
            cancer_predispositions,
@@ -249,7 +270,8 @@ tp53_alterations_score_wide <- tp53_alterations %>%
            SV_type,
            SV_counts,
            Fusions,
-           Fusion_counts) %>%
+           Fusion_counts,
+           cn_less_ploidy) %>%
   # 
   # match_id as rows add SNV counts,CNV loss counts 
   # and hotspot/activating mutation annotation  
@@ -261,7 +283,8 @@ tp53_alterations_score_wide <- tp53_alterations %>%
     CNV_loss_evidence = toString(unique(copy_number)),
     # summarize unique hotspot values per sample_id
     hotspot = max(unique(hotspot[!is.na(hotspot) ])),
-    activating = max(unique(activating[!is.na(activating)]))) 
+    activating = max(unique(activating[!is.na(activating)])),
+    overlap_domain = max(unique(overlap_domain[!is.na(overlap_domain) ]))) 
 
 tp53_alterations_score_wide
 
@@ -289,6 +312,9 @@ tp53_alterations_score_wide <- tp53_alterations_score_wide %>%
               # check if more than 1 SNV is present
               # suggesting both alleles are mutated
               SNV_indel_counts > 1 |
+              # CN < ploidy and the framaeshift del or nonsense SNV overlaps a 
+              # functional domain
+              (overlap_domain >=1 & cn_less_ploidy == "yes") |
               # check if SNV mutant and has
               # Li-Fraumeni syndrome suggesting
               # germline TP53 mutant as cancer predisposition 
@@ -311,7 +337,7 @@ tp53_alterations_score_wide <- tp53_alterations_score_wide %>%
           ) ~ "loss",
         # when activating == 1
         activating == 1 ~ "activated",
-        # if no evidence supports TP53 inativation or activation 
+        # if no evidence supports TP53 inactivation or activation 
         TRUE ~ "Other"
       )
   )
