@@ -4,6 +4,12 @@
 The Open Pediatric Cancer (OpenPedCan) project at the Children’s Hospital of Philadelphia is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data, provides them on PedcBioPortal, and the NCI's Molecular Targets Platform (MTP).
 For detailed methods, please see our [methods repository](https://github.com/d3b-center/OpenPedCan-methods).
 
+To cite this work, please note the data release used in your work and cite the following:
+1. OpenPBTA:
+Shapiro, J.A., Gaonkar, K.S., Spielman, S.J., Savonen, C.L., Bethell, C.J., Jin, R., Rathi, K.S., Zhu, Y., Egolf, L.E., Farrow, B.K., et al. (2023). OpenPBTA: The Open Pediatric Brain Tumor Atlas. Cell Genom., 100340. [10.1016/j.xgen.2023.100340](https://www.cell.com/cell-genomics/pdf/S2666-979X(23)00115-5.pdf).
+2. OpenPedCan:
+DOI for [all releases](https://zenodo.org/search?q=parent.id%3A6473912&f=allversions%3Atrue&l=list&p=1&s=10&sort=version): `10.5281/zenodo.6473912`. 
+
 The OpenPedCan analyses currently include the following datasets, described more fully below:
 
 - TARGET
