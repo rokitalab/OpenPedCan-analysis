@@ -112,5 +112,5 @@ cd "$script_directory" || exit
 cp $FULL_DIRECTORY/release-notes.md $SUBSET_DIRECTORY
 
 # Upload all testing files s3 bucket in their respective folders (example)
-# aws s3 cp testing s3://d3b-openaccess-us-east-1-prd-pbta/open-targets/testing_v12/ --recursive
+# aws s3 cp $RELEASE s3://d3b-openaccess-us-east-1-prd-pbta/open-targets/testing --recursive
 
