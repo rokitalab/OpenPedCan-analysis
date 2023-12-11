@@ -7,7 +7,7 @@ on:
 jobs:
   run_analysis:
     name: Run Analysis
-    runs-on: large-runner-32
+    runs-on: large-runner-64
     strategy:
       fail-fast: false
       matrix:
