@@ -326,16 +326,16 @@ set.seed(opt$seed)
 #### Samples we need to include to run tp53_nf1_score module -------------------
 
 # For more information, see the 00-enrich-tp53_nf1_score-examples notebook
-tp53_dnaseq <- c("BS_PPY0EWPG", "BS_RXN5T5YT", "BS_BA6AZWB3","BS_JSNJZERZ",
-                 "BS_KGXP2KJE", "BS_MC1W61N0", "BS_96S0VQBN", "BS_X2VRDBVG",
-                 "BS_B8TG51S6", "BS_K62HBS01", "BS_WFCVBVDS", "TARGET-50-PAJNUP-01A-01D",
-                 "TARGET-50-PAJNUP-01A-01R", "TARGET-40-PAKZZK-01A-01R",
-                 "TARGET-40-PAKZZK-01A-01Y", "TARGET-40-PARKAF-01A-01D",
-                 "TARGET-40-PARKAF-01A-01R", "BS_B6E0477K", "BS_3NX3RBCX", "BS_YETTZ1NC", "TARGET-40-PATEEM-01A-01Y")
-tp53_rnaseq <- c("BS_WKESC3XN", "BS_KFD5128N", "BS_BA6AZWB3", "BS_WFCVBVDS",				
-                 "BS_KGXP2KJE", "BS_RXN5T5YT", "BS_3RAM3K7B", "TARGET-40-PAKZZK-01A-01R",
-                 "TARGET-40-PARKAF-01A-01R", "TARGET-50-PAJNUP-01A-01R", "BS_23QW0BBA", "BS_N13KZYRR", 
-                 "BS_NJ4WPQVK", "TARGET-40-PATEEM-01A-01R")
+tp53_dnaseq <- c("BS_16FT8V4B", "BS_B9QP40ER", "BS_7KR13R3P", "BS_K2K5YSDS", 
+                 "TARGET-30-PAPBGH-01A-01W", "TARGET-40-PARGTM-01A-01D",
+                 "TARGET-40-PATPBS-01A-01D", "BS_1XSM0T7R", "BS_YG6FYM9A", 
+                 "BS_QBPZQF73", "BS_S8M4XW3Z", "BS_X2VRDBVG", "BS_YETTZ1NC",
+                 "TARGET-40-PATEEM-01A-01Y")
+tp53_rnaseq <- c("BS_E4QK839R", "BS_XZM79E42", "BS_8ZY4GST0", "BS_S5KDWVEA",
+                 "TARGET-30-PAPBGH-01A-01R", "TARGET-40-PARGTM-01A-01R", 
+                 "TARGET-40-PATPBS-01A-01R", "BS_1719EQ53", "BS_D5MT05YK", 
+                 "BS_NW3NGVR8", "BS_3RAM3K7B", "BS_NJ4WPQVK",
+                 "TARGET-40-PATEEM-01A-01R")
 
 #### Samples we need to include to run rnaseq-batch-correct module -------------
 
