@@ -63,11 +63,6 @@ echo "Run neurocytoma subtyping"
 cd ${analyses_dir}/molecular-subtyping-neurocytoma
 bash run_subtyping.sh
 
-# Run NBL subtyping
-echo "Run NBL subtyping"
-cd ${analyses_dir}/molecular-subtyping-NBL
-bash run-molecular-subtyping-NBL.sh
-
 # Run ATRT subtyping
 echo "Run ATRT subtyping"
 cd ${analyses_dir}/molecular-subtyping-ATRT
@@ -82,6 +77,11 @@ bash run-molecular-subtyping-HGG.sh
 echo "Run LGAT subtyping"
 cd ${analyses_dir}/molecular-subtyping-LGAT
 bash run_subtyping.sh
+
+# Run NBL subtyping
+echo "Run NBL subtyping"
+cd ${analyses_dir}/molecular-subtyping-NBL
+bash run-molecular-subtyping-NBL.sh
 
 # Run compile subtyping
 echo "Run compile subtyping"
