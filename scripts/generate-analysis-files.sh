@@ -70,9 +70,7 @@ cp ${analyses_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv ${data
 if [ "$RUN_LOCAL" -lt "1" ]; then
 
   # Run GISTIC step -- only the part that generates ZIP file
-  echo "Run GISTIC"
-
-  # This will use the file that just got generated above
+  echo "Run GISTIC - this step will take about an hour"
   bash ${analyses_dir}/run-gistic/run-gistic-module.sh
 
   # Copy over GISTIC
