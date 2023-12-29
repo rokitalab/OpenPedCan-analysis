@@ -17,10 +17,6 @@ mkdir -p $SCRATCHDIR
 mkdir -p results
 mkdir -p input
 
-## merge the cnv-tumor-only-controlfreec with cnv-controlfreec file
-
-Rscript --vanilla scripts/merge_cnv_tumor_only.R
-
 ## Run the Rscript to select the samples which are not present in the cnv-gatk.seg.gz file
 
 Rscript --vanilla scripts/gatk-missing-wgs.R \
@@ -34,7 +30,7 @@ Rscript --vanilla scripts/gatk-missing-wgs.R \
 python3 scripts/merged_to_individual_files.py \
     --manta ../../data/sv-manta.tsv.gz \
     --cnvkit ../../data/cnv-cnvkit.seg.gz \
-    --freec ../../scratch/cnv-controlfreec-merged.tsv.gz \
+    --freec ../../data/cnv-controlfreec.tsv.gz \
     --histologies input/gatk-missing-wgs.tsv \
     --snake $SCRATCHDIR/config_snakemake.yaml \
     --scratch $SCRATCHDIR \

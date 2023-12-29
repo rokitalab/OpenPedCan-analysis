@@ -35,6 +35,7 @@ mkdir -p ${release_dir}
 echo "Run copy number consensus calls"
 cd ${analyses_dir}/copy_number_consensus_call_manta
 bash run_consensus_call.sh
+rm -Rf ${scratch_dir}/copy_consensus
 
 # Run step to generate cnv consensus file
 echo "Run copy number consensus calls"
@@ -69,15 +70,8 @@ cp ${analyses_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv ${data
 if [ "$RUN_LOCAL" -lt "1" ]; then
 
   # Run GISTIC step -- only the part that generates ZIP file
-  echo "Run GISTIC"
-  # Run a step that subs ploidy for NA to allow GISTIC to run
-  Rscript ${analyses_dir}/run-gistic/scripts/prepare_seg_for_gistic.R \
-  --in_consensus ${data_dir}/cnv-consensus.seg.gz \
-  --out_consensus ${analyses_dir}/run-gistic/results/cnv-consensus-gistic-only.seg.gz \
-  --histology ${data_dir}/histologies-base.tsv
-
-  # This will use the file that just got generated above
-  bash ${analyses_dir}/run-gistic/scripts/run-gistic-opentargets.sh
+  echo "Run GISTIC - this step will take about an hour"
+  bash ${analyses_dir}/run-gistic/run-gistic-module.sh
 
   # Copy over GISTIC
   cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic.zip ${release_dir}
