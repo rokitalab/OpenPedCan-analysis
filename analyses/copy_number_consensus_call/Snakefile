@@ -142,7 +142,7 @@ rule generate_callable:
 rule filter_excluded:
     input:
         ## Define the location of the input file and take the path/extension from the config file
-        exclude_list="ref/cnv_excluded_regions.bed",
+        exclude_list="../copy_number_consensus_call_manta/ref/cnv_excluded_regions.bed",
         bedfile= scratch_loc + "interim/{sample}.{caller}.{dupdel}.bed"
     output:
         ## Define the output files' names
