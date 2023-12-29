@@ -35,6 +35,7 @@ mkdir -p ${release_dir}
 echo "Run copy number consensus calls"
 cd ${analyses_dir}/copy_number_consensus_call_manta
 bash run_consensus_call.sh
+rm -Rf ${scratch_dir}/copy_consensus
 
 # Run step to generate cnv consensus file
 echo "Run copy number consensus calls"
