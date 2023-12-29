@@ -1,5 +1,5 @@
 #!/bin/bash
-# C. Bethell and C. Savonen for CCDL 2019
+# C. Bethell and C. Savonen for CCDL 2019, J. Rokita for D3b 2023
 # Run focal-cn-file-preparation module
 #
 # Usage: bash run-prepare-cn.sh
@@ -26,8 +26,6 @@ scratch_dir=../../scratch
 data_dir=../../data
 results_dir=../../analyses/focal-cn-file-preparation/results
 gtf_file=${data_dir}/gencode.v39.primary_assembly.annotation.gtf.gz
-#goi_file=../../analyses/oncoprint-landscape/driver-lists/brain-goi-list-long.txt
-#independent_specimens_file=${data_dir}/independent-specimens.wgswxspanel.primary.prefer.wgs.tsv
 
 if [[ "$RUN_FOR_SUBTYPING" -eq "1" ]]
 then
@@ -56,7 +54,7 @@ then
 # Prep the CNVkit data
 Rscript --vanilla -e "rmarkdown::render('01-add-ploidy-cnvkit.Rmd', clean = TRUE)"
 
-# Run annotation step for CNVkit
+# Run annotation step for CNVkit WXS only
 Rscript --vanilla 04-prepare-cn-file.R \
 --cnv_file ${results_dir}/cnvkit_with_status.tsv \
 --gtf_file $gtf_file \
@@ -64,15 +62,6 @@ Rscript --vanilla 04-prepare-cn-file.R \
 --filename_lead "cnvkit_annotated_cn" \
 --seg \
 --runWXSonly
-
-# Run annotation step for ControlFreeC
-#Rscript --vanilla 04-prepare-cn-file.R \
-#--cnv_file ${data_dir}/cnv-controlfreec.tsv.gz \
-#--gtf_file $gtf_file \
-#--metadata $histologies_file \
-#--filename_lead "controlfreec_annotated_cn" \
-#--controlfreec \
-#--runWXSonly
 
 # Run annotation step for ControlFreeC tumor only
 Rscript --vanilla 04-prepare-cn-file.R \
@@ -92,19 +81,4 @@ Rscript --vanilla 07-consensus-annotated-merge.R \
 --cnv_tumor_x_and_y ${results_dir}/freec-tumor-only_annotated_cn_x_and_y.tsv.gz \
 --outdir ${results_dir}
 
-
- #filenameLead=("cnvkit_annotated_cn" "controlfreec_annotated_cn" "cnvkit_annotated_cn_wxs" "controlfreec_annotated_cn_wxs")
- #chromosomeType=("autosomes" "x_and_y")
- #for filename in ${filenameLead[@]}; do
-#   for chromosome_type in ${chromosomesType[@]}; do
-#       Rscript --vanilla rna-expression-validation.R \
-#         --annotated_cnv_file results/${filename}_${chromosome_type}.tsv.gz \
-#         --expression_file ${data_dir}/gene-expression-rsem-tpm-collapsed.rds \
-#         --independent_specimens_file $independent_specimens_file \
-#         --metadata $histologies_file \
-#         --goi_list $goi_file \
-#         --filename_lead ${filename}_${chromosome_type}
-#   done
-# done
-#
 fi

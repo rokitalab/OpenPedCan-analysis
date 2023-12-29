@@ -12,7 +12,8 @@
 #   --cnvkit_x_and_y results/cnvkit_annotated_cn_wxs_x_and_y.tsv.gz \
 #   --consensus_auto results/consensus_seg_annotated_cn_autosomes.tsv.gz \
 #   --consensus_x_and_y results/consensus_seg_annotated_cn_x_and_y.tsv.gz \
-#   --cnv_tumor_only results/controlfreec-tumor-only_annotated_cn.tsv.gz \
+#   --cnv_tumor_auto results/freec-tumor-only_annotated_cn_autosomes.tsv.gz \
+#   --cnv_tumor_x_and_y results/freec-tumor-only_annotated_cn_x_and_y.tsv.gz \
 #   --outdir results
 
 #### Set Up --------------------------------------------------------------------
@@ -46,7 +47,7 @@ option_list <- list(
     c("--consensus_x_and_y"),
     type = "character",
     default = "results/consensus_seg_annotated_cn_x_and_y.tsv.gz",
-    help = "annoatated consensus cnv calls on x and y for WGS samples"
+    help = "annotated consensus cnv calls on x and y for WGS samples"
   ),
   optparse::make_option(
     c("--cnv_tumor_auto"),
@@ -77,8 +78,8 @@ cnvkit_auto <- data.table::fread(opt$cnvkit_auto)
 cnvkit_x_and_y <- data.table::fread(opt$cnvkit_x_and_y)
 consensus_auto <- data.table::fread(opt$consensus_auto)
 consensus_x_and_y <- data.table::fread(opt$consensus_x_and_y)
-cnv_tumor_auto <- data.table::fread(opt$cnv_tumor_only)
-cnv_tumor_x_and_y <- data.table::fread(opt$cnv_tumor_only)
+cnv_tumor_auto <- data.table::fread(opt$cnv_tumor_auto)
+cnv_tumor_x_and_y <- data.table::fread(opt$cnv_tumor_x_and_y)
 
 # merge WGS (consensus), WXS (cnvkit), tumor only (freec) for autosomes and x_and_y respectively
 merged_auto <- rbind(cnvkit_auto, consensus_auto, cnv_tumor_auto)
@@ -95,8 +96,7 @@ readr::write_tsv(merged_x_and_y,
 # For the combined file, we do not need germline_sex_estimate from x_and_y
 merged_x_and_y <- merged_x_and_y %>% 
   dplyr::select(-germline_sex_estimate)
-combined <- rbind(merged_auto, merged_x_and_y) %>% 
-  rbind(cnv_tumor_only)
+combined <- rbind(merged_auto, merged_x_and_y)
 
 readr::write_tsv(combined, 
           file.path(opt$outdir, "consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz"))

@@ -84,12 +84,12 @@ if [ "$RUN_LOCAL" -lt "1" ]; then
   RUN_ORIGINAL=1 OPENPBTA_BASE_SUBTYPING=1 bash run-prepare-cn.sh
   
   ## Copy over focal CN
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${release_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${data_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${release_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${data_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${release_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${data_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz ${data_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz ${data_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz ${data_dir}
 
   # Copy over the consensus with status file
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_seg_with_status.tsv ${release_dir}
