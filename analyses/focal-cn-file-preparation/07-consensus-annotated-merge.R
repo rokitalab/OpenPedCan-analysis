@@ -1,4 +1,4 @@
-# This script converts merges consensus seg files with cnvkit annotated files 
+# This script converts merges consensus seg files with cnvkit WXS and freec tumor only annotated files 
 # for both autosomes and x_and_y. The autosomes and x_and_y files are then merged
 # to generate one single file
 
@@ -12,6 +12,7 @@
 #   --cnvkit_x_and_y results/cnvkit_annotated_cn_wxs_x_and_y.tsv.gz \
 #   --consensus_auto results/consensus_seg_annotated_cn_autosomes.tsv.gz \
 #   --consensus_x_and_y results/consensus_seg_annotated_cn_x_and_y.tsv.gz \
+#   --cnv_tumor_only results/controlfreec-tumor-only_annotated_cn.tsv.gz \
 #   --outdir results
 
 #### Set Up --------------------------------------------------------------------
@@ -27,19 +28,19 @@ option_list <- list(
     c("--cnvkit_auto"),
     type = "character",
     default = "results/cnvkit_annotated_cn_wxs_plus_freec_tumor_autosomes.tsv.gz",
-    help = "annoatated cnvkit cnv calls on autosomes for WXS samples"
+    help = "annotated cnvkit cnv calls on autosomes for WXS samples"
   ),
   optparse::make_option(
     c("--cnvkit_x_and_y"),
     type = "character",
     default = "results/cnvkit_annotated_cn_wxs_plus_freec_tumor_x_and_y.tsv.gz",
-    help = "annoatated cnvkit cnv calls on x and y for WXS samples"
+    help = "annotated cnvkit cnv calls on x and y for WXS samples"
   ),
   optparse::make_option(
     c("--consensus_auto"),
     type = "character",
     default = "results/consensus_seg_annotated_cn_autosomes.tsv.gz",
-    help = "annoatated consensus cnv calls on autosomes for WGS samples"
+    help = "annotated consensus cnv calls on autosomes for WGS samples"
   ),
   optparse::make_option(
     c("--consensus_x_and_y"),
@@ -48,10 +49,16 @@ option_list <- list(
     help = "annoatated consensus cnv calls on x and y for WGS samples"
   ),
   optparse::make_option(
-    c("--cnv_tumor_only"),
+    c("--cnv_tumor_auto"),
     type = "character",
-    default = "../../data/cnv-controlfreec-tumor-only.tsv.gz",
-    help = "cnv from tumor-only samples"
+    default = "results/freec-tumor-only_annotated_cn_autosomes.tsv.gz",
+    help = "annotated tumor only freec cnv calls for autosomes"
+  ),
+  optparse::make_option(
+    c("--cnv_tumor_x_and_y"),
+    type = "character",
+    default = "results/freec-tumor-only_annotated_cn_x_and_y.tsv.gz",
+    help = "annotated tumor only freec cnv calls for x and y"
   ),
   optparse::make_option(
     c("--outdir"),
@@ -70,13 +77,12 @@ cnvkit_auto <- data.table::fread(opt$cnvkit_auto)
 cnvkit_x_and_y <- data.table::fread(opt$cnvkit_x_and_y)
 consensus_auto <- data.table::fread(opt$consensus_auto)
 consensus_x_and_y <- data.table::fread(opt$consensus_x_and_y)
-cnv_tumor_only <- data.table::fread(opt$cnv_tumor_only)
+cnv_tumor_auto <- data.table::fread(opt$cnv_tumor_only)
+cnv_tumor_x_and_y <- data.table::fread(opt$cnv_tumor_only)
 
-# merge WGS (consensus) and WXS (cnvkit) autosomes and x_and_y respectively
-merged_auto <- rbind(cnvkit_auto, consensus_auto) %>% 
-  rbind(cnv_tumor_only)
-merged_x_and_y <- rbind(cnvkit_x_and_y, consensus_x_and_y) %>% 
-  rbind(cnv_tumor_only)
+# merge WGS (consensus), WXS (cnvkit), tumor only (freec) for autosomes and x_and_y respectively
+merged_auto <- rbind(cnvkit_auto, consensus_auto, cnv_tumor_auto)
+merged_x_and_y <- rbind(cnvkit_x_and_y, consensus_x_and_y, cnv_tumor_x_and_y)
 
 # write out the files
 readr::write_tsv(merged_auto, 
@@ -87,7 +93,8 @@ readr::write_tsv(merged_x_and_y,
 
 # Merge autosomes with X and Y and output a combined file 
 # For the combined file, we do not need germline_sex_estimate from x_and_y
-merged_x_and_y <- merged_x_and_y %>% dplyr::select(-germline_sex_estimate)
+merged_x_and_y <- merged_x_and_y %>% 
+  dplyr::select(-germline_sex_estimate)
 combined <- rbind(merged_auto, merged_x_and_y) %>% 
   rbind(cnv_tumor_only)
 
