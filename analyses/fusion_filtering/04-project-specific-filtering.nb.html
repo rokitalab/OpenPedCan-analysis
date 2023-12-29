@@ -1777,9 +1777,9 @@ suppressPackageStartupMessages(library(&quot;qdapRegex&quot;))
 #read filtFusion files
 QCGeneFiltered_filtFusion&lt;-read_tsv(file.path(root_dir, params$dataRNA))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjQ4NjI5IENvbHVtbnM6IDIyXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMTgpOiBTYW1wbGUsIEZ1c2lvbk5hbWUsIExlZnRCcmVha3BvaW50LCBSaWdodEJyZWFrcG9pbnQsIENhbGxlciwgRnVzaW8uLi5cbmRibCAgKDMpOiBKdW5jdGlvblJlYWRDb3VudCwgU3Bhbm5pbmdGcmFnQ291bnQsIFNwYW5uaW5nRGVsdGFcbmxnbCAgKDEpOiByZWNpcHJvY2FsX2V4aXN0c1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogMjQ4NjI5IENvbHVtbnM6IDIyXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiXFx0XCJcbmNociAoMTgpOiBTYW1wbGUsIEZ1c2lvbk5hbWUsIExlZnRCcmVha3BvaW50LCBSaWdodEJyZWFrcG9pbnQsIENhbGxlciwgRnVzaW8uLi5cbmRibCAgKDMpOiBKdW5jdGlvblJlYWRDb3VudCwgU3Bhbm5pbmdGcmFnQ291bnQsIFNwYW5uaW5nRGVsdGFcbmxnbCAgKDEpOiByZWNpcHJvY2FsX2V4aXN0c1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
 <pre><code>Rows: 248629 Columns: 22
-── Column specification ──────────────────────────────────────────────────────────────
+── Column specification ─────────────────────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
 chr (18): Sample, FusionName, LeftBreakpoint, RightBreakpoint, Caller, Fusio...
 dbl  (3): JunctionReadCount, SpanningFragCount, SpanningDelta
@@ -1813,9 +1813,9 @@ group&lt;-params$group_base
 clinical&lt;-clinical[,c(&quot;Kids_First_Biospecimen_ID&quot;,&quot;Kids_First_Participant_ID&quot;,group)]
 }</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDc1MDcgQ29sdW1uczogNTZcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgzNyk6IEtpZHNfRmlyc3RfUGFydGljaXBhbnRfSUQsIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIHNhbXBsZV9pZCwgYS4uLlxuZGJsICgxNyk6IGNlbGxfbGluZV9wYXNzYWdlLCBPU19kYXlzLCBFRlNfZGF5cywgYWdlX2F0X2RpYWdub3Npc19kYXlzLCBhZ2VfYS4uLlxubGdsICAoMik6IG1vbGVjdWxhcl9zdWJ0eXBlLCBpbnRlZ3JhdGVkX2RpYWdub3Npc1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDc1MDcgQ29sdW1uczogNTZcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICgzNyk6IEtpZHNfRmlyc3RfUGFydGljaXBhbnRfSUQsIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIHNhbXBsZV9pZCwgYS4uLlxuZGJsICgxNyk6IGNlbGxfbGluZV9wYXNzYWdlLCBPU19kYXlzLCBFRlNfZGF5cywgYWdlX2F0X2RpYWdub3Npc19kYXlzLCBhZ2VfYS4uLlxubGdsICAoMik6IG1vbGVjdWxhcl9zdWJ0eXBlLCBpbnRlZ3JhdGVkX2RpYWdub3Npc1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
 <pre><code>Rows: 47507 Columns: 56
-── Column specification ──────────────────────────────────────────────────────────────
+── Column specification ─────────────────────────────────────────────────────────────────────────
 Delimiter: &quot;\t&quot;
 chr (37): Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, a...
 dbl (17): cell_line_passage, OS_days, EFS_days, age_at_diagnosis_days, age_a...
@@ -1927,11 +1927,10 @@ checkDomainStatus = TRUE, :
 PF00069,PF07714,PF00454,PF01513,PF02816,PF00433,PF01583,PF14513,PF01687,PF03727,PF00349,PF01256,PF01633,PF08544,PF00288,PF00696,PF07959,PF04275
 pfamIDs were found in our pfam list</code></pre>
 <!-- rnb-warning-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiSm9pbmluZyB3aXRoIGBieSA9IGpvaW5fYnkoTGVmdEJyZWFrcG9pbnQsIFJpZ2h0QnJlYWtwb2ludCwgRnVzaW9uTmFtZSwgRnVzaW9uX1R5cGUsXG5TYW1wbGUpYFxuSm9pbmluZyB3aXRoIGBieSA9IGpvaW5fYnkoU2FtcGxlLCBGdXNpb25OYW1lLCBMZWZ0QnJlYWtwb2ludCwgUmlnaHRCcmVha3BvaW50LFxuRnVzaW9uX1R5cGUsIEdlbmUxQSwgR2VuZTFCKWBcbiJ9 -->
-<pre><code>Joining with `by = join_by(LeftBreakpoint, RightBreakpoint, FusionName, Fusion_Type,
-Sample)`
-Joining with `by = join_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint,
-Fusion_Type, Gene1A, Gene1B)`</code></pre>
+<!-- rnb-message-begin eyJkYXRhIjoiSm9pbmluZyB3aXRoIGBieSA9IGpvaW5fYnkoTGVmdEJyZWFrcG9pbnQsIFJpZ2h0QnJlYWtwb2ludCwgRnVzaW9uTmFtZSwgRnVzaW9uX1R5cGUsIFNhbXBsZSlgXG5Kb2luaW5nIHdpdGggYGJ5ID0gam9pbl9ieShTYW1wbGUsIEZ1c2lvbk5hbWUsIExlZnRCcmVha3BvaW50LCBSaWdodEJyZWFrcG9pbnQsIEZ1c2lvbl9UeXBlLFxuR2VuZTFBLCBHZW5lMUIpYFxuIn0= -->
+<pre><code>Joining with `by = join_by(LeftBreakpoint, RightBreakpoint, FusionName, Fusion_Type, Sample)`
+Joining with `by = join_by(Sample, FusionName, LeftBreakpoint, RightBreakpoint, Fusion_Type,
+Gene1A, Gene1B)`</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2054,9 +2053,9 @@ fusion_recurrent5_per_sample &lt;- fusion_calls  %&gt;%
   dplyr::filter(Gene.ct&gt;limitMultiFused) %&gt;%
   mutate(note=paste0(&quot;multfused &quot; ,limitMultiFused, &quot; times per sample&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-message-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCBoYXMgZ3JvdXBlZCBvdXRwdXQgYnkgJ1NhbXBsZScuIFlvdSBjYW4gb3ZlcnJpZGUgdXNpbmcgdGhlIGAuZ3JvdXBzYFxuYXJndW1lbnQuXG4ifQ== -->
-<pre><code>`summarise()` has grouped output by &#39;Sample&#39;. You can override using the `.groups`
-argument.</code></pre>
+<!-- rnb-message-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCBoYXMgZ3JvdXBlZCBvdXRwdXQgYnkgJ1NhbXBsZScuIFlvdSBjYW4gb3ZlcnJpZGUgdXNpbmcgdGhlXG5gLmdyb3Vwc2AgYXJndW1lbnQuXG4ifQ== -->
+<pre><code>`summarise()` has grouped output by &#39;Sample&#39;. You can override using the
+`.groups` argument.</code></pre>
 <!-- rnb-message-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
