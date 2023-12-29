@@ -22,7 +22,7 @@ mkdir -p results
 python3 scripts/merged_to_individual_files.py \
     --gatk ../../data/cnv-gatk.seg.gz \
     --cnvkit ../../data/cnv-cnvkit.seg.gz \
-    --freec ../../scratch/cnv-controlfreec-merged.tsv.gz \
+    --freec ../../data/cnv-controlfreec.tsv.gz \
     --histologies ../../data/histologies-base.tsv \
     --snake $SCRATCHDIR/config_snakemake.yaml \
     --scratch $SCRATCHDIR \
@@ -50,6 +50,5 @@ snakemake \
     -j \
     --restart-times 2
 
-
 # merge cnv files
-Rscript --vanilla merge_cnv_file.R
+Rscript --vanilla scripts/merge_cnv_file.R
