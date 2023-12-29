@@ -42,13 +42,14 @@ if (!dir.exists(input_dir)) {
 
 
 # get wgs samples in cnv gatk 
-gtak_samples <- readr::read_tsv(cnv_gatk) %>% 
+gatk_samples <- readr::read_tsv(cnv_gatk) %>% 
   dplyr::pull("BS_ID") %>%
   unique()
 
 
 # subset histologies base for wgs tumor sample not in cnv gatk and write to file
 readr::read_tsv(histologies) %>% 
-  dplyr::filter(experimental_strategy == "WGS", sample_type == "Tumor",
-                !Kids_First_Biospecimen_ID %in% gtak_samples) %>% 
+  dplyr::filter(experimental_strategy == "WGS",
+                !is.na(pathology_diagnosis),
+                !Kids_First_Biospecimen_ID %in% gatk_samples) %>% 
   readr::write_tsv(output)
