@@ -26,7 +26,7 @@ path_dx_list_atrt <- jsonlite::fromJSON(atrt_subset_file)
 # Filter histo, 
 # select all ATRT biospecimens from PBTA and/DGD
 atrt_df <- histo %>%
-  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD")) %>%
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD", "PPTC")) %>%
   dplyr::filter(pathology_diagnosis %in% path_dx_list_atrt$exact_path_dx)
 
 # Create a dataframe with sample_id and matched biospecimens id for RNA-Seq, WGS and methylation
