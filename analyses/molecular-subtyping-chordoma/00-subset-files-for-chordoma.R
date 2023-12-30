@@ -22,7 +22,8 @@ library(tidyverse)
 # Use this as the root directory to ensure proper sourcing of functions no
 # matter where this is called from
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
-
+scratch_dir <- file.path(root_dir, "scratch")
+  
 # Set path to results and plots directory
 results_dir <-
   file.path(root_dir, "analyses", "molecular-subtyping-chordoma", "chordoma-subset")
@@ -67,7 +68,7 @@ expression_data <- expression_data %>%
     colnames(expression_data)
   )) %>%
   readr::write_rds(file.path(
-    results_dir,
+    scratch_dir,
     "chordoma-only-gene-expression-rsem-tpm-collapsed.rds"
   ))
 
