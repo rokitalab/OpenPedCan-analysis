@@ -238,7 +238,7 @@ Now we will create an objected filtered to include any sample with "Other" in th
 pathology_free_text_df <- embryonal_df %>%
   # Filter for exact matches of `pathology_diagnosis == "Other"` and defined pathology free text diagnosis terms in `free_text_dx_terms`
   filter(pathology_diagnosis == "Other",
-         pathology_free_text_diagnosis %in% path_dx_list$include_free_text) 
+          grepl(paste(path_dx_list$include_free_text, collapse = "|"), pathology_free_text_diagnosis))
 ```
 
 Any sample with "Neuroblastoma" in the `pathology_diagnosis` column, where `primary_site` does not contain "Other locations NOS" or "Adrenal Gland" and `pathology_free_text_diagnosis` does not contain "peripheral" or "Adrenal Gland" and cohort is DGD or PBTA.
