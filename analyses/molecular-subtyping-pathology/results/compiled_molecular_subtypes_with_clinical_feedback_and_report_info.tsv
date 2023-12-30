@@ -3053,7 +3053,6 @@ PT_ND34A6PR	PT_ND34A6PR_7316-122_Solid Tissue_Initial CNS Tumor	7316-122	BS_BZVR
 PT_44HPG5YT	PT_44HPG5YT_7316-3067_Solid Tissue_Initial CNS Tumor	7316-3067	BS_BZWM455T	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	GNG, MAPK	Updated via OpenPedCan subtyping	NA	NA
 PT_M7B5AK7P	PT_M7B5AK7P_ET_C7H15JCF_Not Available_Progressive	ET_C7H15JCF	BS_BZXFZKPE	Embryonal tumor	Neuroblastoma	NA	NBL, To be classified	NA	NA	NA	NA
 PT_G6FP5J9Y	PT_G6FP5J9Y_7316-7067_Not Available_Initial CNS Tumor	7316-7067	BS_C04GDZD9	Tumor of pineal region	Pineoblastoma	NA	PB, To be classified	NA	NA	NA	NA
-PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Solid Tissue_Initial CNS Tumor	7316-2666	BS_C05FKR8X	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	NA	Updated via OpenPedCan subtyping	NA	NA
 PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Solid Tissue_Initial CNS Tumor	7316-2666	BS_C05FKR8X	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping	NA	NA
 PT_DY2GNA83	PT_DY2GNA83_7316-8419_Solid Tissue_Deceased	7316-8419	BS_C08DKZFP	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA
 PT_ZPE3RXF0	PT_ZPE3RXF0_7316-3401_Solid Tissue_Initial CNS Tumor	7316-3401	BS_C08EHVE0	Meningioma	Meningioma	NA	NA	NA	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Initial CNS Tumor	Meningioma
@@ -5779,7 +5778,6 @@ PT_N673SYWW	PT_N673SYWW_7316-1751_Solid Tissue_Progressive	7316-1751	BS_PMFR8NPN
 PT_SYHB12RN	PT_SYHB12RN_7316-194_Solid Tissue_Deceased	7316-194	BS_PMMYWR4M_PHOS	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping	NA	NA
 PT_SYHB12RN	PT_SYHB12RN_7316-194_Solid Tissue_Deceased	7316-194	BS_PMMYWR4M_WCP	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	NA	Updated via OpenPedCan subtyping	NA	NA
 PT_DQ3ZCHB6	PT_DQ3ZCHB6_7316-2195_Solid Tissue_Initial CNS Tumor	7316-2195	BS_PMSZKZP7	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MAPK	GNG, MAPK	GNG, MAPK	Updated via OpenPedCan subtyping	NA	NA
-PT_54MH6Q46	PT_54MH6Q46_7316-2591_Solid Tissue_Initial CNS Tumor	7316-2591	BS_PN2CE34A	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	NA	Updated via OpenPedCan subtyping	NA	NA
 PT_54MH6Q46	PT_54MH6Q46_7316-2591_Solid Tissue_Initial CNS Tumor	7316-2591	BS_PN2CE34A	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPedCan subtyping	NA	NA
 PT_AZQ230WT	PT_AZQ230WT_7316-443_Solid Tissue_Initial CNS Tumor	7316-443	BS_PND839Z0	Ependymal tumor	Ependymoma	Posterior fossa group A (PFA) ependymoma	EPN, PF A	EPN, PF A	Updated via OpenPedCan subtyping	NA	NA
 PAVBLZ	PAVBLZ_01_Solid Tissue_Primary Tumor	01	BS_PNF2SHN9	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping	NA	NA
