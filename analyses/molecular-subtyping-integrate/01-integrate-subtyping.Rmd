@@ -229,9 +229,7 @@ histology_cg <- histology %>%
   # harmonize myofibroblastic tumors - all inflammatory; take care of organ later
     mutate(short_histology = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(short_histology)),
            harmonized_diagnosis = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(harmonized_diagnosis)),
-           # update typo
            broad_histology = case_when(sample_id == "7316-3066" ~ "Tumor of cranial and paraspinal nerves",
-                                       broad_histology == "Vasculaar tumor" ~ "Vascular tumor",
                                        broad_histology == "Other" ~ "Other tumor",
                                        cancer_group == "Glial-neuronal tumor" ~ "Neuronal and mixed neuronal-glial tumor",
                                        cancer_group %in% c("Cavernoma", "Malignant peripheral nerve sheath tumor") ~ "Benign tumor",
