@@ -206,6 +206,7 @@ histology_cg <- histology %>%
     (grepl("xanthogranuloma", pathology_free_text_diagnosis) & broad_histology == "Histiocytic tumor" & pathology_diagnosis == "Other" & 
        sample_id != "7316-188") ~ "Juvenile xanthogranuloma",
     sample_id == "7316-3066" ~ "Neurofibroma/Plexiform",
+    sample_id == "7316-3240" ~ "Diffuse intrinsic pontine glioma",
     cancer_group == "Histiocytic Tumor" ~ str_to_sentence(cancer_group),
     short_histology == "JXG" ~ "Histiocytic tumor",
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
@@ -228,7 +229,9 @@ histology_cg <- histology %>%
   # Additional update to clean up terms that we will use in plots
   # harmonize myofibroblastic tumors - all inflammatory; take care of organ later
     mutate(short_histology = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(short_histology)),
-           harmonized_diagnosis = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(harmonized_diagnosis)),
+           harmonized_diagnosis = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", 
+                                            sample_id == "7316-3240" ~ "Diffuse intrinsic pontine glioma",
+                                            TRUE ~ as.character(harmonized_diagnosis)),
            broad_histology = case_when(sample_id == "7316-3066" ~ "Tumor of cranial and paraspinal nerves",
                                        broad_histology == "Other" ~ "Other tumor",
                                        cancer_group == "Glial-neuronal tumor" ~ "Neuronal and mixed neuronal-glial tumor",

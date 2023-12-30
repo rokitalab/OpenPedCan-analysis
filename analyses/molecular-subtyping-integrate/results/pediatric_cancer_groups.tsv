@@ -76,10 +76,11 @@ Diffuse hemispheric glioma	Initial CNS Tumor	71
 Diffuse hemispheric glioma	Primary Tumor	4
 Diffuse hemispheric glioma	Recurrence	15
 Diffuse intrinsic pontine glioma	Deceased	16
-Diffuse intrinsic pontine glioma	Initial CNS Tumor	10
+Diffuse intrinsic pontine glioma	Initial CNS Tumor	11
 Diffuse intrinsic pontine glioma	Relapse	1
+Diffuse intrinsic pontine glioma	NA	1
 Diffuse midline glioma	Deceased	270
-Diffuse midline glioma	Initial CNS Tumor	458
+Diffuse midline glioma	Initial CNS Tumor	457
 Diffuse midline glioma	Progressive	48
 Diffuse midline glioma	Progressive Disease Post-Mortem	12
 Diffuse midline glioma	Recurrence	15
@@ -224,7 +225,6 @@ Neurofibroma/Plexiform	Recurrence	7
 Neurofibroma/Plexiform	Second Malignancy	6
 Non-Hodgkin Lymphoma	Primary Tumor	7
 Non-Hodgkin Lymphoma	Recurrence	2
-Not Reported	NA	1
 Oligodendroglioma	Initial CNS Tumor	37
 Oligodendroglioma	Primary Tumor	33
 Oligodendroglioma	Progressive	2

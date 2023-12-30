@@ -73,6 +73,7 @@ PBTA	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
 DGD	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
 DGD	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
+PBTA	Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	No
 PPTC	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
 DGD	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
@@ -320,7 +321,6 @@ PBTA	Neurofibroma/Plexiform	Neurofibroma/Plexiform	No	No
 DGD	Neurofibroma/Plexiform	Neurofibroma/Plexiform	No	No
 PBTA	Perineuroma	Neurofibroma/Plexiform	No	Yes
 DGD	Non-Hodgkin Lymphoma	Non-Hodgkin Lymphoma	No	No
-PBTA	Not Reported	Not Reported	No	No
 PBTA	Oligodendroglioma	Oligodendroglioma	No	No
 DGD	Oligodendroglioma	Oligodendroglioma	No	No
 DGD	Osteosarcoma	Osteosarcoma	No	No
