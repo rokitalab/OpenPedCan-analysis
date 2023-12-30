@@ -2961,7 +2961,6 @@ PT_548918FZ	PT_548918FZ_7316-8728_Not Available_Progressive	7316-8728	BS_J2G30JN
 PT_548918FZ	PT_548918FZ_7316-8728_Not Available_Progressive	7316-8728	BS_VP1W70ZV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, FGFR, NF1-somatic	LGG, FGFR, NF1-somatic	NA	Updated via OpenPedCan subtyping
 PT_548918FZ	PT_548918FZ_7316-8728_Solid Tissue_Progressive	7316-8728	BS_4N1GNHX4	Low-grade astrocytic tumor	LGAT	Low-grade glioma, FGFR, NF1-somatic	LGG, FGFR, NF1-somatic	NA	Updated via OpenPedCan subtyping
 PT_548918FZ	PT_548918FZ_7316-8728_Solid Tissue_Progressive	7316-8728	BS_PRKKCSRV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, FGFR, NF1-somatic	LGG, FGFR, NF1-somatic	NA	Updated via OpenPedCan subtyping
-PT_54MH6Q46	PT_54MH6Q46_7316-2591_Solid Tissue_Initial CNS Tumor	7316-2591	BS_PN2CE34A	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	NA	Updated via OpenPedCan subtyping
 PT_54MH6Q46	PT_54MH6Q46_7316-2591_Solid Tissue_Initial CNS Tumor	7316-2591	BS_AXM96K20	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPedCan subtyping
 PT_54MH6Q46	PT_54MH6Q46_7316-2591_Solid Tissue_Initial CNS Tumor	7316-2591	BS_DXC92XSR	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPedCan subtyping
 PT_54MH6Q46	PT_54MH6Q46_7316-2591_Solid Tissue_Initial CNS Tumor	7316-2591	BS_PN2CE34A	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	NA	Updated via OpenPedCan subtyping
@@ -9012,7 +9011,6 @@ PT_ZVV78QP5	PT_ZVV78QP5_7316-117_Solid Tissue_Initial CNS Tumor	7316-117	BS_FYGC
 PT_ZVYRFGEN	PT_ZVYRFGEN_7316-1068_Solid Tissue_Deceased	7316-1068	BS_ZV1P6W9C	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_ZVYRFGEN	PT_ZVYRFGEN_7316-1068_Solid Tissue_Deceased	7316-1068	BS_N214HN9M	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	DMG, H3 K28	Updated via OpenPedCan subtyping
 PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Derived Cell Line_Initial CNS Tumor_Serum-free_13	7316-2666	BS_A79S84KJ	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
-PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Solid Tissue_Initial CNS Tumor	7316-2666	BS_C05FKR8X	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, HGNET-MN1	CNS HGNET-MN1	NA	Updated via OpenPedCan subtyping
 PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Solid Tissue_Initial CNS Tumor	7316-2666	BS_6T87HSPX	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
 PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Solid Tissue_Initial CNS Tumor	7316-2666	BS_C05FKR8X	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
 PT_ZWY04DCR	PT_ZWY04DCR_7316-2666_Solid Tissue_Initial CNS Tumor	7316-2666	BS_V26XB0ZH	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	EPN, ST ZFTA	Updated via OpenPedCan subtyping
