@@ -80,9 +80,12 @@ cranio_bs <- metadata %>%
 tumor_only_snv_file <- file.path(root_dir, "data", "snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz")
 snv_file <- file.path(root_dir, "data", "snv-consensus-plus-hotspots.maf.tsv.gz")
 
-tumor_only_snv <- read_tsv(tumor_only_snv_file) #%>%
-#  select(!grepl("gnomad"))
+keep_cols <- c("Tumor_Sample_Barcode", "Hugo_Symbol", "HGVSp_Short", "Exon_Number")
+  
+tumor_only_snv <- read_tsv(tumor_only_snv_file) %>%
+  select(all_of(keep_cols))
 snv_df <- read_tsv(snv_file, comment = '#') %>%
+  select(all_of(keep_cols)) %>%
   bind_rows(tumor_only_snv) %>%
   filter(Tumor_Sample_Barcode %in% metadata$Kids_First_Biospecimen_ID,
            Hugo_Symbol %in% c("BRAF","CTNNB1"))
