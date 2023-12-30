@@ -77,17 +77,25 @@ if (nrow(dups) > 0) {
   mutate(molecular_subtype = case_when(match_id %in% dups$match_id ~ molecular_subtype_methyl,
                                        TRUE ~ as.character(molecular_subtype))) %>%
     unique()
-  }
+  
+  # add back the remaining biospecimens and any without data, mark as TBC
+  mb_subtypes_all <- mb_rna_methyl_dups_rm %>%
+    full_join(mb_biospecimens[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id")]) %>%
+    mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "MB, To be classified",
+                                         TRUE ~ molecular_subtype)) %>%
+    select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, sample_id, molecular_subtype, molecular_subtype_methyl) %>%
+    arrange(Kids_First_Participant_ID, match_id) %>%
+    write_tsv(file.path(output_dir, results_file))
+} else {
+  # use current df of results
+  mb_subtypes_all <- mb_biospecimens %>%
+    mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "MB, To be classified",
+                                         TRUE ~ molecular_subtype)) %>%
+    select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, sample_id, molecular_subtype, molecular_subtype_methyl) %>%
+    arrange(Kids_First_Participant_ID, match_id) %>%
+    write_tsv(file.path(output_dir, results_file))
+}
 
-# add back the remaining biospecimens and any without data, mark as TBC
-
-mb_subtypes_all <- mb_rna_methyl_dups_rm %>%
-  full_join(mb_biospecimens[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id")]) %>%
-  mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "MB, To be classified",
-                                       TRUE ~ molecular_subtype)) %>%
-  select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, sample_id, molecular_subtype, molecular_subtype_methyl) %>%
-  arrange(Kids_First_Participant_ID, match_id) %>%
-  write_tsv(file.path(output_dir, results_file))
 
 # how many tumor in each subgroup?
 mb_subtypes_all %>%
