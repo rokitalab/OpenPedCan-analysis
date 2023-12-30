@@ -23,6 +23,6 @@ open_pbta_envs.txt
 .scratch/
 
 # Expression files in subset directories
-./analyses/molecular-subtyping*/*subset/*rsem-tpm*
+analyses/molecular-subtyping*/*subset/*rsem-tpm*
 
 
