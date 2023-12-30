@@ -19,14 +19,22 @@ library(ggplot2)
 
 ```{r}
 # File path to subsetted files directory
-input_dir <- "chordoma-subset"
+root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
+data_dir <- file.path(root_dir, "data")
+scratch_dir <-  file.path(root_dir, "scratch")
+analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-chordoma")
+input_dir <- file.path(analysis_dir, "chordoma-subset")
+results_dir <- file.path(analysis_dir, "results")
+if (!dir.exists(results_dir)) {
+  dir.create(results_dir)
+}
 ```
 
 Set up metadata
 
 ```{r}
 # Read in non-subsetted metadata
-histologies_df <- readr::read_tsv(file.path("..", "..", "data", "histologies-base.tsv"), guess_max = 100000)
+histologies_df <- readr::read_tsv(file.path(data_dir, "histologies-base.tsv"), guess_max = 100000)
 
 # Read pathology diagnosis json file
 path_dx_list <- jsonlite::fromJSON(
@@ -60,7 +68,7 @@ subset_focal_cn_df <-
 # data
 subset_expression_data <-
   read_rds(file.path(
-    input_dir,
+    scratch_dir,
     "chordoma-only-gene-expression-rsem-tpm-collapsed.rds"
   ))
 ```
@@ -69,10 +77,6 @@ subset_expression_data <-
 
 ```{r}
 # tabular data
-results_dir <- "results"
-if (!dir.exists(results_dir)) {
-  dir.create(results_dir)
-}
 output_file <- file.path(results_dir, "chordoma_smarcb1_status.tsv")
 ```
 
@@ -106,6 +110,7 @@ copy_neutral_df
 
 Joining chordoma samples (both with chr 22 loss and no copy number change)
 ```{r}
+
 chordoma_copy <- chordoma_loss %>%
   dplyr::rename(Kids_First_Biospecimen_ID = biospecimen_id) %>%
   # join the losses with the neutrals to get a new data frame
