@@ -51,7 +51,6 @@ histology <- clinical %>%
   # remove TCGA, GTEX from altered file since we don't have DNA
   filter(!is.na(pathology_diagnosis),
          !cohort %in% c("TCGA", "GTEx")) %>%
-  mutate(match_id = paste(Kids_First_Participant_ID, sample_id, tumor_descriptor, composition, cell_line_composition, cell_line_passage, sep = "_")) %>%
   dplyr::select(Kids_First_Biospecimen_ID, match_id, cancer_predispositions,
   experimental_strategy) %>%
     unique()
@@ -115,6 +114,7 @@ cnv_domain_overlap[duplicated(cnv_domain_overlap$match_id) | duplicated(cnv_doma
 # or within gene locus of TP53
 ```{r SV overlaps}
 sv_overlap <- read_tsv(file.path(results_dir, "sv_overlap_tp53.tsv")) %>%
+  select(-match_id) %>% 
   left_join(histology[,c("Kids_First_Biospecimen_ID", "match_id")], by = "Kids_First_Biospecimen_ID") %>%
   select(match_id, Gene_name, SV_chrom, SV_start, SV_end, SV_length, SV_type) %>%
   unique() %>%
@@ -163,6 +163,18 @@ functional_sites_tp53 %>%
 Removing Silent or Intron classified variants to capture only putative damaging mutations
 
 ```{r}
+
+tumor_only_snv <- data.table::fread(file.path(data_dir, "snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz"), 
+                                    select = c("Chromosome",
+                                              "Start_Position",
+                                              "End_Position",
+                                              "Strand",
+                                              "Variant_Classification",
+                                              "Tumor_Sample_Barcode",
+                                              "Hugo_Symbol",
+                                              "HGVSp_Short"),
+                                   data.table = FALSE)
+
 consensus_tp53_snv_indel <- data.table::fread(
   file.path(data_dir,"snv-consensus-plus-hotspots.maf.tsv.gz"),
                                    select = c("Chromosome",
@@ -174,6 +186,7 @@ consensus_tp53_snv_indel <- data.table::fread(
                                               "Hugo_Symbol",
                                               "HGVSp_Short"),
                                    data.table = FALSE) %>%
+  bind_rows(tumor_only_snv) %>% 
   dplyr::rename(Kids_First_Biospecimen_ID = Tumor_Sample_Barcode) %>%
   filter(Hugo_Symbol == "TP53") %>% 
   filter(!(Variant_Classification %in% c("Silent", "Intron",
