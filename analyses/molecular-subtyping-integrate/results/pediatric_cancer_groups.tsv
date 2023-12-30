@@ -17,9 +17,8 @@ Alveolar soft part sarcoma	Primary Tumor	2
 Alveolar soft part sarcoma	Unknown	2
 Angiosarcoma	Primary Tumor	1
 Astroblastoma	Initial CNS Tumor	3
-Astrocytoma	Primary Tumor	6
+Astrocytoma	Primary Tumor	2
 Astrocytoma	Progressive	1
-Astrocytoma;Oligoastrocytoma	Recurrence	4
 Atypical Teratoid Rhabdoid Tumor	Deceased	37
 Atypical Teratoid Rhabdoid Tumor	Initial CNS Tumor	208
 Atypical Teratoid Rhabdoid Tumor	Primary Tumor	5
@@ -74,6 +73,7 @@ Desmoplastic infantile astrocytoma and ganglioglioma	Progressive	6
 Diffuse fibrillary astrocytoma	Initial CNS Tumor	1
 Diffuse hemispheric glioma	Deceased	8
 Diffuse hemispheric glioma	Initial CNS Tumor	71
+Diffuse hemispheric glioma	Primary Tumor	4
 Diffuse hemispheric glioma	Recurrence	15
 Diffuse intrinsic pontine glioma	Deceased	16
 Diffuse intrinsic pontine glioma	Initial CNS Tumor	10
@@ -136,8 +136,6 @@ Glial-neuronal tumor NOS	Progressive	6
 Glial-neuronal tumor NOS	Recurrence	21
 Glial-neuronal tumor NOS	NA	1
 Glioblastoma	Initial CNS Tumor	198
-Glioblastoma	Primary Tumor	12
-Glioblastoma	Recurrence	12
 Hemangioblastoma	Initial CNS Tumor	23
 Hemangioblastoma	Progressive	10
 Hepatoblastoma	Primary Tumor	9
@@ -146,10 +144,10 @@ Hepatocellular Carcinoma	Primary Tumor	3
 Hepatocellular neoplasm NOS	Primary Tumor	1
 High-grade glioma	Deceased	158
 High-grade glioma	Initial CNS Tumor	512
-High-grade glioma	Primary Tumor	20
+High-grade glioma	Primary Tumor	32
 High-grade glioma	Progressive	134
 High-grade glioma	Progressive Disease Post-Mortem	1
-High-grade glioma	Recurrence	113
+High-grade glioma	Recurrence	129
 High-grade glioma	Relapse	1
 High-grade glioma	Second Malignancy	33
 High-grade glioma	Unknown	5

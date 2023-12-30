@@ -179,7 +179,7 @@ histology_cg <- histology %>%
     # if multiple cancers, make NA unless otherwise specified below
     grepl(";", cancer_group) ~ NA_character_,
     cancer_group == "Brainstem glioma- Diffuse intrinsic pontine glioma" ~ "Diffuse intrinsic pontine glioma",
-    pathology_diagnosis %in% c("Astrocytoma", "Glioblastoma", "Astrocytoma;Oligoastrocytoma") ~ pathology_diagnosis,
+    pathology_diagnosis %in% c("Astrocytoma", "Glioblastoma", "Astrocytoma;Oligoastrocytoma") & is.na(cancer_group) ~ pathology_diagnosis,
     pathology_free_text_diagnosis == "astroblastoma" ~ "Astroblastoma", 
     cancer_group == "Non-germinomatous germ cell tumor;Teratoma" ~ "Mixed germ cell tumor", 
     cancer_group %in% c("Meningothelial meningioma", "Clear cell meningioma", "Atypical meningioma", "Anaplastic (malignant) meningioma") ~ "Meningioma", 

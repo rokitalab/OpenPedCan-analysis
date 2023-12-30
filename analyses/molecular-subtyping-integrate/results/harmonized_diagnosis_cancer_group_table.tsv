@@ -16,8 +16,6 @@ PPTC	Alveolar soft part sarcoma	Alveolar soft part sarcoma	No	No
 DGD	Angiosarcoma	Angiosarcoma	No	No
 PBTA	Other	Astroblastoma	No	Yes
 DGD	Astrocytoma	Astrocytoma	No	No
-PBTA	Diffuse hemispheric glioma, H3 G35-mutant	Astrocytoma	Yes	Yes
-PBTA	High-grade glioma, IDH-mutant	Astrocytoma;Oligoastrocytoma	Yes	Yes
 PBTA	Atypical Teratoid Rhabdoid Tumor, MYC	Atypical Teratoid Rhabdoid Tumor	Yes	No
 PBTA	Atypical Teratoid Rhabdoid Tumor (ATRT)	Atypical Teratoid Rhabdoid Tumor	No	Yes
 PBTA	Atypical Teratoid Rhabdoid Tumor, SHH	Atypical Teratoid Rhabdoid Tumor	Yes	No
@@ -178,8 +176,6 @@ DGD	Glial-neuronal tumor,  KIAA1549-BRAF	Glial-neuronal tumor NOS	Yes	Yes
 DGD	Glial-neuronal tumor,  NF1-somatic, NF1-germline	Glial-neuronal tumor NOS	Yes	Yes
 DGD	Glial-neuronal tumor,  RTK	Glial-neuronal tumor NOS	Yes	Yes
 PBTA	Glial-neuronal tumor,  NF1-somatic, FGFR	Glial-neuronal tumor NOS	Yes	Yes
-PBTA	High-grade glioma, IDH-wildtype and H3-wildtype	Glioblastoma	Yes	Yes
-PBTA	High-grade glioma, IDH-mutant	Glioblastoma	Yes	Yes
 CPTAC	Glioblastoma	Glioblastoma	No	No
 TCGA	Glioblastoma Multiforme	Glioblastoma Multiforme	No	No
 TCGA	Head and Neck Squamous Cell Carcinoma	Head and Neck Squamous Cell Carcinoma	No	No
