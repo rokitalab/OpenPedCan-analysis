@@ -88,7 +88,8 @@ if (nrow(dups) > 0) {
     write_tsv(file.path(output_dir, results_file))
 } else {
   # use current df of results
-  mb_subtypes_all <- mb_biospecimens %>%
+  mb_subtypes_all <- mb_rna_methyl %>%
+    full_join(mb_biospecimens[,c("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id")]) %>%
     mutate(molecular_subtype = case_when(is.na(molecular_subtype) ~ "MB, To be classified",
                                          TRUE ~ molecular_subtype)) %>%
     select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, sample_id, molecular_subtype, molecular_subtype_methyl) %>%
