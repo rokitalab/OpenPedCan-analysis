@@ -182,8 +182,8 @@ fusions_summary_df <- list(ttyh1_fusions,
                            foxr2_fusions,
                            cic_fusions) %>%
   purrr::reduce(dplyr::inner_join, by = "Kids_First_Biospecimen_ID") %>%
-  # Filter out specific MN1--PATZ1 fusion based on comment: https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/788#discussion_r495212879
-  filter(!(MN1_fusions == "MN1--PATZ1")) %>% 
+  # Filter out specific MN1--PATZ1 fusion based on comment: https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/788#discussion_r495212879 and MN1 self-fusion (other hist)
+  filter(!(MN1_fusions %in% c("MN1--PATZ1", "MN1--MN1"))) %>% 
   left_join(histologies_df %>% select(Kids_First_Biospecimen_ID, match_id), by = "Kids_First_Biospecimen_ID")
 
 # remove data.frame we no longer need
