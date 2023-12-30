@@ -50,7 +50,8 @@ chordoma_metadata <- metadata %>%
     sample_id,
     Kids_First_Participant_ID,
     Kids_First_Biospecimen_ID
-  )
+  ) %>%
+  write_tsv(file.path(results_dir, "chordoma_biospecimens.tsv"))
 
 #### Filter expression data ----------------------------------------------------
 # Read in the stranded expression data file
