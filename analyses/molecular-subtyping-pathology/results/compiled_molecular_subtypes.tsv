@@ -1655,6 +1655,7 @@ PAVMHB	PAVMHB_01_Solid Tissue_Primary Tumor	01	BS_YG0W2BBN	Embryonal tumor	Neuro
 PAVNLK	PAVNLK_01_Solid Tissue_Primary Tumor	01	BS_135GYQQD	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
 PAVNLK	PAVNLK_01_Solid Tissue_Primary Tumor	01	BS_87J6X9KJ	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
 PPTC_P0058	PPTC_P0058_BT-27_Patient Derived Xenograft_Unknown	BT-27	PPTC_HXGWRDRT	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
+PPTC_P0059	PPTC_P0059_BT-29_Patient Derived Xenograft_Primary Tumor	BT-29	PPTC_ZLVJRHPW	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA
 PPTC_P0060	PPTC_P0060_CHLA-258_Patient Derived Xenograft_Relapse	CHLA-258	PPTC_TVALFRGF	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	NA	Updated via OpenPedCan subtyping
 PPTC_P0061	PPTC_P0061_CHLA-79_Patient Derived Xenograft_Progressive	CHLA-79	PPTC_VID4Q7JK	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
 PPTC_P0062	PPTC_P0062_COG-N-415_Derived Cell Line_Progressive_NA_NA	COG-N-415	MARIS_EYOIVTPU	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
@@ -1698,12 +1699,20 @@ PPTC_P0088	PPTC_P0088_ES-8_Patient Derived Xenograft_Relapse	ES-8	PPTC_MJCGYUSF	
 PPTC_P0095	PPTC_P0095_EW-5_Patient Derived Xenograft_Primary Tumor	EW-5	PPTC_RTTBHIGM	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	NA	Updated via OpenPedCan subtyping
 PPTC_P0096	PPTC_P0096_EW-8_Patient Derived Xenograft_Primary Tumor	EW-8	PPTC_P0ZLDYX1	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	NA	Updated via OpenPedCan subtyping
 PPTC_P0098	PPTC_P0098_IBs-2373PNET_Patient Derived Xenograft_Primary Tumor	IBs-2373PNET	PPTC_OM0JCZUP	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, NOS	ETMR, NOS	NA	Updated via OpenPedCan subtyping
+PPTC_P0100	PPTC_P0100_IBs-W0128DIPG_Patient Derived Xenograft_Relapse	IBs-W0128DIPG	PPTC_ZJ1S3BGD	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PPTC_P0101	PPTC_P0101_IC-1128GBM_Patient Derived Xenograft_Unknown	IC-1128GBM	PPTC_BEMKRKC0	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PPTC_P0102	PPTC_P0102_IC-1425EPN_Patient Derived Xenograft_Relapse	IC-1425EPN	PPTC_4UKUZZKD	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	NA	Updated via OpenPedCan subtyping
 PPTC_P0103	PPTC_P0103_IC-1499EPB_Patient Derived Xenograft_Primary Tumor	IC-1499EPB	PPTC_JZFOEBAD	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
+PPTC_P0104	PPTC_P0104_IC-1621GBM_Patient Derived Xenograft_Primary Tumor	IC-1621GBM	PPTC_BCIUGV1N	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PPTC_P0105	PPTC_P0105_IC-22909PNET-rIII_Patient Derived Xenograft_Relapse	IC-22909PNET-rIII	PPTC_RMDVWORM	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
 PPTC_P0105	PPTC_P0105_ICb-9850PNET_Patient Derived Xenograft_Primary Tumor	ICb-9850PNET	PPTC_N5ZGB4MA	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
+PPTC_P0107	PPTC_P0107_IC-2664PNET_Patient Derived Xenograft_Primary Tumor	IC-2664PNET	PPTC_0BTTJ3DO	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PPTC_P0108	PPTC_P0108_IC-3635PXA_Patient Derived Xenograft_Unknown	IC-3635PXA	PPTC_BNBI0FG6	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PPTC_P0110	PPTC_P0110_IC-3752GBM_Patient Derived Xenograft_Relapse	IC-3752GBM	PPTC_MW31BSHL	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PPTC_P0111	PPTC_P0111_IC-6634GBM_Patient Derived Xenograft_Primary Tumor	IC-6634GBM	PPTC_OMTNBDYU	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PPTC_P0113	PPTC_P0113_IC-9635EPN_Patient Derived Xenograft_Relapse	IC-9635EPN	PPTC_QEEFX28F	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
 PPTC_P0114	PPTC_P0114_IC-9811EPN_Patient Derived Xenograft_Relapse	IC-9811EPN	PPTC_5GOEA2P1	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	NA	Updated via OpenPedCan subtyping
+PPTC_P0115	PPTC_P0115_ICb-10593ATRT_Patient Derived Xenograft_Relapse	ICb-10593ATRT	PPTC_R9NRW0SB	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA
 PPTC_P0116	PPTC_P0116_ICb-10614EPN_Patient Derived Xenograft_Primary Tumor	ICb-10614EPN	PPTC_T4HUMP5O	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
 PPTC_P0117	PPTC_P0117_ICb-1078MB_Patient Derived Xenograft_Primary Tumor	ICb-1078MB	PPTC_8JSGEYVN	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0118	PPTC_P0118_ICb-1140MB_Patient Derived Xenograft_Primary Tumor	ICb-1140MB	PPTC_CH8SW6RG	Embryonal tumor	Medulloblastoma	Medulloblastoma, WNT-activated	MB, WNT	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
@@ -1719,13 +1728,16 @@ PPTC_P0130	PPTC_P0130_ICb-2164MB_Patient Derived Xenograft_Primary Tumor	ICb-216
 PPTC_P0131	PPTC_P0131_ICb-2555MB_Patient Derived Xenograft_Primary Tumor	ICb-2555MB	PPTC_LA2TYUP9	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0132	PPTC_P0132_ICb-3130MB_Patient Derived Xenograft_Primary Tumor	ICb-3130MB	PPTC_XGA6F4WX	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0133	PPTC_P0133_ICb-3400MB_Patient Derived Xenograft_Relapse	ICb-3400MB	PPTC_KC0XYBEM	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
+PPTC_P0134	PPTC_P0134_ICb-5108ATRT_Patient Derived Xenograft_Primary Tumor	ICb-5108ATRT	PPTC_1VBXKGEP	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA
 PPTC_P0135	PPTC_P0135_ICb-5323EPN_Patient Derived Xenograft_Relapse	ICb-5323EPN	PPTC_Y5CIZ6MP	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA
 PPTC_P0136	PPTC_P0136_ICb-5610MB_Patient Derived Xenograft_Primary Tumor	ICb-5610MB	PPTC_NYOCUDRG	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0138	PPTC_P0138_ICb-8008MB_Patient Derived Xenograft_Primary Tumor	ICb-8008MB	PPTC_NE0QYRMF	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0139	PPTC_P0139_ICb-9508MB_Patient Derived Xenograft_Primary Tumor	ICb-9508MB	PPTC_0VBLCA6F	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0140	PPTC_P0140_ICb-984MB_Patient Derived Xenograft_Primary Tumor	ICb-984MB	PPTC_US2HAP7Z	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
 PPTC_P0141	PPTC_P0141_ICb-J1017MB_Patient Derived Xenograft_Relapse	ICb-J1017MB	PPTC_OAAXTZSW	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
+PPTC_P0142	PPTC_P0142_ICb-L1115ATRT_Patient Derived Xenograft_Unknown	ICb-L1115ATRT	PPTC_VBQI3RMZ	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA
 PPTC_P0143	PPTC_P0143_ICb-S1129MB_Patient Derived Xenograft_Relapse	ICb-S1129MB	PPTC_XTIO37FZ	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, NOS	ETMR, NOS	NA	Updated via OpenPedCan subtyping
+PPTC_P0148	PPTC_P0148_KT-12_Patient Derived Xenograft_Primary Tumor	KT-12	PPTC_VPAEHQ6T	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA
 PPTC_P0165	PPTC_P0165_NB-1382_Patient Derived Xenograft_Progressive	NB-1382	PPTC_IW87M9YQ	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN non-amplified	NBL, MYCN non-amplified	NA	Updated via OpenPedCan subtyping
 PPTC_P0166	PPTC_P0166_NB-1643_Derived Cell Line_Primary Tumor_NA_NA	NB-1643	MARIS_FHJWCMO7	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
 PPTC_P0166	PPTC_P0166_NB-1643_Patient Derived Xenograft_Primary Tumor	NB-1643	PPTC_5YRNDC30	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
@@ -1738,7 +1750,10 @@ PPTC_P0170	PPTC_P0170_NB-Fly-623m_Patient Derived Xenograft_Relapse	NB-Fly-623m	
 PPTC_P0171	PPTC_P0171_NB-SD_Derived Cell Line_Progressive_NA_NA	NB-SD	MARIS_9JXQHHNY	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
 PPTC_P0171	PPTC_P0171_NB-SD_Patient Derived Xenograft_Progressive	NB-SD	PPTC_KB5T2UVM	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN non-amplified	NBL, MYCN non-amplified	NA	Updated via OpenPedCan subtyping
 PPTC_P0179	PPTC_P0179_NCH-MB-1_Patient Derived Xenograft_Primary Tumor	NCH-MB-1	PPTC_NSWAXGTU	Embryonal tumor	Medulloblastoma	Medulloblastoma, WNT-activated	MB, WNT	NA	Subtype based on prediction;Updated via OpenPedCan subtyping
+PPTC_P0180	PPTC_P0180_NCH-MN-1_Patient Derived Xenograft_Primary Tumor	NCH-MN-1	PPTC_3FOYJRWJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
 PPTC_P0181	PPTC_P0181_NCH-NB-1_Patient Derived Xenograft_Primary Tumor	NCH-NB-1	PPTC_WS87CENR	Embryonal tumor	Neuroblastoma	Neuroblastoma, MYCN-amplified	NBL, MYCN amplified	NA	Updated via OpenPedCan subtyping
+PPTC_P0183	PPTC_P0183_NCH-PXA-1_Patient Derived Xenograft_Primary Tumor	NCH-PXA-1	PPTC_UCBE34K1	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA
+PPTC_P0186	PPTC_P0186_NCH-RBD-4_Patient Derived Xenograft_Primary Tumor	NCH-RBD-4	PPTC_WTDE4P9T	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA
 PPTC_P0243	PPTC_P0243_SK-NEP-1_Patient Derived Xenograft_Relapse	SK-NEP-1	PPTC_6NAVTLHB	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	NA	Updated via OpenPedCan subtyping
 PPTC_P0244	PPTC_P0244_TC-71_Patient Derived Xenograft_Relapse	TC-71	PPTC_C1EQHFWZ	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	NA	Updated via OpenPedCan subtyping
 PT_00G007DM	PT_00G007DM_7316-2577_Solid Tissue_Recurrence	7316-2577	BS_AQMKA8NC	Embryonal tumor	ETMR	Embryonal tumor with multilayer rosettes, NOS	ETMR, NOS	NA	Updated via OpenPedCan subtyping
@@ -5554,6 +5569,8 @@ PT_G9XKWA3N	PT_G9XKWA3N_7316-5463_Solid Tissue_Initial CNS Tumor	7316-5463	BS_DH
 PT_G9XKWA3N	PT_G9XKWA3N_7316-5463_Solid Tissue_Initial CNS Tumor	7316-5463	BS_FPZ63KF4	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping
 PT_G9XKWA3N	PT_G9XKWA3N_7316-5463_Solid Tissue_Initial CNS Tumor	7316-5463	BS_RYRWBV7K	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping
 PT_G9XKWA3N	PT_G9XKWA3N_ET_BH284EZA_Not Available_Primary Tumor	ET_BH284EZA	BS_DPNDFWYX	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA
+PT_GAEP6C9D	PT_GAEP6C9D_C4123083-Tumor_Solid Tissue_Recurrence	C4123083-Tumor	BS_8QVFVG0A	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
+PT_GAEP6C9D	PT_GAEP6C9D_C4123083-Tumor_Solid Tissue_Recurrence	C4123083-Tumor	BS_Z8X2WQFH	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	NA	Updated via OpenPedCan subtyping
 PT_GAKHC0Y2	PT_GAKHC0Y2_7316-7063_Not Available_Initial CNS Tumor	7316-7063	BS_3RNPMRT5	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	NA	Updated via OpenPedCan subtyping
 PT_GAKHC0Y2	PT_GAKHC0Y2_7316-7063_Not Available_Initial CNS Tumor	7316-7063	BS_GSRDGK5W	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	NA	Updated via OpenPedCan subtyping
 PT_GAKHC0Y2	PT_GAKHC0Y2_7316-7063_Solid Tissue_Initial CNS Tumor	7316-7063	BS_5FHTNJCD	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA

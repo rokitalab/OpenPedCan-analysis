@@ -58,7 +58,7 @@ data_dir <- file.path(root_dir, "data")
 cn_gistic_df <- read_tsv(file.path(results_dir, "HGG_cleaned_cnv.tsv"))
 mutation_df <- read_tsv(file.path(results_dir, "HGG_cleaned_mutation.tsv"))
 hgg_meta <- read_tsv(file.path(subset_dir, "hgg_metadata.tsv")) %>% 
-  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD"),
+  dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD", "PPTC"),
                 !is.na(pathology_diagnosis)) 
 
 fusion_df <- read_tsv(file.path(results_dir, "HGG_cleaned_fusion.tsv"))
