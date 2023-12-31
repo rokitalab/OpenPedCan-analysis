@@ -29,7 +29,6 @@ DGD	Burkitt Leukemia/Lymphoma	Burkitt Leukemia/Lymphoma	No	No
 PBTA	CNS Burkitt's lymphoma	CNS Burkitt's lymphoma	No	No
 PBTA	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 PBTA	CNS Embryonal tumor, HGNET-MN1	CNS Embryonal tumor	Yes	No
-PBTA	CNS Embryonal tumor	CNS Embryonal tumor	No	No
 DGD	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 PPTC	CNS Embryonal tumor, NEC/NOS	CNS Embryonal tumor	Yes	No
 DGD	CNS Melanoma	CNS Melanoma	No	No
@@ -78,6 +77,8 @@ PPTC	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontin
 PBTA	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
 DGD	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
+DGD	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	Diffuse midline glioma	Yes	No
+PBTA	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	Diffuse midline glioma	Yes	No
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	EBV-Positive Diffuse Large B-Cell Lymphoma, Not Otherwise Specified	EBV-Positive Diffuse Large B-Cell Lymphoma	Yes	No
