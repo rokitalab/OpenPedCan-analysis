@@ -26,7 +26,7 @@ SKIP_SUBSETTING=${SKIP_SUBSETTING:-0}
 script_directory="$(perl -e 'use File::Basename;
   use Cwd "abs_path";
   print dirname(abs_path(@ARGV[0]));' -- "$0")"
-cd "$script_directory" || exit
+cd "$script_biodirectory" || exit
 
 # directories that hold the full files for the release and the subset files
 # generated via these scripts
@@ -65,11 +65,11 @@ fi
 if [ "$SKIP_SUBSETTING" -lt "1" ]; then
 
   # get list of biospecimen ids for subset files
-#  TMPDIR=./tmp Rscript --vanilla 01-get_biospecimen_identifiers.R \
-#      --data_directory $FULL_DIRECTORY \
-#      --output_file $BIOSPECIMEN_FILE \
-#      --num_matched $NUM_MATCHED \
-#      --local $RUN_LOCAL
+  TMPDIR=./tmp Rscript --vanilla 01-get_biospecimen_identifiers.R \
+      --data_directory $FULL_DIRECTORY \
+      --output_file $BIOSPECIMEN_FILE \
+      --num_matched $NUM_MATCHED \
+      --local $RUN_LOCAL
 
   # subset the files
   TMPDIR=./tmp Rscript --vanilla 02-subset_files.R \
