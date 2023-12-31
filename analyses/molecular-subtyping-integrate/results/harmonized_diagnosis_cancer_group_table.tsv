@@ -74,6 +74,10 @@ DGD	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine
 PBTA	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	No
 PPTC	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
+PBTA	Diffuse leptomeningeal glioneuronal tumor,  MAPK	Diffuse leptomeningeal glioneuronal tumor	Yes	No
+DGD	Diffuse leptomeningeal glioneuronal tumor,  To be classified	Diffuse leptomeningeal glioneuronal tumor	Yes	No
+PBTA	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	Diffuse leptomeningeal glioneuronal tumor	Yes	No
+DGD	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	Diffuse leptomeningeal glioneuronal tumor	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
 DGD	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
@@ -96,6 +100,7 @@ PBTA	Posterior fossa group B (PFB) ependymoma	Ependymoma	No	Yes
 PBTA	Spinal ependymoma	Ependymoma	No	Yes
 PBTA	Spinal ependymoma, MYCN-amplified	Ependymoma	Yes	Yes
 DGD	Supratentorial ependymoma, ZFTA fusion-positive	Ependymoma	Yes	Yes
+PBTA	Ependymoma;Metastatic secondary tumors	Ependymoma	No	Yes
 DGD	Posterior fossa group A (PFA) ependymoma	Ependymoma	No	Yes
 PBTA	Posterior fossa subependymoma	Ependymoma	No	Yes
 PBTA	Spinal subependymoma	Ependymoma	No	Yes
@@ -443,16 +448,13 @@ DGD	Wilms tumor	Wilms tumor	No	No
 PPTC	Wilms tumor	Wilms tumor	No	No
 TARGET	Wilms tumor	Wilms tumor	No	No
 PBTA	Dysplasia/Gliosis	NA	No	Yes
-PBTA	Diffuse leptomeningeal glioneuronal tumor,  MAPK	NA	Yes	Yes
 PBTA	Osteoblastoma	NA	No	Yes
 DGD	Non-cancer diagnosis	NA	No	Yes
 PBTA	Epidermoid cyst	NA	No	Yes
-DGD	Diffuse leptomeningeal glioneuronal tumor,  To be classified	NA	Yes	Yes
 PBTA	Adenoma	NA	No	Yes
 DGD	Dysplasia/Gliosis	NA	No	Yes
 PBTA	Lipoma	NA	No	Yes
 PBTA	Epilepsy, chronic rasmussen encephalitis	NA	Yes	Yes
-PBTA	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	NA	Yes	Yes
 PBTA	Cavernoma	NA	No	Yes
 DGD	Lipoblastoma	NA	No	Yes
 DGD	Recurrent Acute Leukemia	NA	No	Yes
@@ -461,7 +463,6 @@ DGD	Hamartoma	NA	No	Yes
 DGD	Osteoblastoma	NA	No	Yes
 PBTA	Neurofibroma/Plexiform;Schwannoma	NA	No	Yes
 PBTA	Hemangioma	NA	No	Yes
-PBTA	Ependymoma;Metastatic secondary tumors	NA	No	Yes
 DGD	Giant Cell Granuloma	NA	No	Yes
 DGD	Hemangioma	NA	No	Yes
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	NA	No	Yes
@@ -483,7 +484,6 @@ DGD	Post-Transplant Lymphoproliferative Disorder	NA	No	Yes
 PBTA	Giant cell tumor of bone	NA	No	Yes
 DGD	Aplastic anemia	NA	No	Yes
 PBTA	Lipoblastoma	NA	No	Yes
-DGD	Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	NA	Yes	Yes
 DGD	Benign Neoplasm	NA	No	Yes
 DGD	Hematoma	NA	No	Yes
 DGD	Neurofibroma/Plexiform;Schwannoma	NA	No	Yes

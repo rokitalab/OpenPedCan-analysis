@@ -79,6 +79,9 @@ Diffuse intrinsic pontine glioma	Deceased	16
 Diffuse intrinsic pontine glioma	Initial CNS Tumor	11
 Diffuse intrinsic pontine glioma	Relapse	1
 Diffuse intrinsic pontine glioma	NA	1
+Diffuse leptomeningeal glioneuronal tumor	Initial CNS Tumor	3
+Diffuse leptomeningeal glioneuronal tumor	Progressive	5
+Diffuse leptomeningeal glioneuronal tumor	NA	1
 Diffuse midline glioma	Deceased	270
 Diffuse midline glioma	Initial CNS Tumor	461
 Diffuse midline glioma	Progressive	48
@@ -98,7 +101,7 @@ Embryonal tumor with multilayer rosettes	Relapse	1
 Ependymoma	Deceased	42
 Ependymoma	Initial CNS Tumor	506
 Ependymoma	Primary Tumor	9
-Ependymoma	Progressive	127
+Ependymoma	Progressive	128
 Ependymoma	Recurrence	137
 Ependymoma	Relapse	5
 Ependymoma	Second Malignancy	3
