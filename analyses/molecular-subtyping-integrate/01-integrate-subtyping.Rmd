@@ -186,7 +186,7 @@ histology_cg <- histology %>%
     cancer_group %in% c("Supratentorial or Spinal Cord PNET", "Embryonal tumor", "Embryonal Tumor", "CNS Embryonal tumor, NEC/NOS", "CNS with BCOR ITD") ~ "Embryonal tumor", 
     cancer_group == "Embryonal Tumor with Multilayered Rosettes (ETMR)" ~ "Embryonal tumor with multilayer rosettes", 
     cancer_group %in% c("Wilms Tumor", "Juvenile Xanthogranuloma", "Clear Cell Sarcoma of the Kidney") ~ stringr::str_to_sentence(cancer_group), 
-    cancer_group == "Ependymoma;Metastatic secondary tumors" ~ "Ependymoma",
+    pathology_diagnosis == "Ependymoma;Metastatic secondary tumors" ~ "Ependymoma",
     cancer_group %in% c("Acute Promyelocytic Leukemia", "Therapy-Related Acute Myeloid Leukemia") ~ "Acute Myeloid Leukemia",
     cancer_group == "Mixed Lineage Leukemia" ~ "Acute Lymphoblastic Leukemia",
     cancer_group %in% c("Brain Lower Grade Glioma", "Low-grade glioma/astrocytoma (WHO grade I/II)") ~ "Low-grade glioma",
@@ -223,6 +223,7 @@ histology_cg <- histology %>%
     cancer_group %in% c("Non-germinomatous germ cell tumor", "Diffuse leptomeningeal glioneuronal tumor", "Malignant peripheral nerve sheath tumor") ~ NA_character_,
     broad_histology == "Meningioma" ~ "Meningioma",
     cancer_group == "Perineuroma" ~ "Neurofibroma/Plexiform",
+    grepl("Diffuse leptomeningeal glioneuronal tumor", integrated_diagnosis) ~ "Diffuse leptomeningeal glioneuronal tumor",
     is.na(cancer_group) & broad_histology == "Tumor of cranial and paraspinal nerves" ~ "Neurofibroma/Plexiform",
     TRUE ~ cancer_group)
     ) %>%
@@ -236,7 +237,10 @@ histology_cg <- histology %>%
                                        broad_histology == "Other" ~ "Other tumor",
                                        cancer_group == "Glial-neuronal tumor" ~ "Neuronal and mixed neuronal-glial tumor",
                                        cancer_group %in% c("Cavernoma", "Malignant peripheral nerve sheath tumor") ~ "Benign tumor",
-                                       TRUE ~ broad_histology)) %>%
+                                       TRUE ~ broad_histology),
+           cancer_group = case_when(pathology_diagnosis %in% c("Gliomatosis Cerebri;High-grade glioma/astrocytoma (WHO grade III/IV)", 
+                                                               "High-grade glioma/astrocytoma (WHO grade III/IV);Oligodendroglioma",
+                               "High-grade glioma/astrocytoma (WHO grade III/IV);Neurofibroma/Plexiform") ~ "High-grade glioma")) %>%
   # remove short forms in the brackets
   dplyr::mutate(cancer_group = str_extract(cancer_group, "[^(]*")) %>%
   # remove space at the ends
