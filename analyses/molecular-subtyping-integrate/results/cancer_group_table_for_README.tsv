@@ -1,254 +1,143 @@
 stripped_subtype	cancer_group
-Abdominal inflammatory myofibroblastic tumor	NA
-Acute Lymphoblastic Leukemia	NA
-Acute Myeloid Leukemia	NA
-Acute Promyelocytic Leukemia	NA
-Adamantinomatous craniopharyngioma	NA
-Adenocarcinoma	NA
+Abdominal inflammatory myofibroblastic tumor	Other tumor
+Acute Promyelocytic Leukemia	Acute Myeloid Leukemia
+Adamantinomatous craniopharyngioma	Adamantinomatous Craniopharyngioma
 Adenoma	NA
-Adrenal mass	NA
-Adrenocortical Carcinoma	NA
-Alveolar soft part sarcoma	NA
-Anaplastic (malignant) meningioma	NA
-Aneurismal bone cyst (abc) with col1a1-usp6 fusion	NA
-Aneurysmal bone cyst (abc)	NA
-Angiosarcoma	NA
+Adrenal mass	Other tumor
+Anaplastic (malignant) meningioma	Meningioma
+Aneurismal bone cyst (abc) with col1a1-usp6 fusion	Other tumor
+Aneurysmal bone cyst (abc)	Other tumor
 Aplastic anemia	NA
 Arteriovenous malformation	NA
-Astrocytoma	NA
 Atypical Lymph Node	NA
-Atypical Neurofibromatous Neoplasm of Uncertain Biologic Potential	NA
-Atypical Spitz Nevus	NA
-Atypical Teratoid Rhabdoid Tumor	NA
-Atypical Teratoid Rhabdoid Tumor (ATRT)	NA
-Atypical choroid plexus papilloma	NA
+Atypical Neurofibromatous Neoplasm of Uncertain Biologic Potential	Other tumor
+Atypical Spitz Nevus	Other tumor
+Atypical Teratoid Rhabdoid Tumor (ATRT)	Atypical Teratoid Rhabdoid Tumor
+Atypical choroid plexus papilloma	Choroid plexus tumor
 Atypical lymphoid infiltrate	NA
-Atypical meningioma	NA
-Atypical vascular lesion	NA
-B Acute Lymphoblastic Leukemia/Lymphoma	NA
+Atypical meningioma	Meningioma
+Atypical vascular lesion	Other tumor
 Benign Neoplasm	NA
-Bladder Urothelial Carcinoma	NA
-Bone marrow cellularity	NA
-Bone marrow failure	NA
-Brain Lower Grade Glioma	NA
-Brainstem glioma- Diffuse intrinsic pontine glioma	NA
-Breast Invasive Carcinoma	NA
-Burkitt Leukemia/Lymphoma	NA
-CNS Burkitt's lymphoma	NA
-CNS Embryonal tumor	NA
-CNS Melanoma	NA
-CNS neuroblastoma	NA
+Bone marrow cellularity	Other tumor
+Bone marrow failure	Other tumor
+Brain Lower Grade Glioma	Low-grade glioma
+Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma
 Cavernoma	NA
-Cellular Congenital Mesoblastic Nephroma	NA
-Central neurocytoma	NA
-Cerebral ventriculomegaly	NA
-Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	NA
-Childhood Astrocytic Tumor	NA
-Cholangiocarcinoma	NA
+Cellular Congenital Mesoblastic Nephroma	Other tumor
+Cerebral ventriculomegaly	Other tumor
+Childhood Astrocytic Tumor	Other tumor
 Cholesterol granuloma	NA
 Chondroma	NA
-Chondromyxoid fibroma	NA
-Chordoma	NA
-Choroid plexus carcinoma	NA
-Choroid plexus papilloma	NA
-Choroid plexus tumor	NA
-Chronic Myelogenous Leukemia	NA
-Chronic myeloid leukemia pathway	NA
-Clear Cell Sarcoma of the Kidney	NA
-Clear cell meningioma	NA
-Colon Adenocarcinoma	NA
-Colon Carcinoma	NA
-Congenital Mesoblastic Nephroma	NA
-Congenital malignant brain tumor	NA
+Choroid plexus carcinoma	Choroid plexus tumor
+Choroid plexus papilloma	Choroid plexus tumor
+Chronic myeloid leukemia pathway	Other tumor
+Clear Cell Sarcoma of the Kidney	Clear cell sarcoma of the kidney
+Clear cell meningioma	Meningioma
+Congenital Mesoblastic Nephroma	Other tumor
 Cranial fasciitis	NA
-Craniopharyngioma	NA
-Cutaneous Melanoma	NA
-Cyst	NA
+Cyst	Other tumor
 Dermoid cyst	NA
-Desmoid-type fibromatosis	NA
-Desmoplastic infantile astrocytoma and ganglioglioma	NA
-Diffuse fibrillary astrocytoma	NA
-Diffuse hemispheric glioma	NA
-Diffuse intrinsic pontine glioma	NA
 Diffuse leptomeningeal glioneuronal tumor	NA
-Diffuse midline glioma	NA
-Dysembryoplastic neuroepithelial tumor (DNET)	NA
+Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor
 Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma	NA
 Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	NA
 Dysplasia/Gliosis	NA
-EBV-Positive Diffuse Large B-Cell Lymphoma	NA
-Embryonal tumor with multilayer rosettes	NA
-Ependymoma	NA
 Ependymoma;Metastatic secondary tumors	NA
 Epidermoid cyst	NA
 Epilepsy	NA
-Epstein-Barr virus-related tumor	NA
-Esophageal Carcinoma	NA
-Ewing sarcoma	NA
-Extraventricular neurocytoma	NA
-Familial adenomatous polyposis	NA
+Familial adenomatous polyposis	Other tumor
 Fibroma	NA
-Fibromixoid lesion	NA
-Follicular Variant Thyroid Gland Papillary Carcinoma	NA
-Ganglioglioma	NA
-Ganglioneuroblastoma	NA
-Ganglioneuroma	NA
-Germ Cell Tumor	NA
-Germinoma	NA
+Fibromixoid lesion	Fibromyxoid lesion
 Giant Cell Granuloma	NA
 Giant cell tumor of bone	NA
-Glial-neuronal tumor	NA
-Glioblastoma	NA
-Glioblastoma Multiforme	NA
+Glial-neuronal tumor	Glial-neuronal tumor NOS
 Glioblastoma Multiforme Pathway	NA
-Glioma	NA
+Glioma	Other tumor
 Gliomatosis Cerebri;High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma
-Gliosis	NA
-Granular Cell Tumor	NA
+Gliosis	Other tumor
+Granular Cell Tumor	Other tumor
 Hamartoma	NA
-Head and Neck Squamous Cell Carcinoma	NA
-Hemangioblastoma	NA
 Hemangioma	NA
 Hematoma	NA
-Hepatoblastoma	NA
-Hepatocellular Carcinoma	NA
-Hepatocellular neoplasm NOS	NA
-High-grade glioma	NA
-High-grade glioma/astrocytoma (WHO grade III/IV)	NA
+High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma
 High-grade glioma/astrocytoma (WHO grade III/IV);Neurofibroma/Plexiform	High-grade glioma
 High-grade glioma/astrocytoma (WHO grade III/IV);Oligodendroglioma	High-grade glioma
-High-grade neuroepithelial tumor	NA
-Histiocytic Tumor	NA
-Histiocytic tumor	NA
-Hodgkin's lymphoma	NA
-Hypocellular bone marrow	NA
-Hypophyseal stalk thickening	NA
+Histiocytic Tumor	Histiocytic tumor
+Hypocellular bone marrow	Other tumor
+Hypophyseal stalk thickening	Other tumor
 Inclusion cyst	NA
-Infant-type hemispheric glioma	NA
-Inflammatory Myofibroblastic Tumor	NA
+Inflammatory Myofibroblastic Tumor	Other tumor
+Inflammatory lesion	Other tumor
 Inflammatory lesion	NA
-Intraneural perineuroma	NA
-Juvenile xanthogranuloma	NA
-Kidney Chromophobe	NA
-Kidney Renal Clear Cell Carcinoma	NA
-Kidney Renal Papillary Cell Carcinoma	NA
-Langerhans Cell histiocytosis	NA
+Kidney Chromophobe	Chromophobe renal cell carcinoma
+Kidney Renal Clear Cell Carcinoma	Renal Clear Cell Carcinoma
+Kidney Renal Papillary Cell Carcinoma	Renal Papillary Cell Carcinoma
 Lipoblastoma	NA
 Lipoma	NA
-Lipomyelomeningocele	NA
-Low-grade glioma	NA
-Low-grade glioma/astrocytoma (WHO grade I/II)	NA
-Lung Adenocarcinoma	NA
-Lung Squamous Cell Carcinoma	NA
+Lipomyelomeningocele	Other tumor
+Low-grade glioma/astrocytoma (WHO grade I/II)	Low-grade glioma
 Lymphadenitis	NA
-Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	NA
-Malignant PEComa	NA
-Malignant peripheral nerve sheath tumor (MPNST)	NA
+Malignant PEComa	Other tumor
+Malignant peripheral nerve sheath tumor (MPNST)	Malignant peripheral nerve sheath tumor
 Malignant peripheral nerve sheath tumor (MPNST);Neurofibroma/Plexiform	NA
-Medulloblastoma	NA
-Melanocytoma	NA
-Melanoma	NA
-Meningioma	NA
+Melanocytoma	Melanocytic tumor
 Meningioma;Neurofibroma/Plexiform	NA
 Meningioma;Schwannoma	NA
-Meningothelial meningioma	NA
-Mesenchymal tumor	NA
-Mesothelioma	NA
-Metastatic secondary tumors	NA
+Meningothelial meningioma	Meningioma
 Microcytic Anemia	NA
-Mixed Lineage Leukemia	NA
-Mixed germ cell tumor	NA
-Monomorphic Post-Transplant Lymphoproliferative Disorder	NA
-Mucoepidermoid Carcinoma	NA
-Myelodysplastic syndrome	NA
-Myeloid Leukemia Associated with Down Syndrome	NA
-Myeloid Sarcoma	NA
-Myofibroblastic tumor	NA
+Mixed Lineage Leukemia	Acute Lymphoblastic Leukemia
+Monomorphic Post-Transplant Lymphoproliferative Disorder	Other tumor
+Mucoepidermoid Carcinoma	Other tumor
+Myelodysplastic syndrome	Other tumor
+Myofibroblastic tumor	Inflammatory Myofibroblastic Tumor
 Myofibroma	NA
-Myxoid spindle cell tumor	NA
-Myxopapillary ependymoma	NA
+Myxoid spindle cell tumor	Other tumor
+Myxopapillary ependymoma	Ependymoma
 Necrotizing myelopathy	NA
-Neoplasm of unspecified behavior of endocrine glands	NA
-Neuroblastic tumor	NA
-Neuroblastoma	NA
-Neuroendocrine carcinoma	NA
-Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	NA
-Neurofibroma/Plexiform	NA
+Neoplasm of unspecified behavior of endocrine glands	Other tumor
+Neuroblastic tumor	Other tumor
+Neuroendocrine carcinoma	Other tumor
+Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	Glial-neuronal tumor
 Neurofibroma/Plexiform;Schwannoma	NA
-Neutropenia	NA
-Nodular fasciitis	NA
+Neutropenia	Other tumor
+Nodular fasciitis	Other tumor
 Non-Cancer Diagnosis	NA
-Non-Hodgkin Lymphoma	NA
 Non-cancer diagnosis	NA
 Non-germinomatous germ cell tumor	NA
 Non-germinomatous germ cell tumor;Teratoma	NA
 Nonintractable epilepsy without status epilepticus	NA
-Noonan syndrome	NA
-Not Reported	NA
-Oligodendroglioma	NA
+Noonan syndrome	Other tumor
+Not Reported	Other tumor
 Ossifying fibroma	NA
 Osteoblastoma	NA
 Osteoma	NA
-Osteosarcoma	NA
-Other	NA
-Ovarian Serous Cystadenocarcinoma	NA
-Pancreatic Adenocarcinoma	NA
-Pancreatoblastoma	NA
-Papillary Carcinoma	NA
-Papillary Thyroid Carcinoma Pathway	NA
-Perineuroma	NA
-Pheochromocytoma and Paraganglioma	NA
-Pilocytic astrocytoma	NA
+Other	Astroblastoma
+Papillary Thyroid Carcinoma Pathway	Other tumor
+Perineuroma	Neurofibroma/Plexiform
 Pilomatricoma	NA
-Pineoblastoma	NA
-Pleomorphic xanthoastrocytoma	NA
-Pleuropulmonary blastoma	NA
-Portions of white matter with a few reactive astrocytes and rare cells with mild atypia	NA
+Pleuropulmonary blastoma	Other tumor
+Portions of white matter with a few reactive astrocytes and rare cells with mild atypia	Other tumor
 Post-Transplant Lymphoproliferative Disorder	NA
-Posterior fossa group A (PFA) ependymoma	NA
-Posterior fossa group B (PFB) ependymoma	NA
-Posterior fossa subependymoma	NA
-Primary mediastinal large B cell lymphoma	NA
-Primary myelofibrosis	NA
-Prostate Adenocarcinoma	NA
-Reactive connective tissue	NA
-Rectum Adenocarcinoma	NA
+Posterior fossa group A (PFA) ependymoma	Ependymoma
+Posterior fossa group B (PFB) ependymoma	Ependymoma
+Posterior fossa subependymoma	Ependymoma
+Primary myelofibrosis	Other tumor
+Reactive connective tissue	Other tumor
 Recurrent Acute Leukemia	NA
-Recurrent Glioma	NA
-Retinoblastoma	NA
-Rhabdoid tumor of the kidney	NA
-Rhabdomyosarcoma	NA
-Rosai-dorfman	NA
-Rosette-forming glioneuronal tumor	NA
-Sarcoma	NA
-Schwannoma	NA
-Shwachman-diamond syndrome	NA
-Small Cell Carcinoma	NA
-Solid pseudopapillary neoplasm of the pancreas	NA
-Spinal Cord Neoplasm	NA
-Spinal ependymoma	NA
-Spinal subependymoma	NA
-Spindle cell neoplasm	NA
+Recurrent Glioma	Other tumor
+Rosai-dorfman	Rosai-Dorfman disease
+Shwachman-diamond syndrome	Other tumor
+Solid pseudopapillary neoplasm of the pancreas	Other tumor
+Spinal Cord Neoplasm	Other tumor
+Spinal ependymoma	Ependymoma
+Spinal subependymoma	Ependymoma
+Spindle cell neoplasm	Other tumor
 Spinocerebellar ataxia type 7	NA
-Stomach Adenocarcinoma	NA
-Subependymal Giant Cell Astrocytoma	NA
-Subependymal Giant Cell Astrocytoma (SEGA)	NA
-Supratentorial ependymoma	NA
-T Acute Lymphoblastic Leukemia/Lymphoma	NA
-Teratoma	NA
-Testicular Germ Cell Tumor	NA
-Thrombocytopenia	NA
-Thrombocytosis	NA
-Thymoma	NA
-Thyroid Carcinoma	NA
-Thyroid Gland Papillary Carcinoma	NA
-Thyroid gland neoplasm	NA
+Subependymal Giant Cell Astrocytoma (SEGA)	Subependymal Giant Cell Astrocytoma
+Supratentorial ependymoma	Ependymoma
+Thrombocytopenia	Other tumor
+Thrombocytosis	Other tumor
 Transient Abnormal Myelopoiesis Associated with Down Syndrome	NA
-Type I Pleuropulmonary Blastoma	NA
-Type ii pleuropulmonary blastoma	NA
-Undifferentiated malignant neoplasm	NA
-Uterine Carcinosarcoma	NA
-Uterine Corpus Endometrial Carcinoma	NA
-Uveal Melanoma	NA
-Vascular malformation	NA
-Wilms tumor	NA
+Type ii pleuropulmonary blastoma	Other tumor
+Undifferentiated malignant neoplasm	Other tumor
+Vascular malformation	Other tumor

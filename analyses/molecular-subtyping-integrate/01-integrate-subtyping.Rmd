@@ -240,7 +240,8 @@ histology_cg <- histology %>%
                                        TRUE ~ broad_histology),
            cancer_group = case_when(pathology_diagnosis %in% c("Gliomatosis Cerebri;High-grade glioma/astrocytoma (WHO grade III/IV)", 
                                                                "High-grade glioma/astrocytoma (WHO grade III/IV);Oligodendroglioma",
-                               "High-grade glioma/astrocytoma (WHO grade III/IV);Neurofibroma/Plexiform") ~ "High-grade glioma")) %>%
+                               "High-grade glioma/astrocytoma (WHO grade III/IV);Neurofibroma/Plexiform") ~ "High-grade glioma",
+                               TRUE ~ cancer_group)) %>%
   # remove short forms in the brackets
   dplyr::mutate(cancer_group = str_extract(cancer_group, "[^(]*")) %>%
   # remove space at the ends
