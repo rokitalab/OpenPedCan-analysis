@@ -26,7 +26,7 @@ SKIP_SUBSETTING=${SKIP_SUBSETTING:-0}
 script_directory="$(perl -e 'use File::Basename;
   use Cwd "abs_path";
   print dirname(abs_path(@ARGV[0]));' -- "$0")"
-cd "$script_biodirectory" || exit
+cd "$script_directory" || exit
 
 # directories that hold the full files for the release and the subset files
 # generated via these scripts
