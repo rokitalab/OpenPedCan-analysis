@@ -1,4 +1,13 @@
 match_id	molecular_subtype	molecular_subtype_methyl	CNS_region	tp53_status	Kids_First_Participant_ID	Kids_First_Biospecimen_ID	sample_id
+PPTC_P0100_IBs-W0128DIPG_Patient Derived Xenograft_Relapse	HGG, To be classified			Other	PPTC_P0100	PPTC_ZJ1S3BGD	IBs-W0128DIPG
+PPTC_P0101_IC-1128GBM_Patient Derived Xenograft_Unknown	HGG, To be classified			Other	PPTC_P0101	PPTC_BEMKRKC0	IC-1128GBM
+PPTC_P0104_IC-1621GBM_Patient Derived Xenograft_Primary Tumor	HGG, To be classified			Other	PPTC_P0104	PPTC_BCIUGV1N	IC-1621GBM
+PPTC_P0107_IC-2664PNET_Patient Derived Xenograft_Primary Tumor	HGG, To be classified			Other	PPTC_P0107	PPTC_0BTTJ3DO	IC-2664PNET
+PPTC_P0108_IC-3635PXA_Patient Derived Xenograft_Unknown	HGG, To be classified			Other	PPTC_P0108	PPTC_BNBI0FG6	IC-3635PXA
+PPTC_P0110_IC-3752GBM_Patient Derived Xenograft_Relapse	HGG, To be classified			Other	PPTC_P0110	PPTC_MW31BSHL	IC-3752GBM
+PPTC_P0111_IC-6634GBM_Patient Derived Xenograft_Primary Tumor	HGG, To be classified			Other	PPTC_P0111	PPTC_OMTNBDYU	IC-6634GBM
+PPTC_P0180_NCH-MN-1_Patient Derived Xenograft_Primary Tumor	HGG, To be classified			Other	PPTC_P0180	PPTC_3FOYJRWJ	NCH-MN-1
+PPTC_P0183_NCH-PXA-1_Patient Derived Xenograft_Primary Tumor	HGG, To be classified			Other	PPTC_P0183	PPTC_UCBE34K1	NCH-PXA-1
 PT_0324HWD5_7316-7091_Not Available_Initial CNS Tumor	HGG, H3 wildtype			Other	PT_0324HWD5	BS_QSS96VAM	7316-7091
 PT_0324HWD5_7316-7091_Not Available_Initial CNS Tumor	HGG, H3 wildtype			Other	PT_0324HWD5	BS_J1Y56KM8	7316-7091
 PT_0324HWD5_7316-7091_Solid Tissue_Initial CNS Tumor	HGG, H3 wildtype		Hemispheric	Other	PT_0324HWD5	BS_YR1XY6SF	7316-7091
