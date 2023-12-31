@@ -1908,10 +1908,10 @@ PT_0J07HTRF	PT_0J07HTRF_7316-6475_Solid Tissue_Deceased	7316-6475	BS_HB6Y8Y2A	Di
 PT_0J07HTRF	PT_0J07HTRF_7316-6475_Derived Cell Line_Deceased_Serum-free_5	7316-6475	BS_WE4C1XN1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_0J07HTRF	PT_0J07HTRF_7316-6475_Solid Tissue_Deceased	7316-6475	BS_XNR6T9GM	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPedCan subtyping	NA	NA	DMG, H3 K28
 PT_0J07HTRF	PT_0J07HTRF_7316-6475_Solid Tissue_Deceased	7316-6475	BS_XWNMBG3K	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPedCan subtyping	NA	NA	DMG, H3 K28
-PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_70GZWGED	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_ABHH2361	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_MD6002ST	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_XSJDV3ZH	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_70GZWGED	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_ABHH2361	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_MD6002ST	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_0JEBFP0E	PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor	UM-Chor1-CL	BS_XSJDV3ZH	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_0K0DPVF6	PT_0K0DPVF6_7316-121_Solid Tissue_Initial CNS Tumor	7316-121	BS_2W1GZE02_PHOS	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_0K0DPVF6	PT_0K0DPVF6_7316-121_Solid Tissue_Initial CNS Tumor	7316-121	BS_2W1GZE02_WCP	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_0K0DPVF6	PT_0K0DPVF6_7316-121_Solid Tissue_Initial CNS Tumor	7316-121	BS_66ABA973	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
@@ -1967,10 +1967,10 @@ PT_0T2EWNYR	PT_0T2EWNYR_7316-1981_Solid Tissue_Initial CNS Tumor	7316-1981	BS_AH
 PT_0T2EWNYR	PT_0T2EWNYR_7316-1981_Solid Tissue_Initial CNS Tumor	7316-1981	BS_N2V9HNXV	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_0V88WASE	PT_0V88WASE_7316-7734_Solid Tissue_Recurrence	7316-7734	BS_53RGQ4AK	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, wildtype	NA
 PT_0V88WASE	PT_0V88WASE_7316-7734_Solid Tissue_Recurrence	7316-7734	BS_E0XXZRKS	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, wildtype	NA
-PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_1TQFKXNB	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_2CT08QJ7	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_H61920QK	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_PG1BKMQP	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_1TQFKXNB	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_2CT08QJ7	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_H61920QK	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_0VS7CBZ1	PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor	CF427-PDX	BS_PG1BKMQP	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_0W8VDFGD	PT_0W8VDFGD_C4111398-Tumor_Solid Tissue_Initial CNS Tumor	C4111398-Tumor	BS_A8XW5S0W	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_0W8VDFGD	PT_0W8VDFGD_C4111398-Tumor_Solid Tissue_Initial CNS Tumor	C4111398-Tumor	BS_GQN8GB9K	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_0WKX8Q5X	PT_0WKX8Q5X_7316-88_Solid Tissue_Initial CNS Tumor	7316-88	BS_KXMYBQ6N	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	NA	NA
@@ -2082,9 +2082,9 @@ PT_1E3E6GMF	PT_1E3E6GMF_A09985_Solid Tissue_Initial CNS Tumor	A09985	BS_541KKASA
 PT_1E3E6GMF	PT_1E3E6GMF_A09985_Solid Tissue_Initial CNS Tumor	A09985	BS_JB43XBCQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_1F67VQ9M	PT_1F67VQ9M_7316-9999_Solid Tissue_Initial CNS Tumor	7316-9999	BS_H8FFJT49	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_1F67VQ9M	PT_1F67VQ9M_7316-9999_Solid Tissue_Initial CNS Tumor	7316-9999	BS_P0R0AKHF	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_1FP0ZWQB	PT_1FP0ZWQB_7316-3950_Not Available_Initial CNS Tumor	7316-3950	BS_4WW9KMJ2	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_1FP0ZWQB	PT_1FP0ZWQB_7316-3950_Solid Tissue_Initial CNS Tumor	7316-3950	BS_P5M7K1JD	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_1FP0ZWQB	PT_1FP0ZWQB_7316-3952_Solid Tissue_Initial CNS Tumor	7316-3952	BS_EEH04G1F	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_1FP0ZWQB	PT_1FP0ZWQB_7316-3950_Not Available_Initial CNS Tumor	7316-3950	BS_4WW9KMJ2	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_1FP0ZWQB	PT_1FP0ZWQB_7316-3950_Solid Tissue_Initial CNS Tumor	7316-3950	BS_P5M7K1JD	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_1FP0ZWQB	PT_1FP0ZWQB_7316-3952_Solid Tissue_Initial CNS Tumor	7316-3952	BS_EEH04G1F	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_1FQFJ0V1	PT_1FQFJ0V1_7316-5087_Solid Tissue_Initial CNS Tumor	7316-5087	BS_4GKADZA8	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_1FQFJ0V1	PT_1FQFJ0V1_7316-5087_Solid Tissue_Initial CNS Tumor	7316-5087	BS_DFTX5Q9V	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_1FQFJ0V1	PT_1FQFJ0V1_7316-5087_Solid Tissue_Initial CNS Tumor	7316-5087	BS_T2F48Z4E	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -2474,9 +2474,9 @@ PT_2YT37G8P	PT_2YT37G8P_7316-399_Solid Tissue_Progressive	7316-399	BS_4QFSH7C4	L
 PT_2YT37G8P	PT_2YT37G8P_7316-399_Solid Tissue_Progressive	7316-399	BS_PK18H7E7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, FGFR	LGG, KIAA1549-BRAF, FGFR	Updated via OpenPedCan subtyping	NA	NA	LGG, MAPK
 PT_2YT37G8P	PT_2YT37G8P_7316-7073_Not Available_Progressive	7316-7073	BS_2SZXYX72	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_2YT37G8P	PT_2YT37G8P_7316-7073_Not Available_Progressive	7316-7073	BS_6R551QPW	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
-PT_2Z4RZEGJ	PT_2Z4RZEGJ_7316-6296_Solid Tissue_Initial CNS Tumor	7316-6296	BS_4BHFZB8T	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_2Z4RZEGJ	PT_2Z4RZEGJ_7316-6296_Not Available_Initial CNS Tumor	7316-6296	BS_XFFBRB3D	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_2Z4RZEGJ	PT_2Z4RZEGJ_ET_84Y1CKEE_Not Available_Primary Tumor	ET_84Y1CKEE	BS_WJJ83GN7	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_2Z4RZEGJ	PT_2Z4RZEGJ_7316-6296_Solid Tissue_Initial CNS Tumor	7316-6296	BS_4BHFZB8T	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_2Z4RZEGJ	PT_2Z4RZEGJ_7316-6296_Not Available_Initial CNS Tumor	7316-6296	BS_XFFBRB3D	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_2Z4RZEGJ	PT_2Z4RZEGJ_ET_84Y1CKEE_Not Available_Primary Tumor	ET_84Y1CKEE	BS_WJJ83GN7	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_2Z7GVDTM	PT_2Z7GVDTM_7316-3515_Solid Tissue_Initial CNS Tumor	7316-3515	BS_DV86M0Y7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_2Z7GVDTM	PT_2Z7GVDTM_7316-3515_Solid Tissue_Initial CNS Tumor	7316-3515	BS_QCES7F55	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_2Z7GVDTM	PT_2Z7GVDTM_7316-3515_Solid Tissue_Initial CNS Tumor	7316-3515	BS_QYWGB52C	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
@@ -2636,10 +2636,10 @@ PT_3GYW6P6P	PT_3GYW6P6P_7316-4544_Solid Tissue_Initial CNS Tumor	7316-4544	BS_CP
 PT_3GYW6P6P	PT_3GYW6P6P_7316-5877_Solid Tissue_Progressive	7316-5877	BS_0CNMRHGW	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, BRAF/MAPK
 PT_3GYW6P6P	PT_3GYW6P6P_7316-5877_Solid Tissue_Progressive	7316-5877	BS_2QSSPVGA	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, BRAF/MAPK
 PT_3GYW6P6P	PT_3GYW6P6P_7316-5877_Solid Tissue_Progressive	7316-5877	BS_FN0GD79J	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	LGG, BRAF/MAPK
-PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_20ZRK51D	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_BB79SSYS	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_GTNFM0TQ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_PVJNRRFG	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_20ZRK51D	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_BB79SSYS	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_GTNFM0TQ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_3GZF248B	PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor	U-CH19-CL	BS_PVJNRRFG	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_3H7N0512	PT_3H7N0512_7316-3492_Solid Tissue_Progressive	7316-3492	BS_26YDKGBP	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E	GNG, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_3HPZ05BA	PT_3HPZ05BA_7316-3027_Not Available_Initial CNS Tumor	7316-3027	BS_ZXARSHFT	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA	NA	NA
 PT_3HRS5CWF	PT_3HRS5CWF_7316-925_Solid Tissue_Initial CNS Tumor	7316-925	BS_52426AMF	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
@@ -2778,8 +2778,8 @@ PT_3X3MF8ZD	PT_3X3MF8ZD_7316-114_Solid Tissue_Second Malignancy	7316-114	BS_AHRQ
 PT_3X3MF8ZD	PT_3X3MF8ZD_7316-114_Solid Tissue_Second Malignancy	7316-114	BS_ANENGED9_PHOS	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
 PT_3X3MF8ZD	PT_3X3MF8ZD_7316-114_Solid Tissue_Second Malignancy	7316-114	BS_ANENGED9_WCP	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
 PT_3X3MF8ZD	PT_3X3MF8ZD_7316-114_Solid Tissue_Second Malignancy	7316-114	BS_V6MCRDCB	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
-PT_3X871YSB	PT_3X871YSB_7316-8719_Not Available_Progressive	7316-8719	BS_A4Z0ADK2	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_3X871YSB	PT_3X871YSB_7316-8719_Not Available_Progressive	7316-8719	BS_M6RA0XGK	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_3X871YSB	PT_3X871YSB_7316-8719_Not Available_Progressive	7316-8719	BS_A4Z0ADK2	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_3X871YSB	PT_3X871YSB_7316-8719_Not Available_Progressive	7316-8719	BS_M6RA0XGK	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_3Z8ABX6B	PT_3Z8ABX6B_7316-4346_Not Available_Initial CNS Tumor	7316-4346	BS_1C2KSWN1	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	NA	NA
 PT_408A0GNB	PT_408A0GNB_7316-1045_Solid Tissue_Initial CNS Tumor	7316-1045	BS_VA3HCDCZ	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
 PT_408A0GNB	PT_408A0GNB_7316-1045_Solid Tissue_Initial CNS Tumor	7316-1045	BS_VTA6ZNX3	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
@@ -2906,10 +2906,10 @@ PT_4ADZ9F53	PT_4ADZ9F53_7316-3060_Not Available_Initial CNS Tumor	7316-3060	BS_M
 PT_4ADZ9F53	PT_4ADZ9F53_7316-3060_Solid Tissue_Initial CNS Tumor	7316-3060	BS_Y6H23H83	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, BRAF V600E, CDKN2A/B	GNG, BRAF V600E, CDKN2A/B	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_4B34NTJB	PT_4B34NTJB_7316-8042_Solid Tissue_Initial CNS Tumor	7316-8042	BS_KRS4EV4X	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_4B34NTJB	PT_4B34NTJB_7316-8042_Solid Tissue_Initial CNS Tumor	7316-8042	BS_KT3GAAQV	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_61EMVPJN	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_AWXN0AMD	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_K4E83CMX	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_N58DSNYD	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_61EMVPJN	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_AWXN0AMD	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_K4E83CMX	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_4D8WG2DP	PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence	U-CH11R-CL	BS_N58DSNYD	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_4DZ9B62P	PT_4DZ9B62P_7316-6289_Solid Tissue_Initial CNS Tumor	7316-6289	BS_0NNHVKW8	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA	NA	NA
 PT_4DZ9B62P	PT_4DZ9B62P_7316-6289_Solid Tissue_Initial CNS Tumor	7316-6289	BS_2B34TR4C	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA	NA	NA
 PT_4DZ9B62P	PT_4DZ9B62P_7316-6289_Not Available_Initial CNS Tumor	7316-6289	BS_AEQWS56Y	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA	NA	NA
@@ -2925,10 +2925,10 @@ PT_4ECJ3EWD	PT_4ECJ3EWD_7316-8449_Solid Tissue_Initial CNS Tumor	7316-8449	BS_20
 PT_4EDBZRM2	PT_4EDBZRM2_7316-1952_Solid Tissue_Initial CNS Tumor	7316-1952	BS_9M49SGAQ	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, KIAA1549-BRAF	GNG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
 PT_4EDBZRM2	PT_4EDBZRM2_7316-1952_Solid Tissue_Initial CNS Tumor	7316-1952	BS_RGSMX7QD	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, KIAA1549-BRAF	GNG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
 PT_4EDBZRM2	PT_4EDBZRM2_7316-1952_Solid Tissue_Initial CNS Tumor	7316-1952	BS_RWKHJFYY	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, KIAA1549-BRAF	GNG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
-PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_91K445V7	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_EJKW2X3Y	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_M807A6K2	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_RZVGW00A	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_91K445V7	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_EJKW2X3Y	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_M807A6K2	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_4FQHQDEE	PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor	UM-Chor6-CL	BS_RZVGW00A	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_4HBWTZM1	PT_4HBWTZM1_7316-774_Solid Tissue_Initial CNS Tumor	7316-774	BS_N0ZY3NAM	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	NA	NA
 PT_4J24F353	PT_4J24F353_7316-1137_Solid Tissue_Initial CNS Tumor	7316-1137	BS_GAGRGSSX	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA	NA	NA
 PT_4J24F353	PT_4J24F353_7316-1137_Solid Tissue_Initial CNS Tumor	7316-1137	BS_NDRBA7M5	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA	NA	NA
@@ -3065,11 +3065,11 @@ PT_5AF1501D	PT_5AF1501D_7316-309_Solid Tissue_Initial CNS Tumor	7316-309	BS_VMEX
 PT_5BFEWBGY	PT_5BFEWBGY_7316-6079_Solid Tissue_Initial CNS Tumor	7316-6079	BS_C2TXWFS1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_5BFEWBGY	PT_5BFEWBGY_7316-6079_Solid Tissue_Initial CNS Tumor	7316-6079	BS_TBSBAF8Y	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_5BFEWBGY	PT_5BFEWBGY_7316-6079_Solid Tissue_Initial CNS Tumor	7316-6079	BS_Z0ZPD9S9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Derived Cell Line_Initial CNS Tumor_Serum-based_4	7316-1102	BS_3K5MMTMR	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	NA
-PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Solid Tissue_Initial CNS Tumor	7316-1102	BS_5NM9GXXV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	DMG, H3 K28
-PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Solid Tissue_Initial CNS Tumor	7316-1102	BS_BFDEZK1C	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	DMG, H3 K28
-PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Derived Cell Line_Initial CNS Tumor_Serum-based_4	7316-1102	BS_FH4TA0XM	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	NA
-PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Solid Tissue_Initial CNS Tumor	7316-1102	BS_MB7WN0ZB	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-mutant	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	DMG, H3 K28
+PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Derived Cell Line_Initial CNS Tumor_Serum-based_4	7316-1102	BS_3K5MMTMR	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	NA
+PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Solid Tissue_Initial CNS Tumor	7316-1102	BS_5NM9GXXV	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	DMG, H3 K28
+PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Solid Tissue_Initial CNS Tumor	7316-1102	BS_BFDEZK1C	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	DMG, H3 K28
+PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Derived Cell Line_Initial CNS Tumor_Serum-based_4	7316-1102	BS_FH4TA0XM	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	NA
+PT_5BWZA0NT	PT_5BWZA0NT_7316-1102_Solid Tissue_Initial CNS Tumor	7316-1102	BS_MB7WN0ZB	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPBTA subtyping	NA	NA	DMG, H3 K28
 PT_5C71QJWS	PT_5C71QJWS_C4107831-Tumor_Solid Tissue_Recurrence	C4107831-Tumor	BS_4Q3KRCZT	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_5C71QJWS	PT_5C71QJWS_C4107831-Tumor_Solid Tissue_Recurrence	C4107831-Tumor	BS_V54KSGNF	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_5CKDR2SF	PT_5CKDR2SF_7316-525_Solid Tissue_Initial CNS Tumor	7316-525	BS_1QNTEZPS	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, TYR	ATRT, TYR	Subtype based on methylation;Updated via OpenPedCan subtyping	NA	NA	ATRT, TYR
@@ -3429,30 +3429,30 @@ PT_6XWCT04R	PT_6XWCT04R_7316-130_Solid Tissue_Recurrence	7316-130	BS_D67C7M8V_PH
 PT_6XWCT04R	PT_6XWCT04R_7316-130_Solid Tissue_Recurrence	7316-130	BS_D67C7M8V_WCP	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	NA	NA
 PT_6Y4TE8Z4	PT_6Y4TE8Z4_7316-9714_Solid Tissue_Initial CNS Tumor	7316-9714	BS_29HZMA99	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_6Y4TE8Z4	PT_6Y4TE8Z4_7316-9714_Solid Tissue_Initial CNS Tumor	7316-9714	BS_JSE08750	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_4F08YDA3	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_AWKTZKGF	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_REXTZ6RB	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_V943K59V	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_9AWYBXP3	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_J67V3NKA	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_NTH5ETDY	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_Y2ZH3JHG	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_EZTPPKJG	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_KWR4CFWA	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_Q5BTZW6P	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_S99QQDA0	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_1KWNKPFZ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_5GG01SD2	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_8CRRZ30F	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_DRJ4NZTW	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_CFSPNMKF	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_P9AVWGMB	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_TQ40W8H4	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_XAYPK033	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_8H59X81P	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_KBN6JG47	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_RKV560JX	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_XEYE0J99	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_4F08YDA3	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_AWKTZKGF	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_REXTZ6RB	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor	CF459-PDX	BS_V943K59V	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_9AWYBXP3	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_J67V3NKA	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_NTH5ETDY	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic	CF539-PDX	BS_Y2ZH3JHG	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_EZTPPKJG	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_KWR4CFWA	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_Q5BTZW6P	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic	CF555-PDX	BS_S99QQDA0	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_1KWNKPFZ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_5GG01SD2	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_8CRRZ30F	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor	UM-Chor5-CL	BS_DRJ4NZTW	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_CFSPNMKF	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_P9AVWGMB	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_TQ40W8H4	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic	UM-Chor5C-CL	BS_XAYPK033	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_8H59X81P	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_KBN6JG47	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_RKV560JX	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_6ZENTV3N	PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA	UM-Chor5D-CL	BS_XEYE0J99	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_70613JKE	PT_70613JKE_7316-5894_Solid Tissue_Initial CNS Tumor	7316-5894	BS_8YTFQGYK	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_70613JKE	PT_70613JKE_7316-5894_Solid Tissue_Initial CNS Tumor	7316-5894	BS_9H7A00PV	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_713K0PC1	PT_713K0PC1_7316-4320_Solid Tissue_Initial CNS Tumor	7316-4320	BS_QH0VYVJK	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA	NA	NA
@@ -3469,11 +3469,11 @@ PT_74XM7BV7	PT_74XM7BV7_7316-312_Solid Tissue_Recurrence	7316-312	BS_47GABKYC	Em
 PT_74XM7BV7	PT_74XM7BV7_7316-312_Solid Tissue_Recurrence	7316-312	BS_M86ECPHK	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
 PT_7570EHD9	PT_7570EHD9_7316-1064_Solid Tissue_Initial CNS Tumor	7316-1064	BS_G9HXHQQG	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
 PT_7570EHD9	PT_7570EHD9_7316-1064_Solid Tissue_Initial CNS Tumor	7316-1064	BS_JVW2JJ39	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
-PT_75HRTX4S	PT_75HRTX4S_7316-5269_Not Available_Initial CNS Tumor	7316-5269	BS_JRVJ99K9	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_75HRTX4S	PT_75HRTX4S_7316-5485_Solid Tissue_Initial CNS Tumor	7316-5485	BS_7YGM7F5R	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_75HRTX4S	PT_75HRTX4S_7316-7623_Solid Tissue_Deceased	7316-7623	BS_3CDQYJ5Q	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_75HRTX4S	PT_75HRTX4S_7316-7623_Solid Tissue_Deceased	7316-7623	BS_WTGPN218	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_75HRTX4S	PT_75HRTX4S_ET_5EJ591KA_Not Available_Primary Tumor	ET_5EJ591KA	BS_F92E1CKT	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_75HRTX4S	PT_75HRTX4S_7316-5269_Not Available_Initial CNS Tumor	7316-5269	BS_JRVJ99K9	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_75HRTX4S	PT_75HRTX4S_7316-5485_Solid Tissue_Initial CNS Tumor	7316-5485	BS_7YGM7F5R	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_75HRTX4S	PT_75HRTX4S_7316-7623_Solid Tissue_Deceased	7316-7623	BS_3CDQYJ5Q	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_75HRTX4S	PT_75HRTX4S_7316-7623_Solid Tissue_Deceased	7316-7623	BS_WTGPN218	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_75HRTX4S	PT_75HRTX4S_ET_5EJ591KA_Not Available_Primary Tumor	ET_5EJ591KA	BS_F92E1CKT	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_75K756RD	PT_75K756RD_ET_B2BM718W_Not Available_Recurrence	ET_B2BM718W	BS_8EKCJ7EF	Embryonal tumor	Neuroblastoma	NA	NBL, To be classified	NA	NA	NA	NA
 PT_75K756RD	PT_75K756RD_ET_DCF188S7_Not Available_Primary Tumor	ET_DCF188S7	BS_0C4V1TW4	Embryonal tumor	Neuroblastoma	NA	NBL, To be classified	NA	NA	NA	NA
 PT_765TC2XG	PT_765TC2XG_7316-1964_Solid Tissue_Initial CNS Tumor	7316-1964	BS_57ZNS4K5	Ependymal tumor	Ependymoma	Spinal ependymoma	EPN, SP	Updated via OpenPedCan subtyping	NA	NA	EPN, SP
@@ -3547,10 +3547,10 @@ PT_7FZ8SE69	PT_7FZ8SE69_7316-2152_Solid Tissue_Initial CNS Tumor	7316-2152	BS_HQ
 PT_7FZ8SE69	PT_7FZ8SE69_7316-2152_Solid Tissue_Initial CNS Tumor	7316-2152	BS_KHSYAB3J	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_7H67Q7VS	PT_7H67Q7VS_7316-2966_Solid Tissue_Initial CNS Tumor	7316-2966	BS_EMYET8F4	Ependymal tumor	Ependymoma	NA	EPN, To be classified	NA	NA	NA	NA
 PT_7H8X9M9E	PT_7H8X9M9E_7316-5497_Not Available_Initial CNS Tumor	7316-5497	BS_YRP28J6X	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  FGFR	GNT, FGFR	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
-PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_93CJNVZ1	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_PVCTC2RZ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_QX5KC0SM	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_RQ1G6WAK	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_93CJNVZ1	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_PVCTC2RZ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_QX5KC0SM	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_7HEDWKTM	PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence	CF382-PDX	BS_RQ1G6WAK	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_7HGY5W67	PT_7HGY5W67_7316-6044_Solid Tissue_Recurrence	7316-6044	BS_5NK9RCM7	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor, wildtype	GNT, wildtype	Updated via OpenPedCan subtyping	Recurrence	Glial-neuronal tumor NOS	NA
 PT_7HGY5W67	PT_7HGY5W67_7316-6044_Solid Tissue_Recurrence	7316-6044	BS_NPWT4SXA	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor, wildtype	GNT, wildtype	Updated via OpenPedCan subtyping	Recurrence	Glial-neuronal tumor NOS	NA
 PT_7HGY5W67	PT_7HGY5W67_7316-6044_Solid Tissue_Recurrence	7316-6044	BS_W4SCDX8T	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor, wildtype	GNT, wildtype	Updated via OpenPedCan subtyping	Recurrence	Glial-neuronal tumor NOS	NA
@@ -3611,8 +3611,8 @@ PT_7QKGGMKV	PT_7QKGGMKV_7316-347_Solid Tissue_Initial CNS Tumor	7316-347	BS_NMQT
 PT_7QKGGMKV	PT_7QKGGMKV_7316-347_Solid Tissue_Initial CNS Tumor	7316-347	BS_VVFBW0YH	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
 PT_7QKGGMKV	PT_7QKGGMKV_7316-347_Solid Tissue_Initial CNS Tumor	7316-347	BS_Z3T3Y9RA_PHOS	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
 PT_7QKGGMKV	PT_7QKGGMKV_7316-347_Solid Tissue_Initial CNS Tumor	7316-347	BS_Z3T3Y9RA_WCP	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
-PT_7RH6AVP6	PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor	7316-4860	BS_M7TWXKXB	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_7RH6AVP6	PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor	7316-4860	BS_VR6VVT31	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_7RH6AVP6	PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor	7316-4860	BS_M7TWXKXB	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_7RH6AVP6	PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor	7316-4860	BS_VR6VVT31	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_7RMS6K08	PT_7RMS6K08_7316-1748_Solid Tissue_Initial CNS Tumor	7316-1748	BS_ACE6QKVF	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_7RMS6K08	PT_7RMS6K08_7316-1748_Solid Tissue_Initial CNS Tumor	7316-1748	BS_B53Z0T1Q	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_7RMS6K08	PT_7RMS6K08_7316-1748_Solid Tissue_Initial CNS Tumor	7316-1748	BS_SKGSC6PE	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -3848,10 +3848,10 @@ PT_8K2XRSY4	PT_8K2XRSY4_7316-3530_Solid Tissue_Initial CNS Tumor	7316-3530	BS_ZX
 PT_8KF6YSTW	PT_8KF6YSTW_ET_5K8PDRFC_Not Available_Primary Tumor	ET_5K8PDRFC	BS_ZZA88AMB	Embryonal tumor	Neuroblastoma	NA	NBL, To be classified	NA	NA	NA	NA
 PT_8M6W215T	PT_8M6W215T_7316-305_Solid Tissue_Recurrence	7316-305	BS_DAMRZ72S	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
 PT_8M6W215T	PT_8M6W215T_7316-305_Solid Tissue_Recurrence	7316-305	BS_JR5ATB7G	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 4	MB, Group4	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group4
-PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_25JNJXGQ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_BN80PP5B	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_M48Q6V8J	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_VVWJ20GR	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_25JNJXGQ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_BN80PP5B	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_M48Q6V8J	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_8MDE46MC	PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor	U-CH14-CL	BS_VVWJ20GR	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_8MWV088Q	PT_8MWV088Q_7316-7968_Solid Tissue_Deceased	7316-7968	BS_QM7PZJFZ	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA	NA	NA
 PT_8NPNACF3	PT_8NPNACF3_7316-7109_Solid Tissue_Initial CNS Tumor	7316-7109	BS_2F5CPC8C	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	NA	NA	EWS
 PT_8NPNACF3	PT_8NPNACF3_7316-7109_Solid Tissue_Initial CNS Tumor	7316-7109	BS_B44YJ6E6	Mesenchymal non-meningothelial tumor	EWS	Ewing sarcoma	EWS	Updated via OpenPedCan subtyping	NA	NA	EWS
@@ -4210,10 +4210,10 @@ PT_A8YMD5T6	PT_A8YMD5T6_7316-8111_Solid Tissue_Initial CNS Tumor	7316-8111	BS_HG
 PT_A8YMD5T6	PT_A8YMD5T6_7316-8111_Not Available_Initial CNS Tumor	7316-8111	BS_MS9XKGGN	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_A8YMD5T6	PT_A8YMD5T6_7316-8111_Not Available_Initial CNS Tumor	7316-8111	BS_XAG04XJ6	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_A9BWZA2Z	PT_A9BWZA2Z_7316-5097_Solid Tissue_Initial CNS Tumor	7316-5097	BS_DDR2A5JK	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA	NA	NA
-PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_2530Y5J4	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_FEZDS3WA	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_GKDY0D0W	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_PDPMDS47	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_2530Y5J4	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_FEZDS3WA	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_GKDY0D0W	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_A9CDRD3E	PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor	U-CH7-CL	BS_PDPMDS47	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_A9F8Y6MA	PT_A9F8Y6MA_7316-476_Solid Tissue_Initial CNS Tumor	7316-476	BS_32YYB1WF	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_A9F8Y6MA	PT_A9F8Y6MA_7316-476_Solid Tissue_Initial CNS Tumor	7316-476	BS_4C4MZ4NT	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_A9F8Y6MA	PT_A9F8Y6MA_7316-476_Solid Tissue_Initial CNS Tumor	7316-476	BS_ZKZACPVV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
@@ -4730,11 +4730,11 @@ PT_CGPJY881	PT_CGPJY881_7316-891_Solid Tissue_Initial CNS Tumor	7316-891	BS_8X10
 PT_CGPJY881	PT_CGPJY881_7316-891_Solid Tissue_Initial CNS Tumor	7316-891	BS_KJA9Q4N7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_CGPJY881	PT_CGPJY881_7316-891_Solid Tissue_Initial CNS Tumor	7316-891	BS_N1E0H8YQ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_CGPJY881	PT_CGPJY881_7316-891_Solid Tissue_Initial CNS Tumor	7316-891	BS_XKP747AS	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_2663ECGN	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_289A7KD6	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_8ABPDS8V	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_M8VQDP1S	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_CGVPMMD8	PT_CGVPMMD8_SF8894-T_Solid Tissue_Recurrence	SF8894-T	BS_G3W0DTAX	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_2663ECGN	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_289A7KD6	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_8ABPDS8V	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_CGVPMMD8	PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence	SF8894-PDX	BS_M8VQDP1S	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_CGVPMMD8	PT_CGVPMMD8_SF8894-T_Solid Tissue_Recurrence	SF8894-T	BS_G3W0DTAX	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_CGWPWSXM	PT_CGWPWSXM_7316-2005_Solid Tissue_Initial CNS Tumor	7316-2005	BS_57MSWRQZ	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_CGWPWSXM	PT_CGWPWSXM_7316-2005_Solid Tissue_Initial CNS Tumor	7316-2005	BS_9W6FK6X4	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_CGWPWSXM	PT_CGWPWSXM_7316-2005_Solid Tissue_Initial CNS Tumor	7316-2005	BS_QF5VVZX5	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, wildtype	GNG, wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -4926,10 +4926,10 @@ PT_D7R5C3A2	PT_D7R5C3A2_7316-6964_Solid Tissue_Progressive	7316-6964	BS_QJ627KJY
 PT_D9A6G154	PT_D9A6G154_7316-9211_Solid Tissue_Initial CNS Tumor	7316-9211	BS_53JGYCCZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_D9A6G154	PT_D9A6G154_7316-9211_Solid Tissue_Initial CNS Tumor	7316-9211	BS_EQK3VTV0	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_D9A6G154	PT_D9A6G154_7316-9211_Solid Tissue_Initial CNS Tumor	7316-9211	BS_TR2P8KRF	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_7XK7MCZ3	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_B29JQY07	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_QKMVKNM2	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_WWXC0YMX	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_7XK7MCZ3	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_B29JQY07	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_QKMVKNM2	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_D9H1C43M	PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic	CH22-CL	BS_WWXC0YMX	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_D9HXS4CK	PT_D9HXS4CK_7316-6085_Solid Tissue_Initial CNS Tumor	7316-6085	BS_CKHDFEEF	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_D9HXS4CK	PT_D9HXS4CK_7316-6085_Solid Tissue_Initial CNS Tumor	7316-6085	BS_TDJXQBVY	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_D9NTSYSC	PT_D9NTSYSC_7316-3064_Solid Tissue_Initial CNS Tumor	7316-3064	BS_7MTTXKMM	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  other MAPK, CDKN2A/B	GNT, other MAPK, CDKN2A/B	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	PXA
@@ -5105,10 +5105,10 @@ PT_DW2XRPC9	PT_DW2XRPC9_7316-430_Solid Tissue_Recurrence	7316-430	BS_5CTVXVRX	Di
 PT_DW6V5V8E	PT_DW6V5V8E_7316-924_Solid Tissue_Initial CNS Tumor	7316-924	BS_4TXDH2S8	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_DW6V5V8E	PT_DW6V5V8E_7316-924_Solid Tissue_Initial CNS Tumor	7316-924	BS_EFEZB0ZH	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_DW6V5V8E	PT_DW6V5V8E_7316-924_Solid Tissue_Initial CNS Tumor	7316-924	BS_F4D169Q7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
-PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_17DY3DD0	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_BS57H9T4	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_CDB3NSKS	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_EF0SFVWN	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_17DY3DD0	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_BS57H9T4	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_CDB3NSKS	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_DWJRMYP8	PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence	U-CH1-CL	BS_EF0SFVWN	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_DXF7ZZQZ	PT_DXF7ZZQZ_7316-2809_Solid Tissue_Initial CNS Tumor	7316-2809	BS_43XHCMC5	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MYB/MYBL1	GNG, MYB/MYBL1	Updated via OpenPedCan subtyping	NA	NA	LGG, MYB/MYBL1
 PT_DXF7ZZQZ	PT_DXF7ZZQZ_7316-2809_Solid Tissue_Initial CNS Tumor	7316-2809	BS_ERJAJ0KA	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MYB/MYBL1	GNG, MYB/MYBL1	Updated via OpenPedCan subtyping	NA	NA	LGG, MYB/MYBL1
 PT_DXF7ZZQZ	PT_DXF7ZZQZ_7316-2809_Solid Tissue_Initial CNS Tumor	7316-2809	BS_KVYCH9PB	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, MYB/MYBL1	GNG, MYB/MYBL1	Updated via OpenPedCan subtyping	NA	NA	LGG, MYB/MYBL1
@@ -5233,8 +5233,8 @@ PT_E99F32RF	PT_E99F32RF_7316-8420_Solid Tissue_Deceased	7316-8420	BS_QS5BGW2P	Di
 PT_E99F32RF	PT_E99F32RF_7316-8420_Solid Tissue_Deceased	7316-8420	BS_W5V921CH	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
 PT_E99F32RF	PT_E99F32RF_7316-8420_Solid Tissue_Deceased	7316-8420	BS_ZR3QQYW2	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
 PT_E99F32RF	PT_E99F32RF_7316-8420_Solid Tissue_Deceased	7316-8420	BS_ZVYRZGM6	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	HGG, H3 wildtype
-PT_E9J8FNW5	PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence	C4116318-Tumor	BS_Q2R56X78	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_E9J8FNW5	PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence	C4116318-Tumor	BS_SERDGASJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
+PT_E9J8FNW5	PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence	C4116318-Tumor	BS_Q2R56X78	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated by pathology free text review	NA	NA	NA
+PT_E9J8FNW5	PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence	C4116318-Tumor	BS_SERDGASJ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated by pathology free text review	NA	NA	NA
 PT_E9PS2A96	PT_E9PS2A96_7316-9011_Solid Tissue_Initial CNS Tumor	7316-9011	BS_54HHEWEZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_E9PS2A96	PT_E9PS2A96_7316-9011_Solid Tissue_Initial CNS Tumor	7316-9011	BS_F6YJDSXZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_E9PS2A96	PT_E9PS2A96_7316-9011_Solid Tissue_Initial CNS Tumor	7316-9011	BS_JJVH7WR0	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse hemispheric glioma, H3 G35-mutant	DHG, H3 G35, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -5325,9 +5325,9 @@ PT_EP0SR2YB	PT_EP0SR2YB_7316-9994_Solid Tissue_Initial CNS Tumor	7316-9994	BS_K9
 PT_EPFX7V9H	PT_EPFX7V9H_7316-2571_Solid Tissue_Initial CNS Tumor	7316-2571	BS_9JBGVQ0M	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK, BRAF V600E	GNG, other MAPK, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	GNT, MAPK
 PT_EPFX7V9H	PT_EPFX7V9H_7316-2571_Solid Tissue_Initial CNS Tumor	7316-2571	BS_FAQQ0GCQ	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK, BRAF V600E	GNG, other MAPK, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	GNT, MAPK
 PT_EPFX7V9H	PT_EPFX7V9H_7316-2571_Solid Tissue_Initial CNS Tumor	7316-2571	BS_NB509KST	Low-grade astrocytic tumor	Ganglioglioma	Ganglioglioma, other MAPK, BRAF V600E	GNG, other MAPK, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	GNT, MAPK
-PT_EPW84DJW	PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive	CF466-PDX	BS_JKCYCHJ8	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_EPW84DJW	PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive	CF466-PDX	BS_W4FR71ZE	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_EPW84DJW	PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive	CF466-PDX	BS_XVYHBFJX	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_EPW84DJW	PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive	CF466-PDX	BS_JKCYCHJ8	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_EPW84DJW	PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive	CF466-PDX	BS_W4FR71ZE	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_EPW84DJW	PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive	CF466-PDX	BS_XVYHBFJX	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_EQ0BRG88	PT_EQ0BRG88_7316-6663_Solid Tissue_Initial CNS Tumor	7316-6663	BS_712XDVET	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, wildtype	NA
 PT_EQ0BRG88	PT_EQ0BRG88_7316-6663_Not Available_Initial CNS Tumor	7316-6663	BS_JDZD619N	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_EQ0BRG88	PT_EQ0BRG88_7316-6663_Solid Tissue_Initial CNS Tumor	7316-6663	BS_YVEEXAAT	Low-grade astrocytic tumor	LGAT	Low-grade glioma, wildtype	LGG, wildtype	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, wildtype	NA
@@ -5437,9 +5437,9 @@ PT_F0N89D15	PT_F0N89D15_7316-3756_Solid Tissue_Initial CNS Tumor	7316-3756	BS_80
 PT_F0N89D15	PT_F0N89D15_7316-3756_Not Available_Initial CNS Tumor	7316-3756	BS_DDM623X8	Embryonal tumor	Medulloblastoma	NA	MB, To be classified	NA	NA	NA	NA
 PT_F0N89D15	PT_F0N89D15_7316-3756_Solid Tissue_Initial CNS Tumor	7316-3756	BS_K3Y06EKR	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
 PT_F0N89D15	PT_F0N89D15_7316-3756_Solid Tissue_Initial CNS Tumor	7316-3756	BS_ZV68CES9	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
-PT_F1086Z0A	PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor	7316-1101	BS_0F6G5B4Q	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_F1086Z0A	PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor	7316-1101	BS_BWZTMWTM	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_F1086Z0A	PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor	7316-1101	BS_P4D8Y3S8	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
+PT_F1086Z0A	PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor	7316-1101	BS_0F6G5B4Q	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_F1086Z0A	PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor	7316-1101	BS_BWZTMWTM	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_F1086Z0A	PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor	7316-1101	BS_P4D8Y3S8	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
 PT_F1PXEJMQ	PT_F1PXEJMQ_7316-7049_Derived Cell Line_Initial CNS Tumor_Serum-free_14	7316-7049	BS_GGXGNP9S	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA	NA	NA
 PT_F27SA15G	PT_F27SA15G_7316-1661_Solid Tissue_Recurrence	7316-1661	BS_2NN6ME5A	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-germline	LGG, NF1-germline	Updated via OpenPedCan subtyping	NA	NA	LGG, MAPK
 PT_F27SA15G	PT_F27SA15G_7316-1661_Solid Tissue_Recurrence	7316-1661	BS_P6BMPCE3	Low-grade astrocytic tumor	LGAT	Low-grade glioma, NF1-germline	LGG, NF1-germline	Updated via OpenPedCan subtyping	NA	NA	LGG, MAPK
@@ -5546,11 +5546,11 @@ PT_FHGDAACP	PT_FHGDAACP_7316-4513_Solid Tissue_Initial CNS Tumor	7316-4513	BS_WR
 PT_FHT70F9C	PT_FHT70F9C_7316-3526_Solid Tissue_Initial CNS Tumor	7316-3526	BS_A2YNJVVG	Low-grade astrocytic tumor	LGAT	Low-grade glioma, MYB/MYBL1	LGG, MYB/MYBL1	Updated via OpenPedCan subtyping	NA	NA	LGG, MYB/MYBL1
 PT_FHT70F9C	PT_FHT70F9C_7316-3526_Solid Tissue_Initial CNS Tumor	7316-3526	BS_S4489PHK	Low-grade astrocytic tumor	LGAT	Low-grade glioma, MYB/MYBL1	LGG, MYB/MYBL1	Updated via OpenPedCan subtyping	NA	NA	LGG, MYB/MYBL1
 PT_FHT70F9C	PT_FHT70F9C_7316-3526_Solid Tissue_Initial CNS Tumor	7316-3526	BS_YGSH4N08	Low-grade astrocytic tumor	LGAT	Low-grade glioma, MYB/MYBL1	LGG, MYB/MYBL1	Updated via OpenPedCan subtyping	NA	NA	LGG, MYB/MYBL1
-PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_C9SGEN07	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_CF4B3T2Y	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_MVF23R6F	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_ZWJZNM00	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-T_Solid Tissue_Primary Tumor	Mug-CC1-T	BS_28GPVQAA	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_C9SGEN07	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_CF4B3T2Y	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_MVF23R6F	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor	Mug-CC1-CL	BS_ZWJZNM00	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_FK7ZXG3E	PT_FK7ZXG3E_Mug-CC1-T_Solid Tissue_Primary Tumor	Mug-CC1-T	BS_28GPVQAA	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_FKCPVY7V	PT_FKCPVY7V_7316-8031_Solid Tissue_Initial CNS Tumor	7316-8031	BS_4SCDT7M9	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FKCPVY7V	PT_FKCPVY7V_7316-8031_Solid Tissue_Initial CNS Tumor	7316-8031	BS_862NMAR7	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FKCPVY7V	PT_FKCPVY7V_7316-8031_Solid Tissue_Initial CNS Tumor	7316-8031	BS_9FX3YREK	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -5566,10 +5566,10 @@ PT_FKWCVXNC	PT_FKWCVXNC_7316-332_Solid Tissue_Initial CNS Tumor	7316-332	BS_NX9D
 PT_FMK5VFYW	PT_FMK5VFYW_7316-950_Solid Tissue_Progressive	7316-950	BS_80X7AVCP	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FMK5VFYW	PT_FMK5VFYW_7316-950_Solid Tissue_Progressive	7316-950	BS_FBJ5Q54N	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FMK5VFYW	PT_FMK5VFYW_7316-950_Solid Tissue_Progressive	7316-950	BS_X11BE7CV	Embryonal tumor	Embryonal tumor	CNS Embryonal tumor, NEC/NOS	CNS Embryonal, NOS	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_C2NP5VC1	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_MFGZH8FK	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_N3N0DHKS	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
-PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_P7Z9RE2V	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype	Updated via OpenPedCan subtyping	NA	NA	NA
+PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_C2NP5VC1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	DMG, H3 K28	Updated by pathology free text review	NA	NA	NA
+PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_MFGZH8FK	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	DMG, H3 K28	Updated by pathology free text review	NA	NA	NA
+PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_N3N0DHKS	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	DMG, H3 K28	Updated by pathology free text review	NA	NA	NA
+PT_FMS4AXKD	PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor	7316-9049	BS_P7Z9RE2V	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	DMG, H3 K28	Updated by pathology free text review	NA	NA	NA
 PT_FN4GEEFR	PT_FN4GEEFR_7316-3010_Solid Tissue_Progressive	7316-3010	BS_1GB1R07D	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, SHH
 PT_FN4GEEFR	PT_FN4GEEFR_7316-3010_Solid Tissue_Progressive	7316-3010	BS_1QXEC43H	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, SHH
 PT_FN4GEEFR	PT_FN4GEEFR_7316-3010_Solid Tissue_Progressive	7316-3010	BS_E1VJCEWB	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, SHH
@@ -5594,7 +5594,7 @@ PT_FRQDS43E	PT_FRQDS43E_7316-1097_Solid Tissue_Progressive	7316-1097	BS_AXAG34K6
 PT_FRQDS43E	PT_FRQDS43E_7316-1097_Solid Tissue_Progressive	7316-1097	BS_EMAJ7P3P	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF V600E	LGG, BRAF V600E	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FRZQJNW9	PT_FRZQJNW9_7316-3542_Solid Tissue_Initial CNS Tumor	7316-3542	BS_22QMSCFR	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FRZQJNW9	PT_FRZQJNW9_7316-3542_Solid Tissue_Initial CNS Tumor	7316-3542	BS_YTE4SYEN	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
-PT_FS1GKF9Y	PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence	C4115949-Tumor	BS_QV60J6XZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
+PT_FS1GKF9Y	PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence	C4115949-Tumor	BS_QV60J6XZ	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated by pathology free text review	NA	NA	NA
 PT_FSPXH4P9	PT_FSPXH4P9_C4105494-Tumor_Solid Tissue_Initial CNS Tumor	C4105494-Tumor	BS_CG6R2RED	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FSPYCARW	PT_FSPYCARW_7316-9072_Solid Tissue_Deceased	7316-9072	BS_8RY3JEYQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_FSPYCARW	PT_FSPYCARW_7316-9072_Solid Tissue_Deceased	7316-9072	BS_RJ0YDAGQ	Diffuse astrocytic and oligodendroglial tumor	HGAT	High-grade glioma, IDH-wildtype and H3-wildtype	HGG, H3 wildtype, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -5795,7 +5795,7 @@ PT_GGCQAGPS	PT_GGCQAGPS_7316-304_Solid Tissue_Initial CNS Tumor	7316-304	BS_JYCK
 PT_GGCQAGPS	PT_GGCQAGPS_7316-304_Solid Tissue_Initial CNS Tumor	7316-304	BS_KVNGNETA	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group3
 PT_GGZVT7NJ	PT_GGZVT7NJ_C4122345-Tumor_Solid Tissue_Initial CNS Tumor	C4122345-Tumor	BS_29YQ60CP	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
 PT_GGZVT7NJ	PT_GGZVT7NJ_C4122345-Tumor_Solid Tissue_Initial CNS Tumor	C4122345-Tumor	BS_3KHY7S7N	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	NA
-PT_GH06NBGZ	PT_GH06NBGZ_7316-4843_Solid Tissue_Initial CNS Tumor	7316-4843	BS_V7W6CMRK	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_GH06NBGZ	PT_GH06NBGZ_7316-4843_Solid Tissue_Initial CNS Tumor	7316-4843	BS_V7W6CMRK	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_GH27VJBD	PT_GH27VJBD_7316-2266_Solid Tissue_Progressive	7316-2266	BS_H8MAKDRB	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	NA	NA	EPN, ST ZFTA
 PT_GH27VJBD	PT_GH27VJBD_7316-2266_Solid Tissue_Progressive	7316-2266	BS_QM4VTDP1	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	NA	NA	EPN, ST ZFTA
 PT_GH27VJBD	PT_GH27VJBD_7316-2266_Solid Tissue_Progressive	7316-2266	BS_VAAHBH60	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	NA	NA	EPN, ST ZFTA
@@ -5945,10 +5945,10 @@ PT_GY0QSY4H	PT_GY0QSY4H_7316-1075_Solid Tissue_Initial CNS Tumor	7316-1075	BS_TP
 PT_GY99ZJHV	PT_GY99ZJHV_7316-1654_Solid Tissue_Initial CNS Tumor	7316-1654	BS_17FVWMNV	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Atypical choroid plexus papilloma	NA
 PT_GY99ZJHV	PT_GY99ZJHV_7316-1654_Solid Tissue_Initial CNS Tumor	7316-1654	BS_VTTMSAK9	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Atypical choroid plexus papilloma	NA
 PT_GY99ZJHV	PT_GY99ZJHV_7316-1654_Solid Tissue_Initial CNS Tumor	7316-1654	BS_WE3Q8A73	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Atypical choroid plexus papilloma	NA
-PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_9ST3SFPR	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_CV9R0QTM	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_GNAY0RGH	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_K8CY4Q8G	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_9ST3SFPR	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_CV9R0QTM	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_GNAY0RGH	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_GYSNY9G2	PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence	U-CH2-CL	BS_K8CY4Q8G	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_H0HWHRPB	PT_H0HWHRPB_7316-1679_Solid Tissue_Initial CNS Tumor	7316-1679	BS_1FQYBQ1P	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_H0HWHRPB	PT_H0HWHRPB_7316-1679_Solid Tissue_Initial CNS Tumor	7316-1679	BS_N6NE6B3W	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_H0HWHRPB	PT_H0HWHRPB_7316-1679_Solid Tissue_Initial CNS Tumor	7316-1679	BS_QE5B0T7R	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
@@ -6065,29 +6065,29 @@ PT_HF824BSM	PT_HF824BSM_7316-4942_Solid Tissue_Recurrence	7316-4942	BS_VQNM2W74_
 PT_HFPCMNKX	PT_HFPCMNKX_7316-6986_Solid Tissue_Initial CNS Tumor	7316-6986	BS_3SZZ50WB	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group3
 PT_HFPCMNKX	PT_HFPCMNKX_7316-6986_Solid Tissue_Initial CNS Tumor	7316-6986	BS_D4QZCSPK	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group3
 PT_HFPCMNKX	PT_HFPCMNKX_7316-6986_Solid Tissue_Initial CNS Tumor	7316-6986	BS_D86YY06H	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, Group3
-PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive	7316-2935	BS_9GN1QA3Q	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive	7316-2935	BS_MJKBDY5T	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Not Available_Progressive	7316-2935	BS_N9ZSB4B7	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive	7316-2935	BS_YB07VF1X	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence	7316-3295	BS_6F49F7WH	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence	7316-3295	BS_EJ9JKM1C	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence	7316-3295	BS_RA65J4RZ	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_2MPNPD28	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_5B6XZ7YP	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8	7316-4062	BS_7HD5FK4Z	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_DBDXCXT5	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_FVPZ3CYY	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5	7316-4062	BS_GNSAKWR4	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_MAHWW7NR	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8	7316-4062	BS_MH9D24WY	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_SC3JDTD9	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_SCW1FS55	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_SVQPY6QM	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5	7316-4062	BS_V9Y9HSGQ	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_VZB4K7NV	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorly differentiated	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-921_Solid Tissue_Progressive	7316-921	BS_FBJ516WW	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conventional	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-921_Solid Tissue_Progressive	7316-921	BS_GFM6EA61	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conventional	NA
-PT_HFQNKP5X	PT_HFQNKP5X_7316-921_Solid Tissue_Progressive	7316-921	BS_MRKKFB7E	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conventional	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive	7316-2935	BS_9GN1QA3Q	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive	7316-2935	BS_MJKBDY5T	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Not Available_Progressive	7316-2935	BS_N9ZSB4B7	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive	7316-2935	BS_YB07VF1X	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence	7316-3295	BS_6F49F7WH	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence	7316-3295	BS_EJ9JKM1C	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence	7316-3295	BS_RA65J4RZ	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_2MPNPD28	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_5B6XZ7YP	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8	7316-4062	BS_7HD5FK4Z	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_DBDXCXT5	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_FVPZ3CYY	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5	7316-4062	BS_GNSAKWR4	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_MAHWW7NR	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8	7316-4062	BS_MH9D24WY	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_SC3JDTD9	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_SCW1FS55	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_SVQPY6QM	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5	7316-4062	BS_V9Y9HSGQ	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased	7316-4062	BS_VZB4K7NV	Chordoma	Chordoma	NA	CHDM, poorly differentiated	Updated via pathology review	NA	Chordoma, poorlypoorly differentiated	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-921_Solid Tissue_Progressive	7316-921	BS_FBJ516WW	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conconventional	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-921_Solid Tissue_Progressive	7316-921	BS_GFM6EA61	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conconventional	NA
+PT_HFQNKP5X	PT_HFQNKP5X_7316-921_Solid Tissue_Progressive	7316-921	BS_MRKKFB7E	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conconventional	NA
 PT_HGG8X8QE	PT_HGG8X8QE_7316-7144_Solid Tissue_Deceased	7316-7144	BS_2C9ZX1NK	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_HGG8X8QE	PT_HGG8X8QE_7316-7144_Solid Tissue_Deceased	7316-7144	BS_59D0EMTP	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_HGG8X8QE	PT_HGG8X8QE_7316-7144_Solid Tissue_Deceased	7316-7144	BS_B1163H1W	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -6809,10 +6809,10 @@ PT_ME0JMDEB	PT_ME0JMDEB_7316-6786_Not Available_Progressive	7316-6786	BS_SCYJA84
 PT_ME32NQFX	PT_ME32NQFX_7316-4863_Solid Tissue_Initial CNS Tumor	7316-4863	BS_V4XCTG09	Low-grade astrocytic tumor	Ganglioglioma	NA	GNG, To be classified	NA	NA	NA	NA
 PT_ME64S267	PT_ME64S267_7316-3499_Solid Tissue_Recurrence	7316-3499	BS_ZSY7YJP8	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	NA	Pilocytic astrocytoma	NA
 PT_ME64S267	PT_ME64S267_7316-564_Solid Tissue_Recurrence	7316-564	BS_T5XJE9H7	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	Updated via pathology_free_text_diagnosis	NA	Pilocytic astrocytoma	NA
-PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_7PRFPRSA	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_NHZ37N5S	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_PDH51MYK	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_XNGEZT9R	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_7PRFPRSA	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_NHZ37N5S	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_PDH51MYK	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_MFF8XQES	PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor	SF10792-PDX	BS_XNGEZT9R	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_MFNW2QEB	PT_MFNW2QEB_7316-9448_Solid Tissue_Initial CNS Tumor	7316-9448	BS_9KKCWQGX	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, RTK	LGG, KIAA1549-BRAF, RTK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF, RTK	NA
 PT_MFNW2QEB	PT_MFNW2QEB_7316-9448_Solid Tissue_Initial CNS Tumor	7316-9448	BS_P3966C69	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, RTK	LGG, KIAA1549-BRAF, RTK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF, RTK	NA
 PT_MFNW2QEB	PT_MFNW2QEB_7316-9448_Solid Tissue_Initial CNS Tumor	7316-9448	BS_PVV8T13E	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF, RTK	LGG, KIAA1549-BRAF, RTK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF, RTK	NA
@@ -7253,10 +7253,10 @@ PT_P9GVEXFE	PT_P9GVEXFE_7316-3322_Solid Tissue_Progressive	7316-3322	BS_TA55BX6B
 PT_P9RT6693	PT_P9RT6693_7316-2566_Solid Tissue_Recurrence	7316-2566	BS_CN7NVE6K	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_P9RT6693	PT_P9RT6693_7316-2566_Solid Tissue_Recurrence	7316-2566	BS_P3KD5EQG	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_P9RT6693	PT_P9RT6693_7316-2566_Solid Tissue_Recurrence	7316-2566	BS_V3REENH9	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
-PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_E8E0M9Q2	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_K1PC0R73	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_PCV4SCGF	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_PV8DASVF	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_E8E0M9Q2	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_K1PC0R73	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_PCV4SCGF	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_PAB4RZG2	PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor	U-CH12-CL	BS_PV8DASVF	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_PABK01H0	PT_PABK01H0_7316-1669_Solid Tissue_Initial CNS Tumor	7316-1669	BS_185Q218S	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, SHH
 PT_PABK01H0	PT_PABK01H0_7316-1669_Solid Tissue_Initial CNS Tumor	7316-1669	BS_AM70R8RG	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, SHH
 PT_PABK01H0	PT_PABK01H0_7316-1669_Solid Tissue_Initial CNS Tumor	7316-1669	BS_TRDMP775	Embryonal tumor	Medulloblastoma	Medulloblastoma, SHH-activated	MB, SHH	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, SHH
@@ -7642,10 +7642,10 @@ PT_R1DHB0ZT	PT_R1DHB0ZT_7316-2642_Solid Tissue_Initial CNS Tumor	7316-2642	BS_E9
 PT_R1DHB0ZT	PT_R1DHB0ZT_7316-2642_Solid Tissue_Initial CNS Tumor	7316-2642	BS_SQCV0X97	Low-grade astrocytic tumor	LGAT	Low-grade glioma, BRAF/MAPK	LGG, BRAF/MAPK	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, BRAF/MAPK	NA
 PT_R3MXG7SY	PT_R3MXG7SY_7316-6655_Not Available_Initial CNS Tumor	7316-6655	BS_6N1WX5S7	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_R3MXG7SY	PT_R3MXG7SY_ET_CAN5F1P4_Not Available_Primary Tumor	ET_CAN5F1P4	BS_DYJ15YDP	Low-grade astrocytic tumor	LGAT	NA	LGG, To be classified	NA	NA	NA	NA
-PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_0AETXC7D	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_2J1VR233	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_2J3SVT5K	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_99F35CM9	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_0AETXC7D	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_2J1VR233	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_2J3SVT5K	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_R4BMS5K3	PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown	JHC7-CL	BS_99F35CM9	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_R4T1V1K4	PT_R4T1V1K4_7316-2784_Solid Tissue_Initial CNS Tumor	7316-2784	BS_7PVJ6Q3D	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_R4T1V1K4	PT_R4T1V1K4_7316-2784_Solid Tissue_Initial CNS Tumor	7316-2784	BS_Q0PBV7W5	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_R4T1V1K4	PT_R4T1V1K4_7316-2784_Solid Tissue_Initial CNS Tumor	7316-2784	BS_WP9890AN	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28	Updated via OpenPedCan subtyping	NA	NA	NA
@@ -8631,9 +8631,9 @@ PT_WQ2EJVF5	PT_WQ2EJVF5_7316-8119_Not Available_Initial CNS Tumor	7316-8119	BS_K
 PT_WQ2EJVF5	PT_WQ2EJVF5_7316-8119_Solid Tissue_Initial CNS Tumor	7316-8119	BS_VKSTCHRC	Ependymal tumor	Ependymoma	Myxopapillary ependymoma	EPN, MPE	Updated via OpenPedCan subtyping	NA	NA	EPN, MPE
 PT_WS6JY9KY	PT_WS6JY9KY_7316-4964_Solid Tissue_Initial CNS Tumor	7316-4964	BS_RPJ1EPHA	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_WS6JY9KY	PT_WS6JY9KY_7316-4964_Solid Tissue_Initial CNS Tumor	7316-4964	BS_V0BVS7KZ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
-PT_WTMSD2WB	PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor	7316-3632	BS_67PX06P3	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conventional	NA
-PT_WTMSD2WB	PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor	7316-3632	BS_JTBM5TSE	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conventional	NA
-PT_WTMSD2WB	PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor	7316-3632	BS_YZVGP1X1	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conventional	NA
+PT_WTMSD2WB	PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor	7316-3632	BS_67PX06P3	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conconventional	NA
+PT_WTMSD2WB	PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor	7316-3632	BS_JTBM5TSE	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conconventional	NA
+PT_WTMSD2WB	PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor	7316-3632	BS_YZVGP1X1	Chordoma	Chordoma	NA	CHDM, conventional	Updated via pathology review	NA	Chordoma, conconventional	NA
 PT_WVC247PK	PT_WVC247PK_7316-1090_Solid Tissue_Initial CNS Tumor	7316-1090	BS_0J9SHHSC	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
 PT_WVC247PK	PT_WVC247PK_7316-1090_Solid Tissue_Initial CNS Tumor	7316-1090	BS_HX5THCZ6	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
 PT_WVC247PK	PT_WVC247PK_7316-1090_Solid Tissue_Initial CNS Tumor	7316-1090	BS_QK61ST4T	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
@@ -8790,19 +8790,19 @@ PT_XDV8W16W	PT_XDV8W16W_7316-3751_Solid Tissue_Progressive	7316-3751	BS_C6SKJG3N
 PT_XDV8W16W	PT_XDV8W16W_7316-3751_Solid Tissue_Progressive	7316-3751	BS_F116QHAJ	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_XDV8W16W	PT_XDV8W16W_7316-3751_Not Available_Progressive	7316-3751	BS_WC096WYV	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
 PT_XEBJ890W	PT_XEBJ890W_7316-836_Solid Tissue_Initial CNS Tumor	7316-836	BS_24AK5EEP	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_294021KJ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_9V222XXP	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_WDS3VMCB	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_ZWV0SAMG	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17P-CL_Derived Cell Line_Metastatic	U-CH17P-CL	BS_2XHP6CPZ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_1D8BZC23	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_5MMYWSNK	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_7N0BFQGZ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_PYR24RRT	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_68CA8KSM	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_9R1X529B	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_CF7EDEJZ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_E309EY4K	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_294021KJ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_9V222XXP	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_WDS3VMCB	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic	U-CH17M-CL	BS_ZWV0SAMG	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17P-CL_Derived Cell Line_Metastatic	U-CH17P-CL	BS_2XHP6CPZ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_1D8BZC23	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_5MMYWSNK	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_7N0BFQGZ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic	U-CH17PII-CL	BS_PYR24RRT	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_68CA8KSM	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_9R1X529B	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_CF7EDEJZ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XETT8T7M	PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic	U-CH17S-CL	BS_E309EY4K	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_XF1BVHZ9	PT_XF1BVHZ9_7316-4350_Not Available_Progressive	7316-4350	BS_K62F9BCS	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  RTK	GNT, RTK	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Progressive	Glial-neuronal tumor NOS	NA
 PT_XFH4Q7SC	PT_XFH4Q7SC_7316-7755_Solid Tissue_Initial CNS Tumor	7316-7755	BS_F6R8R1KN	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
 PT_XFH4Q7SC	PT_XFH4Q7SC_7316-7755_Solid Tissue_Initial CNS Tumor	7316-7755	BS_Y18G3521	Neuronal and mixed neuronal-glial tumor	GNT	Glial-neuronal tumor,  BRAF V600E	GNT, BRAF V600E	Updated via OpenPedCan subtyping and pathology_free_text_diagnosis	Initial CNS Tumor	Glial-neuronal tumor NOS	NA
@@ -8876,15 +8876,15 @@ PT_XWVQW6JX	PT_XWVQW6JX_7316-3556_Solid Tissue_Progressive	7316-3556	BS_YDHW508X
 PT_XX2VW3D9	PT_XX2VW3D9_7316-96_Solid Tissue_Initial CNS Tumor	7316-96	BS_0J5GC803	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, MYO
 PT_XX2VW3D9	PT_XX2VW3D9_7316-96_Solid Tissue_Initial CNS Tumor	7316-96	BS_3F3XBXZ4	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, MYO
 PT_XX2VW3D9	PT_XX2VW3D9_7316-96_Solid Tissue_Initial CNS Tumor	7316-96	BS_VJVDJABP	Embryonal tumor	Medulloblastoma	Medulloblastoma, group 3	MB, Group3	Subtype based on prediction;Updated via OpenPedCan subtyping	NA	NA	MB, MYO
-PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_BE7KBY3Q	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_E744QAAE	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_EFH9PBG8	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_NTADWQ6M	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_CF365-T_Solid Tissue_Metastatic	CF365-T	BS_6VPPC681	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_35VNYQZV	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_6JB4VBC8	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_6QCDJXXG	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_C7738G9T	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_BE7KBY3Q	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_E744QAAE	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_EFH9PBG8	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic	CF365-PDX	BS_NTADWQ6M	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_CF365-T_Solid Tissue_Metastatic	CF365-T	BS_6VPPC681	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_35VNYQZV	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_6JB4VBC8	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_6QCDJXXG	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_XX33CWA3	PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic	U-CHCF365-CL	BS_C7738G9T	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_XXGDDTZ4	PT_XXGDDTZ4_C4118163-Tumor_Solid Tissue_Initial CNS Tumor	C4118163-Tumor	BS_9A1YTHFF	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_XXGDDTZ4	PT_XXGDDTZ4_C4118163-Tumor_Solid Tissue_Initial CNS Tumor	C4118163-Tumor	BS_W3AK2Q14	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	NA
 PT_XXZHRPNM	PT_XXZHRPNM_7316-2572_Solid Tissue_Initial CNS Tumor	7316-2572	BS_0RWY8M98	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPBTA subtyping and pathology_free_text_diagnosis	NA	Low-grade glioma, KIAA1549-BRAF	NA
@@ -8956,10 +8956,10 @@ PT_Y5YHX20Q	PT_Y5YHX20Q_ET_06Q9BSNT_Not Available_Primary Tumor	ET_06Q9BSNT	BS_V
 PT_Y660CKCB	PT_Y660CKCB_7316-3122_Solid Tissue_Initial CNS Tumor	7316-3122	BS_FKQ7F6D1	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	DMG, H3 K28
 PT_Y660CKCB	PT_Y660CKCB_7316-3122_Solid Tissue_Initial CNS Tumor	7316-3122	BS_WPJKS5T6	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	DMG, H3 K28
 PT_Y660CKCB	PT_Y660CKCB_7316-3122_Solid Tissue_Initial CNS Tumor	7316-3122	BS_XG0DBWVT	Diffuse astrocytic and oligodendroglial tumor	HGAT	Diffuse midline glioma, H3 K28-altered	DMG, H3 K28, TP53	Updated via OpenPedCan subtyping	NA	NA	DMG, H3 K28
-PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_31F0W3QJ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_8RRRBPW7	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_AHK4MH9M	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_MQJ6H44J	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_31F0W3QJ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_8RRRBPW7	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_AHK4MH9M	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_Y66SNKHR	PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence	Mug-Chor1-CL	BS_MQJ6H44J	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_Y6ER78WT	PT_Y6ER78WT_7316-4642_Solid Tissue_Initial CNS Tumor	7316-4642	BS_E9CYN4NP	Diffuse astrocytic and oligodendroglial tumor	HGAT	NA	HGG, To be classified	NA	NA	NA	NA
 PT_Y6Y9JJ9P	PT_Y6Y9JJ9P_7316-425_Solid Tissue_Progressive	7316-425	BS_0WQJP6ZG	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	NA	NA	EPN, ST ZFTA
 PT_Y6Y9JJ9P	PT_Y6Y9JJ9P_7316-425_Solid Tissue_Progressive	7316-425	BS_ZQ29NTTA	Ependymal tumor	Ependymoma	Supratentorial ependymoma, ZFTA fusion-positive	EPN, ST ZFTA	Updated via OpenPedCan subtyping	NA	NA	EPN, ST ZFTA
@@ -8997,7 +8997,7 @@ PT_Y9JQ3VPX	PT_Y9JQ3VPX_7316-4207_Solid Tissue_Initial CNS Tumor	7316-4207	BS_7E
 PT_Y9JQ3VPX	PT_Y9JQ3VPX_7316-4207_Solid Tissue_Initial CNS Tumor	7316-4207	BS_GBSMM7A0	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	NA	NA	ATRT, SHH
 PT_Y9JQ3VPX	PT_Y9JQ3VPX_7316-4207_Solid Tissue_Initial CNS Tumor	7316-4207	BS_HX8XJ18H	Embryonal tumor	ATRT	Atypical Teratoid Rhabdoid Tumor, SHH	ATRT, SHH	Subtype based on methylation;Updated via OpenPedCan subtyping	NA	NA	ATRT, SHH
 PT_Y9JQ3VPX	PT_Y9JQ3VPX_7316-4207_Not Available_Initial CNS Tumor	7316-4207	BS_TF603ZGD	Embryonal tumor	ATRT	NA	ATRT, To be classified	NA	NA	NA	NA
-PT_YAF9B3CC	PT_YAF9B3CC_CF322-PDX_Patient Derived Xenograft_Recurrence	CF322-PDX	BS_Z2FRDNFX	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_YAF9B3CC	PT_YAF9B3CC_CF322-PDX_Patient Derived Xenograft_Recurrence	CF322-PDX	BS_Z2FRDNFX	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_YBJYA2CD	PT_YBJYA2CD_7316-2244_Solid Tissue_Initial CNS Tumor	7316-2244	BS_8Q77HZ4R	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_YBJYA2CD	PT_YBJYA2CD_7316-2244_Solid Tissue_Initial CNS Tumor	7316-2244	BS_KFRBXXV7	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
 PT_YBJYA2CD	PT_YBJYA2CD_7316-2244_Solid Tissue_Initial CNS Tumor	7316-2244	BS_WEQGYFZ8	Choroid plexus tumor	CPT	NA	NA	Updated via pathology_free_text_diagnosis	Initial CNS Tumor	Choroid plexus papilloma	NA
@@ -9046,14 +9046,14 @@ PT_YJBPEF4V	PT_YJBPEF4V_7316-938_Solid Tissue_Initial CNS Tumor	7316-938	BS_S1KK
 PT_YJGTKDV0	PT_YJGTKDV0_7316-1683_Solid Tissue_Initial CNS Tumor	7316-1683	BS_H5Y2CYK2	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
 PT_YJGTKDV0	PT_YJGTKDV0_7316-1683_Solid Tissue_Initial CNS Tumor	7316-1683	BS_XVBX7ZK1	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
 PT_YJGTKDV0	PT_YJGTKDV0_7316-1683_Solid Tissue_Initial CNS Tumor	7316-1683	BS_Z6BWR941	Low-grade astrocytic tumor	LGAT	Low-grade glioma, KIAA1549-BRAF	LGG, KIAA1549-BRAF	Updated via OpenPedCan subtyping	NA	NA	LGG, BRAF/MAPK
-PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_1EPBB086	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_GAYRBK8G	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_KXRRNQ9C	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_S8J3E922	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_2PKBNPBV	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_DMZEKBFG	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_HKQ08C1J	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
-PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_VSFHZ8JZ	Chordoma	Chordoma	NA	NA	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_1EPBB086	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_GAYRBK8G	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_KXRRNQ9C	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic	CF359B-PDX	BS_S8J3E922	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_2PKBNPBV	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_DMZEKBFG	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_HKQ08C1J	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
+PT_YJY2QXDM	PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic	U-CHCF359B-CL	BS_VSFHZ8JZ	Chordoma	Chordoma	NA	CHDM, To be classified	NA	NA	NA	NA
 PT_YK7AD0KK	PT_YK7AD0KK_7316-4868_Solid Tissue_Initial CNS Tumor	7316-4868	BS_6S9QYQPY	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	CRANIO, ADAM
 PT_YK7AD0KK	PT_YK7AD0KK_7316-4868_Solid Tissue_Initial CNS Tumor	7316-4868	BS_KQVSXPZR	Tumors of sellar region	Craniopharyngioma	Adamantinomatous craniopharyngioma	CRANIO, ADAM	Updated via OpenPedCan subtyping	NA	NA	CRANIO, ADAM
 PT_YK7AD0KK	PT_YK7AD0KK_7316-6391_Solid Tissue_Recurrence	7316-6391	BS_5F49NFW9	Tumors of sellar region	Craniopharyngioma	NA	CRANIO, ADAM	Updated via OpenPBTA subtyping from pathology_free_text_diagnosis	Recurrence	Adamantinomatous craniopharyngioma	NA

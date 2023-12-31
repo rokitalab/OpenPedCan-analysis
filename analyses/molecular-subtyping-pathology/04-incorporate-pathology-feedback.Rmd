@@ -248,7 +248,7 @@ compiled_df %>%
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-1102" ~ "Diffuse midline glioma, H3 K28-mutant",
+      sample_id == "7316-1102" ~ "Diffuse midline glioma, H3 K28-altered",
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
@@ -485,8 +485,8 @@ compiled_df <- compiled_df %>%
       sample_id %in% chdm_poorly_diff_sample_ids ~ "CHDM, poorly differentiated",
       sample_id %in% chdm_conventional_sample_ids ~ "CHDM, conventional",
       TRUE ~ molecular_subtype),
-   harmonized_diagnosis = case_when(str_detect(molecular_subtype, "CHDM") ~
-                                    str_replace(molecular_subtype, "CHDM, ", "Chordoma, "), 
+   harmonized_diagnosis = case_when(str_detect(molecular_subtype, "CHDM, poorly") ~ str_replace(molecular_subtype, "CHDM, ", "Chordoma, poorly"),
+                                    str_detect(molecular_subtype, "CHDM, con") ~ str_replace(molecular_subtype, "CHDM, ", "Chordoma, con"),
                                     TRUE ~ harmonized_diagnosis),
     Notes = case_when(sample_id %in% c(chdm_conventional_sample_ids,
                                         chdm_poorly_diff_sample_ids) ~ "Updated via pathology review",
@@ -572,7 +572,7 @@ compiled_df <- compiled_df %>%
       sample_id == "7316-447" ~ "Embryonal tumor with multilayer rosettes, C19MC-altered",
       TRUE ~ integrated_diagnosis
     ),
-    short_histology = case_when(
+      short_histology = case_when(
       sample_id == "7316-447" ~ "ETMR",
       TRUE ~ short_histology
     ),
@@ -592,6 +592,77 @@ compiled_df <- compiled_df %>%
   distinct()
 ```
 
+### PT `PT_FMS4AXKD`
+This patient 7316-9049 has K28-altered due to EGFR mutation, via free text, so we will add here
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_FMS4AXKD")
+
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      match_id == "PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor" ~ "Diffuse midline glioma, H3 K28-altered (EGFR mutant)",
+      TRUE ~ integrated_diagnosis
+    ),
+    molecular_subtype = case_when(
+      match_id == "PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor" ~ "DMG, H3 K28",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      match_id == "PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor" ~ "Updated by pathology free text review",
+      TRUE ~ Notes
+    )
+  ) %>% 
+  distinct()
+```
+
+### PT `PT_E9J8FNW5`
+This patient BS_Q2R56X78 has EGFR p.Gly598Val,TERT promoter, and H3C3 K28M (6:26045493) ~ 50% - not sure why this is not being called, need to investigate.
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_E9J8FNW5")
+
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      match_id == "PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence" ~ "Diffuse midline glioma, H3 K28-altered",
+      TRUE ~ integrated_diagnosis
+    ),
+    molecular_subtype = case_when(
+      match_id == "PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence" ~ "DMG, H3 K28",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      match_id == "PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence" ~ "Updated by pathology free text review",
+      TRUE ~ Notes
+    )
+  ) %>% 
+  distinct()
+```
+
+### PT `PT_FS1GKF9Y`
+This patient BS_QV60J6XZ has A LOT of frameshifts with H3-3A 3' FLANK chr1:g.226072141del, TMB 143 (ultra-hypermutant), two EGFR dels p.Q976Sfs*26 and p.L405Cfs*2 - 2/19 reads - why wasn't this called? need to investigate
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_FS1GKF9Y")
+
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      match_id == "PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence" ~ "Diffuse midline glioma, H3 K28-altered",
+      TRUE ~ integrated_diagnosis
+    ),
+    molecular_subtype = case_when(
+      match_id == "PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence" ~ "DMG, H3 K28, TP53",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      match_id == "PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence" ~ "Updated by pathology free text review",
+      TRUE ~ Notes
+    )
+  ) %>% 
+  distinct()
+```
 
 ###Check list of subtypes look as expected at this point in time
 ```{r}
