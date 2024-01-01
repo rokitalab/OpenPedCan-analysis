@@ -21,7 +21,7 @@ library(ggplot2)
 # File path to subsetted files directory
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
 data_dir <- file.path(root_dir, "data")
-scratch_dir <-  file.path(root_dir, "scratch")
+#scratch_dir <-  file.path(root_dir, "scratch")
 analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-chordoma")
 input_dir <- file.path(analysis_dir, "chordoma-subset")
 results_dir <- file.path(analysis_dir, "results")
@@ -68,7 +68,7 @@ subset_focal_cn_df <-
 # data
 subset_expression_data <-
   readRDS(file.path(
-    scratch_dir,
+    results_dir,
     "chordoma-only-gene-expression-rsem-tpm-collapsed.rds"
   ))
 ```
