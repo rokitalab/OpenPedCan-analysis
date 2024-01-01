@@ -67,7 +67,7 @@ subset_focal_cn_df <-
 # here #250 (comment), you will first need to read in the collapsed expression
 # data
 subset_expression_data <-
-  read_rds(file.path(
+  readRDS(file.path(
     scratch_dir,
     "chordoma-only-gene-expression-rsem-tpm-collapsed.rds"
   ))
