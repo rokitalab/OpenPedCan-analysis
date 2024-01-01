@@ -372,6 +372,10 @@ tp53_rnaseq <- c("BS_E4QK839R", "BS_XZM79E42", "BS_8ZY4GST0", "BS_S5KDWVEA",
 chordoma_dna <- c("BS_JTBM5TSE", "BS_9GN1QA3Q")
 chordoma_rna <- c("BS_67PX06P3", "BS_YB07VF1X")
 
+#### Samples we need to include to run embryonal module (high LIN28A)-------------------
+emb_dna <- "BS_MVQYCQMP"
+emb_rna <- c("BS_KHHXRWMZ", "BS_685DACMS")
+
 
 #### Samples we need to include to run rnaseq-batch-correct module -------------
 
@@ -403,6 +407,7 @@ gtex_brain_cerebellum <- c("GTEX-111FC-3326-SM-5GZYV", "GTEX-117XS-3126-SM-5GIDP
 
 all_rna <- c(tp53_rnaseq,
              chordoma_rna,
+             emb_rna,
              polya_mycn_amp, 
              polya_mycn_nonamp, 
              stranded_dmg, 
@@ -636,18 +641,18 @@ biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
 # positive example of TP53 mutation for tp53_nf1_score
 snv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "snv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq, chordoma_dna)))
+  purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq, chordoma_dna, emb_dna)))
 
 # for each SV instance, add in biospecimen IDs for samples we know have a
 # positive example of TP53 mutation for tp53_nf1_score
 sv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "sv-manta")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(sv_index, ~ append(.x, c(tp53_dnaseq, non_GATK_sample, chordoma_dna)))
+  purrr::modify_at(sv_index, ~ append(.x, c(tp53_dnaseq, non_GATK_sample, chordoma_dna, emb_dna)))
 
 ## add non-GATK samples to cnv file 
 cnv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "cnv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample, tp53_dnaseq, chordoma_dna)))
+  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample, tp53_dnaseq, chordoma_dna, emb_dna)))
 
 # remove any redundant that might result combining and appending to the 
 # biospecimen IDs lists for subsetting 
