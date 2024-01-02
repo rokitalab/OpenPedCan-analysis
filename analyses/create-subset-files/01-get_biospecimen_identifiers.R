@@ -39,7 +39,6 @@ suppressWarnings(
 )
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(data.table))
-suppressPackageStartupMessages(library(arrow))
 suppressPackageStartupMessages(options(readr.show_col_types = FALSE))
 
 `%>%` <- dplyr::`%>%`
@@ -63,7 +62,13 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     # 'Tumor_Sample_Barcode'
     # if the files have consensus in the name, the first line of the file does
     # not contain MAF version information
-    if (grepl("hotspots", filename)) {
+    
+    # Skip tumor only MAF
+    if (grepl("tumor-only", filename)) {
+      message("Skipping tumor only MAF file: ", filename)
+      return(NULL)
+    }
+    if (grepl("snv-consensus-plus-hotspots", filename)) {
       snv_file <- data.table::fread(filename,
                                     skip = 1,  # skip version string
                                     data.table = FALSE,
@@ -79,18 +84,27 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     bed_file <- readr::read_tsv(filename)
     biospecimen_ids <- unique(bed_file$Kids_First_Biospecimen_ID)
   } else if (grepl("cnv", filename)) {
-    # the two CNV files now have different structures
-    if (stringr::str_detect(filename, "gistic", negate = TRUE)) {
-      cnv_file <- readr::read_tsv(filename)
+    # Skip files with "gistic" in their name
+    if (grepl("gistic", filename)) {
+      message("Skipping gistic file: ", filename)
+      return(NULL)
     }
-    if (grepl("controlfreec|cnvkit_with_status", filename)) {
+    
+    # Handle other CNV files
+    if (grepl("cnv-controlfreec|cnvkit_with_status", filename)) {
+      cnv_file <- readr::read_tsv(filename)
       biospecimen_ids <- unique(cnv_file$Kids_First_Biospecimen_ID)
     } else if (grepl("consensus_wgs_plus_cnvkit_wxs", filename)) {
+      cnv_file <- readr::read_tsv(filename)
       biospecimen_ids <- unique(cnv_file$biospecimen_id)
     } else if (grepl("cnv-gatk", filename)) {
+      cnv_file <- readr::read_tsv(filename)
       biospecimen_ids <- unique(cnv_file$BS_ID)
-    } else {
+    } else if (grepl("cnv-cnvkit|cnv-consensus.", filename)) {
+      cnv_file <- readr::read_tsv(filename)
       biospecimen_ids <- unique(cnv_file$ID)
+    } else {
+      stop("Unrecognized CNV file type or missing implementation for file: ", filename)
     }
   } else if (grepl("consensus_seg_with_status", filename)) {
     cn_seg_status_file <- readr::read_tsv(filename)
@@ -112,17 +126,26 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     sv_file <- data.table::fread(filename, data.table = FALSE, 
                                  showProgress = FALSE)
     biospecimen_ids <- unique(sv_file$Kids.First.Biospecimen.ID.Tumor)
-  } else if (grepl(".rds", filename)) {
+  } else if (grepl("gene|rna-isoform", filename)) {
     # RNA-Seq matrices column names
     if (grepl("rna-isoform", filename)) {
       expression_file <- readr::read_rds(filename) %>%
         dplyr::select(-transcript_id, -gene_symbol)
       biospecimen_ids <- unique(colnames(expression_file))
-    } else if (grepl("methyl", filename)){
-      expression_file <- readr::read_rds(filename) %>%
-        dplyr::select(-Probe_ID)
-      biospecimen_ids <- unique(colnames(expression_file))
+  } else if (grepl("^gene", filename)) {
+    ## for opc RNA-seq
+    expression_file <- readr::read_rds(filename)
+    biospecimen_ids <- unique(colnames(expression_file))
+  } else if (grepl("gtex_gene", filename)) {
+    ## for gtex RNA-seq
+    gtex <- readr::read_rds(filename)
+    biospecimen_ids <- unique(colnames(gtex))
+ # } else if (grepl("methyl", filename)){
+  #    expression_file <- readr::read_rds(filename) %>%
+   #     dplyr::select(-Probe_ID)
+    #  biospecimen_ids <- unique(colnames(expression_file))
     } else {
+      # tcga
       expression_file <- readr::read_rds(filename)
       biospecimen_ids <- unique(colnames(expression_file))
     }
@@ -130,10 +153,18 @@ get_biospecimen_ids <- function(filename, id_mapping_df) {
     # in a column 'Kids_First_Biospecimen_ID'
     independent_file <- readr::read_tsv(filename)
     biospecimen_ids <- unique(independent_file$Kids_First_Biospecimen_ID)
+ # skip rmats file
   } else if (grepl("splice-events-rmats", filename)) {
-    # in a column 'sample_id'
-    rmats_file <- arrow::read_tsv_arrow(filename)
-    biospecimen_ids <- unique(rmats_file$sample_id)
+    message("Skipping splice events file: ", filename)
+      return(NULL)
+  } else if (grepl("methyl", filename)) {
+      message("Skipping methylation file: ", filename)
+      return(NULL)
+  #   } else if (grepl("splice-events-rmats", filename)) {
+  #  # in a column 'sample_id'
+   # rmats_file <- data.table::fread(filename, select = "sample_id") %>%
+    #unique()
+    #biospecimen_ids <- unique(rmats_file$sample_id)
   } else {
     # error-handling
     stop("File type unrecognized by 'get_biospecimen_ids'")
@@ -267,7 +298,7 @@ option_list <- list(
   make_option(
     c("-r", "--supported_string"),
     type = "character",
-    default = "snv|biospecimen|cnv|consensus_seg_with_status|fusion|sv-manta|.rds|independent|splice",
+    default = "snv|biospecimen|cnv|consensus_seg_with_status|fusion|sv-manta|gene|isoform|independent|splice",
     help = "string for pattern matching used to subset to only supported files"
   ),
   make_option(
@@ -337,6 +368,15 @@ tp53_rnaseq <- c("BS_E4QK839R", "BS_XZM79E42", "BS_8ZY4GST0", "BS_S5KDWVEA",
                  "BS_NW3NGVR8", "BS_3RAM3K7B", "BS_NJ4WPQVK",
                  "TARGET-40-PATEEM-01A-01R")
 
+#### Samples we need to include to run chordoma module -------------------
+chordoma_dna <- c("BS_JTBM5TSE", "BS_9GN1QA3Q")
+chordoma_rna <- c("BS_67PX06P3", "BS_YB07VF1X")
+
+#### Samples we need to include to run embryonal module (high LIN28A)-------------------
+emb_dna <- "BS_MVQYCQMP"
+emb_rna <- c("BS_KHHXRWMZ", "BS_685DACMS")
+
+
 #### Samples we need to include to run rnaseq-batch-correct module -------------
 
 # For more information, see the 00-enrich-batch-correction-examples.Rmd notebook
@@ -365,20 +405,30 @@ gtex_brain_cerebellum <- c("GTEX-111FC-3326-SM-5GZYV", "GTEX-117XS-3126-SM-5GIDP
                            "GTEX-1A3MX-2926-SM-718B7", "GTEX-1H4P4-0011-R11b-SM-CE6S8",
                            "GTEX-1I1GQ-0011-R11b-SM-CKZPA", "GTEX-X4XX-2926-SM-3NMB1")
 
+all_rna <- c(tp53_rnaseq,
+             chordoma_rna,
+             emb_rna,
+             polya_mycn_amp, 
+             polya_mycn_nonamp, 
+             stranded_dmg, 
+             polya_dmg, 
+             stranded_hgg, 
+             polya_hgg)
+
 #### Samples we need to include to run methylation-summary module --------------
 
 # For more information, see the 00-enrich-methyl-rnaseq-examples.Rmd notebook
-methyl_samples <- c("TARGET-40-PANVJJ-01A-01D.M", "TARGET-40-PAKUZU-01A-01D.M", 
-                    "TARGET-50-PAJMRL-01A-01D.M", "TARGET-50-PAJNRL-01A-01D.M", 
-                    "TARGET-40-0A4I48-01A-01D.M", "BS_QE0MYJAD", "BS_5YNY8WRA",
-                    "BS_B81HY49C", "BS_DKTVT34S", "BS_C32A6KDR")
-rnaseq_samples <- c("TARGET-40-PANVJJ-01A-01R", "TARGET-40-PAKUZU-01A-01R", 
-                    "TARGET-50-PAJMRL-01A-01R", "TARGET-50-PAJNRL-01A-01R", 
-                    "TARGET-40-0A4I48-01A-01R", "BS_JT82QGXF", "BS_AGTPCRR4", 
-                    "BS_R244Z0WX", "BS_NGHK9RZP", "BS_6R7SFVV2")
+#methyl_samples <- c("TARGET-40-PANVJJ-01A-01D.M", "TARGET-40-PAKUZU-01A-01D.M", 
+#                    "TARGET-50-PAJMRL-01A-01D.M", "TARGET-50-PAJNRL-01A-01D.M", 
+#                    "TARGET-40-0A4I48-01A-01D.M", "BS_QE0MYJAD", "BS_5YNY8WRA",
+#                    "BS_B81HY49C", "BS_DKTVT34S", "BS_C32A6KDR")
+#rnaseq_samples <- c("TARGET-40-PANVJJ-01A-01R", "TARGET-40-PAKUZU-01A-01R", 
+#                    "TARGET-50-PAJMRL-01A-01R", "TARGET-50-PAJNRL-01A-01R", 
+#                    "TARGET-40-0A4I48-01A-01R", "BS_JT82QGXF", "BS_AGTPCRR4", 
+#                    "BS_R244Z0WX", "BS_NGHK9RZP", "BS_6R7SFVV2")
 
 #### Two non-GATK samples 
-non_GATK_sample <- c("BS_A9Q65W4Q", "BS_JTNTWJMD")
+non_GATK_sample <- c("BS_Y4CC9PKT", "BS_4QH8B0VS")
 
 ### Histologies and participants IDs mapping -----------------------------------
 
@@ -388,6 +438,8 @@ histology_df <- read_tsv(file.path(data_directory, "histologies.tsv"),
 
 # get the participant ID to biospecimen ID mapping
 id_mapping_df <- histology_df %>%
+  # remove exp strategies not needed for subset (proteomics)
+  dplyr::filter(!experimental_strategy %in% c("Whole Cell Proteomics", "Phospho-Proteomics", "Methylation")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 
@@ -404,8 +456,10 @@ if (running_locally) {
 }
 
 # drop GISTIC zipped file from this list 
-files_to_subset <- files_to_subset[-grep("gistic.zip", files_to_subset)]
+# drop rMATs, tumor only (for now), and methylation files from this list 
+files_to_subset <- files_to_subset[-grep("gistic.zip|splice-events-rmats|snv-mutect2-tumor-only|methyl", files_to_subset)]
 files_to_subset
+
 
 # for each file, extract the participant ID list by first obtaining the
 # biospecimen IDs and then mapping back to participant ID
@@ -416,7 +470,7 @@ participant_id_list <- purrr::map(files_to_subset,
 
 # list of matched participant IDs, not including cohort-specific 
 # file (TCGA and DGD)
-message("\nGetting matched participant IDs, exclduing cohort-specific files ...")
+message("\nGetting matched participant IDs, excluding cohort-specific files ...")
 other_participant_id_list <- 
   participant_id_list[-grep("tcga|dgd", names(participant_id_list))]
 other_matched_participants <- purrr::reduce(other_participant_id_list,
@@ -428,7 +482,7 @@ message("\nGetting TCGA rna-seq matched participant IDs...")
 tcga_participant_id_list <- 
   participant_id_list[grep("tcga", names(participant_id_list))]
 tcga_matched_participants <- purrr::reduce(tcga_participant_id_list,
-                                               intersect)
+                                           intersect)
 
 # list of DGD-specific panel files and matched participant IDs 
 # for subsetting 
@@ -490,6 +544,18 @@ other_matched <-
   select_participants_ids(histology_df, "other", "DGD",
                           dgd_matched_participants, 1.0, num_matched_participants)
 
+## GTEx RNA
+gtex_id <- c(
+  gtex_brain_cortex, gtex_brain_cerebellum,
+  # GTEx Famele:Male == 0.3:0.7, other cohorts ~0.5 (balanced)
+  histology_df %>% filter(cohort == "GTEx", reported_gender == "Female") %>%
+    pull(Kids_First_Participant_ID) %>% unique() %>%
+    sample(ceiling(0.3 * num_matched_participants)),
+  histology_df %>% filter(cohort == "GTEx", reported_gender == "Male") %>%
+    pull(Kids_First_Participant_ID) %>% unique() %>%
+    sample(ceiling(0.7 * num_matched_participants))
+)
+
 #### Combining selected matched and nonmatched participant IDs for subsetting---
 
 message("\nCombining selected matched and nonmatched participant IDs...")
@@ -524,40 +590,44 @@ biospecimen_ids_for_subset <- purrr::map(
       dplyr::pull(Kids_First_Biospecimen_ID)
   }
 )
+print(biospecimen_ids_for_subset)
 
 message(paste0("\nAppending biospecimen IDs of interest to lists..."))
 
 # for each rnaseq rds instance, add in biospecimen IDs for samples we know have
 # a positive example of TP53 mutation for tp53_nf1_score, samples that 
 # can fully test the batch correction module, and of samples for patients 
-# we know have both methylation and rnaseq data 
-rds_files <- 
-  names(biospecimen_ids_for_subset[grep(".rds", names(biospecimen_ids_for_subset))])
-rds_files <- rds_files[-grep("tcga", rds_files)]
-rds_files <- rds_files[-grep("methyl", rds_files)]
+
+# for each rna instance, add in biospecimen IDs for samples we know have a
+# positive example of TP53 mutation for tp53_nf1_score
+
+## add RNA-seq
+rna_index <- names(biospecimen_ids_for_subset[grep("gene|isoform", names(biospecimen_ids_for_subset))])
+rna_index <- rna_index[-grep("gtex", rna_index)]
+rna_index <- rna_index[-grep("tcga", rna_index)]
+
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(rds_files, ~ append(.x, c(tp53_rnaseq, 
-                                             polya_mycn_amp, polya_mycn_nonamp, 
-                                             stranded_dmg, polya_dmg, 
-                                             stranded_hgg, polya_hgg, 
-                                             gtex_brain_cortex, gtex_brain_cerebellum,
-                                             rnaseq_samples)))
+  purrr::modify_at(rna_index, ~ append(.x, c(all_rna)))
+
+## add gtex RNA-seq
+gtex_index <- names(biospecimen_ids_for_subset[grep("gtex", names(biospecimen_ids_for_subset))])
+biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
+  purrr::modify_at(gtex_index, ~ append(.x, c(gtex_id)))
 
 # for each methyl rds instance, add in biospecimen IDs of samples for patients 
 # we know have both methylation and rnaseq data
-rds_files <- 
-  names(biospecimen_ids_for_subset[grep(".rds", names(biospecimen_ids_for_subset))])
-rds_files <- rds_files[grep("methyl", rds_files)]
-biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(rds_files, ~ append(.x, methyl_samples))
+#rds_files <- names(biospecimen_ids_for_subset[grep(".rds", names(biospecimen_ids_for_subset))])
+#rds_files <- rds_files[grep("methyl", rds_files)]
+#biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
+#  purrr::modify_at(rds_files, ~ append(.x, methyl_samples))
 
 # for methyl primary each cohort independent list instance, add in biospecimen IDs
 # of samples for patients we know have both methylation and rnaseq data
-independent_files <- 
-  names(biospecimen_ids_for_subset[grep("independent", names(biospecimen_ids_for_subset))])
-independent_files <- independent_files[grep("methyl.primary.eachcohort", independent_files)]
-biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(independent_files, ~ append(.x, methyl_samples))
+#independent_files <- 
+#  names(biospecimen_ids_for_subset[grep("independent", names(biospecimen_ids_for_subset))])
+#independent_files <- independent_files[grep("methyl.primary.eachcohort", independent_files)]
+#biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
+#  purrr::modify_at(independent_files, ~ append(.x, methyl_samples))
 
 # for rnaseq primary each cohort independent list instance, add in biospecimen IDs
 # of samples for patients we know have both methylation and rnaseq data
@@ -565,24 +635,24 @@ independent_files <-
   names(biospecimen_ids_for_subset[grep("independent", names(biospecimen_ids_for_subset))])
 independent_files <- independent_files[grep("rnaseqpanel.primary.eachcohort", independent_files)]
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(independent_files, ~ append(.x, rnaseq_samples))
+  purrr::modify_at(independent_files, ~ append(.x, all_rna))
 
 # for each snv instance, add in biospecimen IDs for samples we know have a
 # positive example of TP53 mutation for tp53_nf1_score
 snv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "snv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq)))
+  purrr::modify_at(snv_index, ~ append(.x, c(tp53_dnaseq, chordoma_dna, emb_dna)))
 
 # for each SV instance, add in biospecimen IDs for samples we know have a
 # positive example of TP53 mutation for tp53_nf1_score
 sv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "sv-manta")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(sv_index, ~ append(.x, c(tp53_dnaseq)))
+  purrr::modify_at(sv_index, ~ append(.x, c(tp53_dnaseq, non_GATK_sample, chordoma_dna, emb_dna)))
 
 ## add non-GATK samples to cnv file 
 cnv_index <- stringr::str_which(names(biospecimen_ids_for_subset), "cnv")
 biospecimen_ids_for_subset <- biospecimen_ids_for_subset %>%
-  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample, tp53_dnaseq)))
+  purrr::modify_at(cnv_index, ~ append(.x, c(non_GATK_sample, tp53_dnaseq, chordoma_dna, emb_dna)))
 
 # remove any redundant that might result combining and appending to the 
 # biospecimen IDs lists for subsetting 
