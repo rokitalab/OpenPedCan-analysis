@@ -1,4 +1,4 @@
-## Steps for creating subset files for CI
+## Steps for creating subset files for GitHub Actions CI
 
 1. Update to the most recent release of the data by running `bash download-data.sh` in the root directory of the repository.
 2. Run the shell script to generate subset files (from the root directory of the repository):
@@ -20,6 +20,8 @@ Non-matched samples are also added to each file (10% of `--num_matched`), which 
 
 Some files are copied over in their entirety (e.g., BED files).
 See `create_subset_files.sh` for more information.
+
+Note: `splice-events-rmats.tsv.gz` and all `methyl*` files are skipped in v13 due to large size and that no modules currently routinely utilize these files.
 
 #### Special considerations
 
@@ -55,6 +57,6 @@ Running the following from the root directory of the repository
 SKIP_SUBSETTING=1 ./analyses/create-subset-files/create_subset_files.sh
 ```
 
-will skip the subsetting file steps that are implemented in R and only copy files that are included in full (e.g., `pbta-histologies.tsv`) and generate a new `md5sum.txt`.
+will skip the subsetting file steps that are implemented in R and only copy files that are included in full (e.g., `histologies.tsv`) and generate a new `md5sum.txt`.
 This is intended to be used when the only files that need to be updated are those that are copied over without being reduced in size in anyway.
 

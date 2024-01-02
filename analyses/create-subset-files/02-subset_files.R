@@ -16,39 +16,7 @@ suppressWarnings(
 )
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(data.table))
-suppressPackageStartupMessages(library(arrow))
 suppressPackageStartupMessages(options(readr.show_col_types = FALSE))
-
-write_maf_file <- function(maf_df, file_name, version_string) {
-  # Given a data.frame that contains the fields for a MAF file, write a gzipped
-  # MAF file and include the version information provided in version_string.
-  #
-  # Note: if file_name exists, it will be overwritten
-  #
-  # Args:
-  #   maf_df: A data.frame that contains the MAF info.
-  #   file_name: Output file name, including the full path.
-  #   version_string: the version string that will be written to the first line
-  #                   of the file at file_name
-  #
-  # Returns: intended to be used to write files only
-
-  # if the file name supplied to this function ends in `.gz`, take it out for
-  # the purposes of writeLines, etc.
-  # we'll gzip it at the end with R.utils::gzip and this extension is not needed
-  if (grepl(".gz", file_name)) {
-    file_name <- sub(".gz", "", file_name)
-  }
-
-  # write the version string to the top of the file
-  writeLines(version_string, con = file_name)
-
-  # write the tabular data of maf_df
-  readr::write_tsv(maf_df, path = file_name, append = TRUE, col_names = TRUE)
-
-  # now gzip the file
-  R.utils::gzip(file_name, overwrite = TRUE)
-}
 
 subset_files <- function(filename, biospecimen_ids, output_directory) {
   # given the full path to a file to be subset and the list of biospecimen ids
@@ -75,30 +43,6 @@ subset_files <- function(filename, biospecimen_ids, output_directory) {
   # filtering strategy depends on the file type, mostly because how the sample
   # IDs change based on the file type -- that's why this logic is required
   if (grepl("snv", filename)) {
-    # if (grepl("hotspots", filename)) {
-    #   snv_file <- data.table::fread(filename,
-    #                                 skip = 1,  # skip version string
-    #                                 data.table = FALSE,
-    #                                 showProgress = FALSE)
-    #   # we need to obtain the version string from the first line of the MAF file
-    #   version_string <- readLines(filename, n = 1)
-    #   # filter + write to file with custom function
-    #   snv_file %>%
-    #     dplyr::filter(Tumor_Sample_Barcode %in% biospecimen_ids) %>%
-    #     write_maf_file(file_name = output_file,
-    #                    version_string = version_string)
-    #   snv_file %>%
-    #     dplyr::filter(Tumor_Sample_Barcode %in% biospecimen_ids) %>%
-    #     readr::write_tsv(output_file)
-    # } else {
-    #   # in a column 'Tumor_Sample_Barcode'
-    #   snv_file <- data.table::fread(filename, data.table = FALSE, 
-    #                                 showProgress = FALSE)
-    #   snv_file %>%
-    #     dplyr::filter(Tumor_Sample_Barcode %in% biospecimen_ids) %>%
-    #     readr::write_tsv(output_file)
-    # }
-    # in a column 'Tumor_Sample_Barcode'
     snv_file <- data.table::fread(filename, data.table = FALSE, 
                                   showProgress = FALSE)
     snv_file %>% 
@@ -133,7 +77,7 @@ subset_files <- function(filename, biospecimen_ids, output_directory) {
       fusion_file %>%
         dplyr::filter(Sample %in% biospecimen_ids |
                         # this is required for the the fusion-summary module and TP53 module
-                        grepl("RELA|MN1|EWSR1|FGFR1--TACC1|MYB--QKI|BRAF|TP53--TRPS1|TP53--PSMG4", FusionName)) %>%
+                        grepl("ZFTA|MN1|EWSR1|FGFR1--TACC1|MYB--QKI|BRAF|TP53--TRPS1|TP53--PSMG4", FusionName)) %>%
         readr::write_tsv(output_file)
     } else if (grepl("dgd", filename)) {
       fusion_file %>%
@@ -168,9 +112,14 @@ subset_files <- function(filename, biospecimen_ids, output_directory) {
       expression_file %>% dplyr::select(transcript_id, gene_symbol,
                                         !!!rlang::quos(any_of(biospecimen_ids))) %>% 
         readr::write_rds(output_file)
-    } else if (grepl("methyl", filename)) {
-      expression_file %>% dplyr::select(Probe_ID, 
-                                        !!!rlang::quos(any_of(biospecimen_ids))) %>% 
+   # } else if (grepl("methyl", filename)) {
+  #    expression_file %>% dplyr::select(Probe_ID, 
+   #                                     !!!rlang::quos(any_of(biospecimen_ids))) %>% 
+    #    readr::write_rds(output_file)
+    } else if (grepl("gtex", filename)) {
+      expression_file <- readr::read_rds(filename)
+      biospecimen_ids <- intersect(colnames(expression_file), biospecimen_ids)
+      expression_file %>% dplyr::select(!!!rlang::quos(any_of(biospecimen_ids))) %>% 
         readr::write_rds(output_file)
     } else {
       expression_file %>% dplyr::select(!!!rlang::quos(any_of(biospecimen_ids))) %>% 
@@ -182,12 +131,11 @@ subset_files <- function(filename, biospecimen_ids, output_directory) {
     independent_file %>% 
       dplyr::filter(Kids_First_Biospecimen_ID %in% biospecimen_ids) %>%
       readr::write_tsv(output_file)
-  } else if (grepl("splice-events-rmats", filename)) {
+ # } else if (grepl("splice-events-rmats", filename)) {
     # in a column 'sample_id'
-    rmats_file <- arrow::read_tsv_arrow(filename)
-    rmats_file %>% 
-      dplyr::filter(sample_id %in% biospecimen_ids) %>%
-      readr::write_tsv(output_file)
+  #  rmats_file <- vroom::vroom(filename) %>%
+   #   dplyr::filter(sample_id %in% biospecimen_ids) %>%
+    #  readr::write_tsv(output_file)
   } else {
     # error-handling
     stop("File type unrecognized by 'subset_files'")
