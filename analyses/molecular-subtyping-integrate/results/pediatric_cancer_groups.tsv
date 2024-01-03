@@ -82,12 +82,12 @@ Diffuse intrinsic pontine glioma	NA	1
 Diffuse leptomeningeal glioneuronal tumor	Initial CNS Tumor	3
 Diffuse leptomeningeal glioneuronal tumor	Progressive	5
 Diffuse leptomeningeal glioneuronal tumor	NA	1
-Diffuse midline glioma	Deceased	270
-Diffuse midline glioma	Initial CNS Tumor	461
-Diffuse midline glioma	Progressive	48
+Diffuse midline glioma	Deceased	275
+Diffuse midline glioma	Initial CNS Tumor	471
+Diffuse midline glioma	Progressive	53
 Diffuse midline glioma	Progressive Disease Post-Mortem	12
 Diffuse midline glioma	Recurrence	18
-Dysembryoplastic neuroepithelial tumor	Initial CNS Tumor	130
+Dysembryoplastic neuroepithelial tumor	Initial CNS Tumor	125
 Dysembryoplastic neuroepithelial tumor	Primary Tumor	4
 Dysembryoplastic neuroepithelial tumor	Progressive	21
 Dysembryoplastic neuroepithelial tumor	Recurrence	10
@@ -146,17 +146,17 @@ Hepatoblastoma	Primary Tumor	9
 Hepatoblastoma	Recurrence	1
 Hepatocellular Carcinoma	Primary Tumor	3
 Hepatocellular neoplasm NOS	Primary Tumor	1
-High-grade glioma	Deceased	158
-High-grade glioma	Initial CNS Tumor	510
+High-grade glioma	Deceased	151
+High-grade glioma	Initial CNS Tumor	491
 High-grade glioma	Primary Tumor	32
-High-grade glioma	Progressive	136
+High-grade glioma	Progressive	126
 High-grade glioma	Progressive Disease Post-Mortem	1
 High-grade glioma	Recurrence	126
 High-grade glioma	Relapse	1
 High-grade glioma	Second Malignancy	33
 High-grade glioma	Unknown	5
 High-grade neuroepithelial tumor	Initial CNS Tumor	2
-Histiocytic tumor	Initial CNS Tumor	3
+Histiocytic tumor	Initial CNS Tumor	1
 Histiocytic tumor	Primary Tumor	5
 Histiocytic tumor	Progressive	1
 Histiocytic tumor	Second Malignancy	1
@@ -171,7 +171,7 @@ Inflammatory Myofibroblastic Tumor	Primary Tumor	1
 Inflammatory Myofibroblastic Tumor	Progressive	3
 Intraneural perineuroma	Initial CNS Tumor	2
 Juvenile xanthogranuloma	Initial CNS Tumor	7
-Langerhans Cell histiocytosis	Initial CNS Tumor	28
+Langerhans Cell histiocytosis	Initial CNS Tumor	26
 Langerhans Cell histiocytosis	Primary Tumor	4
 Langerhans Cell histiocytosis	Recurrence	2
 Langerhans Cell histiocytosis	Unknown	1
@@ -257,9 +257,9 @@ Pineoblastoma	Initial CNS Tumor	54
 Pineoblastoma	Primary Tumor	1
 Pineoblastoma	Progressive	7
 Pineoblastoma	Recurrence	5
-Pleomorphic xanthoastrocytoma	Deceased	2
-Pleomorphic xanthoastrocytoma	Initial CNS Tumor	17
-Pleomorphic xanthoastrocytoma	Progressive	5
+Pleomorphic xanthoastrocytoma	Deceased	4
+Pleomorphic xanthoastrocytoma	Initial CNS Tumor	35
+Pleomorphic xanthoastrocytoma	Progressive	10
 Pleomorphic xanthoastrocytoma	Recurrence	1
 Primary mediastinal large B cell lymphoma	Primary Tumor	1
 Retinoblastoma	Recurrence	1

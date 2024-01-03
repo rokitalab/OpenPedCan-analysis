@@ -149,31 +149,24 @@ compiled_df %>%
 We know from `molecular-subtyping-HGG` that a BRAF V600E mutation is present.
 Now we have to check for the presence of _BRAF_ fusions.
 
-```{r}
-fusions_df %>%
-  filter(str_detect(FusionName, "BRAF"),
-         Sample == "BS_H1XPVS9A")
-```
-
-There are no _BRAF_ fusions in `BS_H1XPVS9A`, so we are able to classify this sample (`7316-1106`) as `LGG, BRAF V600E`.
 
 ```{r}
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-1106" ~ "Pleomorphic xanthoastrocytoma, BRAF V600E",
+      sample_id == "7316-1106" ~ "Pleomorphic xanthoastrocytoma",
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
-      sample_id == "7316-1106" ~ "LGAT",
+      sample_id == "7316-1106" ~ "HGAT",
       TRUE ~ short_histology
     ),
     broad_histology = case_when(
-      sample_id == "7316-1106" ~ "Low-grade astrocytic tumor",
+      sample_id == "7316-1106" ~ "Diffuse astrocytic and oligodendroglial tumor",
       TRUE ~ broad_histology
     ),
     molecular_subtype = case_when(
-      sample_id == "7316-1106" ~ "LGG, BRAF V600E",
+      sample_id == "7316-1106" ~ "HGG, PXA",
       TRUE ~ molecular_subtype
     ),
     Notes = case_when(

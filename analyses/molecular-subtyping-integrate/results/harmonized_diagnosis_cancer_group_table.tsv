@@ -204,8 +204,8 @@ DGD	High-grade glioma, IDH-mutant	High-grade glioma	Yes	No
 PBTA	High-grade glioma/astrocytoma (WHO grade III/IV);Oligodendroglioma	High-grade glioma	No	Yes
 PPTC	High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma	No	Yes
 PBTA	High-grade neuroepithelial tumor	High-grade neuroepithelial tumor	No	No
-DGD	Histiocytic tumor	Histiocytic tumor	No	No
 DGD	Histiocytic Tumor	Histiocytic tumor	No	Yes
+DGD	Histiocytic tumor	Histiocytic tumor	No	No
 DGD	Hodgkin's lymphoma	Hodgkin's lymphoma	No	No
 PBTA	Infant-type hemispheric glioma, ALK-altered	Infant-type hemispheric glioma	Yes	No
 PBTA	Infant-type hemispheric glioma, NTRK-altered	Infant-type hemispheric glioma	Yes	No
@@ -402,9 +402,8 @@ PBTA	Pineoblastoma, Group 2	Pineoblastoma	Yes	No
 PBTA	Pineoblastoma	Pineoblastoma	No	No
 PBTA	Pineoblastoma, Group 1	Pineoblastoma	Yes	No
 DGD	Pineoblastoma	Pineoblastoma	No	No
-DGD	Pleomorphic xanthoastrocytoma	Pleomorphic xanthoastrocytoma	No	No
 PBTA	Pleomorphic xanthoastrocytoma	Pleomorphic xanthoastrocytoma	No	No
-PBTA	Pleomorphic xanthoastrocytoma, BRAF V600E	Pleomorphic xanthoastrocytoma	Yes	No
+DGD	Pleomorphic xanthoastrocytoma	Pleomorphic xanthoastrocytoma	No	No
 DGD	Primary mediastinal large B cell lymphoma	Primary mediastinal large B cell lymphoma	No	No
 TCGA	Prostate Adenocarcinoma	Prostate Adenocarcinoma	No	No
 TCGA	Rectum Adenocarcinoma	Rectum Adenocarcinoma	No	No
