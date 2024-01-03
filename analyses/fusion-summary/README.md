@@ -2,14 +2,14 @@
 
 This module generates summary files for fusions of interest present in biospecimens taken from:
   
-  1. Ependymoma tumors
+1. Ependymoma tumors
 2. Embryonal tumors not from ATRT or MB
 3. CNS Ewing Sarcomas
 4. LGG/HGG tumors
 
 To generate the tables run:
   
-  ```
+```
 bash run-new-analysis.sh
 ```
 

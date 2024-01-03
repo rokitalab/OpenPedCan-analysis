@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Data Formats in Data Download
 
 The release notes for each release are provided in the `release-notes.md` file that accompanies the data files.
@@ -8,7 +13,7 @@ A table with brief descriptions for each data file is provided in the `data-file
 Processed data files are all files derived from samples (e.g., tumors, cell lines) that are processed upstream of this repository and are not the product of any analysis code in the `AlexsLemonade/OpenPBTA-analysis` or `PediatricOpenTargets/OpenPedCan-analysis` repository.
 
 ### Consensus Somatic Variant Data
-Somatic calls that are retained if they are supported by atleast 2 callers OR marked as `HotSpotAllele` because they overlap SNV/INDELs considered as [Cancer Hotspots](https://www.cancerhotspots.org/#/download) OR are TERT promoter SNVs. Please find additional information [here](https://github.com/kids-first/kf-somatic-workflow/blob/master/docs/kfdrc-consensus-calling.md)
+Somatic calls that are retained if they are supported by at least 2 callers OR marked as `HotSpotAllele` because they overlap SNV/INDELs considered as [Cancer Hotspots](https://www.cancerhotspots.org/#/download) OR are TERT promoter SNVs. Please find additional information [here](https://github.com/kids-first/kf-somatic-workflow/blob/master/docs/kfdrc-consensus-calling.md)
 
 * `snv-consensus-plus-hotspots.maf.tsv.gz`
 
@@ -37,6 +42,12 @@ See [the data description file](data-description.md) for more information about 
 
 If your analysis requires de-duplicated gene symbols as row names, please use the collapsed matrices provided as part of the data download ([see below](#collapsed-expression-matrices)).
 
+### RNA splice events Data
+
+RNA splice events rmats file generated from the [established pipeline](https://github.com/d3b-center/pbta-splicing/blob/main/workflows/rmats_wf.cwl) is provided as:
+
+  * `splice-events-rmats.tsv.gz`
+
 ### Derived Fusion Files
 
 The filtered and prioritized fusion and downstream files are a product of the [`analyses/fusion_filtering`](https://github.com/PediatricOpenTargets/OpenPedCan-analysis/tree/dev/analyses/fusion_filtering) analysis module. 
@@ -57,6 +68,20 @@ Structural Variants data produced by the [`MANTA` package](https://github.com/Il
 provided as:
 
 * `sv-manta.tsv.gz`
+
+### Proteomic data
+
+Whole cell proteomic and phosphorylation proteomic data from `project HOPE` and `CPTAC` are provided as: 
+
+| File name | Data type | Data source | Data description |
+|---|---|---|---|
+|`cptac-protein-imputed-phospho-expression-log2-ratio.tsv.gz`| Processed data | [CPTAC pediatric brain tumor phospho-proteomics expression](https://pubmed.ncbi.nlm.nih.gov/33242424/) | Imputed phospho-protein expression, log2 abundance
+|`cptac-protein-imputed-prot-expression-abundance.tsv.gz`| Processed data | [CPTAC pediatric brain tumor protein expression](https://pubmed.ncbi.nlm.nih.gov/33242424/) | Imputed whole cell protein expression, total abundance
+|`cptac-protein-imputed-prot-expression-log2-ratio.tsv.gz`| Processed data | [CPTAC pediatric brain tumor protein expression](https://pubmed.ncbi.nlm.nih.gov/33242424/) | Imputed whole cell protein expression, log2 abundance
+|`gbm-protein-imputed-phospho-expression-abundance.tsv.gz`| Processed data | [CPTAC adult GBM brain tumor phospho-proteomics expression](https://www.sciencedirect.com/science/article/pii/S1535610821000507) | Imputed phospho-protein expression, total abundance
+|`gbm-protein-imputed-prot-expression-abundance.tsv.gz`| Processed data | [CPTAC adult GBM brain tumor protein expression](https://www.sciencedirect.com/science/article/pii/S1535610821000507) | Imputed whole cell expression, total abundance
+|`hope-protein-imputed-phospho-expression-abundance.tsv.gz`| Processed data | Adult and Young Adolescent (AYA) brain tumor phospho-proteomics expression (Project HOPE) | Imputed phospho-protein expression, total abundance
+|`hope-protein-imputed-prot-expression-abundance.tsv.gz`| Processed data | Adult and Young Adolescent (AYA) brain tumor protein expression (Project HOPE) | Imputed whole cell protein expression, total abundance
 
 ### Harmonized Clinical Data
 
@@ -128,9 +153,11 @@ In cases where more than one Ensembl gene identifier maps to the same gene symbo
 * `gene-expression-rsem-tpm-collapsed.rds`
 * `rna-isoform-expression-rsem-tpm.rds`
 
-Additionally, available TCGA gene expression files with same format are included:
+Additionally, available TCGA and GTEx gene expression files with same format are included:
 * `tcga-gene-counts-rsem-expected_count.rds`
 * `tcga-gene-expression-rsem-tpm.rds`
+* `gtex_gene-counts-rsem-expected_count-collapsed.rds`
+* `gtex_gene-expression-rsem-tpm-collapsed.rds`
 
 ### Derived Copy Number Files
 
@@ -157,7 +184,8 @@ Note: these files contain biospecimens and genes with copy number changes.
   - `cnvkit_annotated_cn_wxs_x_and_y.tsv.gz` contains focal gene copy number alterations for the sex chromosomes.
   
   Additionally, autosomes file and x_and_y file for either WGS or WXS to generate the two combined files as followed:
-  - `consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz`
-  - `consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz` 
+  - `consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz`
+  - `consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz`
+
   And these two files are further merged to generate:
-  - `consensus_wgs_plus_cnvkit_wxs.tsv.gz`
+  - `consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz`
