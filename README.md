@@ -1,8 +1,9 @@
 # OpenPedCan-analysis
 [![DOI](https://zenodo.org/badge/358689512.svg)](https://zenodo.org/badge/latestdoi/358689512)
 
-The Open Pediatric Cancer (OpenPedCan) project at the Children’s Hospital of Philadelphia is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data, provides them on PedcBioPortal, and the NCI's Molecular Targets Platform (MTP).
-For detailed methods, please see our [methods repository](https://github.com/d3b-center/OpenPedCan-methods).
+The Open Pediatric Cancer (OpenPedCan) project at the Children’s Hospital of Philadelphia is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data and provides them on PedcBioPortal.
+The [NCI's Molecular Targets Platform (MTP)](https://moleculartargets.ccdi.cancer.gov/.
+For detailed methods, please see our [methods repository](https://github.com/d3b-center/OpenPedCan-methods) contains data from release v12.
 
 To cite this work, please note the data release used in your work and cite the following:
 1. OpenPBTA:
@@ -12,13 +13,13 @@ DOI for [all releases](https://zenodo.org/search?q=parent.id%3A6473912&f=allvers
 
 The OpenPedCan analyses currently include the following datasets, described more fully below:
 
+- OpenPBTA
 - TARGET
 - Kids First Neuroblastoma
-- OpenPBTA
-- Additional PBTA samples from PNOC, Mioncoseq, CBTN
+- Additional PBTA samples from CBTN, PNOC, Mioncoseq, Chordoma Foundation
+- DGD (CHOP P30 Panel) - fusion and tumor/normal panels
 - GTEx
 - TCGA
-- DGD (CHOP P30 Panel)
 
 Open Pediatric Brain Tumor Atlas (OpenPBTA)
 In September of 2018, the [Children's Brain Tumor Network (CBTN)](https://cbtn.org/) released the [Pediatric Brain Tumor Atlas (PBTA)](https://cbtn.org/pediatric-brain-tumor-atlas/), a genomic dataset (whole genome sequencing, whole exome sequencing, RNA sequencing, proteomic, and clinical data) for nearly 1,000 tumors, available from the [Gabriella Miller Kids First Portal](https://kidsfirstdrc.org/).
@@ -313,7 +314,7 @@ Files that are intermediate, which means that they are useful within an analysis
 
 ### Docker Image
 
-We build our project Docker image from a versioned [`tidyverse`](https://hub.docker.com/r/rocker/tidyverse) image from the [Rocker Project](https://www.rocker-project.org/) (v3.6.0).
+We build our project Docker image from a versioned [`tidyverse`](https://hub.docker.com/r/rocker/tidyverse) image from the [Rocker Project](https://www.rocker-project.org/) (v4.2.3).
 
 To add dependencies that are required for your analysis to the project Docker image, you must alter the project [`Dockerfile`](https://github.com/d3b-center/OpenPedCan-analysis/blob/dev/Dockerfile).
 The `Dockerfile` can be directly edited to install dependencies, if you are developing using a branch on the [d3b-center/OpenPedCan-analysis](https://github.com/d3b-center/OpenPedCan-analysis) repository.
@@ -384,8 +385,8 @@ If you set the `PWD:/home/rstudio/OpenPedCan-analysis` above, then you can navig
 
 Many analyses will require Amazon EC2 for development.
 For this, we have created a template image in `Mgmt-Console-Dev-chopd3bprod`.
-Navigate to the Service Catalog and select `openpedcan-instance`.
-The standard mount comes with a default 100 GB root volume and can be expanded at launch.
+Navigate to the Service Catalog and select `d3b-research-instance`.
+The standard mount comes with a default 100 GB root volume.
 Below are the instance names, hourly rates, vCPUs, and memory.
 
 | Instance name | Hourly rate | vCPU | Memory |
@@ -394,6 +395,7 @@ Below are the instance names, hourly rates, vCPUs, and memory.
 | m6i.xlarge    | $0.192      | 4    | 16 GB  |
 | m6i.2xlarge   | $0.384      | 8    | 32 GB  |
 | m6i.4xlarge   | $0.768      | 16   | 64 GB  |
+| m6i.8xlarge   | $1.536      | 32   | 128 GB  |
 
 #### RStudio - EC2
 
@@ -608,3 +610,18 @@ The name command in the `.github/continuous_integration.yml` is used to specify 
 In this example `OPENPBTA_PATHSIG=0.75` species an environment variable `OPENPBTA_PATHSIG` that is set to 0.75.
 Any environment variables prefixed with `OPENPBTA_` are passed to the specified shell script.
 Environment variables without this prefix are not passed.
+
+
+## Funding
+[**OpenPBTA**](https://github.com/AlexsLemonade/OpenPBTA-analysis) was funded through the [Children's Brain Tumor Network (CBTN)](https://cbtn.org/) by the following donors who provided leadership level support: CBTN Executive Council members, Brain Tumor Board of Visitors, Children's Brain Tumor Foundation, Easie Family Foundation, Kortney Rose Foundation, Lilabean Foundation, Minnick Family Charitable Fund, Perricelli Family, Psalm 103 Foundation, and Swifty Foundation. 
+Additional funding was provided by Alex’s Lemonade Stand Foundation (ALSF) Childhood Cancer Data Lab, ALSF Young Investigator Award, ALSF Catalyst Award, ALSF Catalyst Award, ALSF CCDL Postdoctoral Training Grant, Children’s Hospital of Philadelphia Division of Neurosurgery, Australian Government, Department of Education, St. Anna Kinderkrebsforschung, Austria, the Mildred Scheel Early Career Center Dresden P2, funded by the German Cancer Aid, NIH Grants 3P30 CA016520-44S5, U2C HL138346-03, U24 CA220457-03, K12GM081259, R03-CA23036, NIH Contract Nos. HHSN261200800001E and 75N91019D00024, Task Order No. 75N91020F00003, and the Intramural Research Program of the Division of Cancer Epidemiology and Genetics of the National Cancer Institute.
+
+Inaugural funding for **OpenPedCan** was provided in part by [NCI's Childhood Cancer Data Initiative](https://www.cancer.gov/research/areas/childhood/childhood-cancer-data-initiative) through NIH Task Order No. 75N91020F00003 and is currently funded by the CBTN and the Children’s Hospital of Philadelphia Division of Neurosurgery.
+
+
+## Contact
+Please submit an issue with any questions, bugs, or feature requests or contact [Dr. Jo Lynne Rokita](@jharenza) with any questions: rokita@chop.edu.
+
+
+
+
