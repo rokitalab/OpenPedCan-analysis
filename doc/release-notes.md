@@ -27,18 +27,18 @@
 
 - Files changed
     - files added
-        - cptac-protein-imputed-phospho-expression-log2-ratio.tsv.gz
-        - cptac-protein-imputed-prot-expression-abundance.tsv.gz
-        - cptac-protein-imputed-prot-expression-log2-ratio.tsv.gz
-        - cnv-controlfreec-tumor-only.tsv.gz
-        - gbm-protein-imputed-phospho-expression-abundance.tsv.gz
-        - gbm-protein-imputed-prot-expression-abundance.tsv.gz
-        - gtex_gene-counts-rsem-expected_count-collapsed.rds
-        - gtex_gene-expression-rsem-tpm-collapsed.rds
-        - hope-cnv-controlfreec-tumor-only.tsv
-        - hope-protein-imputed-phospho-expression-abundance.tsv.gz
-        - hope-protein-imputed-prot-expression-abundance.tsv.gz
-        - snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz
+        - `cptac-protein-imputed-phospho-expression-log2-ratio.tsv.gz`
+        - `cptac-protein-imputed-prot-expression-abundance.tsv.gz`
+        - `cptac-protein-imputed-prot-expression-log2-ratio.tsv.gz`
+        - `cnv-controlfreec-tumor-only.tsv.gz`
+        - `gbm-protein-imputed-phospho-expression-abundance.tsv.gz`
+        - `gbm-protein-imputed-prot-expression-abundance.tsv.gz`
+        - `gtex_gene-counts-rsem-expected_count-collapsed.rds`
+        - `gtex_gene-expression-rsem-tpm-collapsed.rds`
+        - `hope-cnv-controlfreec-tumor-only.tsv`
+        - `hope-protein-imputed-phospho-expression-abundance.tsv.gz`
+        - `hope-protein-imputed-prot-expression-abundance.tsv.gz`
+        - `snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz`
 
 - Analysis update
     - Newly-added analysis modules
@@ -51,7 +51,7 @@
         - Add K28I mutation into HGG molecular subtyping (https://github.com/d3b-center/OpenPedCan-analysis/pull/439)
         - Update LGG methylation subtyping (https://github.com/d3b-center/OpenPedCan-analysis/pull/433)
     - Histologies update
-        - Add match_id column (Kids_First_Participant_ID + sample_id + composition, tumor_descriptor + cell_line_composition + cell_line_passage) for matching experimental strategies per event in histologies-base file
+        - Add `match_id` column (Kids_First_Participant_ID + sample_id + composition, tumor_descriptor + cell_line_composition + cell_line_passage) for matching experimental strategies per event in histologies-base file
     - Others
         - Organize Dockerfile and reduce docker size (https://github.com/d3b-center/OpenPedCan-analysis/pull/447, https://github.com/d3b-center/OpenPedCan-analysis/pull/440)
         - Update readmes for deprecated modules and remove unused modules (https://github.com/d3b-center/OpenPedCan-analysis/pull/481)
