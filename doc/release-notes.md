@@ -1,24 +1,180 @@
 # release notes
 
 ## current release
-- release date: 
-- status: 
-- Overview of changes: 
-  - This release adds the following data: 
-    - Whole cell proteomic and phosphorylation data from HOPE and CPTAC
-      - 218 Whole Cell Proteomics samples from CPTAC (cptac-protein-imputed-prot-expression.tsv)
-      - 218 Phospho-Proteomics samples from CPTAC (cptac-protein-imputed-phospho-expression.tsv)
-      - 90 Whole Cell Proteomics samples from HOPE (hope-protein-imputed-prot-expression.tsv)
-      - 90 Phospho-Proteomics samples from HOPE (hope-protein-imputed-phospho-expression.tsv)
-    - RNA-Seq data
-      - 93 RNA-seq samples from PBTA 
-      - 40 RNA-seq samples from Maris
-      - 243 RNA-seq samples from PPTC
-      - 567 exome cpature targeted sequencing samples from DGD
-    - DNA data
-      - 501 WGS samples from samples PBTA
-      - 656 targeted sequencing samples from DGD
+### release-v13
 
+- Release date: 2023-01-03
+- Status:
+- Overview of changes:
+    - This release adds the following data:
+        - Whole cell proteomic and phosphorylation data from HOPE and CPTAC
+            - 218 Whole Cell Proteomics samples from CPTAC (cptac-protein-imputed-prot-expression.tsv)
+            - 218 Phospho-Proteomics samples from CPTAC (cptac-protein-imputed-phospho-expression.tsv)
+            - 90 Whole Cell Proteomics samples from HOPE (hope-protein-imputed-prot-expression.tsv)
+            - 90 Phospho-Proteomics samples from HOPE (hope-protein-imputed-phospho-expression.tsv)
+        - RNA-Seq data
+            - 93 RNA-seq samples from PBTA
+            - 40 RNA-seq samples from Maris
+            - 243 RNA-seq samples from PPTC
+            - 10 RNA-seq samples from DGD
+        - Fusion panels
+            - 1437 fusion panel samples from DGD
+        - DNA data
+            - 501 WGS samples from samples PBTA
+            - 647 targeted sequencing samples from DGD
+                - 323 normal samples
+                - 324 tumor samples
+
+- Files changed
+    - files added
+        - cptac-protein-imputed-phospho-expression-log2-ratio.tsv.gz
+        - cptac-protein-imputed-prot-expression-abundance.tsv.gz
+        - cptac-protein-imputed-prot-expression-log2-ratio.tsv.gz
+        - cnv-controlfreec-tumor-only.tsv.gz
+        - gbm-protein-imputed-phospho-expression-abundance.tsv.gz
+        - gbm-protein-imputed-prot-expression-abundance.tsv.gz
+        - gtex_gene-counts-rsem-expected_count-collapsed.rds
+        - gtex_gene-expression-rsem-tpm-collapsed.rds
+        - hope-cnv-controlfreec-tumor-only.tsv
+        - hope-protein-imputed-phospho-expression-abundance.tsv.gz
+        - hope-protein-imputed-prot-expression-abundance.tsv.gz
+        - snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz
+
+- Analysis update
+    - Newly-added analysis modules
+        - Add Pineoblastoma subtype module (https://github.com/d3b-center/OpenPedCan-analysis/pull/476)
+        - Create copy_number_consensus_call_manta module for samples without GATK CNV (https://github.com/d3b-center/OpenPedCan-analysis/pull/410, (https://github.com/d3b-center/OpenPedCan-analysis/pull/419)
+    - Molecular subtyping update:
+        - Add workflows to molecular subtyping modules (https://github.com/d3b-center/OpenPedCan-analysis/pull/467, https://github.com/d3b-center/OpenPedCan-analysis/pull/466, https://github.com/d3b-center/OpenPedCan-analysis/pull/465, https://github.com/d3b-center/OpenPedCan-analysis/pull/464, https://github.com/d3b-center/OpenPedCan-analysis/pull/463, https://github.com/d3b-center/OpenPedCan-analysis/pull/462, https://github.com/d3b-center/OpenPedCan-analysis/pull/461, https://github.com/d3b-center/OpenPedCan-analysis/pull/460, https://github.com/d3b-center/OpenPedCan-analysis/pull/458, https://github.com/d3b-center/OpenPedCan-analysis/pull/454)
+        - Add DMG, EGFR to HGG methyl molecular subtype (https://github.com/d3b-center/OpenPedCan-analysis/pull/451)
+        - Add PXA to HGG molecular subtype (https://github.com/d3b-center/OpenPedCan-analysis/pull/450)
+        - Add K28I mutation into HGG molecular subtyping (https://github.com/d3b-center/OpenPedCan-analysis/pull/439)
+        - Update LGG methylation subtyping (https://github.com/d3b-center/OpenPedCan-analysis/pull/433)
+    - Histologies update
+        - Add match_id column (Kids_First_Participant_ID + sample_id + composition, tumor_descriptor + cell_line_composition + cell_line_passage) for matching experimental strategies per event in histologies-base file
+    - Others
+        - Organize Dockerfile and reduce docker size (https://github.com/d3b-center/OpenPedCan-analysis/pull/447, https://github.com/d3b-center/OpenPedCan-analysis/pull/440)
+        - Update readmes for deprecated modules and remove unused modules (https://github.com/d3b-center/OpenPedCan-analysis/pull/481)
+        - Add script for methylation file download (https://github.com/d3b-center/OpenPedCan-analysis/pull/415)
+        - RNA-seq and DNA samples QC (https://github.com/d3b-center/bixu-tracker/issues/2164)
+            - >= 20M total reads and 50% mapped for RNA-Seq
+            - >= 20X coverage for tumor DNA samples
+        - Using NGSCheckmate and Somalier to identigy mismatched RNA-seq samples (https://github.com/d3b-center/bixu-tracker/issues/2157, https://github.com/d3b-center/bixu-tracker/issues/2163)
+
+```
+v13
+├── 20038D-17Q6-01.regions.100bp_padded.bed
+├── S0274956_Padded_HG38.merged.bed
+├── S02972011_Covered_hg38_100.bed
+├── S04380110_Regions_hg38_100.bed
+├── S07604715_100bp_Padded.bed
+├── SeqCap_EZ_Exome_v2_Padded_HG38.merged.bed
+├── StrexomeLite_hg38_liftover_100bp_padded.bed
+├── Strexome_targets_intersect_sorted_padded100.GRCh38.bed
+├── TARGET_AML_NBL_WT_SeqVal79_attempt06_AllTracks_HG38_bed_expanded100.bed
+├── WGS.hg38.lancet.300bp_padded.bed
+├── WGS.hg38.lancet.unpadded.bed
+├── WGS.hg38.mutect2.vardict.unpadded.bed
+├── WGS.hg38.strelka2.unpadded.bed
+├── WGS.hg38.vardict.100bp_padded.bed
+├── agilent-v4-targets-ucsc.100bp_padded.bed
+├── ashion_exome_v2_targets_hg38_padded100.bed
+├── biospecimen_id_to_bed_map.tsv
+├── cnv-cnvkit.seg.gz
+├── cnv-consensus-gistic-only.seg.gz
+├── cnv-consensus-gistic.zip
+├── cnv-consensus.seg.gz
+├── cnv-controlfreec-tumor-only.tsv.gz
+├── cnv-controlfreec.tsv.gz
+├── cnv-gatk.seg.gz
+├── cnvkit_with_status.tsv
+├── consensus_seg_with_status.tsv
+├── consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz
+├── consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz
+├── consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz
+├── cptac-protein-imputed-phospho-expression-log2-ratio.tsv.gz
+├── cptac-protein-imputed-prot-expression-abundance.tsv.gz
+├── cptac-protein-imputed-prot-expression-log2-ratio.tsv.gz
+├── efo-mondo-map.tsv
+├── ensg-hugo-pmtl-mapping.tsv
+├── fusion-annoFuse.tsv.gz
+├── fusion-arriba.tsv.gz
+├── fusion-dgd.tsv.gz
+├── fusion-putative-oncogenic.tsv
+├── fusion-starfusion.tsv.gz
+├── fusion_summary_embryonal_foi.tsv
+├── fusion_summary_ependymoma_foi.tsv
+├── fusion_summary_ewings_foi.tsv
+├── fusion_summary_lgg_hgg_foi.tsv
+├── gbm-protein-imputed-phospho-expression-abundance.tsv.gz
+├── gbm-protein-imputed-prot-expression-abundance.tsv.gz
+├── gene-counts-rsem-expected_count-collapsed.rds
+├── gene-expression-rsem-tpm-collapsed.rds
+├── gtex_gene-counts-rsem-expected_count-collapsed.rds
+├── gtex_gene-expression-rsem-tpm-collapsed.rds
+├── hg38_strelka.bed
+├── histologies-base.tsv
+├── histologies.tsv
+├── hope-cnv-controlfreec-tumor-only.tsv
+├── hope-protein-imputed-phospho-expression-abundance.tsv.gz
+├── hope-protein-imputed-prot-expression-abundance.tsv.gz
+├── independent-specimens.methyl.primary-plus.eachcohort.tsv
+├── independent-specimens.methyl.primary-plus.tsv
+├── independent-specimens.methyl.primary.eachcohort.tsv
+├── independent-specimens.methyl.primary.tsv
+├── independent-specimens.methyl.relapse.eachcohort.tsv
+├── independent-specimens.methyl.relapse.tsv
+├── independent-specimens.rnaseq.primary-plus-pre-release.tsv
+├── independent-specimens.rnaseq.primary-pre-release.tsv
+├── independent-specimens.rnaseq.relapse-pre-release.tsv
+├── independent-specimens.rnaseqpanel.primary-plus.eachcohort.tsv
+├── independent-specimens.rnaseqpanel.primary-plus.tsv
+├── independent-specimens.rnaseqpanel.primary.eachcohort.tsv
+├── independent-specimens.rnaseqpanel.primary.tsv
+├── independent-specimens.rnaseqpanel.relapse.eachcohort.tsv
+├── independent-specimens.rnaseqpanel.relapse.tsv
+├── independent-specimens.wgs.primary-plus.eachcohort.tsv
+├── independent-specimens.wgs.primary-plus.tsv
+├── independent-specimens.wgs.primary.eachcohort.tsv
+├── independent-specimens.wgs.primary.tsv
+├── independent-specimens.wgs.relapse.eachcohort.tsv
+├── independent-specimens.wgs.relapse.tsv
+├── independent-specimens.wgswxspanel.primary-plus.eachcohort.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary-plus.eachcohort.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.primary-plus.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary-plus.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.primary.eachcohort.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary.eachcohort.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.primary.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.relapse.eachcohort.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.relapse.eachcohort.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.relapse.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.relapse.prefer.wxs.tsv
+├── intersect_cds_lancet_strelka_mutect_WGS.bed
+├── intersect_strelka_mutect_WGS.bed
+├── md5sum.txt
+├── nexterarapidcapture_exome_targetedregions_v1.2_hg38_100.bed
+├── onco1500-v2-targets-ucsc.100bp_padded.bed
+├── onco1500-v4-targets-ucsc.100bp_padded.bed
+├── onco1500-v6-targets-ucsc.100bp_padded.bed
+├── onco1500-v6a-targets-ucsc.100bp_padded.bed
+├── release-notes.md
+├── rna-dna-qc-stats.tsv
+├── rna-isoform-expression-rsem-tpm.rds
+├── snv-consensus-plus-hotspots.maf.tsv.gz
+├── snv-mutation-tmb-all.tsv
+├── snv-mutation-tmb-coding.tsv
+├── snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz
+├── splice-events-rmats.tsv.gz
+├── sv-manta.tsv.gz
+├── tcga-gene-expression-rsem-tpm-collapsed.rds
+├── truseq-exome-targeted-regions-manifest-v1-2_hg38_100.bed
+├── uberon-map-gtex-group.tsv
+├── uberon-map-gtex-subgroup.tsv
+├── wgs_canonical_calling_regions.hg38.bed
+└── xgen-exome-research-panel-targets_hg38_ucsc_liftover.100bp_padded.sort.merged.bed
+```
 
 ## previous release
 ## release-v12
