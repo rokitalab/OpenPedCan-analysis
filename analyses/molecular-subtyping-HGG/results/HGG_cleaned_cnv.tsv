@@ -271,6 +271,7 @@ SF11385	BS_AH3RVK53	PT_EN2RN5Y1	neutral	neutral	neutral	neutral	neutral	neutral	
 7316-2151	BS_SKRY0BJ4	PT_HNZNZ635	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	gain	gain	neutral	neutral
 7316-2151	BS_TX8C5VAJ	PT_HNZNZ635	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316UP-1962	BS_SG37096X	PT_HP7WQNW4	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
+7316-4670	BS_GPX0HD13	PT_HVXYKN8E	neutral	neutral	loss	neutral	neutral	neutral	neutral	neutral	loss	loss	neutral	neutral
 7316-8021	BS_Z0BN60RK	PT_J03YQ4V3	loss	loss	neutral	neutral	neutral	loss	neutral	neutral	neutral	neutral	neutral	neutral
 7316-526	BS_0PNVPY23	PT_J4VQP0RW	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-3817	BS_F8K4VQMF	PT_J5NSRW1Y	deep deletion	deep deletion	gain	neutral	neutral	neutral	neutral	neutral	gain	gain	neutral	neutral
@@ -407,6 +408,7 @@ SF11385	BS_AH3RVK53	PT_EN2RN5Y1	neutral	neutral	neutral	neutral	neutral	neutral	
 7316-624	BS_SMHNXC5G	PT_SDPA6AAP	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-4698	BS_2B567J5H	PT_SEKXH6HT	loss	loss	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-9837	BS_89RB2TC2	PT_SNJ1YR1R	loss	loss	neutral	neutral	gain	neutral	neutral	neutral	neutral	neutral	neutral	neutral
+7316-1776	BS_EHBH0NYX	PT_SSE4AH59	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-1106	BS_J4E9SW51	PT_T8V9ES93	gain	gain	gain	neutral	neutral	neutral	neutral	neutral	gain	gain	neutral	neutral
 7316-4335	BS_9T43YEPA	PT_TFCNV42Z	neutral	neutral	neutral	neutral	amplification	loss	neutral	loss	neutral	neutral	neutral	neutral
 7316-2777	BS_A0NBZQPH	PT_TPDB1WC8	Loss	Loss	Gain	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
@@ -468,6 +470,7 @@ SF11385	BS_AH3RVK53	PT_EN2RN5Y1	neutral	neutral	neutral	neutral	neutral	neutral	
 7316-1763	BS_WPCBK1EG	PT_Z4PJA6KT	neutral	neutral	gain	gain	gain	loss	gain	neutral	neutral	neutral	neutral	neutral
 7316-1763	BS_5C0SRKYC	PT_Z4PJA6KT	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-1763	BS_853PNV7P	PT_Z4PJA6KT	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
+7316-8104	BS_WGCRFSE0	PT_ZABG0DZ2	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-7498	BS_HPVAR2P6	PT_ZBHAAB3G	gain	gain	amplification	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-8829	BS_BTSF22DW	PT_ZEQ3NS7K	loss	loss	neutral	neutral	gain	loss	neutral	neutral	neutral	neutral	neutral	neutral
 7316-8052	BS_PTW3FZXK	PT_ZFKQKGME	neutral	neutral	neutral	neutral	amplification	neutral	neutral	neutral	neutral	neutral	neutral	neutral

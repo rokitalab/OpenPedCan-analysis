@@ -196,7 +196,7 @@ snv_lesions_df <- snv_consensus_hotspot_maf  %>%
                                     HGVSp_Short == "p.G35V" ~ "Yes",
                                   TRUE ~ "No"),
     `BRAF.V600E` = dplyr::case_when(Hugo_Symbol == "BRAF" &
-                                     HGVSp_Short == "p.V600E|p.640E" ~ "Yes",
+                                     HGVSp_Short == "p.V600E" ~ "Yes",
                                    TRUE ~ "No")
   ) %>%
   dplyr::select(
@@ -211,7 +211,8 @@ snv_lesions_df <- snv_lesions_df %>%
       Tumor_Sample_Barcode = setdiff(dna_bsids, snv_lesions_df$Tumor_Sample_Barcode)
     )
   ) %>%
-  dplyr::mutate_all(function(x) tidyr::replace_na(x, "No"))
+  dplyr::mutate_all(function(x) tidyr::replace_na(x, "No")) %>%
+  unique()
 ```
 
 Add a column that keeps track of the presence of any defining lesion.
@@ -235,7 +236,8 @@ snv_lesions_df <- snv_lesions_df %>%
       `BRAF.V600E` == "Yes" ~ TRUE,
       TRUE ~ FALSE
     )
-  )
+  ) %>%
+  unique()
 ```
 
 ## What are the diagnoses of the samples which have defining lesions but are not HGG, LGG, or EPN? Make sure to add these back at the end!

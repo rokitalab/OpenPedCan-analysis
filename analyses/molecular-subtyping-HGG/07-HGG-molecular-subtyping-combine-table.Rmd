@@ -165,9 +165,7 @@ Add methylation to all_data_df.
 methyl_df <- hgg_meta %>% 
   filter(experimental_strategy == "Methylation", 
          (grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) |
-             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG", 
-                                                  ## Add PXA methylation molecular subtype
-                                                  "PXA")), 
+             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG", "PXA")), 
          dkfz_v12_methylation_subclass_score >= 0.8) %>% 
   # add all samples but only keep subtypes if score >=0.8
   mutate(molecular_subtype_methyl = case_when(grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
@@ -444,12 +442,14 @@ ihg_df_biospecimen <- all_data_df %>%
 PXA have BRAF V600E mutation or MAPK pathway gene and 
 homozygous deletion of CDKN2A and/or CDKN2B
 
-DNA methyaltion profile of "PXA"
+DNA methyaltion profile of "PXA" or free text PXA
 
 ```{r}
 pxa_df_biospecimen <- all_data_df %>% 
-  filter(molecular_subtype_methyl == "PXA" & BRAF_V600E %in% c("p.V600E", "p.V640E") & 
-           (CDKN2A_focal_status == "loss" | CDKN2B_focal_status == "loss")) %>% 
+  # need free text
+    left_join(unique(hgg_meta[,c("pathology_free_text_diagnosis", "match_id")])) %>%
+  filter(molecular_subtype_methyl == "PXA" | grepl("pleomorphic xanthoastrocytoma|pxa", pathology_free_text_diagnosis) & BRAF_V600E %in% c("p.V600E", "p.V640E") & 
+           (CDKN2A_focal_status %in% c("deep deletion", "loss") | CDKN2B_focal_status %in% c("deep deletion", "loss"))) %>% 
   mutate(molecular_subtype = "HGG, PXA") %>% 
   unique()
   
