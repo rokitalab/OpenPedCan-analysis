@@ -7,7 +7,7 @@ printf "Start molecular subtyping...\n\n"
 
 # Set locations for s3 bucket that contains release file
 URL="s3://d3b-openaccess-us-east-1-prd-pbta/open-targets"
-RELEASE="v12"
+RELEASE="v13"
 
 # Set the working directory to the directory of this file
 cd "$(dirname "${BASH_SOURCE[0]}")"
@@ -63,6 +63,16 @@ echo "Run neurocytoma subtyping"
 cd ${analyses_dir}/molecular-subtyping-neurocytoma
 bash run_subtyping.sh
 
+# Run ATRT subtyping
+echo "Run ATRT subtyping"
+cd ${analyses_dir}/molecular-subtyping-ATRT
+bash run-molecular-subtyping-ATRT.sh
+
+# Run PB subtyping
+echo "Run PB subtyping"
+cd ${analyses_dir}/molecular-subtyping-PB
+bash run-molecular-subtyping-PB.sh
+
 # Run HGG subtyping
 echo "Run HGG subtyping"
 cd ${analyses_dir}/molecular-subtyping-HGG
@@ -77,11 +87,6 @@ bash run_subtyping.sh
 echo "Run NBL subtyping"
 cd ${analyses_dir}/molecular-subtyping-NBL
 bash run-molecular-subtyping-NBL.sh
-
-# Run ATRT subtyping
-echo "Run ATRT subtyping"
-cd ${analyses_dir}/molecular-subtyping-ATRT
-bash run-molecular-subtyping-ATRT.sh
 
 # Run compile subtyping
 echo "Run compile subtyping"
