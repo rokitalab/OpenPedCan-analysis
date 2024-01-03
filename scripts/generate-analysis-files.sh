@@ -7,7 +7,7 @@ printf "Start generating pre-release files...\n\n"
 
 # Set locations for s3 bucket that contains release files
 URL="s3://d3b-openaccess-us-east-1-prd-pbta/open-targets"
-RELEASE="v12"
+RELEASE="v13"
 
 # Set the working directory to the directory of this file
 cd "$(dirname "${BASH_SOURCE[0]}")"
@@ -31,6 +31,11 @@ scratch_dir="$BASEDIR/scratch"
 release_dir="${scratch_dir}/analysis-files-pre-release"
 mkdir -p ${release_dir}
 
+# Run step to generate cnv consensus file
+echo "Run copy number consensus calls"
+cd ${analyses_dir}/copy_number_consensus_call_manta
+bash run_consensus_call.sh
+rm -Rf ${scratch_dir}/copy_consensus
 
 # Run step to generate cnv consensus file
 echo "Run copy number consensus calls"
@@ -65,15 +70,8 @@ cp ${analyses_dir}/fusion_filtering/results/fusion-putative-oncogenic.tsv ${data
 if [ "$RUN_LOCAL" -lt "1" ]; then
 
   # Run GISTIC step -- only the part that generates ZIP file
-  echo "Run GISTIC"
-  # Run a step that subs ploidy for NA to allow GISTIC to run
-  Rscript ${analyses_dir}/run-gistic/scripts/prepare_seg_for_gistic.R \
-  --in_consensus ${data_dir}/cnv-consensus.seg.gz \
-  --out_consensus ${analyses_dir}/run-gistic/results/cnv-consensus-gistic-only.seg.gz \
-  --histology ${data_dir}/histologies-base.tsv
-
-  # This will use the file that just got generated above
-  bash ${analyses_dir}/run-gistic/scripts/run-gistic-opentargets.sh
+  echo "Run GISTIC - this step will take about an hour"
+  bash ${analyses_dir}/run-gistic/run-gistic-module.sh
 
   # Copy over GISTIC
   cp ${analyses_dir}/run-gistic/results/cnv-consensus-gistic.zip ${release_dir}
@@ -86,12 +84,12 @@ if [ "$RUN_LOCAL" -lt "1" ]; then
   RUN_ORIGINAL=1 OPENPBTA_BASE_SUBTYPING=1 bash run-prepare-cn.sh
   
   ## Copy over focal CN
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${release_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz ${data_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${release_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_x_and_y.tsv.gz ${data_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${release_dir}
-  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs.tsv.gz ${data_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz ${data_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz ${data_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz ${release_dir}
+  cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz ${data_dir}
 
   # Copy over the consensus with status file
   cp ${analyses_dir}/focal-cn-file-preparation/results/consensus_seg_with_status.tsv ${release_dir}

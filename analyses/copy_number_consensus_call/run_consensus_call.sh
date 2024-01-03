@@ -50,6 +50,5 @@ snakemake \
     -j \
     --restart-times 2
 
-
 # merge cnv files
-Rscript --vanilla merge_cnv_file.R
+Rscript --vanilla scripts/merge_cnv_file.R

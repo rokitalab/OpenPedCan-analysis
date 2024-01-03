@@ -22,7 +22,8 @@ library(tidyverse)
 # Use this as the root directory to ensure proper sourcing of functions no
 # matter where this is called from
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
-
+scratch_dir <- file.path(root_dir, "scratch")
+  
 # Set path to results and plots directory
 results_dir <-
   file.path(root_dir, "analyses", "molecular-subtyping-chordoma", "chordoma-subset")
@@ -49,7 +50,8 @@ chordoma_metadata <- metadata %>%
     sample_id,
     Kids_First_Participant_ID,
     Kids_First_Biospecimen_ID
-  )
+  ) %>%
+  write_tsv(file.path(results_dir, "chordoma_biospecimens.tsv"))
 
 #### Filter expression data ----------------------------------------------------
 # Read in the stranded expression data file
@@ -67,7 +69,7 @@ expression_data <- expression_data %>%
     colnames(expression_data)
   )) %>%
   readr::write_rds(file.path(
-    results_dir,
+    scratch_dir,
     "chordoma-only-gene-expression-rsem-tpm-collapsed.rds"
   ))
 
@@ -77,7 +79,7 @@ expression_data <- expression_data %>%
 cn_metadata <- data.table::fread(file.path(
   root_dir,
   "data",
-  "consensus_wgs_plus_cnvkit_wxs_autosomes.tsv.gz"
+  "consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz"
 )) %>%
   dplyr::left_join(chordoma_metadata,
     by = c("biospecimen_id" = "Kids_First_Biospecimen_ID")

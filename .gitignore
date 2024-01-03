@@ -21,3 +21,8 @@ open_pbta_envs.txt
 
 # Everything in scratch
 .scratch/
+
+# Expression files in subset directories
+analyses/molecular-subtyping*/*subset/*rsem-tpm*
+
+
