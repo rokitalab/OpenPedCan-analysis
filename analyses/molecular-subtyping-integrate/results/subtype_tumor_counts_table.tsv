@@ -25,8 +25,9 @@ Diffuse intrinsic pontine glioma	HGG, To be classified	28
 Diffuse leptomeningeal glioneuronal tumor	GNT, KIAA1549-BRAF	4
 Diffuse leptomeningeal glioneuronal tumor	GNT, MAPK	3
 Diffuse leptomeningeal glioneuronal tumor	GNT, To be classified	2
-Diffuse midline glioma	DMG, H3 K28	332
+Diffuse midline glioma	DMG, H3 K28	352
 Diffuse midline glioma	DMG, H3 K28, TP53	477
+Dysembryoplastic neuroepithelial tumor	HGG, To be classified	1
 Embryonal tumor with multilayer rosettes	ETMR, C19MC-altered	12
 Embryonal tumor with multilayer rosettes	ETMR, NOS	22
 Ependymoma	EPN, MPE	41
@@ -76,11 +77,11 @@ Glial-neuronal tumor NOS	GNT, To be classified	23
 Glial-neuronal tumor NOS	GNT, other MAPK	14
 Glial-neuronal tumor NOS	GNT, other MAPK, CDKN2A/B	3
 Glial-neuronal tumor NOS	GNT, wildtype	20
-High-grade glioma	HGG, H3 wildtype	499
-High-grade glioma	HGG, H3 wildtype, TP53	272
+High-grade glioma	HGG, H3 wildtype	469
+High-grade glioma	HGG, H3 wildtype, TP53	268
 High-grade glioma	HGG, IDH	4
 High-grade glioma	HGG, IDH, TP53	57
-High-grade glioma	HGG, To be classified	169
+High-grade glioma	HGG, To be classified	167
 High-grade glioma	HGG, To be classified, TP53	1
 Infant-type hemispheric glioma	IHG, ALK-altered	5
 Infant-type hemispheric glioma	IHG, NTRK-altered	25
@@ -88,6 +89,7 @@ Infant-type hemispheric glioma	IHG, NTRK-altered, TP53	5
 Infant-type hemispheric glioma	IHG, ROS1-altered	15
 Infant-type hemispheric glioma	IHG, ROS1-altered, TP53	3
 Infant-type hemispheric glioma	IHG, To be classified	2
+Langerhans Cell histiocytosis	HGG, To be classified	1
 Low-grade glioma	LGG, BRAF V600E	138
 Low-grade glioma	LGG, BRAF V600E, CDKN2A/B	33
 Low-grade glioma	LGG, BRAF V600E, other MAPK	8
@@ -142,8 +144,8 @@ Pineoblastoma	PB, Group 1	21
 Pineoblastoma	PB, Group 2	9
 Pineoblastoma	PB, MYC/FOXR2	10
 Pineoblastoma	PB, To be classified	27
-Pleomorphic xanthoastrocytoma	HGG, PXA	13
-Pleomorphic xanthoastrocytoma	LGG, BRAF V600E	3
+Pleomorphic xanthoastrocytoma	HGG, PXA	37
+Pleomorphic xanthoastrocytoma	HGG, PXA, TP53	4
 Pleomorphic xanthoastrocytoma	LGG, To be classified	9
 Rosette-forming glioneuronal tumor	GNT, FGFR	5
 Rosette-forming glioneuronal tumor	GNT, other MAPK, FGFR	3
