@@ -55,8 +55,6 @@ And the notes:
 >  4. Pathology confirmed this HGG BRAF V600E mutant tumor, [`BS_H1XPVS9A`](https://cbethell.github.io/open-pbta-output/09-HGG-with-braf-clustering.nb.html#identify_sample_that_clusters_with_lgat), to be a LGAT (PXA). I updated `molecular_subtype` here based on what it would look like, but this should come through via the LGAT [subtyping](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/631) ticket. How should we add this info?
 > 5. Per [this issue](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/905), we are updating BS_YB99Q6TN (WGS) and BS_5965SFPZ (which is the matched RNAseq sample) belonging to sample_id== "7316-2557" as H3 K28M as per manual review of the pathology report, which lists the integrated diagnosis for this tumor as "DIFFUSE MIDLINE GLIOMA, H3-K27M MUTANT". The K28M mutation is also found in Mutect2 calls.
 
-Update for v13: We also incorporate pathologist feedback for HOPE cohort. The information can be found in this [file](./input/non-hgg_path_review.xlsx)
-
 ## Set up
 
 ```{r}
@@ -84,9 +82,7 @@ library(tidyverse)
 ```{r}
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
 data_dir <- file.path(root_dir, "data")
-analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-pathology")
-results_dir <- file.path(analysis_dir, "results")
-input_dir <- file.path(analysis_dir, "input")
+results_dir <- "results"
 ```
 
 #### Input
@@ -110,7 +106,6 @@ fusions_file <- file.path(root_dir,
   "fusion_filtering",
   "results",
   "fusion-putative-oncogenic.tsv")
-HOPE_file <- file.path(analysis_dir, "input", "non-hgg_path_review.xlsx")
 ```
 
 #### Output
@@ -126,7 +121,6 @@ output_file <- file.path(results_dir,
 histologies_df <- read_tsv(histologies_file, guess_max = 100000)
 compiled_df <- read_tsv(compiled_results_file, guess_max = 100000)
 fusions_df <- read_tsv(fusions_file, guess_max = 100000)
-HOPE_df <- readxl::read_xlsx(HOPE_file)
 ```
 
 ## Revise subtyping calls based on pathology feedback
@@ -140,7 +134,10 @@ In low-dimensional transcriptomic space (e.g., UMAP, t-SNE), `BS_H1XPVS9A` clust
 
 The relevant note from above:
 
->  4. Pathology confirmed this HGG BRAF V600E mutant tumor, `BS_H1XPVS9A` to be a malignant PXA. 
+>  4. Pathology confirmed this HGG BRAF V600E mutant tumor, `BS_H1XPVS9A`
+to be a malignant PXA. @kgaonkar6 updated `molecular_subtype` here based on what it would look like, but this should come through via the LGAT [subtyping](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/631) ticket. 
+
+The steps for LGAT subtyping are to classify LGG samples on the basis of the presence/absence of _BRAF_ fusions and BRAF V600E mutations.
 
 ```{r}
 compiled_df %>%
@@ -152,11 +149,12 @@ compiled_df %>%
 We know from `molecular-subtyping-HGG` that a BRAF V600E mutation is present.
 Now we have to check for the presence of _BRAF_ fusions.
 
+
 ```{r}
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-1106" ~ "Pleomorphic xanthoastrocytoma, BRAF V600E",
+      sample_id == "7316-1106" ~ "Pleomorphic xanthoastrocytoma",
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
@@ -243,7 +241,7 @@ compiled_df %>%
 compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-1102" ~ "Diffuse midline glioma, H3 K28-mutant",
+      sample_id == "7316-1102" ~ "Diffuse midline glioma, H3 K28-altered",
       TRUE ~ integrated_diagnosis
     ),
     short_histology = case_when(
@@ -480,8 +478,9 @@ compiled_df <- compiled_df %>%
       sample_id %in% chdm_poorly_diff_sample_ids ~ "CHDM, poorly differentiated",
       sample_id %in% chdm_conventional_sample_ids ~ "CHDM, conventional",
       TRUE ~ molecular_subtype),
-   harmonized_diagnosis = case_when(str_detect(molecular_subtype, "CHDM") ~
-                                    str_replace(molecular_subtype, "CHDM, ", "Chordoma, "), 
+   harmonized_diagnosis = case_when(molecular_subtype == "CHDM, poorly differentiated" ~ "Chordoma, poorly differentiated",
+                                    molecular_subtype == "CHDM, conventional" ~ "Chordoma, conventional",
+                                    molecular_subtype == "CHDM, To be classified" ~ NA_character_,
                                     TRUE ~ harmonized_diagnosis),
     Notes = case_when(sample_id %in% c(chdm_conventional_sample_ids,
                                         chdm_poorly_diff_sample_ids) ~ "Updated via pathology review",
@@ -555,54 +554,108 @@ compiled_df <- compiled_df %>%
   distinct()
 ```
 
-## for HOPE cohort
-### 7316-1723
+### PT `PT_01MZ62KG`
+This patient is being subtyped as CNS embryonal NOS and has pathology free text diagnosis as pineoblastoma, but subtyped as NOS there as well. We will update to ETMR, C19MC-altered as previous.
 ```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_VZEREHVW")
 
-compiled_df <- compiled_df %>% 
+compiled_df <- compiled_df %>%
   mutate(
     integrated_diagnosis = case_when(
-      sample_id == "7316-1723" ~ "CIC-rearranged sarcoma",
-      sample_id == "7316-1746" ~ "Primary intracranial sarcoma, DICER1-mutant",
-      sample_id == "7316-194" ~ "Rosette-forming glioneuronal tumor",
-      sample_id == "7316-2151" ~ "Neuroepithelial tumor with PATZ1 fusion",
-      sample_id == "7316-2857" ~ "CNS tumor with BCOR internal tandem duplication",
-      sample_id == "7316-4844" ~ "Infantile hemispheric glioma, NTRK-altered", 
+      sample_id == "7316-447" ~ "Embryonal tumor with multilayer rosettes, C19MC-altered",
       TRUE ~ integrated_diagnosis
     ),
-    short_histology = case_when(
-      sample_id == "7316-1723" ~ "SARC",
-      sample_id == "7316-1746" ~ "SARC",
-      sample_id == "7316-194" ~ "LGAT",
-      sample_id == "7316-2151" ~ "HGAT",
-      sample_id == "7316-2857" ~ "Embryonal tumor",
-      sample_id == "7316-4844" ~ "HGAT", 
+      short_histology = case_when(
+      sample_id == "7316-447" ~ "ETMR",
       TRUE ~ short_histology
     ),
     broad_histology = case_when(
-      sample_id == "7316-1723" ~ "Mesenchymal non-meningothelial tumor",
-      sample_id == "7316-1746" ~ "Mesenchymal non-meningothelial tumor",
-      sample_id == "7316-194" ~ "Neuronal and mixed neuronal-glial tumor",
-      sample_id == "7316-2151" ~ "Diffuse astrocytic and oligodendroglial tumor",
-      sample_id == "7316-2857" ~ "Embryonal tumor",
-      sample_id == "7316-4844" ~ "Diffuse astrocytic and oligodendroglial tumor", 
+      sample_id == "7316-447" ~ "Embryonal tumor",
       TRUE ~ broad_histology
     ),
     molecular_subtype = case_when(
-      sample_id == "7316-1723" ~ "SARC, CIC",
-      sample_id == "7316-1746" ~ "SARC, DICER",
-      sample_id == "7316-194" ~ "GNT, FGFR",
-      sample_id == "7316-2151" ~ "NET, PATZ",
-      sample_id == "7316-2857" ~ "CNS, BCOR ITD",
-      sample_id == "7316-4844" ~ "IHG, NTRK-altered", 
+      sample_id == "7316-447" ~ "ETMR, C19MC-altered",
       TRUE ~ molecular_subtype
     ),
-    Notes = case_when(sample_id %in% HOPE_df$sample_id ~ "Updated by methylation, genomic, and pathology review", 
-                      TRUE ~ Notes)
+    Notes = case_when(
+      sample_id == "7316-447" ~ "Updated by pathology review",
+      TRUE ~ Notes
+    )
   ) %>% 
   distinct()
+```
 
+### PT `PT_FMS4AXKD`
+This patient 7316-9049 has K28-altered due to EGFR mutation, via free text, so we will add here
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_FMS4AXKD")
 
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      match_id == "PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor" ~ "Diffuse midline glioma, H3 K28-altered (EGFR mutant)",
+      TRUE ~ integrated_diagnosis
+    ),
+    molecular_subtype = case_when(
+      match_id == "PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor" ~ "DMG, H3 K28",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      match_id == "PT_FMS4AXKD_7316-9049_Solid Tissue_Initial CNS Tumor" ~ "Updated by pathology free text review",
+      TRUE ~ Notes
+    )
+  ) %>% 
+  distinct()
+```
+
+### PT `PT_E9J8FNW5`
+This patient BS_Q2R56X78 has EGFR p.Gly598Val,TERT promoter, and H3C3 K28M (6:26045493) ~ 50% - not sure why this is not being called, need to investigate.
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_E9J8FNW5")
+
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      match_id == "PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence" ~ "Diffuse midline glioma, H3 K28-altered",
+      TRUE ~ integrated_diagnosis
+    ),
+    molecular_subtype = case_when(
+      match_id == "PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence" ~ "DMG, H3 K28",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      match_id == "PT_E9J8FNW5_C4116318-Tumor_Solid Tissue_Recurrence" ~ "Updated by pathology free text review",
+      TRUE ~ Notes
+    )
+  ) %>% 
+  distinct()
+```
+
+### PT `PT_FS1GKF9Y`
+This patient BS_QV60J6XZ has A LOT of frameshifts with H3-3A 3' FLANK chr1:g.226072141del, TMB 143 (ultra-hypermutant), two EGFR dels p.Q976Sfs*26 and p.L405Cfs*2 - 2/19 reads - why wasn't this called? need to investigate
+```{r}
+compiled_df %>%
+  filter(Kids_First_Participant_ID == "PT_FS1GKF9Y")
+
+compiled_df <- compiled_df %>%
+  mutate(
+    integrated_diagnosis = case_when(
+      match_id == "PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence" ~ "Diffuse midline glioma, H3 K28-altered",
+      TRUE ~ integrated_diagnosis
+    ),
+    molecular_subtype = case_when(
+      match_id == "PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence" ~ "DMG, H3 K28, TP53",
+      TRUE ~ molecular_subtype
+    ),
+    Notes = case_when(
+      match_id == "PT_FS1GKF9Y_C4115949-Tumor_Solid Tissue_Recurrence" ~ "Updated by pathology free text review",
+      TRUE ~ Notes
+    )
+  ) %>% 
+  distinct()
 ```
 
 ###Check list of subtypes look as expected at this point in time
@@ -623,10 +676,10 @@ compiled_df <- compiled_df %>%
   select(-molecular_subtype_methyl) %>%
   distinct() %>%
   left_join(compiled_df %>%
-              select(sample_id, molecular_subtype_methyl) %>%
+              select(match_id, molecular_subtype_methyl) %>%
 	      drop_na() %>%
 	      distinct(),
-            by = "sample_id")	      
+            by = "match_id")	      
 ```
 
 ### Write revised table to file

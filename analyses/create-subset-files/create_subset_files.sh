@@ -8,7 +8,7 @@ set -o pipefail
 
 # Set defaults for release and biospecimen file name
 BIOSPECIMEN_FILE=${BIOSPECIMEN_FILE:-biospecimen_ids_for_subset.RDS}
-RELEASE=${RELEASE:-v12}
+RELEASE=${RELEASE:-v13}
 NUM_MATCHED=${NUM_MATCHED:-15}
 
 # This option controls whether or not the two larger MAF files are skipped as
@@ -41,7 +41,6 @@ fi
 # download Illumina methylation annotations file if does not exist in data
 # from the data release s3 bucket
 URL="https://d3b-openaccess-us-east-1-prd-pbta.s3.amazonaws.com/open-targets"
-RELEASE="v12"
 PROBES="infinium.gencode.v39.probe.annotations.tsv.gz"
 if [ -f "${DATA_DIRECTORY}/${PROBES}" ]; then
     echo "${PROBES} exists, skip downloading"
@@ -100,6 +99,15 @@ cp $FULL_DIRECTORY/cnv-consensus-gistic.zip $SUBSET_DIRECTORY
 
 # all bed files
 cp $FULL_DIRECTORY/*.bed $SUBSET_DIRECTORY
+
+# DGD fusion file
+cp $FULL_DIRECTORY/fusion-dgd.tsv.gz $SUBSET_DIRECTORY
+
+# All proteomic files
+cp $FULL_DIRECTORY/*protein* $SUBSET_DIRECTORY
+
+# Full tumor only MAF (for now, it is small)
+cp $FULL_DIRECTORY/snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz $SUBSET_DIRECTORY
 
 # if the md5sum.txt file already exists, get rid of it
 cd $SUBSET_DIRECTORY
