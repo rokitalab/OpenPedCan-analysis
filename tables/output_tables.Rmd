@@ -1,13 +1,13 @@
 ---
 title: "Tables output for manuscript"
-author: "Aditya Lahiri"
-date: "2021-2022"
+author: "Aditya Lahiri, Jo Lynne Rokita"
+date: "2021-2024"
 output: 
   html_notebook:
     toc: TRUE
     toc_float: TRUE
 params:
-  release: v12
+  release: v13
 ---
 
 Code adapted from: https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/tables/output_tables.Rmd
@@ -17,7 +17,7 @@ library(tidyverse)
 library(openxlsx)
 ```
 
-## Output Tables for OpenPedCan Manuscripts
+## Histologies File README and excel version
 
 This Rmarkdown generates tables used in the manuscript, including both main text and supplementary material. 
 
@@ -46,7 +46,7 @@ histology_file <- file.path(data_dir, "histologies.tsv")
 
 # Define output files and sheet names, when appropriate
 ```{r}
-table_s1_file <- file.path(results_dir, "TableS1-histologies.xlsx")
+table_s1_file <- file.path(results_dir, "histologies.xlsx")
 ```
 
 # Read files
@@ -81,6 +81,7 @@ readme <- tribble(
 "dkfz_v12_methylation_subclass_score","v12 DKFZ methylation-based CNS tumor subclass","numeric",
 "dkfz_v12_methylation_mgmt_status","v12 DKFZ MGMT promoter methylation status",paste(unique(histology_df$dkfz_v11_methylation_subclass), collapse = "; "),
 "dkfz_v12_methylation_mgmt_estimated","v12 DKFZ MGMT promoter methylation fraction","numeric",
+"EFS_event_type", "Event considered when calculating EFS", paste(unique(histology_df$EFS_event_type), collapse = "; "),
 "ethnicity","Patient reported ethnicity",paste(unique(histology_df$ethnicity), collapse = "; "),
 "experimental_strategy","Sequencing strategy",paste(unique(histology_df$experimental_strategy), collapse = "; "),
 # leaving this non-programmatic because of the duplicates that would come up (eg two selections in one patient, needing data cleanup)
@@ -89,9 +90,10 @@ readme <- tribble(
 "gtex_group","Tissue Type",paste(unique(histology_df$gtex_group), collapse = "; "),
 "gtex_subgroup","Tissue Subtype",paste(unique(histology_df$gtex_subgroup), collapse = "; "),
 "harmonized_diagnosis","`integrated_diagnosis` if exists or updated and harmonized diagnosis using pathology_free_text_diagnosis information","text",
-"integrated_diagnosis","2016 WHO diagnosis integrated from pathology diagnosis and molecular subtyping","text",
-"Kids_First_Biospecimen_ID","KidsFirst biospecimen identifier","BS_########",
-"Kids_First_Participant_ID","KidsFirst patient identifier","PT_########",
+"integrated_diagnosis","WHO 2021 diagnosis integrated from pathology diagnosis and molecular subtyping","text",
+"Kids_First_Biospecimen_ID","Biospecimen identifier, Kids First or other cohort","BS_########",
+"Kids_First_Participant_ID","Patient identifier, Kids First or other cohort","PT_########",
+"match_id", "ID used to match experimental strategies within an event per sample composition", "Concatenation of sample_id, tumor descriptor, composition, and cell line composition and passage if applicable",
 "molecular_subtype","Molecular subtype defined by WHO 2021 guidelines","text",
 "molecular_subtype_methyl","DKFZ v12 methylation class aligned to WHO 2021 subtypes","text",
 "normal_fraction","Theta2 normal DNA fraction estimate","numeric",
@@ -105,10 +107,11 @@ readme <- tribble(
 "race","Patient reported race",paste(unique(histology_df$race), collapse = "; "),
 "reported_gender","Patient reported gender",paste(unique(histology_df$reported_gender), collapse = "; "),
 "RNA_library","Type of RNA-Sequencing library preparation",paste(unique(histology_df$RNA_library), collapse = "; "),
-"sample_id","External biospecimen identifier","alphanumeric",
+"sample_id","Event id","alphanumeric",
 "sample_type","Broad sample type",paste(unique(histology_df$sample_type), collapse = "; "),
 "seq_center","Sequencing center",paste(unique(histology_df$seq_center), collapse = "; "),
 "short_histology","Abbreviated `cancer_group` or `broad_histology` for plotting purposes",paste(unique(histology_df$short_histology), collapse = "; "),
+"sub_cohort", "sub-cohort", paste(unique(histology_df$sub_cohort), collapse = "; "),
 "tumor_descriptor","Phase of therapy from which tumor was derived",paste(unique(histology_df$tumor_descriptor), collapse = "; "),
 "tumor_fraction","Theta2 tumor DNA fraction estimate","numeric",
 "tumor_fraction_LUMP","LUMP tumor DNA fraction estimate from methylation","numeric",
