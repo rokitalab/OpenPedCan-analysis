@@ -14,7 +14,10 @@ Fusion	#7B68EE
 Multi_Hit	#CCCCCC
 Hom_Deletion	#313695
 Hem_Deletion	#abd9e9
-Del	#0072B2
-Amp	#D55E00
-High_Level_Gain	#FF0000
+Del	#386db0
+Amp	#c51b7d
 Multi_Hit_Fusion	#CD96CD
+Intron	#5ea4fe
+5'Flank	#7CCBAC
+3'Flank	#FD8344
+Complex_Event	#571242
