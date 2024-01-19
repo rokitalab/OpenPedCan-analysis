@@ -3,6 +3,9 @@ cohort:
   'GTEx': '#7CAE00'
   'PBTA': '#C77CFF'
   'TARGET': '#00BFC4'
+  'DGD': 'lightblue2'
+  'Maris': 'orange2'
+  'PPTC': 'hotpink2'
 
 sample_type:
    'Normal' : '#7CAE00'
