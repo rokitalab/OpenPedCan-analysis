@@ -25,7 +25,7 @@ Diffuse intrinsic pontine glioma	HGG, To be classified	18
 Diffuse leptomeningeal glioneuronal tumor	GNT, KIAA1549-BRAF	4
 Diffuse leptomeningeal glioneuronal tumor	GNT, MAPK	3
 Diffuse leptomeningeal glioneuronal tumor	GNT, To be classified	2
-Diffuse midline glioma	DMG, H3 K28	381
+Diffuse midline glioma	DMG, H3 K28	383
 Diffuse midline glioma	DMG, H3 K28, TP53	502
 Embryonal tumor with multilayer rosettes	ETMR, C19MC-altered	12
 Embryonal tumor with multilayer rosettes	ETMR, NOS	22
@@ -76,11 +76,11 @@ Glial-neuronal tumor NOS	GNT, To be classified	18
 Glial-neuronal tumor NOS	GNT, other MAPK	13
 Glial-neuronal tumor NOS	GNT, other MAPK, CDKN2A/B	4
 Glial-neuronal tumor NOS	GNT, wildtype	23
-High-grade glioma	HGG, H3 wildtype	467
+High-grade glioma	HGG, H3 wildtype	464
 High-grade glioma	HGG, H3 wildtype, TP53	299
 High-grade glioma	HGG, IDH	8
 High-grade glioma	HGG, IDH, TP53	59
-High-grade glioma	HGG, To be classified	161
+High-grade glioma	HGG, To be classified	159
 High-grade glioma	HGG, To be classified, TP53	1
 Infant-type hemispheric glioma	IHG, ALK-altered	6
 Infant-type hemispheric glioma	IHG, NTRK-altered	26
