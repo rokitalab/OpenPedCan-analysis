@@ -153,7 +153,7 @@ PT_JK8TXGM0	BS_7K5NFB1Y	DGD	Osteosarcoma	Targeted Sequencing	Recurrence
 PT_5CYJ3NZ9	BS_7M145V8M	PBTA	CNS Embryonal tumor	WGS	Progressive
 PT_1H2REHT2	BS_7M7JNG00	PBTA	Low-grade glioma	WGS	Progressive
 PT_DNB6V0TP	BS_7NFFJYSP	PBTA	High-grade glioma	WGS	Recurrence
-PT_KBDP8ZCR	BS_7P378T0E	PBTA	High-grade glioma	WGS	Deceased
+PT_KBDP8ZCR	BS_7P378T0E	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_N3HVMV06	BS_7Q2443TQ	PBTA	Low-grade glioma	WGS	Recurrence
 PT_5Y0CE4WK	BS_7SV64RVZ	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_YJGJS19Q	BS_7YZJJ6Y3	PBTA	Oligodendroglioma	WGS	Progressive
@@ -312,7 +312,7 @@ PT_5NS35B66	BS_F0JN3TFM	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_K8ZV7APT	BS_F1DWCBAB	PBTA	Neurofibroma/Plexiform	WGS	Progressive
 PT_23NZGSRJ	BS_F2MTFYFR	PBTA	Medulloblastoma	WGS	Deceased
 PT_FFCD5XD7	BS_F5Q4C4NG	PBTA	Medulloblastoma	WGS	Recurrence
-PT_RPC00TAJ	BS_F7SMM59X	PBTA	High-grade glioma	WGS	Progressive
+PT_RPC00TAJ	BS_F7SMM59X	PBTA	Diffuse midline glioma	WGS	Progressive
 PT_3PVE9CBR	BS_FAZBX8AS	PBTA	High-grade glioma	WGS	Recurrence
 PT_AX5NM47X	BS_FBZBS9JR	PBTA	Low-grade glioma	WGS	Progressive
 PT_BNVSS3BS	BS_FCSVBGS2	PBTA	NA	WGS	Progressive
@@ -335,7 +335,7 @@ PT_6Q0NPVP3	BS_G9YT70JB	PBTA	Ganglioglioma	WGS	Recurrence
 PT_RWZMQ4KH	BS_GBCW6RC4	DGD	Sarcoma	Targeted Sequencing	Progressive
 PT_EHY1SB4R	BS_GG7F58ZC	PBTA	Pilocytic astrocytoma	WGS	Progressive
 PT_3A2Q62RD	BS_GG98K7W0	PBTA	Ependymoma	WGS	Progressive
-PT_JC3FDHBS	BS_GG9T6CXD	PBTA	High-grade glioma	WGS	Deceased
+PT_JC3FDHBS	BS_GG9T6CXD	PBTA	Pleomorphic xanthoastrocytoma	WGS	Deceased
 PT_19GCSK2S	BS_GH6PH611	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_23JJKZPS	BS_GKSRM687	PBTA	Diffuse midline glioma	WGS	Deceased
 PT_NK8A49X5	BS_GKXD33YH	PBTA	Diffuse midline glioma	WXS	Progressive
@@ -640,7 +640,7 @@ PT_9CGBDPVV	BS_ZF7VTJKN	PBTA	Low-grade glioma	WGS	Progressive
 PT_0DWRY9ZX	BS_ZGSTZCYN	PBTA	Medulloblastoma	WGS	Recurrence
 PT_TGTJECMR	BS_ZJSMC22A	PBTA	Teratoma	WGS	Progressive
 PT_X5AEX1N4	BS_ZMP8QPX4	PBTA	Diffuse midline glioma	WGS	Deceased
-PT_P1F0AHMT	BS_ZN35MFSR	PBTA	High-grade glioma	WGS	Progressive
+PT_P1F0AHMT	BS_ZN35MFSR	PBTA	Pleomorphic xanthoastrocytoma	WGS	Progressive
 PT_BHJT2M99	BS_ZQ6MHSTA	PBTA	Low-grade glioma	WGS	Progressive
 PT_9S6WMQ92	BS_ZR75EKKX	PBTA	Medulloblastoma	WGS	Progressive
 PT_0QQ3S7RJ	BS_ZSWZN5MN	DGD	Meningioma	Targeted Sequencing	Progressive

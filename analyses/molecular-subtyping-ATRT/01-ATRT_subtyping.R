@@ -58,7 +58,7 @@ methyl_map <- atrt_df_methyl %>%
   mutate(molecular_subtype_methyl = molecular_subtype)
 
 # any dups? no
-length(unique(methyl_map$id)) == length(methyl_map$id)
+length(unique(methyl_map$match_id)) == length(methyl_map$match_id)
 
 
 # for the samples, whose cns_methlation_subclass_score >= 0.8 and dkfz_v12_methylation_subclass is one of the three types in ATRT_subtype_list, their molecular subtype are same as dkfz_v12_methylation_subclass

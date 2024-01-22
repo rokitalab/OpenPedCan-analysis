@@ -1764,9 +1764,25 @@ of <em>SMARCB1</em>.</p>
 <h2>Set up</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkocmVhZHIpXG5saWJyYXJ5KGdncGxvdDIpXG5gYGAifQ== -->
-<pre class="r"><code>library(dplyr)
-library(readr)
+<!-- rnb-source-begin eyJkYXRhIjoibGlicmFyeShkcGx5cikifQ== -->
+<pre class="r"><code>library(dplyr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTogJ2RwbHlyJ1xuIn0= -->
+<pre><code>
+Attaching package: &#39;dplyr&#39;</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSAncGFja2FnZTpzdGF0cyc6XG5cbiAgICBmaWx0ZXIsIGxhZ1xuIn0= -->
+<pre><code>The following objects are masked from &#39;package:stats&#39;:
+
+    filter, lag</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSAncGFja2FnZTpiYXNlJzpcblxuICAgIGludGVyc2VjdCwgc2V0ZGlmZiwgc2V0ZXF1YWwsIHVuaW9uXG4ifQ== -->
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-source-begin eyJkYXRhIjpbImxpYnJhcnkocmVhZHIpIiwibGlicmFyeShnZ3Bsb3QyKSJdfQ== -->
+<pre class="r"><code>library(readr)
 library(ggplot2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -1775,7 +1791,7 @@ library(ggplot2)</code></pre>
 <h3>Read in data</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGaWxlIHBhdGggdG8gc3Vic2V0dGVkIGZpbGVzIGRpcmVjdG9yeVxucm9vdF9kaXIgPC0gcnByb2pyb290OjpmaW5kX3Jvb3QocnByb2pyb290OjpoYXNfZGlyKFwiLmdpdFwiKSlcbmRhdGFfZGlyIDwtIGZpbGUucGF0aChyb290X2RpciwgXCJkYXRhXCIpXG5zY3JhdGNoX2RpciA8LSAgZmlsZS5wYXRoKHJvb3RfZGlyLCBcInNjcmF0Y2hcIilcbmFuYWx5c2lzX2RpciA8LSBmaWxlLnBhdGgocm9vdF9kaXIsIFwiYW5hbHlzZXNcIiwgXCJtb2xlY3VsYXItc3VidHlwaW5nLWNob3Jkb21hXCIpXG5pbnB1dF9kaXIgPC0gZmlsZS5wYXRoKGFuYWx5c2lzX2RpciwgXCJjaG9yZG9tYS1zdWJzZXRcIilcbnJlc3VsdHNfZGlyIDwtIGZpbGUucGF0aChhbmFseXNpc19kaXIsIFwicmVzdWx0c1wiKVxuaWYgKCFkaXIuZXhpc3RzKHJlc3VsdHNfZGlyKSkge1xuICBkaXIuY3JlYXRlKHJlc3VsdHNfZGlyKVxufVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgRmlsZSBwYXRoIHRvIHN1YnNldHRlZCBmaWxlcyBkaXJlY3RvcnkiLCJyb290X2RpciA8LSBycHJvanJvb3Q6OmZpbmRfcm9vdChycHJvanJvb3Q6Omhhc19kaXIoXCIuZ2l0XCIpKSIsImRhdGFfZGlyIDwtIGZpbGUucGF0aChyb290X2RpciwgXCJkYXRhXCIpIiwic2NyYXRjaF9kaXIgPC0gIGZpbGUucGF0aChyb290X2RpciwgXCJzY3JhdGNoXCIpIiwiYW5hbHlzaXNfZGlyIDwtIGZpbGUucGF0aChyb290X2RpciwgXCJhbmFseXNlc1wiLCBcIm1vbGVjdWxhci1zdWJ0eXBpbmctY2hvcmRvbWFcIikiLCJpbnB1dF9kaXIgPC0gZmlsZS5wYXRoKGFuYWx5c2lzX2RpciwgXCJjaG9yZG9tYS1zdWJzZXRcIikiLCJyZXN1bHRzX2RpciA8LSBmaWxlLnBhdGgoYW5hbHlzaXNfZGlyLCBcInJlc3VsdHNcIikiLCJpZiAoIWRpci5leGlzdHMocmVzdWx0c19kaXIpKSB7XG4gIGRpci5jcmVhdGUocmVzdWx0c19kaXIpXG59Il19 -->
 <pre class="r"><code># File path to subsetted files directory
 root_dir &lt;- rprojroot::find_root(rprojroot::has_dir(&quot;.git&quot;))
 data_dir &lt;- file.path(root_dir, &quot;data&quot;)
@@ -1792,11 +1808,23 @@ if (!dir.exists(results_dir)) {
 <p>Set up metadata</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBSZWFkIGluIG5vbi1zdWJzZXR0ZWQgbWV0YWRhdGFcbmhpc3RvbG9naWVzX2RmIDwtIHJlYWRyOjpyZWFkX3RzdihmaWxlLnBhdGgoZGF0YV9kaXIsIFwiaGlzdG9sb2dpZXMtYmFzZS50c3ZcIiksIGd1ZXNzX21heCA9IDEwMDAwMClcblxuIyBSZWFkIHBhdGhvbG9neSBkaWFnbm9zaXMganNvbiBmaWxlXG5wYXRoX2R4X2xpc3QgPC0ganNvbmxpdGU6OmZyb21KU09OKFxuICBmaWxlLnBhdGgoaW5wdXRfZGlyLFxuICAgICAgICAgICAgXCJjaG9yZG9tYV9zdWJ0eXBpbmdfcGF0aF9keF9zdHJpbmdzLmpzb25cIilcbilcblxuIyBTdWJzZXQgbWV0YWRhdGFcbnN1YnNldF9tZXRhZGF0YSA8LSBoaXN0b2xvZ2llc19kZiAlPiVcbiAgZHBseXI6OmZpbHRlcihwYXRob2xvZ3lfZGlhZ25vc2lzID09IHBhdGhfZHhfbGlzdCRleGFjdF9wYXRoX2R4KSAlPiVcbiAgc2VsZWN0KEtpZHNfRmlyc3RfUGFydGljaXBhbnRfSUQsIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIG1hdGNoX2lkLCBzYW1wbGVfaWQsIGV4cGVyaW1lbnRhbF9zdHJhdGVneSwgdHVtb3JfcGxvaWR5KSAlPiVcbiAgZHBseXI6OnJlbmFtZShwbG9pZHk9dHVtb3JfcGxvaWR5KVxuXG4jIGNvbGxlY3QgbWV0aHlsIGFuZCBUYXJnZXRlZCBTZXEgc2FtcGxlcyB0byBhZGQgYmFjayBsYXRlciAodGhlc2UgZG9uJ3QgaGF2ZSBDTiBvciBSTkEgZXhwcmVzc2lvbilcbm1ldGh5bF9wYW5lbCA8LSBzdWJzZXRfbWV0YWRhdGEgJT4lXG4gIGZpbHRlcihleHBlcmltZW50YWxfc3RyYXRlZ3kgJWluJSBjKFwiTWV0aHlsYXRpb25cIiwgXCJUYXJnZXRlZCBTZXF1ZW5jaW5nXCIpKSAlPiVcbiAgc2VsZWN0KEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIG1hdGNoX2lkKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgUmVhZCBpbiBub24tc3Vic2V0dGVkIG1ldGFkYXRhIiwiaGlzdG9sb2dpZXNfZGYgPC0gcmVhZHI6OnJlYWRfdHN2KGZpbGUucGF0aChkYXRhX2RpciwgXCJoaXN0b2xvZ2llcy1iYXNlLnRzdlwiKSwgZ3Vlc3NfbWF4ID0gMTAwMDAwKSJdfQ== -->
 <pre class="r"><code># Read in non-subsetted metadata
-histologies_df &lt;- readr::read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quot;), guess_max = 100000)
+histologies_df &lt;- readr::read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quot;), guess_max = 100000)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiUm93czogNDc2MzMgQ29sdW1uczogNjRcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCJcXHRcIlxuY2hyICg0MSk6IEtpZHNfRmlyc3RfUGFydGljaXBhbnRfSUQsIEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIHNhbXBsZV9pZCwgYS4uLlxuZGJsICgyMSk6IGNlbGxfbGluZV9wYXNzYWdlLCBPU19kYXlzLCBFRlNfZGF5cywgYWdlX2F0X2RpYWdub3Npc19kYXlzLCBhZ2VfYS4uLlxubGdsICAoMik6IG1vbGVjdWxhcl9zdWJ0eXBlLCBpbnRlZ3JhdGVkX2RpYWdub3Npc1xuXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>Rows: 47633 Columns: 64
+── Column specification ────────────────────────────────────────────────────────────────
+Delimiter: &quot;\t&quot;
+chr (41): Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, a...
+dbl (21): cell_line_passage, OS_days, EFS_days, age_at_diagnosis_days, age_a...
+lgl  (2): molecular_subtype, integrated_diagnosis
 
-# Read pathology diagnosis json file
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgUmVhZCBwYXRob2xvZ3kgZGlhZ25vc2lzIGpzb24gZmlsZSIsInBhdGhfZHhfbGlzdCA8LSBqc29ubGl0ZTo6ZnJvbUpTT04oXG4gIGZpbGUucGF0aChpbnB1dF9kaXIsXG4gICAgICAgICAgICBcImNob3Jkb21hX3N1YnR5cGluZ19wYXRoX2R4X3N0cmluZ3MuanNvblwiKVxuKSIsIiIsIiMgU3Vic2V0IG1ldGFkYXRhIiwic3Vic2V0X21ldGFkYXRhIDwtIGhpc3RvbG9naWVzX2RmICU+JVxuICBkcGx5cjo6ZmlsdGVyKHBhdGhvbG9neV9kaWFnbm9zaXMgPT0gcGF0aF9keF9saXN0JGV4YWN0X3BhdGhfZHgpICU+JVxuICBzZWxlY3QoS2lkc19GaXJzdF9QYXJ0aWNpcGFudF9JRCwgS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCwgbWF0Y2hfaWQsIHNhbXBsZV9pZCwgZXhwZXJpbWVudGFsX3N0cmF0ZWd5LCB0dW1vcl9wbG9pZHkpICU+JVxuICBkcGx5cjo6cmVuYW1lKHBsb2lkeT10dW1vcl9wbG9pZHkpIiwiIiwiIyBjb2xsZWN0IG1ldGh5bCBhbmQgVGFyZ2V0ZWQgU2VxIHNhbXBsZXMgdG8gYWRkIGJhY2sgbGF0ZXIgKHRoZXNlIGRvbid0IGhhdmUgQ04gb3IgUk5BIGV4cHJlc3Npb24pIiwibWV0aHlsX3BhbmVsIDwtIHN1YnNldF9tZXRhZGF0YSAlPiVcbiAgZmlsdGVyKGV4cGVyaW1lbnRhbF9zdHJhdGVneSAlaW4lIGMoXCJNZXRoeWxhdGlvblwiLCBcIlRhcmdldGVkIFNlcXVlbmNpbmdcIikpICU+JVxuICBzZWxlY3QoS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCwgbWF0Y2hfaWQpIl19 -->
+<pre class="r"><code># Read pathology diagnosis json file
 path_dx_list &lt;- jsonlite::fromJSON(
   file.path(input_dir,
             &quot;chordoma_subtyping_path_dx_strings.json&quot;)
@@ -1817,7 +1845,7 @@ methyl_panel &lt;- subset_metadata %&gt;%
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic2V0X2ZvY2FsX2NuX2RmIDwtXG4gIGRhdGEudGFibGU6OmZyZWFkKGZpbGUucGF0aChpbnB1dF9kaXIsIFwiY2hvcmRvbWEtb25seV9jbl9hdXRvc29tZXMudHN2Lmd6XCIpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic3Vic2V0X2ZvY2FsX2NuX2RmIDwtXG4gIGRhdGEudGFibGU6OmZyZWFkKGZpbGUucGF0aChpbnB1dF9kaXIsIFwiY2hvcmRvbWEtb25seV9jbl9hdXRvc29tZXMudHN2Lmd6XCIpKSJ9 -->
 <pre class="r"><code>subset_focal_cn_df &lt;-
   data.table::fread(file.path(input_dir, &quot;chordoma-only_cn_autosomes.tsv.gz&quot;))</code></pre>
 <!-- rnb-source-end -->
@@ -1825,7 +1853,7 @@ methyl_panel &lt;- subset_metadata %&gt;%
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB3ZSBuZWVkIHRvIGluY2x1ZGUgdGhlIG1hdGNoX2lkIGZpZWxkIGZyb20gaGlzdG9sb2dpZXMtYmFzZS50c3YgaW4gdGhlIGZpbmFsXG4jIHRhYmxlIChmaWVsZCB3aWxsIGFsbG93ICN1cyB0byBtYXAgYmV0d2VlbiBSTkEtc2VxIChlLmcuLCBTTUFSQ0IxIGV4cHJlc3Npb25cbiMgdmFsdWVzKSBhbmQgV0dTIGRhdGEgKGUuZy4sIFNNQVJDQjEgZm9jYWwgY29weSBudW1iZXIgc3RhdHVzKSBmcm9tIHRoZSBzYW1lXG4jIGV2ZW50IGZvciBhIGdpdmVuIGluZGl2aWR1YWwpLiBUbyBnZXQgdGhlIFNNQVJDQjEgaml0dGVyIHBsb3QgaW4gdGhlIHBob3RvXG4jIGhlcmUgIzI1MCAoY29tbWVudCksIHlvdSB3aWxsIGZpcnN0IG5lZWQgdG8gcmVhZCBpbiB0aGUgY29sbGFwc2VkIGV4cHJlc3Npb25cbiMgZGF0YVxuc3Vic2V0X2V4cHJlc3Npb25fZGF0YSA8LVxuICByZWFkUkRTKGZpbGUucGF0aChcbiAgICBzY3JhdGNoX2RpcixcbiAgICBcImNob3Jkb21hLW9ubHktZ2VuZS1leHByZXNzaW9uLXJzZW0tdHBtLWNvbGxhcHNlZC5yZHNcIlxuICApKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgd2UgbmVlZCB0byBpbmNsdWRlIHRoZSBtYXRjaF9pZCBmaWVsZCBmcm9tIGhpc3RvbG9naWVzLWJhc2UudHN2IGluIHRoZSBmaW5hbCIsIiMgdGFibGUgKGZpZWxkIHdpbGwgYWxsb3cgI3VzIHRvIG1hcCBiZXR3ZWVuIFJOQS1zZXEgKGUuZy4sIFNNQVJDQjEgZXhwcmVzc2lvbiIsIiMgdmFsdWVzKSBhbmQgV0dTIGRhdGEgKGUuZy4sIFNNQVJDQjEgZm9jYWwgY29weSBudW1iZXIgc3RhdHVzKSBmcm9tIHRoZSBzYW1lIiwiIyBldmVudCBmb3IgYSBnaXZlbiBpbmRpdmlkdWFsKS4gVG8gZ2V0IHRoZSBTTUFSQ0IxIGppdHRlciBwbG90IGluIHRoZSBwaG90byIsIiMgaGVyZSAjMjUwIChjb21tZW50KSwgeW91IHdpbGwgZmlyc3QgbmVlZCB0byByZWFkIGluIHRoZSBjb2xsYXBzZWQgZXhwcmVzc2lvbiIsIiMgZGF0YSIsInN1YnNldF9leHByZXNzaW9uX2RhdGEgPC1cbiAgcmVhZFJEUyhmaWxlLnBhdGgoXG4gICAgc2NyYXRjaF9kaXIsXG4gICAgXCJjaG9yZG9tYS1vbmx5LWdlbmUtZXhwcmVzc2lvbi1yc2VtLXRwbS1jb2xsYXBzZWQucmRzXCJcbiAgKSkiXX0= -->
 <pre class="r"><code># we need to include the match_id field from histologies-base.tsv in the final
 # table (field will allow #us to map between RNA-seq (e.g., SMARCB1 expression
 # values) and WGS data (e.g., SMARCB1 focal copy number status) from the same
@@ -1845,7 +1873,7 @@ subset_expression_data &lt;-
 <h3>Output</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0YWJ1bGFyIGRhdGFcbm91dHB1dF9maWxlIDwtIGZpbGUucGF0aChyZXN1bHRzX2RpciwgXCJjaG9yZG9tYV9zbWFyY2IxX3N0YXR1cy50c3ZcIilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgdGFidWxhciBkYXRhIiwib3V0cHV0X2ZpbGUgPC0gZmlsZS5wYXRoKHJlc3VsdHNfZGlyLCBcImNob3Jkb21hX3NtYXJjYjFfc3RhdHVzLnRzdlwiKSJdfQ== -->
 <pre class="r"><code># tabular data
 output_file &lt;- file.path(results_dir, &quot;chordoma_smarcb1_status.tsv&quot;)</code></pre>
 <!-- rnb-source-end -->
@@ -1859,22 +1887,26 @@ output_file &lt;- file.path(results_dir, &quot;chordoma_smarcb1_status.tsv&quot;
 <code>subset_focal_cn_df</code></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvcmRvbWFfbG9zcyA8LSBzdWJzZXRfZm9jYWxfY25fZGYgJT4lXG4gIGZpbHRlcihcbiAgICBnZW5lX3N5bWJvbCA9PSBcIlNNQVJDQjFcIixcbiAgICBzdGF0dXMgPT0gXCJsb3NzXCJcbiAgKVxuY2hvcmRvbWFfbG9zc1xuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjpbImNob3Jkb21hX2xvc3MgPC0gc3Vic2V0X2ZvY2FsX2NuX2RmICU+JVxuICBmaWx0ZXIoXG4gICAgZ2VuZV9zeW1ib2wgPT0gXCJTTUFSQ0IxXCIsXG4gICAgc3RhdHVzID09IFwibG9zc1wiXG4gICkiLCJjaG9yZG9tYV9sb3NzIl19 -->
 <pre class="r"><code>chordoma_loss &lt;- subset_focal_cn_df %&gt;%
   filter(
     gene_symbol == &quot;SMARCB1&quot;,
     status == &quot;loss&quot;
   )
-chordoma_loss
-</code></pre>
+chordoma_loss</code></pre>
 <!-- rnb-source-end -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["gene_symbol"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sample_id"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Kids_First_Participant_ID"],"name":[3],"type":["chr"],"align":["left"]},{"label":["biospecimen_id"],"name":[4],"type":["chr"],"align":["left"]},{"label":["copy_number"],"name":[5],"type":["int"],"align":["right"]},{"label":["ploidy"],"name":[6],"type":["int"],"align":["right"]},{"label":["status"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"SMARCB1","2":"7316-7623","3":"PT_75HRTX4S","4":"BS_3CDQYJ5Q","5":"1","6":"4","7":"loss"},{"1":"SMARCB1","2":"7316-2935","3":"PT_HFQNKP5X","4":"BS_9GN1QA3Q","5":"1","6":"2","7":"loss"},{"1":"SMARCB1","2":"7316-1101","3":"PT_F1086Z0A","4":"BS_BWZTMWTM","5":"1","6":"2","7":"loss"},{"1":"SMARCB1","2":"7316-3952","3":"PT_1FP0ZWQB","4":"BS_EEH04G1F","5":"1","6":"4","7":"loss"},{"1":"SMARCB1","2":"7316-3632","3":"PT_WTMSD2WB","4":"BS_JTBM5TSE","5":"3","6":"4","7":"loss"},{"1":"SMARCB1","2":"7316-3950","3":"PT_1FP0ZWQB","4":"BS_P5M7K1JD","5":"1","6":"4","7":"loss"},{"1":"SMARCB1","2":"7316-7623","3":"PT_75HRTX4S","4":"BS_WTGPN218","5":"1","6":"2","7":"loss"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Distinguishing the chordoma samples with no copy number change
 chromosome 22</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29weV9uZXV0cmFsX2RmIDwtIHN1YnNldF9tZXRhZGF0YSAlPiVcbiAgIyB0aGUgY29weSBldmVudHMgY2FuIG9ubHkgYmUgdGFrZW4gZnJvbSBXR1MvV1hTIGRhdGEgbm90IFJOQS1zZXEgZGF0YVxuICAjIHdlIGFsc28gb25seSB3YW50IGJpb3NwZWNpbWVucyB3aGVyZSBhIGxvc3Mgd2FzIG5vdCByZWNvcmRlZCB0byBhdm9pZCBkdXBsaWNhdGVzXG4gIGZpbHRlcihleHBlcmltZW50YWxfc3RyYXRlZ3kgJWluJSBjKFwiV0dTXCIsIFwiV1hTXCIpLFxuICAgICAgICAgIShLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEICVpbiUgY2hvcmRvbWFfbG9zcyRiaW9zcGVjaW1lbl9pZCkpICU+JVxuICAjIGlmIHRoZXJlJ3Mgbm8gbG9zcywgbGV0J3MgYXNzdW1lIHN0YXR1cyBpcyBjb3B5IG5ldXRyYWxcbiAgbXV0YXRlKHN0YXR1cyA9IFwibmV1dHJhbFwiLFxuICAgICAgICAgY29weV9udW1iZXIgPSBwbG9pZHkpICU+JVxuICBzZWxlY3QoS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCwgbWF0Y2hfaWQsIHN0YXR1cywgY29weV9udW1iZXIsIHBsb2lkeSlcbmNvcHlfbmV1dHJhbF9kZlxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbImNvcHlfbmV1dHJhbF9kZiA8LSBzdWJzZXRfbWV0YWRhdGEgJT4lXG4gICMgdGhlIGNvcHkgZXZlbnRzIGNhbiBvbmx5IGJlIHRha2VuIGZyb20gV0dTL1dYUyBkYXRhIG5vdCBSTkEtc2VxIGRhdGFcbiAgIyB3ZSBhbHNvIG9ubHkgd2FudCBiaW9zcGVjaW1lbnMgd2hlcmUgYSBsb3NzIHdhcyBub3QgcmVjb3JkZWQgdG8gYXZvaWQgZHVwbGljYXRlc1xuICBmaWx0ZXIoZXhwZXJpbWVudGFsX3N0cmF0ZWd5ICVpbiUgYyhcIldHU1wiLCBcIldYU1wiKSxcbiAgICAgICAgICEoS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCAlaW4lIGNob3Jkb21hX2xvc3MkYmlvc3BlY2ltZW5faWQpKSAlPiVcbiAgIyBpZiB0aGVyZSdzIG5vIGxvc3MsIGxldCdzIGFzc3VtZSBzdGF0dXMgaXMgY29weSBuZXV0cmFsXG4gIG11dGF0ZShzdGF0dXMgPSBcIm5ldXRyYWxcIixcbiAgICAgICAgIGNvcHlfbnVtYmVyID0gcGxvaWR5KSAlPiVcbiAgc2VsZWN0KEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIG1hdGNoX2lkLCBzdGF0dXMsIGNvcHlfbnVtYmVyLCBwbG9pZHkpIiwiY29weV9uZXV0cmFsX2RmIl19 -->
 <pre class="r"><code>copy_neutral_df &lt;- subset_metadata %&gt;%
   # the copy events can only be taken from WGS/WXS data not RNA-seq data
   # we also only want biospecimens where a loss was not recorded to avoid duplicates
@@ -1886,28 +1918,42 @@ chromosome 22</p>
   select(Kids_First_Biospecimen_ID, match_id, status, copy_number, ploidy)
 copy_neutral_df</code></pre>
 <!-- rnb-source-end -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["match_id"],"name":[2],"type":["chr"],"align":["left"]},{"label":["status"],"name":[3],"type":["chr"],"align":["left"]},{"label":["copy_number"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["ploidy"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"BS_2MPNPD28","2":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased","3":"neutral","4":"3","5":"3"},{"1":"BS_4BHFZB8T","2":"PT_2Z4RZEGJ_7316-6296_Solid Tissue_Initial CNS Tumor","3":"neutral","4":"2","5":"2"},{"1":"BS_5B6XZ7YP","2":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased","3":"neutral","4":"3","5":"3"},{"1":"BS_6F49F7WH","2":"PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence","3":"neutral","4":"3","5":"3"},{"1":"BS_7HD5FK4Z","2":"PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8","3":"neutral","4":"4","5":"4"},{"1":"BS_7YGM7F5R","2":"PT_75HRTX4S_7316-5485_Solid Tissue_Initial CNS Tumor","3":"neutral","4":"2","5":"2"},{"1":"BS_FBJ516WW","2":"PT_HFQNKP5X_7316-921_Solid Tissue_Progressive","3":"neutral","4":"2","5":"2"},{"1":"BS_FVPZ3CYY","2":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased","3":"neutral","4":"4","5":"4"},{"1":"BS_GNSAKWR4","2":"PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5","3":"neutral","4":"2","5":"2"},{"1":"BS_MAHWW7NR","2":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased","3":"neutral","4":"2","5":"2"},{"1":"BS_SCW1FS55","2":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased","3":"neutral","4":"4","5":"4"},{"1":"BS_V7W6CMRK","2":"PT_GH06NBGZ_7316-4843_Solid Tissue_Initial CNS Tumor","3":"neutral","4":"2","5":"2"},{"1":"BS_VR6VVT31","2":"PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor","3":"neutral","4":"2","5":"2"},{"1":"BS_VZB4K7NV","2":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased","3":"neutral","4":"4","5":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Joining chordoma samples (both with chr 22 loss and no copy number
 change)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5jaG9yZG9tYV9jb3B5IDwtIGNob3Jkb21hX2xvc3MgJT4lXG4gIGRwbHlyOjpyZW5hbWUoS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRCA9IGJpb3NwZWNpbWVuX2lkKSAlPiVcbiAgIyBqb2luIHRoZSBsb3NzZXMgd2l0aCB0aGUgbmV1dHJhbHMgdG8gZ2V0IGEgbmV3IGRhdGEgZnJhbWVcbiAgc2VsZWN0KEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQsIHN0YXR1cyxwbG9pZHksY29weV9udW1iZXIpICU+JVxuICBsZWZ0X2pvaW4oc3Vic2V0X21ldGFkYXRhWyxjKFwiS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRFwiLCBcIm1hdGNoX2lkXCIpXSkgJT4lXG4gIGJpbmRfcm93cyhjb3B5X25ldXRyYWxfZGYpXG5jaG9yZG9tYV9jb3B5XG5gYGAifQ== -->
-<pre class="r"><code>
-chordoma_copy &lt;- chordoma_loss %&gt;%
+<!-- rnb-source-begin eyJkYXRhIjoiY2hvcmRvbWFfY29weSA8LSBjaG9yZG9tYV9sb3NzICU+JVxuICBkcGx5cjo6cmVuYW1lKEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQgPSBiaW9zcGVjaW1lbl9pZCkgJT4lXG4gICMgam9pbiB0aGUgbG9zc2VzIHdpdGggdGhlIG5ldXRyYWxzIHRvIGdldCBhIG5ldyBkYXRhIGZyYW1lXG4gIHNlbGVjdChLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELCBzdGF0dXMscGxvaWR5LGNvcHlfbnVtYmVyKSAlPiVcbiAgbGVmdF9qb2luKHN1YnNldF9tZXRhZGF0YVssYyhcIktpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURcIiwgXCJtYXRjaF9pZFwiKV0pICU+JVxuICBiaW5kX3Jvd3MoY29weV9uZXV0cmFsX2RmKSJ9 -->
+<pre class="r"><code>chordoma_copy &lt;- chordoma_loss %&gt;%
   dplyr::rename(Kids_First_Biospecimen_ID = biospecimen_id) %&gt;%
   # join the losses with the neutrals to get a new data frame
   select(Kids_First_Biospecimen_ID, status,ploidy,copy_number) %&gt;%
   left_join(subset_metadata[,c(&quot;Kids_First_Biospecimen_ID&quot;, &quot;match_id&quot;)]) %&gt;%
-  bind_rows(copy_neutral_df)
-chordoma_copy</code></pre>
+  bind_rows(copy_neutral_df)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiSm9pbmluZyB3aXRoIGBieSA9IGpvaW5fYnkoS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRClgXG4ifQ== -->
+<pre><code>Joining with `by = join_by(Kids_First_Biospecimen_ID)`</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiY2hvcmRvbWFfY29weSJ9 -->
+<pre class="r"><code>chordoma_copy</code></pre>
+<!-- rnb-source-end -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["status"],"name":[2],"type":["chr"],"align":["left"]},{"label":["ploidy"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["copy_number"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["match_id"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"BS_3CDQYJ5Q","2":"loss","3":"4","4":"1","5":"PT_75HRTX4S_7316-7623_Solid Tissue_Deceased"},{"1":"BS_9GN1QA3Q","2":"loss","3":"2","4":"1","5":"PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive"},{"1":"BS_BWZTMWTM","2":"loss","3":"2","4":"1","5":"PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor"},{"1":"BS_EEH04G1F","2":"loss","3":"4","4":"1","5":"PT_1FP0ZWQB_7316-3952_Solid Tissue_Initial CNS Tumor"},{"1":"BS_JTBM5TSE","2":"loss","3":"4","4":"3","5":"PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor"},{"1":"BS_P5M7K1JD","2":"loss","3":"4","4":"1","5":"PT_1FP0ZWQB_7316-3950_Solid Tissue_Initial CNS Tumor"},{"1":"BS_WTGPN218","2":"loss","3":"2","4":"1","5":"PT_75HRTX4S_7316-7623_Solid Tissue_Deceased"},{"1":"BS_2MPNPD28","2":"neutral","3":"3","4":"3","5":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_4BHFZB8T","2":"neutral","3":"2","4":"2","5":"PT_2Z4RZEGJ_7316-6296_Solid Tissue_Initial CNS Tumor"},{"1":"BS_5B6XZ7YP","2":"neutral","3":"3","4":"3","5":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_6F49F7WH","2":"neutral","3":"3","4":"3","5":"PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence"},{"1":"BS_7HD5FK4Z","2":"neutral","3":"4","4":"4","5":"PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8"},{"1":"BS_7YGM7F5R","2":"neutral","3":"2","4":"2","5":"PT_75HRTX4S_7316-5485_Solid Tissue_Initial CNS Tumor"},{"1":"BS_FBJ516WW","2":"neutral","3":"2","4":"2","5":"PT_HFQNKP5X_7316-921_Solid Tissue_Progressive"},{"1":"BS_FVPZ3CYY","2":"neutral","3":"4","4":"4","5":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_GNSAKWR4","2":"neutral","3":"2","4":"2","5":"PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5"},{"1":"BS_MAHWW7NR","2":"neutral","3":"2","4":"2","5":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_SCW1FS55","2":"neutral","3":"4","4":"4","5":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_V7W6CMRK","2":"neutral","3":"2","4":"2","5":"PT_GH06NBGZ_7316-4843_Solid Tissue_Initial CNS Tumor"},{"1":"BS_VR6VVT31","2":"neutral","3":"2","4":"2","5":"PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor"},{"1":"BS_VZB4K7NV","2":"neutral","3":"4","4":"4","5":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Look at SMARCB1 expression values only in chordoma</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBnZXQgdGhlIHJvdyB0aGF0IGNvbnRhaW5zIHRoZSBTTUFSQ0IxIHZhbHVlc1xuIyBnZW5lIHN5bWJvbHMgYXJlIHJvd25hbWVzXG5zbWFyY2IxX2V4cHJlc3Npb24gPC0gc3Vic2V0X2V4cHJlc3Npb25fZGF0YVt3aGljaChyb3duYW1lcyhzdWJzZXRfZXhwcmVzc2lvbl9kYXRhKSA9PSBcIlNNQVJDQjFcIiksIF1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgZ2V0IHRoZSByb3cgdGhhdCBjb250YWlucyB0aGUgU01BUkNCMSB2YWx1ZXMiLCIjIGdlbmUgc3ltYm9scyBhcmUgcm93bmFtZXMiLCJzbWFyY2IxX2V4cHJlc3Npb24gPC0gc3Vic2V0X2V4cHJlc3Npb25fZGF0YVt3aGljaChyb3duYW1lcyhzdWJzZXRfZXhwcmVzc2lvbl9kYXRhKSA9PSBcIlNNQVJDQjFcIiksIF0iXX0= -->
 <pre class="r"><code># get the row that contains the SMARCB1 values
 # gene symbols are rownames
 smarcb1_expression &lt;- subset_expression_data[which(rownames(subset_expression_data) == &quot;SMARCB1&quot;), ]</code></pre>
@@ -1916,20 +1962,25 @@ smarcb1_expression &lt;- subset_expression_data[which(rownames(subset_expression
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBub3cgb25seSB0aGUgY29sdW1ucyBjb3JyZXNwb25kIHRvIGNob3Jkb21hIHNhbXBsZXNcbnNtYXJjYjFfZXhwcmVzc2lvbiA8LSBzbWFyY2IxX2V4cHJlc3Npb25bLCB3aGljaChjb2xuYW1lcyhzdWJzZXRfZXhwcmVzc2lvbl9kYXRhKSAlaW4lIHN1YnNldF9tZXRhZGF0YSRLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEKSBdXG5cbiMgUHJpbnQgb3V0IHRoZSBleHByZXNzaW9uIGZvciBTTUFSQ0IxXG5zbWFyY2IxX2V4cHJlc3Npb25cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgbm93IG9ubHkgdGhlIGNvbHVtbnMgY29ycmVzcG9uZCB0byBjaG9yZG9tYSBzYW1wbGVzIiwic21hcmNiMV9leHByZXNzaW9uIDwtIHNtYXJjYjFfZXhwcmVzc2lvblssIHdoaWNoKGNvbG5hbWVzKHN1YnNldF9leHByZXNzaW9uX2RhdGEpICVpbiUgc3Vic2V0X21ldGFkYXRhJEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQpIF0iLCIiLCIjIFByaW50IG91dCB0aGUgZXhwcmVzc2lvbiBmb3IgU01BUkNCMSIsInNtYXJjYjFfZXhwcmVzc2lvbiJdfQ== -->
 <pre class="r"><code># now only the columns correspond to chordoma samples
 smarcb1_expression &lt;- smarcb1_expression[, which(colnames(subset_expression_data) %in% subset_metadata$Kids_First_Biospecimen_ID) ]
 
 # Print out the expression for SMARCB1
 smarcb1_expression</code></pre>
 <!-- rnb-source-end -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["BS_0AETXC7D"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["BS_17DY3DD0"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["BS_1D8BZC23"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["BS_1EPBB086"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["BS_1KWNKPFZ"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["BS_1TQFKXNB"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["BS_20ZRK51D"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["BS_2530Y5J4"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["BS_25JNJXGQ"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["BS_2663ECGN"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["BS_289A7KD6"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["BS_28GPVQAA"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["BS_294021KJ"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["BS_2CT08QJ7"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["BS_2J1VR233"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["BS_2J3SVT5K"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["BS_2PKBNPBV"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["BS_2XHP6CPZ"],"name":[18],"type":["dbl"],"align":["right"]},{"label":["BS_31F0W3QJ"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["BS_35VNYQZV"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["BS_4F08YDA3"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["BS_5GG01SD2"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["BS_5MMYWSNK"],"name":[23],"type":["dbl"],"align":["right"]},{"label":["BS_61EMVPJN"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["BS_67PX06P3"],"name":[25],"type":["dbl"],"align":["right"]},{"label":["BS_68CA8KSM"],"name":[26],"type":["dbl"],"align":["right"]},{"label":["BS_6JB4VBC8"],"name":[27],"type":["dbl"],"align":["right"]},{"label":["BS_6QCDJXXG"],"name":[28],"type":["dbl"],"align":["right"]},{"label":["BS_6VPPC681"],"name":[29],"type":["dbl"],"align":["right"]},{"label":["BS_70GZWGED"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["BS_7N0BFQGZ"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["BS_7PRFPRSA"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["BS_7XK7MCZ3"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["BS_8ABPDS8V"],"name":[34],"type":["dbl"],"align":["right"]},{"label":["BS_8CRRZ30F"],"name":[35],"type":["dbl"],"align":["right"]},{"label":["BS_8H59X81P"],"name":[36],"type":["dbl"],"align":["right"]},{"label":["BS_8RRRBPW7"],"name":[37],"type":["dbl"],"align":["right"]},{"label":["BS_91K445V7"],"name":[38],"type":["dbl"],"align":["right"]},{"label":["BS_93CJNVZ1"],"name":[39],"type":["dbl"],"align":["right"]},{"label":["BS_99F35CM9"],"name":[40],"type":["dbl"],"align":["right"]},{"label":["BS_9AWYBXP3"],"name":[41],"type":["dbl"],"align":["right"]},{"label":["BS_9R1X529B"],"name":[42],"type":["dbl"],"align":["right"]},{"label":["BS_9ST3SFPR"],"name":[43],"type":["dbl"],"align":["right"]},{"label":["BS_9V222XXP"],"name":[44],"type":["dbl"],"align":["right"]},{"label":["BS_ABHH2361"],"name":[45],"type":["dbl"],"align":["right"]},{"label":["BS_AHK4MH9M"],"name":[46],"type":["dbl"],"align":["right"]},{"label":["BS_AWKTZKGF"],"name":[47],"type":["dbl"],"align":["right"]},{"label":["BS_AWXN0AMD"],"name":[48],"type":["dbl"],"align":["right"]},{"label":["BS_B29JQY07"],"name":[49],"type":["dbl"],"align":["right"]},{"label":["BS_BB79SSYS"],"name":[50],"type":["dbl"],"align":["right"]},{"label":["BS_BE7KBY3Q"],"name":[51],"type":["dbl"],"align":["right"]},{"label":["BS_BN80PP5B"],"name":[52],"type":["dbl"],"align":["right"]},{"label":["BS_BS57H9T4"],"name":[53],"type":["dbl"],"align":["right"]},{"label":["BS_C7738G9T"],"name":[54],"type":["dbl"],"align":["right"]},{"label":["BS_C9SGEN07"],"name":[55],"type":["dbl"],"align":["right"]},{"label":["BS_CDB3NSKS"],"name":[56],"type":["dbl"],"align":["right"]},{"label":["BS_CF4B3T2Y"],"name":[57],"type":["dbl"],"align":["right"]},{"label":["BS_CF7EDEJZ"],"name":[58],"type":["dbl"],"align":["right"]},{"label":["BS_CFSPNMKF"],"name":[59],"type":["dbl"],"align":["right"]},{"label":["BS_CV9R0QTM"],"name":[60],"type":["dbl"],"align":["right"]},{"label":["BS_DBDXCXT5"],"name":[61],"type":["dbl"],"align":["right"]},{"label":["BS_DMZEKBFG"],"name":[62],"type":["dbl"],"align":["right"]},{"label":["BS_DRJ4NZTW"],"name":[63],"type":["dbl"],"align":["right"]},{"label":["BS_E309EY4K"],"name":[64],"type":["dbl"],"align":["right"]},{"label":["BS_E744QAAE"],"name":[65],"type":["dbl"],"align":["right"]},{"label":["BS_E8E0M9Q2"],"name":[66],"type":["dbl"],"align":["right"]},{"label":["BS_EF0SFVWN"],"name":[67],"type":["dbl"],"align":["right"]},{"label":["BS_EFH9PBG8"],"name":[68],"type":["dbl"],"align":["right"]},{"label":["BS_EJ9JKM1C"],"name":[69],"type":["dbl"],"align":["right"]},{"label":["BS_EJKW2X3Y"],"name":[70],"type":["dbl"],"align":["right"]},{"label":["BS_EZTPPKJG"],"name":[71],"type":["dbl"],"align":["right"]},{"label":["BS_FEZDS3WA"],"name":[72],"type":["dbl"],"align":["right"]},{"label":["BS_G3W0DTAX"],"name":[73],"type":["dbl"],"align":["right"]},{"label":["BS_GAYRBK8G"],"name":[74],"type":["dbl"],"align":["right"]},{"label":["BS_GFM6EA61"],"name":[75],"type":["dbl"],"align":["right"]},{"label":["BS_GKDY0D0W"],"name":[76],"type":["dbl"],"align":["right"]},{"label":["BS_GNAY0RGH"],"name":[77],"type":["dbl"],"align":["right"]},{"label":["BS_GTNFM0TQ"],"name":[78],"type":["dbl"],"align":["right"]},{"label":["BS_H61920QK"],"name":[79],"type":["dbl"],"align":["right"]},{"label":["BS_HKQ08C1J"],"name":[80],"type":["dbl"],"align":["right"]},{"label":["BS_J67V3NKA"],"name":[81],"type":["dbl"],"align":["right"]},{"label":["BS_JKCYCHJ8"],"name":[82],"type":["dbl"],"align":["right"]},{"label":["BS_K1PC0R73"],"name":[83],"type":["dbl"],"align":["right"]},{"label":["BS_K4E83CMX"],"name":[84],"type":["dbl"],"align":["right"]},{"label":["BS_K8CY4Q8G"],"name":[85],"type":["dbl"],"align":["right"]},{"label":["BS_KBN6JG47"],"name":[86],"type":["dbl"],"align":["right"]},{"label":["BS_KWR4CFWA"],"name":[87],"type":["dbl"],"align":["right"]},{"label":["BS_KXRRNQ9C"],"name":[88],"type":["dbl"],"align":["right"]},{"label":["BS_M48Q6V8J"],"name":[89],"type":["dbl"],"align":["right"]},{"label":["BS_M7TWXKXB"],"name":[90],"type":["dbl"],"align":["right"]},{"label":["BS_M807A6K2"],"name":[91],"type":["dbl"],"align":["right"]},{"label":["BS_M8VQDP1S"],"name":[92],"type":["dbl"],"align":["right"]},{"label":["BS_MD6002ST"],"name":[93],"type":["dbl"],"align":["right"]},{"label":["BS_MH9D24WY"],"name":[94],"type":["dbl"],"align":["right"]},{"label":["BS_MQJ6H44J"],"name":[95],"type":["dbl"],"align":["right"]},{"label":["BS_MVF23R6F"],"name":[96],"type":["dbl"],"align":["right"]},{"label":["BS_N58DSNYD"],"name":[97],"type":["dbl"],"align":["right"]},{"label":["BS_NHZ37N5S"],"name":[98],"type":["dbl"],"align":["right"]},{"label":["BS_NTADWQ6M"],"name":[99],"type":["dbl"],"align":["right"]},{"label":["BS_NTH5ETDY"],"name":[100],"type":["dbl"],"align":["right"]},{"label":["BS_P4D8Y3S8"],"name":[101],"type":["dbl"],"align":["right"]},{"label":["BS_P9AVWGMB"],"name":[102],"type":["dbl"],"align":["right"]},{"label":["BS_PCV4SCGF"],"name":[103],"type":["dbl"],"align":["right"]},{"label":["BS_PDH51MYK"],"name":[104],"type":["dbl"],"align":["right"]},{"label":["BS_PDPMDS47"],"name":[105],"type":["dbl"],"align":["right"]},{"label":["BS_PG1BKMQP"],"name":[106],"type":["dbl"],"align":["right"]},{"label":["BS_PV8DASVF"],"name":[107],"type":["dbl"],"align":["right"]},{"label":["BS_PVCTC2RZ"],"name":[108],"type":["dbl"],"align":["right"]},{"label":["BS_PVJNRRFG"],"name":[109],"type":["dbl"],"align":["right"]},{"label":["BS_PYR24RRT"],"name":[110],"type":["dbl"],"align":["right"]},{"label":["BS_Q5BTZW6P"],"name":[111],"type":["dbl"],"align":["right"]},{"label":["BS_QKMVKNM2"],"name":[112],"type":["dbl"],"align":["right"]},{"label":["BS_QX5KC0SM"],"name":[113],"type":["dbl"],"align":["right"]},{"label":["BS_REXTZ6RB"],"name":[114],"type":["dbl"],"align":["right"]},{"label":["BS_RKV560JX"],"name":[115],"type":["dbl"],"align":["right"]},{"label":["BS_RQ1G6WAK"],"name":[116],"type":["dbl"],"align":["right"]},{"label":["BS_RZVGW00A"],"name":[117],"type":["dbl"],"align":["right"]},{"label":["BS_S8J3E922"],"name":[118],"type":["dbl"],"align":["right"]},{"label":["BS_S99QQDA0"],"name":[119],"type":["dbl"],"align":["right"]},{"label":["BS_SC3JDTD9"],"name":[120],"type":["dbl"],"align":["right"]},{"label":["BS_TQ40W8H4"],"name":[121],"type":["dbl"],"align":["right"]},{"label":["BS_V943K59V"],"name":[122],"type":["dbl"],"align":["right"]},{"label":["BS_V9Y9HSGQ"],"name":[123],"type":["dbl"],"align":["right"]},{"label":["BS_VSFHZ8JZ"],"name":[124],"type":["dbl"],"align":["right"]},{"label":["BS_VVWJ20GR"],"name":[125],"type":["dbl"],"align":["right"]},{"label":["BS_W4FR71ZE"],"name":[126],"type":["dbl"],"align":["right"]},{"label":["BS_WDS3VMCB"],"name":[127],"type":["dbl"],"align":["right"]},{"label":["BS_WWXC0YMX"],"name":[128],"type":["dbl"],"align":["right"]},{"label":["BS_XAYPK033"],"name":[129],"type":["dbl"],"align":["right"]},{"label":["BS_XEYE0J99"],"name":[130],"type":["dbl"],"align":["right"]},{"label":["BS_XNGEZT9R"],"name":[131],"type":["dbl"],"align":["right"]},{"label":["BS_XSJDV3ZH"],"name":[132],"type":["dbl"],"align":["right"]},{"label":["BS_XVYHBFJX"],"name":[133],"type":["dbl"],"align":["right"]},{"label":["BS_Y2ZH3JHG"],"name":[134],"type":["dbl"],"align":["right"]},{"label":["BS_YB07VF1X"],"name":[135],"type":["dbl"],"align":["right"]},{"label":["BS_Z2FRDNFX"],"name":[136],"type":["dbl"],"align":["right"]},{"label":["BS_ZWJZNM00"],"name":[137],"type":["dbl"],"align":["right"]},{"label":["BS_ZWV0SAMG"],"name":[138],"type":["dbl"],"align":["right"]}],"data":[{"1":"9.07","2":"3.85","3":"3.77","4":"12.8","5":"19.92","6":"9.99","7":"6.43","8":"4.48","9":"5.25","10":"5.83","11":"3.95","12":"34.18","13":"4.48","14":"7.9","15":"9.54","16":"9.51","17":"5.26","18":"10.06","19":"4.41","20":"0","21":"14.23","22":"13.68","23":"2.96","24":"5.03","25":"8.82","26":"6.92","27":"0","28":"0","29":"6.33","30":"11.41","31":"3.58","32":"2.41","33":"1.95","34":"4.63","35":"12.42","36":"14.91","37":"5.37","38":"8.38","39":"20.2","40":"16.94","41":"13.1","42":"5.75","43":"14.72","44":"3.97","45":"16.78","46":"4.79","47":"11.85","48":"3.96","49":"2.01","50":"6.71","51":"0","52":"3.89","53":"4.42","54":"0","55":"4.05","56":"3.73","57":"6.41","58":"7.03","59":"11.24","60":"14.93","61":"7.04","62":"5.37","63":"12.43","64":"5.43","65":"0","66":"4.24","67":"4.27","68":"0","69":"2.16","70":"9.57","71":"27.47","72":"4","73":"30.64","74":"6.47","75":"12.87","76":"3.41","77":"29.02","78":"7.83","79":"6.68","80":"4.21","81":"26.67","82":"8.93","83":"5.05","84":"3.79","85":"16.29","86":"13.46","87":"48.33","88":"14.05","89":"3.2","90":"25.7","91":"7.84","92":"4.25","93":"12.28","94":"0","95":"5.55","96":"3.96","97":"4.06","98":"0.93","99":"0","100":"18.64","101":"3.52","102":"13.3","103":"4.53","104":"0.57","105":"3.11","106":"9.66","107":"4.72","108":"23.63","109":"6.88","110":"4.22","111":"12.35","112":"2","113":"27.48","114":"13.17","115":"12.89","116":"19.58","117":"9.9","118":"12.51","119":"12.41","120":"0.21","121":"11.28","122":"7.51","123":"0","124":"5.29","125":"4.13","126":"3.41","127":"3.54","128":"1.68","129":"10.44","130":"13.13","131":"0.4","132":"11.35","133":"3.26","134":"25.18","135":"6.91","136":"7.7","137":"4.3","138":"4.61","_rn_":"SMARCB1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The <code>smarcb1_expression</code> is a not a friendly form ^^;
 Transposing needed:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0cmFuc3Bvc2Ugc3VjaCB0aGF0IHNhbXBsZXMgYXJlIHJvd3NcbnNtYXJjYjFfZXhwcmVzc2lvbiA8LSB0KHNtYXJjYjFfZXhwcmVzc2lvbikgJT4lXG4gICMgbWFrZSBhIGRhdGEuZnJhbWVcbiAgYXMuZGF0YS5mcmFtZSgpICU+JVxuICAjIHdlIHdhbnQgdGhlIHJvd25hbWVzIHRoYXQgYXJlIGJpb3NwZWNpbWVuIGlkZW50aWZlcnMgYXMgdGhlaXIgb3duIGNvbHVtbiBjYWxsZWQgS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRFxuICB0aWJibGU6OnJvd25hbWVzX3RvX2NvbHVtbihcIktpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSURcIikgJT4lXG4gICMgZ2l2ZSBTTUFSQ0IxIGNvbHVtbiBhIHNsaWdodGx5IGJldHRlciBjb2x1bW4gbmFtZVxuICBkcGx5cjo6cmVuYW1lKFNNQVJDQjFfZXhwcmVzc2lvbiA9IFNNQVJDQjEpICU+JVxuICBsZWZ0X2pvaW4oc3Vic2V0X21ldGFkYXRhWyxjKFwiS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRFwiLCBcIm1hdGNoX2lkXCIpXSlcbnNtYXJjYjFfZXhwcmVzc2lvblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgdHJhbnNwb3NlIHN1Y2ggdGhhdCBzYW1wbGVzIGFyZSByb3dzIiwic21hcmNiMV9leHByZXNzaW9uIDwtIHQoc21hcmNiMV9leHByZXNzaW9uKSAlPiVcbiAgIyBtYWtlIGEgZGF0YS5mcmFtZVxuICBhcy5kYXRhLmZyYW1lKCkgJT4lXG4gICMgd2Ugd2FudCB0aGUgcm93bmFtZXMgdGhhdCBhcmUgYmlvc3BlY2ltZW4gaWRlbnRpZmVycyBhcyB0aGVpciBvd24gY29sdW1uIGNhbGxlZCBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEXG4gIHRpYmJsZTo6cm93bmFtZXNfdG9fY29sdW1uKFwiS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRFwiKSAlPiVcbiAgIyBnaXZlIFNNQVJDQjEgY29sdW1uIGEgc2xpZ2h0bHkgYmV0dGVyIGNvbHVtbiBuYW1lXG4gIGRwbHlyOjpyZW5hbWUoU01BUkNCMV9leHByZXNzaW9uID0gU01BUkNCMSkgJT4lXG4gIGxlZnRfam9pbihzdWJzZXRfbWV0YWRhdGFbLGMoXCJLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEXCIsIFwibWF0Y2hfaWRcIildKSJdfQ== -->
 <pre class="r"><code># transpose such that samples are rows
 smarcb1_expression &lt;- t(smarcb1_expression) %&gt;%
   # make a data.frame
@@ -1938,16 +1989,26 @@ smarcb1_expression &lt;- t(smarcb1_expression) %&gt;%
   tibble::rownames_to_column(&quot;Kids_First_Biospecimen_ID&quot;) %&gt;%
   # give SMARCB1 column a slightly better column name
   dplyr::rename(SMARCB1_expression = SMARCB1) %&gt;%
-  left_join(subset_metadata[,c(&quot;Kids_First_Biospecimen_ID&quot;, &quot;match_id&quot;)])
-smarcb1_expression</code></pre>
+  left_join(subset_metadata[,c(&quot;Kids_First_Biospecimen_ID&quot;, &quot;match_id&quot;)])</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiSm9pbmluZyB3aXRoIGBieSA9IGpvaW5fYnkoS2lkc19GaXJzdF9CaW9zcGVjaW1lbl9JRClgXG4ifQ== -->
+<pre><code>Joining with `by = join_by(Kids_First_Biospecimen_ID)`</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-source-begin eyJkYXRhIjoic21hcmNiMV9leHByZXNzaW9uIn0= -->
+<pre class="r"><code>smarcb1_expression</code></pre>
+<!-- rnb-source-end -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Kids_First_Biospecimen_ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["SMARCB1_expression"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["match_id"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"BS_0AETXC7D","2":"9.07","3":"PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown"},{"1":"BS_17DY3DD0","2":"3.85","3":"PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence"},{"1":"BS_1D8BZC23","2":"3.77","3":"PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic"},{"1":"BS_1EPBB086","2":"12.80","3":"PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_1KWNKPFZ","2":"19.92","3":"PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_1TQFKXNB","2":"9.99","3":"PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_20ZRK51D","2":"6.43","3":"PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_2530Y5J4","2":"4.48","3":"PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_25JNJXGQ","2":"5.25","3":"PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_2663ECGN","2":"5.83","3":"PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_289A7KD6","2":"3.95","3":"PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_28GPVQAA","2":"34.18","3":"PT_FK7ZXG3E_Mug-CC1-T_Solid Tissue_Primary Tumor"},{"1":"BS_294021KJ","2":"4.48","3":"PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic"},{"1":"BS_2CT08QJ7","2":"7.90","3":"PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_2J1VR233","2":"9.54","3":"PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown"},{"1":"BS_2J3SVT5K","2":"9.51","3":"PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown"},{"1":"BS_2PKBNPBV","2":"5.26","3":"PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic"},{"1":"BS_2XHP6CPZ","2":"10.06","3":"PT_XETT8T7M_U-CH17P-CL_Derived Cell Line_Metastatic"},{"1":"BS_31F0W3QJ","2":"4.41","3":"PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence"},{"1":"BS_35VNYQZV","2":"0.00","3":"PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic"},{"1":"BS_4F08YDA3","2":"14.23","3":"PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_5GG01SD2","2":"13.68","3":"PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_5MMYWSNK","2":"2.96","3":"PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic"},{"1":"BS_61EMVPJN","2":"5.03","3":"PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence"},{"1":"BS_67PX06P3","2":"8.82","3":"PT_WTMSD2WB_7316-3632_Solid Tissue_Initial CNS Tumor"},{"1":"BS_68CA8KSM","2":"6.92","3":"PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic"},{"1":"BS_6JB4VBC8","2":"0.00","3":"PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic"},{"1":"BS_6QCDJXXG","2":"0.00","3":"PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic"},{"1":"BS_6VPPC681","2":"6.33","3":"PT_XX33CWA3_CF365-T_Solid Tissue_Metastatic"},{"1":"BS_70GZWGED","2":"11.41","3":"PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_7N0BFQGZ","2":"3.58","3":"PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic"},{"1":"BS_7PRFPRSA","2":"2.41","3":"PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_7XK7MCZ3","2":"1.95","3":"PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic"},{"1":"BS_8ABPDS8V","2":"4.63","3":"PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_8CRRZ30F","2":"12.42","3":"PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_8H59X81P","2":"14.91","3":"PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA"},{"1":"BS_8RRRBPW7","2":"5.37","3":"PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence"},{"1":"BS_91K445V7","2":"8.38","3":"PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_93CJNVZ1","2":"20.20","3":"PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_99F35CM9","2":"16.94","3":"PT_R4BMS5K3_JHC7-CL_Derived Cell Line_Unknown"},{"1":"BS_9AWYBXP3","2":"13.10","3":"PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_9R1X529B","2":"5.75","3":"PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic"},{"1":"BS_9ST3SFPR","2":"14.72","3":"PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence"},{"1":"BS_9V222XXP","2":"3.97","3":"PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic"},{"1":"BS_ABHH2361","2":"16.78","3":"PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_AHK4MH9M","2":"4.79","3":"PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence"},{"1":"BS_AWKTZKGF","2":"11.85","3":"PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_AWXN0AMD","2":"3.96","3":"PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence"},{"1":"BS_B29JQY07","2":"2.01","3":"PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic"},{"1":"BS_BB79SSYS","2":"6.71","3":"PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_BE7KBY3Q","2":"0.00","3":"PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_BN80PP5B","2":"3.89","3":"PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_BS57H9T4","2":"4.42","3":"PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence"},{"1":"BS_C7738G9T","2":"0.00","3":"PT_XX33CWA3_U-CHCF365-CL_Derived Cell Line_Metastatic"},{"1":"BS_C9SGEN07","2":"4.05","3":"PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_CDB3NSKS","2":"3.73","3":"PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence"},{"1":"BS_CF4B3T2Y","2":"6.41","3":"PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_CF7EDEJZ","2":"7.03","3":"PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic"},{"1":"BS_CFSPNMKF","2":"11.24","3":"PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic"},{"1":"BS_CV9R0QTM","2":"14.93","3":"PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence"},{"1":"BS_DBDXCXT5","2":"7.04","3":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_DMZEKBFG","2":"5.37","3":"PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic"},{"1":"BS_DRJ4NZTW","2":"12.43","3":"PT_6ZENTV3N_UM-Chor5-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_E309EY4K","2":"5.43","3":"PT_XETT8T7M_U-CH17S-CL_Derived Cell Line_Metastatic"},{"1":"BS_E744QAAE","2":"0.00","3":"PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_E8E0M9Q2","2":"4.24","3":"PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_EF0SFVWN","2":"4.27","3":"PT_DWJRMYP8_U-CH1-CL_Derived Cell Line_Recurrence"},{"1":"BS_EFH9PBG8","2":"0.00","3":"PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_EJ9JKM1C","2":"2.16","3":"PT_HFQNKP5X_7316-3295_Solid Tissue_Recurrence"},{"1":"BS_EJKW2X3Y","2":"9.57","3":"PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_EZTPPKJG","2":"27.47","3":"PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_FEZDS3WA","2":"4.00","3":"PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_G3W0DTAX","2":"30.64","3":"PT_CGVPMMD8_SF8894-T_Solid Tissue_Recurrence"},{"1":"BS_GAYRBK8G","2":"6.47","3":"PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_GFM6EA61","2":"12.87","3":"PT_HFQNKP5X_7316-921_Solid Tissue_Progressive"},{"1":"BS_GKDY0D0W","2":"3.41","3":"PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_GNAY0RGH","2":"29.02","3":"PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence"},{"1":"BS_GTNFM0TQ","2":"7.83","3":"PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_H61920QK","2":"6.68","3":"PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_HKQ08C1J","2":"4.21","3":"PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic"},{"1":"BS_J67V3NKA","2":"26.67","3":"PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_JKCYCHJ8","2":"8.93","3":"PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive"},{"1":"BS_K1PC0R73","2":"5.05","3":"PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_K4E83CMX","2":"3.79","3":"PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence"},{"1":"BS_K8CY4Q8G","2":"16.29","3":"PT_GYSNY9G2_U-CH2-CL_Derived Cell Line_Recurrence"},{"1":"BS_KBN6JG47","2":"13.46","3":"PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA"},{"1":"BS_KWR4CFWA","2":"48.33","3":"PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_KXRRNQ9C","2":"14.05","3":"PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_M48Q6V8J","2":"3.20","3":"PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_M7TWXKXB","2":"25.70","3":"PT_7RH6AVP6_7316-4860_Solid Tissue_Initial CNS Tumor"},{"1":"BS_M807A6K2","2":"7.84","3":"PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_M8VQDP1S","2":"4.25","3":"PT_CGVPMMD8_SF8894-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_MD6002ST","2":"12.28","3":"PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_MH9D24WY","2":"0.00","3":"PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-free_8"},{"1":"BS_MQJ6H44J","2":"5.55","3":"PT_Y66SNKHR_Mug-Chor1-CL_Derived Cell Line_Recurrence"},{"1":"BS_MVF23R6F","2":"3.96","3":"PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_N58DSNYD","2":"4.06","3":"PT_4D8WG2DP_U-CH11R-CL_Derived Cell Line_Recurrence"},{"1":"BS_NHZ37N5S","2":"0.93","3":"PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_NTADWQ6M","2":"0.00","3":"PT_XX33CWA3_CF365-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_NTH5ETDY","2":"18.64","3":"PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_P4D8Y3S8","2":"3.52","3":"PT_F1086Z0A_7316-1101_Solid Tissue_Initial CNS Tumor"},{"1":"BS_P9AVWGMB","2":"13.30","3":"PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic"},{"1":"BS_PCV4SCGF","2":"4.53","3":"PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_PDH51MYK","2":"0.57","3":"PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_PDPMDS47","2":"3.11","3":"PT_A9CDRD3E_U-CH7-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_PG1BKMQP","2":"9.66","3":"PT_0VS7CBZ1_CF427-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_PV8DASVF","2":"4.72","3":"PT_PAB4RZG2_U-CH12-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_PVCTC2RZ","2":"23.63","3":"PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_PVJNRRFG","2":"6.88","3":"PT_3GZF248B_U-CH19-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_PYR24RRT","2":"4.22","3":"PT_XETT8T7M_U-CH17PII-CL_Derived Cell Line_Metastatic"},{"1":"BS_Q5BTZW6P","2":"12.35","3":"PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_QKMVKNM2","2":"2.00","3":"PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic"},{"1":"BS_QX5KC0SM","2":"27.48","3":"PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_REXTZ6RB","2":"13.17","3":"PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_RKV560JX","2":"12.89","3":"PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA"},{"1":"BS_RQ1G6WAK","2":"19.58","3":"PT_7HEDWKTM_CF382-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_RZVGW00A","2":"9.90","3":"PT_4FQHQDEE_UM-Chor6-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_S8J3E922","2":"12.51","3":"PT_YJY2QXDM_CF359B-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_S99QQDA0","2":"12.41","3":"PT_6ZENTV3N_CF555-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_SC3JDTD9","2":"0.21","3":"PT_HFQNKP5X_7316-4062_Solid Tissue_Deceased"},{"1":"BS_TQ40W8H4","2":"11.28","3":"PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic"},{"1":"BS_V943K59V","2":"7.51","3":"PT_6ZENTV3N_CF459-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_V9Y9HSGQ","2":"0.00","3":"PT_HFQNKP5X_7316-4062_Derived Cell Line_Deceased_Serum-based_5"},{"1":"BS_VSFHZ8JZ","2":"5.29","3":"PT_YJY2QXDM_U-CHCF359B-CL_Derived Cell Line_Metastatic"},{"1":"BS_VVWJ20GR","2":"4.13","3":"PT_8MDE46MC_U-CH14-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_W4FR71ZE","2":"3.41","3":"PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive"},{"1":"BS_WDS3VMCB","2":"3.54","3":"PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic"},{"1":"BS_WWXC0YMX","2":"1.68","3":"PT_D9H1C43M_CH22-CL_Derived Cell Line_Metastatic"},{"1":"BS_XAYPK033","2":"10.44","3":"PT_6ZENTV3N_UM-Chor5C-CL_Derived Cell Line_Metastatic"},{"1":"BS_XEYE0J99","2":"13.13","3":"PT_6ZENTV3N_UM-Chor5D-CL_Derived Cell Line_NA"},{"1":"BS_XNGEZT9R","2":"0.40","3":"PT_MFF8XQES_SF10792-PDX_Patient Derived Xenograft_Primary Tumor"},{"1":"BS_XSJDV3ZH","2":"11.35","3":"PT_0JEBFP0E_UM-Chor1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_XVYHBFJX","2":"3.26","3":"PT_EPW84DJW_CF466-PDX_Patient Derived Xenograft_Progressive"},{"1":"BS_Y2ZH3JHG","2":"25.18","3":"PT_6ZENTV3N_CF539-PDX_Patient Derived Xenograft_Metastatic"},{"1":"BS_YB07VF1X","2":"6.91","3":"PT_HFQNKP5X_7316-2935_Solid Tissue_Progressive"},{"1":"BS_Z2FRDNFX","2":"7.70","3":"PT_YAF9B3CC_CF322-PDX_Patient Derived Xenograft_Recurrence"},{"1":"BS_ZWJZNM00","2":"4.30","3":"PT_FK7ZXG3E_Mug-CC1-CL_Derived Cell Line_Primary Tumor"},{"1":"BS_ZWV0SAMG","2":"4.61","3":"PT_XETT8T7M_U-CH17M-CL_Derived Cell Line_Metastatic"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Joining the copy number data with the expression data in this
 step</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvcmRvbWFfc21hcmNiMV9kZiA8LSBzbWFyY2IxX2V4cHJlc3Npb24gJT4lXG4gIGJpbmRfcm93cyhjaG9yZG9tYV9jb3B5KSAlPiVcbiAgIyAnc3RhdHVzJyBpcyByZXBsYWNlZCBhIG1vcmUgZGVzY3JpcHRpdmUgbmFtZVxuICBkcGx5cjo6cmVuYW1lKGZvY2FsX1NNQVJDQjFfc3RhdHVzID0gc3RhdHVzLFxuICAgICAgICAgICAgICAgIFNNQVJDQjFfY29weV9udW1iZXIgPSBjb3B5X251bWJlcikgJT4lXG4gICMgYWRkIHJlbWFpbmluZyBzYW1wbGVzXG4gIGJpbmRfcm93cyhtZXRoeWxfcGFuZWwpICU+JVxuICAgIHNlbGVjdChcbiAgICBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELFxuICAgIG1hdGNoX2lkLFxuICAgIHBsb2lkeSxcbiAgICBmb2NhbF9TTUFSQ0IxX3N0YXR1cyxcbiAgICBTTUFSQ0IxX2NvcHlfbnVtYmVyLFxuICAgIFNNQVJDQjFfZXhwcmVzc2lvblxuICApICU+JVxuICBzZWxlY3QoLUtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQpICU+JVxuICAjY29tYmluZSBkYXRhIGJ5IG1hdGNoIGlkXG4gIGdyb3VwX2J5KG1hdGNoX2lkKSAlPiVcbiAgc3VtbWFyaXplKGFjcm9zcyhldmVyeXRoaW5nKCksIH5wYXN0ZSh1bmlxdWUobmEub21pdCgueCkpLCBjb2xsYXBzZSA9IFwiLCBcIikpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiVcbiAgIyBhZGQgYmFjayBicyBpZHNcbiAgbGVmdF9qb2luKHN1YnNldF9tZXRhZGF0YVssYyhcIktpZHNfRmlyc3RfUGFydGljaXBhbnRfSURcIiwgXCJLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEXCIsIFwibWF0Y2hfaWRcIiwgXCJzYW1wbGVfaWRcIildKSAlPiVcbiAgYXJyYW5nZShtYXRjaF9pZCkgXG5cblxuIyBkbyB3ZSBvbmx5IGhhdmUgb25lIHN1YnR5cGUgcGVyIGJzIGlkPyB5ZXNcbmxlbmd0aCh1bmlxdWUoY2hvcmRvbWFfc21hcmNiMV9kZiRLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEKSkgPT0gbnJvdyhjaG9yZG9tYV9zbWFyY2IxX2RmKVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiY2hvcmRvbWFfc21hcmNiMV9kZiA8LSBzbWFyY2IxX2V4cHJlc3Npb24gJT4lXG4gIGJpbmRfcm93cyhjaG9yZG9tYV9jb3B5KSAlPiVcbiAgIyAnc3RhdHVzJyBpcyByZXBsYWNlZCBhIG1vcmUgZGVzY3JpcHRpdmUgbmFtZVxuICBkcGx5cjo6cmVuYW1lKGZvY2FsX1NNQVJDQjFfc3RhdHVzID0gc3RhdHVzLFxuICAgICAgICAgICAgICAgIFNNQVJDQjFfY29weV9udW1iZXIgPSBjb3B5X251bWJlcikgJT4lXG4gICMgYWRkIHJlbWFpbmluZyBzYW1wbGVzXG4gIGJpbmRfcm93cyhtZXRoeWxfcGFuZWwpICU+JVxuICAgIHNlbGVjdChcbiAgICBLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lELFxuICAgIG1hdGNoX2lkLFxuICAgIHBsb2lkeSxcbiAgICBmb2NhbF9TTUFSQ0IxX3N0YXR1cyxcbiAgICBTTUFSQ0IxX2NvcHlfbnVtYmVyLFxuICAgIFNNQVJDQjFfZXhwcmVzc2lvblxuICApICU+JVxuICBzZWxlY3QoLUtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQpICU+JVxuICAjY29tYmluZSBkYXRhIGJ5IG1hdGNoIGlkXG4gIGdyb3VwX2J5KG1hdGNoX2lkKSAlPiVcbiAgc3VtbWFyaXplKGFjcm9zcyhldmVyeXRoaW5nKCksIH5wYXN0ZSh1bmlxdWUobmEub21pdCgueCkpLCBjb2xsYXBzZSA9IFwiLCBcIikpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiVcbiAgIyBhZGQgYmFjayBicyBpZHNcbiAgbGVmdF9qb2luKHN1YnNldF9tZXRhZGF0YVssYyhcIktpZHNfRmlyc3RfUGFydGljaXBhbnRfSURcIiwgXCJLaWRzX0ZpcnN0X0Jpb3NwZWNpbWVuX0lEXCIsIFwibWF0Y2hfaWRcIiwgXCJzYW1wbGVfaWRcIildKSAlPiVcbiAgYXJyYW5nZShtYXRjaF9pZCkgIn0= -->
 <pre class="r"><code>chordoma_smarcb1_df &lt;- smarcb1_expression %&gt;%
   bind_rows(chordoma_copy) %&gt;%
   # &#39;status&#39; is replaced a more descriptive name
@@ -1969,19 +2030,24 @@ step</p>
   summarize(across(everything(), ~paste(unique(na.omit(.x)), collapse = &quot;, &quot;)), .groups = &#39;drop&#39;) %&gt;%
   # add back bs ids
   left_join(subset_metadata[,c(&quot;Kids_First_Participant_ID&quot;, &quot;Kids_First_Biospecimen_ID&quot;, &quot;match_id&quot;, &quot;sample_id&quot;)]) %&gt;%
-  arrange(match_id) 
-
-
-# do we only have one subtype per bs id? yes
-length(unique(chordoma_smarcb1_df$Kids_First_Biospecimen_ID)) == nrow(chordoma_smarcb1_df)
-</code></pre>
+  arrange(match_id) </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-message-begin eyJkYXRhIjoiSm9pbmluZyB3aXRoIGBieSA9IGpvaW5fYnkobWF0Y2hfaWQpYFxuIn0= -->
+<pre><code>Joining with `by = join_by(match_id)`</code></pre>
+<!-- rnb-message-end -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgZG8gd2Ugb25seSBoYXZlIG9uZSBzdWJ0eXBlIHBlciBicyBpZD8geWVzIiwibGVuZ3RoKHVuaXF1ZShjaG9yZG9tYV9zbWFyY2IxX2RmJEtpZHNfRmlyc3RfQmlvc3BlY2ltZW5fSUQpKSA9PSBucm93KGNob3Jkb21hX3NtYXJjYjFfZGYpIl19 -->
+<pre class="r"><code># do we only have one subtype per bs id? yes
+length(unique(chordoma_smarcb1_df$Kids_First_Biospecimen_ID)) == nrow(chordoma_smarcb1_df)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Write the table to file.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvcmRvbWFfc21hcmNiMV9kZiAlPiVcbiAgd3JpdGVfdHN2KG91dHB1dF9maWxlKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiY2hvcmRvbWFfc21hcmNiMV9kZiAlPiVcbiAgd3JpdGVfdHN2KG91dHB1dF9maWxlKSJ9 -->
 <pre class="r"><code>chordoma_smarcb1_df %&gt;%
   write_tsv(output_file)</code></pre>
 <!-- rnb-source-end -->
@@ -1991,9 +2057,46 @@ length(unique(chordoma_smarcb1_df$Kids_First_Biospecimen_ID)) == nrow(chordoma_s
 <h3>Session Info</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2Vzc2lvbkluZm8oKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2Vzc2lvbkluZm8oKSJ9 -->
 <pre class="r"><code>sessionInfo()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUiB2ZXJzaW9uIDQuMi4zICgyMDIzLTAzLTE1KVxuUGxhdGZvcm06IHg4Nl82NC1wYy1saW51eC1nbnUgKDY0LWJpdClcblJ1bm5pbmcgdW5kZXI6IFVidW50dSAyMi4wNC4yIExUU1xuXG5NYXRyaXggcHJvZHVjdHM6IGRlZmF1bHRcbkJMQVM6ICAgL3Vzci9saWIveDg2XzY0LWxpbnV4LWdudS9vcGVuYmxhcy1wdGhyZWFkL2xpYmJsYXMuc28uM1xuTEFQQUNLOiAvdXNyL2xpYi94ODZfNjQtbGludXgtZ251L29wZW5ibGFzLXB0aHJlYWQvbGlib3BlbmJsYXNwLXIwLjMuMjAuc29cblxubG9jYWxlOlxuIFsxXSBMQ19DVFlQRT1lbl9VUy5VVEYtOCAgICAgICBMQ19OVU1FUklDPUMgICAgICAgICAgICAgIFxuIFszXSBMQ19USU1FPWVuX1VTLlVURi04ICAgICAgICBMQ19DT0xMQVRFPWVuX1VTLlVURi04ICAgIFxuIFs1XSBMQ19NT05FVEFSWT1lbl9VUy5VVEYtOCAgICBMQ19NRVNTQUdFUz1lbl9VUy5VVEYtOCAgIFxuIFs3XSBMQ19QQVBFUj1lbl9VUy5VVEYtOCAgICAgICBMQ19OQU1FPUMgICAgICAgICAgICAgICAgIFxuIFs5XSBMQ19BRERSRVNTPUMgICAgICAgICAgICAgICBMQ19URUxFUEhPTkU9QyAgICAgICAgICAgIFxuWzExXSBMQ19NRUFTVVJFTUVOVD1lbl9VUy5VVEYtOCBMQ19JREVOVElGSUNBVElPTj1DICAgICAgIFxuXG5hdHRhY2hlZCBiYXNlIHBhY2thZ2VzOlxuWzFdIHN0YXRzICAgICBncmFwaGljcyAgZ3JEZXZpY2VzIHV0aWxzICAgICBkYXRhc2V0cyAgbWV0aG9kcyAgIGJhc2UgICAgIFxuXG5vdGhlciBhdHRhY2hlZCBwYWNrYWdlczpcblsxXSBnZ3Bsb3QyXzMuNC4yIHJlYWRyXzIuMS40ICAgZHBseXJfMS4xLjEgIFxuXG5sb2FkZWQgdmlhIGEgbmFtZXNwYWNlIChhbmQgbm90IGF0dGFjaGVkKTpcbiBbMV0gcGlsbGFyXzEuOS4wICAgICAgYnNsaWJfMC40LjIgICAgICAgY29tcGlsZXJfNC4yLjMgICAganF1ZXJ5bGliXzAuMS40ICBcbiBbNV0gUi5tZXRob2RzUzNfMS44LjIgUi51dGlsc18yLjEyLjIgICAgdG9vbHNfNC4yLjMgICAgICAgYml0XzQuMC41ICAgICAgICBcbiBbOV0gZGlnZXN0XzAuNi4zMSAgICAganNvbmxpdGVfMS44LjQgICAgZXZhbHVhdGVfMC4yMCAgICAgbGlmZWN5Y2xlXzEuMC4zICBcblsxM10gdGliYmxlXzMuMi4xICAgICAgZ3RhYmxlXzAuMy4zICAgICAgcGtnY29uZmlnXzIuMC4zICAgcmxhbmdfMS4xLjAgICAgICBcblsxN10gY2xpXzMuNi4xICAgICAgICAgcGFyYWxsZWxfNC4yLjMgICAgeWFtbF8yLjMuNyAgICAgICAgeGZ1bl8wLjM4ICAgICAgICBcblsyMV0gZmFzdG1hcF8xLjEuMSAgICAgd2l0aHJfMi41LjAgICAgICAga25pdHJfMS40MiAgICAgICAgZ2VuZXJpY3NfMC4xLjMgICBcblsyNV0gdmN0cnNfMC42LjIgICAgICAgc2Fzc18wLjQuNSAgICAgICAgaG1zXzEuMS4zICAgICAgICAgYml0NjRfNC4wLjUgICAgICBcblsyOV0gcnByb2pyb290XzIuMC4zICAgZ3JpZF80LjIuMyAgICAgICAgdGlkeXNlbGVjdF8xLjIuMCAgZGF0YS50YWJsZV8xLjE0LjhcblszM10gZ2x1ZV8xLjYuMiAgICAgICAgUjZfMi41LjEgICAgICAgICAgZmFuc2lfMS4wLjQgICAgICAgdnJvb21fMS42LjEgICAgICBcblszN10gcm1hcmtkb3duXzIuMjEgICAgdHpkYl8wLjMuMCAgICAgICAgbWFncml0dHJfMi4wLjMgICAgc2NhbGVzXzEuMi4xICAgICBcbls0MV0gaHRtbHRvb2xzXzAuNS41ICAgY29sb3JzcGFjZV8yLjEtMCAgdXRmOF8xLjIuMyAgICAgICAgbXVuc2VsbF8wLjUuMCAgICBcbls0NV0gY2FjaGVtXzEuMC43ICAgICAgY3JheW9uXzEuNS4yICAgICAgUi5vb18xLjI1LjAgICAgICBcbiJ9 -->
+<pre><code>R version 4.2.3 (2023-03-15)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.2 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] ggplot2_3.4.2 readr_2.1.4   dplyr_1.1.1  
+
+loaded via a namespace (and not attached):
+ [1] pillar_1.9.0      bslib_0.4.2       compiler_4.2.3    jquerylib_0.1.4  
+ [5] R.methodsS3_1.8.2 R.utils_2.12.2    tools_4.2.3       bit_4.0.5        
+ [9] digest_0.6.31     jsonlite_1.8.4    evaluate_0.20     lifecycle_1.0.3  
+[13] tibble_3.2.1      gtable_0.3.3      pkgconfig_2.0.3   rlang_1.1.0      
+[17] cli_3.6.1         parallel_4.2.3    yaml_2.3.7        xfun_0.38        
+[21] fastmap_1.1.1     withr_2.5.0       knitr_1.42        generics_0.1.3   
+[25] vctrs_0.6.2       sass_0.4.5        hms_1.1.3         bit64_4.0.5      
+[29] rprojroot_2.0.3   grid_4.2.3        tidyselect_1.2.0  data.table_1.14.8
+[33] glue_1.6.2        R6_2.5.1          fansi_1.0.4       vroom_1.6.1      
+[37] rmarkdown_2.21    tzdb_0.3.0        magrittr_2.0.3    scales_1.2.1     
+[41] htmltools_0.5.5   colorspace_2.1-0  utf8_1.2.3        munsell_0.5.0    
+[45] cachem_1.0.7      crayon_1.5.2      R.oo_1.25.0      </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 </div>
 </div>

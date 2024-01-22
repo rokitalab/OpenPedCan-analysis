@@ -22,7 +22,7 @@ PT_S4H6KA09	BS_07ANYSYQ	PBTA	Ependymoma	RNA-Seq	Initial CNS Tumor
 PT_BCQA23ME	BS_07CYFB5K	DGD	Low-grade glioma	Targeted Sequencing	Progressive
 PT_5HSJZPJ3	BS_08B376A6	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_NC2X0HJS	BS_08ST21QE	PBTA	High-grade glioma	RNA-Seq	Deceased
-PT_SEKXH6HT	BS_08TWG4K0	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_SEKXH6HT	BS_08TWG4K0	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Initial CNS Tumor
 PT_0PT33SCF	BS_09R7GDA7	PBTA	CNS Embryonal tumor	RNA-Seq	Recurrence
 PT_7THNHCPN	BS_09WRAJ1Y	DGD	High-grade glioma	Targeted Sequencing	Initial CNS Tumor
 PT_YHTK536P	BS_09Z7TC35	PBTA	Medulloblastoma	RNA-Seq	Recurrence
@@ -141,7 +141,7 @@ PT_MKDQZ17N	BS_1J2WQ08M	PBTA	Ependymoma	RNA-Seq	Initial CNS Tumor
 PT_CK41DW03	BS_1JDG6JV5	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_Y6ZREKYF	BS_1JNJ0NJ6	PBTA	Adamantinomatous Craniopharyngioma	RNA-Seq	Recurrence
 PT_XAR3V6N6	BS_1K6RA109	DGD	Low-grade glioma	Targeted Sequencing	Initial CNS Tumor
-PT_8ZDR3H4J	BS_1KKF4KEB	DGD	Histiocytic tumor	Targeted Sequencing	Initial CNS Tumor
+PT_8ZDR3H4J	BS_1KKF4KEB	DGD	High-grade glioma	Targeted Sequencing	Initial CNS Tumor
 PT_YGN06RPZ	BS_1KYGSMA7	PBTA	Diffuse leptomeningeal glioneuronal tumor	RNA-Seq	Progressive
 PT_G9GCH1AY	BS_1M3M7TGY	DGD	B Acute Lymphoblastic Leukemia/Lymphoma	Targeted Sequencing	Recurrence
 PT_39X3ZWVJ	BS_1N76FQZY	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
@@ -354,7 +354,7 @@ PT_2VYJXHHQ	BS_3VJ0CA6A	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_HMY997GX	BS_3W07B2TG	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_JVZ4T317	BS_3XVSTN5S	PBTA	Oligodendroglioma	RNA-Seq	Recurrence
 PT_GDDWPDMC	BS_3XY76V8T	PBTA	Ganglioglioma	RNA-Seq	Initial CNS Tumor
-PT_JC3FDHBS	BS_3XYJBBHQ	PBTA	High-grade glioma	RNA-Seq	Deceased
+PT_JC3FDHBS	BS_3XYJBBHQ	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Deceased
 PT_BVA0H9T9	BS_3Y2X2RBJ	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_YA9XESGF	BS_3Y6ZRHA0	DGD	B Acute Lymphoblastic Leukemia/Lymphoma	Targeted Sequencing	Primary Tumor
 PT_G65ZS4RM	BS_3YJB85S7	DGD	Pleomorphic xanthoastrocytoma	Targeted Sequencing	Initial CNS Tumor
@@ -1280,7 +1280,7 @@ PT_VN6MTPPM	BS_ECGQWHNQ	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_E4TXAYR6	BS_ECNBQ2RA	PBTA	Infant-type hemispheric glioma	RNA-Seq	Initial CNS Tumor
 PT_X4TT75N8	BS_ECP485VV	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_K28M7003	BS_ECWDN0AS	DGD	Low-grade glioma	Targeted Sequencing	Initial CNS Tumor
-PT_P1F0AHMT	BS_ED8G98XT	PBTA	High-grade glioma	RNA-Seq	Progressive
+PT_P1F0AHMT	BS_ED8G98XT	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Progressive
 PT_E99F32RF	BS_EDJ5TV0P	PBTA	High-grade glioma	RNA-Seq	Deceased
 PT_HB0C0FWQ	BS_EDQRDQJT	DGD	Ependymoma	Targeted Sequencing	Initial CNS Tumor
 PASKFM	BS_EE5Z0Z4J	GMKF	Neuroblastoma	RNA-Seq	Primary Tumor
@@ -1412,7 +1412,7 @@ PT_8P368R5B	BS_FXJY0MNH	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_VTK4R2BC	BS_FXREY76F	DGD	Low-grade glioma	Targeted Sequencing	Recurrence
 PT_91PDAFH0	BS_FYP2B298	PBTA	Diffuse hemispheric glioma	RNA-Seq	Initial CNS Tumor
 PT_BBKWAVZX	BS_FYQBWN2W	DGD	Low-grade glioma	Targeted Sequencing	Initial CNS Tumor
-PT_ARCM3PXM	BS_FYRDYBMZ	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_ARCM3PXM	BS_FYRDYBMZ	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Initial CNS Tumor
 PT_18JCZJ25	BS_FZ62GZGV	PBTA	Diffuse leptomeningeal glioneuronal tumor	RNA-Seq	Initial CNS Tumor
 PT_1DE7WVW3	BS_FZJB74XA	DGD	Low-grade glioma	Targeted Sequencing	Progressive
 PT_84WA83VT	BS_FZJYF57K	DGD	Low-grade glioma	Targeted Sequencing	Initial CNS Tumor
@@ -1613,7 +1613,7 @@ PT_JT9HH7M6	BS_HWGWYCY7	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_Z52Y8097	BS_HWQSP79N	DGD	NA	Targeted Sequencing	Initial CNS Tumor
 PT_PJ9E1AYH	BS_HWVD3RH0	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_H45M7M2T	BS_HX0S30NE	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
-PT_ZABG0DZ2	BS_HX7P9SJ5	DGD	Langerhans Cell histiocytosis	Targeted Sequencing	Initial CNS Tumor
+PT_ZABG0DZ2	BS_HX7P9SJ5	DGD	High-grade glioma	Targeted Sequencing	Initial CNS Tumor
 PT_Y9JQ3VPX	BS_HX8XJ18H	PBTA	Atypical Teratoid Rhabdoid Tumor	RNA-Seq	Initial CNS Tumor
 PT_DVBVMBRP	BS_HY2GHM23	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_Z31BW9E5	BS_HYASKY2Z	PBTA	Ependymoma	RNA-Seq	Initial CNS Tumor
@@ -1772,7 +1772,7 @@ PT_T6E6868Z	BS_KAQWXAMA	DGD	B Acute Lymphoblastic Leukemia/Lymphoma	Targeted Seq
 PT_9BX51ECP	BS_KATEB4XD	DGD	Ganglioglioma	Targeted Sequencing	Initial CNS Tumor
 PT_28TM5WBD	BS_KB7WDWY8	PBTA	Infant-type hemispheric glioma	RNA-Seq	Deceased
 PT_XC15JMBJ	BS_KBEWFFRG	DGD	Low-grade glioma	Targeted Sequencing	Progressive
-PT_84Q11Z5X	BS_KBEX4RT2	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_84Q11Z5X	BS_KBEX4RT2	PBTA	Diffuse midline glioma	RNA-Seq	Initial CNS Tumor
 PATWIL	BS_KBXSSXWF	GMKF	Neuroblastoma	RNA-Seq	Primary Tumor
 PASMIU	BS_KC02E200	GMKF	Neuroblastoma	RNA-Seq	Primary Tumor
 PT_7H4RAM4H	BS_KCQ5PXVB	DGD	Hepatocellular neoplasm NOS	Targeted Sequencing	Primary Tumor
@@ -1805,7 +1805,7 @@ PT_2NQPX1R2	BS_KND4B5CW	PBTA	Adamantinomatous Craniopharyngioma	RNA-Seq	Recurren
 PT_RAWTAK5M	BS_KNWVWP0D	DGD	Low-grade glioma	Targeted Sequencing	Recurrence
 PT_MSQ6GSVP	BS_KP735TJ6	PBTA	Infant-type hemispheric glioma	RNA-Seq	Initial CNS Tumor
 PT_CR2YBSPT	BS_KPT2WPHW	PBTA	Ganglioglioma	RNA-Seq	Initial CNS Tumor
-PT_SSE4AH59	BS_KQ6ZW085	PBTA	Dysembryoplastic neuroepithelial tumor	RNA-Seq	Initial CNS Tumor
+PT_SSE4AH59	BS_KQ6ZW085	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_767CKM83	BS_KQW02E55	DGD	Glial-neuronal tumor NOS	Targeted Sequencing	Initial CNS Tumor
 PT_4B34NTJB	BS_KRS4EV4X	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_14Z5353Q	BS_KS2HY842	DGD	Ependymoma	Targeted Sequencing	Initial CNS Tumor
@@ -1838,7 +1838,7 @@ PT_37B5JRP1	BS_M0QYNVK8	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_5SKQHRC5	BS_M0XGZ53Z	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_0QQ3S7RJ	BS_M12FJ0QT	PBTA	Meningioma	RNA-Seq	Progressive
 PT_S4A0R1PM	BS_M15PW2N0	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
-PT_KBDP8ZCR	BS_M1PVEHCM	PBTA	High-grade glioma	RNA-Seq	Deceased
+PT_KBDP8ZCR	BS_M1PVEHCM	PBTA	Diffuse midline glioma	RNA-Seq	Deceased
 PT_B235STWZ	BS_M1QH70X6	DGD	B Acute Lymphoblastic Leukemia/Lymphoma	Targeted Sequencing	Recurrence
 PT_C94VR1Y2	BS_M1T1K5WV	PBTA	Ependymoma	RNA-Seq	Recurrence
 PT_83F2MT1S	BS_M1XR5A0B	DGD	Other tumor	Targeted Sequencing	Initial CNS Tumor
@@ -2202,7 +2202,7 @@ PT_0DYVXB49	BS_RBZ11YDQ	DGD	Thyroid Gland Papillary Carcinoma	Targeted Sequencin
 PT_KN62VZM6	BS_RC8E5TVQ	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_2BYQ1DPQ	BS_RCB5QR73	DGD	Other tumor	Targeted Sequencing	Primary Tumor
 PT_WWZ2Q14R	BS_RCC8BXVE	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
-PT_RPC00TAJ	BS_RCCN63K6	PBTA	High-grade glioma	RNA-Seq	Progressive
+PT_RPC00TAJ	BS_RCCN63K6	PBTA	Diffuse midline glioma	RNA-Seq	Progressive
 PT_5V6PRZX4	BS_RCX5628Q	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_NTEKMKTX	BS_RD4D5F9F	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_TJ74G94K	BS_RDBNX7YJ	PBTA	Oligodendroglioma	RNA-Seq	Recurrence
@@ -2268,7 +2268,7 @@ PT_FKJCVYJW	BS_S1BHHF33	DGD	Low-grade glioma	Targeted Sequencing	Initial CNS Tum
 PT_YJBPEF4V	BS_S1KK7XRH	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_BRTVGGRK	BS_S1M423AB	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_VC7WZMC4	BS_S1W53RNW	PBTA	Adamantinomatous Craniopharyngioma	RNA-Seq	Initial CNS Tumor
-PT_DJG9RV4E	BS_S20SP0WW	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_DJG9RV4E	BS_S20SP0WW	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Initial CNS Tumor
 PT_4A2H0KNR	BS_S2TA8R29	PBTA	Infant-type hemispheric glioma	RNA-Seq	Recurrence
 PT_FVSWA46N	BS_S2Z0KJSX	PBTA	Choroid plexus tumor	RNA-Seq	Initial CNS Tumor
 PATTHB	BS_S32M2YTY	GMKF	Neuroblastoma	RNA-Seq	Primary Tumor
@@ -2370,7 +2370,7 @@ PT_EXJAEW1M	BS_T1QMEH1N	PBTA	Craniopharyngioma	RNA-Seq	Initial CNS Tumor
 PT_QT9T89S5	BS_T1W4JA94	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_RWZMQ4KH	BS_T1Y9ENB5	DGD	Sarcoma	Targeted Sequencing	Progressive
 PT_DNH1VP67	BS_T1YHK6B7	PBTA	Diffuse midline glioma	RNA-Seq	Deceased
-PT_YSYNKHAE	BS_T289QKBV	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_YSYNKHAE	BS_T289QKBV	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Initial CNS Tumor
 PT_G6ZR8BCV	BS_T2DG8VFJ	DGD	Low-grade glioma	Targeted Sequencing	Primary Tumor
 PT_1FQFJ0V1	BS_T2F48Z4E	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
 PT_6VJ5PNKS	BS_T2QPMZCM	PBTA	Low-grade glioma	RNA-Seq	Initial CNS Tumor
@@ -2449,7 +2449,7 @@ PT_4CYZHPMT	BS_TWMZCEKT	DGD	Adenocarcinoma	Targeted Sequencing	Primary Tumor
 PT_F5EG8TK5	BS_TX31A8Z9	PBTA	Adamantinomatous Craniopharyngioma	RNA-Seq	Initial CNS Tumor
 PT_4SD4YXPR	BS_TX45VMN4	DGD	Ganglioglioma	Targeted Sequencing	Initial CNS Tumor
 PT_H876VB6R	BS_TXY8QYWA	PBTA	Ependymoma	RNA-Seq	Initial CNS Tumor
-PT_VWZZTK38	BS_TXZ7KHTQ	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_VWZZTK38	BS_TXZ7KHTQ	PBTA	Diffuse midline glioma	RNA-Seq	Initial CNS Tumor
 PT_NV584F7Q	BS_TYAYZ9ZW	PBTA	Medulloblastoma	RNA-Seq	Initial CNS Tumor
 PT_VAW7C1MR	BS_TYJ3YME9	DGD	Choroid plexus tumor	Targeted Sequencing	Initial CNS Tumor
 PT_7Y81E8DQ	BS_TYQ0N4YP	PBTA	Oligodendroglioma	RNA-Seq	Primary Tumor
@@ -2803,7 +2803,7 @@ PT_23G70TEN	BS_YP080MN8	DGD	Neuroblastoma	Targeted Sequencing	Primary Tumor
 PT_DBWWKJ86	BS_YQ2455PK	DGD	Acute Myeloid Leukemia	Targeted Sequencing	Primary Tumor
 PT_TY3W122M	BS_YQFX2Y00	PBTA	Ependymoma	RNA-Seq	Initial CNS Tumor
 PT_97DBD8YS	BS_YR12D1ZY	PBTA	Diffuse midline glioma	RNA-Seq	Initial CNS Tumor
-PT_0324HWD5	BS_YR1XY6SF	PBTA	High-grade glioma	RNA-Seq	Initial CNS Tumor
+PT_0324HWD5	BS_YR1XY6SF	PBTA	Pleomorphic xanthoastrocytoma	RNA-Seq	Initial CNS Tumor
 PT_7H8X9M9E	BS_YRP28J6X	DGD	Glial-neuronal tumor NOS	Targeted Sequencing	Initial CNS Tumor
 PT_R6JT89KD	BS_YSKS0XRF	DGD	Langerhans Cell histiocytosis	Targeted Sequencing	Initial CNS Tumor
 PT_89HXDTTW	BS_YSZRQ95C	PBTA	Infant-type hemispheric glioma	RNA-Seq	Initial CNS Tumor

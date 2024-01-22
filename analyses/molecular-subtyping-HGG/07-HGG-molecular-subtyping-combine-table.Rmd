@@ -223,7 +223,7 @@ h3_k28_df <- all_data_df %>%
            HIST1H3C_H3C3.K28M == "Yes" | HIST2H3C_H3C14.K28M == "Yes" |
            `H3F3A_H3-3A.K28I` == "Yes" | HIST1H3B_H3C2.K28I == "Yes" |
            HIST1H3C_H3C3.K28I == "Yes" | HIST2H3C_H3C14.K28I == "Yes" |
-           molecular_subtype_methyl == "DMG, H3 K28") %>%
+           molecular_subtype_methyl %in% c("DMG, H3 K28", "DMG_EGFR")) %>%
   # Only the relevant columns
   select(Kids_First_Participant_ID,
          match_id,
