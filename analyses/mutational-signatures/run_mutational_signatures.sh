@@ -44,4 +44,6 @@ if [ "$CI" = true ]; then
 else
   echo "Not running in GitHub CI"
   Rscript -e "rmarkdown::render('04-explore_hypermutators.Rmd', params = list(output_Folder = \"ConsensusSNV\"), clean = TRUE)"
+  ## Tumor only result did not have sample passing the filter. Therefore, 04 script is not running for tumor only
+  #Rscript -e "rmarkdown::render('04-explore_hypermutators.Rmd', params = list(output_Folder = \"TumorOnlySNV\"), clean = TRUE)"
 fi
