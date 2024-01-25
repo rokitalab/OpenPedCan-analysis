@@ -1,0 +1,109 @@
+Kids_First_Biospecimen_ID	exposure	broad_histology	cancer_group	tumor_descriptor	signature
+BS_MB5K2C19	0	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	11
+BS_N88EQK8Z	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	11
+BS_46TXYD8H	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	11
+BS_4QH8B0VS	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	11
+BS_M28HG0NT	0	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	11
+BS_RM13B4YN	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	11
+BS_T7WMJ08W	0.07731407891040759	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	11
+BS_96S0VQBN	0.07695963761628963	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	11
+BS_ZN35MFSR	0.0774993907314814	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	11
+BS_GMVP7K9F	0.06521955894568088	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	11
+BS_F064HMTP	0.08260583272750037	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	11
+BS_CKX0QTD6	0.0637728124754864	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	11
+BS_MB5K2C19	0	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	1
+BS_N88EQK8Z	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	1
+BS_46TXYD8H	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	1
+BS_4QH8B0VS	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	1
+BS_M28HG0NT	0	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	1
+BS_RM13B4YN	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	1
+BS_T7WMJ08W	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	1
+BS_96S0VQBN	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	1
+BS_ZN35MFSR	0	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	1
+BS_GMVP7K9F	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	1
+BS_F064HMTP	0	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	1
+BS_CKX0QTD6	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	1
+BS_MB5K2C19	0.06188517918380419	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	N6
+BS_N88EQK8Z	0.08595976607629488	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	N6
+BS_46TXYD8H	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	N6
+BS_4QH8B0VS	0.16744960021377728	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	N6
+BS_M28HG0NT	0.11336329707213048	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	N6
+BS_RM13B4YN	0.07744267732430803	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	N6
+BS_T7WMJ08W	0.22615755694176906	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	N6
+BS_96S0VQBN	0.1400761571083866	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	N6
+BS_ZN35MFSR	0.19634464767083817	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	N6
+BS_GMVP7K9F	0.1411648381883723	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	N6
+BS_F064HMTP	0.2066246237870007	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	N6
+BS_CKX0QTD6	0.15828118989360823	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	N6
+BS_MB5K2C19	0.32555211284714614	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	8
+BS_N88EQK8Z	0.3132711579194215	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	8
+BS_46TXYD8H	0.22587540691455021	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	8
+BS_4QH8B0VS	0.2295506483535429	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	8
+BS_M28HG0NT	0.2579875398298607	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	8
+BS_RM13B4YN	0.2968735697270393	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	8
+BS_T7WMJ08W	0.2530179497060088	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	8
+BS_96S0VQBN	0.23879715996921536	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	8
+BS_ZN35MFSR	0.2291509256815221	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	8
+BS_GMVP7K9F	0.3029791848920641	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	8
+BS_F064HMTP	0.20763182490287044	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	8
+BS_CKX0QTD6	0.19658251921316164	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	8
+BS_MB5K2C19	0.15892700835798781	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	MMR2
+BS_N88EQK8Z	0.15044240654050217	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	MMR2
+BS_46TXYD8H	0.14178883975882045	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	MMR2
+BS_4QH8B0VS	0.19185173496409935	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	MMR2
+BS_M28HG0NT	0.13112974790064036	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	MMR2
+BS_RM13B4YN	0.1592470833526354	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	MMR2
+BS_T7WMJ08W	0.2099323652086691	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	MMR2
+BS_96S0VQBN	0.2246828840081726	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	MMR2
+BS_ZN35MFSR	0.16757597667181606	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	MMR2
+BS_GMVP7K9F	0.13417647637676566	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	MMR2
+BS_F064HMTP	0.2379749505240383	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	MMR2
+BS_CKX0QTD6	0.2423914635166685	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	MMR2
+BS_MB5K2C19	0.14062449708787478	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	18
+BS_N88EQK8Z	0.13644790662400322	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	18
+BS_46TXYD8H	0.2531073939343372	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	18
+BS_4QH8B0VS	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	18
+BS_M28HG0NT	0.21425122967260118	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	18
+BS_RM13B4YN	0.2722753182871505	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	18
+BS_T7WMJ08W	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	18
+BS_96S0VQBN	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	18
+BS_ZN35MFSR	0	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	18
+BS_GMVP7K9F	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	18
+BS_F064HMTP	0	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	18
+BS_CKX0QTD6	0.13020568654435838	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	18
+BS_MB5K2C19	0.07673870453824079	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	19
+BS_N88EQK8Z	0.08489694811341424	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	19
+BS_46TXYD8H	0.0997858171777071	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	19
+BS_4QH8B0VS	0.09534428600277958	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	19
+BS_M28HG0NT	0.07816062354812606	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	19
+BS_RM13B4YN	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	19
+BS_T7WMJ08W	0	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	19
+BS_96S0VQBN	0.09440574709102495	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	19
+BS_ZN35MFSR	0.11199669368874833	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	19
+BS_GMVP7K9F	0.10755247223110259	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	19
+BS_F064HMTP	0	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	19
+BS_CKX0QTD6	0.07573561107930557	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	19
+BS_MB5K2C19	0.17990870586494465	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	3
+BS_N88EQK8Z	0.17184167080897372	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	3
+BS_46TXYD8H	0.16895447370167332	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	3
+BS_4QH8B0VS	0.22183240306696456	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	3
+BS_M28HG0NT	0.17261575507710758	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	3
+BS_RM13B4YN	0.08853061908770352	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	3
+BS_T7WMJ08W	0.17444481551869662	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	3
+BS_96S0VQBN	0.20747604027328218	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	3
+BS_ZN35MFSR	0.20649997042160204	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	3
+BS_GMVP7K9F	0.23224106461272923	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	3
+BS_F064HMTP	0.17212023935958395	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	3
+BS_CKX0QTD6	0.1330307172774114	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	3
+BS_MB5K2C19	0.05636379212000164	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Initial CNS Tumor	Other
+BS_N88EQK8Z	0.05714014391739031	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Primary Tumor	Other
+BS_46TXYD8H	0.11048806851291171	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	Other
+BS_4QH8B0VS	0.09397132739883629	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Primary Tumor	Other
+BS_M28HG0NT	0.03249180689953357	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Progressive	Other
+BS_RM13B4YN	0.10563073222116326	Diffuse astrocytic and oligodendroglial tumor	Diffuse hemispheric glioma	Initial CNS Tumor	Other
+BS_T7WMJ08W	0.059133233714448785	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Initial CNS Tumor	Other
+BS_96S0VQBN	0.017602373933628623	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Deceased	Other
+BS_ZN35MFSR	0.010932395133991912	Diffuse astrocytic and oligodendroglial tumor	Pleomorphic xanthoastrocytoma	Progressive	Other
+BS_GMVP7K9F	0.01666640475328518	Diffuse astrocytic and oligodendroglial tumor	Diffuse midline glioma	Deceased	Other
+BS_F064HMTP	0.0930425286990062	Diffuse astrocytic and oligodendroglial tumor	Infant-type hemispheric glioma	Initial CNS Tumor	Other
+BS_CKX0QTD6	0	Diffuse astrocytic and oligodendroglial tumor	High-grade glioma	Initial CNS Tumor	Other

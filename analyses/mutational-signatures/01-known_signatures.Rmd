@@ -6,6 +6,9 @@ output:
 toc_float: TRUE
 author: Ryan Corbett (adapted from C. Savonen for ALSF CCDL)
 date: 2022
+params:
+  snv_file: ""
+  output_Folder: ""
 ---
   
   **Purpose:**
@@ -39,6 +42,15 @@ source(file.path("util", "mut_sig_functions.R"))
 # Load this library
 library(deconstructSigs)
 library(tidyverse)
+library("optparse")
+
+```
+
+## set options
+
+```{r}
+snv_file <- params$snv_file
+output_Folder <- params$output_Folder
 ```
 
 Set up directory paths. 
@@ -46,8 +58,8 @@ Set up directory paths.
 ```{r set directories}
 data_dir <- file.path("..", "..", "data")
 input_dir <- "input"
-results_dir <- "results"
-plots_dir <- "plots"
+results_dir <- file.path("results", output_Folder)
+plots_dir <- file.path("plots", output_Folder)
 figures_dir <- file.path("..", "..", "figures")
 
 cosmicv2_plots <- file.path(plots_dir, "cosmicv2")
@@ -55,9 +67,9 @@ nature_plots <- file.path(plots_dir, "nature")
 cosmicv3_plots <- file.path(plots_dir, "cosmicv3")
 
 scratch_dir <- file.path("..", "..", "scratch", "mutational-signatures")
-cosmicv2_scratch <- file.path(scratch_dir, "cosmicv2")
-cosmicv3_scratch <- file.path(scratch_dir, "cosmicv3")
-nature_scratch <- file.path(scratch_dir, "nature")
+cosmicv2_scratch <- file.path(scratch_dir, output_Folder, "cosmicv2")
+cosmicv3_scratch <- file.path(scratch_dir, output_Folder, "cosmicv3")
+nature_scratch <- file.path(scratch_dir, output_Folder, "nature")
 ```
 
 Make new directories for the results. 
@@ -88,20 +100,22 @@ if (!dir.exists(cosmicv3_scratch)) {
 if (!dir.exists(nature_scratch)) {
   dir.create(nature_scratch)
 }
+
 ```
 
 ## Read in data
 
 ```{r}
 # Declare file path for consensus file
-consensus_file <- file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz")
+consensus_file <- file.path(data_dir, snv_file)
 ```
 
 Read in the consensus MAF file. 
 
-```{r}
+```{r load snv}
 # Read in the file
 maf <- data.table::fread(consensus_file, data.table = FALSE)
+
 ```
 
 ### Read in color palettes

@@ -11,7 +11,13 @@ option_list <- list(
               type = "integer", # should be integer or plays poorly with CI shell script parameter
               default = FALSE,
               action =  "store_true",
-              help = "Run an abbreviated analysis with fewer iterations for `sigfit`? This arg will be _ignored_ if --method is not `sigfit`.")
+              help = "Run an abbreviated analysis with fewer iterations for `sigfit`? This arg will be _ignored_ if --method is not `sigfit`."), 
+  make_option(c("--snv_file"),
+              type = "character",
+              help = "SNV file input"),
+  make_option(c("--output_Folder"),
+              type = "character",
+              help = "Folder for results files")
 )
 
 
@@ -25,6 +31,8 @@ if (opt$abbreviated == 1) {
   n_iter <- 3000 # Full analysis
 }
 
+snv_file <- opt$snv_file
+output_Folder <- opt$output_Folder
 
 # Set up directories, input/output files ----------------------------------
 
@@ -34,11 +42,11 @@ analysis_path <- file.path(proj_root_path, "analyses", "mutational-signatures")
 
 
 # Path to input and output files:
-maf_file <- file.path(proj_root_path, "data", "snv-consensus-plus-hotspots.maf.tsv.gz") # We consider _all_ WGS and WXS mutations here
+maf_file <- file.path(proj_root_path, "data", snv_file) # We consider _all_ WGS and WXS mutations here
 meta_file      <- file.path(proj_root_path, "data", "histologies.tsv")
 # Output files:
-decon_fitted_file  <- file.path(analysis_path, "results", "fitted_exposures_signal-cns_deconstructSigs.rds")
-results_df_file <- file.path("results", "deconstructSigs_cns_exposures_merged.tsv")
+decon_fitted_file  <- file.path(analysis_path, "results", output_Folder, "fitted_exposures_signal-cns_deconstructSigs.rds")
+results_df_file <- file.path("results", output_Folder, "deconstructSigs_cns_exposures_merged.tsv")
 
 
 # Load CNS signatures 

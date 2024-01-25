@@ -9,6 +9,7 @@ editor_options:
   chunk_output_type: inline
 params:
   is_ci: 0
+  output_Folder: ""
 ---
   
   
@@ -22,13 +23,18 @@ library(colorblindr)
 
 `%>%` <- dplyr::`%>%`
 
+output_Folder <- params$output_Folder
+
 proj_root_path  <- file.path( rprojroot::find_root(rprojroot::has_dir(".git")) )
 analysis_path   <- file.path(proj_root_path, "analyses")
-plot_path       <- file.path(analysis_path, "mutational-signatures", "plots", "cns")
-results_path       <- file.path(analysis_path, "mutational-signatures", "results")
+results_path       <- file.path(analysis_path, "mutational-signatures", "results", output_Folder)
+plot_path       <- file.path(analysis_path, "mutational-signatures", "plots", output_Folder, "cns")
+if(!dir.exists(plot_path)){
+  dir.create(plot_path)
+}
 
 # Input files
-fitted_file    <- file.path(analysis_path, "mutational-signatures", "results", "deconstructSigs_cns_exposures_merged.tsv")
+fitted_file    <- file.path(results_path, "deconstructSigs_cns_exposures_merged.tsv")
 meta_file      <- file.path(proj_root_path, "data", "histologies.tsv")
 tmb_all_file    <- file.path(proj_root_path, "data", "snv-mutation-tmb-all.tsv")
 tmb_coding_file <- file.path(proj_root_path, "data", "snv-mutation-tmb-coding.tsv")
