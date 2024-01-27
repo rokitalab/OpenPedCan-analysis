@@ -241,6 +241,7 @@ histology_cg <- histology %>%
                                "High-grade glioma/astrocytoma (WHO grade III/IV);Neurofibroma/Plexiform") ~ "High-grade glioma",
                                    grepl("Diffuse leptomeningeal glioneuronal tumor", integrated_diagnosis) ~ "Diffuse leptomeningeal glioneuronal tumor",
                                    pathology_diagnosis == "Ependymoma;Metastatic secondary tumors" ~ "Ependymoma",
+                               pathology_diagnosis == "Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma" ~ "Dysembryoplastic neuroepithelial tumor",
                                TRUE ~ cancer_group)) %>%
   # remove short forms in the brackets
   dplyr::mutate(cancer_group = str_extract(cancer_group, "[^(]*")) %>%

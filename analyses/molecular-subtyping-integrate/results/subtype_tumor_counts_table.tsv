@@ -1,11 +1,11 @@
 cancer_group	molecular_subtype	n
-Adamantinomatous Craniopharyngioma	CRANIO, ADAM	272
+Adamantinomatous Craniopharyngioma	CRANIO, ADAM	288
 Astroblastoma	HGG, To be classified	3
 Astrocytoma	HGG, To be classified	3
-Atypical Teratoid Rhabdoid Tumor	ATRT, MYC	89
-Atypical Teratoid Rhabdoid Tumor	ATRT, SHH	93
-Atypical Teratoid Rhabdoid Tumor	ATRT, TYR	45
-Atypical Teratoid Rhabdoid Tumor	ATRT, To be classified	113
+Atypical Teratoid Rhabdoid Tumor	ATRT, MYC	93
+Atypical Teratoid Rhabdoid Tumor	ATRT, SHH	98
+Atypical Teratoid Rhabdoid Tumor	ATRT, TYR	49
+Atypical Teratoid Rhabdoid Tumor	ATRT, To be classified	115
 CNS Embryonal tumor	CNS Embryonal, NOS	54
 CNS Embryonal tumor	CNS HGNET-MN1	5
 CNS neuroblastoma	CNS NB-FOXR2	10
@@ -13,7 +13,7 @@ Central neurocytoma	CNC	10
 Chordoma	CHDM, To be classified	144
 Chordoma	CHDM, conventional	6
 Chordoma	CHDM, poorly differentiated	23
-Craniopharyngioma	CRANIO, To be classified	66
+Craniopharyngioma	CRANIO, To be classified	71
 Desmoplastic infantile astrocytoma and ganglioglioma	GNT, BRAF V600E	6
 Desmoplastic infantile astrocytoma and ganglioglioma	GNT, RTK	6
 Desmoplastic infantile astrocytoma and ganglioglioma	GNT, wildtype	4
@@ -25,40 +25,40 @@ Diffuse intrinsic pontine glioma	HGG, To be classified	18
 Diffuse leptomeningeal glioneuronal tumor	GNT, KIAA1549-BRAF	4
 Diffuse leptomeningeal glioneuronal tumor	GNT, MAPK	3
 Diffuse leptomeningeal glioneuronal tumor	GNT, To be classified	2
-Diffuse midline glioma	DMG, H3 K28	383
-Diffuse midline glioma	DMG, H3 K28, TP53	502
+Diffuse midline glioma	DMG, H3 K28	385
+Diffuse midline glioma	DMG, H3 K28, TP53	508
 Embryonal tumor with multilayer rosettes	ETMR, C19MC-altered	12
 Embryonal tumor with multilayer rosettes	ETMR, NOS	22
-Ependymoma	EPN, MPE	46
-Ependymoma	EPN, PF A	296
-Ependymoma	EPN, PF B	28
+Ependymoma	EPN, MPE	49
+Ependymoma	EPN, PF A	310
+Ependymoma	EPN, PF B	29
 Ependymoma	EPN, PF SE	1
 Ependymoma	EPN, SP	18
-Ependymoma	EPN, SP-MYCN	10
+Ependymoma	EPN, SP-MYCN	12
 Ependymoma	EPN, SP-SE	1
-Ependymoma	EPN, ST YAP1	20
-Ependymoma	EPN, ST ZFTA	166
-Ependymoma	EPN, To be classified	246
+Ependymoma	EPN, ST YAP1	22
+Ependymoma	EPN, ST ZFTA	174
+Ependymoma	EPN, To be classified	251
 Ewing sarcoma	EWS	100
 Extraventricular neurocytoma	EVN	8
-Ganglioglioma	GNG, BRAF V600E	87
-Ganglioglioma	GNG, BRAF V600E, CDKN2A/B	7
-Ganglioglioma	GNG, FGFR	12
+Ganglioglioma	GNG, BRAF V600E	88
+Ganglioglioma	GNG, BRAF V600E, CDKN2A/B	8
+Ganglioglioma	GNG, FGFR	13
 Ganglioglioma	GNG, H3	6
-Ganglioglioma	GNG, IDH	7
-Ganglioglioma	GNG, KIAA1549-BRAF	31
-Ganglioglioma	GNG, MAPK	7
+Ganglioglioma	GNG, IDH	8
+Ganglioglioma	GNG, KIAA1549-BRAF	34
+Ganglioglioma	GNG, MAPK	8
 Ganglioglioma	GNG, MYB/MYBL1	7
 Ganglioglioma	GNG, NF1-germline	3
 Ganglioglioma	GNG, NF1-somatic, BRAF V600E	2
-Ganglioglioma	GNG, RTK	26
-Ganglioglioma	GNG, RTK, BRAF V600E	5
+Ganglioglioma	GNG, RTK	29
+Ganglioglioma	GNG, RTK, BRAF V600E	6
 Ganglioglioma	GNG, RTK, FGFR	3
 Ganglioglioma	GNG, To be classified	21
-Ganglioglioma	GNG, other MAPK	24
+Ganglioglioma	GNG, other MAPK	28
 Ganglioglioma	GNG, other MAPK, BRAF V600E	3
-Ganglioglioma	GNG, other MAPK, IDH	5
-Ganglioglioma	GNG, wildtype	56
+Ganglioglioma	GNG, other MAPK, IDH	6
+Ganglioglioma	GNG, wildtype	59
 Ganglioneuroblastoma	NBL, MYCN amplified	41
 Ganglioneuroblastoma	NBL, MYCN non-amplified	100
 Ganglioneuroblastoma	NBL, To be classified	58
@@ -72,15 +72,15 @@ Glial-neuronal tumor NOS	GNT, NF1-somatic, FGFR	1
 Glial-neuronal tumor NOS	GNT, NF1-somatic, NF1-germline	1
 Glial-neuronal tumor NOS	GNT, RTK	12
 Glial-neuronal tumor NOS	GNT, RTK, CDKN2A/B	8
-Glial-neuronal tumor NOS	GNT, To be classified	18
+Glial-neuronal tumor NOS	GNT, To be classified	19
 Glial-neuronal tumor NOS	GNT, other MAPK	13
 Glial-neuronal tumor NOS	GNT, other MAPK, CDKN2A/B	4
 Glial-neuronal tumor NOS	GNT, wildtype	23
-High-grade glioma	HGG, H3 wildtype	464
-High-grade glioma	HGG, H3 wildtype, TP53	299
+High-grade glioma	HGG, H3 wildtype	477
+High-grade glioma	HGG, H3 wildtype, TP53	307
 High-grade glioma	HGG, IDH	8
-High-grade glioma	HGG, IDH, TP53	59
-High-grade glioma	HGG, To be classified	159
+High-grade glioma	HGG, IDH, TP53	60
+High-grade glioma	HGG, To be classified	158
 High-grade glioma	HGG, To be classified, TP53	1
 Infant-type hemispheric glioma	IHG, ALK-altered	6
 Infant-type hemispheric glioma	IHG, NTRK-altered	26
@@ -88,53 +88,53 @@ Infant-type hemispheric glioma	IHG, NTRK-altered, TP53	5
 Infant-type hemispheric glioma	IHG, ROS1-altered	15
 Infant-type hemispheric glioma	IHG, ROS1-altered, TP53	3
 Infant-type hemispheric glioma	IHG, To be classified	2
-Low-grade glioma	LGG, BRAF V600E	147
-Low-grade glioma	LGG, BRAF V600E, CDKN2A/B	34
+Low-grade glioma	LGG, BRAF V600E	157
+Low-grade glioma	LGG, BRAF V600E, CDKN2A/B	37
 Low-grade glioma	LGG, BRAF V600E, other MAPK	10
-Low-grade glioma	LGG, BRAF/MAPK	16
+Low-grade glioma	LGG, BRAF/MAPK	17
 Low-grade glioma	LGG, CDKN2A/B	4
-Low-grade glioma	LGG, FGFR	45
-Low-grade glioma	LGG, FGFR, NF1-germline	5
+Low-grade glioma	LGG, FGFR	46
+Low-grade glioma	LGG, FGFR, NF1-germline	6
 Low-grade glioma	LGG, FGFR, NF1-somatic	4
-Low-grade glioma	LGG, IDH	31
-Low-grade glioma	LGG, KIAA1549-BRAF	799
+Low-grade glioma	LGG, IDH	32
+Low-grade glioma	LGG, KIAA1549-BRAF	855
 Low-grade glioma	LGG, KIAA1549-BRAF, BRAF V600E	5
 Low-grade glioma	LGG, KIAA1549-BRAF, CDKN2A/B	2
 Low-grade glioma	LGG, KIAA1549-BRAF, FGFR	6
-Low-grade glioma	LGG, KIAA1549-BRAF, RTK	26
-Low-grade glioma	LGG, KIAA1549-BRAF, other MAPK	17
-Low-grade glioma	LGG, MAPK	10
-Low-grade glioma	LGG, MYB/MYBL1	23
+Low-grade glioma	LGG, KIAA1549-BRAF, RTK	27
+Low-grade glioma	LGG, KIAA1549-BRAF, other MAPK	19
+Low-grade glioma	LGG, MAPK	11
+Low-grade glioma	LGG, MYB/MYBL1	24
 Low-grade glioma	LGG, MYB/MYBL1, other MAPK	2
-Low-grade glioma	LGG, NF1-germline	31
+Low-grade glioma	LGG, NF1-germline	32
 Low-grade glioma	LGG, NF1-germline, BRAF V600E	1
-Low-grade glioma	LGG, NF1-germline, CDKN2A/B	10
-Low-grade glioma	LGG, NF1-germline, FGFR	10
+Low-grade glioma	LGG, NF1-germline, CDKN2A/B	11
+Low-grade glioma	LGG, NF1-germline, FGFR	11
 Low-grade glioma	LGG, NF1-germline, RTK, FGFR	3
 Low-grade glioma	LGG, NF1-germline, other MAPK	3
-Low-grade glioma	LGG, NF1-somatic	14
+Low-grade glioma	LGG, NF1-somatic	15
 Low-grade glioma	LGG, NF1-somatic, FGFR	25
 Low-grade glioma	LGG, NF1-somatic, IDH	2
 Low-grade glioma	LGG, NF1-somatic, NF1-germline	18
 Low-grade glioma	LGG, NF1-somatic, NF1-germline, CDKN2A/B	3
 Low-grade glioma	LGG, NF1-somatic, NF1-germline, FGFR	6
 Low-grade glioma	LGG, NF1-somatic, RTK	1
-Low-grade glioma	LGG, RTK	61
-Low-grade glioma	LGG, RTK, BRAF V600E	5
+Low-grade glioma	LGG, RTK	67
+Low-grade glioma	LGG, RTK, BRAF V600E	6
 Low-grade glioma	LGG, RTK, CDKN2A/B	6
-Low-grade glioma	LGG, To be classified	74
-Low-grade glioma	LGG, other MAPK	92
+Low-grade glioma	LGG, To be classified	75
+Low-grade glioma	LGG, other MAPK	96
 Low-grade glioma	LGG, other MAPK, CDKN2A/B	3
 Low-grade glioma	LGG, other MAPK, H3	3
 Low-grade glioma	LGG, other MAPK, IDH	2
-Low-grade glioma	LGG, wildtype	142
+Low-grade glioma	LGG, wildtype	150
 Low-grade glioma	SEGA, RTK	4
 Low-grade glioma	SEGA, wildtype	6
-Medulloblastoma	MB, Group3	237
-Medulloblastoma	MB, Group4	353
-Medulloblastoma	MB, SHH	257
-Medulloblastoma	MB, To be classified	62
-Medulloblastoma	MB, WNT	81
+Medulloblastoma	MB, Group3	245
+Medulloblastoma	MB, Group4	365
+Medulloblastoma	MB, SHH	265
+Medulloblastoma	MB, To be classified	63
+Medulloblastoma	MB, WNT	83
 Neuroblastoma	NBL, MYCN amplified	478
 Neuroblastoma	NBL, MYCN non-amplified	514
 Neuroblastoma	NBL, To be classified	608
@@ -143,10 +143,10 @@ Pineoblastoma	PB, Group 1	23
 Pineoblastoma	PB, Group 2	11
 Pineoblastoma	PB, MYC/FOXR2	11
 Pineoblastoma	PB, To be classified	22
-Pleomorphic xanthoastrocytoma	HGG, PXA	50
+Pleomorphic xanthoastrocytoma	HGG, PXA	52
 Pleomorphic xanthoastrocytoma	HGG, PXA, TP53	4
 Pleomorphic xanthoastrocytoma	LGG, To be classified	5
 Rosette-forming glioneuronal tumor	GNT, FGFR	5
 Rosette-forming glioneuronal tumor	GNT, other MAPK, FGFR	3
-Subependymal Giant Cell Astrocytoma	SEGA, To be classified	29
+Subependymal Giant Cell Astrocytoma	SEGA, To be classified	30
 Subependymal Giant Cell Astrocytoma	SEGA, wildtype	15

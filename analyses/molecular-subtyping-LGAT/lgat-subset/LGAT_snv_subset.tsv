@@ -267,7 +267,7 @@ BS_9KKCWQGX	PT_MFNW2QEB_7316-9448_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	
 BS_9KKHJ6T7	PT_773ZPTEB_7316-9438_Solid Tissue_Progressive	No	No	No	No	No	No	No	No	No
 BS_9M49SGAQ	PT_4EDBZRM2_7316-1952_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_9MPFGWJV	PT_6DZB4WYH_7316-7083_Solid Tissue_Initial CNS Tumor	Yes	No	No	No	No	No	No	No	No
-BS_9N8NQ3RS	PT_C7SX8FRX_ET_6R1D00B5_Solid Tissue_NA	No	No	No	No	No	No	No	No	No
+BS_9N8NQ3RS	PT_C7SX8FRX_ET_6R1D00B5_Not Available_NA	No	No	No	No	No	No	No	No	No
 BS_9NF39QAW	PT_4XVA57J7_7316-1760_Solid Tissue_Initial CNS Tumor	Yes	No	No	No	No	No	No	No	No
 BS_9Q7695CZ	PT_FVBANNK9_7316-6395_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_9TPM9HC4	PT_XYS9EB2T_7316-6532_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
@@ -358,7 +358,7 @@ BS_D0RG5N5H	PT_JQX1NM90_7316-4559_Solid Tissue_Initial CNS Tumor	Yes	No	No	No	No
 BS_D0T0JZD2	PT_5YK63VX9_7316-9023_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_D2BZ25FW	PT_6N1QWCXE_7316-3169_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_D2G5ZBJ4	PT_4NPRED6Y_7316-3090_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
-BS_D3XVTABC	PT_PW40917E_ET_8WTTB3CN_Solid Tissue_NA	No	No	No	No	No	No	No	No	Yes
+BS_D3XVTABC	PT_PW40917E_ET_8WTTB3CN_Not Available_NA	No	No	No	No	No	No	No	No	Yes
 BS_D3Z495GB	PT_MGJJBG0T_7316-7667_Solid Tissue_Deceased	No	No	No	No	No	No	No	No	No
 BS_D59VEERR	PT_ER1C7KPB_7316-2691_Solid Tissue_Progressive	No	No	No	No	No	No	No	No	No
 BS_D67XNVBS	PT_CRWTNE04_7316-6963_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
@@ -540,7 +540,7 @@ BS_M500BT9F	PT_HXV713W6_7316-9439_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	
 BS_M626X1AR	PT_ZX2SJMFJ_7316-7515_Solid Tissue_Initial CNS Tumor	Yes	No	No	No	No	No	No	No	No
 BS_M8EBKZDG	PT_6MWPJ96F_7316-1928_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_M98BYTMF	PT_MWDQ3RA1_7316-348_Solid Tissue_Initial CNS Tumor	No	Yes	No	No	No	No	No	No	No
-BS_MB8XP01F	PT_J0SZ1SX5_ET_F8J8YJGK_Solid Tissue_Recurrence	No	No	No	No	No	No	No	No	No
+BS_MB8XP01F	PT_J0SZ1SX5_ET_F8J8YJGK_Not Available_Recurrence	No	No	No	No	No	No	No	No	No
 BS_MBHRYV39	PT_J1S28HCE_7316-5151_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_MBYEK6HV	PT_N8W26H19_7316-3061_Solid Tissue_Progressive	No	No	No	No	No	No	No	No	No
 BS_ME6ACB4H	PT_EHXD392P_7316-7077_Solid Tissue_Recurrence	No	No	No	No	No	No	Yes	No	No
@@ -550,6 +550,7 @@ BS_MFXPEXWE	PT_8EX2R1RB_7316-5277_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	
 BS_MGY2V5N4	PT_Z7YJ7MSM_7316-2864_Solid Tissue_Recurrence	No	No	No	No	No	No	No	No	No
 BS_MH8HE4GP	PT_C7B1TXJM_7316-2604_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No
 BS_MHGS0DQG	PT_AH6VGDWV_7316-7954_Solid Tissue_Recurrence	No	No	No	No	No	No	No	No	No
+BS_MJ9103TN	PT_22B55WYR_7316-9026_Solid Tissue_Initial CNS Tumor	Yes	No	No	No	No	No	No	No	No
 BS_MJJZJMTK	PT_MNHMAH0S_7316-880_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	Yes	No
 BS_MM9W5RV5	PT_F4Q7HW4H_7316-4556_Solid Tissue_Initial CNS Tumor	Yes	No	No	No	No	No	No	No	No
 BS_MQFW7E1K	PT_0449KSQ3_7316-6384_Solid Tissue_Initial CNS Tumor	No	No	No	No	No	No	No	No	No

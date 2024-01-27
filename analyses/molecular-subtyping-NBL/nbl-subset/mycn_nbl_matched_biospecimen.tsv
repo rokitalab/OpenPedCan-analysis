@@ -164,7 +164,6 @@ PASCDX	MYCN	Neuroblastoma	MYCN amp	222	amplification	BS_SYSZCYYZ	PASCDX_01_Solid
 PAUGJI	MYCN	Neuroblastoma	MYCN amp	68	amplification	BS_T5BAS1JN	PAUGJI_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_8MYS5HP4	266.48
 PATPPY	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_T9KJYH7M	PATPPY_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_8NQWYZHR	20.82
 PASFXC	MYCN	Neuroblastoma	MYCN non-amp	3	gain	BS_T9VPRPVA	PASFXC_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_3KGHX57D	21.59
-PT_K0YFKQ6V	NA	Neuroblastoma	peripheral neuroblastic tumor status post-chemotherapy	NA	NA	BS_TJ9KW884	PT_K0YFKQ6V_7316-7085_Solid Tissue_Initial CNS Tumor	7316-7085	1250838	PBTA	BS_A05MJ45Y	NA
 PASRTR	MYCN	Neuroblastoma	MYCN non-amp	3	gain	BS_TS07B3TC	PASRTR_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_5Z1QJPG6	58.98
 PASWMY	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_TT4PHFV7	PASWMY_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_3CTRC269	13
 PATDKL	NA	Ganglioneuroblastoma, intermixed	MYCN non-amp	NA	NA	BS_TWN989ZD	PATDKL_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_YF5NCTGA	3.77
@@ -173,7 +172,7 @@ PASXHE	MYCN	Neuroblastoma	MYCN non-amp	3	gain	BS_V4VGG98Y	PASXHE_01_Solid Tissue
 PASLPG	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_V7B79J5R	PASLPG_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_9C595Y9M	8.53
 PAUVML	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_VE90VKZY	PAUVML_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_591ZWG14	3.96
 PATGIW	NA	Ganglioneuroblastoma, intermixed	MYCN non-amp	NA	NA	BS_VKK21QBZ	PATGIW_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_JBKQ59CW	6.43
-PT_CQ9MX63F	NA	Neuroblastoma	Recurrent Neuroblastoma	NA	NA	BS_VV8Q40Y7	PT_CQ9MX63F_ET_2ZJ7FWEY_Solid Tissue_Recurrence	ET_2ZJ7FWEY	ET_2ZJ7FWEY_DGD_COMPT_12	DGD	BS_0X4NPYD3	NA
+PT_CQ9MX63F	NA	Neuroblastoma	Recurrent Neuroblastoma	NA	NA	BS_VV8Q40Y7	PT_CQ9MX63F_ET_2ZJ7FWEY_Not Available_Recurrence	ET_2ZJ7FWEY	ET_2ZJ7FWEY_DGD_COMPT_12	DGD	BS_0X4NPYD3	NA
 PATBCM	NA	Ganglioneuroblastoma, nodular	MYCN non-amp	NA	NA	BS_W09W6AAS	PATBCM_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_FE3BY6DT	5.2
 PASFIC	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_W22EEJCZ	PASFIC_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_DYHEFXJC	13.49
 PASFIC	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_W22EEJCZ	PASFIC_01_Solid Tissue_Primary Tumor	01	01A	GMKF	TARGET-30-PASFIC-01A-01R	33.72
@@ -193,7 +192,7 @@ PATDWR	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_XWKDJ2M6	PATDWR_01_Solid Tissue_Pr
 PAVDFW	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_Y3KBY0FY	PAVDFW_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_B2BWSTJV	0.51
 PASUFD	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_Y4V9JXG4	PASUFD_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_2XTH5QRD	5.99
 PASZRF	NA	Neuroblastoma	MYCN non-amp	NA	NA	BS_Y9BHAPG3	PASZRF_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_FRY5NFRY	17.59
-PT_K0YFKQ6V	NA	Neuroblastoma	peripheral neuroblastic tumor status post-chemotherapy	NA	NA	BS_YBXM34XV	PT_K0YFKQ6V_7316-7085_Solid Tissue_Initial CNS Tumor	7316-7085	7316-7085_DGD_COMPT_47	PBTA	BS_A05MJ45Y	NA
+PT_K0YFKQ6V	NA	Neuroblastoma	peripheral neuroblastic tumor status post-chemotherapy	NA	NA	BS_YBXM34XV	PT_K0YFKQ6V_7316-7085_Not Available_Initial CNS Tumor	7316-7085	7316-7085_DGD_COMPT_47	DGD	BS_A05MJ45Y	NA
 PT_9F58PWB3	MYCN	Neuroblastoma	neuroblastoma	26	amplification	BS_YC4RWPH3	PT_9F58PWB3_7316-3960_Solid Tissue_Progressive	7316-3960	1182252	PBTA	BS_ZJGXGR1V	179.59
 PATKGB	MYCN	Neuroblastoma	MYCN non-amp	3	loss	BS_YK9W04XG	PATKGB_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_9BYP1GZS	40.95
 PATVRG	MYCN	Neuroblastoma	MYCN non-amp	3	gain	BS_YPKSF86W	PATVRG_01_Solid Tissue_Primary Tumor	01	01A	GMKF	BS_83RF7CY6	11.96
