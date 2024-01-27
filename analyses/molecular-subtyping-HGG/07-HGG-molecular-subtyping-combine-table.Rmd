@@ -163,21 +163,30 @@ Add methylation to all_data_df.
 
 ```{r}
 methyl_df <- hgg_meta %>% 
-  filter(experimental_strategy == "Methylation", 
-         (grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) |
-             dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG", "PXA")), 
-         dkfz_v12_methylation_subclass_score >= 0.8) %>% 
+  filter(experimental_strategy == "Methylation" & 
+         # keep DKFZ scores >= 0.8 or NIH >= 0.9
+           (dkfz_v12_methylation_subclass_score >= 0.8 & (grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) | dkfz_v12_methylation_subclass %in% c("DHG_G34", "DMG_K27", "DMG_EGFR", "A_IDH_HG", "IHG", "HGAP", "A_IDH_HG", "PXA", "O_IDH", "OLIGOSARC_IDH", "HGAP")) | 
+            (NIH_v2_methylation_Superfamily_mean_score >= 0.9 & 
+             NIH_v2_methylation_Class_mean_score >= 0.9 & 
+             grepl("GBM_|DMG_|HGNET_|HGG_|PXA|O_IDH|OLIGO|AAP", NIH_v2_methylation_Class)))) %>% 
   # add all samples but only keep subtypes if score >=0.8
-  mutate(molecular_subtype_methyl = case_when(grepl("GBM_|pedHGG_|HGG_", dkfz_v12_methylation_subclass) ~ "HGG, H3 wildtype",
-    dkfz_v12_methylation_subclass == "DHG_G34"  ~ "DHG, H3 G35",
-    dkfz_v12_methylation_subclass == "DMG_K27"  ~ "DMG, H3 K28",
-    dkfz_v12_methylation_subclass == "DMG_EGFR"  ~ "DMG, EGFR",
-    dkfz_v12_methylation_subclass == "A_IDH_HG"  ~ "HGG, IDH",
-    dkfz_v12_methylation_subclass == "O_IDH" ~ "Oligo, IDH",
-    dkfz_v12_methylation_subclass == "IHG"  ~ "IHG",
-    dkfz_v12_methylation_subclass == "HGAP"  ~ "HGG, MAPK",
-    dkfz_v12_methylation_subclass == "PXA"  ~ "PXA",
-    TRUE ~ NA_character_)) %>% 
+  mutate(molecular_subtype_methyl = case_when(dkfz_v12_methylation_subclass_score >= 0.8 ~ dkfz_v12_methylation_subclass,
+                                              TRUE ~ NA_character_)) %>% 
+    # if NA subtype, now choose NIH classifier subtype
+  mutate(molecular_subtype_methyl = case_when(is.na(molecular_subtype_methyl) & NIH_v2_methylation_Superfamily_mean_score >= 0.9 & 
+                                         NIH_v2_methylation_Class_mean_score >= 0.9 ~ NIH_v2_methylation_Class,
+                                       TRUE ~ molecular_subtype_methyl)) %>%
+  # mutate subtypes:
+  mutate(molecular_subtype_methyl = case_when(grepl("GBM_MES|GBM_RTK|HGG_|HGAP|AAP|ped_", molecular_subtype_methyl) ~ "HGG, H3 wildtype",
+                                              molecular_subtype_methyl %in% c("DHG_G34", "GBM_G34")  ~ "DHG, H3 G35",
+                                              molecular_subtype_methyl == "DMG_K27"  ~ "DMG, H3 K28",
+                                              molecular_subtype_methyl %in% c("DMG_EGFR", "GBM_THAL(K27)")  ~ "DMG, EGFR",
+                                              molecular_subtype_methyl %in% c("A_IDH_HG", "GBM_IDH")  ~ "HGG, IDH",
+                                              molecular_subtype_methyl == "O_IDH" ~ "Oligo, IDH",
+                                              molecular_subtype_methyl == "OLIGOSARC_IDH" ~ "Oligosarcoma, IDH",
+                                              molecular_subtype_methyl == "IHG"  ~ "HGG, IHG",
+                                              molecular_subtype_methyl == "PXA"  ~ "HGG, PXA",
+                                              TRUE ~ molecular_subtype_methyl)) %>% 
   select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, sample_id, 
                 composition, match_id, molecular_subtype_methyl) %>%
   dplyr::rename(Kids_First_Biospecimen_ID_Methyl = Kids_First_Biospecimen_ID) %>%
@@ -425,14 +434,14 @@ RTK_list <- c(NTRK, ALK, MET, ROS1)
 ihg_df_biospecimen <- all_data_df %>% 
   # need free text
   left_join(unique(hgg_meta[,c("pathology_free_text_diagnosis", "match_id")])) %>%
-  filter(molecular_subtype_methyl == "IHG" | grepl("infant type hemispheric glioma with ALK fusion", pathology_free_text_diagnosis)) %>%
+  filter(molecular_subtype_methyl == "HGG, IHG" | grepl("infant type hemispheric glioma with ALK fusion", pathology_free_text_diagnosis)) %>%
   mutate(tmp_tag = "ihg_sample") %>%
   unique() %>%
   mutate(molecular_subtype = case_when((!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% NTRK ~ "IHG, NTRK-altered"),
                                        (!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% ALK ~ "IHG, ALK-altered"),
                                        (!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% ROS1 ~ "IHG, ROS1-altered"),
                                        (!is.na(tmp_tag) & Kids_First_Biospecimen_ID_RNA %in% MET ~ "IHG, MET-altered"),
-                                       (!is.na(tmp_tag) & !Kids_First_Biospecimen_ID_RNA %in% c(NTRK, ALK, MET, ROS1) & molecular_subtype_methyl == "IHG") ~ "IHG, To be classified")) %>%
+                                       (!is.na(tmp_tag) & !Kids_First_Biospecimen_ID_RNA %in% c(NTRK, ALK, MET, ROS1) & molecular_subtype_methyl == "HGG, IHG") ~ "IHG, To be classified")) %>%
   select(-c(tmp_tag, pathology_free_text_diagnosis)) %>%
   unique()
 ```
@@ -448,8 +457,8 @@ DNA methyaltion profile of "PXA" or free text PXA
 pxa_df_biospecimen <- all_data_df %>% 
   # need free text
     left_join(unique(hgg_meta[,c("pathology_free_text_diagnosis", "match_id")])) %>%
-  filter(molecular_subtype_methyl == "PXA" | grepl("pleomorphic xanthoastrocytoma|pxa", pathology_free_text_diagnosis) & BRAF_V600E %in% c("p.V600E", "p.V640E") & 
-           (CDKN2A_focal_status %in% c("deep deletion", "loss") | CDKN2B_focal_status %in% c("deep deletion", "loss"))) %>% 
+  filter(molecular_subtype_methyl == "HGG, PXA" | grepl("pleomorphic xanthoastrocytoma|pxa", pathology_free_text_diagnosis) & BRAF_V600E == "p.V600E" & 
+  (CDKN2A_focal_status %in% c("deep deletion", "loss") | CDKN2B_focal_status %in% c("deep deletion", "loss"))) %>% 
   mutate(molecular_subtype = "HGG, PXA") %>% 
   unique()
   

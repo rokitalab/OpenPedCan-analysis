@@ -334,7 +334,7 @@ all_subtype_clinical <- all_lgat_matched %>%
 # formatting molecular_subtype columns
   dplyr::mutate(molecular_subtype = case_when(
     # molecular_subtype is NA and we didn't find any canonical
-    # LGG variant in the DNA and no RNA abberations in RNA sample
+    # LGG variant in the DNA and no RNA aberrations in RNA sample
     # subtype should be WT
     (is.na(molecular_subtype) & Kids_First_Biospecimen_ID_DNA != "NA" & Kids_First_Biospecimen_ID_RNA != "NA") ~ "LGG, wildtype",
     # molecular_subtype is NA and we do not have a DNA sample
