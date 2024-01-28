@@ -7,7 +7,7 @@ output:
     toc: TRUE
     toc_float: TRUE
 params:
-  release: v13
+  release: v14
 ---
 
 Code adapted from: https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/tables/output_tables.Rmd
@@ -75,12 +75,13 @@ readme <- tribble(
 "cohort","Scientific cohort",paste(unique(histology_df$cohort), collapse = "; "),
 "cohort_participant_id","Scientific cohort participant ID","C#####-C######",
 "composition","Sample composition",paste(unique(histology_df$composition), collapse = "; "),
-"dkfz_v11_methylation_subclass","v11 DKFZ methylation-based CNS tumor subclass","text",
-"dkfz_v11_methylation_subclass_score","v11 DKFZ methylation-based CNS tumor subclass score","numeric",
-"dkfz_v12_methylation_subclass","v12 DKFZ methylation-based CNS tumor subclass score","text",
-"dkfz_v12_methylation_subclass_score","v12 DKFZ methylation-based CNS tumor subclass","numeric",
-"dkfz_v12_methylation_mgmt_status","v12 DKFZ MGMT promoter methylation status",paste(unique(histology_df$dkfz_v11_methylation_subclass), collapse = "; "),
-"dkfz_v12_methylation_mgmt_estimated","v12 DKFZ MGMT promoter methylation fraction","numeric",
+"dkfz_v11_methylation_subclass","v11b6 DKFZ methylation-based CNS tumor subclass","text",
+"dkfz_v11_methylation_subclass_score","v11b6 DKFZ methylation-based CNS tumor subclass score","numeric",
+"dkfz_v12_methylation_subclass","v12b6 DKFZ methylation-based CNS tumor subclass score","text",
+"dkfz_v12_methylation_subclass_score","v12b6 DKFZ methylation-based CNS tumor subclass","numeric",
+"dkfz_v12_methylation_mgmt_status","v12b6 DKFZ MGMT promoter methylation status",paste(unique(histology_df$dkfz_v11_methylation_subclass), collapse = "; "),
+"dkfz_v12_methylation_mgmt_estimated","v12b6 DKFZ MGMT promoter methylation fraction","numeric",
+"EFS_days","Event-free survival in days","numeric",
 "EFS_event_type", "Event considered when calculating EFS", paste(unique(histology_df$EFS_event_type), collapse = "; "),
 "ethnicity","Patient reported ethnicity",paste(unique(histology_df$ethnicity), collapse = "; "),
 "experimental_strategy","Sequencing strategy",paste(unique(histology_df$experimental_strategy), collapse = "; "),
@@ -95,14 +96,21 @@ readme <- tribble(
 "Kids_First_Participant_ID","Patient identifier, Kids First or other cohort","PT_########",
 "match_id", "ID used to match experimental strategies within an event per sample composition", "Concatenation of sample_id, tumor descriptor, composition, and cell line composition and passage if applicable",
 "molecular_subtype","Molecular subtype defined by WHO 2021 guidelines","text",
-"molecular_subtype_methyl","DKFZ v12 methylation class aligned to WHO 2021 subtypes","text",
+"molecular_subtype_methyl","DKFZ v12b6 or NIH v2 methylation class aligned to WHO 2021 subtypes","text",
+"NIH_v2_methylation_Superfamily", "NIH Bethesda CNS v2 methylation superfamily", "text",
+"NIH_v2_methylation_Superfamily_mean_score", "NIH Bethesda CNS v2 methylation superfamily score", "text",
+"NIH_v2_methylation_Superfamily_Consistency_score", "NIH Bethesda CNS v2 methylation superfamily consistency score", "text",
+"NIH_v2_methylation_Class", "NIH Bethesda CNS v2 methylation subtype", "text",
+"NIH_v2_methylation_Class_mean_score", "NIH Bethesda CNS v2 methylation subtype score", "text",
+"NIH_v2_methylation_Class_consistency_score", "NIH Bethesda CNS v2 methylation subtype consistency score", "text",
+"NIH_v2_methylation_Superfamily_match", "NIH Bethesda CNS v2 methylation superfamily match",paste(unique(histology_df$NIH_v2_methylation_Superfamily_match), collapse = "; "),
+"NIH_v2_methylation_Class_match", "NIH Bethesda CNS v2 methylation class match",paste(unique(histology_df$NIH_v2_methylation_Class_match), collapse = "; "),
 "normal_fraction","Theta2 normal DNA fraction estimate","numeric",
 "Notes","Free text field describing changes from `pathology_diagnosis` to `integrated_diagnosis` or manner in which molecular_subtype was determined","text",
 "OS_days","Overall survival in days","numeric",
 "OS_status","Overall survival status",paste(unique(histology_df$OS_status), collapse = "; "),
 "pathology_diagnosis","Reported and/or harmonized patient diagnosis from pathology reports","text",
 "pathology_free_text_diagnosis","Free text patient diagnosis from pathology reports","text",
-"EFS_days","Event-free survival in days","numeric",
 "primary_site","Bodily site(s) from which specimen was derived","text",
 "race","Patient reported race",paste(unique(histology_df$race), collapse = "; "),
 "reported_gender","Patient reported gender",paste(unique(histology_df$reported_gender), collapse = "; "),
