@@ -1,10 +1,34 @@
 # release notes
 
 ## current release
+### release-v14
+
+- Release date: 2023-01-29
+- Status: available
+- Overview of changes:
+    - This release adds the following data:
+        - 126 new methylation samples from PBTA
+        - 262 new miRNA-Seq samples from PBTA
+
+    - Files changed:
+        - Files added:
+            - `mirna-expression-counts.rds`
+            - `mirna-expression-cpm.rds`
+
+    - Analysis updates:
+        - Adds DGD CNS tumors to PBTA cohort
+        - Adds DGD composition as "Solid Tissue" for CNS tumors 
+        - Adds `CNS_region` for DGD CNS tumors
+        - Fix `extent_of_tumor_resection` bug originating from DGD samples having "Not Reported" tumor resection - internal [ticket](https://d3b.atlassian.net/browse/D3B-292)
+        - Fix `C4118901-Tumor` diagnosis from HGG-->LGG
+        - Add new NIH Bethesda methylation v2 classifier columns to histology file
+        - Use NIH classifier if unable to get high-confidence subtypes any other way for ATRT and HGG subtyping modules
+
+## previous release
 ### release-v13
 
 - Release date: 2023-01-03
-- Status:
+- Status: available
 - Overview of changes:
     - This release adds the following data:
         - Whole cell proteomic and phosphorylation data from HOPE and CPTAC
@@ -176,7 +200,6 @@ v13
 └── xgen-exome-research-panel-targets_hg38_ucsc_liftover.100bp_padded.sort.merged.bed
 ```
 
-## previous release
 ## release-v12
 - release date: 2023-04-30
 - status: available
