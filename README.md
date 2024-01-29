@@ -44,7 +44,7 @@ OpenPedCan project includes 17,382 GTEx RNA-Seq samples from GTEx v8 release, wh
 The Cancer Genome Atlas Program [(TCGA)](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga)
 TCGA is a landmark cancer genomics program that molecularly characterized over 20,000 primary cancer and matched normal samples spanning 33 cancer types.
 It is a joint effort between NCI and the National Human Genome Research Institute.
-OpenPedCan project includes 10,414 TCGA RNA-Seq samples (716 normal and 9698 tumor) from [33 cancer types](https://github.com/d3b-center/OpenPedCan-analysis/blob/0a5c14705a385c99a6a16e34e932e94009b7a11c/analyses/molecular-subtyping-integrate/results/tcga_cancer_groups.tsv) in the v12 release.
+OpenPedCan project includes 10,414 TCGA RNA-Seq samples (716 normal and 9698 tumor) from [33 cancer types](https://github.com/d3b-center/OpenPedCan-analysis/blob/0a5c14705a385c99a6a16e34e932e94009b7a11c/analyses/molecular-subtyping-integrate/results/tcga_cancer_groups.tsv) in the release.
 
 DGD [(CHOP P30 Panel)](https://www.chop.edu/cancer-panels)
 CHOP's [Division of Genome Diagnostics](https://www.chop.edu/centers-programs/division-genomic-diagnostics) has partnered with CCDI to add somatic panel sequencing data to OpenPedCan and the Molecular Targets Platform.
@@ -104,19 +104,22 @@ We invite researchers to join OpenPedCan to help rigorously characterize the gen
 
 ## Data Description
 
-The OpenPedCan dataset includes methylation array, gene expression, fusion, as well as somatic mutation, copy number, structural and variant results in combined tsv or matrix format.
+The OpenPedCan dataset includes methylation array, mRNA gene expression, miRNA gene expression, fusion, whole cell proteomics, phospho-proteomics, as well as somatic mutation, copy number, structural and variant results in combined tsv or matrix format.
 
-Below is a summary of biospecimens by sequencing strategy in v12 release:
+Below is a summary of biospecimens by sequencing strategy in v14 release:
 
 | Experimental Strategy | Normal | Tumor |
 | --------------------- | ------ | ----- |
-| Methylation           | 176    | 2481  |
-| Targeted Sequencing   | 500    | 1370  |
-| RNA-Seq               | 18113  | 13571 |
-| WGS                   | 2311   | 2575  |
-| WXS                   | 1293   | 1339  |
+| Methylation           | 176    | 2606  |
+| miRNA-Seq             | 0      | 262   |
+| Targeted Sequencing   | 823    | 2261  |
+| Phospho-Proteomics    | 0      | 407   |
+| Whole Cell Proteomics | 0      | 407   |
+| RNA-Seq               | 18115  | 13803 |
+| WGS                   | 3491   | 2936  |
+| WXS                   | 1288   | 1320  |
 
-[Here](https://github.com/d3b-center/OpenPedCan-analysis/blob/660cf72a1446a6518b48883cec9c8a72073947b5/analyses/molecular-subtyping-integrate/results/pediatric_cancer_groups.tsv) is a detailed table of pediatric cancer groups in the v12 release.
+[Here](https://github.com/d3b-center/OpenPedCan-analysis/blob/dev/analyses/molecular-subtyping-integrate/results/pediatric_cancer_groups.tsv) is a detailed table of pediatric cancer groups in the current release.
 
 ## Data Release Process
 
