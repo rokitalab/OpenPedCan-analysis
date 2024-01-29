@@ -13,7 +13,6 @@
     - Files changed:
         - Files added:
             - `mirna-expression-counts.rds`
-            - `mirna-expression-cpm.rds`
 
     - Analysis updates:
         - Adds DGD CNS tumors to PBTA cohort
