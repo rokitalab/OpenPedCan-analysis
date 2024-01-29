@@ -6,7 +6,7 @@ set -o pipefail
 # download methylation files from the OpenPedCan data v13 data release s3 bucket
 
 URL="https://d3b-openaccess-us-east-1-prd-pbta.s3.amazonaws.com/open-targets"
-RELEASE="v13"
+RELEASE="v14"
 
 # Set the working directory to the directory of this file
 cd "$(dirname "${BASH_SOURCE[0]}")"
