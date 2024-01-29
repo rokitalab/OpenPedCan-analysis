@@ -84,7 +84,7 @@ path_dx_df <- metadata %>%
          # Inclusion based on pathology free text diagnosis
          pathology_free_text_diagnosis %in% path_dx_list$path_free_text_exact |
          # Inclusion based on pathology free text diagnosis for IHG
-         pathology_free_text_diagnosis  %in% path_dx_list$IHG_path_free_path_dx)
+         pathology_free_text_diagnosis %in% path_dx_list$IHG_path_free_path_dx)
   
 
 # Now samples on the basis of the defining lesions
@@ -93,7 +93,9 @@ hgg_sample_ids <- hgg_lesions_df %>%
   pull(sample_id)
 
 lesions_df <- metadata %>%
-  filter(sample_id %in% hgg_sample_ids)
+  # remove exclude dx
+  filter(pathology_diagnosis != path_dx_list$exclude_path_dx,
+         sample_id %in% hgg_sample_ids)
 
 # Putting it all together now
 hgg_metadata_df <- bind_rows(

@@ -1,5 +1,5 @@
 # J. Taroni for CCDL 2019
-# Updated by Eric Wafula for Pediatric Open Targets 2022
+# Updated by Eric Wafula for Pediatric Open Targets 2022, Jo Lynne Rokita for D3b 2023/2024
 # This script is the second step in generating subset files for continous
 # integration. It takes the output of 01-get_biospecimen_identifiers.R and
 # subsets the OpenPedCan files and writes the new subset files to a 

@@ -470,7 +470,6 @@ SF11385	BS_AH3RVK53	PT_EN2RN5Y1	neutral	neutral	neutral	neutral	neutral	neutral	
 7316-1763	BS_WPCBK1EG	PT_Z4PJA6KT	neutral	neutral	gain	gain	gain	loss	gain	neutral	neutral	neutral	neutral	neutral
 7316-1763	BS_5C0SRKYC	PT_Z4PJA6KT	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-1763	BS_853PNV7P	PT_Z4PJA6KT	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
-7316-8104	BS_WGCRFSE0	PT_ZABG0DZ2	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-7498	BS_HPVAR2P6	PT_ZBHAAB3G	gain	gain	amplification	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral	neutral
 7316-8829	BS_BTSF22DW	PT_ZEQ3NS7K	loss	loss	neutral	neutral	gain	loss	neutral	neutral	neutral	neutral	neutral	neutral
 7316-8052	BS_PTW3FZXK	PT_ZFKQKGME	neutral	neutral	neutral	neutral	amplification	neutral	neutral	neutral	neutral	neutral	neutral	neutral
@@ -620,7 +619,6 @@ C4118163-Tumor	BS_W3AK2Q14	PT_XXGDDTZ4	loss	loss	loss	neutral	loss	loss	NA	NA	NA
 C4118286-Tumor	BS_41Q1D6PV	PT_SABX4PZ2	loss	loss	loss	loss	loss	loss	NA	NA	NA	NA	NA	NA
 C4118409-Tumor	BS_NVB25WVY	PT_827M0E97	neutral	neutral	neutral	neutral	neutral	neutral	NA	NA	NA	NA	NA	NA
 C4118778-Tumor	BS_D0QNVE94	PT_ZX5RFT4S	neutral	neutral	gain	neutral	gain	loss	NA	NA	NA	NA	NA	NA
-C4118901-Tumor	BS_Q9MMJ9H4	PT_H7X4M9CC	neutral	neutral	neutral	neutral	neutral	neutral	NA	NA	NA	NA	NA	NA
 C4119024-Tumor	BS_TE7Q5QWK	PT_BCZAK6Y7	gain	gain	neutral	neutral	loss	gain	NA	NA	NA	NA	NA	NA
 C4119147-Tumor	BS_09983DA9	PT_G6H7DC0C	neutral	neutral	neutral	neutral	neutral	neutral	NA	NA	NA	NA	NA	NA
 C4119393-Tumor	BS_VGTP4Z43	PT_9WSN93D0	neutral	neutral	gain	gain	neutral	neutral	NA	NA	NA	NA	NA	NA

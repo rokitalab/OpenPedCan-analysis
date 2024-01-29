@@ -4,7 +4,7 @@
 2. Run the shell script to generate subset files (from the root directory of the repository):
 
 ```
-RELEASE=<RELEASE> ./analyses/create-subset-files/create_subset_files.sh
+RELEASE=<RELEASE> ./analyses/create-subset-files/run_create_subset_files.sh
 ```
 Alternatively, change the default value for `RELEASE` in the shell script.
 

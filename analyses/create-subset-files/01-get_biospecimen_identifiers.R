@@ -1,5 +1,5 @@
 # J. Taroni for CCDL 2019
-# Updated by Eric Wafula for Pediatric Open Targets 2022
+# Updated by Eric Wafula for Pediatric Open Targets 2022, Jo Lynne Rokita for D3b 2023/2024
 # This script takes a directory of OpenPedCan files to subset and produces a list
 # of biospecimen IDs, saved as an RDS file, to use to subset the files for
 # use in continuous integration.
@@ -438,8 +438,8 @@ histology_df <- read_tsv(file.path(data_directory, "histologies.tsv"),
 
 # get the participant ID to biospecimen ID mapping
 id_mapping_df <- histology_df %>%
-  # remove exp strategies not needed for subset (proteomics)
-  dplyr::filter(!experimental_strategy %in% c("Whole Cell Proteomics", "Phospho-Proteomics", "Methylation")) %>%
+  # remove exp strategies not needed for subset (proteomics, methylation, mirna-seq)
+  dplyr::filter(!experimental_strategy %in% c("Whole Cell Proteomics", "Phospho-Proteomics", "Methylation", "miRNA-Seq")) %>%
   dplyr::select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID) %>%
   dplyr::distinct()
 

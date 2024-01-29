@@ -6,7 +6,7 @@ PT_XN1P30ZC	BS_0F11M2BJ	ET_AAGX4CBE	ET_AAGX4CBE_DGD_FUSIP_12	Targeted Sequencing
 PAUAEE	BS_0JBZPAGN	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	31.89	NA	PAUAEE_01_Solid Tissue_Primary Tumor
 PT_CQ3AXEKK	BS_0Q47HY02	ET_2AZE66GF	ET_2AZE66GF_DGD_FUSIP_77	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	NA	NA	NA	NA	NA	PT_CQ3AXEKK_ET_2AZE66GF_Not Available_Progressive
 PASMET	BS_0SC4QNTM	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN amp	NA	NA	86.26	NA	PASMET_01_Solid Tissue_Primary Tumor
-PT_CQ9MX63F	BS_0X4NPYD3	ET_2ZJ7FWEY	ET_2ZJ7FWEY_DGD_FUSIP_12	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	Recurrent Neuroblastoma	NA	NA	NA	NA	PT_CQ9MX63F_ET_2ZJ7FWEY_Solid Tissue_Recurrence
+PT_CQ9MX63F	BS_0X4NPYD3	ET_2ZJ7FWEY	ET_2ZJ7FWEY_DGD_FUSIP_12	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	Recurrent Neuroblastoma	NA	NA	NA	NA	PT_CQ9MX63F_ET_2ZJ7FWEY_Not Available_Recurrence
 PATUPN	BS_10MQQC5C	01	01B	RNA-Seq	stranded	Ganglioneuroblastoma, nodular	GMKF	MYCN non-amp	NA	NA	13.36	NA	PATUPN_01_Solid Tissue_Primary Tumor
 PAVNLK	BS_135GYQQD	01	01A	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	27.75	NA	PAVNLK_01_Solid Tissue_Primary Tumor
 PASBDN	BS_15ED4VDX	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	31.15	NA	PASBDN_01_Solid Tissue_Primary Tumor
@@ -50,7 +50,7 @@ PASKIS	BS_6WBAV14H	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN amp	NA	NA	334
 PASREY	BS_6Y5F3QGV	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	11.05	NA	PASREY_01_Solid Tissue_Primary Tumor
 PAUEXM	BS_6YYC47K2	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	40.38	NA	PAUEXM_01_Solid Tissue_Primary Tumor
 PAVJEG	BS_70H191SN	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	5.13	NA	PAVJEG_01_Solid Tissue_Primary Tumor
-PT_PE8M2298	BS_7DQNG6EM	ET_9W56H8D9	ET_9W56H8D9_DGD_FUSIP_10	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C6591	NA	NA	NA	NA	PT_PE8M2298_ET_9W56H8D9_Solid Tissue_Primary Tumor
+PT_PE8M2298	BS_7DQNG6EM	ET_9W56H8D9	ET_9W56H8D9_DGD_FUSIP_10	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C6591	NA	NA	NA	NA	PT_PE8M2298_ET_9W56H8D9_Not Available_Primary Tumor
 PT_Y44DNH44	BS_7KTGJPVN	ET_E5CPBMPG	ET_E5CPBMPG_DGD_FUSIP_73	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	NA	NA	NA	NA	NA	PT_Y44DNH44_ET_E5CPBMPG_Not Available_Progressive
 PAVGYW	BS_82Q78622	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	32.44	NA	PAVGYW_01_Solid Tissue_Primary Tumor
 PATVRG	BS_83RF7CY6	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	11.96	NA	PATVRG_01_Solid Tissue_Primary Tumor
@@ -88,7 +88,7 @@ PT_5ZPPR06P	BS_B9XBBA8D	ET_1QEB44PQ	ET_1QEB44PQ_DGD_FUSIP_31	Targeted Sequencing
 PATDCJ	BS_BBD7XS5N	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	13.3	NA	PATDCJ_01_Solid Tissue_Primary Tumor
 PARZBH	BS_BG0ZDND2	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	22.7	NA	PARZBH_01_Solid Tissue_Primary Tumor
 PATXTF	BS_BW9QBKEQ	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	36.56	NA	PATXTF_01_Solid Tissue_Primary Tumor
-PT_M7B5AK7P	BS_BZXFZKPE	ET_C7H15JCF	ET_C7H15JCF_DGD_FUSIP_07	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	neuroblastoma	NA	NA	NA	NA	PT_M7B5AK7P_ET_C7H15JCF_Not Available_Progressive
+PT_M7B5AK7P	BS_BZXFZKPE	ET_C7H15JCF	ET_C7H15JCF_DGD_FUSIP_07	Targeted Sequencing	exome_capture	Neuroblastoma	PBTA	neuroblastoma	NA	NA	NA	NA	PT_M7B5AK7P_ET_C7H15JCF_Solid Tissue_Progressive
 PAUMJN	BS_CCV91DR0	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN amp	NA	NA	66.35	NA	PAUMJN_01_Solid Tissue_Primary Tumor
 PASXWF	BS_CD6WEHG9	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	2.17	NA	PASXWF_01_Solid Tissue_Primary Tumor
 PT_D37GET2Y	BS_CDVX7X1N	ET_7ENC4CDH	ET_7ENC4CDH_DGD_FUSIP_33	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	NA	NA	NA	NA	NA	PT_D37GET2Y_ET_7ENC4CDH_Not Available_Primary Tumor
@@ -138,7 +138,7 @@ PT_936J0BZ5	BS_HEDCVFKC	ET_9ZA5FKKS	ET_9ZA5FKKS_DGD_FUSIP_84	Targeted Sequencing
 PAUCNL	BS_HEJAPS03	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	22.84	NA	PAUCNL_01_Solid Tissue_Primary Tumor
 PATNWM	BS_HEKMP7BH	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	22.37	NA	PATNWM_01_Solid Tissue_Primary Tumor
 PAULZB	BS_HHNQ3N2V	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	23.37	NA	PAULZB_01_Solid Tissue_Primary Tumor
-PT_WBXV5ZTN	BS_HP3E8Q9A	ET_74PMXWSS	ET_74PMXWSS_DGD_FUSIP_08	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	Olfactory Neuroblastoma	NA	NA	NA	NA	PT_WBXV5ZTN_ET_74PMXWSS_Solid Tissue_Primary Tumor
+PT_WBXV5ZTN	BS_HP3E8Q9A	ET_74PMXWSS	ET_74PMXWSS_DGD_FUSIP_08	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	Olfactory Neuroblastoma	NA	NA	NA	NA	PT_WBXV5ZTN_ET_74PMXWSS_Not Available_Primary Tumor
 PASLIH	BS_HW9CGZ29	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	20.29	NA	PASLIH_01_Solid Tissue_Primary Tumor
 PAUGVZ	BS_J9EH31NM	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	15.43	NA	PAUGVZ_01_Solid Tissue_Primary Tumor
 PT_FZHGKJ0H	BS_JBGZ7HHZ	7316-4033	724099	RNA-Seq	stranded	Ganglioneuroblastoma	PBTA	ganglioneuroblastoma, stage ii favorable histology non n-myc amplified	NA	NA	0.02	NA	PT_FZHGKJ0H_7316-4033_Solid Tissue_Initial CNS Tumor
@@ -210,7 +210,7 @@ PT_JPFR0046	BS_T88CNJ8A	ET_AX052MKD	ET_AX052MKD_DGD_FUSIP_62	Targeted Sequencing
 PT_MRTHX2AQ	BS_TD1ZEQ7R	7316-23	717107	RNA-Seq	stranded	Neuroblastoma	PBTA	neuroblastoma	NA	NA	3.35	NA	PT_MRTHX2AQ_7316-23_Solid Tissue_Recurrence
 PAUUWG	BS_TGDZ491N	01	01B	RNA-Seq	stranded	Ganglioneuroblastoma, intermixed	GMKF	MYCN non-amp	NA	NA	0.83	NA	PAUUWG_01_Solid Tissue_Primary Tumor
 PT_DF18YV38	BS_TSNBH5A6	ET_1CFP6054	ET_1CFP6054_DGD_FUSIP_64	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	Adrenal Gland Neuroblastoma	NA	NA	NA	NA	PT_DF18YV38_ET_1CFP6054_Not Available_Primary Tumor
-PT_5ZPPR06P	BS_V1Q5A9B1	7316-4214	7316-4214_DGD_FUSIP_96	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	neuroblastoma	NA	NA	NA	NA	PT_5ZPPR06P_7316-4214_Not Available_Initial CNS Tumor
+PT_5ZPPR06P	BS_V1Q5A9B1	7316-4214	7316-4214_DGD_FUSIP_96	Targeted Sequencing	exome_capture	Neuroblastoma	PBTA	neuroblastoma	NA	NA	NA	NA	PT_5ZPPR06P_7316-4214_Solid Tissue_Initial CNS Tumor
 PT_Y5YHX20Q	BS_V8AE965P	ET_06Q9BSNT	ET_06Q9BSNT_DGD_FUSIP_87	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	Neuroblastoma of the Adrenal Gland and Sympathetic Nervous System	NA	NA	NA	NA	PT_Y5YHX20Q_ET_06Q9BSNT_Not Available_Primary Tumor
 PAUNTY	BS_VNKT3ZZS	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN amp	NA	NA	312.62	NA	PAUNTY_01_Solid Tissue_Primary Tumor
 PT_EB0D3BXG	BS_VNWKNRY4	7316-3311	711752	RNA-Seq	stranded	Neuroblastoma	PBTA	Metastatic secondary tumors;Neuroblastoma	NA	NA	7.83	NA	PT_EB0D3BXG_7316-3311_Solid Tissue_Progressive
@@ -228,7 +228,7 @@ PASNHY	BS_WKPG4MH1	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA
 PAUMFN	BS_WKVJJF3F	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	33.64	NA	PAUMFN_01_Solid Tissue_Primary Tumor
 PASFCG	BS_WR5VE59B	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	24.8	NA	PASFCG_01_Solid Tissue_Primary Tumor
 PAUJTY	BS_X3F8NMS4	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	14.62	NA	PAUJTY_01_Solid Tissue_Primary Tumor
-PT_QHJSYTWJ	BS_XBQDMMB3	7316-8120	7316-8120_DGD_FUSIP_53	Targeted Sequencing	exome_capture	Neuroblastoma	DGD	neuroblastoma (schwannian stroma poor),	NA	NA	NA	NA	PT_QHJSYTWJ_7316-8120_Not Available_Initial CNS Tumor
+PT_QHJSYTWJ	BS_XBQDMMB3	7316-8120	7316-8120_DGD_FUSIP_53	Targeted Sequencing	exome_capture	Neuroblastoma	PBTA	neuroblastoma (schwannian stroma poor),	NA	NA	NA	NA	PT_QHJSYTWJ_7316-8120_Solid Tissue_Initial CNS Tumor
 PT_W7FK539G	BS_XBQZYS8G	7316-76	588349	RNA-Seq	stranded	Neuroblastoma	PBTA	Metastatic secondary tumors;Neuroblastoma	NA	NA	425.63	NA	PT_W7FK539G_7316-76_Solid Tissue_Progressive
 PATEEE	BS_XFFQR05Z	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	8.55	NA	PATEEE_01_Solid Tissue_Primary Tumor
 PATNUK	BS_XHSRBERM	01	01B	RNA-Seq	stranded	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	11.42	NA	PATNUK_01_Solid Tissue_Primary Tumor

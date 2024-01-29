@@ -49,10 +49,14 @@ IHG_path_free_path_dx <- histo %>%
   pull(pathology_free_text_diagnosis) %>%
   unique() 
 
+# create an exclude list - LCH has BRAF V600E, so may come in by mistake
+exclude_dx <- c("Langerhans Cell histiocytosis")
+
 # Create a list with the strings we'll use for inclusion.
 terms_list <- list(exact_path_dx = exact_path_dx,
                    path_free_text_exact = path_free_text_exact, 
-                   IHG_path_free_path_dx = IHG_path_free_path_dx)
+                   IHG_path_free_path_dx = IHG_path_free_path_dx,
+                   exclude_path_dx = exclude_dx)
 
 
 #Save this list as JSON.

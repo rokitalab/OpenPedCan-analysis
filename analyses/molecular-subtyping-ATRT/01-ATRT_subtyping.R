@@ -29,18 +29,29 @@ atrt_df <- histo %>%
   dplyr::filter(cohort %in% c("PBTA", "Kentucky", "DGD", "PPTC")) %>%
   dplyr::filter(pathology_diagnosis %in% path_dx_list_atrt$exact_path_dx)
 
-# Create a dataframe with sample_id and matched biospecimens id for RNA-Seq, WGS and methylation
+# Create a dataframe with sample_id and matched biospecimens id for all expt strategies
 atrt_df_methyl <- atrt_df %>% 
-  filter(experimental_strategy == "Methylation",
-         dkfz_v12_methylation_subclass_score >= 0.8,
-         grepl("ATRT_", dkfz_v12_methylation_subclass)) %>%
+  # pull either high-conf DKFZ subtypes OR high-conf NIH subtypes
+  filter(experimental_strategy == "Methylation" & 
+           (dkfz_v12_methylation_subclass_score >= 0.8 & 
+              grepl("ATRT_", dkfz_v12_methylation_subclass)) |
+          (NIH_v2_methylation_Superfamily_mean_score >= 0.9 & 
+             NIH_v2_methylation_Class_mean_score >= 0.9 & 
+             grepl("ATRT", NIH_v2_methylation_Class))
+          ) %>%
   select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, sample_id, composition, 
-         dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score) %>%
+         dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score,
+         NIH_v2_methylation_Class, NIH_v2_methylation_Superfamily_mean_score, NIH_v2_methylation_Class_mean_score) %>%
   # mutate ATRT subtypes from methyl so they are in the format needed later
-  mutate(molecular_subtype = case_when(dkfz_v12_methylation_subclass == "ATRT_MYC" ~ "ATRT, MYC",
-                                                   dkfz_v12_methylation_subclass == "ATRT_SHH" ~ "ATRT, SHH",
-                                                   dkfz_v12_methylation_subclass == "ATRT_TYR" ~ "ATRT, TYR",
-                                                   TRUE ~ dkfz_v12_methylation_subclass)) 
+  mutate(molecular_subtype = case_when(dkfz_v12_methylation_subclass_score >= 0.8 ~ dkfz_v12_methylation_subclass,
+                                                   TRUE ~ NA_character_)) %>%
+  # now if any are NA, then take the NIH classification
+  mutate(molecular_subtype = case_when(is.na(molecular_subtype) & 
+                                         NIH_v2_methylation_Superfamily_mean_score >= 0.9 & 
+                                         NIH_v2_methylation_Class_mean_score >= 0.9 ~ NIH_v2_methylation_Class,
+                                       TRUE ~ molecular_subtype)) %>%
+  # rename
+  mutate(molecular_subtype = gsub("^ATRT_", "ATRT, ", molecular_subtype))
 
 methyl_no_subtype <- atrt_df %>% 
   filter(experimental_strategy == "Methylation",
@@ -58,10 +69,11 @@ methyl_map <- atrt_df_methyl %>%
   mutate(molecular_subtype_methyl = molecular_subtype)
 
 # any dups? no
-length(unique(methyl_map$id)) == length(methyl_map$id)
+length(unique(methyl_map$match_id)) == length(methyl_map$match_id)
 
 
-# for the samples, whose cns_methlation_subclass_score >= 0.8 and dkfz_v12_methylation_subclass is one of the three types in ATRT_subtype_list, their molecular subtype are same as dkfz_v12_methylation_subclass
+# for the samples, whose dkfz_v12_methylation_subclass_score >= 0.8 and dkfz_v12_methylation_subclass is one of the three types in ATRT_subtype_list, 
+# their molecular subtypes are same as dkfz_v12_methylation_subclass
 # for the samples without methylation sequencing, their molecular subtype are "ATRT, To be classified."
 # For the samples fit all the other situations, their molecular subtype are "ATRT, To be classified."
 atrt_subtype_final <- atrt_df %>% 

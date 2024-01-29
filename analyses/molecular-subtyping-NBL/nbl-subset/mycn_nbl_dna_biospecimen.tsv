@@ -74,7 +74,7 @@ PATVKI	BS_6S50RDHT	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	MYCN	3	NA	gain	
 PARXDW	BS_75HW641M	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	MYCN	3	NA	gain	PARXDW_01_Solid Tissue_Primary Tumor
 PATXTF	BS_76SQJSHP	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	MYCN	5	NA	gain	PATXTF_01_Solid Tissue_Primary Tumor
 PT_5ZPPR06P	BS_76YE7XNX	7316-4214	1182240	WGS	NA	Neuroblastoma	PBTA	neuroblastoma	NA	NA	NA	NA	PT_5ZPPR06P_7316-4214_Solid Tissue_Initial CNS Tumor
-PT_EQCQNN1B	BS_79QMX6KP	7316-9256	1247410	WGS	NA	Neuroblastoma	PBTA	neuroblastic tumor, status post chemotherapy, residual	NA	NA	NA	NA	PT_EQCQNN1B_7316-9256_Solid Tissue_Progressive
+PT_EQCQNN1B	BS_79QMX6KP	7316-9256	1247410	WGS	NA	Neuroblastoma	PBTA	neuroblastic tumor, status post chemotherapy, residual	NA	NA	NA	NA	PT_EQCQNN1B_7316-9256_Solid Tissue_Initial CNS Tumor
 PAVINE	BS_7BJQNVK8	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	MYCN	3	NA	gain	PAVINE_01_Solid Tissue_Primary Tumor
 PATWPL	BS_7HRQNWJY	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	MYCN	3	NA	neutral	PATWPL_01_Solid Tissue_Primary Tumor
 PASAGA	BS_7MXT22QP	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	NA	NA	PASAGA_01_Solid Tissue_Primary Tumor
@@ -232,7 +232,7 @@ PATVYZ	BS_NGBKDYFB	01	01A	WGS	NA	Ganglioneuroblastoma, nodular	GMKF	MYCN non-amp
 PT_FZHGKJ0H	BS_NHMPQ8Q1	7316-4033	725404	WGS	NA	Ganglioneuroblastoma	PBTA	ganglioneuroblastoma, stage ii favorable histology non n-myc amplified	NA	NA	NA	NA	PT_FZHGKJ0H_7316-4033_Solid Tissue_Initial CNS Tumor
 PATNUK	BS_NK1FJNRG	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	NA	NA	PATNUK_01_Solid Tissue_Primary Tumor
 PATUPN	BS_NNH2A86D	01	01A	WGS	NA	Ganglioneuroblastoma, nodular	GMKF	MYCN non-amp	NA	NA	NA	NA	PATUPN_01_Solid Tissue_Primary Tumor
-PT_QHJSYTWJ	BS_NQ41MEBX	7316-8120	7316-8120_DGD_COMPT_53	Targeted Sequencing	NA	Neuroblastoma	DGD	neuroblastoma (schwannian stroma poor),	NA	NA	NA	NA	PT_QHJSYTWJ_7316-8120_Not Available_Initial CNS Tumor
+PT_QHJSYTWJ	BS_NQ41MEBX	7316-8120	7316-8120_DGD_COMPT_53	Targeted Sequencing	NA	Neuroblastoma	PBTA	neuroblastoma (schwannian stroma poor),	NA	NA	NA	NA	PT_QHJSYTWJ_7316-8120_Solid Tissue_Initial CNS Tumor
 PAUGVZ	BS_NQN1P6QY	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	NA	NA	PAUGVZ_01_Solid Tissue_Primary Tumor
 PT_QHJSYTWJ	BS_NT49M4RG	7316-8120	1182191	WGS	NA	Neuroblastoma	PBTA	neuroblastoma (schwannian stroma poor),	NA	NA	NA	NA	PT_QHJSYTWJ_7316-8120_Solid Tissue_Initial CNS Tumor
 PAUKYI	BS_NV00B2Y5	01	01A	WGS	NA	Ganglioneuroblastoma, nodular	GMKF	MYCN non-amp	NA	NA	NA	NA	PAUKYI_01_Solid Tissue_Primary Tumor
@@ -312,7 +312,7 @@ PAUDFR	BS_VCXG53E7	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	NA	NA	PAU
 PAUVML	BS_VE90VKZY	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	NA	NA	PAUVML_01_Solid Tissue_Primary Tumor
 PASJWG	BS_VGAKW5G6	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	MYCN	3	NA	gain	PASJWG_01_Solid Tissue_Primary Tumor
 PATGIW	BS_VKK21QBZ	01	01A	WGS	NA	Ganglioneuroblastoma, intermixed	GMKF	MYCN non-amp	NA	NA	NA	NA	PATGIW_01_Solid Tissue_Primary Tumor
-PT_CQ9MX63F	BS_VV8Q40Y7	ET_2ZJ7FWEY	ET_2ZJ7FWEY_DGD_COMPT_12	Targeted Sequencing	NA	Neuroblastoma	DGD	Recurrent Neuroblastoma	NA	NA	NA	NA	PT_CQ9MX63F_ET_2ZJ7FWEY_Solid Tissue_Recurrence
+PT_CQ9MX63F	BS_VV8Q40Y7	ET_2ZJ7FWEY	ET_2ZJ7FWEY_DGD_COMPT_12	Targeted Sequencing	NA	Neuroblastoma	DGD	Recurrent Neuroblastoma	NA	NA	NA	NA	PT_CQ9MX63F_ET_2ZJ7FWEY_Not Available_Recurrence
 PASDPN	BS_W05MC7QG	01	01A	WGS	NA	Ganglioneuroblastoma, intermixed	GMKF	MYCN non-amp	NA	NA	NA	NA	PASDPN_01_Solid Tissue_Primary Tumor
 PATBCM	BS_W09W6AAS	01	01A	WGS	NA	Ganglioneuroblastoma, nodular	GMKF	MYCN non-amp	NA	NA	NA	NA	PATBCM_01_Solid Tissue_Primary Tumor
 PASFIC	BS_W22EEJCZ	01	01A	WGS	NA	Neuroblastoma	GMKF	MYCN non-amp	NA	NA	NA	NA	PASFIC_01_Solid Tissue_Primary Tumor

@@ -39,7 +39,7 @@ Cyst	Other tumor
 Dermoid cyst	NA
 Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor
 Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma	NA
-Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	NA
+Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	Dysembryoplastic neuroepithelial tumor
 Dysplasia/Gliosis	NA
 Ependymoma;Metastatic secondary tumors	Ependymoma
 Epidermoid cyst	NA
@@ -59,7 +59,6 @@ Hamartoma	NA
 Hemangioma	NA
 Hematoma	NA
 High-grade glioma/astrocytoma (WHO grade III/IV)	High-grade glioma
-High-grade glioma/astrocytoma (WHO grade III/IV);Neurofibroma/Plexiform	High-grade glioma
 High-grade glioma/astrocytoma (WHO grade III/IV);Oligodendroglioma	High-grade glioma
 Histiocytic Tumor	Histiocytic tumor
 Hypocellular bone marrow	Other tumor
@@ -78,6 +77,7 @@ Low-grade glioma/astrocytoma (WHO grade I/II)	Low-grade glioma
 Lymphadenitis	NA
 Malignant PEComa	Other tumor
 Malignant peripheral nerve sheath tumor (MPNST)	Malignant peripheral nerve sheath tumor
+Malignant peripheral nerve sheath tumor (MPNST)	Neurofibroma/Plexiform
 Malignant peripheral nerve sheath tumor (MPNST);Neurofibroma/Plexiform	NA
 Melanocytoma	Melanocytic tumor
 Meningioma;Neurofibroma/Plexiform	NA
