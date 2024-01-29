@@ -8,7 +8,7 @@ set -o pipefail
 
 # Set defaults for release and biospecimen file name
 BIOSPECIMEN_FILE=${BIOSPECIMEN_FILE:-biospecimen_ids_for_subset.RDS}
-RELEASE=${RELEASE:-v13}
+RELEASE=${RELEASE:-v14}
 NUM_MATCHED=${NUM_MATCHED:-15}
 
 # This option controls whether or not the two larger MAF files are skipped as
@@ -42,7 +42,7 @@ fi
 # from the data release s3 bucket
 URL="https://d3b-openaccess-us-east-1-prd-pbta.s3.amazonaws.com/open-targets"
 PROBES="infinium.gencode.v39.probe.annotations.tsv.gz"
-if [ -f "${DATA_DIRECTORY}/${PROBES}" ]; then
+if [ -f "${DATA_DIRECTORY}/${RELEASE}/${PROBES}" ]; then
     echo "${PROBES} exists, skip downloading"
 else 
     echo "${PROBES} does not exist, downloading..."
