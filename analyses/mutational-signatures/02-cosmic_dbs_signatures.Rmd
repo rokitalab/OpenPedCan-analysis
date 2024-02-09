@@ -6,6 +6,9 @@ output:
 toc_float: TRUE
 author: Ryan Corbett
 date: 2022
+params:
+  snv_file: ""
+  output_Folder: ""
 ---
   
   **Purpose:**
@@ -40,18 +43,25 @@ library(deconstructSigs)
 library(tidyverse)
 ```
 
+## set options
+
+```{r}
+snv_file <- params$snv_file
+output_Folder <- params$output_Folder
+```
+
 Set up directory paths. 
 
 ```{r set directories}
 data_dir <- file.path("..", "..", "data")
 input_dir <- "input"
-results_dir <- "results"
-plots_dir <- "plots"
+results_dir <- file.path("results", output_Folder)
+plots_dir <- file.path("plots", output_Folder)
 figures_dir <- file.path("..", "..", "figures")
 cosmic_dbs_plots <- file.path(plots_dir, "cosmicv3_dbs")
 
-scratch_dir <- file.path("..", "..", "scratch", "mutational-signatures")
-cosmicv3_dbs_scratch <- file.path(scratch_dir, "cosmicv3_dbs")
+scratch_dir <- file.path("..", "..", "scratch", output_Folder, "mutational-signatures")
+cosmicv3_dbs_scratch <- file.path(scratch_dir, output_Folder, "cosmicv3_dbs")
 ```
 
 Make new directories for the results. 
@@ -76,7 +86,7 @@ if (!dir.exists(cosmicv3_dbs_scratch)) {
 
 ```{r}
 # Declare file path for consensus file
-consensus_file <- file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz")
+consensus_file <- file.path(data_dir, snv_file)
 ```
 
 Read in the consensus MAF file. 
