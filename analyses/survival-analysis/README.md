@@ -8,7 +8,7 @@ Detailed information about covariates can be found below.
 
 ### Usage
 ```sh
-bash run-survival.sh
+bash run_survival.sh
 ```
 
 ### Module contents
