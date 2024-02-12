@@ -13,24 +13,24 @@ This document contains information about all data files associated with this pro
 + **File description**
 	+ A *brief* one sentence description of what the file contains (e.g., bed files contain coordinates for features XYZ).
 
-### current release (v13)
+### current release (v14)
 | **File name** |  **File Type** | **Origin** | **File Description** |
 |---------------|----------------|------------------------|-----------------------|
 |`histologies-base.tsv` | Data file | Cohort-specific data files and databases | Clinical and sequencing metadata for each biospecimen
 |`histologies.tsv` | Modified data file | [`molecular-subtyping-integrate`](https://github.com/d3b-center/OpenPedCan-analysis/tree/master/analyses/molecular-subtyping-integrate) | `histologies-base.tsv` plus `molecular_subtype`, `cancer_group`, `integrated_diagnosis`, and `harmonized_diagnosis`
 |`intersect_cds_lancet_strelka_mutect_WGS.bed` | Analysis file | [`snv-callers`](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/analyses/snv-callers/) | Intersection of `gencode.v39.primary_assembly.annotation.gtf.gz` CDS with Lancet, Strelka2, Mutect2 regions
 |`intersect_strelka_mutect_WGS.bed` | Analysis file | [`snv-callers`](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/analyses/snv-callers/) | Intersection of `gencode.v39.primary_assembly.annotation.gtf.gz` CDS with Strelka2 and Mutect2 regions called
-|`efo-mondo-map.tsv` | Reference mapping file | [Manual collation](https://github.com/d3b-center/ticket-tracker/issues/88) | Mapping of EFO and MONDO codes to cancer groups
+|`efo-mondo-map.tsv` | Reference mapping file | Manual collation | Mapping of EFO and MONDO codes to cancer groups
 |`efo-mondo-map-prefill.tsv` | Modified reference mapping file | Analysis file generated in `molecular-subtyping-integrate` | Mapping of EFO and MONDO codes to cancer groups
-|`ensg-hugo-pmtl-mapping.tsv` | Reference mapping file | [Manual curation of PMTLv1.1 by FNL; RNA-Seq pipeline GTF mapping](https://github.com/d3b-center/ticket-tracker/issues/125) | File which maps Hugo Symbols to ENSEMBL gene IDs an each ENSG to the RMTL curated by FNL
-|`*.bed` | Reference file | [Manual collation](https://github.com/d3b-center/ticket-tracker/issues/258) | Bed files used for variant calling and are used for tmb calculation
-|`uberon-map-gtex-group.tsv` | Reference mapping file | [Manual collation](https://github.com/d3b-center/ticket-tracker/issues/85) | Mapping of UBERON codes to tissue types in GTEx broad groups
-|`uberon-map-gtex-subgroup.tsv` | Reference mapping file | [Manual collation](https://github.com/d3b-center/ticket-tracker/issues/85) | Mapping of UBERON codes to tissue types in GTEx subgroups
-|`methyl-beta-values.rds` | Processed data file | [methylation beta values](https://github.com/d3b-center/ticket-tracker/issues/269)| Methylation beta values
-|`methyl-m-values.rds` | Processed data file | [methylation m values](https://github.com/d3b-center/ticket-tracker/issues/269)| Methylation m values
-|`rna-isoform-expression-rsem-tpm.rds` | Processed data file | [RNA isoform TPM files](https://github.com/d3b-center/ticket-tracker/issues/341)| RNA isoform TPM files
-|`fusion-dgd.tsv` | Processed data file | [DGD merged fusion results](https://github.com/d3b-center/ticket-tracker/issues/249)| DGD merged fusion results
-|`fusion-arriba.tsv.gz` | Processed data file | [Gene fusion detection](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#gene-fusion-detection); [Workflow](https://github.com/kids-first/kf-rnaseq-workflow/blob/master/workflow/kfdrc_RNAseq_workflow.cwl) | Fusion - [Arriba TSV](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/doc/format/arriba-tsv-header.md), annotated with FusionAnnotator
+|`ensg-hugo-pmtl-mapping.tsv` | Reference mapping file | Manual curation of PMTLv1.1 by FNL; RNA-Seq pipeline GTF mapping | File which maps Hugo Symbols to ENSEMBL gene IDs an each ENSG to the RMTL curated by FNL
+|`*.bed` | Reference file | Manual collation | Bed files used for variant calling and are used for tmb calculation
+|`uberon-map-gtex-group.tsv` | Reference mapping file | Manual collation | Mapping of UBERON codes to tissue types in GTEx broad groups
+|`uberon-map-gtex-subgroup.tsv` | Reference mapping file | Manual collation | Mapping of UBERON codes to tissue types in GTEx subgroups
+|`methyl-beta-values.rds` | Processed data file | methylation beta values | Methylation beta values
+|`methyl-m-values.rds` | Processed data file | methylation m values | Methylation m values
+|`rna-isoform-expression-rsem-tpm.rds` | Processed data file | RNA isoform TPM files | RNA isoform TPM files
+|`fusion-dgd.tsv` | Processed data file | DGD merged fusion results | DGD merged fusion results
+|`fusion-arriba.tsv.gz` | Processed data file | Gene fusion detection](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#gene-fusion-detection); [Workflow](https://github.com/kids-first/kf-rnaseq-workflow/blob/master/workflow/kfdrc_RNAseq_workflow.cwl) | Fusion - [Arriba TSV](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/doc/format/arriba-tsv-header.md), annotated with FusionAnnotator
 |`fusion-starfusion.tsv.gz` | Processed data file | [Gene fusion detection](https://github.com/AlexsLemonade/OpenPBTA-manuscript/blob/master/content/03.methods.md#gene-fusion-detection); [Workflow](https://github.com/kids-first/kf-rnaseq-workflow/blob/master/workflow/kfdrc_RNAseq_workflow.cwl) | Fusion - [STARFusion TSV](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/doc/format/starfusion-tsv-header.md)
 |`fusion-annoFuse.tsv.gz` | Processed data file | AnnoFuse QC filtered fusion file; [Workflow](https://github.com/kids-first/kf-rnaseq-workflow/blob/master/workflow/kfdrc_annoFuse_wf.cwl) | Filter out normal and non-expressed fusions |
 |`fusion_summary_embryonal_foi.tsv` | Analysis file | [`fusion-summary`](ttps://github.com/d3b-center/OpenPedCan-analysis/tree/master/analyses/fusion-summary) | Summary file for presence of embryonal tumor fusions of interest |
@@ -72,6 +72,7 @@ This document contains information about all data files associated with this pro
 |`hope-protein-imputed-phospho-expression-abundance.tsv.gz`| Processed data | Adult and Young Adolescent (AYA) brain tumor phospho-proteomics expression (Project HOPE) | Imputed phospho-protein expression, total abundance
 |`hope-protein-imputed-prot-expression-abundance.tsv.gz`| Processed data | Adult and Young Adolescent (AYA) brain tumor protein expression (Project HOPE) | Imputed whole cell protein expression, total abundance
 |`rna-dna-qc-stats.tsv`| Reference QC file | Quality control metrics for WGS, WXS, DNA panel, and RNA-Seq samples | Used to filter samples for data release
+|`mirna-expression-counts.rds`| Processed data | miRNA expression counts | Generated from HTG-Seq
 `independent-specimens.methyl.primary.tsv` <br>
 `independent-specimens.methyl.relapse.tsv` <br>
 `independent-specimens.rnaseq.primary.eachcohort.tsv` <br>
