@@ -16,7 +16,7 @@ ABBREVIATED_MUTSIGS=${OPC_QUICK_MUTSIGS:-0}
 # Run only consensus testing file in CI, since tumor only snv is large
 IS_CI=${OPENPBTA_TESTING:-0}
 
-if [[ "$IS_CI" -eq "1" ]]; 
+if [[ "$IS_CI" -eq "1" ]]
 
 then
 
