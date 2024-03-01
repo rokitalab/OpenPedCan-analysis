@@ -1,9 +1,23 @@
 # release notes
 
 ## current release
+### release-v15
+- Release date: 2024-03-01
+- Status: available
+- Overview of changes:
+    - This release fixes a bug in the TCGA and GTEX collapse script per issues [#552](https://github.com/d3b-center/OpenPedCan-analysis/issues/552) and [#551](https://github.com/d3b-center/OpenPedCan-analysis/issues/551).
+    - Files changed:
+        - gtex_gene-counts-rsem-expected_count-collapsed.rds
+        - gtex_gene-expression-rsem-tpm-collapsed.rds
+        - tcga_gene-expression-rsem-tpm-collapsed.rds  
+    - Files added:
+        - tcga_gene-counts-rsem-expected_count-collapsed.rds
+
+
+## previous release
 ### release-v14
 
-- Release date: 2023-01-29
+- Release date: 2024-01-29
 - Status: available
 - Overview of changes:
     - This release adds the following data:
@@ -23,10 +37,9 @@
         - Add new NIH Bethesda methylation v2 classifier columns to histology file
         - Use NIH classifier if unable to get high-confidence subtypes any other way for ATRT and HGG subtyping modules
 
-## previous release
 ### release-v13
 
-- Release date: 2023-01-03
+- Release date: 2024-01-03
 - Status: available
 - Overview of changes:
     - This release adds the following data:
