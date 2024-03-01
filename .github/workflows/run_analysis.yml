@@ -15,8 +15,6 @@ jobs:
           sudo swapoff -a
           sudo rm -f /swapfile
           sudo apt clean
-          sudo apt autoremove --yes
-          sudo rm -rf /var/lib/apt/lists/*
           docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data for Consensus CN Manta
@@ -42,8 +40,6 @@ jobs:
           sudo swapoff -a
           sudo rm -f /swapfile
           sudo apt clean
-          sudo apt autoremove --yes
-          sudo rm -rf /var/lib/apt/lists/*
           docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data for Consensus CN
@@ -185,8 +181,6 @@ jobs:
           sudo swapoff -a
           sudo rm -f /swapfile
           sudo apt clean
-          sudo apt autoremove --yes
-          sudo rm -rf /var/lib/apt/lists/*
           docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data
