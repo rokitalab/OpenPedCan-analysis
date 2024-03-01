@@ -16,22 +16,25 @@ ABBREVIATED_MUTSIGS=${OPC_QUICK_MUTSIGS:-0}
 # Run only consensus testing file in CI, since tumor only snv is large
 IS_CI=${OPENPBTA_TESTING:-0}
 
-if [ "IS_CI" == "1" ]; 
+if [[ "$IS_CI" -eq "1" ]]; 
+
 then
-  # Run the SBS mutational signatures analysis using existing signatures on consensus SNV
+
+  echo "Run the SBS mutational signatures analysis using existing signatures on consensus SNV"
   Rscript -e "rmarkdown::render('01-known_signatures.Rmd', params = list(snv_file = \"snv-consensus-plus-hotspots.maf.tsv.gz\", output_Folder = \"ConsensusSNV\"), clean = TRUE)"
   mv 01-known_signatures.nb.html 01-ConsensusSNV_known_signatures.nb.html
 
-  # Run the mutational signatures analysis using COSMIC DBS signatures (v3.3)
+  echo "Run the mutational signatures analysis using COSMIC DBS signatures (v3.3) on consensus SNV"
   Rscript -e "rmarkdown::render('02-cosmic_dbs_signatures.Rmd', params = list(snv_file = \"snv-consensus-plus-hotspots.maf.tsv.gz\", output_Folder = \"ConsensusSNV\"), clean = TRUE)"
   mv 02-cosmic_dbs_signatures.nb.html 02-ConsensusSNV_cosmic_dbs_signatures.nb.html
 
-  # Run analysis of adult CNS mutational signatures
+  echo "Run analysis of adult CNS mutational signatures on consensus SNV"
   Rscript --vanilla 03-fit_cns_signatures.R \
     --snv_file snv-consensus-plus-hotspots.maf.tsv.gz \
     --output_Folder ConsensusSNV 
 
 else 
+
   # Run the SBS mutational signatures analysis using existing signatures on consensus SNV
   Rscript -e "rmarkdown::render('01-known_signatures.Rmd', params = list(snv_file = \"snv-consensus-plus-hotspots.maf.tsv.gz\", output_Folder = \"ConsensusSNV\"), clean = TRUE)"
   mv 01-known_signatures.nb.html 01-ConsensusSNV_known_signatures.nb.html
