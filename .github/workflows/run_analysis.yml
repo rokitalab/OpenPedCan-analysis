@@ -9,7 +9,14 @@ jobs:
     name: Run Analysis - Consensus CN Manta
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h
       - name: Download Data for Consensus CN Manta
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
@@ -27,7 +34,14 @@ jobs:
     needs: consensus_cn_manta
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h
       - name: Download Data for Consensus CN
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
@@ -131,6 +145,7 @@ jobs:
             
           - name: Mutational signatures
             entrypoint: mutational-signatures/run_mutational_signatures.sh
+            openpbta_testing: 1
 
           #- name: Immune Deconvolution
           #  entrypoint: immune-deconv/run-immune-deconv.sh
@@ -161,8 +176,14 @@ jobs:
           #  entrypoint: rnaseq-batch-correct/run_ruvseq.sh
 
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v4
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h
       - name: Download Data
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:

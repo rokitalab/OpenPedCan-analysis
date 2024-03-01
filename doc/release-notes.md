@@ -1,9 +1,139 @@
 # release notes
 
 ## current release
+### release-v15
+- Release date: 2024-03-01
+- Status: available
+- Overview of changes:
+    - This release fixes a bug in the TCGA and GTEX collapse script per issues [#552](https://github.com/d3b-center/OpenPedCan-analysis/issues/552) and [#551](https://github.com/d3b-center/OpenPedCan-analysis/issues/551).
+    - Files changed:
+        - gtex_gene-counts-rsem-expected_count-collapsed.rds
+        - gtex_gene-expression-rsem-tpm-collapsed.rds
+        - tcga_gene-expression-rsem-tpm-collapsed.rds  
+    - Files added:
+        - tcga_gene-counts-rsem-expected_count-collapsed.rds
+
+```
+v15
+├── 20038D-17Q6-01.regions.100bp_padded.bed
+├── S0274956_Padded_HG38.merged.bed
+├── S02972011_Covered_hg38_100.bed
+├── S04380110_Regions_hg38_100.bed
+├── S07604715_100bp_Padded.bed
+├── SeqCap_EZ_Exome_v2_Padded_HG38.merged.bed
+├── StrexomeLite_hg38_liftover_100bp_padded.bed
+├── Strexome_targets_intersect_sorted_padded100.GRCh38.bed
+├── TARGET_AML_NBL_WT_SeqVal79_attempt06_AllTracks_HG38_bed_expanded100.bed
+├── WGS.hg38.lancet.300bp_padded.bed
+├── WGS.hg38.lancet.unpadded.bed
+├── WGS.hg38.mutect2.vardict.unpadded.bed
+├── WGS.hg38.strelka2.unpadded.bed
+├── WGS.hg38.vardict.100bp_padded.bed
+├── agilent-v4-targets-ucsc.100bp_padded.bed
+├── ashion_exome_v2_targets_hg38_padded100.bed
+├── biospecimen_id_to_bed_map.tsv
+├── cnv-cnvkit.seg.gz
+├── cnv-consensus-gistic-only.seg.gz
+├── cnv-consensus-gistic.zip
+├── cnv-consensus.seg.gz
+├── cnv-controlfreec-tumor-only.tsv.gz
+├── cnv-controlfreec.tsv.gz
+├── cnv-gatk.seg.gz
+├── cnvkit_with_status.tsv
+├── consensus_seg_with_status.tsv
+├── consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only.tsv.gz
+├── consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz
+├── consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_x_and_y.tsv.gz
+├── cptac-protein-imputed-phospho-expression-log2-ratio.tsv.gz
+├── cptac-protein-imputed-prot-expression-abundance.tsv.gz
+├── cptac-protein-imputed-prot-expression-log2-ratio.tsv.gz
+├── efo-mondo-map.tsv
+├── ensg-hugo-pmtl-mapping.tsv
+├── fusion-annoFuse.tsv.gz
+├── fusion-arriba.tsv.gz
+├── fusion-dgd.tsv.gz
+├── fusion-putative-oncogenic.tsv
+├── fusion-starfusion.tsv.gz
+├── fusion_summary_embryonal_foi.tsv
+├── fusion_summary_ependymoma_foi.tsv
+├── fusion_summary_ewings_foi.tsv
+├── fusion_summary_lgg_hgg_foi.tsv
+├── gbm-protein-imputed-phospho-expression-abundance.tsv.gz
+├── gbm-protein-imputed-prot-expression-abundance.tsv.gz
+├── gene-counts-rsem-expected_count-collapsed.rds
+├── gene-expression-rsem-tpm-collapsed.rds
+├── gtex_gene-counts-rsem-expected_count-collapsed.rds
+├── gtex_gene-expression-rsem-tpm-collapsed.rds
+├── hg38_strelka.bed
+├── histologies-base.tsv
+├── histologies.tsv
+├── hope-protein-imputed-phospho-expression-abundance.tsv.gz
+├── hope-protein-imputed-prot-expression-abundance.tsv.gz
+├── independent-specimens.methyl.primary-plus.eachcohort.tsv
+├── independent-specimens.methyl.primary-plus.tsv
+├── independent-specimens.methyl.primary.eachcohort.tsv
+├── independent-specimens.methyl.primary.tsv
+├── independent-specimens.methyl.relapse.eachcohort.tsv
+├── independent-specimens.methyl.relapse.tsv
+├── independent-specimens.rnaseq.primary-plus-pre-release.tsv
+├── independent-specimens.rnaseq.primary-pre-release.tsv
+├── independent-specimens.rnaseq.relapse-pre-release.tsv
+├── independent-specimens.rnaseqpanel.primary-plus.eachcohort.tsv
+├── independent-specimens.rnaseqpanel.primary-plus.tsv
+├── independent-specimens.rnaseqpanel.primary.eachcohort.tsv
+├── independent-specimens.rnaseqpanel.primary.tsv
+├── independent-specimens.rnaseqpanel.relapse.eachcohort.tsv
+├── independent-specimens.rnaseqpanel.relapse.tsv
+├── independent-specimens.wgs.primary-plus.eachcohort.tsv
+├── independent-specimens.wgs.primary-plus.tsv
+├── independent-specimens.wgs.primary.eachcohort.tsv
+├── independent-specimens.wgs.primary.tsv
+├── independent-specimens.wgs.relapse.eachcohort.tsv
+├── independent-specimens.wgs.relapse.tsv
+├── independent-specimens.wgswxspanel.primary-plus.eachcohort.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary-plus.eachcohort.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.primary-plus.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary-plus.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.primary.eachcohort.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary.eachcohort.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.primary.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.primary.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.relapse.eachcohort.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.relapse.eachcohort.prefer.wxs.tsv
+├── independent-specimens.wgswxspanel.relapse.prefer.wgs.tsv
+├── independent-specimens.wgswxspanel.relapse.prefer.wxs.tsv
+├── infinium.gencode.v39.probe.annotations.tsv.gz
+├── intersect_cds_lancet_strelka_mutect_WGS.bed
+├── intersect_strelka_mutect_WGS.bed
+├── md5sum.txt
+├── mirna-expression-counts.rds
+├── nexterarapidcapture_exome_targetedregions_v1.2_hg38_100.bed
+├── onco1500-v2-targets-ucsc.100bp_padded.bed
+├── onco1500-v4-targets-ucsc.100bp_padded.bed
+├── onco1500-v6-targets-ucsc.100bp_padded.bed
+├── onco1500-v6a-targets-ucsc.100bp_padded.bed
+├── release-notes.md
+├── rna-dna-qc-stats.tsv
+├── rna-isoform-expression-rsem-tpm.rds
+├── snv-consensus-plus-hotspots.maf.tsv.gz
+├── snv-mutation-tmb-all.tsv
+├── snv-mutation-tmb-coding.tsv
+├── snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz
+├── splice-events-rmats.tsv.gz
+├── sv-manta.tsv.gz
+├── tcga_gene-counts-rsem-expected_count-collapsed.rds
+├── tcga_gene-expression-rsem-tpm-collapsed.rds
+├── truseq-exome-targeted-regions-manifest-v1-2_hg38_100.bed
+├── uberon-map-gtex-group.tsv
+├── uberon-map-gtex-subgroup.tsv
+├── wgs_canonical_calling_regions.hg38.bed
+└── xgen-exome-research-panel-targets_hg38_ucsc_liftover.100bp_padded.sort.merged.bed
+```
+
+## previous release
 ### release-v14
 
-- Release date: 2023-01-29
+- Release date: 2024-01-29
 - Status: available
 - Overview of changes:
     - This release adds the following data:
@@ -23,10 +153,9 @@
         - Add new NIH Bethesda methylation v2 classifier columns to histology file
         - Use NIH classifier if unable to get high-confidence subtypes any other way for ATRT and HGG subtyping modules
 
-## previous release
 ### release-v13
 
-- Release date: 2023-01-03
+- Release date: 2024-01-03
 - Status: available
 - Overview of changes:
     - This release adds the following data:
