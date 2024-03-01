@@ -17,6 +17,7 @@ jobs:
           sudo apt clean
           sudo apt autoremove --yes
           sudo rm -rf /var/lib/apt/lists/*
+          docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data for Consensus CN Manta
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
@@ -43,6 +44,7 @@ jobs:
           sudo apt clean
           sudo apt autoremove --yes
           sudo rm -rf /var/lib/apt/lists/*
+          docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data for Consensus CN
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
@@ -185,6 +187,7 @@ jobs:
           sudo apt clean
           sudo apt autoremove --yes
           sudo rm -rf /var/lib/apt/lists/*
+          docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
