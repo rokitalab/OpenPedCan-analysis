@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          df -h
       - name: Download Data for Consensus CN Manta
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
@@ -28,6 +34,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          df -h
       - name: Download Data for Consensus CN
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
@@ -162,7 +174,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: free disk space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          df -h
       - name: Download Data
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
