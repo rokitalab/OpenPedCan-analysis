@@ -9,7 +9,7 @@ jobs:
     name: Run Analysis - Consensus CN Manta
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Data for Consensus CN Manta
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
@@ -27,7 +27,7 @@ jobs:
     needs: consensus_cn_manta
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Data for Consensus CN
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
         with:
@@ -161,7 +161,7 @@ jobs:
           #  entrypoint: rnaseq-batch-correct/run_ruvseq.sh
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Download Data
         uses: docker://pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
