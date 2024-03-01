@@ -25,4 +25,5 @@ open_pbta_envs.txt
 # Expression files in subset directories
 analyses/molecular-subtyping*/*subset/*rsem-tpm*
 
-
+# vs code
+.vscode/
