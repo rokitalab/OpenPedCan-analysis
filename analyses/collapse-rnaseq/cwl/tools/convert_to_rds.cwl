@@ -6,7 +6,7 @@ doc: "Converts tsv table to rds"
 requirements:
   - class: ShellCommandRequirement
   - class: DockerRequirement
-    dockerPull: 'rocker/tidyverse:3.5.3'
+    dockerPull: 'pgc-images.sbgenomics.com/d3b-bixu/annofuse:0.92.0'
   - class: InlineJavascriptRequirement
   - class: InitialWorkDirRequirement
     listing:

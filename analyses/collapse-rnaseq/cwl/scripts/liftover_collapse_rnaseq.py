@@ -64,11 +64,12 @@ def collapse_dups(dup_gene_sym_dict):
     """
     Get highest mean for repeated gene symbols and output that row
     """
+    out_data = []
     for gene_sym in dup_gene_sym_dict:
         means = [mean(data) for data in dup_gene_sym_dict[gene_sym]]
         top_idx = means.index(max(means))
-        out_data = "{}\t{}\n".format(gene_sym, '\t'.join(list(map(str, dup_gene_sym_dict[gene_sym][top_idx]))))
-        return out_data
+        out_data.append("{}\t{}".format(gene_sym, '\t'.join(list(map(str, dup_gene_sym_dict[gene_sym][top_idx])))))
+    return out_data
 
 
 def main():
@@ -170,7 +171,7 @@ def main():
                 l += 1
         print("Processing {} repeat gene symbols and choosing highest mean expression".format(dup_ct), file=sys.stderr)
         out_data = collapse_dups(dup_gene_sym_dict)
-        out_collapse.write(out_data)
+        out_collapse.write("\n".join(out_data))
         print("Done!", file=sys.stderr)
 
 
