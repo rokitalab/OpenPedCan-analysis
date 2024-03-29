@@ -1,5 +1,5 @@
 #!/bin/bash
-# OPenPedCan 2021
+# OpenPedCan 2021
 # Eric Wafula
 set -e
 set -o pipefail
