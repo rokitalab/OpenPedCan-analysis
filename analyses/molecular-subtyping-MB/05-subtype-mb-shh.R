@@ -1,0 +1,275 @@
+# Author: Ryan Corbett & Jo Lynne Rokita
+# Function: Script to subtype MB SHH tumors 
+
+# Load packages
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(data.table)
+})
+
+# Set directory paths
+root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
+
+# Set file paths
+data_dir <- file.path(root_dir, "data")
+analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-MB")
+results_dir <- file.path(analysis_dir, "results")
+input_dir <- file.path(analysis_dir, "input")
+plots_dir <- file.path(analysis_dir, "plots")
+
+# set file paths
+hist_file <- file.path(data_dir, "histologies.tsv")
+cn_file <- file.path(data_dir, "consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz")
+maf_file <- file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz")
+tumorOnly_file <- file.path(data_dir, "snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz")
+expr_file <- file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds")
+cn_arm_file <- file.path(data_dir, "cnv-consensus-gistic", "broad_values_by_arm.txt")
+germline_file <- file.path(input_dir, "pbta_germline_plp_calls_autogvp_abridged_gnomad_popmax.tsv")
+germline_sv_file <- file.path(input_dir, "pbta_germline_svs.tsv")
+
+# load histologies and subset for mb shh
+hist <- read_tsv(hist_file)
+
+pbta_mb_shh <- hist %>%
+  filter(pathology_diagnosis == "Medulloblastoma",
+         cohort == "PBTA",
+         grepl("SHH", molecular_subtype)) %>%
+  mutate(age_at_diagnosis_years = age_at_diagnosis_days/365.25)
+
+# Load gene CN data and subset for GOIs
+cn_gene <- data.table::fread(cn_file) %>%
+  filter(biospecimen_id %in% pbta_mb_shh$Kids_First_Biospecimen_ID) %>%
+  filter(gene_symbol %in% c("MYCN", "GLI2", "PTEN", "PPM1D", "MDM4"),
+         status %in% c("amplification", "gain", "loss", "deep deletion"))
+
+# load maf files and subset for GOIs
+keep_cols <- c("Tumor_Sample_Barcode", "Hugo_Symbol", "Start_Position", "End_Position",
+               "HGVSp_Short", "HGVSc", "Consequence", "Variant_Classification")
+
+mutations <- data.table::fread(maf_file) %>%
+  select(all_of(keep_cols)) %>%
+  filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "U1")) %>%
+  filter(Tumor_Sample_Barcode %in% pbta_mb_shh$Kids_First_Biospecimen_ID)
+
+tumorOnly <- data.table::fread(tumorOnly_file) %>%
+  select(all_of(keep_cols)) %>%
+  filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "U1"))
+
+mutations <- mutations %>% 
+  bind_rows(tumorOnly) %>%
+  filter(Tumor_Sample_Barcode %in% pbta_mb_shh$Kids_First_Biospecimen_ID)
+
+# Load CN chromosome arm file
+broad_CNA <- read_tsv(cn_arm_file) %>%
+  column_to_rownames("Chromosome Arm")
+
+# Define function for filling in alterations data frame
+fill_df <- function(sample, ref_df, col_name, included_samples = NULL, default = 0){
+  if(is.na(sample)) { # no results for this sample
+    return(NA)
+  } else if(!is.null(included_samples) && !sample %in% included_samples) { # sample is not present in included samples, return NA
+    return(NA)
+  } else if(!sample %in% rownames(ref_df)){ # sample is not present in the reference data set, return default
+    return(default)
+  } else {
+    value <- ref_df[sample, col_name]
+    return(value)
+  }
+}
+
+broad_CNA_fill_df <- function(x, broad_CNA_data, arm, loss_gain = c("loss", "gain")){
+  biospecimen_DNA <- x[['Kids_First_Biospecimen_ID']]
+  # no DNA results for this sample
+  if(is.na(biospecimen_DNA)){
+    return(NA)
+  }
+  CNA_value <- broad_CNA_data[arm, biospecimen_DNA]
+  if(is.na(CNA_value) || is.null(CNA_value)){
+    return(NA)
+  } else if(CNA_value < 0 && loss_gain == "loss") {
+    return("1")
+  } else if(CNA_value > 0 && loss_gain == "gain"){
+    return(1)
+  } else {
+    return(0)
+  }
+}
+
+mutation_fill_df <- function(sample, ref_df, col_name, default = 0){
+  ref_df <-  ref_df %>% as_tibble()
+  if(is.na(sample)) { # no results for this sample
+    return(NA)
+  } else if(!sample %in% ref_df$Tumor_Sample_Barcode){ # sample is not present in the reference data set, return default
+    return(default)
+  } else {
+    value <- ref_df[ref_df$Tumor_Sample_Barcode == sample, col_name]
+    return(value)
+  }
+}
+
+# build molecular alteration data frame 
+
+mb_shh_data <- pbta_mb_shh %>%
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID,
+                match_id)
+
+# add arm gain/loss info
+for(arm_of_interest in c("2q", "2p", "9q", "9p", "10q", "14q", "17p")) {
+  mb_shh_data[paste0(arm_of_interest, "_loss")] <- apply(mb_shh_data, MARGIN = 1, FUN = function(x) 
+    broad_CNA_fill_df(x = x, broad_CNA_data = broad_CNA, arm = arm_of_interest, loss_gain = "loss"))
+  mb_shh_data[paste0(arm_of_interest, "_gain")] <- apply(mb_shh_data, MARGIN = 1, FUN = function(x) 
+    broad_CNA_fill_df(x = x, broad_CNA_data = broad_CNA, arm = arm_of_interest, loss_gain = "gain"))
+}
+
+# Add CN data
+for (goi in c("MYCN", "GLI2", "PTEN", "PPM1D", "MDM4")) {
+  cn_gene_filtered <- cn_gene %>%
+    filter(gene_symbol == goi) %>%
+    column_to_rownames("biospecimen_id")
+  mb_shh_data[,paste0("consensus_CN_", goi)] <- sapply(mb_shh_data$Kids_First_Biospecimen_ID, 
+                                                      function(x) fill_df(sample = x, ref_df = cn_gene_filtered, 
+                                                                          col_name = "status", default = NA_character_))
+}
+
+# Loop through GOIs to add SNV/INDEL consequences to data frame
+for (gene in c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "TP53", "U1")){
+  
+  if (gene == "TERT"){
+    
+    mutation_gene <- mutations %>% filter(Hugo_Symbol == "TERT",
+                                          grepl("5'Flank", Variant_Classification),
+                                          Start_Position %in% c("1295113","1295135"),
+                                          End_Position %in% c("1295113","1295135")) %>%
+      group_by(Tumor_Sample_Barcode) %>%
+      summarise(Consequences = str_c(Consequence, collapse = ";"))
+    
+  } else{
+    
+    mutation_gene <- mutations %>% filter(Hugo_Symbol == gene & grepl("frameshift|missense|stop|splice_acceptor|splice_donor", Consequence)) %>%
+      group_by(Tumor_Sample_Barcode) %>%
+      summarise(Consequences = str_c(Consequence, collapse = ";"))
+    
+  }
+
+  mb_shh_data[,paste0(gene, "_csq")] <- unlist(sapply(mb_shh_data$Kids_First_Biospecimen_ID,
+                                              function(x) mutation_fill_df(sample = x, ref_df = mutation_gene, 
+                                                                           col_name = 'Consequences', default = NA)))
+  
+}
+
+# Collapse somatic alteration data per match ID
+mb_shh_data_collapsed <- mb_shh_data %>%
+  group_by(Kids_First_Participant_ID, match_id) %>%
+  summarize_at(vars(`2q_loss`:TERT_csq), ~ paste0(., collapse = ':')) %>%
+  mutate(across(everything(), ~str_remove_all(., "NA:|:NA"))) %>%
+  mutate(across(everything(), ~str_replace(., "NA", NA_character_)))
+
+# Load germline SNV/INDEL and SV data, filter for GOIs, and merge
+germline <- read_tsv(germline_file) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_normal) %>%
+  left_join(hist %>% dplyr::select("Kids_First_Biospecimen_ID",
+                                   "Kids_First_Participant_ID")) %>%
+  dplyr::filter(Kids_First_Participant_ID %in% mb_shh_data$Kids_First_Participant_ID,
+                gene_symbol_vep %in% c("ELP1", "PTCH1",
+                                       "SUFU", "TP53")) %>%
+  dplyr::select(Kids_First_Participant_ID, gene_symbol_vep, variant_classification_vep) %>%
+  dplyr::rename(consequence = variant_classification_vep)
+
+germline_sv <- read_tsv(germline_sv_file) %>%
+  dplyr::rename(Kids_First_Biospecimen_ID = Kids_First_Biospecimen_ID_normal) %>%
+  left_join(hist %>% dplyr::select("Kids_First_Biospecimen_ID",
+                                   "Kids_First_Participant_ID")) %>%
+  dplyr::filter(Kids_First_Participant_ID %in% mb_shh_data$Kids_First_Participant_ID,
+                Hugo_Symbol_cpg %in% c("ELP1", "PTCH1",
+                                       "SUFU", "TP53")) %>%
+  dplyr::select(Kids_First_Participant_ID, Hugo_Symbol_cpg, Type) %>%
+  dplyr::rename(gene_symbol_vep = Hugo_Symbol_cpg,
+                consequence = Type)
+
+germline <- germline %>%
+  bind_rows(germline_sv) %>%
+  pivot_wider(names_from = gene_symbol_vep, values_from = consequence) %>%
+  rename_with(~paste0(., "_germline_plp"), -1)
+
+# Load expr data
+expr <- readRDS(expr_file)
+
+genes_of_interest = c("MYCN", "GLI2", "PTEN")
+subset_expr <- expr[genes_of_interest, mb_shh_data$Kids_First_Biospecimen_ID[mb_shh_data$Kids_First_Biospecimen_ID %in% colnames(expr)]]
+
+# calculate max TPM per match ID and calculate z-scores
+expr_df <- as.data.frame(t(subset_expr)) %>%
+  rownames_to_column("Kids_First_Biospecimen_ID") %>%
+  dplyr::rename(MYCN_TPM = MYCN,
+                GLI2_TPM = GLI2,
+                PTEN_TPM = PTEN) %>%
+  left_join(mb_shh_data) %>%
+  group_by(Kids_First_Participant_ID, match_id) %>%
+  summarize_at(vars(MYCN_TPM:PTEN_TPM), max) %>%
+  ungroup() %>%
+  mutate(MYCN_TPM_zscore = as.vector(scale(MYCN_TPM)),
+         GLI2_TPM_zscore = as.vector(scale(GLI2_TPM)),
+         PTEN_TPM_zscore = as.vector(scale(PTEN_TPM))) %>%
+  unique() %>%
+  mutate(MYCN_exp_status = ifelse(MYCN_TPM_zscore >= 2, "MYCN high", NA_character_),
+         GLI2_exp_status = ifelse(GLI2_TPM_zscore >= 2, "GLI2 high", NA_character_),
+         PTEN_exp_status = ifelse(PTEN_TPM_zscore < -2, "PTEN low", NA_character_))
+
+# Create subtypes df that:
+# 1) calculates average methylations score per match id
+# 2) redefines SHH subtypes as alpha (3), beta (1), gamma (2), delta (4)
+# 3) append molecular alterations data
+# 4) attempts to classify samples without methylation classifiers into one of the four SHH subtypes using molecular and age criteria 
+subtypes <- pbta_mb_shh %>%
+  select(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, molecular_subtype, dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score) %>%
+  unique() %>%
+  group_by(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, molecular_subtype) %>%
+  summarize(
+    dkfz_v12_methylation_subclass_collapsed = if(all(is.na(dkfz_v12_methylation_subclass))) NA_character_ 
+    else paste(unique(na.omit(dkfz_v12_methylation_subclass)), collapse = "; "),
+    dkfz_v12_methylation_subclass_score_mean = mean(dkfz_v12_methylation_subclass_score, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(across(where(is.numeric), ~replace(., is.nan(.), NA)),
+         SHH_subtype = case_when(dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_1" ~ "SHH_beta",
+                                 dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_2" ~ "SHH_gamma",
+                                 dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" ~ "SHH_alpha",
+                                 dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_4" ~ "SHH_delta",
+                                 TRUE ~ NA_character_)) %>%
+  left_join(mb_shh_data_collapsed) %>%
+  left_join(germline) %>%
+  left_join(expr_df) %>%
+  unique() %>%
+  select(-match_id) %>%
+  # clean up subclass and scores
+  mutate(dkfz_v12_methylation_subclass_score_mean = case_when(dkfz_v12_methylation_subclass_score_mean < 0.7 & 
+                                                                !grepl("SHH", dkfz_v12_methylation_subclass_collapsed) ~ NA_integer_,
+                                                              TRUE ~ dkfz_v12_methylation_subclass_score_mean),
+         dkfz_v12_methylation_subclass_collapsed = case_when((dkfz_v12_methylation_subclass_score_mean < 0.7 | is.na(dkfz_v12_methylation_subclass_score_mean)) & 
+                                                               !grepl("SHH", dkfz_v12_methylation_subclass_collapsed) ~ NA_character_,
+                                                             TRUE ~ dkfz_v12_methylation_subclass_collapsed)) %>%
+  mutate(final_shh_subtype = case_when(
+                                        # For SHH alpha: >3 years AND (MYCN OR GLI2 amplification OR TPM>=2 OR chr17p loss)
+                                        SHH_subtype == "SHH_alpha" |
+                                         (age_at_diagnosis_years > 3 &
+                                          is.na(SHH_subtype) &
+                                         (grepl("amplification", consensus_CN_MYCN) |
+                                         grepl("amplification", consensus_CN_GLI2) |
+                                         MYCN_TPM_zscore >= 2 |
+                                         GLI2_TPM_zscore >= 2 |
+                                         `17p_loss` == 1)) ~ "SHH_alpha",
+                                       # For SHH delta: (TERT promoter AND DDX3X mutations) OR (>5 years AND (TERT OR DDX3X mutations))
+                                        SHH_subtype == "SHH_delta" |
+                                         (!is.na(TERT_csq) & !is.na(DDX3X_csq)) |
+                                         (age_at_diagnosis_years > 5 & (!is.na(TERT_csq) | !is.na(DDX3X_csq))) ~ "SHH_delta",
+                                       # For SHH beta: <5 years AND (KMT2D mutations OR PTEN loss/deletion OR PTEN TPM<-2 OR chr2 gain)
+                                       SHH_subtype == "SHH_beta" |
+                                         (age_at_diagnosis_years < 5 &
+                                          is.na(SHH_subtype) &
+                                         (!is.na(KMT2D_csq) |
+                                          grepl("loss|deep deletion", consensus_CN_PTEN)|
+                                          PTEN_TPM_zscore < -2) |
+                                          (`2p_gain` == 1 & `2q_gain` == 1)) ~ "SHH_beta",
+                                       TRUE ~ NA_character_)) %>%
+  arrange(final_shh_subtype) %>%
+  write_csv(file.path(results_dir, "mb_shh_subtype_summary.csv"))
