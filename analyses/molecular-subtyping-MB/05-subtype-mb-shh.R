@@ -251,7 +251,7 @@ subtypes <- pbta_mb_shh %>%
   mutate(final_shh_subtype = case_when(
                                         # For SHH alpha: >3 years AND (MYCN OR GLI2 amplification OR TPM>=2 OR chr17p loss)
                                         SHH_subtype == "SHH_alpha" |
-                                         (age_at_diagnosis_years > 3 &
+                                         (age_at_diagnosis_years >= 2 &
                                           is.na(SHH_subtype) &
                                          (grepl("amplification", consensus_CN_MYCN) |
                                          grepl("amplification", consensus_CN_GLI2) |
@@ -270,6 +270,8 @@ subtypes <- pbta_mb_shh %>%
                                           grepl("loss|deep deletion", consensus_CN_PTEN)|
                                           PTEN_TPM_zscore < -2) |
                                           (`2p_gain` == 1 & `2q_gain` == 1)) ~ "SHH_beta",
+                                       # Add gamma subtype only for high confidence methylation samples
+                                       SHH_subtype == "SHH_gamma" ~ "SHH_gamma",
                                        TRUE ~ NA_character_)) %>%
   arrange(final_shh_subtype) %>%
   write_csv(file.path(results_dir, "mb_shh_subtype_summary.csv"))
