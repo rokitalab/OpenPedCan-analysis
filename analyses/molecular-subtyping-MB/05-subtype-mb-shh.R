@@ -18,7 +18,8 @@ input_dir <- file.path(analysis_dir, "input")
 plots_dir <- file.path(analysis_dir, "plots")
 
 # set file paths
-hist_file <- file.path(data_dir, "histologies.tsv")
+hist_file <- file.path(data_dir, "histologies-base.tsv")
+mb_file <- file.path(results_dir, "MB_molecular_subtype.tsv")
 cn_file <- file.path(data_dir, "consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_only_autosomes.tsv.gz")
 maf_file <- file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz")
 tumorOnly_file <- file.path(data_dir, "snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz")
@@ -28,13 +29,8 @@ germline_file <- file.path(input_dir, "pbta_germline_plp_calls_autogvp_abridged_
 germline_sv_file <- file.path(input_dir, "pbta_germline_svs.tsv")
 
 # load histologies and subset for mb shh
-hist <- read_tsv(hist_file)
-
-pbta_mb_shh <- hist %>%
-  filter(pathology_diagnosis == "Medulloblastoma",
-         cohort == "PBTA",
-         grepl("SHH", molecular_subtype)) %>%
-  mutate(age_at_diagnosis_years = age_at_diagnosis_days/365.25)
+pbta_mb_shh <- read_tsv(mb_file) %>%
+  filter(grepl("SHH", molecular_subtype))
 
 # Load gene CN data and subset for GOIs
 cn_gene <- data.table::fread(cn_file) %>%
@@ -220,7 +216,9 @@ expr_df <- as.data.frame(t(subset_expr)) %>%
 # 2) redefines SHH subtypes as alpha (3), beta (1), gamma (2), delta (4)
 # 3) append molecular alterations data
 # 4) attempts to classify samples without methylation classifiers into one of the four SHH subtypes using molecular and age criteria 
-subtypes <- pbta_mb_shh %>%
+hist_mb_shh <- read_tsv(hist_file) %>%
+  dplyr::filter(pathology_diagnosis == "Medulloblastoma") %>%
+  dplyr::mutate(age_at_diagnosis_years = age_at_diagnosis_days/365.25) %>%
   select(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, molecular_subtype, dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score) %>%
   unique() %>%
   group_by(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, molecular_subtype) %>%
@@ -235,7 +233,11 @@ subtypes <- pbta_mb_shh %>%
                                  dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_2" ~ "SHH_gamma",
                                  dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" ~ "SHH_alpha",
                                  dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_4" ~ "SHH_delta",
-                                 TRUE ~ NA_character_)) %>%
+                                 TRUE ~ NA_character_))
+
+subtypes <- pbta_mb_shh %>%
+  distinct(match_id, .keep_all = TRUE) %>%
+  left_join(hist_mb_shh, by = "match_id") %>%
   left_join(mb_shh_data_collapsed) %>%
   left_join(germline) %>%
   left_join(expr_df) %>%
@@ -274,4 +276,4 @@ subtypes <- pbta_mb_shh %>%
                                        SHH_subtype == "SHH_gamma" ~ "SHH_gamma",
                                        TRUE ~ NA_character_)) %>%
   arrange(final_shh_subtype) %>%
-  write_csv(file.path(results_dir, "mb_shh_subtype_summary.csv"))
+  write_tsv(file.path(results_dir, "mb_shh_subtype_summary.tsv"))
