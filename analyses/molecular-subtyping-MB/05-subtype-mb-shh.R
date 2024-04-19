@@ -39,7 +39,7 @@ mb_shh <- read_tsv(mb_file) %>%
 # Load gene CN data and subset for GOIs
 cn_gene <- data.table::fread(cn_file) %>%
   filter(biospecimen_id %in% mb_shh$Kids_First_Biospecimen_ID) %>%
-  filter(gene_symbol %in% c("MYCN", "GLI2", "PTEN", "PPM1D", "MDM4"),
+  filter(gene_symbol %in% c("MYCN", "GLI2", "CCND2", "PTEN", "PPM1D", "MDM4", "TP53"),
          status %in% c("amplification", "gain", "loss", "deep deletion"))
 
 # load maf files and subset for GOIs
@@ -48,16 +48,26 @@ keep_cols <- c("Tumor_Sample_Barcode", "Hugo_Symbol", "Start_Position", "End_Pos
 
 mutations <- data.table::fread(maf_file) %>%
   select(all_of(keep_cols)) %>%
-  filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "U1")) %>%
+  filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT") |
+           # for U1 mutations, keep only those at 3rd and 5th nucleotide
+           grepl("RN*U1-*", Hugo_Symbol) & HGVSc %in% c("n.3A>G", "n.5A>G")) %>%
   filter(Tumor_Sample_Barcode %in% mb_shh$Kids_First_Biospecimen_ID)
 
 tumorOnly <- data.table::fread(tumorOnly_file) %>%
   select(all_of(keep_cols)) %>%
-  filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "U1"))
+  filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT") |
+           grepl("RN*U1-*", Hugo_Symbol) & HGVSc %in% c("n.3A>G", "n.5A>G"))
 
 mutations <- mutations %>% 
   bind_rows(tumorOnly) %>%
   filter(Tumor_Sample_Barcode %in% mb_shh$Kids_First_Biospecimen_ID)
+
+
+# get list of U1 genes in this dataset
+u1_genes <- mutations %>%
+  filter(grepl("RN*U1-*", Hugo_Symbol)) %>%
+  pull(Hugo_Symbol) %>%
+  unique()
 
 # Load CN chromosome arm file
 broad_CNA <- read_tsv(cn_arm_file) %>%
@@ -109,8 +119,7 @@ mutation_fill_df <- function(sample, ref_df, col_name, default = 0){
 
 # build molecular alteration data frame 
 mb_shh_data <- mb_shh %>%
-  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID,
-                match_id)
+  dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID, match_id)
 
 # add arm gain/loss info
 for(arm_of_interest in c("2q", "2p", "9q", "9p", "10q", "14q", "17p")) {
@@ -121,7 +130,7 @@ for(arm_of_interest in c("2q", "2p", "9q", "9p", "10q", "14q", "17p")) {
 }
 
 # Add CN data
-for (goi in c("MYCN", "GLI2", "PTEN", "PPM1D", "MDM4")) {
+for (goi in c("MYCN", "GLI2", "CCND2", "PTEN", "PPM1D", "MDM4", "TP53")) {
   cn_gene_filtered <- cn_gene %>%
     filter(gene_symbol == goi) %>%
     column_to_rownames("biospecimen_id")
@@ -131,7 +140,7 @@ for (goi in c("MYCN", "GLI2", "PTEN", "PPM1D", "MDM4")) {
 }
 
 # Loop through GOIs to add SNV/INDEL consequences to data frame
-for (gene in c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "TP53", "U1")){
+for (gene in c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "TP53", u1_genes)){
   
   if (gene == "TERT"){
     
@@ -142,7 +151,18 @@ for (gene in c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "TP53
       group_by(Tumor_Sample_Barcode) %>%
       summarise(Consequences = str_c(Consequence, collapse = ";"))
     
-  } else{
+  } 
+  
+  if (grepl("RN*U1-*", gene)){
+    
+    mutation_gene <- mutations %>% filter(Hugo_Symbol == gene & 
+                                            HGVSc %in% c("n.3A>G", "n.5A>G")) %>%
+      group_by(Tumor_Sample_Barcode) %>%
+      summarise(Consequences = str_c(Consequence, collapse = ";"))
+    
+  } 
+  
+  else{
     
     mutation_gene <- mutations %>% filter(Hugo_Symbol == gene & grepl("frameshift|missense|stop|splice_acceptor|splice_donor", Consequence)) %>%
       group_by(Tumor_Sample_Barcode) %>%
@@ -159,9 +179,13 @@ for (gene in c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "TP53
 # Collapse somatic alteration data per match ID
 mb_shh_data_collapsed <- mb_shh_data %>%
   group_by(Kids_First_Participant_ID, match_id) %>%
-  summarize_at(vars(`2q_loss`:TERT_csq), ~ paste0(unique(.), collapse = ':')) %>%
+  summarize(
+    across(`2q_loss`:last_col(), ~paste0(unique(na.omit(.)), collapse = ':'), .names = "{.col}"),
+    .groups = "drop") %>%
   mutate(across(everything(), ~str_remove_all(., "NA:|:NA"))) %>%
-  mutate(across(everything(), ~str_replace(., "NA", NA_character_)))
+  mutate(across(everything(), ~if_else(str_detect(., "^$"), NA_character_, .))) %>%
+  # add column for all U1 genes' annotation for easier selection later
+  mutate(U1_mutation = as.integer(rowSums(across(matches("RN.*U1-.*"), ~ !is.na(.) & . != ""), na.rm = TRUE) > 0))
 
 # Load germline SNV/INDEL and SV data, filter for GOIs, and merge
 germline <- read_tsv(germline_file) %>%
@@ -193,7 +217,7 @@ germline <- germline %>%
 # Load expr data
 expr <- readRDS(expr_file)
 
-genes_of_interest = c("MYCN", "GLI2", "PTEN", "TP53")
+genes_of_interest = c("MYCN", "GLI2", "CCND2", "PTEN", "TP53")
 subset_expr <- expr[genes_of_interest, mb_shh_data$Kids_First_Biospecimen_ID[mb_shh_data$Kids_First_Biospecimen_ID %in% colnames(expr)]]
 
 # calculate max TPM per match ID and calculate z-scores
@@ -201,22 +225,26 @@ expr_df <- as.data.frame(t(subset_expr)) %>%
   rownames_to_column("Kids_First_Biospecimen_ID") %>%
   dplyr::rename(MYCN_TPM = MYCN,
                 GLI2_TPM = GLI2,
+                CCND2_TPM = CCND2,
                 PTEN_TPM = PTEN,
                 TP53_TPM = TP53) %>%
   left_join(mb_shh_data) %>%
   group_by(Kids_First_Participant_ID, match_id) %>%
   summarize(MYCN_TPM = max(MYCN_TPM),
-               GLI2_TPM = max(GLI2_TPM),
-               PTEN_TPM = min(PTEN_TPM),
-               TP53_TPM = min(PTEN_TPM),
-               .groups = "drop") %>%
+            GLI2_TPM = max(GLI2_TPM),
+            CCND2_TPM = max(CCND2_TPM),
+            PTEN_TPM = min(PTEN_TPM),
+            TP53_TPM = min(PTEN_TPM),
+            .groups = "drop") %>%
   mutate(MYCN_TPM_zscore = as.vector(scale(MYCN_TPM)),
          GLI2_TPM_zscore = as.vector(scale(GLI2_TPM)),
+         CCND2_TPM_zscore = as.vector(scale(CCND2_TPM)),
          PTEN_TPM_zscore = as.vector(scale(PTEN_TPM)),
          TP53_TPM_zscore = as.vector(scale(TP53_TPM))) %>%
   unique() %>%
   mutate(MYCN_exp_status = ifelse(MYCN_TPM_zscore >= 2, "MYCN high", NA_character_),
          GLI2_exp_status = ifelse(GLI2_TPM_zscore >= 2, "GLI2 high", NA_character_),
+         CCND2_exp_status = ifelse(CCND2_TPM_zscore >= 2, "CCND2 high", NA_character_),
          PTEN_exp_status = ifelse(PTEN_TPM_zscore < -2, "PTEN low", NA_character_),
          TP53_exp_status = ifelse(TP53_TPM_zscore < -2, "TP53 low", NA_character_))
 
@@ -266,8 +294,11 @@ final_subtypes <- mb_subtypes %>%
                                     is.na(SHH_subtype) &
                                     (grepl("amplification", consensus_CN_MYCN) |
                                        grepl("amplification", consensus_CN_GLI2) |
+                                       grepl("amplification", consensus_CN_CCND2) |
                                        MYCN_TPM_zscore >= 2 |
                                        GLI2_TPM_zscore >= 2 |
+                                       CCND2_TPM_zscore >= 2 |
+                                       TP53_TPM_zscore < -2 |
                                        `17p_loss` == 1 |
                                        (`9p_gain` == 1 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" & 
                                           dkfz_v12_methylation_subclass_score_mean >= 0.5)
@@ -275,8 +306,7 @@ final_subtypes <- mb_subtypes %>%
     
     # For SHH delta: (TERT promoter AND DDX3X mutations) OR (>5 years AND (TERT OR DDX3X mutations))
     SHH_subtype == "SHH_delta" |
-      (!is.na(TERT_csq) & !is.na(DDX3X_csq)) |
-      (age_at_diagnosis_years > 5 & (!is.na(TERT_csq) | !is.na(DDX3X_csq))) ~ "SHH delta",
+      (age_at_diagnosis_years >= 10 & (U1_mutation == 1 | !is.na(TERT_csq) | !is.na(DDX3X_csq))) ~ "SHH delta",
     
     # For SHH beta: <5 years AND (KMT2D mutations OR PTEN loss/deletion OR PTEN TPM<-2 OR chr2 gain)
     SHH_subtype == "SHH_beta" | (age_at_diagnosis_years < 5 &
@@ -296,5 +326,5 @@ final_subtypes <- mb_subtypes %>%
   arrange(Kids_First_Biospecimen_ID) %>%
   write_tsv(file.path(results_dir, "mb_shh_subtype_summary.tsv"))
 
-print(table(final_subtypes$molecular_subtype))
+print(as.data.frame(table(final_subtypes$molecular_subtype)))
 
