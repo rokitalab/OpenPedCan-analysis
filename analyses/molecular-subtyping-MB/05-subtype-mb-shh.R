@@ -315,16 +315,25 @@ final_subtypes <- mb_subtypes %>%
                                       grepl("loss|deep deletion", consensus_CN_PTEN)|
                                       PTEN_TPM_zscore < -2) |
                                    (`2p_gain` == 1 & `2q_gain` == 1)) ~ "SHH beta",
-    # Add gamma subtype only for high confidence methylation samples
-    SHH_subtype == "SHH_gamma" ~ "SHH gamma",
     TRUE ~ NA_character_)) %>%
+  
+    # Add gamma subtype for high confidence methylation samples OR
+    # If not already subtyped, and age <5 and no 2p gain, then SHH gamma
+    mutate(final_shh_subtype  = case_when(SHH_subtype == "SHH_gamma" | (is.na(final_shh_subtype) & 
+                                                                          age_at_diagnosis_years < 5 &
+                                                                          `2p_gain` == 0) ~ "SHH gamma",
+                                          TRUE ~ final_shh_subtype)) %>%
   right_join(mb_shh) %>%
   # re-anotate molecular subtype
   mutate(molecular_subtype = case_when(!is.na(final_shh_subtype) ~ paste0("MB, ", final_shh_subtype), 
                                        TRUE ~ molecular_subtype)) %>%
   select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, molecular_subtype, molecular_subtype_methyl, final_shh_subtype, everything()) %>%
   arrange(Kids_First_Biospecimen_ID) %>%
-  write_tsv(file.path(results_dir, "mb_shh_subtype_summary.tsv"))
+  write_tsv(file.path(results_dir, "mb_shh_subtypes_w_molecular_data.tsv"))
+
+final_subtypes %>%
+  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype") %>%
+  write_tsv(file.path(results_dir, "mb_shh_molecular_subtypes.tsv"))
 
 print(as.data.frame(table(final_subtypes$molecular_subtype)))
 
