@@ -170,3 +170,9 @@ The last part of this script adds the methylation subtype to the final subtyping
 # observed output from 01-classify-mb.R
 results/MB_molecular_subtype.tsv
 ```
+
+#### 05-subtype-mb-shh.R
+
+This script classifies MB, SHH subtype further as alpha, beta, delta, or gamma.
+
+

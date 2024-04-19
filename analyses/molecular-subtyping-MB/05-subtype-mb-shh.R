@@ -29,12 +29,16 @@ germline_file <- file.path(input_dir, "pbta_germline_plp_calls_autogvp_abridged_
 germline_sv_file <- file.path(input_dir, "pbta_germline_svs.tsv")
 
 # load histologies and subset for mb shh
-pbta_mb_shh <- read_tsv(mb_file) %>%
+hist <- read_tsv(hist_file, guess_max = 100000) %>%
+  select(-molecular_subtype) %>%
+  mutate(age_at_diagnosis_years = age_at_diagnosis_days/365.25)
+
+mb_shh <- read_tsv(mb_file) %>%
   filter(grepl("SHH", molecular_subtype))
 
 # Load gene CN data and subset for GOIs
 cn_gene <- data.table::fread(cn_file) %>%
-  filter(biospecimen_id %in% pbta_mb_shh$Kids_First_Biospecimen_ID) %>%
+  filter(biospecimen_id %in% mb_shh$Kids_First_Biospecimen_ID) %>%
   filter(gene_symbol %in% c("MYCN", "GLI2", "PTEN", "PPM1D", "MDM4"),
          status %in% c("amplification", "gain", "loss", "deep deletion"))
 
@@ -45,7 +49,7 @@ keep_cols <- c("Tumor_Sample_Barcode", "Hugo_Symbol", "Start_Position", "End_Pos
 mutations <- data.table::fread(maf_file) %>%
   select(all_of(keep_cols)) %>%
   filter(Hugo_Symbol %in% c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "U1")) %>%
-  filter(Tumor_Sample_Barcode %in% pbta_mb_shh$Kids_First_Biospecimen_ID)
+  filter(Tumor_Sample_Barcode %in% mb_shh$Kids_First_Biospecimen_ID)
 
 tumorOnly <- data.table::fread(tumorOnly_file) %>%
   select(all_of(keep_cols)) %>%
@@ -53,7 +57,7 @@ tumorOnly <- data.table::fread(tumorOnly_file) %>%
 
 mutations <- mutations %>% 
   bind_rows(tumorOnly) %>%
-  filter(Tumor_Sample_Barcode %in% pbta_mb_shh$Kids_First_Biospecimen_ID)
+  filter(Tumor_Sample_Barcode %in% mb_shh$Kids_First_Biospecimen_ID)
 
 # Load CN chromosome arm file
 broad_CNA <- read_tsv(cn_arm_file) %>%
@@ -104,8 +108,7 @@ mutation_fill_df <- function(sample, ref_df, col_name, default = 0){
 }
 
 # build molecular alteration data frame 
-
-mb_shh_data <- pbta_mb_shh %>%
+mb_shh_data <- mb_shh %>%
   dplyr::select(Kids_First_Biospecimen_ID, Kids_First_Participant_ID,
                 match_id)
 
@@ -156,7 +159,7 @@ for (gene in c("CREBBP", "DDX3X", "KMT2D", "PTCH1", "SMO", "SUFU", "TERT", "TP53
 # Collapse somatic alteration data per match ID
 mb_shh_data_collapsed <- mb_shh_data %>%
   group_by(Kids_First_Participant_ID, match_id) %>%
-  summarize_at(vars(`2q_loss`:TERT_csq), ~ paste0(., collapse = ':')) %>%
+  summarize_at(vars(`2q_loss`:TERT_csq), ~ paste0(unique(.), collapse = ':')) %>%
   mutate(across(everything(), ~str_remove_all(., "NA:|:NA"))) %>%
   mutate(across(everything(), ~str_replace(., "NA", NA_character_)))
 
@@ -190,7 +193,7 @@ germline <- germline %>%
 # Load expr data
 expr <- readRDS(expr_file)
 
-genes_of_interest = c("MYCN", "GLI2", "PTEN")
+genes_of_interest = c("MYCN", "GLI2", "PTEN", "TP53")
 subset_expr <- expr[genes_of_interest, mb_shh_data$Kids_First_Biospecimen_ID[mb_shh_data$Kids_First_Biospecimen_ID %in% colnames(expr)]]
 
 # calculate max TPM per match ID and calculate z-scores
@@ -198,30 +201,35 @@ expr_df <- as.data.frame(t(subset_expr)) %>%
   rownames_to_column("Kids_First_Biospecimen_ID") %>%
   dplyr::rename(MYCN_TPM = MYCN,
                 GLI2_TPM = GLI2,
-                PTEN_TPM = PTEN) %>%
+                PTEN_TPM = PTEN,
+                TP53_TPM = TP53) %>%
   left_join(mb_shh_data) %>%
   group_by(Kids_First_Participant_ID, match_id) %>%
-  summarize_at(vars(MYCN_TPM:PTEN_TPM), max) %>%
-  ungroup() %>%
+  summarize(MYCN_TPM = max(MYCN_TPM),
+               GLI2_TPM = max(GLI2_TPM),
+               PTEN_TPM = min(PTEN_TPM),
+               TP53_TPM = min(PTEN_TPM),
+               .groups = "drop") %>%
   mutate(MYCN_TPM_zscore = as.vector(scale(MYCN_TPM)),
          GLI2_TPM_zscore = as.vector(scale(GLI2_TPM)),
-         PTEN_TPM_zscore = as.vector(scale(PTEN_TPM))) %>%
+         PTEN_TPM_zscore = as.vector(scale(PTEN_TPM)),
+         TP53_TPM_zscore = as.vector(scale(TP53_TPM))) %>%
   unique() %>%
   mutate(MYCN_exp_status = ifelse(MYCN_TPM_zscore >= 2, "MYCN high", NA_character_),
          GLI2_exp_status = ifelse(GLI2_TPM_zscore >= 2, "GLI2 high", NA_character_),
-         PTEN_exp_status = ifelse(PTEN_TPM_zscore < -2, "PTEN low", NA_character_))
+         PTEN_exp_status = ifelse(PTEN_TPM_zscore < -2, "PTEN low", NA_character_),
+         TP53_exp_status = ifelse(TP53_TPM_zscore < -2, "TP53 low", NA_character_))
 
 # Create subtypes df that:
 # 1) calculates average methylations score per match id
 # 2) redefines SHH subtypes as alpha (3), beta (1), gamma (2), delta (4)
 # 3) append molecular alterations data
 # 4) attempts to classify samples without methylation classifiers into one of the four SHH subtypes using molecular and age criteria 
-hist_mb_shh <- read_tsv(hist_file) %>%
-  dplyr::filter(pathology_diagnosis == "Medulloblastoma") %>%
-  dplyr::mutate(age_at_diagnosis_years = age_at_diagnosis_days/365.25) %>%
-  select(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, molecular_subtype, dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score) %>%
+hist_mb_shh <- hist %>%
+  filter(Kids_First_Biospecimen_ID %in% mb_shh$Kids_First_Biospecimen_ID) %>%
+  select(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, dkfz_v12_methylation_subclass, dkfz_v12_methylation_subclass_score) %>%
   unique() %>%
-  group_by(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years, molecular_subtype) %>%
+  group_by(Kids_First_Participant_ID, sample_id, match_id, age_at_diagnosis_years) %>%
   summarize(
     dkfz_v12_methylation_subclass_collapsed = if(all(is.na(dkfz_v12_methylation_subclass))) NA_character_ 
     else paste(unique(na.omit(dkfz_v12_methylation_subclass)), collapse = "; "),
@@ -235,14 +243,16 @@ hist_mb_shh <- read_tsv(hist_file) %>%
                                  dkfz_v12_methylation_subclass_score_mean >= 0.7 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_4" ~ "SHH_delta",
                                  TRUE ~ NA_character_))
 
-subtypes <- pbta_mb_shh %>%
-  distinct(match_id, .keep_all = TRUE) %>%
-  left_join(hist_mb_shh, by = "match_id") %>%
+mb_subtypes <- mb_shh %>%
+  select(match_id, molecular_subtype, molecular_subtype_methyl) %>%
+  unique()
+
+final_subtypes <- mb_subtypes %>%
+  left_join(hist_mb_shh) %>%
   left_join(mb_shh_data_collapsed) %>%
   left_join(germline) %>%
   left_join(expr_df) %>%
   unique() %>%
-  select(-match_id) %>%
   # clean up subclass and scores
   mutate(dkfz_v12_methylation_subclass_score_mean = case_when(dkfz_v12_methylation_subclass_score_mean < 0.7 & 
                                                                 !grepl("SHH", dkfz_v12_methylation_subclass_collapsed) ~ NA_integer_,
@@ -251,29 +261,40 @@ subtypes <- pbta_mb_shh %>%
                                                                !grepl("SHH", dkfz_v12_methylation_subclass_collapsed) ~ NA_character_,
                                                              TRUE ~ dkfz_v12_methylation_subclass_collapsed)) %>%
   mutate(final_shh_subtype = case_when(
-                                        # For SHH alpha: >3 years AND (MYCN OR GLI2 amplification OR TPM>=2 OR chr17p loss)
-                                        SHH_subtype == "SHH_alpha" |
-                                         (age_at_diagnosis_years >= 2 &
-                                          is.na(SHH_subtype) &
-                                         (grepl("amplification", consensus_CN_MYCN) |
-                                         grepl("amplification", consensus_CN_GLI2) |
-                                         MYCN_TPM_zscore >= 2 |
-                                         GLI2_TPM_zscore >= 2 |
-                                         `17p_loss` == 1)) ~ "SHH_alpha",
-                                       # For SHH delta: (TERT promoter AND DDX3X mutations) OR (>5 years AND (TERT OR DDX3X mutations))
-                                        SHH_subtype == "SHH_delta" |
-                                         (!is.na(TERT_csq) & !is.na(DDX3X_csq)) |
-                                         (age_at_diagnosis_years > 5 & (!is.na(TERT_csq) | !is.na(DDX3X_csq))) ~ "SHH_delta",
-                                       # For SHH beta: <5 years AND (KMT2D mutations OR PTEN loss/deletion OR PTEN TPM<-2 OR chr2 gain)
-                                       SHH_subtype == "SHH_beta" |
-                                         (age_at_diagnosis_years < 5 &
-                                          is.na(SHH_subtype) &
-                                         (!is.na(KMT2D_csq) |
-                                          grepl("loss|deep deletion", consensus_CN_PTEN)|
-                                          PTEN_TPM_zscore < -2) |
-                                          (`2p_gain` == 1 & `2q_gain` == 1)) ~ "SHH_beta",
-                                       # Add gamma subtype only for high confidence methylation samples
-                                       SHH_subtype == "SHH_gamma" ~ "SHH_gamma",
-                                       TRUE ~ NA_character_)) %>%
-  arrange(final_shh_subtype) %>%
+    # For SHH alpha: >3 years AND (MYCN OR GLI2 amplification OR TPM>=2 OR chr17p loss OR 9p gain with lower conf methyl)
+    SHH_subtype == "SHH_alpha" | (age_at_diagnosis_years >= 2 &
+                                    is.na(SHH_subtype) &
+                                    (grepl("amplification", consensus_CN_MYCN) |
+                                       grepl("amplification", consensus_CN_GLI2) |
+                                       MYCN_TPM_zscore >= 2 |
+                                       GLI2_TPM_zscore >= 2 |
+                                       `17p_loss` == 1 |
+                                       (`9p_gain` == 1 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" & 
+                                          dkfz_v12_methylation_subclass_score_mean >= 0.5)
+                                     )) ~ "SHH alpha",
+    
+    # For SHH delta: (TERT promoter AND DDX3X mutations) OR (>5 years AND (TERT OR DDX3X mutations))
+    SHH_subtype == "SHH_delta" |
+      (!is.na(TERT_csq) & !is.na(DDX3X_csq)) |
+      (age_at_diagnosis_years > 5 & (!is.na(TERT_csq) | !is.na(DDX3X_csq))) ~ "SHH delta",
+    
+    # For SHH beta: <5 years AND (KMT2D mutations OR PTEN loss/deletion OR PTEN TPM<-2 OR chr2 gain)
+    SHH_subtype == "SHH_beta" | (age_at_diagnosis_years < 5 &
+                                   is.na(SHH_subtype) &
+                                   (!is.na(KMT2D_csq) |
+                                      grepl("loss|deep deletion", consensus_CN_PTEN)|
+                                      PTEN_TPM_zscore < -2) |
+                                   (`2p_gain` == 1 & `2q_gain` == 1)) ~ "SHH beta",
+    # Add gamma subtype only for high confidence methylation samples
+    SHH_subtype == "SHH_gamma" ~ "SHH gamma",
+    TRUE ~ NA_character_)) %>%
+  right_join(mb_shh) %>%
+  # re-anotate molecular subtype
+  mutate(molecular_subtype = case_when(!is.na(final_shh_subtype) ~ paste0("MB, ", final_shh_subtype), 
+                                       TRUE ~ molecular_subtype)) %>%
+  select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, molecular_subtype, molecular_subtype_methyl, final_shh_subtype, everything()) %>%
+  arrange(Kids_First_Biospecimen_ID) %>%
   write_tsv(file.path(results_dir, "mb_shh_subtype_summary.tsv"))
+
+print(table(final_subtypes$molecular_subtype))
+
