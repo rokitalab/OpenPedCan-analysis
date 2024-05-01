@@ -1,5 +1,5 @@
-FROM rocker/tidyverse:4.2.3
-MAINTAINER ccdl@alexslemonade.org
+FROM rocker/tidyverse:4.4
+MAINTAINER rokita@chop.edu
 WORKDIR /rocker-build/
 
 ARG github_pat=$GITHUB_PAT
@@ -102,7 +102,7 @@ RUN R -e "options(repos = BiocManager::repositories())"
 
 # Install BiocManager and the desired version of Bioconductor
 RUN R -e "install.packages('BiocManager', dependencies=TRUE)"
-RUN R -e "BiocManager::install(version = '3.16')"
+RUN R -e "BiocManager::install(version = '3.19')"
 
 # Install R packages
 RUN R -e 'BiocManager::install(c( \
