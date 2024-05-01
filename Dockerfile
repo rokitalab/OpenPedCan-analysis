@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:4.4
+FROM rocker/tidyverse:4.4.0
 MAINTAINER rokita@chop.edu
 WORKDIR /rocker-build/
 
