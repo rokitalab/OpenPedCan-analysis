@@ -19,25 +19,18 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libreadline-dev
 
 # libgmp3-dev is needed for signature.tools.lib to install
-RUN apt-get -y --no-install-recommends install \
-    libgmp3-dev
-
 # libmagick++-dev is needed for coloblindr to install
+# libpoppler-cpp-dev required for installing pdftools, which is a dependency of gridGraphics
+# libglpk-dev required for installing  MM2S, which is a dependency of igraph 
+# libncurses5 dependency for running GISTIC
+
 RUN apt-get -y --no-install-recommends install \
+    libgmp3-dev \
     libgdal-dev \
     libudunits2-dev \
-    libmagick++-dev
-
-# Required for installing pdftools, which is a dependency of gridGraphics
-RUN apt-get -y --no-install-recommends install \
-    libpoppler-cpp-dev
-    
-# Required for installing  MM2S, which is a dependency of igraph 
-RUN apt-get -y --no-install-recommends install \
-    libglpk-dev
-
-# Required dependency for running GISTIC
-RUN apt-get -y --no-install-recommends install \
+    libmagick++-dev \
+    libpoppler-cpp-dev \
+    libglpk-dev \
     libncurses5
 
 # Install pip3 and low-level python installation reqs
@@ -53,7 +46,6 @@ RUN pip3 install \
 # Install java
 RUN apt-get -y --no-install-recommends install \
     default-jdk
-
 
 # Required for running matplotlib in Python in an interactive session
 RUN apt-get -y --no-install-recommends install \
@@ -184,24 +176,15 @@ RUN R -e 'BiocManager::install(c( \
 
 
 # package required for immune deconvolution
-RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a2bdf31d39111e46c7cefc03ebdbb28457a0d08c', dependencies = TRUE)"
-
-# package required for immune deconvolution
-RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a2bdf31d39111e46c7cefc03ebdbb28457a0d08c', dependencies = TRUE)"
+#RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a2bdf31d39111e46c7cefc03ebdbb28457a0d08c', dependencies = TRUE)"
 
 RUN R -e "remotes::install_github('const-ae/ggupset', ref = '7a33263cc5fafdd72a5bfcbebe5185fafe050c73', dependencies = TRUE)"
 
 # Need this package to make plots colorblind friendly
 RUN R -e "remotes::install_github('clauswilke/colorblindr', ref = '1ac3d4d62dad047b68bb66c06cee927a4517d678', dependencies = TRUE)"
 
-# remote package EXTEND needed for telomerase-activity-prediciton analysis
-RUN R -e "remotes::install_github('NNoureen/EXTEND', ref = '467c2724e1324ef05ad9260c3079e5b0b0366420', dependencies = TRUE)"
-
 # package required for shatterseek
 RUN R -e "withr::with_envvar(c(R_REMOTES_NO_ERRORS_FROM_WARNINGS='true'), remotes::install_github('parklab/ShatterSeek', ref = '83ab3effaf9589cc391ecc2ac45a6eaf578b5046', dependencies = TRUE))"
-
-# Patchwork for plot compositions
-RUN R -e "remotes::install_github('thomasp85/patchwork', ref = 'c67c6603ba59dd46899f17197f9858bc5672e9f4')"
 
 # Need this specific version of circlize so it has hg38
 RUN R -e "remotes::install_github('jokergoo/circlize', ref = 'b7d86409d7f893e881980b705ba1dbc758df847d', dependencies = TRUE)"
@@ -317,8 +300,8 @@ RUN R -e "remotes::install_github('d3b-center/medullo-classifier-package', ref =
 RUN R -e "remotes::install_github('jtleek/sva-devel@123be9b2b9fd7c7cd495fab7d7d901767964ce9e', dependencies = FALSE, upgrade = FALSE)"
 
 # Packages required for de novo mutational signatures
-RUN install2.r --error --deps TRUE \
-    lsa
+#RUN install2.r --error --deps TRUE \
+#    lsa
 
 # Packages for fusion annotation using annoFuse package
 RUN R -e "remotes::install_github('d3b-center/annoFuseData',ref = '321bc4f6db6e9a21358f0d09297142f6029ac7aa', dependencies = TRUE)"
