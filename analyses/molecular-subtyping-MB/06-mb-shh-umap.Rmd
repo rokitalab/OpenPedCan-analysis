@@ -1,0 +1,132 @@
+---
+title: 'Create MB SHH methylation UMAP'
+output: 
+  html_document:
+  toc: TRUE
+toc_float: TRUE
+author: Ryan Corbett
+date: "2024"
+---
+
+Load libraries and set directory paths
+```{r}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(umap)
+  library(ggplot2)
+  library(devtools)
+  library(gdata)
+})
+
+root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
+
+data_dir <- file.path(root_dir, "data")
+analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-MB")
+results_dir <- file.path(analysis_dir, "results")
+input_dir <- file.path(analysis_dir, "input")
+plots_dir <- file.path(analysis_dir, "plot")
+```
+
+Set file paths
+```{r}
+hist_file <- file.path(data_dir, "histologies.tsv")
+methyl_file <- file.path(data_dir, "v14", "methyl-beta-values.rds")
+mb_shh_file <- file.path(results_dir, "mb_shh_subtypes_w_molecular_data.tsv")
+```
+
+Wrangle data
+```{r get methyl ids}
+hist <- read_tsv(hist_file)
+
+mb_shh_subtypes <- read_tsv(mb_shh_file)
+```
+
+Filter hist for mb shh methyl samples, and append to subtype df
+```{r}
+hist_mb_methyl <- hist %>%
+  dplyr::filter(pathology_diagnosis == "Medulloblastoma",
+                molecular_subtype == "MB, SHH",
+                experimental_strategy == "Methylation") %>%
+  dplyr::rename(Kids_First_Biospecimen_ID_methyl = Kids_First_Biospecimen_ID)
+
+mb_shh_subtypes <- read_tsv(mb_shh_file) %>%
+  left_join(hist_mb_methyl %>%
+              dplyr::select(match_id, Kids_First_Biospecimen_ID_methyl)) %>%
+  dplyr::filter(!is.na(Kids_First_Biospecimen_ID_methyl)) %>%
+  distinct(match_id, Kids_First_Biospecimen_ID_methyl, .keep_all = TRUE) %>%
+  # redefine un-subtyped samples as "unk"
+  dplyr::mutate(molecular_subtype = case_when(
+    molecular_subtype == "MB, SHH" ~ "MB, SHH unk",
+    TRUE ~ molecular_subtype
+  )) %>%
+  dplyr::mutate(molecular_subtype = fct_relevel(molecular_subtype,
+                                               c("MB, SHH alpha", "MB, SHH beta",
+                                                 "MB, SHH gamma", "MB, SHH delta",
+                                                 "MB, SHH unk")))
+```
+
+Get number of samples by MB SHH subtype
+```{r}
+table(mb_shh_subtypes$SHH_subtype)
+```
+
+Load methylation data and filter for ids in `mb_shh_subtypes`
+```{r load methyl}
+methyl <- readRDS(methyl_file)
+
+methyl <- methyl[,colnames(methyl) %in% c("Probe_ID", mb_shh_subtypes$Kids_First_Biospecimen_ID_methyl)]
+
+methyl <- methyl %>%
+  distinct(Probe_ID, .keep_all = TRUE) %>%
+  column_to_rownames("Probe_ID")
+```
+
+Identify 10k most variable probes among samples
+```{r}
+methyl_var <- apply(methyl, 1, var, na.rm = TRUE)
+
+var_probes <- names(sort(methyl_var, decreasing = TRUE)[1:10000])
+```
+
+Generate UMAP df 
+```{r}
+set.seed(2024)
+
+umap_results <- umap::umap(t(methyl[var_probes, ]))
+umap_plot_df <- data.frame(umap_results$layout) %>%
+  tibble::rownames_to_column("Kids_First_Biospecimen_ID_methyl") %>%
+  inner_join(mb_shh_subtypes)
+
+umap_plot_df <- umap_plot_df %>%
+  dplyr::mutate(age_range = case_when(
+    age_at_diagnosis_years <= 5 ~ "0-5",
+    age_at_diagnosis_years <= 10 ~ "5-10",
+    age_at_diagnosis_years <= 15 ~ "10-15",
+    TRUE ~ ">15"
+  )) %>%
+  dplyr::mutate(age_range = fct_relevel(age_range,
+                                        c("0-5", "5-10",
+                                          "10-15", ">15")))
+```
+
+Plot UMAP with molecular subtype and age range 
+```{r}
+umap_plot_df %>%
+  ggplot(aes(x = X1, 
+             y = X2,
+             color = molecular_subtype,
+             size = age_range)) +
+  geom_point(alpha = 0.7) +
+  labs(color = "molecular subtype",
+       size = "age range (years)") +
+  theme_bw() +
+  xlab("UMAP1") +
+  ylab("UMAP2") +
+  # colors to match subtypes in Garcia-Lopez 2020 review
+  scale_color_manual(values = c("aquamarine3", "goldenrod2", 
+                                "royalblue1", "plum4",
+                                "gray"))
+
+ggsave(file.path(plots_dir, "umap_mb_shh.tiff"),
+       width = 5.5, height = 4)
+```
