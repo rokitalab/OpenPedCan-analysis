@@ -108,7 +108,7 @@ mb_umap_plot_df %>%
   xlab("UMAP1") +
   ylab("UMAP2") 
 
-ggsave(file.path(plots_dir, "umap_mb.tiff"),
+ggsave(file.path(plots_dir, "umap_mb.pdf"),
        width = 5.5, height = 3.5)
 ```
 
@@ -147,7 +147,7 @@ mb_g34_umap_plot_df %>%
   xlab("UMAP1") +
   ylab("UMAP2") 
 
-ggsave(file.path(plots_dir, "umap_mb_group34.tiff"),
+ggsave(file.path(plots_dir, "umap_mb_group34.pdf"),
        width = 5.5, height = 3.5)
 ```
 
@@ -214,7 +214,7 @@ mb_shh_umap_plot_df %>%
                                 "royalblue1", "plum4",
                                 "gray"))
 
-ggsave(file.path(plots_dir, "umap_mb_shh.tiff"),
+ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
        width = 5.5, height = 3.5)
 ```
 
@@ -237,7 +237,7 @@ mb_shh_umap_plot_df %>%
   scale_color_manual(values = c("goldenrod2", "royalblue1",
                                 "aquamarine3", "plum4"))
 
-ggsave(file.path(plots_dir, "umap_mb_shh_methylation_subtype.tiff"),
+ggsave(file.path(plots_dir, "umap_mb_shh_methylation_subtype.pdf"),
        width = 5.5, height = 3.5)
 ```
 
@@ -275,7 +275,7 @@ umap_plot_cn_df %>%
                                 "royalblue1", "plum4",
                                 "gray"))
 
-ggsave(file.path(plots_dir, "umap_mb_shh_cn_status.tiff"),
+ggsave(file.path(plots_dir, "umap_mb_shh_cn_status.pdf"),
        width = 8, height = 5.5)
 ```
 
@@ -313,6 +313,6 @@ mb_wnt_umap_plot_df %>%
   xlab("UMAP1") +
   ylab("UMAP2") 
 
-ggsave(file.path(plots_dir, "umap_mb_wnt.tiff"),
+ggsave(file.path(plots_dir, "umap_mb_wnt.pdf"),
        width = 5.5, height = 3.5)
 ```
