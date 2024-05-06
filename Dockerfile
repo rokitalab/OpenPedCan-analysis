@@ -6,13 +6,15 @@ ARG github_pat=$GITHUB_PAT
 
 ENV GITHUB_PAT=$github_pat
 
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
+
 ### Install apt-getable packages to start
 #########################################
 
-ENV DEBIAN_FRONTEND noninteractive
-
 # Installing all apt required packages at once
 RUN apt-get update -qq && apt-get install -y --no-install-recommends \
+    build-essential \
     bzip2 \
     curl \
     jq \
@@ -23,9 +25,7 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
     libpoppler-cpp-dev \
     libglpk-dev \
     libncurses5 \
-    build-essential \
     libssl-dev \
-    zlib1g-dev \
     libncurses5-dev \
     libncursesw5-dev \
     libreadline-dev \
@@ -39,9 +39,9 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
     libuuid1 \
     wget \
     xorg \
+    zlib1g-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
 
 # Download and install Python 3.11
 RUN cd /usr/src && \
@@ -52,12 +52,9 @@ RUN cd /usr/src && \
     make altinstall && \
     rm -rf /usr/src/Python-3.11.0.tgz
 
-# Setup the default python and pip commands to use Python 3.11
-RUN ln -s /usr/local/bin/pip3.11 /usr/local/bin/pip && \
-    ln -s /usr/local/bin/python3.11 /usr/local/bin/python3 && \
+# Setup the default python commands to use Python 3.11
+RUN ln -s /usr/local/bin/python3.11 /usr/local/bin/python3 && \
     ln -s /usr/local/bin/python3.11 /usr/local/bin/python
-
-# Upgrade pip to the latest version using Python 3.11
 RUN python3 -m pip install --upgrade pip
 
 # Set working directory
@@ -73,7 +70,7 @@ RUN pip3 install \
     "attrs==23.1.0" \
     "certifi==2023.5.7" \
     "chardet==5.1.0" \
-    "ConfigArgParse==1.5.3" \
+    "ConfigArgParse==1.7" \
     "CrossMap==0.6.5" \
     "Cython==0.29.15" \
     "defusedxml==0.7.1" \
@@ -136,8 +133,7 @@ RUN pip3 install \
     && rm -rf /root/.cache/pip/wheels
 
 # Install java
-RUN apt-get -y --no-install-recommends install \
-    default-jdk
+RUN apt-get update && apt-get install -y openjdk-11-jdk
 
 # Required for running matplotlib in Python in an interactive session
 RUN apt-get -y --no-install-recommends install \
@@ -268,8 +264,6 @@ RUN R -e 'BiocManager::install(c( \
 
 # package required for immune deconvolution
 #RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a2bdf31d39111e46c7cefc03ebdbb28457a0d08c', dependencies = TRUE)"
-
-RUN R -e "remotes::install_github('DGendoo/MM2S', ref = "38b696c5f8d6a2e2e69fbc7b6127c5cc742dedb2", dependencies = TRUE)"
 
 RUN R -e "remotes::install_github('const-ae/ggupset', ref = '7a33263cc5fafdd72a5bfcbebe5185fafe050c73', dependencies = TRUE)"
 
