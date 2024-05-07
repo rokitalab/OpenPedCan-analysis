@@ -6,47 +6,134 @@ ARG github_pat=$GITHUB_PAT
 
 ENV GITHUB_PAT=$github_pat
 
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
+
 ### Install apt-getable packages to start
 #########################################
 
-# Add curl, bzip2 and some dev libs
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-    curl \
+# Installing all apt required packages at once
+RUN apt-get update -qq && apt-get install -y --no-install-recommends \
+    build-essential \
     bzip2 \
-    zlib1g \
-    libbz2-dev \
-    liblzma-dev \
-    libreadline-dev
-
-# libgmp3-dev is needed for signature.tools.lib to install
-# libmagick++-dev is needed for coloblindr to install
-# libpoppler-cpp-dev required for installing pdftools, which is a dependency of gridGraphics
-# libglpk-dev required for installing  MM2S, which is a dependency of igraph 
-# libncurses5 dependency for running GISTIC
-
-RUN apt-get -y --no-install-recommends install \
+    curl \
+    jq \
     libgmp3-dev \
     libgdal-dev \
     libudunits2-dev \
     libmagick++-dev \
     libpoppler-cpp-dev \
     libglpk-dev \
-    libncurses5
+    libncurses5 \
+    libssl-dev \
+    libncurses5-dev \
+    libncursesw5-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    libgdbm-dev \
+    libdb5.3-dev \
+    libbz2-dev \
+    libexpat1-dev \
+    liblzma-dev \
+    libffi-dev \
+    libuuid1 \
+    wget \
+    xorg \
+    zlib1g-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install pip3 and low-level python installation reqs
-RUN apt-get -y --no-install-recommends install \
-    python3-pip python3-dev
-RUN ln -s /usr/bin/python3 /usr/bin/python  
-RUN python3 -m pip install --upgrade pip   
+# Download and install Python 3.11
+RUN cd /usr/src && \
+    wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz && \
+    tar xzf Python-3.11.0.tgz && \
+    cd Python-3.11.0 && \
+    ./configure --enable-optimizations && \
+    make altinstall && \
+    rm -rf /usr/src/Python-3.11.0.tgz
+
+# Setup the default python commands to use Python 3.11
+RUN ln -s /usr/local/bin/python3.11 /usr/local/bin/python3 && \
+    ln -s /usr/local/bin/python3.11 /usr/local/bin/python
+RUN python3 -m pip install --upgrade pip
+
+# Set working directory
+WORKDIR /home/rstudio
+
+
+# Install python packages
+##########################
+
+# Install python3 tools and ALL dependencies
 RUN pip3 install \
+    "appdirs==1.4.4" \
+    "attrs==23.1.0" \
+    "certifi==2023.5.7" \
+    "chardet==5.1.0" \
+    "ConfigArgParse==1.7" \
+    "CrossMap==0.6.5" \
     "Cython==0.29.15" \
+    "defusedxml==0.7.1" \
+    "docutils==0.20" \
+    "gitdb==4.0.10" \
+    "GitPython==3.1.31" \
+    "idna==3.4" \
+    "importlib-metadata==6.6.0" \
+    "ipykernel==6.23.0" \
+    "ipython==8.13.2" \
+    "ipython-genutils==0.2.0" \
+    "jsonschema==4.17.3" \
+    "jupyter-client==8.2.0" \
+    "jupyter-core==5.3.0" \
+    "MarkupSafe==2.1.2" \
+    "matplotlib==3.7.1" \
+    "nbconvert==7.4.0" \
+    "nbformat==5.8.0" \
+    "notebook==6.5.4" \
+    "numpy==1.24.3" \
+    "openpyxl==3.1.2" \
+    "packaging==23.1" \
+    "palettable==3.3.3" \
+    "pandas==2.0.1" \
+    "pandocfilters==1.5.0" \
+    "parso==0.8.3" \
+    "patsy==0.5.3" \
+    "pexpect==4.8.0" \
+    "pickleshare==0.7.5" \
+    "plotnine==0.12.1" \
+    "prompt-toolkit==3.0.38" \
+    "psutil==5.9.5" \
+    "ptyprocess==0.7.0" \
+    "PuLP==2.8.0" \
+    "Pygments==2.15.1" \
+    "pyparsing==3.0.9" \
+    "python-dateutil==2.8.2" \
+    "pytz==2023.3" \
+    "PyYAML==6.0" \
+    "pyzmq==25.0.2" \
+    "ratelimiter==1.2.0.post0" \
+    "requests==2.30.0" \
+    "rpy2==3.5.0" \
+    "scikit-learn==1.2.2" \
+    "scipy==1.10.1" \
+    "seaborn==0.12.2" \
     "setuptools==46.3.0" \
-    "six==1.14.0" \
-    "wheel==0.34.2" 
+    "six==1.16.0" \
+    "snakemake==8.1.2" \
+    "statsmodels==0.14.0" \
+    "tornado==6.3.1" \
+    "traitlets==5.9.0" \
+    "urllib3==2.0.2" \
+    "utils==1.0.1" \
+    "webencodings==0.5.1" \
+    "widgetsnbextension==4.0.7" \
+    "wheel==0.34.2" \
+    "wrapt==1.15.0" \
+    "zipp==3.15.0" \
+    && rm -rf /root/.cache/pip/wheels
 
 # Install java
-RUN apt-get -y --no-install-recommends install \
-    default-jdk
+RUN apt-get update && apt-get install -y openjdk-11-jdk
 
 # Required for running matplotlib in Python in an interactive session
 RUN apt-get -y --no-install-recommends install \
@@ -141,7 +228,6 @@ RUN R -e 'BiocManager::install(c( \
   "maftools", \
   "MASS", \
   "Matrix", \
-  "MM2S", \
   "msigdbr", \
   "multipanelfigure", \
   "mygene", \
@@ -193,82 +279,26 @@ RUN R -e "remotes::install_github('jokergoo/circlize', ref = 'b7d86409d7f893e881
 # signature.tools.lib needed for mutational-signatures 
 RUN R -e "remotes::install_github('Nik-Zainal-Group/signature.tools.lib', ref = 'a54e5d904d091b90ad3b0f9663133e178c36b9aa', dependencies = TRUE)"
 
-# Install python packages
-##########################
+# Molecular subtyping MB
+RUN R -e "remotes::install_github('d3b-center/medullo-classifier-package', ref = 'e3d12f64e2e4e00f5ea884f3353eb8c4b612abe8', dependencies = TRUE, upgrade = FALSE)"  
+    
+# More recent version of sva required for molecular subtyping MB
+RUN R -e "remotes::install_github('jtleek/sva-devel@123be9b2b9fd7c7cd495fab7d7d901767964ce9e', dependencies = FALSE, upgrade = FALSE)"
 
-# Install python3 tools and ALL dependencies
-RUN pip3 install \
-    "appdirs==1.4.4" \
-    "attrs==23.1.0" \
-    "certifi==2023.5.7" \
-    "chardet==5.1.0" \
-    "ConfigArgParse==1.5.3" \
-    "CrossMap==0.6.5" \
-    "defusedxml==0.7.1" \
-    "docutils==0.20" \
-    "gitdb==4.0.10" \
-    "GitPython==3.1.31" \
-    "idna==3.4" \
-    "importlib-metadata==6.6.0" \
-    "ipykernel==6.23.0" \
-    "ipython==8.13.2" \
-    "ipython-genutils==0.2.0" \
-    "jsonschema==4.17.3" \
-    "jupyter-client==8.2.0" \
-    "jupyter-core==5.3.0" \
-    "MarkupSafe==2.1.2" \
-    "matplotlib==3.7.1" \
-    "nbconvert==7.4.0" \
-    "nbformat==5.8.0" \
-    "notebook==6.5.4" \
-    "numpy==1.24.3" \
-    "packaging==23.1" \
-    "palettable==3.3.3" \
-    "pandas==2.0.1" \
-    "pandocfilters==1.5.0" \
-    "parso==0.8.3" \
-    "patsy==0.5.3" \
-    "pexpect==4.8.0" \
-    "pickleshare==0.7.5" \
-    "plotnine==0.12.1" \
-    "prompt-toolkit==3.0.38" \
-    "psutil==5.9.5" \
-    "ptyprocess==0.7.0" \
-    "Pygments==2.15.1" \
-    "pyparsing==3.0.9" \
-    "python-dateutil==2.8.2" \
-    "pytz==2023.3" \
-    "PyYAML==6.0" \
-    "pyzmq==25.0.2" \
-    "ratelimiter==1.2.0.post0" \
-    "requests==2.30.0" \
-    "rpy2==3.5.0" \
-    "scikit-learn==1.2.2" \
-    "scipy==1.10.1" \
-    "seaborn==0.12.2" \
-    "six==1.16.0" \
-    "snakemake==7.25.3" \
-    "statsmodels==0.14.0" \
-    "tornado==6.3.1" \
-    "traitlets==5.9.0" \
-    "urllib3==2.0.2" \
-    "utils==1.0.1" \
-    "webencodings==0.5.1" \
-    "widgetsnbextension==4.0.7" \
-    "wrapt==1.15.0" \
-    "zipp==3.15.0" \
-    "openpyxl==3.1.2" \
-    && rm -rf /root/.cache/pip/wheels
+# Packages required for de novo mutational signatures
+#RUN install2.r --error --deps TRUE \
+#    lsa
 
+# Packages for fusion annotation using annoFuse package
+RUN R -e "remotes::install_github('d3b-center/annoFuseData',ref = '321bc4f6db6e9a21358f0d09297142f6029ac7aa', dependencies = TRUE)"
+RUN R -e "remotes::install_github('d3b-center/annoFuse',ref = '55b4b862429fe886790d087b2f1c654689c691c4', dependencies = TRUE)"
+
+# Latest deconstructSigs release for mut sigs analyses
+RUN R -e "remotes::install_github('raerose01/deconstructSigs', ref = '41a705c5d80848121347d448cf9e2c58ff6b81ac', dependencies = TRUE)"
 
 # MATLAB Compiler Runtime is required for GISTIC, MutSigCV
 # Install steps are adapted from usuresearch/matlab-runtime
 # https://hub.docker.com/r/usuresearch/matlab-runtime/dockerfile
-
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -q update && \
-    apt-get install -q -y --no-install-recommends \
-    xorg
 
 # This is the version of MCR required to run the precompiled version of GISTIC
 RUN mkdir /mcr-install-v83 && \
@@ -293,33 +323,6 @@ RUN mkdir -p gistic_install && \
     chmod 755 /home/rstudio/gistic_install
 WORKDIR /rocker-build/
 
-
-# Molecular subtyping MB
-RUN R -e "remotes::install_github('d3b-center/medullo-classifier-package', ref = 'e3d12f64e2e4e00f5ea884f3353eb8c4b612abe8', dependencies = TRUE, upgrade = FALSE)"  
-    
-# More recent version of sva required for molecular subtyping MB
-RUN R -e "remotes::install_github('jtleek/sva-devel@123be9b2b9fd7c7cd495fab7d7d901767964ce9e', dependencies = FALSE, upgrade = FALSE)"
-
-# Packages required for de novo mutational signatures
-#RUN install2.r --error --deps TRUE \
-#    lsa
-
-# Packages for fusion annotation using annoFuse package
-RUN R -e "remotes::install_github('d3b-center/annoFuseData',ref = '321bc4f6db6e9a21358f0d09297142f6029ac7aa', dependencies = TRUE)"
-RUN R -e "remotes::install_github('d3b-center/annoFuse',ref = '55b4b862429fe886790d087b2f1c654689c691c4', dependencies = TRUE)"
-
-# Latest deconstructSigs release for mut sigs analyses
-RUN R -e "remotes::install_github('raerose01/deconstructSigs', ref = '41a705c5d80848121347d448cf9e2c58ff6b81ac', dependencies = TRUE)"
-
-# Even though apt-get section at top, add installation here to avoid re-RUN
-# previous steps in docker build.
-# There are other out-of-order cases.
-# We can reorganize this Dockerfile when CI is available, so it is easier to
-# test for reproducibility.
-# Install json processor jq
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-    jq
-
 WORKDIR /home/rstudio/
 # AWS CLI installation
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -331,8 +334,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN sudo wget -qO /usr/local/bin/dasel "https://github.com/TomWright/dasel/releases/download/v2.1.1/dasel_linux_amd64" && \
     sudo chmod a+x /usr/local/bin/dasel
 
-#### Please install your dependencies immediately above this comment.
-#### Add a comment to indicate what analysis it is required for
-
+# Reset the frontend variable for interactive
+ENV DEBIAN_FRONTEND=
 
 WORKDIR /rocker-build/
