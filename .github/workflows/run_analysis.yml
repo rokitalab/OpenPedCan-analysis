@@ -119,6 +119,10 @@ jobs:
             entrypoint: independent-samples/run-independent-samples.sh
             run_for_subtyping: 1
 
+          - name: Gene set enrichment
+            entrypoint: gene-set-enrichment-analysis/run-gsea.sh
+            run_for_subtyping: 1
+
           - name: TP53/NF1 scores
             entrypoint: tp53_nf1_score/run_classifier.sh
             openpedcan_polya_strand: 0
