@@ -119,7 +119,7 @@ RUN pip3 install \
     "seaborn==0.12.2" \
     "setuptools==46.3.0" \
     "six==1.16.0" \
-    "snakemake==8.1.2" \
+    "snakemake==8.11.6" \
     "statsmodels==0.14.0" \
     "tornado==6.3.1" \
     "traitlets==5.9.0" \
