@@ -143,6 +143,7 @@ not_included_analyses <- c(
   "survival-analysis",
   "tcga-capture-kit-investigation",
   "telomerase-activity-prediction",
+  "transcriptomic-dimension-reduction",
   "tmb-compare"
 )
 ```
