@@ -159,7 +159,6 @@ mtp-annotations	David Hill
 mtp-tables-qc-checks	Eric Wafula
 mtp-tables-qc-checks	Jo Lynne Rokita
 mtp-tables-qc-checks	Aditya Lahiri
-mutational-signatures	Yuankun Zhu
 mutational-signatures	Jo Lynne Rokita
 mutational-signatures	Ryan J. Corbett
 mutational-signatures	Zhuangzhuang Geng
@@ -176,7 +175,7 @@ rna-seq-expression-summary-stats	Jo Lynne Rokita
 rna-seq-expression-summary-stats	Zhuangzhuang Geng
 rna-seq-expression-summary-stats	Yuanchao Zhang
 rna-seq-expression-summary-stats	Sangeeta Shukla
-rnaseq-batch-correct	Chris Blackden
+rnaseq-batch-correct	Christopher Blackden
 rnaseq-batch-correct	Zhuangzhuang Geng
 rnaseq-batch-correct	Adam A. Kraya
 rnaseq-batch-correct	Komal S. Rathi
