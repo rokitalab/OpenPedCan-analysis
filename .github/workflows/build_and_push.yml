@@ -1,11 +1,15 @@
-name: Build
+name: Build and Push
 
 on:
-  pull_request:
+  push:
+    branches:
+      - 'dev'
+    paths:
+      - 'Dockerfile'
 
 jobs:
-  build_only:
-    name: Build Only
+  build_and_publish_image:
+    name: Build and Publish Image
     runs-on: large-runner-32
     steps:
       - uses: actions/checkout@v3
@@ -33,11 +37,11 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: Build
+      - name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: false
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
