@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: pgc-images.sbgenomics.com/d3b-bixu/open-pedcan
+          images: pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse
           tags: |
             type=raw,value=latest
             # Only tag the image with latest if we're building on the default
