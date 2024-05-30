@@ -61,6 +61,12 @@ option_list <- list(
     type = "character",
     default = NA,
     help = "Histology file containing clinical information in TSV format."
+  ),
+  optparse::make_option(
+    c("--library"),
+    type = "character",
+    default = "rna_library",
+    help = "RNA library to run in GHA."
   )
 )
 
@@ -126,7 +132,15 @@ gsea_scores_df_tidy <- data.frame()
 
 # iterate through each cohort and RNA library type 
 for(i in 1:length(rna_library_list)){
-  rna_library = rna_library_list[i]
+ 
+   if (opt$library == "rna_library") {
+    rna_library = rna_library_list[i]
+   }
+  
+    else if (opt$library == "stranded") {
+     rna_library = "stranded"
+    }
+  
   # get bs id for one particular rna library type
   rna_library_type_bs_id <- histology_rna_df %>% 
     dplyr::filter(RNA_library == rna_library) %>% 

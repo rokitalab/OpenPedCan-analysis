@@ -32,16 +32,22 @@ cd "$script_directory" || exit
 DATA_DIR="../../data"
 RESULTS_DIR="results"
 
+# only run stranded samples in GHA
 if [[ "$RUN_FOR_SUBTYPING" -eq "0" ]]; then
-  HIST_FILE="${DATA_DIR}/histologies.tsv"
+  HIST_FILE="${DATA_DIR}/histologies.tsv" \
+  LIBRARY_TYPE="rna_library"
 else
-  HIST_FILE="${DATA_DIR}/histologies-base.tsv"
+  HIST_FILE="${DATA_DIR}/histologies-base.tsv" \
+  LIBRARY_TYPE="stranded"
 fi
 
 ######## Calculate scores from expression data ############
 INPUT_FILE="${DATA_DIR}/gene-expression-rsem-tpm-collapsed.rds"
 OUTPUT_FILE="${RESULTS_DIR}/gsva_scores.tsv"
-Rscript --vanilla 01-conduct-gsea-analysis.R --input ${INPUT_FILE} --output ${OUTPUT_FILE} --histology ${HIST_FILE}
+Rscript --vanilla 01-conduct-gsea-analysis.R --input ${INPUT_FILE} \
+--output ${OUTPUT_FILE} \
+--histology ${HIST_FILE} \
+--library ${LIBRARY_TYPE}
 
 if [[ "$RUN_FOR_SUBTYPING" -eq "0" ]]; then
   ######## Model GSVA scores ############
