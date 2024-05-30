@@ -2,7 +2,6 @@ name: Analysis
 
 on:
   pull_request:
-  workflow_dispatch:
 
 jobs:
   consensus_cn_manta:
