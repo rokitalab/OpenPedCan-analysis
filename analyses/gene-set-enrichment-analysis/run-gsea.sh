@@ -11,7 +11,7 @@
 # Takes one environment variable, `OPENPBTA_TESTING`, which is 1 for running
 # samples in CI for testing, 0 for running the full dataset (Default)
 #
-# Takes one environment variable, `BASE_SUBTYPING`, if value is 1 then
+# Takes one environment variable, `RUN_FOR_SUBTYPING`, if value is 1 then
 # only runs modules required for subtyping if value is 0 runs all modules (Default)
 #########################################################################
 
@@ -20,7 +20,7 @@ set -e
 set -o pipefail
 
 IS_CI=${OPENPBTA_TESTING:-0}
-RUN_FOR_SUBTYPING=${OPENPBTA_BASE_SUBTYPING:-0}
+RUN_FOR_SUBTYPING=${RUN_FOR_SUBTYPING:-0}
 
 # This script should always run as if it were being called from
 # the directory it lives in.
