@@ -39,7 +39,7 @@ python3 scripts/merged_to_individual_files.py \
 ## The snakemake flag options are:
 ## -s : Point to the location of the Snakemake file
 ## --configfile : Point to the location of the config file
-## -j : Set available cores, in this case, when no number is provided, thus use all available cores
+## -j : Set available cores, in this case, when $(nproc) is provided, thus use all available cores
 ## -p : Print shell command that will be executed
 ## --restart-times : Define the times a job restarts when run into an error before giving up
 ## --latency-wait: Define the number of seconds to wait for a file to show up after that file has been created
@@ -47,7 +47,7 @@ python3 scripts/merged_to_individual_files.py \
 snakemake \
     -s Snakefile \
     --configfile $SCRATCHDIR/config_snakemake.yaml \
-    -j \
+    -j $(nproc) \
     --restart-times 2
 
 # merge cnv files

@@ -1,7 +1,7 @@
 ---
 title: "GSVA Score Modeling"
-author: "Stephanie J. Spielman for ALSF CCDL"
-date: '2020'
+author: "Stephanie J. Spielman for ALSF CCDL, Jo Lynne Rokita for D3b"
+date: '2020, 2024'
 output:
   html_document:
     df_print: paged
@@ -177,18 +177,18 @@ for(i in 1:length(rna_library_list)){
 
 # CI part is commented out since we want to run in CAVATICA later
 ### Don't run polyA samples in CI due to data limitations, won't be enough levels for ANOVA
-# if (!(running_in_ci)){
-#   cancer_group_polya_model_results <- gsva_anova_tukey(metadata_with_gsva, cancer_group, 'polya', SIGNIFICANCE_THRESHOLD)
-#   broad_histology_polya_model_results <- gsva_anova_tukey(metadata_with_gsva, broad_histology, 'polya', SIGNIFICANCE_THRESHOLD)
-#   head(cancer_group_polya_model_results)
-#   head(broad_histology_polya_model_results)
-# 
-#   ### Save polya library results
-#   write_tsv(cancer_group_polya_model_results[["anova"]],     file_anova_polya_cancer_group)
-#   write_tsv(broad_histology_polya_model_results[["anova"]],    file_anova_polya_broad_histology)
-#   write_tsv(cancer_group_polya_model_results[["tukey"]],     file_tukey_polya_cancer_group)
-#   write_tsv(broad_histology_polya_model_results[["tukey"]],    file_tukey_polya_broad_histology)
-#   }
+ if (!(running_in_ci)){
+   cancer_group_polya_model_results <- gsva_anova_tukey(metadata_with_gsva, cancer_group, 'polya', SIGNIFICANCE_THRESHOLD)
+   broad_histology_polya_model_results <- gsva_anova_tukey(metadata_with_gsva, broad_histology, 'polya', SIGNIFICANCE_THRESHOLD)
+   head(cancer_group_polya_model_results)
+   head(broad_histology_polya_model_results)
+ 
+   ### Save polya library results
+   write_tsv(cancer_group_polya_model_results[["anova"]], "results/gsva_anova_polya_cancer_group.tsv")
+   write_tsv(broad_histology_polya_model_results[["anova"]], "results/gsva_anova_polya_broad_histology.tsv")
+   write_tsv(cancer_group_polya_model_results[["tukey"]], "results/gsva_tukey_polya_cancer_group.tsv")
+   write_tsv(broad_histology_polya_model_results[["tukey"]], "results/gsva_tukey_polya_broad_histology.tsv")
+   }
 
 ```
 
@@ -214,10 +214,10 @@ for(i in 1:length(rna_library_list)){
 }
 
 # CI part is commented out since we want to run in CAVATICA later
-# if (!(running_in_ci))
-# {
-#   cancer_group_polya_model_results[["anova"]] %>% count(significant_anova)
-# }
+ if (!(running_in_ci))
+ {
+   cancer_group_polya_model_results[["anova"]] %>% count(significant_anova)
+ }
 ```
 
 > All are significantly different for stranded, none for polya. Likely due to data/power limitations.
@@ -244,10 +244,10 @@ for(i in 1:length(rna_library_list)){
 }
 
 # CI part is commented out since we want to run in CAVATICA later
-# if (!(running_in_ci))
-# {
-#   broad_histology_polya_model_results[["anova"]] %>% count(significant_anova)
-# }
+ if (!(running_in_ci))
+ {
+   broad_histology_polya_model_results[["anova"]] %>% count(significant_anova)
+ }
 ```
 
 

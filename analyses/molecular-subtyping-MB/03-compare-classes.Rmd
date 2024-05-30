@@ -124,21 +124,6 @@ viewDataTable(exp_count)
 
 ## {.tabset .tabset-fade}
 
-### MM2S
-
-```{r, echo = TRUE, warning = FALSE, message = FALSE}
-out <- compute_accuracy(expected_input = exp_class, 
-                        observed_input = obs_class$MM2S)
-
-# accuracy
-mm2s_accuracy <- out$accuracy
-print(paste0("Accuracy: ", mm2s_accuracy))
-
-# output table
-mm2s_output <- out$merged_table
-viewDataTable(mm2s_output)
-```
-
 ### medulloPackage
 
 ```{r, echo = TRUE, warning = FALSE, message = FALSE}
