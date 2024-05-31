@@ -6,7 +6,7 @@
 
 In OpenPBTA, we used consensus subtypes from the R packages [medulloPackage](https://github.com/d3b-center/medullo-classifier-package) and [MM2S](https://github.com/cran/MM2S) that utilize expression data from RNA-seq or array to classify the medulloblastoma (MB) samples into four subtypes i.e Group3, Group4, SHH, WNT. 
 The input is a log-normalized TPM matrix with gene symbols as rownames in case of medulloPackage and entrez ids as rownames in case of MM2S.
-Here in OpenPedCan, we utilize [medulloPackage](https://github.com/d3b-center/medullo-classifier-package) since its accuracy (95.35%) was higher than that of MM2S (86.05%) 
+Here in OpenPedCan, we utilize [medulloPackage](https://github.com/d3b-center/medullo-classifier-package) since its accuracy (95.35%) was higher than that of MM2S (86.05%). 
 
 ## Molecular subtyping MB workflow
 

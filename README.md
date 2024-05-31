@@ -340,7 +340,7 @@ If you are new user download Docker from [here](https://docs.docker.com/get-dock
 The most recent version of the project Docker image, which is pushed to Docker Hub after a pull request gets merged into the master branch, can be obtained via the command line with:
 
 ```bash
-docker pull pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
+docker pull pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
 ```
 
 Development should utilize the project Docker image.
