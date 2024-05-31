@@ -29,7 +29,7 @@ focal-cn-file-preparation	Rocky Breslow
 focal-cn-file-preparation	Run Jin
 focal-cn-file-preparation	Zhuangzhuang Geng
 focal-cn-file-preparation	Aditya Lahiri
-focal-cn-file-preparation	David Hill
+focal-cn-file-preparation	Dave Hill
 focal-cn-file-preparation	Eric Wafula
 focal-cn-file-preparation	Ryan J. Corbett
 focal-cn-file-preparation	Sangeeta Shukla
@@ -86,7 +86,7 @@ molecular-subtyping-CRANIO	Krutika S. Gaonkar
 molecular-subtyping-CRANIO	Zhuangzhuang Geng
 molecular-subtyping-CRANIO	Komal S. Rathi
 molecular-subtyping-CRANIO	Run Jin
-molecular-subtyping-EPN	David Hill
+molecular-subtyping-EPN	Dave Hill
 molecular-subtyping-EPN	Eric Wafula
 molecular-subtyping-EPN	Krutika S. Gaonkar
 molecular-subtyping-EPN	Ryan J. Corbett
@@ -105,7 +105,7 @@ molecular-subtyping-HGG	Krutika S. Gaonkar
 molecular-subtyping-HGG	Run Jin
 molecular-subtyping-HGG	Zhuangzhuang Geng
 molecular-subtyping-HGG	Aditya Lahiri
-molecular-subtyping-HGG	David Hill
+molecular-subtyping-HGG	Dave Hill
 molecular-subtyping-LGAT	Jo Lynne Rokita
 molecular-subtyping-LGAT	Krutika S. Gaonkar
 molecular-subtyping-LGAT	Run Jin
@@ -148,10 +148,10 @@ molecular-subtyping-pathology	Jo Lynne Rokita
 molecular-subtyping-pathology	Krutika S. Gaonkar
 molecular-subtyping-pathology	Run Jin
 molecular-subtyping-pathology	Zhuangzhuang Geng
-molecular-subtyping-pathology	David Hill
+molecular-subtyping-pathology	Dave Hill
 mtp-annotations	Eric Wafula
 mtp-annotations	Jo Lynne Rokita
-mtp-annotations	David Hill
+mtp-annotations	Dave Hill
 mtp-tables-qc-checks	Eric Wafula
 mtp-tables-qc-checks	Jo Lynne Rokita
 mtp-tables-qc-checks	Aditya Lahiri
@@ -182,7 +182,7 @@ snv-frequencies	Sangeeta Shukla
 tmb-calculation	Eric Wafula
 tmb-calculation	Jo Lynne Rokita
 tmb-calculation	Antonia Chroni
-tmb-calculation	David Hill
+tmb-calculation	Dave Hill
 tp53_nf1_score	Eric Wafula
 tp53_nf1_score	Jo Lynne Rokita
 tp53_nf1_score	Krutika S. Gaonkar
