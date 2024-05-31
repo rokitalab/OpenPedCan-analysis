@@ -4,7 +4,6 @@
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(medulloPackage))
-suppressPackageStartupMessages(library(MM2S))
 suppressPackageStartupMessages(library(org.Hs.eg.db))
 
 # function to run molecular subtyping

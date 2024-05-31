@@ -5,7 +5,6 @@
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(medulloPackage))
-suppressPackageStartupMessages(library(MM2S))
 suppressPackageStartupMessages(library(org.Hs.eg.db))
 
 # source classification function
@@ -36,7 +35,7 @@ output_prefix <- opt$output_prefix
 exprs_mat <- readRDS(exprs_mat)
 
 # subtyping methods
-methods <- c('MM2S', 'medulloPackage')
+methods <- 'medulloPackage'
 
 # classify mb samples
 print("Classify medulloblastoma subtypes...")
