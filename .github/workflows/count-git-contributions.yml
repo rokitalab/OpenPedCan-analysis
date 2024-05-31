@@ -82,7 +82,7 @@ jobs:
       - name: Checkout manuscript repository
         uses: actions/checkout@v4
         with:
-          repository: d3b-center/OpenPedCan-methods
+          repository: d3b-center/OpenPedCan-manuscript
       
       - name: Configure git
         run: |
