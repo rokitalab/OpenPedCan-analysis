@@ -119,7 +119,7 @@ RUN pip3 install \
     "seaborn==0.12.2" \
     "setuptools==46.3.0" \
     "six==1.16.0" \
-    "snakemake==8.1.2" \
+    "snakemake==8.11.6" \
     "statsmodels==0.14.0" \
     "tornado==6.3.1" \
     "traitlets==5.9.0" \
@@ -263,7 +263,7 @@ RUN R -e 'BiocManager::install(c( \
 
 
 # package required for immune deconvolution
-#RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a2bdf31d39111e46c7cefc03ebdbb28457a0d08c', dependencies = TRUE)"
+RUN R -e "remotes::install_github('omnideconv/immunedeconv', ref = 'a7e4ee9993aa94f268e862263eaf226a251514f9', dependencies = TRUE)"
 
 RUN R -e "remotes::install_github('const-ae/ggupset', ref = '7a33263cc5fafdd72a5bfcbebe5185fafe050c73', dependencies = TRUE)"
 
@@ -277,7 +277,7 @@ RUN R -e "withr::with_envvar(c(R_REMOTES_NO_ERRORS_FROM_WARNINGS='true'), remote
 RUN R -e "remotes::install_github('jokergoo/circlize', ref = 'b7d86409d7f893e881980b705ba1dbc758df847d', dependencies = TRUE)"
 
 # signature.tools.lib needed for mutational-signatures 
-RUN R -e "remotes::install_github('Nik-Zainal-Group/signature.tools.lib', ref = 'a54e5d904d091b90ad3b0f9663133e178c36b9aa', dependencies = TRUE)"
+RUN R -e "remotes::install_github('Nik-Zainal-Group/signature.tools.lib', ref = '59a3a3236f16f0c1383d0ab125fec8a251d7f42d', dependencies = TRUE)"
 
 # Molecular subtyping MB
 RUN R -e "remotes::install_github('d3b-center/medullo-classifier-package', ref = 'e3d12f64e2e4e00f5ea884f3353eb8c4b612abe8', dependencies = TRUE, upgrade = FALSE)"  
