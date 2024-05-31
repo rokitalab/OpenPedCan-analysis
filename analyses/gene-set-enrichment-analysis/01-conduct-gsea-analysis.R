@@ -9,7 +9,7 @@
 #   + "For pathways containing genes strongly acting in both directions, the deviations with cancel each other out and show little or no enrichment."
 #
 # Written by Stephanie J. Spielman for CCDL ALSF, 2020
-#
+# Edited by Jo lynne Rokita for D3b, 2024
 #
 #
 # ####### USAGE, assumed to be run from top-level of project:
@@ -61,6 +61,12 @@ option_list <- list(
     type = "character",
     default = NA,
     help = "Histology file containing clinical information in TSV format."
+  ),
+  optparse::make_option(
+    c("--library"),
+    type = "character",
+    default = "rna_library",
+    help = "RNA library to run in GHA."
   )
 )
 
@@ -87,14 +93,16 @@ if (!file.exists(expression_data_file)) stop("\n\nERROR: Provided input file doe
 scores_output_file <- file.path(output_dir, basename(opt$output_file))
 
 #### Load input files --------------------------------------------------------------------
-expression_data <- as.data.frame( readr::read_rds(expression_data_file) )
+expression_data <- as.data.frame(readr::read_rds(expression_data_file))
 human_hallmark  <- msigdbr::msigdbr(species = "Homo sapiens", category = "H") ## human hallmark genes from `migsdbr` package. The loaded data is a tibble.
 
 histology_df <- readr::read_tsv(opt$histology, guess_max = 100000)
 
 #### Prepare hallmark genes: Create a list of hallmarks, each of which is a list of genes -----------------------------------------------
-human_hallmark_twocols <- human_hallmark %>% dplyr::select(gs_name, human_gene_symbol)
-human_hallmark_list    <- base::split(human_hallmark_twocols$human_gene_symbol, list(human_hallmark_twocols$gs_name))
+human_hallmark_twocols <- human_hallmark %>% 
+  dplyr::select(gs_name, human_gene_symbol)
+human_hallmark_list    <- base::split(human_hallmark_twocols$human_gene_symbol, 
+                                      list(human_hallmark_twocols$gs_name))
 
 #### Perform gene set enrichment analysis --------------------------------------------------------------------
 
@@ -103,27 +111,36 @@ human_hallmark_list    <- base::split(human_hallmark_twocols$human_gene_symbol, 
 histology_rna_df <- histology_df %>% 
   dplyr::filter(experimental_strategy == "RNA-Seq") %>% 
   dplyr::filter(!is.na(RNA_library)) %>%
-  dplyr::filter(cohort != "TCGA") %>%
-  dplyr::filter(!is.na(broad_histology)) %>%
-  dplyr::filter(broad_histology != "Non-tumor") %>%  
-  dplyr::filter(broad_histology != "Other tumor") #%>%
-  #dplyr::filter(!is.na(cancer_group)) # using histologies base for won't work 
-  
+  dplyr::filter(!cohort %in% c("TCGA", "GTEx")) %>%
+  dplyr::filter(!is.na(broad_histology))
 
 # First filter expression data to exclude GTEx and TCGA
 expression_data <- expression_data %>% 
-  dplyr::select(histology_rna_df$Kids_First_Biospecimen_ID)
+  dplyr::select(any_of(histology_rna_df$Kids_First_Biospecimen_ID))
 
 # for each type of the RNA library, we subset the expression matrix accordingly and run gsea scores for each RNA library 
-rna_library_list <- histology_rna_df %>% pull(RNA_library) %>% unique()
+rna_library_list <- histology_rna_df %>% 
+  pull(RNA_library) %>% 
+  unique()
+
 # Further subset to each cohort to deal with size issues
-cohort_list <- histology_rna_df %>% pull(cohort) %>% unique()
+cohort_list <- histology_rna_df %>% 
+  pull(cohort) %>% 
+  unique()
 
 gsea_scores_df_tidy <- data.frame()
 
 # iterate through each cohort and RNA library type 
 for(i in 1:length(rna_library_list)){
-  rna_library = rna_library_list[i]
+ 
+   if (opt$library == "rna_library") {
+    rna_library = rna_library_list[i]
+   }
+  
+    else if (opt$library == "stranded") {
+     rna_library = "stranded"
+    }
+  
   # get bs id for one particular rna library type
   rna_library_type_bs_id <- histology_rna_df %>% 
     dplyr::filter(RNA_library == rna_library) %>% 
@@ -133,40 +150,45 @@ for(i in 1:length(rna_library_list)){
   # Filter the expression data to this RNA library type
   # Subset to the remaining samples 
   expression_data_each <- expression_data %>% 
-    dplyr::select(rna_library_type_bs_id)
+    dplyr::select(any_of(rna_library_type_bs_id))
   
   ### Rownames are genes and column names are samples
-  expression_data_each_log2_matrix <- as.matrix( log2(expression_data_each + 1) )
+  expression_data_each_log2 <- log2(expression_data_each + 1)
+  expression_data_each_log2_matrix <- as.matrix(expression_data_each_log2)
   
-  # Renmove genes with 0 variance
+  # Remove genes with 0 variance
   #keep <- apply(expression_data_each_log2_matrix, 1, function(x) var(x, na.rm = TRUE)) > 0 
   #expression_data_each_log2_matrix_keep <- data.matrix(expression_data_each_log2_matrix[keep,])
-                
-  #We then calculate the Gaussian-distributed scores
-  gsea_scores_each <- GSVA::gsva(expression_data_each_log2_matrix,
-                                 human_hallmark_list,
-                                 method = "gsva",
-                                 min.sz=1, max.sz=1500,## Arguments from K. Rathi
-                                 parallel.sz = 8, # For the bigger dataset, this ensures this won't crash due to memory problems
-                                 mx.diff = TRUE)        ## Setting this argument to TRUE computes Gaussian-distributed scores (bimodal score distribution if FALSE)
+  
+  # We then calculate the Gaussian-distributed scores
+  gsea_scores_param <- gsvaParam(expression_data_each_log2_matrix,
+                                 geneSets = human_hallmark_list,
+                                 kcdf = "Gaussian",
+                                 assay = NA_character_,
+                                 annotation = NA_character_,
+                                 tau = 1,
+                                 minSize = 1, 
+                                 maxSize = 1500, ## Arguments from K. Rathi
+                                 maxDiff = TRUE) ## Setting this argument to TRUE computes Gaussian-distributed scores (bimodal score distribution if FALSE)
+  
+  gsea_scores_each <- gsva(gsea_scores_param, verbose = TRUE)
   
   ### Clean scoring into tidy format
   gsea_scores_each_df <- as.data.frame(gsea_scores_each) %>%
     rownames_to_column(var = "hallmark_name")
-  
-  #first/last_bs needed for use in gather (we are not on tidyr1.0)
-  first_bs <- head(colnames(gsea_scores_each), n=1)
-  last_bs  <- tail(colnames(gsea_scores_each), n=1)
-  
+
   rna_library<-gsub(" ", "_", rna_library)
   rna_library<-stringr::str_to_lower(gsub("-", "", rna_library))
   
   gsea_scores_each_df_tidy <- gsea_scores_each_df %>%
-    tidyr::gather(Kids_First_Biospecimen_ID, gsea_score, !!first_bs : !!last_bs) %>%
+    tidyr::pivot_longer(cols = -hallmark_name, 
+                        names_to = "Kids_First_Biospecimen_ID", 
+                        values_to = "gsea_score") %>%
     dplyr::select(Kids_First_Biospecimen_ID, hallmark_name, gsea_score) %>%
     dplyr::mutate(data_type = rna_library)
   
-  gsea_scores_df_tidy <-  bind_rows(gsea_scores_df_tidy , gsea_scores_each_df_tidy)
+  gsea_scores_df_tidy <-  bind_rows(gsea_scores_df_tidy, 
+                                    gsea_scores_each_df_tidy)
 }
 
 

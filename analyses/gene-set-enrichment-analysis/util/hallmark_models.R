@@ -1,7 +1,8 @@
 ############################################################################################
 #    Functions for performing ANOVA and Tukey HSD tests on hallmark pathway GSVA scores    #
 #                                                                                          #
-#    Stephanie J. Spielman, 2020                                                           #
+#    Stephanie J. Spielman, 2020
+#    Jo Lynne Rokita, 2024
 ############################################################################################
 
 library(dplyr)
@@ -13,16 +14,6 @@ library(broom)
 
 # Magrittr pipe
 `%>%` <- dplyr::`%>%`
-
-### Check tidyr version for nesting code to ensure it used as <1.0.0 ####
-tidyr_version <- package_version( packageVersion("tidyr") )
-if (tidyr_version$major >= 1){
-  nest   <- nest_legacy
-  unnest <- unnest_legacy
-}
-
-
-
 
 perform_anova <- function(df, predictor_variable_string)
 {
@@ -94,8 +85,8 @@ gsva_anova_tukey <- function(df, predictor_variable, library_type, significance_
     dplyr::select(hallmark_name, tukey_fit) %>%
     mutate(tukey_tidy = map(tukey_fit, broom::tidy)) %>%
     dplyr::select(-tukey_fit) %>%
-    unnest() %>%
-    dplyr::select(hallmark_name, comparison, estimate, adj.p.value) %>%
+    unnest(tukey_tidy) %>%
+    dplyr::select(hallmark_name, contrast, estimate, adj.p.value) %>%
     dplyr::rename(pathway_score_difference = estimate,
                   tukey_p_value            = adj.p.value) %>%
     mutate(bonferroni_pvalue = tukey_p_value * number_of_tests,

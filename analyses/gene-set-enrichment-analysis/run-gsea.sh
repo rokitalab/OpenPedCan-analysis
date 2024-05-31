@@ -1,3 +1,4 @@
+#!/bin/bash
 #########################################################################
 # Stephanie J. Spielman for ALSF CCDL 2020
 #
@@ -10,7 +11,7 @@
 # Takes one environment variable, `OPENPBTA_TESTING`, which is 1 for running
 # samples in CI for testing, 0 for running the full dataset (Default)
 #
-# Takes one environment variable, `BASE_SUBTYPING`, if value is 1 then
+# Takes one environment variable, `RUN_FOR_SUBTYPING`, if value is 1 then
 # only runs modules required for subtyping if value is 0 runs all modules (Default)
 #########################################################################
 
@@ -19,7 +20,7 @@ set -e
 set -o pipefail
 
 IS_CI=${OPENPBTA_TESTING:-0}
-RUN_FOR_SUBTYPING=${OPENPBTA_BASE_SUBTYPING:-0}
+RUN_FOR_SUBTYPING=${RUN_FOR_SUBTYPING:-0}
 
 # This script should always run as if it were being called from
 # the directory it lives in.
@@ -31,16 +32,22 @@ cd "$script_directory" || exit
 DATA_DIR="../../data"
 RESULTS_DIR="results"
 
+# only run stranded samples in GHA
 if [[ "$RUN_FOR_SUBTYPING" -eq "0" ]]; then
-  HIST_FILE="${DATA_DIR}/histologies.tsv"
+  HIST_FILE="${DATA_DIR}/histologies.tsv" \
+  LIBRARY_TYPE="rna_library"
 else
-  HIST_FILE="${DATA_DIR}/histologies-base.tsv"
+  HIST_FILE="${DATA_DIR}/histologies-base.tsv" \
+  LIBRARY_TYPE="stranded"
 fi
 
 ######## Calculate scores from expression data ############
 INPUT_FILE="${DATA_DIR}/gene-expression-rsem-tpm-collapsed.rds"
 OUTPUT_FILE="${RESULTS_DIR}/gsva_scores.tsv"
-Rscript --vanilla 01-conduct-gsea-analysis.R --input ${INPUT_FILE} --output ${OUTPUT_FILE} --histology ${HIST_FILE}
+Rscript --vanilla 01-conduct-gsea-analysis.R --input ${INPUT_FILE} \
+--output ${OUTPUT_FILE} \
+--histology ${HIST_FILE} \
+--library ${LIBRARY_TYPE}
 
 if [[ "$RUN_FOR_SUBTYPING" -eq "0" ]]; then
   ######## Model GSVA scores ############
