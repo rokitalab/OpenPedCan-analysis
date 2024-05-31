@@ -1,8 +1,8 @@
 ---
 title: "Format analyses directories contributions"
 output: html_notebook
-author: JN Taroni for ALSF CCDL
-date: 2022
+author: JN Taroni for ALSF CCDL, Updated by Jo Lynne Rokita for D3b
+date: 2022, 2024
 ---
 
 ## Set up
