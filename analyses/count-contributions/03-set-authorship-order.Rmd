@@ -8,9 +8,9 @@ author: "Jaclyn Taroni for ALSF CCDL, Updated by Jo Lynne Rokita D3b"
 date: "2022, 2024"
 ---
 
-This notebook updates the current [manuscript metadata](https://github.com/d3b-center/OpenPedCan-methods/blob/main/content/metadata.yaml) such that the authors are ordered in the following way:
+This notebook updates the current [manuscript metadata](https://github.com/d3b-center/OpenPedCan-manuscript/blob/main/content/metadata.yaml) such that the authors are ordered in the following way:
 
-* The first 3 and last 2 authors, are pinned to reflect scholarship and contributor roles that are not captured in the Git history of this repository (e.g., substantive analytical code review, conceptualization, supervision, or project administration).
+* The first 4 and last 2 authors, are pinned to reflect scholarship and contributor roles that are not captured in the Git history of this repository (e.g., substantive analytical code review, conceptualization, supervision, or project administration).
 * Manuscript authors that have contributed to the code base for the analysis repository -- specifically the number of analysis modules that were included in the paper that a manuscript author has contributed to -- are then ordered from the second position on in decreasing order.
 In the case of ties, the order is randomly selected.
 * Manuscript authors that did not directly contribute to the code base are then randomly ordered. 
@@ -33,7 +33,7 @@ set.seed(2022)
 Grab the metadata YAML file from the `master` branch of the repository and save to the directory this notebook is in.
 
 ```{r}
-manuscript_metadata_url <- "https://raw.githubusercontent.com/d3b-center/OpenPedCan-methods/main/content/metadata.yaml"
+manuscript_metadata_url <- "https://raw.githubusercontent.com/d3b-center/OpenPedCan-manuscript/main/content/metadata.yaml"
 
 download.file(manuscript_metadata_url, "metadata.yaml",)
 ```
@@ -73,14 +73,15 @@ We are going to pin some of the author positioned based on scholarship that is n
 ```{r}
 pinned_first_authors <- c("Zhuangzhuang Geng", 
                     "Eric Wafula",
-                    "Yuanchao Zhang")
+                    "Yuanchao Zhang",
+                    "Ryan J. Corbett")
 
-pinned_first_positions <- c(1:3)
+pinned_first_positions <- c(1:4)
 names(pinned_first_positions) <- pinned_first_authors
 
 
 pinned_last_authors <- c("Deanne Taylor",
-                         "Jo Lynne Rokita^")
+                         "Jo Lynne Rokita")
 
 pinned_authors <- c(pinned_first_authors, pinned_last_authors)
 
@@ -113,14 +114,13 @@ code_contributors <- module_contributions_df %>%
   # Authors with more contributions should come first
   arrange(desc(num_modules)) %>%
   filter(!author %in% pinned_authors) %>%
-  filter(author != "Jo Lynne Rokita") %>%
   pull(author)
 
 # Remove pinned authors from consideration here
 code_contributors <- setdiff(code_contributors, pinned_authors)
 
 # Code contributors come after the pinned first author position
-code_contributor_positions <- 1:length(code_contributors) + 3
+code_contributor_positions <- 1:length(code_contributors) + 4
 names(code_contributor_positions) <- code_contributors
 ```
 
@@ -152,7 +152,7 @@ Now to put all of the positions together and sort appropriately.
 ```{r}
 # manually reset last author positions in case of authors missing from yaml file:
 pinned_last_positions <- c(max(noncode_contributor_positions)+1, max(noncode_contributor_positions)+2)
-names(pinned_last_positions) <- c("Deanne Taylor", "Jo Lynne Rokita^")
+names(pinned_last_positions) <- c("Deanne Taylor", "Jo Lynne Rokita")
 
 pinned_positions <-  c(pinned_first_positions, pinned_last_positions)
 
