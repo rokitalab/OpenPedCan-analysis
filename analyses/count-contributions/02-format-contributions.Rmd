@@ -67,7 +67,6 @@ name_recoding <- c(
   kgaonkar6 = "Krutika S. Gaonkar",
   afarrel = "Alvin Farrel",
   Shukla = "Sangeeta Shukla",
-  Ubuntu = "Zhuangzhuang Geng",
   `Ryan Corbett` = "Ryan J. Corbett",
   devbyaccident = "Christopher Blackden",
   `Chris Blackden` = "Christopher Blackden",
@@ -98,6 +97,7 @@ authors_rm <- c(
   "Laura Egolf",
   "hbeale",
   "Bailey",
+  "Ubuntu",
   "Teja Koganti",
   "Yuankun Zhu"
 )

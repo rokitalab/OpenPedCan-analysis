@@ -2,8 +2,8 @@ module	author
 copy_number_consensus_call	Alex Sickler
 copy_number_consensus_call	Eric Wafula
 copy_number_consensus_call	Krutika S. Gaonkar
-copy_number_consensus_call	Zhuangzhuang Geng
 copy_number_consensus_call	Jo Lynne Rokita
+copy_number_consensus_call	Zhuangzhuang Geng
 copy_number_consensus_call_manta	Alex Sickler
 copy_number_consensus_call_manta	Eric Wafula
 copy_number_consensus_call_manta	Jo Lynne Rokita
@@ -16,12 +16,11 @@ data-pre-release-qc	Eric Wafula
 data-pre-release-qc	Zhuangzhuang Geng
 efo-mondo-mapping	Jo Lynne Rokita
 efo-mondo-mapping	Sangeeta Shukla
-efo-mondo-mapping	Zhuangzhuang Geng
 efo-mondo-mapping	Run Jin
+efo-mondo-mapping	Zhuangzhuang Geng
 filter-mtp-tables	Eric Wafula
 filter-mtp-tables	Jo Lynne Rokita
 filter-mtp-tables	Sangeeta Shukla
-filter-mtp-tables	Zhuangzhuang Geng
 focal-cn-file-preparation	Alex Sickler
 focal-cn-file-preparation	Jo Lynne Rokita
 focal-cn-file-preparation	Komal S. Rathi
@@ -38,43 +37,41 @@ fusion-frequencies	Eric Wafula
 fusion-frequencies	Jo Lynne Rokita
 fusion-frequencies	Krutika S. Gaonkar
 fusion-frequencies	Run Jin
-fusion-frequencies	Zhuangzhuang Geng
 fusion-frequencies	Sangeeta Shukla
+fusion-frequencies	Zhuangzhuang Geng
 fusion-summary	Daniel P. Miller
 fusion-summary	Jo Lynne Rokita
 fusion-summary	Krutika S. Gaonkar
 fusion-summary	Run Jin
-fusion-summary	Zhuangzhuang Geng
 fusion-summary	Ryan J. Corbett
+fusion-summary	Zhuangzhuang Geng
 fusion_filtering	Eric Wafula
 fusion_filtering	Jo Lynne Rokita
 fusion_filtering	Krutika S. Gaonkar
 fusion_filtering	Run Jin
-fusion_filtering	Zhuangzhuang Geng
 fusion_filtering	Kelsey Keith
+fusion_filtering	Zhuangzhuang Geng
 gene-set-enrichment-analysis	Eric Wafula
 gene-set-enrichment-analysis	Krutika S. Gaonkar
 gene-set-enrichment-analysis	Run Jin
-gene-set-enrichment-analysis	Zhuangzhuang Geng
 gene-set-enrichment-analysis	Jo Lynne Rokita
 gene-set-enrichment-analysis	Sangeeta Shukla
 gene_match	Jo Lynne Rokita
 gene_match	Rocky Breslow
 gene_match	Sangeeta Shukla
-gene_match	Zhuangzhuang Geng
 gene_match	Run Jin
 independent-samples	Eric Wafula
 independent-samples	Komal S. Rathi
 independent-samples	Krutika S. Gaonkar
 independent-samples	Run Jin
-independent-samples	Zhuangzhuang Geng
 independent-samples	Jo Lynne Rokita
 independent-samples	Sangeeta Shukla
+independent-samples	Zhuangzhuang Geng
 long-format-table-utils	Jo Lynne Rokita
 long-format-table-utils	Run Jin
-long-format-table-utils	Zhuangzhuang Geng
 long-format-table-utils	Yuanchao Zhang
 long-format-table-utils	Sangeeta Shukla
+long-format-table-utils	Zhuangzhuang Geng
 methylation-preprocessing	Eric Wafula
 methylation-preprocessing	Jo Lynne Rokita
 methylation-preprocessing	Daniel P. Miller
@@ -127,10 +124,10 @@ molecular-subtyping-PB	Zhuangzhuang Geng
 molecular-subtyping-PB	Jo Lynne Rokita
 molecular-subtyping-chordoma	Eric Wafula
 molecular-subtyping-chordoma	Krutika S. Gaonkar
-molecular-subtyping-chordoma	Zhuangzhuang Geng
 molecular-subtyping-chordoma	Jo Lynne Rokita
 molecular-subtyping-chordoma	Komal S. Rathi
 molecular-subtyping-chordoma	Run Jin
+molecular-subtyping-chordoma	Zhuangzhuang Geng
 molecular-subtyping-embryonal	Jo Lynne Rokita
 molecular-subtyping-embryonal	Krutika S. Gaonkar
 molecular-subtyping-embryonal	Zhuangzhuang Geng
@@ -154,7 +151,6 @@ molecular-subtyping-pathology	Zhuangzhuang Geng
 molecular-subtyping-pathology	David Hill
 mtp-annotations	Eric Wafula
 mtp-annotations	Jo Lynne Rokita
-mtp-annotations	Zhuangzhuang Geng
 mtp-annotations	David Hill
 mtp-tables-qc-checks	Eric Wafula
 mtp-tables-qc-checks	Jo Lynne Rokita
@@ -172,30 +168,25 @@ pedot-table-column-display-order-name	Jo Lynne Rokita
 pedot-table-column-display-order-name	Yuanchao Zhang
 rna-seq-expression-summary-stats	Eric Wafula
 rna-seq-expression-summary-stats	Jo Lynne Rokita
-rna-seq-expression-summary-stats	Zhuangzhuang Geng
 rna-seq-expression-summary-stats	Yuanchao Zhang
 rna-seq-expression-summary-stats	Sangeeta Shukla
 rnaseq-batch-correct	Christopher Blackden
-rnaseq-batch-correct	Zhuangzhuang Geng
 rnaseq-batch-correct	Adam A. Kraya
 rnaseq-batch-correct	Komal S. Rathi
 snv-frequencies	Eric Wafula
 snv-frequencies	Jo Lynne Rokita
 snv-frequencies	Kelsey Keith
 snv-frequencies	Run Jin
-snv-frequencies	Zhuangzhuang Geng
 snv-frequencies	Yuanchao Zhang
 snv-frequencies	Sangeeta Shukla
 tmb-calculation	Eric Wafula
 tmb-calculation	Jo Lynne Rokita
-tmb-calculation	Zhuangzhuang Geng
 tmb-calculation	Antonia Chroni
 tmb-calculation	David Hill
 tp53_nf1_score	Eric Wafula
 tp53_nf1_score	Jo Lynne Rokita
 tp53_nf1_score	Krutika S. Gaonkar
 tp53_nf1_score	Run Jin
-tp53_nf1_score	Zhuangzhuang Geng
 tp53_nf1_score	Aditya Lahiri
 tumor-gtex-plots	Jo Lynne Rokita
 tumor-gtex-plots	Komal S. Rathi
