@@ -24,7 +24,7 @@ cn_file <- file.path(data_dir, "consensus_wgs_plus_cnvkit_wxs_plus_freec_tumor_o
 maf_file <- file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz")
 tumorOnly_file <- file.path(data_dir, "snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz")
 expr_file <- file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds")
-cn_arm_file <- file.path(data_dir, "cnv-consensus-gistic", "broad_values_by_arm.txt")
+cn_arm_file <- file.path(data_dir, "cnv-consensus-gistic.zip")
 germline_file <- file.path(input_dir, "pbta_germline_plp_calls_autogvp_abridged_gnomad_popmax.tsv")
 germline_sv_file <- file.path(input_dir, "pbta_germline_svs.tsv")
 
@@ -70,7 +70,7 @@ u1_genes <- mutations %>%
   unique()
 
 # Load CN chromosome arm file
-broad_CNA <- read_tsv(cn_arm_file) %>%
+broad_CNA <- readr::read_tsv(unz(cn_arm_file, "cnv-consensus-gistic/broad_values_by_arm.txt")) %>%
   column_to_rownames("Chromosome Arm")
 
 # Define function for filling in alterations data frame
