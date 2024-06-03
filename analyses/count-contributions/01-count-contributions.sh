@@ -13,7 +13,19 @@ comp_dir="../../scratch/count-contributions"
 mkdir -p ${comp_dir}
 
 # Total contributors in this branch, removing the leading whitespace
-git shortlog -sn --since="2021-03-11" HEAD | sed 's/^ *//g' > "${comp_dir}/total_contributions.tsv"
+#git shortlog -s -n --since="2021-03-11" HEAD | sed 's/^ *//g' > "${comp_dir}/total_contributions.tsv"
+#git log --pretty=format:"%an" --since="2021-03-11" | \
+#sort | \
+#uniq -c | \
+#sort -nr | \
+#awk '{print $1"\t"$2}' > ${comp_dir}/total_contributions.tsv
+
+git log --pretty=format:"%an" --since="2021-03-11" | \
+sort | \
+uniq -c | \
+sort -nr | \
+awk '{count=$1; $1=""; print count"\t"$0}' | \
+sed 's/^[ \t]*//' > ${comp_dir}/total_contributions.tsv
 
 # This will capture all the directories in analyses/
 analyses_directories=(../*/)
