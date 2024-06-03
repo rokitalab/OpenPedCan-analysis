@@ -56,7 +56,7 @@ jobs:
       - name: Create PR with updated contribution module
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.DOCS_BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           commit-message: Rerun count-contributions analysis module
           signoff: false
           branch: auto_count_contributions
@@ -117,7 +117,7 @@ jobs:
       - name: Create PR with updated manuscript metadata YAML
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.DOCS_BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           commit-message: Update manuscript metadata
           signoff: false
           branch: auto_author_order
