@@ -1,0 +1,273 @@
+harmonized_diagnosis	count	percent
+Breast Invasive Carcinoma	1088	7.87%
+Kidney Renal Clear Cell Carcinoma	527	3.81%
+Lung Adenocarcinoma	510	3.69%
+Brain Lower Grade Glioma	509	3.68%
+Thyroid Carcinoma	501	3.63%
+Head and Neck Squamous Cell Carcinoma	498	3.6%
+Lung Squamous Cell Carcinoma	498	3.6%
+Neuroblastoma	494	3.58%
+Prostate Adenocarcinoma	494	3.58%
+Cutaneous Melanoma	465	3.37%
+Bladder Urothelial Carcinoma	405	2.93%
+Ovarian Serous Cystadenocarcinoma	375	2.71%
+Stomach Adenocarcinoma	373	2.7%
+Hepatocellular Carcinoma	369	2.67%
+Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	304	2.2%
+Colon Adenocarcinoma	288	2.08%
+Kidney Renal Papillary Cell Carcinoma	286	2.07%
+Sarcoma	283	2.05%
+Low-grade glioma, KIAA1549-BRAF	242	1.75%
+Neuroblastoma, MYCN non-amplified	241	1.74%
+Diffuse midline glioma, H3 K28-altered	235	1.7%
+Neuroblastoma, MYCN-amplified	202	1.46%
+High-grade glioma, IDH-wildtype and H3-wildtype	182	1.32%
+Uterine Corpus Endometrial Carcinoma	178	1.29%
+Pancreatic Adenocarcinoma	177	1.28%
+Pheochromocytoma and Paraganglioma	177	1.28%
+Glioblastoma Multiforme	159	1.15%
+Esophageal Carcinoma	158	1.14%
+Testicular Germ Cell Tumor	148	1.07%
+Wilms tumor	128	0.93%
+Thymoma	118	0.85%
+Medulloblastoma, group 4	112	0.81%
+Glioblastoma	99	0.72%
+High-grade glioma/astrocytoma (WHO grade III/IV)	95	0.69%
+Rectum Adenocarcinoma	92	0.67%
+Ependymoma	91	0.66%
+Osteosarcoma	89	0.64%
+Mesothelioma	86	0.62%
+Posterior fossa group A (PFA) ependymoma	85	0.62%
+Adamantinomatous craniopharyngioma	79	0.57%
+Uveal Melanoma	79	0.57%
+Adrenocortical Carcinoma	77	0.56%
+Pilocytic astrocytoma	71	0.51%
+Medulloblastoma, SHH-activated	67	0.48%
+Medulloblastoma, group 3	66	0.48%
+Kidney Chromophobe	65	0.47%
+Oligodendroglioma	65	0.47%
+Rhabdoid tumor of the kidney	64	0.46%
+Low-grade glioma/astrocytoma (WHO grade I/II)	62	0.45%
+Dysembryoplastic neuroepithelial tumor (DNET)	57	0.41%
+Low-grade glioma, wildtype	56	0.41%
+Uterine Carcinosarcoma	56	0.41%
+Supratentorial ependymoma, ZFTA fusion-positive	55	0.4%
+Low-grade glioma, BRAF V600E	52	0.38%
+Schwannoma	48	0.35%
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	47	0.34%
+Ganglioneuroblastoma, MYCN non-amplified	45	0.33%
+Meningioma	45	0.33%
+Choroid plexus papilloma	37	0.27%
+Ganglioneuroblastoma, nodular	36	0.26%
+Neurofibroma/Plexiform	36	0.26%
+Atypical Teratoid Rhabdoid Tumor (ATRT)	35	0.25%
+Cholangiocarcinoma	35	0.25%
+Diffuse hemispheric glioma, H3 G35-mutant	35	0.25%
+Ganglioglioma, BRAF V600E	34	0.25%
+Medulloblastoma	34	0.25%
+Low-grade glioma, other MAPK	32	0.23%
+Dysplasia/Gliosis	29	0.21%
+Ewing sarcoma	29	0.21%
+Atypical Teratoid Rhabdoid Tumor, SHH	26	0.19%
+Atypical Teratoid Rhabdoid Tumor, MYC	24	0.17%
+Medulloblastoma, WNT-activated	24	0.17%
+Pleomorphic xanthoastrocytoma	22	0.16%
+Choroid plexus carcinoma	21	0.15%
+Craniopharyngioma	21	0.15%
+Ganglioglioma, wildtype	20	0.14%
+Ganglioneuroblastoma, MYCN-amplified	19	0.14%
+High-grade glioma, IDH-mutant	19	0.14%
+Low-grade glioma, RTK	19	0.14%
+Adenoma	18	0.13%
+Atypical Teratoid Rhabdoid Tumor, TYR	18	0.13%
+Atypical meningioma	18	0.13%
+CNS Embryonal tumor, NEC/NOS	18	0.13%
+Low-grade glioma, FGFR	18	0.13%
+Ganglioglioma	17	0.12%
+Low-grade glioma, NF1-germline	16	0.12%
+Myxopapillary ependymoma	16	0.12%
+Teratoma	16	0.12%
+Ganglioneuroblastoma, intermixed	14	0.1%
+Clear Cell Sarcoma of the Kidney	13	0.09%
+Germinoma	12	0.09%
+Low-grade glioma, BRAF V600E, CDKN2A/B	12	0.09%
+Brainstem glioma- Diffuse intrinsic pontine glioma	11	0.08%
+Glial-neuronal tumor,  To be classified	11	0.08%
+Hemangioblastoma	11	0.08%
+Langerhans Cell histiocytosis	11	0.08%
+Low-grade glioma, IDH	11	0.08%
+Malignant peripheral nerve sheath tumor (MPNST)	11	0.08%
+Cavernoma	10	0.07%
+Chordoma	9	0.07%
+Ganglioglioma, KIAA1549-BRAF	9	0.07%
+Glial-neuronal tumor,  FGFR	9	0.07%
+Pineoblastoma	9	0.07%
+Posterior fossa group B (PFB) ependymoma	9	0.07%
+Embryonal tumor with multilayer rosettes, NOS	8	0.06%
+Low-grade glioma, KIAA1549-BRAF, RTK	8	0.06%
+Low-grade glioma, MYB/MYBL1	8	0.06%
+Low-grade glioma, NF1-somatic, NF1-germline	8	0.06%
+Metastatic secondary tumors	8	0.06%
+Glial-neuronal tumor,  wildtype	7	0.05%
+Non-germinomatous germ cell tumor	7	0.05%
+Pineoblastoma, Group 1	7	0.05%
+Dermoid cyst	6	0.04%
+Embryonal tumor with multilayer rosettes, C19MC-altered	6	0.04%
+Ganglioglioma, RTK	6	0.04%
+Ganglioglioma, other MAPK	6	0.04%
+Ganglioneuroma	6	0.04%
+Glial-neuronal tumor,  BRAF V600E	6	0.04%
+Low-grade glioma, BRAF/MAPK	6	0.04%
+Low-grade glioma, NF1-somatic	6	0.04%
+Spinal ependymoma	6	0.04%
+Subependymal Giant Cell Astrocytoma, wildtype	6	0.04%
+Supratentorial ependymoma, YAP1 fusion-positive	6	0.04%
+Atypical choroid plexus papilloma	5	0.04%
+Glial-neuronal tumor,  RTK	5	0.04%
+Infant-type hemispheric glioma, NTRK-altered	5	0.04%
+Low-grade glioma, MAPK	5	0.04%
+Low-grade glioma, NF1-somatic, FGFR	5	0.04%
+Mixed germ cell tumor	5	0.04%
+Epidermoid cyst	4	0.03%
+Ganglioneuroblastoma	4	0.03%
+Ganglioneuroma, maturing subtype OR Ganglioneuroblastoma, well differentiated	4	0.03%
+Glial-neuronal tumor,  other MAPK	4	0.03%
+Infant-type hemispheric glioma, ROS1-altered	4	0.03%
+Low-grade glioma, KIAA1549-BRAF, other MAPK	4	0.03%
+Osteoblastoma	4	0.03%
+Pineoblastoma, MYC/FOXR2	4	0.03%
+Subependymal Giant Cell Astrocytoma	4	0.03%
+Subependymal Giant Cell Astrocytoma (SEGA)	4	0.03%
+Astrocytoma	3	0.02%
+CNS neuroblastoma	3	0.02%
+Central neurocytoma	3	0.02%
+Extraventricular neurocytoma	3	0.02%
+Ganglioglioma, FGFR	3	0.02%
+Glial-neuronal tumor,  KIAA1549-BRAF	3	0.02%
+Glioma	3	0.02%
+Hamartoma	3	0.02%
+Juvenile xanthogranuloma	3	0.02%
+Low-grade glioma, BRAF V600E, other MAPK	3	0.02%
+Low-grade glioma, NF1-germline, CDKN2A/B	3	0.02%
+Low-grade glioma, NF1-somatic, NF1-germline, FGFR	3	0.02%
+Meningioma;Schwannoma	3	0.02%
+Meningothelial meningioma	3	0.02%
+Pineoblastoma, Group 2	3	0.02%
+Arteriovenous malformation	2	0.01%
+CNS Embryonal tumor, HGNET-MN1	2	0.01%
+Chondroma	2	0.01%
+Chordoma, conventional	2	0.01%
+Chordoma, poorly differentiated	2	0.01%
+Desmoplastic infantile astrocytoma and ganglioglioma, BRAF V600E	2	0.01%
+Diffuse leptomeningeal glioneuronal tumor,  KIAA1549-BRAF	2	0.01%
+Ganglioglioma, BRAF V600E, CDKN2A/B	2	0.01%
+Ganglioglioma, MAPK	2	0.01%
+Ganglioglioma, MYB/MYBL1	2	0.01%
+Hemangioma	2	0.01%
+Inclusion cyst	2	0.01%
+Infant-type hemispheric glioma, ALK-altered	2	0.01%
+Inflammatory lesion	2	0.01%
+Lipoma	2	0.01%
+Low-grade glioma, CDKN2A/B	2	0.01%
+Low-grade glioma, KIAA1549-BRAF, FGFR	2	0.01%
+Low-grade glioma, NF1-germline, FGFR	2	0.01%
+Low-grade glioma, RTK, CDKN2A/B	2	0.01%
+Myofibroblastic tumor	2	0.01%
+Reactive connective tissue	2	0.01%
+Recurrent Glioma	2	0.01%
+Rhabdomyosarcoma	2	0.01%
+Rosette-forming glioneuronal tumor,  FGFR	2	0.01%
+Vascular malformation	2	0.01%
+Anaplastic (malignant) meningioma	1	0.01%
+Aneurismal bone cyst (abc) with col1a1-usp6 fusion	1	0.01%
+Aneurysmal bone cyst (abc)	1	0.01%
+Atypical lymphoid infiltrate	1	0.01%
+CNS Burkitt's lymphoma	1	0.01%
+CNS Melanoma	1	0.01%
+Childhood Astrocytic Tumor	1	0.01%
+Cholesterol granuloma	1	0.01%
+Chondromyxoid fibroma	1	0.01%
+Choroid plexus tumor	1	0.01%
+Clear cell meningioma	1	0.01%
+Congenital malignant brain tumor	1	0.01%
+Cranial fasciitis	1	0.01%
+Desmoplastic infantile astrocytoma and ganglioglioma, RTK	1	0.01%
+Desmoplastic infantile astrocytoma and ganglioglioma, wildtype	1	0.01%
+Diffuse fibrillary astrocytoma	1	0.01%
+Diffuse leptomeningeal glioneuronal tumor,  MAPK	1	0.01%
+Diffuse leptomeningeal glioneuronal tumor,  To be classified	1	0.01%
+Diffuse midline glioma, H3 K28-altered (EGFR mutant)	1	0.01%
+Diffuse midline glioma, H3 K28-mutant	1	0.01%
+Dysembryoplastic neuroepithelial tumor (DNET);Dysplasia/Gliosis;Ganglioglioma	1	0.01%
+Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	1	0.01%
+Ependymoma;Metastatic secondary tumors	1	0.01%
+Epilepsy, chronic rasmussen encephalitis	1	0.01%
+Epstein-Barr virus-related tumor	1	0.01%
+Familial adenomatous polyposis	1	0.01%
+Fibroma	1	0.01%
+Fibromixoid lesion	1	0.01%
+Ganglioglioma, H3	1	0.01%
+Ganglioglioma, IDH	1	0.01%
+Ganglioglioma, NF1-germline	1	0.01%
+Ganglioglioma, NF1-somatic, BRAF V600E	1	0.01%
+Ganglioglioma, RTK, BRAF V600E	1	0.01%
+Ganglioglioma, RTK, FGFR	1	0.01%
+Ganglioglioma, other MAPK, BRAF V600E	1	0.01%
+Ganglioglioma, other MAPK, IDH	1	0.01%
+Germ Cell Tumor	1	0.01%
+Giant cell tumor of bone	1	0.01%
+Glial-neuronal tumor,  H3	1	0.01%
+Glial-neuronal tumor,  NF1-somatic	1	0.01%
+Glial-neuronal tumor,  NF1-somatic, FGFR	1	0.01%
+Glial-neuronal tumor,  RTK, CDKN2A/B	1	0.01%
+Glial-neuronal tumor,  other MAPK, CDKN2A/B	1	0.01%
+Glial-neuronal tumor, wildtype	1	0.01%
+Glioblastoma Multiforme Pathway	1	0.01%
+Gliomatosis Cerebri;High-grade glioma/astrocytoma (WHO grade III/IV)	1	0.01%
+Gliosis	1	0.01%
+Hematoma	1	0.01%
+High-grade glioma/astrocytoma (WHO grade III/IV);Oligodendroglioma	1	0.01%
+High-grade neuroepithelial tumor	1	0.01%
+Histiocytic Tumor	1	0.01%
+Histiocytic tumor	1	0.01%
+Hypophyseal stalk thickening	1	0.01%
+Infant-type hemispheric glioma	1	0.01%
+Intraneural perineuroma	1	0.01%
+Lipoblastoma	1	0.01%
+Lipomyelomeningocele	1	0.01%
+Low-grade glioma, FGFR, NF1-germline	1	0.01%
+Low-grade glioma, FGFR, NF1-somatic	1	0.01%
+Low-grade glioma, KIAA1549-BRAF, BRAF V600E	1	0.01%
+Low-grade glioma, KIAA1549-BRAF, CDKN2A/B	1	0.01%
+Low-grade glioma, MYB/MYBL1, other MAPK	1	0.01%
+Low-grade glioma, NF1-germline, BRAF V600E	1	0.01%
+Low-grade glioma, NF1-germline, RTK, FGFR	1	0.01%
+Low-grade glioma, NF1-germline, other MAPK	1	0.01%
+Low-grade glioma, NF1-somatic, IDH	1	0.01%
+Low-grade glioma, NF1-somatic, NF1-germline, CDKN2A/B	1	0.01%
+Low-grade glioma, NF1-somatic, RTK	1	0.01%
+Low-grade glioma, RTK, BRAF V600E	1	0.01%
+Low-grade glioma, other MAPK, CDKN2A/B	1	0.01%
+Low-grade glioma, other MAPK, H3	1	0.01%
+Low-grade glioma, other MAPK, IDH	1	0.01%
+Malignant peripheral nerve sheath tumor (MPNST);Neurofibroma/Plexiform	1	0.01%
+Melanocytoma	1	0.01%
+Meningioma;Neurofibroma/Plexiform	1	0.01%
+Mesenchymal tumor	1	0.01%
+Myofibroma	1	0.01%
+Myxoid spindle cell tumor	1	0.01%
+Necrotizing myelopathy	1	0.01%
+Neuroepithelial neoplasm with EWSR1--PLAG1 fusion	1	0.01%
+Neurofibroma/Plexiform;Schwannoma	1	0.01%
+Non-germinomatous germ cell tumor;Teratoma	1	0.01%
+Ossifying fibroma	1	0.01%
+Osteoma	1	0.01%
+Other	1	0.01%
+Perineuroma	1	0.01%
+Pilomatricoma	1	0.01%
+Posterior fossa subependymoma	1	0.01%
+Rosai-dorfman	1	0.01%
+Rosette-forming glioneuronal tumor,  other MAPK, FGFR	1	0.01%
+Spinal Cord Neoplasm	1	0.01%
+Spinal ependymoma, MYCN-amplified	1	0.01%
+Spinal subependymoma	1	0.01%
