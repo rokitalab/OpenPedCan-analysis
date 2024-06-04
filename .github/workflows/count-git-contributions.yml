@@ -16,12 +16,12 @@ jobs:
     container:
       image: rocker/tidyverse:4.4
 
-    # We want to count the contributions to the master branch
+    # We want to count the contributions to the dev branch
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: "master"
+          ref: "dev"
           fetch-depth: 0
 
       - name: Configure git
