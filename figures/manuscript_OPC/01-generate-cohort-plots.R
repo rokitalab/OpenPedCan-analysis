@@ -108,16 +108,19 @@ exp_strategy_df <- histologies_df %>%
   filter(!is.na(group)) %>%
   #mutate(group = factor(group, levels = c("Pediatric", "Adult"))) %>%
   group_by(match_id) %>% 
-  select(group, cohort,experimental_strategy)
+  select(group, cohort, experimental_strategy)
 
 exp_level <- unique(exp_strategy_df$experimental_strategy)[order(unique(exp_strategy_df$experimental_strategy))]
 
+# table to be plotted
+table(exp_strategy_df$cohort, exp_strategy_df$group)
 
 # Create the plot for the pediatric cohort
 plot_pediatric <- ggplot(subset(exp_strategy_df, group == "Pediatric"), aes(x = cohort, fill = factor(experimental_strategy, levels = exp_level))) + 
   geom_bar() +  # Default width
   scale_fill_manual("Experimental Strategy", values = c("darkgoldenrod2", "yellow1", "magenta2", "salmon", "darkslategray2", "blueviolet", "deeppink", "darkseagreen")) +
   coord_flip() +
+  ylim(0,10000) +
   theme_Publication() +
   labs(title = "Pediatric Tumors", x = "", y = "Number of tumors")  # Add axis labels
 
