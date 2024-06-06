@@ -131,7 +131,7 @@ plot_adult <- ggplot(subset(exp_strategy_df, group == "Adult tumors"), aes(x = c
   scale_fill_manual("Experimental Strategy", values = c("salmon")) +
   coord_flip() +
   theme_Publication() +
-  theme(axis.text.x = element_text(angle = 75, hjust = 1)) + # Rotate x-axis labels
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + # Rotate x-axis labels
   labs(title = "Adult Tumors", x = "", y = "Number of samples")  # Add axis labels
 
 
@@ -141,7 +141,7 @@ plot_adult2 <- ggplot(subset(exp_strategy_df, group == "Adult normal"), aes(x = 
   scale_fill_manual("Experimental Strategy", values = c("salmon")) +
   coord_flip() +
   theme_Publication() +
-  theme(axis.text.x = element_text(angle = 75, hjust = 1)) + # Rotate x-axis labels
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + # Rotate x-axis labels
   labs(title = "Adult normal tissues", x = "", y = "Number of samples")  # Add axis labels
 
 # Combine the plots into one
