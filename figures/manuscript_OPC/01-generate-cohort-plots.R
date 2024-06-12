@@ -1,7 +1,6 @@
 # This script filters the given dataset to produce a summarized visualization
 # of key variables within the dataset.
 #
-# Chante Bethell for CCDL 2019
 # Zhuangzhuang Geng, D3B 2024
 
 ## load libraries
