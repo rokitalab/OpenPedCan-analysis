@@ -50,6 +50,7 @@ tumor_descriptor_ped <- histologies_df %>%
   group_by(tumor_descriptor) %>% 
   tally() %>% 
   filter(!(tumor_descriptor %in% c("Unknown", NA))) %>% 
+  mutate(percentage = paste0(round((n/sum(n))*100, digit = 2), "%")) %>%
   arrange(desc(n))
 
 tumor_descriptor_adult <- histologies_df %>%
@@ -61,6 +62,7 @@ tumor_descriptor_adult <- histologies_df %>%
   group_by(tumor_descriptor) %>% 
   tally() %>% 
   filter(!(tumor_descriptor %in% c("Unknown", NA))) %>% 
+  mutate(percentage = paste0(round((n/sum(n))*100, digit = 2), "%")) %>%
   arrange(desc(n))
 
 tum_colors <- c("Primary Tumor" = "blueviolet", 
@@ -75,7 +77,9 @@ tum_colors <- c("Primary Tumor" = "blueviolet",
 ped_tum_plot <- ggplot(tumor_descriptor_ped, aes(x = "", y = n, fill = factor(tumor_descriptor, levels = tumor_descriptor))) + 
   geom_bar(stat = "identity", width = 1, color = "white") + 
   coord_polar("y", start = 0) + 
-  scale_fill_manual(name = "Tumor Event", values = tum_colors) +
+  scale_fill_manual(name = "Tumor Event", 
+                    labels = paste0(tumor_descriptor_ped$tumor_descriptor, " (", tumor_descriptor_ped$percentage, ")"), 
+                    values = tum_colors) +
   theme_void() + 
   theme(legend.title = element_text(face = "bold", size = 17),
         legend.text = element_text(size = 15),
@@ -85,17 +89,19 @@ ped_tum_plot <- ggplot(tumor_descriptor_ped, aes(x = "", y = n, fill = factor(tu
 tcga_plot <- ggplot(tumor_descriptor_adult, aes(x = "", y = n, fill = factor(tumor_descriptor, levels = tumor_descriptor))) + 
   geom_bar(stat = "identity", width = 1, color = "white") + 
   coord_polar("y", start = 0) + 
-  scale_fill_manual(name = "Tumor Event", values = tum_colors) +
+  scale_fill_manual(name = "Tumor Event", 
+                    labels = paste0(tumor_descriptor_adult$tumor_descriptor, " (", tumor_descriptor_adult$percentage, ")"), 
+                    values = tum_colors) + 
   theme_void() + 
   theme(legend.title = element_text(face = "bold", size = 17),
         legend.text = element_text(size = 15),
         plot.title = element_text(size = 20, face = "bold")) +  # Customize legend title text if needed
-labs(title = "Adult tumors")
+  labs(title = "Adult tumors")
 
 
 # Combine the plots into one
 combined_td_plot <- plot_grid(ped_tum_plot, tcga_plot, 
-                           ncol = 1, align = "v", rel_heights = c(2, 2)  # Adjust relative heights
+                              ncol = 1, align = "v", rel_heights = c(2, 2)  # Adjust relative heights
 )
 
 # Display the combined plot
@@ -148,10 +154,10 @@ plot_adult2 <- ggplot(subset(exp_strategy_df, group == "Adult normal"), aes(x = 
 combined_plot <- plot_grid(plot_pediatric, plot_adult, plot_adult2, 
                            ncol = 1, align = "v", rel_heights = c(2, 1.3, 1.3)  # Adjust relative heights
 )
- 
+
 # Display the combined plot
 print(combined_plot)
 
 
 ggsave(file.path(plots_dir, "experimental_strategy.png"), height = 8, width = 6.5)
-       
+
