@@ -103,7 +103,7 @@ author_info <- author_info %>%
 author_info <- author_info %>%
   dplyr::rename(Email = email,
                 ORCiD = orcid) %>%
-  dplyr::select(Email, affiliations, Name, `Middle Name(s)/Initial(s)`, `Last Name`, name)
+  dplyr::select(Email, affiliations, Name, `Middle Name(s)/Initial(s)`, `Last Name`, ORCiD, name)
 ```
 
 ### Save
