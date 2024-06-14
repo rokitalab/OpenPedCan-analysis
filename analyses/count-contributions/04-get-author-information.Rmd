@@ -85,11 +85,11 @@ author_info <- dplyr::bind_cols(
 split_name <- function(name) {
   parts <- str_split(name, " ", simplify = TRUE)
   if (ncol(parts) == 2) {
-    return(tibble(Name = parts[1], `Middle Name(s)/Initial(s)` = "", `Last Name` = parts[2]))
+    return(tibble(`First Name` = parts[1], `Middle Name(s)/Initial(s)` = "", `Last Name` = parts[2]))
   } else if (ncol(parts) == 3) {
-    return(tibble(Name = parts[1], `Middle Name(s)/Initial(s)` = paste0(substr(parts[2], 1, 1), "."), `Last Name` = parts[3]))
+    return(tibble(`First Name` = parts[1], `Middle Name(s)/Initial(s)` = paste0(substr(parts[2], 1, 1), "."), `Last Name` = parts[3]))
   } else {
-    return(tibble(Name = "", `Middle Name(s)/Initial(s)` = "", Last = ""))  # In case of unexpected format
+    return(tibble(`First Name` = "", `Middle Name(s)/Initial(s)` = "", Last = ""))  # In case of unexpected format
   }
 }
 
@@ -97,13 +97,20 @@ split_name <- function(name) {
 author_info <- author_info %>%
   rowwise() %>%
   mutate(split = list(split_name(name))) %>%
-  unnest()
+  unnest(cols = c(split))
 
-# Make names titlecase, except ORCID which should be all uppercase
+# Make names titlecase, except ORCID which should be all uppercase 
 author_info <- author_info %>%
   dplyr::rename(Email = email,
-                ORCiD = orcid) %>%
-  dplyr::select(Email, affiliations, Name, `Middle Name(s)/Initial(s)`, `Last Name`, ORCiD, name)
+                ORCiD = orcid,
+                Institution = affiliations) %>%
+  mutate(Suffix = "",
+         `Corresponding Author` = "",
+         `Home Page URL` = "",
+         `Collaborative Group/Consortium` = "") %>%
+  dplyr::select(Email, Institution, `First Name`, `Middle Name(s)/Initial(s)`, `Last Name`,
+                Suffix, `Corresponding Author`, `Home Page URL`, `Collaborative Group/Consortium`,
+                ORCiD, name)
 ```
 
 ### Save
