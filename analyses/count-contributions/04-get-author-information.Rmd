@@ -97,15 +97,25 @@ split_name <- function(name) {
 author_info <- author_info %>%
   rowwise() %>%
   mutate(split = list(split_name(name))) %>%
-  unnest(cols = c(split))
+  unnest(cols = c(split)) %>%
+  # manually update Nick and Jo Lynne
+  mutate(`First Name` = case_when(name == "Jo Lynne Rokita" ~ "Jo Lynne",
+                                  TRUE ~ `First Name`),
+         `Middle Name(s)/Initial(s)` = case_when(name %in% c("Jo Lynne Rokita", "Nicholas Van Kuren") ~ "",
+                                                 TRUE ~ `Middle Name(s)/Initial(s)`),
+         `Last Name` = case_when(name == "Nicholas Van Kuren" ~ "Van Kuren",
+                                 TRUE ~ `Last Name`))
 
 # Make names titlecase, except ORCID which should be all uppercase 
 author_info <- author_info %>%
   dplyr::rename(Email = email,
                 ORCiD = orcid,
                 Institution = affiliations) %>%
-  mutate(Suffix = "",
-         `Corresponding Author` = "",
+  mutate(ORCiD = str_to_upper(ORCiD),
+         ORCiD = ifelse(is.na(ORCiD), "", ORCiD),
+         Suffix = "",
+         `Corresponding Author` = case_when(name == "Jo Lynne Rokita" ~ "X",
+                                            TRUE ~ ""),
          `Home Page URL` = "",
          `Collaborative Group/Consortium` = "") %>%
   dplyr::select(Email, Institution, `First Name`, `Middle Name(s)/Initial(s)`, `Last Name`,
