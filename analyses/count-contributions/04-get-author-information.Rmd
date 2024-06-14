@@ -120,7 +120,7 @@ author_info <- author_info %>%
          `Collaborative Group/Consortium` = "") %>%
   dplyr::select(Email, Institution, `First Name`, `Middle Name(s)/Initial(s)`, `Last Name`,
                 Suffix, `Corresponding Author`, `Home Page URL`, `Collaborative Group/Consortium`,
-                ORCiD, name)
+                ORCiD)
 ```
 
 ### Save
