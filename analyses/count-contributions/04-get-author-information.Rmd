@@ -10,6 +10,7 @@ date: 2022
 
 ```{r setup}
 library(magrittr) # load for piping
+library(tidyverse) # load for piping
 ```
 
 
