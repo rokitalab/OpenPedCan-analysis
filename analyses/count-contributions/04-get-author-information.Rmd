@@ -10,6 +10,7 @@ date: 2022
 
 ```{r setup}
 library(magrittr) # load for piping
+library(tidyverse) # load for piping
 ```
 
 
@@ -75,16 +76,52 @@ Now, we can use this function to parse the metadata into a data frame.
 
 # Extract info
 author_info <- dplyr::bind_cols(
- purrr::map_dfr(author_list, extract_yaml_value, "name"),
- purrr::map_dfr(author_list, extract_yaml_value, "affiliations"),
- purrr::map_dfr(author_list, extract_yaml_value, "orcid"),
- purrr::map_dfr(author_list, extract_yaml_value, "email")
+  purrr::map_dfr(author_list, extract_yaml_value, "email"),
+  purrr::map_dfr(author_list, extract_yaml_value, "affiliations"),
+  purrr::map_dfr(author_list, extract_yaml_value, "name"),
+  purrr::map_dfr(author_list, extract_yaml_value, "orcid")
 )
 
+# Function to split names
+split_name <- function(name) {
+  parts <- str_split(name, " ", simplify = TRUE)
+  if (ncol(parts) == 2) {
+    return(tibble(`First Name` = parts[1], `Middle Name(s)/Initial(s)` = "", `Last Name` = parts[2]))
+  } else if (ncol(parts) == 3) {
+    return(tibble(`First Name` = parts[1], `Middle Name(s)/Initial(s)` = paste0(substr(parts[2], 1, 1), "."), `Last Name` = parts[3]))
+  } else {
+    return(tibble(`First Name` = "", `Middle Name(s)/Initial(s)` = "", Last = ""))  # In case of unexpected format
+  }
+}
 
-# Make names titlecase, except ORCID which should be all uppercase
-names(author_info) <- stringr::str_to_title(names(author_info))
-author_info <- dplyr::rename(author_info, ORCID = Orcid)
+
+author_info <- author_info %>%
+  rowwise() %>%
+  dplyr::mutate(split = list(split_name(name))) %>%
+  unnest(cols = c(split)) %>%
+  # manually update Nick and Jo Lynne
+  dplyr::mutate(`First Name` = case_when(name == "Jo Lynne Rokita" ~ "Jo Lynne",
+                                  TRUE ~ `First Name`),
+         `Middle Name(s)/Initial(s)` = case_when(name %in% c("Jo Lynne Rokita", "Nicholas Van Kuren") ~ "",
+                                                 TRUE ~ `Middle Name(s)/Initial(s)`),
+         `Last Name` = case_when(name == "Nicholas Van Kuren" ~ "Van Kuren",
+                                 TRUE ~ `Last Name`))
+
+# Make names titlecase, except ORCID which should be all uppercase 
+author_info <- author_info %>%
+  dplyr::rename(Email = email,
+                ORCiD = orcid,
+                Institution = affiliations) %>%
+  dplyr::mutate(ORCiD = str_to_upper(ORCiD),
+         ORCiD = ifelse(is.na(ORCiD), "", ORCiD),
+         Suffix = "",
+         `Corresponding Author` = case_when(name == "Jo Lynne Rokita" ~ "X",
+                                            TRUE ~ ""),
+         `Home Page URL` = "",
+         `Collaborative Group/Consortium` = "") %>%
+  dplyr::select(Email, Institution, `First Name`, `Middle Name(s)/Initial(s)`, `Last Name`,
+                Suffix, `Corresponding Author`, `Home Page URL`, `Collaborative Group/Consortium`,
+                ORCiD)
 ```
 
 ### Save
