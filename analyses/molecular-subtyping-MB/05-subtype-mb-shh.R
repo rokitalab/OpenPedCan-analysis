@@ -25,8 +25,11 @@ maf_file <- file.path(data_dir, "snv-consensus-plus-hotspots.maf.tsv.gz")
 tumorOnly_file <- file.path(data_dir, "snv-mutect2-tumor-only-plus-hotspots.maf.tsv.gz")
 expr_file <- file.path(data_dir, "gene-expression-rsem-tpm-collapsed.rds")
 cn_arm_file <- file.path(data_dir, "cnv-consensus-gistic.zip")
-germline_file <- file.path(input_dir, "pbta_germline_plp_calls_autogvp_abridged_gnomad_popmax.tsv")
+germline_file <- file.path(input_dir, "pbta-merged-plp-variants-cbtn-plus-mb-x01.tsv")
 germline_sv_file <- file.path(input_dir, "pbta_germline_svs.tsv")
+tp53_alterations_file <- file.path(root_dir, "analyses",
+                                  "tp53_nf1_score", "results",
+                                  "tp53_altered_status.tsv")
 
 # load histologies and subset for mb shh
 hist <- read_tsv(hist_file, guess_max = 100000) %>%
@@ -248,6 +251,21 @@ expr_df <- as.data.frame(t(subset_expr)) %>%
          PTEN_exp_status = ifelse(PTEN_TPM_zscore < -2, "PTEN low", NA_character_),
          TP53_exp_status = ifelse(TP53_TPM_zscore < -2, "TP53 low", NA_character_))
 
+tp53_df <- read_tsv(tp53_alterations_file) %>%
+  dplyr::rename(tp53_SV_type = SV_type,
+                tp53_SV_counts = SV_counts,
+                tp53_Fusions = Fusions,
+                tp53_Fusion_counts = Fusion_counts,
+                tp53_cn_less_ploidy = cn_less_ploidy,
+                tp53_SNV_indel_counts = SNV_indel_counts,
+                tp53_CNV_loss_counts = CNV_loss_counts,
+                tp53_HGVSp_Short = HGVSp_Short,
+                tp53_CNV_loss_evidence = CNV_loss_evidence,
+                tp53_hotspot = hotspot,
+                tp53_activating = activating) %>%
+  dplyr::select(match_id, starts_with("tp53"))
+  
+
 # Create subtypes df that:
 # 1) calculates average methylations score per match id
 # 2) redefines SHH subtypes as alpha (3), beta (1), gamma (2), delta (4)
@@ -280,6 +298,7 @@ final_subtypes <- mb_subtypes %>%
   left_join(mb_shh_data_collapsed) %>%
   left_join(germline) %>%
   left_join(expr_df) %>%
+  left_join(tp53_df) %>%
   unique() %>%
   # clean up subclass and scores
   mutate(dkfz_v12_methylation_subclass_score_mean = case_when(dkfz_v12_methylation_subclass_score_mean < 0.7 & 
@@ -295,12 +314,15 @@ final_subtypes <- mb_subtypes %>%
                                     (grepl("amplification", consensus_CN_MYCN) |
                                        grepl("amplification", consensus_CN_GLI2) |
                                        grepl("amplification", consensus_CN_CCND2) |
+                                       !is.na(ELP1_germline_plp) |
+                                       !is.na(TP53_germline_plp) |
                                        MYCN_TPM_zscore >= 2 |
                                        GLI2_TPM_zscore >= 2 |
                                        CCND2_TPM_zscore >= 2 |
                                        TP53_TPM_zscore < -2 |
+                                       tp53_hotspot > 0 | 
                                        `17p_loss` == 1 |
-                                       (`9p_gain` == 1 & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" & 
+                                       (grepl("1", `9p_gain`) & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" & 
                                           dkfz_v12_methylation_subclass_score_mean >= 0.5)
                                      )) ~ "SHH alpha",
     
@@ -323,6 +345,10 @@ final_subtypes <- mb_subtypes %>%
                                                                           age_at_diagnosis_years < 5 &
                                                                           `2p_gain` == 0) ~ "SHH gamma",
                                           TRUE ~ final_shh_subtype)) %>%
+  dplyr::mutate(tp53_status = case_when(
+    !is.na(TP53_germline_plp) | tp53_hotspot > 0 | !is.na(tp53_SV_type) | !is.na(tp53_Fusions) | grepl("amplification", consensus_CN_MYCN) |grepl("amplification", consensus_CN_GLI2) ~ "TP53 altered",
+    TRUE ~ "TP53 wildtype"
+  )) %>%
   right_join(mb_shh) %>%
   # re-anotate molecular subtype
   mutate(molecular_subtype = case_when(!is.na(final_shh_subtype) ~ paste0("MB, ", final_shh_subtype), 
@@ -332,7 +358,7 @@ final_subtypes <- mb_subtypes %>%
   write_tsv(file.path(results_dir, "mb_shh_subtypes_w_molecular_data.tsv"))
 
 final_subtypes %>%
-  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype") %>%
+  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype", "tp53_status") %>%
   write_tsv(file.path(results_dir, "mb_shh_molecular_subtypes.tsv"))
 
 print(as.data.frame(table(final_subtypes$molecular_subtype)))
