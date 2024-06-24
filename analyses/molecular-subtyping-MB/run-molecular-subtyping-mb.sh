@@ -34,6 +34,6 @@ Rscript --vanilla 02-classify-mb.R \
 Rscript --vanilla 04-subtype-mb-samples.R
 
 # classify SHH samples into alpha, beta, delta, gamma
-Rscript --vanilla 05-subtype-mb-shh.R
+#Rscript --vanilla 05-subtype-mb-shh.R
 
 
