@@ -237,7 +237,7 @@ expr_df <- as.data.frame(t(subset_expr)) %>%
             GLI2_TPM = max(GLI2_TPM),
             CCND2_TPM = max(CCND2_TPM),
             PTEN_TPM = min(PTEN_TPM),
-            TP53_TPM = min(PTEN_TPM),
+            TP53_TPM = min(TP53_TPM),
             .groups = "drop") %>%
   mutate(MYCN_TPM_zscore = as.vector(scale(MYCN_TPM)),
          GLI2_TPM_zscore = as.vector(scale(GLI2_TPM)),
@@ -262,8 +262,9 @@ tp53_df <- read_tsv(tp53_alterations_file) %>%
                 tp53_HGVSp_Short = HGVSp_Short,
                 tp53_CNV_loss_evidence = CNV_loss_evidence,
                 tp53_hotspot = hotspot,
-                tp53_activating = activating) %>%
-  dplyr::select(match_id, starts_with("tp53"))
+                tp53_activating = activating,
+                tp53_overlap_domain = overlap_domain) %>%
+  dplyr::select(match_id, cancer_predispositions, starts_with("tp53"))
   
 
 # Create subtypes df that:
@@ -351,7 +352,21 @@ final_subtypes <- mb_subtypes %>%
     TRUE ~ NA_character_
   )) %>%
   dplyr::mutate(tp53_status = case_when(
-    !is.na(TP53_germline_plp) | tp53_hotspot > 0 | !is.na(tp53_SV_type) | !is.na(tp53_Fusions) | grepl("amplification", consensus_CN_MYCN) |grepl("amplification", consensus_CN_GLI2) ~ "TP53 altered",
+    # check for activating mutations
+    tp53_activating == 1 ~ "TP53 activation",
+    # Loss
+    # germline P/LP
+    !is.na(TP53_germline_plp) | 
+    # other hotspot mutation  
+    tp53_hotspot >= 1 | 
+    # SNV + (CNV|SV)
+    tp53_SNV_indel_counts >= 1 & (tp53_CNV_loss_counts >=1 | tp53_SV_counts >=1) |
+    # >1 SNV/indel
+    tp53_SNV_indel_counts > 1 |
+    # frameshift or nonsense variant overlaps functional domain
+    tp53_overlap_domain >=1 |
+    # LFS + SNV/indel/CNV/SV
+    grepl("Li-Fraumeni syndrome",cancer_predispositions) & (tp53_SNV_indel_counts >= 1 | tp53_CNV_loss_counts >= 1 | tp53_SV_counts >=1) ~ "TP53 loss",
     TRUE ~ "TP53 wildtype"
   )) %>%
   right_join(mb_shh) %>%
