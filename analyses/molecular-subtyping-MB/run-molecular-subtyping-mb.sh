@@ -33,7 +33,9 @@ Rscript --vanilla 02-classify-mb.R \
 # classify samples with no RNA as "MB, To be classified"
 Rscript --vanilla 04-subtype-mb-samples.R
 
+if [ "$SUBSET" -gt "0" ]; then
 # classify SHH samples into alpha, beta, delta, gamma
-#Rscript --vanilla 05-subtype-mb-shh.R
+  Rscript --vanilla 05-subtype-mb-shh.R
+fi
 
 
