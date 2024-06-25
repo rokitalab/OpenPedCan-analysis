@@ -341,10 +341,15 @@ final_subtypes <- mb_subtypes %>%
   
     # Add gamma subtype for high confidence methylation samples OR
     # If not already subtyped, and age <5 and no 2p gain, then SHH gamma
-    mutate(final_shh_subtype  = case_when(SHH_subtype == "SHH_gamma" | (is.na(final_shh_subtype) & 
-                                                                          age_at_diagnosis_years < 5 &
-                                                                          `2p_gain` == 0) ~ "SHH gamma",
-                                          TRUE ~ final_shh_subtype)) %>%
+  mutate(final_shh_subtype  = case_when(SHH_subtype == "SHH_gamma" | (is.na(final_shh_subtype) & 
+                                                                        age_at_diagnosis_years < 5 &
+                                                                        `2p_gain` == 0) ~ "SHH gamma",
+                                        TRUE ~ final_shh_subtype)) %>%
+  dplyr::mutate(classification_source = case_when(
+    !is.na(SHH_subtype) ~ "Methylation",
+    !is.na(final_shh_subtype) ~ "Genomic/Expression",
+    TRUE ~ NA_character_
+  )) %>%
   dplyr::mutate(tp53_status = case_when(
     !is.na(TP53_germline_plp) | tp53_hotspot > 0 | !is.na(tp53_SV_type) | !is.na(tp53_Fusions) | grepl("amplification", consensus_CN_MYCN) |grepl("amplification", consensus_CN_GLI2) ~ "TP53 altered",
     TRUE ~ "TP53 wildtype"
@@ -358,8 +363,12 @@ final_subtypes <- mb_subtypes %>%
   write_tsv(file.path(results_dir, "mb_shh_subtypes_w_molecular_data.tsv"))
 
 final_subtypes %>%
-  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype", "tp53_status") %>%
+  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", 
+         "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype", "tp53_status",
+         classification_source) %>%
   write_tsv(file.path(results_dir, "mb_shh_molecular_subtypes.tsv"))
 
 print(as.data.frame(table(final_subtypes$molecular_subtype)))
+
+print(table(final_subtypes$molecular_subtype, final_subtypes$classification_source))
 
