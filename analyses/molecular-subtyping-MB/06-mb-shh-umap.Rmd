@@ -84,7 +84,7 @@ Identify 10k most variable probes among MB samples
 ```{r}
 mb_methyl_var <- apply(mb_methyl, 1, var, na.rm = TRUE)
 
-mb_var_probes <- names(sort(mb_methyl_var, decreasing = TRUE)[1:10000])
+mb_var_probes <- names(sort(mb_methyl_var, decreasing = TRUE)[1:20000])
 ```
 
 ```{r}
@@ -112,7 +112,7 @@ ggsave(file.path(plots_dir, "umap_mb.pdf"),
        width = 5.5, height = 3.5)
 ```
 
-Identify 10k most variable probes among MB samples
+Identify 10k most variable probes among MB Group 3/4 samples
 ```{r}
 g34_samples <- hist_mb_methyl %>%
   dplyr::filter(molecular_subtype %in% c("MB, Group3", "MB, Group4")) %>%
@@ -120,7 +120,7 @@ g34_samples <- hist_mb_methyl %>%
 
 mb_g34_methyl_var <- apply(mb_methyl[,colnames(mb_methyl) %in% g34_samples], 1, var, na.rm = TRUE)
 
-mb_g34_var_probes <- names(sort(mb_g34_methyl_var, decreasing = TRUE)[1:10000])
+mb_g34_var_probes <- names(sort(mb_g34_methyl_var, decreasing = TRUE)[1:20000])
 ```
 
 ```{r}
@@ -156,7 +156,7 @@ Identify 10k most variable probes among MB SHH samples
 ```{r}
 mb_shh_methyl_var <- apply(mb_methyl[,colnames(mb_methyl) %in% mb_shh_subtypes$Kids_First_Biospecimen_ID_methyl], 1, var, na.rm = TRUE)
 
-mb_shh_var_probes <- names(sort(mb_shh_methyl_var, decreasing = TRUE)[1:10000])
+mb_shh_var_probes <- names(sort(mb_shh_methyl_var, decreasing = TRUE)[1:20000])
 ```
 
 Generate UMAP df 
@@ -193,32 +193,42 @@ mb_shh_umap_plot_df <- mb_shh_umap_plot_df %>%
     dplyr::mutate(consensus_CN_PTEN = case_when(
     is.na(consensus_CN_PTEN) ~ "neutral",
     TRUE ~ consensus_CN_PTEN
+  )) %>%
+  dplyr::mutate(classification_source = case_when(
+    classification_source == "Genomic/Expression" ~ "Molecular",
+    is.na(classification_source) ~ "Unavailable",
+    TRUE ~ classification_source
   ))
 ```
 
-Plot UMAP with molecular subtype and age range 
+Plot UMAP with molecular subtype, classification source, and age range 
 ```{r}
 mb_shh_umap_plot_df %>%
   ggplot(aes(x = X1, 
              y = X2,
              color = molecular_subtype,
-             size = age_range)) +
+             size = age_range,
+             shape = classification_source)) +
   geom_point(alpha = 0.7) +
   labs(color = "molecular subtype",
-       size = "age range (years)") +
+       size = "age range (years)",
+       shape = "classifcation source") +
   theme_bw() +
   xlab("UMAP1") +
   ylab("UMAP2") +
   # colors to match subtypes in Garcia-Lopez 2020 review
   scale_color_manual(values = c("aquamarine3", "goldenrod2", 
                                 "royalblue1", "plum4",
-                                "gray"))
+                                "gray")) +
+  guides(color = guide_legend(order = 1),
+         shape  = guide_legend(order = 2),
+         size  = guide_legend(order = 3))
 
 ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
-       width = 5.5, height = 3.5)
+       width = 6.5, height = 4.5)
 ```
 
-Plot UMAP with molecular subtype and age range 
+Plot UMAP with methylation subtype and methylation score
 ```{r}
 mb_shh_umap_plot_df %>%
   dplyr::filter(grepl("MB", dkfz_v12_methylation_subclass_collapsed)) %>%
@@ -288,7 +298,7 @@ wnt_samples <- hist_mb_methyl %>%
 
 mb_wnt_methyl_var <- apply(mb_methyl[,colnames(mb_methyl) %in% wnt_samples], 1, var, na.rm = TRUE)
 
-mb_wnt_var_probes <- names(sort(mb_wnt_methyl_var, decreasing = TRUE)[1:10000])
+mb_wnt_var_probes <- names(sort(mb_wnt_methyl_var, decreasing = TRUE)[1:20000])
 ```
 
 ```{r}
