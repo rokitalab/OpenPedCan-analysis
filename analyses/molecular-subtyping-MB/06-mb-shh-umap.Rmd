@@ -198,7 +198,8 @@ mb_shh_umap_plot_df <- mb_shh_umap_plot_df %>%
     classification_source == "Genomic/Expression" ~ "Molecular",
     is.na(classification_source) ~ "Unavailable",
     TRUE ~ classification_source
-  ))
+  )) %>%
+  write_tsv(file.path(results_dir, "mb_shh_subtypes_w_molecular_umap_data.tsv"))
 ```
 
 Plot UMAP with molecular subtype, classification source, and age range 
@@ -229,6 +230,7 @@ ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
 ```
 
 Plot UMAP with methylation subtype and methylation score
+
 ```{r}
 mb_shh_umap_plot_df %>%
   dplyr::filter(grepl("MB", dkfz_v12_methylation_subclass_collapsed)) %>%
@@ -251,9 +253,9 @@ ggsave(file.path(plots_dir, "umap_mb_shh_methylation_subtype.pdf"),
        width = 5.5, height = 3.5)
 ```
 
+Plot UMAP with CN status for MYCN, GLI2, CCND2, and PTEN
 
 ```{r}
-
 umap_plot_cn_df <- mb_shh_umap_plot_df %>%
   dplyr::select(molecular_subtype, X1, X2,
                 consensus_CN_MYCN,
@@ -266,7 +268,6 @@ umap_plot_cn_df <- mb_shh_umap_plot_df %>%
                 PTEN = consensus_CN_PTEN) %>%
   gather(key = "gene_name", value = "CN_status",
          -molecular_subtype, -X1, -X2)
-
 
 umap_plot_cn_df %>%
   ggplot(aes(x = X1, 
@@ -289,6 +290,28 @@ ggsave(file.path(plots_dir, "umap_mb_shh_cn_status.pdf"),
        width = 8, height = 5.5)
 ```
 
+Plot UMAP with TP53 alteration status
+
+```{r}
+mb_shh_umap_plot_df %>%
+  ggplot(aes(x = X1, 
+             y = X2,
+             color = molecular_subtype,
+             shape = tp53_status)) +
+  geom_point(alpha = 0.7, size = 3) +
+  labs(color = "methylation subtype",
+       shape = "TP53 status") +
+  theme_bw() +
+  xlab("UMAP1") +
+  ylab("UMAP2") +
+  # colors to match subtypes in Garcia-Lopez 2020 review
+  scale_color_manual(values = c("aquamarine3", "goldenrod2", 
+                                "royalblue1", "plum4",
+                                "gray"))
+
+ggsave(file.path(plots_dir, "umap_mb_shh_tp53_status.pdf"),
+       width = 5.5, height = 3.5)
+```
 
 Identify 10k most variable probes among MB samples
 ```{r}
