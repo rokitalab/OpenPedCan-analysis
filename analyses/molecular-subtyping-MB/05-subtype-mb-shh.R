@@ -363,7 +363,9 @@ final_subtypes <- mb_subtypes %>%
   write_tsv(file.path(results_dir, "mb_shh_subtypes_w_molecular_data.tsv"))
 
 final_subtypes %>%
-  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype", "tp53_status") %>%
+  select("Kids_First_Participant_ID", "Kids_First_Biospecimen_ID", "match_id", "sample_id", 
+         "molecular_subtype", "molecular_subtype_methyl", "SHH_subtype", "tp53_status",
+         classification_source) %>%
   write_tsv(file.path(results_dir, "mb_shh_molecular_subtypes.tsv"))
 
 print(as.data.frame(table(final_subtypes$molecular_subtype)))
