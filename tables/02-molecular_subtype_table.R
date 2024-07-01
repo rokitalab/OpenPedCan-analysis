@@ -17,7 +17,7 @@ hist_sample <- hist %>%
   distinct() %>% 
   group_by(broad_histology, molecular_subtype) %>% 
   tally() %>% 
-  dplyr::rename("Samples" = "n")
+  dplyr::rename("Tumors" = "n")
   
 hist_patient <- hist %>% 
   filter(sample_type == "Tumor") %>%
@@ -36,7 +36,7 @@ hist_combined <- hist_combined %>%
   ungroup() %>%
   add_row(`Broad Histologies` = "", 
           `OpenPedCan Molecular Subtype` = "Total", 
-          Samples = sum(hist_combined$Samples), 
+          Tumors = sum(hist_combined$Tumors), 
           Patients = sum(hist_combined$Patients))
 
 ## MB subtype 
