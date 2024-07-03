@@ -327,9 +327,9 @@ final_subtypes <- mb_subtypes %>%
                                           dkfz_v12_methylation_subclass_score_mean >= 0.5)
                                      )) ~ "SHH alpha",
     
-    # For SHH delta: (TERT promoter AND DDX3X mutations) OR (>5 years AND (TERT OR DDX3X mutations))
+    # For SHH delta: (>=10 years AND (TERT OR DDX3X OR SMO mutations OR 14q-))
     SHH_subtype == "SHH_delta" |
-      (age_at_diagnosis_years >= 10 & (U1_mutation == 1 | !is.na(TERT_csq) | !is.na(DDX3X_csq))) ~ "SHH delta",
+      (age_at_diagnosis_years >= 10 & (U1_mutation == 1 | !is.na(TERT_csq) | !is.na(DDX3X_csq) | !is.na(SMO_csq) | `14q_loss` == 1)) ~ "SHH delta",
     
     # For SHH beta: <5 years AND (KMT2D mutations OR PTEN loss/deletion OR PTEN TPM<-2 OR chr2 gain)
     SHH_subtype == "SHH_beta" | (age_at_diagnosis_years < 5 &
@@ -370,7 +370,7 @@ final_subtypes <- mb_subtypes %>%
     TRUE ~ "TP53 wildtype"
   )) %>%
   right_join(mb_shh) %>%
-  # re-anotate molecular subtype
+  # re-annotate molecular subtype
   mutate(molecular_subtype = case_when(!is.na(final_shh_subtype) ~ paste0("MB, ", final_shh_subtype), 
                                        TRUE ~ molecular_subtype)) %>%
   select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, match_id, molecular_subtype, molecular_subtype_methyl, final_shh_subtype, everything()) %>%
