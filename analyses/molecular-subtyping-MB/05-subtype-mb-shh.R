@@ -309,7 +309,7 @@ final_subtypes <- mb_subtypes %>%
                                                                !grepl("SHH", dkfz_v12_methylation_subclass_collapsed) ~ NA_character_,
                                                              TRUE ~ dkfz_v12_methylation_subclass_collapsed)) %>%
   mutate(final_shh_subtype = case_when(
-    # For SHH alpha: >3 years AND (MYCN OR GLI2 amplification OR TPM>=2 OR chr17p loss OR 9p gain with lower conf methyl)
+    # For SHH alpha: >3 years AND (MYCN OR GLI2 amplification OR ELP1 germline P/LP OR TP53 germline P/LP OR TPM>=2 OR chr17p loss OR 9p gain)
     SHH_subtype == "SHH_alpha" | (age_at_diagnosis_years >= 2 &
                                     is.na(SHH_subtype) &
                                     (grepl("amplification", consensus_CN_MYCN) |
@@ -323,9 +323,7 @@ final_subtypes <- mb_subtypes %>%
                                        TP53_TPM_zscore < -2 |
                                        tp53_hotspot > 0 | 
                                        `17p_loss` == 1 |
-                                       (grepl("1", `9p_gain`) & dkfz_v12_methylation_subclass_collapsed == "MB_SHH_3" & 
-                                          dkfz_v12_methylation_subclass_score_mean >= 0.5)
-                                     )) ~ "SHH alpha",
+                                       grepl("1", `9p_gain`))) ~ "SHH alpha",
     
     # For SHH delta: (>=10 years AND (TERT OR DDX3X OR SMO mutations OR 14q-))
     SHH_subtype == "SHH_delta" |
