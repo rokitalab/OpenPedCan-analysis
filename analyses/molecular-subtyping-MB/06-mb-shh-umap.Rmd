@@ -80,7 +80,7 @@ mb_methyl <- mb_methyl %>%
   column_to_rownames("Probe_ID")
 ```
 
-Identify 10k most variable probes among MB samples
+Identify 20k most variable probes among MB samples
 ```{r}
 mb_methyl_var <- apply(mb_methyl, 1, var, na.rm = TRUE)
 
@@ -112,7 +112,31 @@ ggsave(file.path(plots_dir, "umap_mb.pdf"),
        width = 5.5, height = 3.5)
 ```
 
-Identify 10k most variable probes among MB Group 3/4 samples
+```{r}
+mb_umap_plot_df <- mb_umap_plot_df %>%
+  dplyr::mutate(methyl_mismatch = case_when(
+    sample_id %in% c("7316-1884", "7316-1676",
+                     "7316-1666", "7316-3202") ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+mb_umap_plot_df %>%
+  ggplot(aes(x = X1, 
+             y = X2,
+             color = molecular_subtype,
+             shape = methyl_mismatch)) +
+  geom_point(alpha = 0.7) +
+  labs(color = "molecular subtype",
+       shape = "Non-MB methylation") +
+  theme_bw() +
+  xlab("UMAP1") +
+  ylab("UMAP2") 
+
+ggsave(file.path(plots_dir, "umap_mb_methylation_mismatch.pdf"),
+       width = 5.5, height = 3.5)
+```
+
+Identify 20k most variable probes among MB Group 3/4 samples
 ```{r}
 g34_samples <- hist_mb_methyl %>%
   dplyr::filter(molecular_subtype %in% c("MB, Group3", "MB, Group4")) %>%
@@ -124,8 +148,6 @@ mb_g34_var_probes <- names(sort(mb_g34_methyl_var, decreasing = TRUE)[1:20000])
 ```
 
 ```{r}
-set.seed(2024)
-
 mb_g34_umap_results <- umap::umap(t(mb_methyl[mb_g34_var_probes, colnames(mb_methyl) %in% g34_samples]))
 mb_g34_umap_plot_df <- data.frame(mb_g34_umap_results$layout) %>%
   tibble::rownames_to_column("Kids_First_Biospecimen_ID_methyl") %>%
@@ -151,7 +173,6 @@ ggsave(file.path(plots_dir, "umap_mb_group34.pdf"),
        width = 5.5, height = 3.5)
 ```
 
-
 Identify 10k most variable probes among MB SHH samples
 ```{r}
 mb_shh_methyl_var <- apply(mb_methyl[,colnames(mb_methyl) %in% mb_shh_subtypes$Kids_First_Biospecimen_ID_methyl], 1, var, na.rm = TRUE)
@@ -161,8 +182,6 @@ mb_shh_var_probes <- names(sort(mb_shh_methyl_var, decreasing = TRUE)[1:20000])
 
 Generate UMAP df 
 ```{r}
-set.seed(2024)
-
 mb_shh_umap_results <- umap::umap(t(mb_methyl[mb_shh_var_probes, colnames(mb_methyl) %in% mb_shh_subtypes$Kids_First_Biospecimen_ID_methyl]))
 mb_shh_umap_plot_df <- data.frame(mb_shh_umap_results$layout) %>%
   tibble::rownames_to_column("Kids_First_Biospecimen_ID_methyl") %>%
@@ -199,6 +218,11 @@ mb_shh_umap_plot_df <- mb_shh_umap_plot_df %>%
     is.na(classification_source) ~ "Unavailable",
     TRUE ~ classification_source
   )) %>%
+  dplyr::mutate(methyl_mismatch = case_when(
+    sample_id %in% c("7316-1884", "7316-1676",
+                     "7316-1666", "7316-3202") ~ "Yes",
+    TRUE ~ "No"
+  )) %>%
   write_tsv(file.path(results_dir, "mb_shh_subtypes_w_molecular_umap_data.tsv"))
 ```
 
@@ -226,6 +250,33 @@ mb_shh_umap_plot_df %>%
          size  = guide_legend(order = 3))
 
 ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
+       width = 6.5, height = 4.5)
+```
+
+
+```{r}
+mb_shh_umap_plot_df %>%
+  ggplot(aes(x = X1, 
+             y = X2,
+             color = molecular_subtype,
+             size = age_range,
+             shape = methyl_mismatch)) +
+  geom_point(alpha = 0.7) +
+  labs(color = "molecular subtype",
+       size = "age range (years)",
+       shape = "Non-MB methylation") +
+  theme_bw() +
+  xlab("UMAP1") +
+  ylab("UMAP2") +
+  # colors to match subtypes in Garcia-Lopez 2020 review
+  scale_color_manual(values = c("aquamarine3", "goldenrod2", 
+                                "royalblue1", "plum4",
+                                "gray")) +
+  guides(color = guide_legend(order = 1),
+         shape  = guide_legend(order = 2),
+         size  = guide_legend(order = 3))
+
+ggsave(file.path(plots_dir, "umap_mb_shh_methylation_mismatch.pdf"),
        width = 6.5, height = 4.5)
 ```
 
@@ -313,7 +364,7 @@ ggsave(file.path(plots_dir, "umap_mb_shh_tp53_status.pdf"),
        width = 5.5, height = 3.5)
 ```
 
-Identify 10k most variable probes among MB samples
+Identify 20k most variable probes among MB samples
 ```{r}
 wnt_samples <- hist_mb_methyl %>%
   dplyr::filter(molecular_subtype %in% c("MB, WNT")) %>%
