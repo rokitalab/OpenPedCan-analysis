@@ -89,7 +89,8 @@ then
   --gtf_file $gtf_file \
   --metadata $histologies_file \
   --filename_lead "controlfreec_annotated_cn" \
-  --controlfreec
+  --controlfreec \
+  --runWXSonly
   
   echo "annotate CNVkit tumor only CNVs"
   # Run annotation step for ControlFreeC tumor only
@@ -100,7 +101,9 @@ then
   --filename_lead "freec-tumor-only_annotated_cn" \
   --controlfreec
 
-  echo "merge annotated files"
+results_dir=./results
+
+  echo "merge annotated files with cnvkit WXS"
   # Run merging for all annotated files 
   Rscript --vanilla 07-consensus-annotated-merge.R \
   --cnvkit_auto ${results_dir}/cnvkit_annotated_cn_wxs_autosomes.tsv.gz \
@@ -109,6 +112,19 @@ then
   --consensus_x_and_y ${results_dir}/consensus_seg_annotated_cn_x_and_y.tsv.gz \
   --cnv_tumor_auto ${results_dir}/freec-tumor-only_annotated_cn_autosomes.tsv.gz \
   --cnv_tumor_x_and_y ${results_dir}/freec-tumor-only_annotated_cn_x_and_y.tsv.gz \
+  --cnvkitWXS TRUE \
+  --outdir ${results_dir}
+  
+  echo "merge annotated files with freec WXS"
+  # Run merging for all annotated files 
+  Rscript --vanilla 07-consensus-annotated-merge.R \
+  --freec_auto ${results_dir}/controlfreec_annotated_cn_wxs_autosomes.tsv.gz \
+  --freec_x_and_y ${results_dir}/controlfreec_annotated_cn_wxs_x_and_y.tsv.gz \
+  --consensus_auto ${results_dir}/consensus_seg_annotated_cn_autosomes.tsv.gz \
+  --consensus_x_and_y ${results_dir}/consensus_seg_annotated_cn_x_and_y.tsv.gz \
+  --cnv_tumor_auto ${results_dir}/freec-tumor-only_annotated_cn_autosomes.tsv.gz \
+  --cnv_tumor_x_and_y ${results_dir}/freec-tumor-only_annotated_cn_x_and_y.tsv.gz \
+  --cnvkitWXS FALSE \
   --outdir ${results_dir}
 
 fi
