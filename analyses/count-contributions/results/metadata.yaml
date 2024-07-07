@@ -33,14 +33,14 @@ authors:
   - Software
   - Investigation
   - Writing – Original draft
-  affiliations: Department of Bioinformatics and Health Informatics, Children's Hospital
+  affiliations: Department of Biomedical and Health Informatics, Children's Hospital
     of Philadelphia, Philadelphia, PA, 19104, USA
 - name: Yuanchao Zhang
   initials: YZ
   email: zhangy4@chop.edu
   contributions:
   - Software
-  - Formal Analysis
+  - Formal analysis
   - Methodology
   - Writing – Original draft
   affiliations: Department of Biomedical and Health Informatics, Children's Hospital
@@ -84,7 +84,7 @@ authors:
     Philadelphia, PA, 19104, USA
   - Division of Neurosurgery, Children's Hospital of Philadelphia, Philadelphia, PA,
     19104, USA
-  - Department of Bioinformatics and Health Informatics, Children's Hospital of Philadelphia,
+  - Department of Biomedical and Health Informatics, Children's Hospital of Philadelphia,
     Philadelphia, PA, 19104, USA
 - github: sangeetashukla
   name: Sangeeta Shukla
@@ -97,7 +97,7 @@ authors:
   - Methodology
   - Writing – Original draft
   - Writing - Review and editing
-  affiliations: Department of Bioinformatics and Health Informatics, Children's Hospital
+  affiliations: Department of Biomedical and Health Informatics, Children's Hospital
     of Philadelphia, Philadelphia, PA, 19104, USA
 - github: komalsrathi
   name: Komal S. Rathi
@@ -112,7 +112,7 @@ authors:
   affiliations:
   - Center for Data-Driven Discovery in Biomedicine, Children's Hospital of Philadelphia,
     Philadelphia, PA, 19104, USA
-  - Department of Bioinformatics and Health Informatics, Children's Hospital of Philadelphia,
+  - Department of Biomedical and Health Informatics, Children's Hospital of Philadelphia,
     Philadelphia, PA, 19104, USA
 - github: atlas4213
   name: Dave Hill
@@ -134,7 +134,7 @@ authors:
   - Investigation
   - Methodology
   - Writing – Original draft
-  affiliations: Department of Bioinformatics and Health Informatics, Children's Hospital
+  affiliations: Department of Biomedical and Health Informatics, Children's Hospital
     of Philadelphia, Philadelphia, PA, 19104, USA
 - github: dmiller15
   name: Daniel P. Miller
@@ -175,6 +175,7 @@ authors:
 - github: devbyaccident
   name: Christopher Blackden
   initials: CB
+  orcid: 0000-0002-4928-090X
   email: blackdenc@chop.edu
   contributions: Software
   affiliations:
@@ -241,7 +242,7 @@ authors:
   orcid: 0000-0001-7831-3996
   email: chinwallaa@chop.edu
   contributions:
-  - Project Administration
+  - Project administration
   - Supervision
   - Methodology
   - Investigation
@@ -409,8 +410,8 @@ authors:
   - Department of Pediatrics, University of Pennsylvania, Philadelphia, PA, 19104,
     USA
 - github: JosephDybas
-  name: Joseph Dybas
-  initials: JD
+  name: Joseph M. Dybas
+  initials: JMD
   email: dybasj@chop.edu
   contributions:
   - Writing – Original draft
@@ -424,7 +425,7 @@ authors:
   name: Brian M. Ennis
   initials: BME
   orcid: 0000-0002-2653-5009
-  email: ennisb@chop.edu
+  email: bennis9072@gmail.com
   contributions: Formal analysis
   affiliations:
   - Center for Data-Driven Discovery in Biomedicine, Children's Hospital of Philadelphia,
@@ -464,11 +465,11 @@ authors:
   name: Bailey K. Farrow
   initials: BKF
   orcid: 0000-0001-6727-6333
-  email: farrowb@chop.edu
+  email: bailey.c.kelly@gmail.com
   contributions:
   - Data curation
   - Software
-  - Project Administration
+  - Project administration
   - Supervision
   affiliations:
   - Center for Data-Driven Discovery in Biomedicine, Children's Hospital of Philadelphia,
@@ -510,7 +511,7 @@ authors:
 - name: Stephanie Stefankiewicz
   initials: SS
   email: stefankies@chop.edu
-  contributions: Project Administration
+  contributions: Project administration
   affiliations:
   - Center for Data-Driven Discovery in Biomedicine, Children's Hospital of Philadelphia,
     Philadelphia, PA, 19104, USA
@@ -539,6 +540,15 @@ authors:
     Philadelphia, PA, 19104, USA
   - Division of Neurosurgery, Children's Hospital of Philadelphia, Philadelphia, PA,
     19104, USA
+- name: Gerri R. Trooskin
+  initials: GRT
+  email: troosking@chop.edu
+  contributions: Funding acquisition
+  affiliations:
+  - Center for Data-Driven Discovery in Biomedicine, Children's Hospital of Philadelphia,
+    Philadelphia, PA, 19104, USA
+  - Division of Neurosurgery, Children's Hospital of Philadelphia, Philadelphia, PA,
+    19104, USA
 - github: taylordm
   name: Deanne Taylor
   initials: DT
@@ -551,9 +561,9 @@ authors:
   - Investigation
   - Methodology
   - Supervision
-  - Project Administration
+  - Project administration
   affiliations:
-  - Department of Bioinformatics and Health Informatics, Children's Hospital of Philadelphia,
+  - Department of Biomedical and Health Informatics, Children's Hospital of Philadelphia,
     Philadelphia, PA, 19104, USA
   - Department of Pediatrics, University of Pennsylvania Perelman Medical School,
     Philadelphia, PA, 19104, USA
@@ -570,7 +580,7 @@ authors:
   - Data curation
   - Formal analysis
   - Funding acquisition
-  - Project Administration
+  - Project administration
   - Investigation
   - Methodology
   - Software
@@ -582,6 +592,6 @@ authors:
     Philadelphia, PA, 19104, USA
   - Division of Neurosurgery, Children's Hospital of Philadelphia, Philadelphia, PA,
     19104, USA
-  - Department of Bioinformatics and Health Informatics, Children's Hospital of Philadelphia,
+  - Department of Biomedical and Health Informatics, Children's Hospital of Philadelphia,
     Philadelphia, PA, 19104, USA
   funders: NCI/NIH Contract No. 75N91019D00024, Task Order No. 75N91020F00003
