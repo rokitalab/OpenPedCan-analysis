@@ -99,7 +99,8 @@ authors_rm <- c(
   "Bailey",
   "Ubuntu",
   "Teja Koganti",
-  "Yuankun Zhu"
+  "Yuankun Zhu",
+  "Rocky Breslow"
 )
 ```
 
