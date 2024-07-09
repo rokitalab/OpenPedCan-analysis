@@ -5,6 +5,7 @@ library(openxlsx)
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
 input_dir <- file.path(root_dir, "data")
 output_dir <- file.path(root_dir, "tables", "results")
+mb_dir <- file.path(root_dir, "analyses", "molecular-subtyping-MB", "results")
 
 ## read file
 hist <- read_tsv(file.path(input_dir, "histologies.tsv"))
@@ -40,8 +41,7 @@ hist_combined <- hist_combined %>%
           Patients = sum(hist_combined$Patients))
 
 ## MB subtype 
-## change the directory once the PR is merged ##
-MB_subtype <- read_tsv(file.path(output_dir, "mb_shh_molecular_subtypes.tsv"))
+MB_subtype <- read_tsv(file.path(mb_dir, "mb_shh_molecular_subtypes.tsv"))
 
 ## fianl table
 final_table <- list(histologies_summary = hist_combined, 
