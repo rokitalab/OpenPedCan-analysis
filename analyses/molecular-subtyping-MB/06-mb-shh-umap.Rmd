@@ -339,7 +339,8 @@ merged_plot <- ggarrange(umap_mb,
 
 merged_plot
 
-ggsave(file.path(plots_dir, "figure3.png"),
+ggsave(file.path(root_dir, "figures", "manuscript_OPC",
+                 "figure3", "Figure3.png"),
     width = 13, height = 9)
 ```
 
