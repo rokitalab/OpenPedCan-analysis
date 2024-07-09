@@ -73,8 +73,8 @@ We are going to pin some of the author positioned based on scholarship that is n
 ```{r}
 pinned_first_authors <- c("Zhuangzhuang Geng", 
                     "Eric Wafula",
-                    "Yuanchao Zhang",
-                    "Ryan J. Corbett")
+                    "Ryan J. Corbett",
+                    "Yuanchao Zhang")
 
 pinned_first_positions <- c(1:4)
 names(pinned_first_positions) <- pinned_first_authors
