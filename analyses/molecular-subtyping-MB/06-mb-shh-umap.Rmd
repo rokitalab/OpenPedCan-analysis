@@ -18,6 +18,7 @@ suppressPackageStartupMessages({
   library(devtools)
   library(gdata)
   library(ggpubr)
+  library(patchwork)
 })
 
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
@@ -27,13 +28,15 @@ analysis_dir <- file.path(root_dir, "analyses", "molecular-subtyping-MB")
 results_dir <- file.path(analysis_dir, "results")
 input_dir <- file.path(analysis_dir, "input")
 plots_dir <- file.path(analysis_dir, "plot")
+
+source(file.path(root_dir, "figures", "manuscript_OPC", "utils", "theme_for_plot.R"))
 ```
 
 Set file paths
 
 ```{r}
 hist_file <- file.path(data_dir, "histologies.tsv")
-methyl_file <- file.path(data_dir, "v14", "methyl-beta-values.rds")
+methyl_file <- file.path(data_dir, "methyl-beta-values.rds")
 mb_shh_file <- file.path(results_dir, "mb_shh_subtypes_w_molecular_data.tsv")
 ```
 
@@ -118,11 +121,12 @@ umap_mb <-  ggplot(mb_umap_plot_df, aes(x = X1,
   labs(color = "molecular subtype") +
   theme_bw() +
   xlab("UMAP1") +
-  ylab("UMAP2") 
+  ylab("UMAP2") +
+  theme_Publication() 
 
 ggsave(file.path(plots_dir, "umap_mb.pdf"),
        umap_mb,
-       width = 5.5, height = 3.5)
+       width = 6, height = 4)
 ```
 
 Identify 20k most variable probes among MB Group 3/4 samples
@@ -158,12 +162,12 @@ mb_g34_umap_plot_df %>%
   geom_point(alpha = 0.7) +
   labs(color = "methylation subtype",
        shape = "molecular subtype") +
-  theme_bw() +
   xlab("UMAP1") +
-  ylab("UMAP2") 
+  ylab("UMAP2")  +
+  theme_Publication() 
 
 ggsave(file.path(plots_dir, "umap_mb_group34.pdf"),
-       width = 5.5, height = 3.5)
+       width = 6, height = 4)
 ```
 
 Identify 20k most variable probes among MB SHH samples
@@ -228,7 +232,6 @@ umap_mb_shh <-  ggplot(mb_shh_umap_plot_df, aes(x = X1,
   labs(color = "SHH subgroup",
        size = "age range (years)",
        shape = "classifcation source") +
-  theme_bw() +
   xlab("UMAP1") +
   ylab("UMAP2") +
   # colors to match subtypes in Garcia-Lopez 2020 review
@@ -237,7 +240,8 @@ umap_mb_shh <-  ggplot(mb_shh_umap_plot_df, aes(x = X1,
                                 "gray")) +
   guides(color = guide_legend(order = 1),
          shape  = guide_legend(order = 2),
-         size  = guide_legend(order = 3))
+         size  = guide_legend(order = 3))  +
+  theme_Publication()
 
 ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
        umap_mb_shh,
@@ -262,10 +266,11 @@ mb_shh_umap_plot_df %>%
   ylab("UMAP2") +
   # colors to match subtypes in Garcia-Lopez 2020 review
   scale_color_manual(values = c("goldenrod2", "royalblue1",
-                                "aquamarine3", "plum4"))
+                                "aquamarine3", "plum4"))  +
+  theme_Publication()
 
 ggsave(file.path(plots_dir, "umap_mb_shh_methylation_subtype.pdf"),
-       width = 5.5, height = 3.5)
+       width = 6.5, height = 4)
 ```
 
 Plot UMAP with CN status for MYCN, GLI2, CCND2, and PTEN
@@ -291,18 +296,18 @@ umap_mb_shh_cn <- ggplot(umap_plot_cn_df, aes(x = X1,
   geom_point(alpha = 0.7, size = 3) +
   labs(color = "SHH subgroup",
        shape = "CN status") +
-  facet_wrap(~gene_name, nrow = 2) +
-  theme_bw() +
+  facet_wrap(~gene_name, nrow = 1) +
   xlab("UMAP1") +
   ylab("UMAP2") +
   # colors to match subtypes in Garcia-Lopez 2020 review
   scale_color_manual(values = c("aquamarine3", "goldenrod2", 
                                 "royalblue1", "plum4",
-                                "gray"))
+                                "gray"))  +
+  theme_Publication()
 
 ggsave(file.path(plots_dir, "umap_mb_shh_cn_status.pdf"),
        umap_mb_shh_cn,
-       width = 8, height = 5.5)
+       width = 10, height = 4)
 ```
 
 Plot UMAP with TP53 alteration status
@@ -316,13 +321,13 @@ mb_shh_umap_plot_df %>%
   geom_point(alpha = 0.7, size = 3) +
   labs(color = "SHH subgroup",
        shape = "TP53 status") +
-  theme_bw() +
   xlab("UMAP1") +
   ylab("UMAP2") +
   # colors to match subtypes in Garcia-Lopez 2020 review
   scale_color_manual(values = c("aquamarine3", "goldenrod2", 
                                 "royalblue1", "plum4",
-                                "gray"))
+                                "gray"))  +
+  theme_Publication()
 
 ggsave(file.path(plots_dir, "umap_mb_shh_tp53_status.pdf"),
        width = 5.5, height = 3.5)
@@ -331,17 +336,30 @@ ggsave(file.path(plots_dir, "umap_mb_shh_tp53_status.pdf"),
 Merge MB, MB SHH, and MB SHH + CN UMAPs into single figure and save
 
 ```{r}
-merged_plot <- ggarrange(umap_mb,
-                         umap_mb_shh,
-                         umap_mb_shh_cn,
-                         ncol = 2, nrow = 2,
-                         labels = c("A", "B", "C"))
+# Combine the plots with patchwork
+umap_mb_resize<- umap_mb +
+  theme(legend.title = element_text(size = 10),
+        legend.text = element_text(size = 10))
 
-merged_plot
+umap_mb_shh_resize <- umap_mb_shh +
+  theme(legend.title = element_text(size = 10),
+        legend.text = element_text(size = 10))
 
-ggsave(file.path(root_dir, "figures", "manuscript_OPC",
-                 "figure3", "Figure3.png"),
-    width = 13, height = 9)
+umap_mb_shh_cn_resize <- umap_mb_shh_cn +
+  theme(legend.title = element_text(size = 10),
+        legend.text = element_text(size = 10))
+
+merged_plot <- (umap_mb_resize + umap_mb_shh_resize) / umap_mb_shh_cn_resize +
+               plot_annotation(tag_levels = 'A') &
+  theme(plot.tag = element_text(face = "bold"))
+
+# Save the plot
+ggsave(
+  filename = file.path(root_dir, "figures", "manuscript_OPC", "figure3", "Figure3.png"),
+  plot = merged_plot,
+  width = 11,
+  height = 8.5
+)
 ```
 
 Identify 20k most variable probes among MB WNT samples
@@ -379,7 +397,8 @@ mb_wnt_umap_plot_df %>%
   labs(color = "methylation subtype") +
   theme_bw() +
   xlab("UMAP1") +
-  ylab("UMAP2") 
+  ylab("UMAP2") +
+  theme_Publication()
 
 ggsave(file.path(plots_dir, "umap_mb_wnt.pdf"),
        width = 5.5, height = 3.5)
