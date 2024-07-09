@@ -17,6 +17,7 @@ suppressPackageStartupMessages({
   library(ggplot2)
   library(devtools)
   library(gdata)
+  library(ggpubr)
 })
 
 root_dir <- rprojroot::find_root(rprojroot::has_dir(".git"))
@@ -110,8 +111,7 @@ mb_umap_plot_df <- data.frame(mb_umap_results$layout) %>%
 Plot UMAP with molecular subtype and age range 
 
 ```{r}
-umap_mb <- mb_umap_plot_df %>%
-  ggplot(aes(x = X1, 
+umap_mb <-  ggplot(mb_umap_plot_df, aes(x = X1, 
              y = X2,
              color = molecular_subtype)) +
   geom_point(alpha = 0.7) +
@@ -184,13 +184,13 @@ mb_shh_umap_plot_df <- data.frame(mb_shh_umap_results$layout) %>%
 
 mb_shh_umap_plot_df <- mb_shh_umap_plot_df %>%
   dplyr::mutate(age_range = case_when(
-    age_at_diagnosis_years < 5 ~ "[0,5)",
+    age_at_diagnosis_years < 5 ~ "(0,5)",
     age_at_diagnosis_years < 10 ~ "[5,10)",
     age_at_diagnosis_years < 15 ~ "[10,15)",
     TRUE ~ ">=15"
   )) %>%
   dplyr::mutate(age_range = fct_relevel(age_range,
-                                        c("[0,5)", "[5,10)",
+                                        c("(0,5)", "[5,10)",
                                           "[10,15)", ">=15"))) %>%
   dplyr::mutate(consensus_CN_MYCN = case_when(
     is.na(consensus_CN_MYCN) ~ "neutral",
@@ -219,14 +219,13 @@ mb_shh_umap_plot_df <- mb_shh_umap_plot_df %>%
 Plot UMAP with molecular subtype, classification source, and age range 
 
 ```{r}
-umap_mb_shh <- mb_shh_umap_plot_df %>%
-  ggplot(aes(x = X1, 
+umap_mb_shh <-  ggplot(mb_shh_umap_plot_df, aes(x = X1, 
              y = X2,
              color = molecular_subtype,
              size = age_range,
              shape = classification_source)) +
   geom_point(alpha = 0.7) +
-  labs(color = "molecular subtype",
+  labs(color = "SHH subgroup",
        size = "age range (years)",
        shape = "classifcation source") +
   theme_bw() +
@@ -248,7 +247,7 @@ ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
 Plot UMAP with methylation subtype and methylation score
 
 ```{r}
-umap_mb_shh_cn <- mb_shh_umap_plot_df %>%
+mb_shh_umap_plot_df %>%
   dplyr::filter(grepl("MB", dkfz_v12_methylation_subclass_collapsed)) %>%
   
   ggplot(aes(x = X1, 
@@ -266,7 +265,6 @@ umap_mb_shh_cn <- mb_shh_umap_plot_df %>%
                                 "aquamarine3", "plum4"))
 
 ggsave(file.path(plots_dir, "umap_mb_shh_methylation_subtype.pdf"),
-       umap_mb_shh_cn,
        width = 5.5, height = 3.5)
 ```
 
@@ -286,13 +284,12 @@ umap_plot_cn_df <- mb_shh_umap_plot_df %>%
   gather(key = "gene_name", value = "CN_status",
          -molecular_subtype, -X1, -X2)
 
-umap_plot_cn_df %>%
-  ggplot(aes(x = X1, 
+umap_mb_shh_cn <- ggplot(umap_plot_cn_df, aes(x = X1, 
              y = X2,
              color = molecular_subtype,
              shape = CN_status)) +
   geom_point(alpha = 0.7, size = 3) +
-  labs(color = "methylation subtype",
+  labs(color = "SHH subgroup",
        shape = "CN status") +
   facet_wrap(~gene_name, nrow = 2) +
   theme_bw() +
@@ -304,6 +301,7 @@ umap_plot_cn_df %>%
                                 "gray"))
 
 ggsave(file.path(plots_dir, "umap_mb_shh_cn_status.pdf"),
+       umap_mb_shh_cn,
        width = 8, height = 5.5)
 ```
 
@@ -316,7 +314,7 @@ mb_shh_umap_plot_df %>%
              color = molecular_subtype,
              shape = tp53_status)) +
   geom_point(alpha = 0.7, size = 3) +
-  labs(color = "methylation subtype",
+  labs(color = "SHH subgroup",
        shape = "TP53 status") +
   theme_bw() +
   xlab("UMAP1") +
@@ -328,6 +326,21 @@ mb_shh_umap_plot_df %>%
 
 ggsave(file.path(plots_dir, "umap_mb_shh_tp53_status.pdf"),
        width = 5.5, height = 3.5)
+```
+
+Merge MB, MB SHH, and MB SHH + CN UMAPs into single figure and save
+
+```{r}
+merged_plot <- ggarrange(umap_mb,
+                         umap_mb_shh,
+                         umap_mb_shh_cn,
+                         ncol = 2, nrow = 2,
+                         labels = c("A", "B", "C"))
+
+merged_plot
+
+ggsave(file.path(plots_dir, "figure3.png"),
+    width = 13, height = 9)
 ```
 
 Identify 20k most variable probes among MB WNT samples
