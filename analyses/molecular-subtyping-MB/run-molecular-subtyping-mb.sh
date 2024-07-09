@@ -14,6 +14,10 @@ script_directory="$(perl -e 'use File::Basename;
   print dirname(abs_path(@ARGV[0]));' -- "$0")"
 cd "$script_directory" || exit
 
+# This option controls whether on not the step that generates the HGG only
+# files gets run -- it will be turned off in CI
+SUBSET=${OPENPBTA_SUBSET:-1}
+
 scratch_path="../../scratch/"
 
 # filter to MB samples and/or batch correct
@@ -32,4 +36,10 @@ Rscript --vanilla 02-classify-mb.R \
 
 # classify samples with no RNA as "MB, To be classified"
 Rscript --vanilla 04-subtype-mb-samples.R
+
+if [ "$SUBSET" -gt "0" ]; then
+# classify SHH samples into alpha, beta, delta, gamma
+  Rscript --vanilla 05-subtype-mb-shh.R
+fi
+
 
