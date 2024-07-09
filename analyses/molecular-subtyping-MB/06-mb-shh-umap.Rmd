@@ -110,7 +110,7 @@ mb_umap_plot_df <- data.frame(mb_umap_results$layout) %>%
 Plot UMAP with molecular subtype and age range 
 
 ```{r}
-mb_umap_plot_df %>%
+umap_mb <- mb_umap_plot_df %>%
   ggplot(aes(x = X1, 
              y = X2,
              color = molecular_subtype)) +
@@ -121,6 +121,7 @@ mb_umap_plot_df %>%
   ylab("UMAP2") 
 
 ggsave(file.path(plots_dir, "umap_mb.pdf"),
+       umap_mb,
        width = 5.5, height = 3.5)
 ```
 
@@ -218,7 +219,7 @@ mb_shh_umap_plot_df <- mb_shh_umap_plot_df %>%
 Plot UMAP with molecular subtype, classification source, and age range 
 
 ```{r}
-mb_shh_umap_plot_df %>%
+umap_mb_shh <- mb_shh_umap_plot_df %>%
   ggplot(aes(x = X1, 
              y = X2,
              color = molecular_subtype,
@@ -240,13 +241,14 @@ mb_shh_umap_plot_df %>%
          size  = guide_legend(order = 3))
 
 ggsave(file.path(plots_dir, "umap_mb_shh.pdf"),
+       umap_mb_shh,
        width = 6.5, height = 4.5)
 ```
 
 Plot UMAP with methylation subtype and methylation score
 
 ```{r}
-mb_shh_umap_plot_df %>%
+umap_mb_shh_cn <- mb_shh_umap_plot_df %>%
   dplyr::filter(grepl("MB", dkfz_v12_methylation_subclass_collapsed)) %>%
   
   ggplot(aes(x = X1, 
@@ -264,6 +266,7 @@ mb_shh_umap_plot_df %>%
                                 "aquamarine3", "plum4"))
 
 ggsave(file.path(plots_dir, "umap_mb_shh_methylation_subtype.pdf"),
+       umap_mb_shh_cn,
        width = 5.5, height = 3.5)
 ```
 
@@ -276,7 +279,7 @@ umap_plot_cn_df <- mb_shh_umap_plot_df %>%
                 consensus_CN_GLI2,
                 consensus_CN_CCND2,
                 consensus_CN_PTEN) %>%
-  dplyr::rename(MCYN = consensus_CN_MYCN,
+  dplyr::rename(MYCN = consensus_CN_MYCN,
                 GLI2 = consensus_CN_GLI2,
                 CCND2 = consensus_CN_CCND2,
                 PTEN = consensus_CN_PTEN) %>%
