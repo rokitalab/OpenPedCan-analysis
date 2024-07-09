@@ -1,0 +1,193 @@
+module	author
+copy_number_consensus_call	Alex Sickler
+copy_number_consensus_call	Eric Wafula
+copy_number_consensus_call	Jo Lynne Rokita
+copy_number_consensus_call	Krutika S. Gaonkar
+copy_number_consensus_call	Zhuangzhuang Geng
+copy_number_consensus_call_manta	Alex Sickler
+copy_number_consensus_call_manta	Eric Wafula
+copy_number_consensus_call_manta	Jo Lynne Rokita
+copy_number_consensus_call_manta	Zhuangzhuang Geng
+create-subset-files	Eric Wafula
+create-subset-files	Jo Lynne Rokita
+create-subset-files	Krutika S. Gaonkar
+create-subset-files	Zhuangzhuang Geng
+data-pre-release-qc	Eric Wafula
+data-pre-release-qc	Zhuangzhuang Geng
+efo-mondo-mapping	Jo Lynne Rokita
+efo-mondo-mapping	Run Jin
+efo-mondo-mapping	Sangeeta Shukla
+efo-mondo-mapping	Zhuangzhuang Geng
+filter-mtp-tables	Eric Wafula
+filter-mtp-tables	Jo Lynne Rokita
+filter-mtp-tables	Sangeeta Shukla
+focal-cn-file-preparation	Aditya Lahiri
+focal-cn-file-preparation	Alex Sickler
+focal-cn-file-preparation	Dave Hill
+focal-cn-file-preparation	Eric Wafula
+focal-cn-file-preparation	Jo Lynne Rokita
+focal-cn-file-preparation	Krutika S. Gaonkar
+focal-cn-file-preparation	Komal S. Rathi
+focal-cn-file-preparation	Ryan J. Corbett
+focal-cn-file-preparation	Run Jin
+focal-cn-file-preparation	Sangeeta Shukla
+focal-cn-file-preparation	Zhuangzhuang Geng
+fusion-frequencies	Eric Wafula
+fusion-frequencies	Jo Lynne Rokita
+fusion-frequencies	Krutika S. Gaonkar
+fusion-frequencies	Run Jin
+fusion-frequencies	Sangeeta Shukla
+fusion-frequencies	Zhuangzhuang Geng
+fusion-summary	Daniel P. Miller
+fusion-summary	Jo Lynne Rokita
+fusion-summary	Krutika S. Gaonkar
+fusion-summary	Ryan J. Corbett
+fusion-summary	Run Jin
+fusion-summary	Zhuangzhuang Geng
+fusion_filtering	Eric Wafula
+fusion_filtering	Jo Lynne Rokita
+fusion_filtering	Kelsey Keith
+fusion_filtering	Krutika S. Gaonkar
+fusion_filtering	Run Jin
+fusion_filtering	Zhuangzhuang Geng
+gene-set-enrichment-analysis	Christopher Blackden
+gene-set-enrichment-analysis	Eric Wafula
+gene-set-enrichment-analysis	Jo Lynne Rokita
+gene-set-enrichment-analysis	Krutika S. Gaonkar
+gene-set-enrichment-analysis	Run Jin
+gene-set-enrichment-analysis	Sangeeta Shukla
+gene_match	Jo Lynne Rokita
+gene_match	Run Jin
+gene_match	Sangeeta Shukla
+independent-samples	Eric Wafula
+independent-samples	Jo Lynne Rokita
+independent-samples	Komal S. Rathi
+independent-samples	Krutika S. Gaonkar
+independent-samples	Run Jin
+independent-samples	Sangeeta Shukla
+independent-samples	Zhuangzhuang Geng
+long-format-table-utils	Jo Lynne Rokita
+long-format-table-utils	Yuanchao Zhang
+long-format-table-utils	Run Jin
+long-format-table-utils	Sangeeta Shukla
+long-format-table-utils	Zhuangzhuang Geng
+methylation-preprocessing	Daniel P. Miller
+methylation-preprocessing	Eric Wafula
+methylation-preprocessing	Jo Lynne Rokita
+methylation-probe-annotations	Eric Wafula
+methylation-summary	Eric Wafula
+methylation-summary	Jo Lynne Rokita
+molecular-subtyping-ATRT	Jo Lynne Rokita
+molecular-subtyping-ATRT	Zhuangzhuang Geng
+molecular-subtyping-CRANIO	Daniel P. Miller
+molecular-subtyping-CRANIO	Jo Lynne Rokita
+molecular-subtyping-CRANIO	Komal S. Rathi
+molecular-subtyping-CRANIO	Krutika S. Gaonkar
+molecular-subtyping-CRANIO	Run Jin
+molecular-subtyping-CRANIO	Zhuangzhuang Geng
+molecular-subtyping-EPN	Dave Hill
+molecular-subtyping-EPN	Eric Wafula
+molecular-subtyping-EPN	Jo Lynne Rokita
+molecular-subtyping-EPN	Komal S. Rathi
+molecular-subtyping-EPN	Krutika S. Gaonkar
+molecular-subtyping-EPN	Ryan J. Corbett
+molecular-subtyping-EPN	Run Jin
+molecular-subtyping-EPN	Zhuangzhuang Geng
+molecular-subtyping-EWS	Jo Lynne Rokita
+molecular-subtyping-EWS	Komal S. Rathi
+molecular-subtyping-EWS	Krutika S. Gaonkar
+molecular-subtyping-EWS	Run Jin
+molecular-subtyping-EWS	Zhuangzhuang Geng
+molecular-subtyping-HGG	Aditya Lahiri
+molecular-subtyping-HGG	Dave Hill
+molecular-subtyping-HGG	Eric Wafula
+molecular-subtyping-HGG	Jo Lynne Rokita
+molecular-subtyping-HGG	Krutika S. Gaonkar
+molecular-subtyping-HGG	Run Jin
+molecular-subtyping-HGG	Zhuangzhuang Geng
+molecular-subtyping-LGAT	Eric Wafula
+molecular-subtyping-LGAT	Jo Lynne Rokita
+molecular-subtyping-LGAT	Krutika S. Gaonkar
+molecular-subtyping-LGAT	Run Jin
+molecular-subtyping-LGAT	Zhuangzhuang Geng
+molecular-subtyping-MB	Eric Wafula
+molecular-subtyping-MB	Jo Lynne Rokita
+molecular-subtyping-MB	Komal S. Rathi
+molecular-subtyping-MB	Krutika S. Gaonkar
+molecular-subtyping-MB	Run Jin
+molecular-subtyping-MB	Zhuangzhuang Geng
+molecular-subtyping-NBL	Eric Wafula
+molecular-subtyping-NBL	Jo Lynne Rokita
+molecular-subtyping-NBL	Zhuangzhuang Geng
+molecular-subtyping-PB	Jo Lynne Rokita
+molecular-subtyping-PB	Zhuangzhuang Geng
+molecular-subtyping-chordoma	Eric Wafula
+molecular-subtyping-chordoma	Jo Lynne Rokita
+molecular-subtyping-chordoma	Komal S. Rathi
+molecular-subtyping-chordoma	Krutika S. Gaonkar
+molecular-subtyping-chordoma	Run Jin
+molecular-subtyping-chordoma	Zhuangzhuang Geng
+molecular-subtyping-embryonal	Jo Lynne Rokita
+molecular-subtyping-embryonal	Komal S. Rathi
+molecular-subtyping-embryonal	Krutika S. Gaonkar
+molecular-subtyping-embryonal	Run Jin
+molecular-subtyping-embryonal	Zhuangzhuang Geng
+molecular-subtyping-integrate	Eric Wafula
+molecular-subtyping-integrate	Jo Lynne Rokita
+molecular-subtyping-integrate	Krutika S. Gaonkar
+molecular-subtyping-integrate	Run Jin
+molecular-subtyping-integrate	Zhuangzhuang Geng
+molecular-subtyping-neurocytoma	Jo Lynne Rokita
+molecular-subtyping-neurocytoma	Komal S. Rathi
+molecular-subtyping-neurocytoma	Krutika S. Gaonkar
+molecular-subtyping-neurocytoma	Run Jin
+molecular-subtyping-neurocytoma	Zhuangzhuang Geng
+molecular-subtyping-pathology	Dave Hill
+molecular-subtyping-pathology	Eric Wafula
+molecular-subtyping-pathology	Jo Lynne Rokita
+molecular-subtyping-pathology	Krutika S. Gaonkar
+molecular-subtyping-pathology	Run Jin
+molecular-subtyping-pathology	Zhuangzhuang Geng
+mtp-annotations	Dave Hill
+mtp-annotations	Eric Wafula
+mtp-annotations	Jo Lynne Rokita
+mtp-tables-qc-checks	Aditya Lahiri
+mtp-tables-qc-checks	Eric Wafula
+mtp-tables-qc-checks	Jo Lynne Rokita
+mutational-signatures	Jo Lynne Rokita
+mutational-signatures	Ryan J. Corbett
+mutational-signatures	Zhuangzhuang Geng
+pedcbio-cnv-prepare	Jo Lynne Rokita
+pedcbio-cnv-prepare	Run Jin
+pedcbio-sample-name	Jo Lynne Rokita
+pedcbio-sample-name	Miguel A. Brown
+pedcbio-sample-name	Run Jin
+pedot-table-column-display-order-name	Eric Wafula
+pedot-table-column-display-order-name	Jo Lynne Rokita
+pedot-table-column-display-order-name	Yuanchao Zhang
+rna-seq-expression-summary-stats	Eric Wafula
+rna-seq-expression-summary-stats	Jo Lynne Rokita
+rna-seq-expression-summary-stats	Yuanchao Zhang
+rna-seq-expression-summary-stats	Sangeeta Shukla
+rnaseq-batch-correct	Adam A. Kraya
+rnaseq-batch-correct	Christopher Blackden
+rnaseq-batch-correct	Komal S. Rathi
+snv-frequencies	Eric Wafula
+snv-frequencies	Jo Lynne Rokita
+snv-frequencies	Kelsey Keith
+snv-frequencies	Yuanchao Zhang
+snv-frequencies	Run Jin
+snv-frequencies	Sangeeta Shukla
+tmb-calculation	Antonia Chroni
+tmb-calculation	Dave Hill
+tmb-calculation	Eric Wafula
+tmb-calculation	Jo Lynne Rokita
+tp53_nf1_score	Aditya Lahiri
+tp53_nf1_score	Eric Wafula
+tp53_nf1_score	Jo Lynne Rokita
+tp53_nf1_score	Krutika S. Gaonkar
+tp53_nf1_score	Run Jin
+tumor-gtex-plots	Jo Lynne Rokita
+tumor-gtex-plots	Komal S. Rathi
+tumor-normal-differential-expression	Jo Lynne Rokita
+tumor-normal-differential-expression	Sangeeta Shukla

@@ -1,0 +1,143 @@
+---
+title: "Creating a TSV of author information for AlexsLemonade/OpenPBTA-manuscript"
+output: 
+  html_notebook:
+    toc: true
+    toc_float: true
+author: Stephanie Spielman for ALSF CCDL
+date: 2022
+---
+
+```{r setup}
+library(magrittr) # load for piping
+library(tidyverse) # load for piping
+```
+
+
+This notebook parses the `metadata.yaml` file to obtain a TSV of author information relevant for manuscript submission, including:
+
+- Name
+- Affiliation(s)
+- ORCID
+- Email 
+
+
+## Read in metadata 
+
+The previously-run notebook `03-set-authorship-order.Rmd` will have created an updated metadata YAML file in `results/metadata.yaml`, so we can directly read it in and grab the author list.
+
+
+```{r}
+manuscript_metadata <- yaml::read_yaml(
+  file.path("results", "metadata.yaml")
+)
+author_list <- manuscript_metadata$author
+```
+
+## Parse the metadata
+
+First, we'll define a function that is useful for parsing fields out of the metadata. 
+This function allows for the fact that some keys may be missing for some authors (e.g. `ORCID` or `email`), and the function will fill these in as `NA`s.
+
+```{r}
+# Function to parse out a given field
+# This function allows us to extract fields
+#  that might missing, which get assigned NA
+extract_yaml_value <- function(x, name) {
+  
+  # If the name is not present, return NA
+  if (!(name %in% names(x))) {
+    return_list <- list(NA)
+    names(return_list) <- name
+    return(return_list)
+  } else {
+    # Process affiliations specifically since there can be >1
+    #  and at least 1 has superscripts that should be removed
+    if (name == "affiliations") {
+      list("affiliations" =
+             paste(x[["affiliations"]], collapse = "; ") %>%
+             # Remove any superscripts
+             stringr::str_replace_all(., "<sup>.+<\\/sup>", "")
+      )
+    } else {
+      # Extract the value directly
+      return(magrittr::extract(x, name))
+    }
+  }
+  
+}
+```
+
+
+Now, we can use this function to parse the metadata into a data frame.
+
+
+```{r}
+
+# Extract info
+author_info <- dplyr::bind_cols(
+  purrr::map_dfr(author_list, extract_yaml_value, "email"),
+  purrr::map_dfr(author_list, extract_yaml_value, "affiliations"),
+  purrr::map_dfr(author_list, extract_yaml_value, "name"),
+  purrr::map_dfr(author_list, extract_yaml_value, "orcid")
+)
+
+# Function to split names
+split_name <- function(name) {
+  parts <- str_split(name, " ", simplify = TRUE)
+  if (ncol(parts) == 2) {
+    return(tibble(`First Name` = parts[1], `Middle Name(s)/Initial(s)` = "", `Last Name` = parts[2]))
+  } else if (ncol(parts) == 3) {
+    return(tibble(`First Name` = parts[1], `Middle Name(s)/Initial(s)` = paste0(substr(parts[2], 1, 1), "."), `Last Name` = parts[3]))
+  } else {
+    return(tibble(`First Name` = "", `Middle Name(s)/Initial(s)` = "", Last = ""))  # In case of unexpected format
+  }
+}
+
+
+author_info <- author_info %>%
+  rowwise() %>%
+  dplyr::mutate(split = list(split_name(name))) %>%
+  unnest(cols = c(split)) %>%
+  # manually update Nick and Jo Lynne
+  dplyr::mutate(`First Name` = case_when(name == "Jo Lynne Rokita" ~ "Jo Lynne",
+                                  TRUE ~ `First Name`),
+         `Middle Name(s)/Initial(s)` = case_when(name %in% c("Jo Lynne Rokita", "Nicholas Van Kuren") ~ "",
+                                                 TRUE ~ `Middle Name(s)/Initial(s)`),
+         `Last Name` = case_when(name == "Nicholas Van Kuren" ~ "Van Kuren",
+                                 TRUE ~ `Last Name`))
+
+# Make names titlecase, except ORCID which should be all uppercase 
+author_info <- author_info %>%
+  dplyr::rename(Email = email,
+                ORCiD = orcid,
+                Institution = affiliations) %>%
+  dplyr::mutate(ORCiD = str_to_upper(ORCiD),
+         ORCiD = ifelse(is.na(ORCiD), "", ORCiD),
+         Suffix = "",
+         `Corresponding Author` = case_when(name == "Jo Lynne Rokita" ~ "X",
+                                            TRUE ~ ""),
+         `Home Page URL` = "",
+         `Collaborative Group/Consortium` = "") %>%
+  dplyr::select(Email, Institution, `First Name`, `Middle Name(s)/Initial(s)`, `Last Name`,
+                Suffix, `Corresponding Author`, `Home Page URL`, `Collaborative Group/Consortium`,
+                ORCiD)
+```
+
+### Save
+
+And we're ready to save!
+
+```{r}
+readr::write_tsv(
+  author_info,
+  "author_information.tsv"
+)
+```
+
+## Session Info
+
+```{r}
+sessionInfo()
+```
+
