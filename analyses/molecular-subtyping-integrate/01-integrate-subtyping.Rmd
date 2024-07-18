@@ -205,7 +205,8 @@ histology_cg <- histology %>%
     (grepl("xanthogranuloma", pathology_free_text_diagnosis) & broad_histology == "Histiocytic tumor" & pathology_diagnosis == "Other" & 
        sample_id != "7316-188") ~ "Juvenile xanthogranuloma",
     sample_id == "7316-3066" ~ "Neurofibroma/Plexiform",
-    sample_id == "7316-3240" ~ "Diffuse intrinsic pontine glioma",
+    # Removing manual override for below sample_id to avoid cancer_group and subtype mismatch
+    #sample_id == "7316-3240" ~ "Diffuse intrinsic pontine glioma",
     cancer_group == "Histiocytic Tumor" ~ str_to_sentence(cancer_group),
     short_histology == "JXG" ~ "Histiocytic tumor",
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
