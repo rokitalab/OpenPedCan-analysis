@@ -46,7 +46,14 @@ pb_meta <- histo %>%
     dkfz_v12_methylation_subclass == "PIN_RB" ~ "PB, RB1",
     dkfz_v12_methylation_subclass == "PB_GRP1A" ~ "PB, Group 1A",
     dkfz_v12_methylation_subclass == "PB_GRP1B" ~ "PB, Group 1B",
-    dkfz_v12_methylation_subclass == "PB_GRP2" ~ "PB, Group 2")) 
+    dkfz_v12_methylation_subclass == "PB_GRP2" ~ "PB, Group 2",
+    dkfz_v12_methylation_subclass == "ETMR_C19MC" ~ "EMTR, C19MC",
+    dkfz_v12_methylation_subclass == "PTPR_B" ~ "PTPR, Beta",
+    dkfz_v12_methylation_subclass == "PPTID_A" ~ "PPTID, Alpha",
+    dkfz_v12_methylation_subclass == "MB_WNT" ~ "MB, WNT",
+    dkfz_v12_methylation_subclass == "CTRL_PIN" ~ "CTRL, PIN"
+    ))
+
 
 ```
 
@@ -62,6 +69,15 @@ pb_meta <- histo %>%
 ## PB_GRP2: pineoblastoma, miRNA processing-altered 2 (PB, Group 2)
 ## PIN_RB: pineoblastoma, RB1-altered (PB, RB1)
 
+## Additional subtypes added on 07/22/2024
+## Edited By: Sangeeta Shukla
+## ETMR_C19MC: Embryonal tumor with multilayered rosettes (ETMR), C19MC-altered
+## PTPR_B: Protein Tyrosine Phosphatase Receptor-Type Beta
+## PPTID_A: Ppineal Parenchymal Tumor of Intermediate Differentiation Type A
+## MB_WNT: Medulloblastoma, WNT-activated
+## CTRL_PIN: Prostatic Intraepithelial Neoplasia (PIN), Control
+
+
 ```{r}
 
 pb_methy_with_subtype <- pb_meta %>% 
@@ -69,7 +85,12 @@ pb_methy_with_subtype <- pb_meta %>%
   mutate(molecular_subtype = case_when(molecular_subtype_methyl == "PB, MYC/FOXR2" ~ "PB, MYC/FOXR2", 
                                        molecular_subtype_methyl == "PB, RB1" ~ "PB, RB1",
                                        molecular_subtype_methyl %in% c("PB, Group 1A", "PB, Group 1B") ~ "PB, Group 1",
-                                       molecular_subtype_methyl == "PB, Group 2" ~ "PB, Group 2"))
+                                       molecular_subtype_methyl == "PB, Group 2" ~ "PB, Group 2",
+                                       molecular_subtype_methyl == "EMTR, C19MC" ~ "EMTR, C19MC",
+                                       molecular_subtype_methyl == "PTPR, Beta" ~ "PTPR, Beta",
+                                       molecular_subtype_methyl == "PPTID, Alpha" ~ "PPTID, Alpha",
+                                       molecular_subtype_methyl == "MB, WNT" ~ "MB, WNT",
+                                       molecular_subtype_methyl == "CTRL, PIN" ~ "CTRL, PIN"))
   
 
 pb_methy_without_subtype <- pb_meta %>% 

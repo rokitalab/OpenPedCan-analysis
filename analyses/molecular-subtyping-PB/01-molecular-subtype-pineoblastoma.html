@@ -360,13 +360,13 @@ display: none;
 <div id="load-library" class="section level2">
 <h2>load library</h2>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ─────────────────────────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.1     ✔ readr     2.1.4
-## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-## ✔ purrr     1.0.1     
-## ── Conflicts ───────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Attaching core tidyverse packages ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2     
+## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
@@ -385,7 +385,7 @@ if(!dir.exists(result_dir)){
 <h2>read files</h2>
 <pre class="r"><code>histo &lt;- readr::read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quot;))</code></pre>
 <pre><code>## Rows: 47895 Columns: 64
-## ── Column specification ───────────────────────────────────────────────────────────────────────────
+## ── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;\t&quot;
 ## chr (41): Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, a...
 ## dbl (21): cell_line_passage, OS_days, EFS_days, age_at_diagnosis_days, age_a...
@@ -409,7 +409,13 @@ path_dx_list_pb &lt;- jsonlite::fromJSON(
     dkfz_v12_methylation_subclass == &quot;PIN_RB&quot; ~ &quot;PB, RB1&quot;,
     dkfz_v12_methylation_subclass == &quot;PB_GRP1A&quot; ~ &quot;PB, Group 1A&quot;,
     dkfz_v12_methylation_subclass == &quot;PB_GRP1B&quot; ~ &quot;PB, Group 1B&quot;,
-    dkfz_v12_methylation_subclass == &quot;PB_GRP2&quot; ~ &quot;PB, Group 2&quot;)) </code></pre>
+    dkfz_v12_methylation_subclass == &quot;PB_GRP2&quot; ~ &quot;PB, Group 2&quot;,
+    dkfz_v12_methylation_subclass == &quot;ETMR_C19MC&quot; ~ &quot;EMTR, C19MC&quot;,
+    dkfz_v12_methylation_subclass == &quot;PTPR_B&quot; ~ &quot;PTPR, Beta&quot;,
+    dkfz_v12_methylation_subclass == &quot;PPTID_A&quot; ~ &quot;PPTID, Alpha&quot;,
+    dkfz_v12_methylation_subclass == &quot;MB_WNT&quot; ~ &quot;MB, WNT&quot;,
+    dkfz_v12_methylation_subclass == &quot;CTRL_PIN&quot; ~ &quot;CTRL, PIN&quot;
+    ))</code></pre>
 </div>
 <div id="there-are-four-subtypes" class="section level2">
 <h2>there are four subtypes:</h2>
@@ -442,12 +448,40 @@ Group 1)</h2>
 </div>
 <div id="pin_rb-pineoblastoma-rb1-altered-pb-rb1" class="section level2">
 <h2>PIN_RB: pineoblastoma, RB1-altered (PB, RB1)</h2>
+</div>
+<div id="additional-subtypes-added-on-07222024" class="section level2">
+<h2>Additional subtypes added on 07/22/2024</h2>
+</div>
+<div id="edited-by-sangeeta-shukla" class="section level2">
+<h2>Edited By: Sangeeta Shukla</h2>
+</div>
+<div id="etmr_c19mc-embryonal-tumor-with-multilayered-rosettes-etmr-c19mc-altered" class="section level2">
+<h2>ETMR_C19MC: Embryonal tumor with multilayered rosettes (ETMR),
+C19MC-altered</h2>
+</div>
+<div id="ptpr_b-protein-tyrosine-phosphatase-receptor-type-beta" class="section level2">
+<h2>PTPR_B: Protein Tyrosine Phosphatase Receptor-Type Beta</h2>
+</div>
+<div id="pptid_a-ppineal-parenchymal-tumor-of-intermediate-differentiation-type-a" class="section level2">
+<h2>PPTID_A: Ppineal Parenchymal Tumor of Intermediate Differentiation
+Type A</h2>
+</div>
+<div id="mb_wnt-medulloblastoma-wnt-activated" class="section level2">
+<h2>MB_WNT: Medulloblastoma, WNT-activated</h2>
+</div>
+<div id="ctrl_pin-prostatic-intraepithelial-neoplasia-pin-control" class="section level2">
+<h2>CTRL_PIN: Prostatic Intraepithelial Neoplasia (PIN), Control</h2>
 <pre class="r"><code>pb_methy_with_subtype &lt;- pb_meta %&gt;% 
   filter(experimental_strategy == &quot;Methylation&quot; &amp; dkfz_v12_methylation_subclass_score &gt;= 0.8) %&gt;% 
   mutate(molecular_subtype = case_when(molecular_subtype_methyl == &quot;PB, MYC/FOXR2&quot; ~ &quot;PB, MYC/FOXR2&quot;, 
                                        molecular_subtype_methyl == &quot;PB, RB1&quot; ~ &quot;PB, RB1&quot;,
                                        molecular_subtype_methyl %in% c(&quot;PB, Group 1A&quot;, &quot;PB, Group 1B&quot;) ~ &quot;PB, Group 1&quot;,
-                                       molecular_subtype_methyl == &quot;PB, Group 2&quot; ~ &quot;PB, Group 2&quot;))
+                                       molecular_subtype_methyl == &quot;PB, Group 2&quot; ~ &quot;PB, Group 2&quot;,
+                                       molecular_subtype_methyl == &quot;EMTR, C19MC&quot; ~ &quot;EMTR, C19MC&quot;,
+                                       molecular_subtype_methyl == &quot;PTPR, Beta&quot; ~ &quot;PTPR, Beta&quot;,
+                                       molecular_subtype_methyl == &quot;PPTID, Alpha&quot; ~ &quot;PPTID, Alpha&quot;,
+                                       molecular_subtype_methyl == &quot;MB, WNT&quot; ~ &quot;MB, WNT&quot;,
+                                       molecular_subtype_methyl == &quot;CTRL, PIN&quot; ~ &quot;CTRL, PIN&quot;))
   
 
 pb_methy_without_subtype &lt;- pb_meta %&gt;% 
@@ -478,13 +512,13 @@ length(unique(pb_meta_with_mol$Kids_First_Biospecimen_ID)) == nrow(pb_meta_with_
 <div id="session-info" class="section level2">
 <h2>session info</h2>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.2.3 (2023-03-15)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 22.04.2 LTS
+<pre><code>## R version 4.4.0 (2024-04-24)
+## Platform: x86_64-pc-linux-gnu
+## Running under: Ubuntu 22.04.4 LTS
 ## 
 ## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
-## LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so
+## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+## LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -494,26 +528,29 @@ length(unique(pb_meta_with_mol$Kids_First_Biospecimen_ID)) == nrow(pb_meta_with_
 ##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
 ## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
+## time zone: Etc/UTC
+## tzcode source: system (glibc)
+## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] lubridate_1.9.2 forcats_1.0.0   stringr_1.5.0   dplyr_1.1.1    
-##  [5] purrr_1.0.1     readr_2.1.4     tidyr_1.3.0     tibble_3.2.1   
-##  [9] ggplot2_3.4.2   tidyverse_2.0.0
+##  [1] lubridate_1.9.3 forcats_1.0.0   stringr_1.5.1   dplyr_1.1.4    
+##  [5] purrr_1.0.2     readr_2.1.5     tidyr_1.3.1     tibble_3.2.1   
+##  [9] ggplot2_3.5.1   tidyverse_2.0.0
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] bslib_0.4.2      compiler_4.2.3   pillar_1.9.0     jquerylib_0.1.4 
-##  [5] tools_4.2.3      bit_4.0.5        digest_0.6.31    timechange_0.2.0
-##  [9] jsonlite_1.8.4   evaluate_0.20    lifecycle_1.0.3  gtable_0.3.3    
-## [13] pkgconfig_2.0.3  rlang_1.1.0      cli_3.6.1        parallel_4.2.3  
-## [17] yaml_2.3.7       xfun_0.38        fastmap_1.1.1    withr_2.5.0     
-## [21] knitr_1.42       generics_0.1.3   vctrs_0.6.2      sass_0.4.5      
-## [25] hms_1.1.3        bit64_4.0.5      rprojroot_2.0.3  grid_4.2.3      
-## [29] tidyselect_1.2.0 glue_1.6.2       R6_2.5.1         fansi_1.0.4     
-## [33] vroom_1.6.1      rmarkdown_2.21   tzdb_0.3.0       magrittr_2.0.3  
-## [37] scales_1.2.1     htmltools_0.5.5  colorspace_2.1-0 utf8_1.2.3      
-## [41] stringi_1.7.12   munsell_0.5.0    cachem_1.0.7     crayon_1.5.2</code></pre>
+##  [1] bit_4.0.5         gtable_0.3.5      jsonlite_1.8.8    crayon_1.5.2     
+##  [5] compiler_4.4.0    tidyselect_1.2.1  parallel_4.4.0    jquerylib_0.1.4  
+##  [9] scales_1.3.0      yaml_2.3.8        fastmap_1.2.0     R6_2.5.1         
+## [13] generics_0.1.3    knitr_1.46        rprojroot_2.0.4   munsell_0.5.1    
+## [17] bslib_0.7.0       pillar_1.9.0      tzdb_0.4.0        rlang_1.1.3      
+## [21] utf8_1.2.4        stringi_1.8.4     cachem_1.1.0      xfun_0.44        
+## [25] sass_0.4.9        bit64_4.0.5       timechange_0.3.0  cli_3.6.2        
+## [29] withr_3.0.0       magrittr_2.0.3    digest_0.6.35     grid_4.4.0       
+## [33] vroom_1.6.5       hms_1.1.3         lifecycle_1.0.4   vctrs_0.6.5      
+## [37] evaluate_0.23     glue_1.7.0        fansi_1.0.6       colorspace_2.1-0 
+## [41] rmarkdown_2.27    tools_4.4.0       pkgconfig_2.0.3   htmltools_0.5.8.1</code></pre>
 </div>
 
 
