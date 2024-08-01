@@ -37,6 +37,10 @@ annot_colors <- file.path(root_dir, "analyses", "immune-deconv", "util", "colors
 annot_colors <- list.load(annot_colors)
 annot_colors <- lapply(annot_colors, function(x) unlist(x))
 
+# only keep relevant annotation colors  
+annot_colors$cohort <- annot_colors$cohort[names(annot_colors$cohort) %in% deconv_output$cohort]
+annot_colors$sample_type <- annot_colors$sample_type[names(annot_colors$sample_type) %in% deconv_output$sample_type]
+
 # create heatmap of average immune scores per cell type per cancer and gtex group
 output_file <- file.path(output_dir, paste0(method, "_heatmap_by_group.pdf"))
 heatmap_by_group(deconv_output = deconv_output, annot_colors = annot_colors,
