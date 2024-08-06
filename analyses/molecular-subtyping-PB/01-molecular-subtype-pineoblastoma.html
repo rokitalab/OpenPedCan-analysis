@@ -360,13 +360,13 @@ display: none;
 <div id="load-library" class="section level2">
 <h2>load library</h2>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<pre><code>## ── Attaching core tidyverse packages ────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
 ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
 ## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
 ## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
 ## ✔ purrr     1.0.2     
-## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
@@ -385,7 +385,7 @@ if(!dir.exists(result_dir)){
 <h2>read files</h2>
 <pre class="r"><code>histo &lt;- readr::read_tsv(file.path(data_dir, &quot;histologies-base.tsv&quot;))</code></pre>
 <pre><code>## Rows: 47895 Columns: 64
-## ── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+## ── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;\t&quot;
 ## chr (41): Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, a...
 ## dbl (21): cell_line_passage, OS_days, EFS_days, age_at_diagnosis_days, age_a...
@@ -410,11 +410,7 @@ path_dx_list_pb &lt;- jsonlite::fromJSON(
     dkfz_v12_methylation_subclass == &quot;PB_GRP1A&quot; ~ &quot;PB, Group 1A&quot;,
     dkfz_v12_methylation_subclass == &quot;PB_GRP1B&quot; ~ &quot;PB, Group 1B&quot;,
     dkfz_v12_methylation_subclass == &quot;PB_GRP2&quot; ~ &quot;PB, Group 2&quot;,
-    dkfz_v12_methylation_subclass == &quot;ETMR_C19MC&quot; ~ &quot;EMTR, C19MC&quot;,
-    dkfz_v12_methylation_subclass == &quot;PTPR_B&quot; ~ &quot;PTPR, Beta&quot;,
-    dkfz_v12_methylation_subclass == &quot;PPTID_A&quot; ~ &quot;PPTID, Alpha&quot;,
-    dkfz_v12_methylation_subclass == &quot;MB_WNT&quot; ~ &quot;MB, WNT&quot;,
-    dkfz_v12_methylation_subclass == &quot;CTRL_PIN&quot; ~ &quot;CTRL, PIN&quot;
+    dkfz_v12_methylation_subclass == &quot;PPTID_A&quot; ~ &quot;PB, PPTID&quot;
     ))</code></pre>
 </div>
 <div id="there-are-four-subtypes" class="section level2">
@@ -455,33 +451,17 @@ Group 1)</h2>
 <div id="edited-by-sangeeta-shukla" class="section level2">
 <h2>Edited By: Sangeeta Shukla</h2>
 </div>
-<div id="etmr_c19mc-embryonal-tumor-with-multilayered-rosettes-etmr-c19mc-altered" class="section level2">
-<h2>ETMR_C19MC: Embryonal tumor with multilayered rosettes (ETMR),
-C19MC-altered</h2>
-</div>
-<div id="ptpr_b-protein-tyrosine-phosphatase-receptor-type-beta" class="section level2">
-<h2>PTPR_B: Protein Tyrosine Phosphatase Receptor-Type Beta</h2>
-</div>
 <div id="pptid_a-ppineal-parenchymal-tumor-of-intermediate-differentiation-type-a" class="section level2">
 <h2>PPTID_A: Ppineal Parenchymal Tumor of Intermediate Differentiation
 Type A</h2>
-</div>
-<div id="mb_wnt-medulloblastoma-wnt-activated" class="section level2">
-<h2>MB_WNT: Medulloblastoma, WNT-activated</h2>
-</div>
-<div id="ctrl_pin-prostatic-intraepithelial-neoplasia-pin-control" class="section level2">
-<h2>CTRL_PIN: Prostatic Intraepithelial Neoplasia (PIN), Control</h2>
 <pre class="r"><code>pb_methy_with_subtype &lt;- pb_meta %&gt;% 
   filter(experimental_strategy == &quot;Methylation&quot; &amp; dkfz_v12_methylation_subclass_score &gt;= 0.8) %&gt;% 
   mutate(molecular_subtype = case_when(molecular_subtype_methyl == &quot;PB, MYC/FOXR2&quot; ~ &quot;PB, MYC/FOXR2&quot;, 
                                        molecular_subtype_methyl == &quot;PB, RB1&quot; ~ &quot;PB, RB1&quot;,
                                        molecular_subtype_methyl %in% c(&quot;PB, Group 1A&quot;, &quot;PB, Group 1B&quot;) ~ &quot;PB, Group 1&quot;,
                                        molecular_subtype_methyl == &quot;PB, Group 2&quot; ~ &quot;PB, Group 2&quot;,
-                                       molecular_subtype_methyl == &quot;EMTR, C19MC&quot; ~ &quot;EMTR, C19MC&quot;,
-                                       molecular_subtype_methyl == &quot;PTPR, Beta&quot; ~ &quot;PTPR, Beta&quot;,
-                                       molecular_subtype_methyl == &quot;PPTID, Alpha&quot; ~ &quot;PPTID, Alpha&quot;,
-                                       molecular_subtype_methyl == &quot;MB, WNT&quot; ~ &quot;MB, WNT&quot;,
-                                       molecular_subtype_methyl == &quot;CTRL, PIN&quot; ~ &quot;CTRL, PIN&quot;))
+                                       molecular_subtype_methyl == &quot;PPTID&quot; ~ &quot;PB, PPTID&quot;
+                                       ))
   
 
 pb_methy_without_subtype &lt;- pb_meta %&gt;% 
