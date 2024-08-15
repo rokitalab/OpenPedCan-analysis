@@ -67,7 +67,7 @@ pb_meta <- histo %>%
 
 ## Additional subtypes added on 07/22/2024
 ## Edited By: Sangeeta Shukla
-## PPTID_A: Ppineal Parenchymal Tumor of Intermediate Differentiation Type A
+## PPTID_A: Pineal Parenchymal Tumor of Intermediate Differentiation Type A
 
 
 ```{r}
@@ -84,7 +84,8 @@ pb_methy_with_subtype <- pb_meta %>%
 
 pb_methy_without_subtype <- pb_meta %>% 
   filter(experimental_strategy == "Methylation" & 
-           !(Kids_First_Biospecimen_ID %in% pb_methy_with_subtype$Kids_First_Biospecimen_ID))
+           !(Kids_First_Biospecimen_ID %in% pb_methy_with_subtype$Kids_First_Biospecimen_ID)) %>%
+  mutate(molecular_subtype_methyl = NA_character_)
 
 pb_methyl_df <- pb_methy_with_subtype %>% 
   bind_rows(pb_methy_without_subtype) %>% 
