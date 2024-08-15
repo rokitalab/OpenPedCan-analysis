@@ -87,6 +87,7 @@ Diffuse midline glioma	Initial CNS Tumor	501
 Diffuse midline glioma	Progressive	55
 Diffuse midline glioma	Progressive Disease Post-Mortem	12
 Diffuse midline glioma	Recurrence	18
+Diffuse midline glioma	NA	1
 Dysembryoplastic neuroepithelial tumor	Initial CNS Tumor	128
 Dysembryoplastic neuroepithelial tumor	Primary Tumor	4
 Dysembryoplastic neuroepithelial tumor	Progressive	22
@@ -228,7 +229,6 @@ Neurofibroma/Plexiform	Recurrence	7
 Neurofibroma/Plexiform	Second Malignancy	6
 Non-Hodgkin Lymphoma	Primary Tumor	7
 Non-Hodgkin Lymphoma	Recurrence	2
-Not Reported	NA	1
 Oligodendroglioma	Initial CNS Tumor	37
 Oligodendroglioma	Primary Tumor	33
 Oligodendroglioma	Progressive	2
