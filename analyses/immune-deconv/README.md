@@ -49,22 +49,6 @@ results/{deconv_method}_output.rds
 
 For `xCell`, the results in the rds file are predicted immune scores per cell type per input sample. These scores are not actual cell fractions but arbitrary scores representing enrichment of the cell types which can be compared across various cancer/gtex groups. The `quanTIseq` results, in contrast, provide an absolute score that can be interpreted as a cell fraction and the results in the rds file are the absolute scores per cell type per input sample. Depending on the user requirements, the output can also be used to create various visualizations. 
 
-#### 02-summary-plots.R 
-
-1. Input
-
-```
-results/{deconv_method}_output.rds
-```
-
-2. Function:
-
-This script creates heatmaps from predicted immune scores.
-
-3. Output
-
-* `plots/{deconv_method}_heatmap_by_group.pdf`: heatmap of average immune scores per cell type per cancer group or GTEx group.
-
 ### Running the analysis
 
 The following script will run the full analysis using either of the two methods of choice: `xCell` or `quanTIseq`. `xCell` is run by default, so to select `quanTIseq`, see code option in chunk below.
