@@ -46,7 +46,10 @@ pb_meta <- histo %>%
     dkfz_v12_methylation_subclass == "PIN_RB" ~ "PB, RB1",
     dkfz_v12_methylation_subclass == "PB_GRP1A" ~ "PB, Group 1A",
     dkfz_v12_methylation_subclass == "PB_GRP1B" ~ "PB, Group 1B",
-    dkfz_v12_methylation_subclass == "PB_GRP2" ~ "PB, Group 2")) 
+    dkfz_v12_methylation_subclass == "PB_GRP2" ~ "PB, Group 2",
+    dkfz_v12_methylation_subclass == "PPTID_A" ~ "PB, PPTID"
+    ))
+
 
 ```
 
@@ -62,6 +65,11 @@ pb_meta <- histo %>%
 ## PB_GRP2: pineoblastoma, miRNA processing-altered 2 (PB, Group 2)
 ## PIN_RB: pineoblastoma, RB1-altered (PB, RB1)
 
+## Additional subtypes added on 07/22/2024
+## Edited By: Sangeeta Shukla
+## PPTID_A: Pineal Parenchymal Tumor of Intermediate Differentiation Type A
+
+
 ```{r}
 
 pb_methy_with_subtype <- pb_meta %>% 
@@ -69,12 +77,15 @@ pb_methy_with_subtype <- pb_meta %>%
   mutate(molecular_subtype = case_when(molecular_subtype_methyl == "PB, MYC/FOXR2" ~ "PB, MYC/FOXR2", 
                                        molecular_subtype_methyl == "PB, RB1" ~ "PB, RB1",
                                        molecular_subtype_methyl %in% c("PB, Group 1A", "PB, Group 1B") ~ "PB, Group 1",
-                                       molecular_subtype_methyl == "PB, Group 2" ~ "PB, Group 2"))
+                                       molecular_subtype_methyl == "PB, Group 2" ~ "PB, Group 2",
+                                       molecular_subtype_methyl == "PPTID" ~ "PB, PPTID"
+                                       ))
   
 
 pb_methy_without_subtype <- pb_meta %>% 
   filter(experimental_strategy == "Methylation" & 
-           !(Kids_First_Biospecimen_ID %in% pb_methy_with_subtype$Kids_First_Biospecimen_ID))
+           !(Kids_First_Biospecimen_ID %in% pb_methy_with_subtype$Kids_First_Biospecimen_ID)) %>%
+  mutate(molecular_subtype_methyl = NA_character_)
 
 pb_methyl_df <- pb_methy_with_subtype %>% 
   bind_rows(pb_methy_without_subtype) %>% 

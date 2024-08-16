@@ -3,7 +3,10 @@ cohort:
   'GTEx': '#7CAE00'
   'PBTA': '#C77CFF'
   'TARGET': '#00BFC4'
-
+  'DGD': '#FF61CC'
+  'Maris': '#619CFF'
+  'PPTC': '#CD9600'
+  
 sample_type:
    'Normal' : '#7CAE00'
    'Tumor' : 'brown1'

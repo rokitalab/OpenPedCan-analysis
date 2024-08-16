@@ -67,6 +67,9 @@ full_output <- plyr::dlply(.data = n_groups, .variables = "group", .fun = functi
   expr_mat_sub <- expr_mat %>%
     dplyr::select(kf_ids)
   
+  # remove features with all 0 values
+  expr_mat_sub <- expr_mat_sub[rowSums(expr_mat_sub) > 0,]
+  
   # deconvolute using specified method
   print("Starting deconvolution...")
   deconv_output <- deconvolute(gene_expression = as.matrix(expr_mat_sub), 
