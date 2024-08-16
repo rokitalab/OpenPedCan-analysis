@@ -25,9 +25,9 @@ Rscript --vanilla 01-immune-deconv.R \
 
 ### quanTIseq
 # generate deconvolution output
-echo "Deconvolution quanTIseq..."
-Rscript --vanilla 01-immune-deconv.R \
---expr_mat '../../data/gene-expression-rsem-tpm-collapsed.rds' \
---clin_file '../../data/histologies.tsv' \
---deconv_method 'quantiseq' \
---output_dir 'results'
+#echo "Deconvolution quanTIseq..."
+#Rscript --vanilla 01-immune-deconv.R \
+#--expr_mat '../../data/gene-expression-rsem-tpm-collapsed.rds' \
+#--clin_file '../../data/histologies.tsv' \
+#--deconv_method 'quantiseq' \
+#--output_dir 'results'
