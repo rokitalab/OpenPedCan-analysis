@@ -55,7 +55,7 @@ jobs:
 
   run_analysis:
     name: Run Analysis
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-m
     strategy:
       fail-fast: false
       matrix:
