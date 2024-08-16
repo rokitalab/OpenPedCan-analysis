@@ -12,9 +12,8 @@ those to the clinical subtypes
 
 Adding information from the original [issue](https://github.com/AlexsLemonade/OpenPBTA-analysis/issues/751) added by @jharenza 
  
-**UPDATE 2020-10-05** 
+**UPDATE 2020-10-05** Update 2024-08-15: PT_V1HNAC2Q and PT_FFHQ1B9R are the same patient and this needs to be updated upstream
 Below is a double-reviewed (by Cassie Kline and myself) table of histone mutations found in the specified patient tumor per the TGEN genomic reports. 
-
 Kids_First_Participant_ID | H3 Status | tumor_descriptor
 -- | -- | --
 PT_M23Q0DC3 | H3F3A K28M | Initial CNS Tumor
@@ -22,6 +21,7 @@ PT_9GKVQ9QS | H3F3A K28M | Initial CNS Tumor
 PT_KBFM551M | H3 WT | Initial CNS Tumor
 PT_KBFM551M | no report | Progressive   Disease Post-Mortem
 PT_V1HNAC2Q | H3F3A K28M | Initial CNS Tumor
+PT_FFHQ1B9R | H3F3A K28M | Initial CNS Tumor
 PT_NK8A49X5 | H3F3A K28M | Initial CNS Tumor
 PT_NK8A49X5 | H3F3A K28M | Progressive
 PT_KZ56XHJT | H3F3A K28M | Initial CNS Tumor
