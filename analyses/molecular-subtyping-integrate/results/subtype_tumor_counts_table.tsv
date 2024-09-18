@@ -20,12 +20,16 @@ Desmoplastic infantile astrocytoma and ganglioglioma	GNT, wildtype	4
 Diffuse fibrillary astrocytoma	LGG, To be classified	1
 Diffuse hemispheric glioma	DHG, H3 G35	26
 Diffuse hemispheric glioma	DHG, H3 G35, TP53	82
+Diffuse intrinsic pontine glioma	DMG, H3 K28	6
 Diffuse intrinsic pontine glioma	DMG, H3 K28, TP53	1
+Diffuse intrinsic pontine glioma	HGG, H3 wildtype	15
+Diffuse intrinsic pontine glioma	HGG, H3 wildtype, TP53	14
+Diffuse intrinsic pontine glioma	HGG, IDH, TP53	3
 Diffuse intrinsic pontine glioma	HGG, To be classified	18
 Diffuse leptomeningeal glioneuronal tumor	GNT, KIAA1549-BRAF	4
 Diffuse leptomeningeal glioneuronal tumor	GNT, MAPK	3
 Diffuse leptomeningeal glioneuronal tumor	GNT, To be classified	2
-Diffuse midline glioma	DMG, H3 K28	385
+Diffuse midline glioma	DMG, H3 K28	379
 Diffuse midline glioma	DMG, H3 K28, TP53	508
 Embryonal tumor with multilayer rosettes	ETMR, C19MC-altered	12
 Embryonal tumor with multilayer rosettes	ETMR, NOS	22
@@ -76,10 +80,10 @@ Glial-neuronal tumor NOS	GNT, To be classified	19
 Glial-neuronal tumor NOS	GNT, other MAPK	13
 Glial-neuronal tumor NOS	GNT, other MAPK, CDKN2A/B	4
 Glial-neuronal tumor NOS	GNT, wildtype	23
-High-grade glioma	HGG, H3 wildtype	477
-High-grade glioma	HGG, H3 wildtype, TP53	307
+High-grade glioma	HGG, H3 wildtype	462
+High-grade glioma	HGG, H3 wildtype, TP53	293
 High-grade glioma	HGG, IDH	8
-High-grade glioma	HGG, IDH, TP53	60
+High-grade glioma	HGG, IDH, TP53	57
 High-grade glioma	HGG, To be classified	158
 High-grade glioma	HGG, To be classified, TP53	1
 Infant-type hemispheric glioma	IHG, ALK-altered	6

@@ -59,8 +59,11 @@ PBTA	Desmoplastic infantile astrocytoma and ganglioglioma, BRAF V600E	Desmoplast
 PBTA	Desmoplastic infantile astrocytoma and ganglioglioma, RTK	Desmoplastic infantile astrocytoma and ganglioglioma	Yes	No
 PBTA	Diffuse fibrillary astrocytoma	Diffuse fibrillary astrocytoma	No	No
 PBTA	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
+PBTA	High-grade glioma, IDH-wildtype and H3-wildtype	Diffuse intrinsic pontine glioma	Yes	Yes
 PBTA	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
-PBTA	Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	No
+PBTA	High-grade glioma, IDH-mutant	Diffuse intrinsic pontine glioma	Yes	Yes
+PBTA	Diffuse midline glioma, H3 K28-altered	Diffuse intrinsic pontine glioma	Yes	Yes
+PBTA	Not Reported	Diffuse intrinsic pontine glioma	No	Yes
 PPTC	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Diffuse leptomeningeal glioneuronal tumor,  MAPK	Diffuse leptomeningeal glioneuronal tumor	Yes	No
 PBTA	Diffuse leptomeningeal glioneuronal tumor,  To be classified	Diffuse leptomeningeal glioneuronal tumor	Yes	No
