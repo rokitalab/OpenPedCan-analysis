@@ -544,10 +544,22 @@ to_be_classified <- hgg_meta %>%
   mutate(molecular_subtype = "HGG, To be classified") %>%
 select(Kids_First_Participant_ID, Kids_First_Biospecimen_ID, sample_id, match_id, molecular_subtype)
 
-molecular_subtype_table_final <- all_subtypes %>%
+molecular_subtype_table_w_tbc <- all_subtypes %>%
   bind_rows(to_be_classified) %>%
   arrange(Kids_First_Biospecimen_ID)
 
+# update non DMG brainstem glioma dx to DIPG based on clinical dx for PNOC and Mioncoseq only. 
+# HGG, IDH remain as HGG
+dipgs <- hgg_meta %>%
+  filter(sub_cohort %in% c("PNOC", "Mioncoseq") &
+           grepl("Brainstem glioma", pathology_diagnosis)) %>%
+  select(Kids_First_Biospecimen_ID, primary_site)
+
+molecular_subtype_table_final <- molecular_subtype_table_w_tbc %>%
+  dplyr::mutate(molecular_subtype = case_when(Kids_First_Biospecimen_ID %in% dipgs$Kids_First_Biospecimen_ID & 
+                                                grepl("HGG, H3 wildtype|HGG, To be classified", molecular_subtype) ~ gsub("HGG", "DIPG", molecular_subtype),
+                                              TRUE ~ molecular_subtype))
+  
 # create final lesion + subtype file
 lesions_subtypes <- all_data_df %>%
   right_join(molecular_subtype_table_final[,c("match_id", "molecular_subtype")]) %>%
