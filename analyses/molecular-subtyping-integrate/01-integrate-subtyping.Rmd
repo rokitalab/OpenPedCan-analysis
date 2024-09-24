@@ -205,26 +205,6 @@ histology_cg <- histology %>%
     (grepl("xanthogranuloma", pathology_free_text_diagnosis) & broad_histology == "Histiocytic tumor" & pathology_diagnosis == "Other" & 
        sample_id != "7316-188") ~ "Juvenile xanthogranuloma",
     sample_id == "7316-3066" ~ "Neurofibroma/Plexiform",
-    #sample_id == "7316-3240" ~ "Diffuse intrinsic pontine glioma",
-    sample_id %in% c("7316-3240"
-                                           , "7316-4994"
-                                           , "7316-9435"
-                                           , "7316-5227"
-                                           , "7316-3220"
-                                           , "7316-3232"
-                                           , "A14565"       
-                                           , "7316-8017"
-                                           , "7316-4998"
-                                           , "C4116933-Tumor"
-                                           , "7316-3214-A07083"
-                                           , "A09410"
-                                           , "7316-3237"
-                                           , "7316-9074"
-                                           , "7316-3214-A07082"
-                                           , "7316-4447"
-                                           , "C4110660-Tumor"
-                                           , "7316-7666"
-                                           , "A07082") ~ "Diffuse intrinsic pontine glioma",
     cancer_group == "Histiocytic Tumor" ~ str_to_sentence(cancer_group),
     short_histology == "JXG" ~ "Histiocytic tumor",
     cancer_group == "Melanocytoma" ~ "Melanocytic tumor",
@@ -248,8 +228,6 @@ histology_cg <- histology %>%
   # harmonize myofibroblastic tumors - all inflammatory; take care of organ later
     mutate(short_histology = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", TRUE ~ as.character(short_histology)),
            harmonized_diagnosis = case_when(short_histology == "Myofibroblastic tumor" ~ "Inflammatory Myofibroblastic Tumor", 
-                                            # Below sample_id="7316-3240" for cancer_group assignment is redundant, already assigned on Line 208
-                                            #sample_id == "7316-3240" ~ "Diffuse intrinsic pontine glioma",
                                             TRUE ~ as.character(harmonized_diagnosis)),
            broad_histology = case_when(sample_id == "7316-3066" ~ "Tumor of cranial and paraspinal nerves",
                                        broad_histology == "Other" ~ "Other tumor",
