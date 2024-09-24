@@ -69,6 +69,7 @@ DGD	Diffuse leptomeningeal glioneuronal tumor,  To be classified	Diffuse leptome
 PBTA	Diffuse midline glioma, H3 K28-altered	Diffuse midline glioma	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-mutant	Diffuse midline glioma	Yes	No
 PBTA	Diffuse midline glioma, H3 K28-altered (EGFR mutant)	Diffuse midline glioma	Yes	No
+PBTA	Diffuse intrinsic pontine glioma	Diffuse midline glioma	No	Yes
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET)	Dysembryoplastic neuroepithelial tumor	No	Yes
 PBTA	Dysembryoplastic neuroepithelial tumor (DNET);Ganglioglioma	Dysembryoplastic neuroepithelial tumor	No	Yes
 DGD	EBV-Positive Diffuse Large B-Cell Lymphoma, Not Otherwise Specified	EBV-Positive Diffuse Large B-Cell Lymphoma	Yes	No

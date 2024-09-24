@@ -23,25 +23,11 @@ Rscript --vanilla 01-immune-deconv.R \
 --deconv_method 'xcell' \
 --output_dir 'results'
 
-# generate heatmaps of average normalized immune scores per cancer or gtex group
-echo "Create summary plots xCell"
-Rscript --vanilla 02-summary-plots.R \
---deconv_output 'results/xcell_output.rds' \
---output_dir 'plots'
-
 ### quanTIseq
 # generate deconvolution output
-echo "Deconvolution quanTIseq..."
-Rscript --vanilla 01-immune-deconv.R \
---expr_mat '../../data/gene-expression-rsem-tpm-collapsed.rds' \
---clin_file '../../data/histologies.tsv' \
---deconv_method 'quantiseq' \
---output_dir 'results'
-
-# generate heatmaps of average normalized immune scores per cancer or gtex group
-echo "Create summary plots quanTIseq"
-Rscript --vanilla 02-summary-plots.R \
---deconv_output 'results/quantiseq_output.rds' \
---output_dir 'plots'
-
-
+#echo "Deconvolution quanTIseq..."
+#Rscript --vanilla 01-immune-deconv.R \
+#--expr_mat '../../data/gene-expression-rsem-tpm-collapsed.rds' \
+#--clin_file '../../data/histologies.tsv' \
+#--deconv_method 'quantiseq' \
+#--output_dir 'results'
