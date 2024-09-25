@@ -59,6 +59,7 @@ PBTA	Desmoplastic infantile astrocytoma and ganglioglioma, BRAF V600E	Desmoplast
 PBTA	Desmoplastic infantile astrocytoma and ganglioglioma, RTK	Desmoplastic infantile astrocytoma and ganglioglioma	Yes	No
 PBTA	Diffuse fibrillary astrocytoma	Diffuse fibrillary astrocytoma	No	No
 PBTA	Diffuse hemispheric glioma, H3 G35-mutant	Diffuse hemispheric glioma	Yes	No
+PBTA	Diffuse intrinsic pontine glioma, H3 wildtype	Diffuse intrinsic pontine glioma	Yes	No
 PBTA	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PPTC	Brainstem glioma- Diffuse intrinsic pontine glioma	Diffuse intrinsic pontine glioma	No	Yes
 PBTA	Diffuse leptomeningeal glioneuronal tumor,  MAPK	Diffuse leptomeningeal glioneuronal tumor	Yes	No
@@ -266,6 +267,7 @@ PBTA	Neurofibroma/Plexiform	Neurofibroma/Plexiform	No	No
 PBTA	Malignant peripheral nerve sheath tumor (MPNST)	Neurofibroma/Plexiform	No	Yes
 PBTA	Perineuroma	Neurofibroma/Plexiform	No	Yes
 DGD	Non-Hodgkin Lymphoma	Non-Hodgkin Lymphoma	No	No
+PBTA	Not Reported	Not Reported	No	No
 PBTA	Oligodendroglioma	Oligodendroglioma	No	No
 DGD	Osteosarcoma	Osteosarcoma	No	No
 PBTA	Osteosarcoma	Osteosarcoma	No	No

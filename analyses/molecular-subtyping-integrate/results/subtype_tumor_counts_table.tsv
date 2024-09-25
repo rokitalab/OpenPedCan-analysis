@@ -20,11 +20,14 @@ Desmoplastic infantile astrocytoma and ganglioglioma	GNT, wildtype	4
 Diffuse fibrillary astrocytoma	LGG, To be classified	1
 Diffuse hemispheric glioma	DHG, H3 G35	26
 Diffuse hemispheric glioma	DHG, H3 G35, TP53	82
-Diffuse intrinsic pontine glioma	HGG, To be classified	17
+Diffuse intrinsic pontine glioma	DIPG, H3 wildtype	8
+Diffuse intrinsic pontine glioma	DIPG, H3 wildtype, TP53	9
+Diffuse intrinsic pontine glioma	DIPG, To be classified	1
+Diffuse intrinsic pontine glioma	HGG, To be classified	16
 Diffuse leptomeningeal glioneuronal tumor	GNT, KIAA1549-BRAF	4
 Diffuse leptomeningeal glioneuronal tumor	GNT, MAPK	3
 Diffuse leptomeningeal glioneuronal tumor	GNT, To be classified	2
-Diffuse midline glioma	DMG, H3 K28	386
+Diffuse midline glioma	DMG, H3 K28	385
 Diffuse midline glioma	DMG, H3 K28, TP53	509
 Embryonal tumor with multilayer rosettes	ETMR, C19MC-altered	12
 Embryonal tumor with multilayer rosettes	ETMR, NOS	22
@@ -75,8 +78,8 @@ Glial-neuronal tumor NOS	GNT, To be classified	19
 Glial-neuronal tumor NOS	GNT, other MAPK	13
 Glial-neuronal tumor NOS	GNT, other MAPK, CDKN2A/B	4
 Glial-neuronal tumor NOS	GNT, wildtype	23
-High-grade glioma	HGG, H3 wildtype	477
-High-grade glioma	HGG, H3 wildtype, TP53	307
+High-grade glioma	HGG, H3 wildtype	469
+High-grade glioma	HGG, H3 wildtype, TP53	298
 High-grade glioma	HGG, IDH	8
 High-grade glioma	HGG, IDH, TP53	60
 High-grade glioma	HGG, To be classified	158
@@ -137,6 +140,7 @@ Medulloblastoma	MB, WNT	83
 Neuroblastoma	NBL, MYCN amplified	478
 Neuroblastoma	NBL, MYCN non-amplified	514
 Neuroblastoma	NBL, To be classified	608
+Not Reported	HGG, To be classified	1
 Pilocytic astrocytoma	LGG, To be classified	74
 Pineoblastoma	PB, Group 1	23
 Pineoblastoma	PB, Group 2	11

@@ -77,7 +77,9 @@ Diffuse hemispheric glioma	Primary Tumor	4
 Diffuse hemispheric glioma	Recurrence	15
 Diffuse hemispheric glioma	Unknown	1
 Diffuse intrinsic pontine glioma	Deceased	11
-Diffuse intrinsic pontine glioma	Initial CNS Tumor	5
+Diffuse intrinsic pontine glioma	Initial CNS Tumor	19
+Diffuse intrinsic pontine glioma	Progressive Disease Post-Mortem	1
+Diffuse intrinsic pontine glioma	Recurrence	2
 Diffuse intrinsic pontine glioma	Relapse	1
 Diffuse leptomeningeal glioneuronal tumor	Initial CNS Tumor	3
 Diffuse leptomeningeal glioneuronal tumor	Progressive	5
@@ -148,11 +150,10 @@ Hepatoblastoma	Recurrence	1
 Hepatocellular Carcinoma	Primary Tumor	3
 Hepatocellular neoplasm NOS	Primary Tumor	1
 High-grade glioma	Deceased	161
-High-grade glioma	Initial CNS Tumor	501
+High-grade glioma	Initial CNS Tumor	487
 High-grade glioma	Primary Tumor	32
 High-grade glioma	Progressive	136
-High-grade glioma	Progressive Disease Post-Mortem	1
-High-grade glioma	Recurrence	133
+High-grade glioma	Recurrence	131
 High-grade glioma	Relapse	1
 High-grade glioma	Second Malignancy	37
 High-grade glioma	Unknown	9
@@ -229,6 +230,7 @@ Neurofibroma/Plexiform	Recurrence	7
 Neurofibroma/Plexiform	Second Malignancy	6
 Non-Hodgkin Lymphoma	Primary Tumor	7
 Non-Hodgkin Lymphoma	Recurrence	2
+Not Reported	NA	1
 Oligodendroglioma	Initial CNS Tumor	37
 Oligodendroglioma	Primary Tumor	33
 Oligodendroglioma	Progressive	2
