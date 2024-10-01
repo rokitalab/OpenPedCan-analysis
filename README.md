@@ -3,7 +3,7 @@
 
 The Open Pediatric Cancer (OpenPedCan) project at the Children’s Hospital of Philadelphia is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data and provides them on PedcBioPortal.
 The [NCI's Molecular Targets Platform (MTP)](https://moleculartargets.ccdi.cancer.gov/.
-For detailed methods, please see our [methods repository](https://github.com/d3b-center/OpenPedCan-methods).
+For detailed methods, please see our [methods repository](https://github.com/rokitalab/OpenPedCan-manuscript).
 
 To cite this work, please note the data release used in your work and cite the following:
 1. OpenPBTA:
