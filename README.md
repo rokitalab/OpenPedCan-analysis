@@ -1,8 +1,11 @@
 # OpenPedCan-analysis
 [![DOI](https://zenodo.org/badge/358689512.svg)](https://zenodo.org/badge/latestdoi/358689512)
 
-The Open Pediatric Cancer (OpenPedCan) project at the Children’s Hospital of Philadelphia is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data and provides them on PedcBioPortal.
-The [NCI's Molecular Targets Platform (MTP)](https://moleculartargets.ccdi.cancer.gov/.
+**This repository has been archived as README only because the project is now maintained by the [Rokita Lab](https://rokitalab.com/) at [Children's National Hospital](https://www.childrensnational.org/). Please visit https://github.com/rokitalab/OpenPedCan-Project for future updates.**
+
+The Open Pediatric Cancer (OpenPedCan) project is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data and provides them on PedcBioPortal and the [NCI's Molecular Targets Platform (MTP)](https://moleculartargets.ccdi.cancer.gov/.
+Past project maintainers included scientists at the Center for Data-Driven Discovery in Biomedicine and the Department of Biomedical and Health Informatics at CHOP.
+We invite researchers to join OpenPedCan to help rigorously characterize the genomic landscape of these diseases to enable more rapid discovery of additional mechanisms contributing to the pathogenesis of pediatric cancer and overall accelerate clinical translation on behalf of patients.
 For detailed methods, please see our [methods repository](https://github.com/rokitalab/OpenPedCan-manuscript).
 
 To cite this work, please note the data release used in your work and cite the following:
@@ -52,9 +55,6 @@ CHOP's [Division of Genome Diagnostics](https://www.chop.edu/centers-programs/di
 
 The OpenPedCan operates on a pull request model to accept contributions from community participants.
 The maintainers have set up continuous integration software via GitHub Actions to confirm the reproducibility of analyses within the project’s Docker container.
-
-The project maintainers include scientists from the [Center for Data-Driven Discovery in Biomedicine at the Children's Hospital of Philadelphia](https://d3b.center/).
-We invite researchers to join OpenPedCan to help rigorously characterize the genomic landscape of these diseases to enable more rapid discovery of additional mechanisms contributing to the pathogenesis of pediatric cancer and overall accelerate clinical translation on behalf of patients.
 
 **New to the project? Please be sure to read the following documentation before contributing:**
 
