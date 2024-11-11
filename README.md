@@ -337,8 +337,8 @@ If you need assistance adding a dependency to the Dockerfile, [file a new issue 
 #### Development in the Project Docker Container
 
 If you are new user download Docker from [here](https://docs.docker.com/get-docker/)
-
-The most recent version of the project Docker image, which is pushed to Docker Hub after a pull request gets merged into the master branch, can be obtained via the command line with:
+You may need to run each of the docker commands with the platform (eg: `--platform linux/amd64`).
+The most recent version of the project Docker image, which is pushed to Docker Hub after a pull request gets merged into the dev branch, can be obtained via the command line with:
 
 ```bash
 docker pull pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
@@ -362,14 +362,14 @@ Using `rocker/tidyverse:3.6.0` as our base image allows for development via RStu
 If you'd like to develop in this manner, you may do so by running the following and changing `<password>` to a password of you choosing at the command line:
 
 ```bash
-docker run -e PASSWORD=<password> -p 8787:8787 pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
+docker run -e PASSWORD=<password> -p 8787:8787 pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
 ```
 
 You can change the volume that the Docker container points to either via the [Kitematic GUI](https://docs.docker.com/kitematic/userguide/) or the [`--volume` flag](https://docs.docker.com/storage/volumes/) to `docker run`.
 For example, from your cloned `OpenPedCan-analysis` folder, run the command below:
 
 ```bash
-docker run --name <CONTAINER_NAME> -d -e PASSWORD=pass -p 8787:8787 -v $PWD:/home/rstudio/OpenPedCan-analysis pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
+docker run --name <CONTAINER_NAME> -d -e PASSWORD=pass -p 8787:8787 -v $PWD:/home/rstudio/OpenPedCan-analysis pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
 ```
 
 Once you've set the volume, you can navigate to `localhost:8787` in your browser if you are a Linux or Mac OS X user.
