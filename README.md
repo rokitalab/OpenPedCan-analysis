@@ -1,8 +1,11 @@
 # OpenPedCan-analysis
 [![DOI](https://zenodo.org/badge/358689512.svg)](https://zenodo.org/badge/latestdoi/358689512)
 
-The Open Pediatric Cancer (OpenPedCan) project at the Children’s Hospital of Philadelphia is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data and provides them on PedcBioPortal.
-The [NCI's Molecular Targets Platform (MTP)](https://moleculartargets.ccdi.cancer.gov/.
+**This repository has been archived as README only because the project is now maintained by the [Rokita Lab](https://rokitalab.com/) at [Children's National Hospital](https://www.childrensnational.org/). Please visit https://github.com/rokitalab/OpenPedCan-Project for future updates.**
+
+The Open Pediatric Cancer (OpenPedCan) project is an open analysis effort that harmonizes pediatric cancer data from multiple sources, performs downstream cancer analyses on these data and provides them on PedcBioPortal and the [NCI's Molecular Targets Platform (MTP)](https://moleculartargets.ccdi.cancer.gov/.
+Past project maintainers included scientists at the Center for Data-Driven Discovery in Biomedicine and the Department of Biomedical and Health Informatics at CHOP.
+We invite researchers to join OpenPedCan to help rigorously characterize the genomic landscape of these diseases to enable more rapid discovery of additional mechanisms contributing to the pathogenesis of pediatric cancer and overall accelerate clinical translation on behalf of patients.
 For detailed methods, please see our [methods repository](https://github.com/rokitalab/OpenPedCan-manuscript).
 
 To cite this work, please note the data release used in your work and cite the following:
@@ -52,9 +55,6 @@ CHOP's [Division of Genome Diagnostics](https://www.chop.edu/centers-programs/di
 
 The OpenPedCan operates on a pull request model to accept contributions from community participants.
 The maintainers have set up continuous integration software via GitHub Actions to confirm the reproducibility of analyses within the project’s Docker container.
-
-The project maintainers include scientists from the [Center for Data-Driven Discovery in Biomedicine at the Children's Hospital of Philadelphia](https://d3b.center/).
-We invite researchers to join OpenPedCan to help rigorously characterize the genomic landscape of these diseases to enable more rapid discovery of additional mechanisms contributing to the pathogenesis of pediatric cancer and overall accelerate clinical translation on behalf of patients.
 
 **New to the project? Please be sure to read the following documentation before contributing:**
 
@@ -337,8 +337,8 @@ If you need assistance adding a dependency to the Dockerfile, [file a new issue 
 #### Development in the Project Docker Container
 
 If you are new user download Docker from [here](https://docs.docker.com/get-docker/)
-
-The most recent version of the project Docker image, which is pushed to Docker Hub after a pull request gets merged into the master branch, can be obtained via the command line with:
+You may need to run each of the docker commands with the platform (eg: `--platform linux/amd64`).
+The most recent version of the project Docker image, which is pushed to Docker Hub after a pull request gets merged into the dev branch, can be obtained via the command line with:
 
 ```bash
 docker pull pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
@@ -362,14 +362,14 @@ Using `rocker/tidyverse:3.6.0` as our base image allows for development via RStu
 If you'd like to develop in this manner, you may do so by running the following and changing `<password>` to a password of you choosing at the command line:
 
 ```bash
-docker run -e PASSWORD=<password> -p 8787:8787 pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
+docker run -e PASSWORD=<password> -p 8787:8787 pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
 ```
 
 You can change the volume that the Docker container points to either via the [Kitematic GUI](https://docs.docker.com/kitematic/userguide/) or the [`--volume` flag](https://docs.docker.com/storage/volumes/) to `docker run`.
 For example, from your cloned `OpenPedCan-analysis` folder, run the command below:
 
 ```bash
-docker run --name <CONTAINER_NAME> -d -e PASSWORD=pass -p 8787:8787 -v $PWD:/home/rstudio/OpenPedCan-analysis pgc-images.sbgenomics.com/d3b-bixu/open-pedcan:latest
+docker run --name <CONTAINER_NAME> -d -e PASSWORD=pass -p 8787:8787 -v $PWD:/home/rstudio/OpenPedCan-analysis pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
 ```
 
 Once you've set the volume, you can navigate to `localhost:8787` in your browser if you are a Linux or Mac OS X user.
