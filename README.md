@@ -624,7 +624,7 @@ Inaugural funding for **OpenPedCan** was provided in part by [NCI's Childhood Ca
 
 
 ## Contact
-Please submit an issue with any questions, bugs, or feature requests or contact [Dr. Jo Lynne Rokita](@jharenza) with any questions: jrokita@childrensnational.org.
+Please submit an issue with any questions, bugs, or feature requests.
 
 
 
