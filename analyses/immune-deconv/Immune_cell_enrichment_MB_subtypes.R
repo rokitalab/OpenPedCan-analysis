@@ -27,10 +27,10 @@ options_list <- list(
 args <- parse_args(OptionParser(option_list = options_list))
 
 # Assign parameters to variables
-expr_mat_path <- args
-clin_file_path <- args
-deconv_method <- tolower(args)
-output_dir <- args
+expr_mat_path <- args$expr_mat
+clin_file_path <- args$clin_file
+deconv_method <- tolower(args$deconv_method)
+output_dir <- args$output_dir
 
 # Validate parameters
 if (deconv_method != "xcell") {
