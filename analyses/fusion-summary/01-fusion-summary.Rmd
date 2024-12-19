@@ -142,6 +142,9 @@ ependGenes <- c(
 #' 2: Exact match a list of fusions common in Embryonal tumors
 #' as well as fusions containing a particular gene with any other gene
 embryFuses <- c(
+    "EWSR1--PLAGL1",
+
+
   "CIC--NUTM1",
   "MN1--BEND2",
   "MN1--CXXC5"
