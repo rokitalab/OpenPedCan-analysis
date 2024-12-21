@@ -23,12 +23,12 @@ options_list <- list(
 args <- parse_args(OptionParser(option_list = options_list))
 
 # Assign parameters
-#xcell_output_path <- args$Xcell_output
-xcell_output_path<-"/home/rstudio/OpenPedCan-Project/analyses/immune-deconv/results/xcell_output.rds"
-#clin_file_path <- args$clin_file
-clin_file_path<-"/home/rstudio/OpenPedCan-Project/data/histologies.tsv"
-#output_dir <- args$output_dir
-output_dir<-"/home/rstudio/OpenPedCan-Project/analyses/immune-deconv/results/results_immune_enrichment/Final_results/"
+xcell_output_path <- args$Xcell_output
+#xcell_output_path<-"/home/rstudio/OpenPedCan-Project/analyses/immune-deconv/results/xcell_output.rds"
+clin_file_path <- args$clin_file
+#clin_file_path<-"/home/rstudio/OpenPedCan-Project/data/histologies.tsv"
+output_dir <- args$output_dir
+#output_dir<-"/home/rstudio/OpenPedCan-Project/analyses/immune-deconv/results/results_immune_enrichment/Final_results/"
 dir.create(output_dir, showWarnings = FALSE)
 
 # Load xcell deconvolution results and clinical data
