@@ -20,7 +20,8 @@ output_dir <- opt$output_dir
 
 # output file
 dir.create(output_dir, showWarnings = F, recursive = T)
-output_file <- file.path(output_dir, paste0( "p_values_output.rds"))
+output_file_df <- file.path(output_dir, paste0( "p_values_output.rds"))
+output_file_df1 <- file.path(output_dir, paste0( "p_values_output_accounting_for_cell_type.rds"))
 output_plot1 <- file.path(output_dir, "figure1.pdf")
 
 quan <- readRDS(quan_file)
@@ -46,6 +47,20 @@ for (i in c(1:length(comb))){
   
 }
 df$frd <- p.adjust(df$p_value,"BH")
+
+df1 <- data.frame(cell_type=character(),
+                  p_value=character(),
+                  frd=character(),
+                  stringsAsFactors=FALSE)
+
+for(i in seq_along(unique(quan_m_sub$cell_type))){
+  df1[i,1]=unique(quan_m_sub$cell_type)[i]
+  zz=quan_m_sub %>% filter(cell_type== unique(quan_m_sub$cell_type)[i])
+  df1[i,2]=kruskal.test(fraction ~ molecular_subtype, data = zz)$p.value
+}
+
+
+df1$frd <- p.adjust(df1$p_value,"BH")
 #select relevant variables
 a1 <- quan_m %>% select(Kids_First_Biospecimen_ID,molecular_subtype,fraction, cell_type) %>%
   mutate(name=paste0(Kids_First_Biospecimen_ID,"_",molecular_subtype)) %>% select(-Kids_First_Biospecimen_ID)
@@ -83,8 +98,8 @@ p1 <- ggplot(data=pca.data, aes(x=X, y=Y, color = molecular_subtype))+
   theme(plot.title = element_text(size = 10, face = "bold"))
 
 ggsave(output_plot1, plot = p1, width = 8, height = 9, dpi = 300)
-write.csv(df, file = output_file)
-
+write.csv(df, file = output_file_df)
+write.csv(df1, file = output_file_df1)
 
 
 
