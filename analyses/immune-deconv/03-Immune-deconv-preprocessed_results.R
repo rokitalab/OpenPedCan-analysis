@@ -6,10 +6,10 @@
 suppressPackageStartupMessages({
   library(optparse)
   library(tidyverse)
-  library(ggthemes)
+  library(ggthemes) ## Please install this library by running dockerfile
   library(ggplot2)
-  library(ggpubr) ##Please install this library into docker
-  library(ggforce) ##Please install this library into docker
+  library(ggpubr)
+  library(ggforce) ## Please install this library by running dockerfile
 
 })
 

@@ -217,6 +217,8 @@ RUN R -e 'BiocManager::install(c( \
   "ggplot2", \
   "ggpubr", \
   "ggsignif", \
+  "ggthemes",\
+  "ggforce",\
   "glmnet", \
   "glmnetUtils", \
   "gplots", \
