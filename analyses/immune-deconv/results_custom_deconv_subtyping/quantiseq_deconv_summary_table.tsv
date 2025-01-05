@@ -1,0 +1,2058 @@
+cancer_group	cohort	cell_type	molecular_subtype	n
+Acute Lymphoblastic Leukemia	PPTC	B cell	NA	90
+Acute Lymphoblastic Leukemia	PPTC	Macrophage M1	NA	90
+Acute Lymphoblastic Leukemia	PPTC	Macrophage M2	NA	90
+Acute Lymphoblastic Leukemia	PPTC	Monocyte	NA	90
+Acute Lymphoblastic Leukemia	PPTC	Myeloid dendritic cell	NA	90
+Acute Lymphoblastic Leukemia	PPTC	NK cell	NA	90
+Acute Lymphoblastic Leukemia	PPTC	Neutrophil	NA	90
+Acute Lymphoblastic Leukemia	PPTC	T cell CD4+ (non-regulatory)	NA	90
+Acute Lymphoblastic Leukemia	PPTC	T cell CD8+	NA	90
+Acute Lymphoblastic Leukemia	PPTC	T cell regulatory (Tregs)	NA	90
+Acute Lymphoblastic Leukemia	PPTC	uncharacterized cell	NA	90
+Acute Lymphoblastic Leukemia	TARGET	B cell	NA	646
+Acute Lymphoblastic Leukemia	TARGET	Macrophage M1	NA	646
+Acute Lymphoblastic Leukemia	TARGET	Macrophage M2	NA	646
+Acute Lymphoblastic Leukemia	TARGET	Monocyte	NA	646
+Acute Lymphoblastic Leukemia	TARGET	Myeloid dendritic cell	NA	646
+Acute Lymphoblastic Leukemia	TARGET	NK cell	NA	646
+Acute Lymphoblastic Leukemia	TARGET	Neutrophil	NA	646
+Acute Lymphoblastic Leukemia	TARGET	T cell CD4+ (non-regulatory)	NA	646
+Acute Lymphoblastic Leukemia	TARGET	T cell CD8+	NA	646
+Acute Lymphoblastic Leukemia	TARGET	T cell regulatory (Tregs)	NA	646
+Acute Lymphoblastic Leukemia	TARGET	uncharacterized cell	NA	646
+Acute Myeloid Leukemia	TARGET	B cell	NA	215
+Acute Myeloid Leukemia	TARGET	Macrophage M1	NA	215
+Acute Myeloid Leukemia	TARGET	Macrophage M2	NA	215
+Acute Myeloid Leukemia	TARGET	Monocyte	NA	215
+Acute Myeloid Leukemia	TARGET	Myeloid dendritic cell	NA	215
+Acute Myeloid Leukemia	TARGET	NK cell	NA	215
+Acute Myeloid Leukemia	TARGET	Neutrophil	NA	215
+Acute Myeloid Leukemia	TARGET	T cell CD4+ (non-regulatory)	NA	215
+Acute Myeloid Leukemia	TARGET	T cell CD8+	NA	215
+Acute Myeloid Leukemia	TARGET	T cell regulatory (Tregs)	NA	215
+Acute Myeloid Leukemia	TARGET	uncharacterized cell	NA	215
+Adamantinomatous Craniopharyngioma	PBTA	B cell	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	Macrophage M1	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	Macrophage M2	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	Monocyte	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	Myeloid dendritic cell	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	NK cell	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	Neutrophil	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	T cell CD4+ (non-regulatory)	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	T cell CD8+	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	T cell regulatory (Tregs)	CRANIO, ADAM	57
+Adamantinomatous Craniopharyngioma	PBTA	uncharacterized cell	CRANIO, ADAM	57
+Alveolar soft part sarcoma	PPTC	B cell	NA	2
+Alveolar soft part sarcoma	PPTC	Macrophage M1	NA	2
+Alveolar soft part sarcoma	PPTC	Macrophage M2	NA	2
+Alveolar soft part sarcoma	PPTC	Monocyte	NA	2
+Alveolar soft part sarcoma	PPTC	Myeloid dendritic cell	NA	2
+Alveolar soft part sarcoma	PPTC	NK cell	NA	2
+Alveolar soft part sarcoma	PPTC	Neutrophil	NA	2
+Alveolar soft part sarcoma	PPTC	T cell CD4+ (non-regulatory)	NA	2
+Alveolar soft part sarcoma	PPTC	T cell CD8+	NA	2
+Alveolar soft part sarcoma	PPTC	T cell regulatory (Tregs)	NA	2
+Alveolar soft part sarcoma	PPTC	uncharacterized cell	NA	2
+Atypical Teratoid Rhabdoid Tumor	PBTA	B cell	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	B cell	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	B cell	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	B cell	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M1	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M1	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M1	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M1	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M2	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M2	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M2	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	Macrophage M2	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	Monocyte	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	Monocyte	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	Monocyte	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	Monocyte	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	Myeloid dendritic cell	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	Myeloid dendritic cell	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	Myeloid dendritic cell	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	Myeloid dendritic cell	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	NK cell	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	NK cell	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	NK cell	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	NK cell	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	Neutrophil	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	Neutrophil	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	Neutrophil	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	Neutrophil	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD4+ (non-regulatory)	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD4+ (non-regulatory)	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD4+ (non-regulatory)	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD4+ (non-regulatory)	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD8+	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD8+	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD8+	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell CD8+	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell regulatory (Tregs)	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell regulatory (Tregs)	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell regulatory (Tregs)	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	T cell regulatory (Tregs)	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PBTA	uncharacterized cell	ATRT, MYC	22
+Atypical Teratoid Rhabdoid Tumor	PBTA	uncharacterized cell	ATRT, SHH	23
+Atypical Teratoid Rhabdoid Tumor	PBTA	uncharacterized cell	ATRT, TYR	13
+Atypical Teratoid Rhabdoid Tumor	PBTA	uncharacterized cell	ATRT, To be classified	29
+Atypical Teratoid Rhabdoid Tumor	PPTC	B cell	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	Macrophage M1	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	Macrophage M2	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	Monocyte	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	Myeloid dendritic cell	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	NK cell	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	Neutrophil	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	T cell CD4+ (non-regulatory)	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	T cell CD8+	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	T cell regulatory (Tregs)	ATRT, To be classified	6
+Atypical Teratoid Rhabdoid Tumor	PPTC	uncharacterized cell	ATRT, To be classified	6
+CNS Embryonal tumor	PBTA	B cell	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	B cell	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	Macrophage M1	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	Macrophage M1	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	Macrophage M2	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	Macrophage M2	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	Monocyte	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	Monocyte	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	Myeloid dendritic cell	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	Myeloid dendritic cell	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	NK cell	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	NK cell	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	Neutrophil	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	Neutrophil	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	T cell CD4+ (non-regulatory)	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	T cell CD4+ (non-regulatory)	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	T cell CD8+	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	T cell CD8+	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	T cell regulatory (Tregs)	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	T cell regulatory (Tregs)	CNS HGNET-MN1	2
+CNS Embryonal tumor	PBTA	uncharacterized cell	CNS Embryonal, NOS	16
+CNS Embryonal tumor	PBTA	uncharacterized cell	CNS HGNET-MN1	2
+CNS Embryonal tumor	PPTC	B cell	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	Macrophage M1	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	Macrophage M2	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	Monocyte	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	Myeloid dendritic cell	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	NK cell	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	Neutrophil	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	T cell CD4+ (non-regulatory)	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	T cell CD8+	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	T cell regulatory (Tregs)	CNS Embryonal, NOS	4
+CNS Embryonal tumor	PPTC	uncharacterized cell	CNS Embryonal, NOS	4
+CNS neuroblastoma	PBTA	B cell	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	Macrophage M1	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	Macrophage M2	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	Monocyte	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	Myeloid dendritic cell	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	NK cell	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	Neutrophil	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	T cell CD4+ (non-regulatory)	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	T cell CD8+	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	T cell regulatory (Tregs)	CNS NB-FOXR2	4
+CNS neuroblastoma	PBTA	uncharacterized cell	CNS NB-FOXR2	4
+Central neurocytoma	PBTA	B cell	CNC	4
+Central neurocytoma	PBTA	Macrophage M1	CNC	4
+Central neurocytoma	PBTA	Macrophage M2	CNC	4
+Central neurocytoma	PBTA	Monocyte	CNC	4
+Central neurocytoma	PBTA	Myeloid dendritic cell	CNC	4
+Central neurocytoma	PBTA	NK cell	CNC	4
+Central neurocytoma	PBTA	Neutrophil	CNC	4
+Central neurocytoma	PBTA	T cell CD4+ (non-regulatory)	CNC	4
+Central neurocytoma	PBTA	T cell CD8+	CNC	4
+Central neurocytoma	PBTA	T cell regulatory (Tregs)	CNC	4
+Central neurocytoma	PBTA	uncharacterized cell	CNC	4
+Chordoma	PBTA	B cell	CHDM, To be classified	129
+Chordoma	PBTA	B cell	CHDM, conventional	2
+Chordoma	PBTA	B cell	CHDM, poorly differentiated	7
+Chordoma	PBTA	Macrophage M1	CHDM, To be classified	129
+Chordoma	PBTA	Macrophage M1	CHDM, conventional	2
+Chordoma	PBTA	Macrophage M1	CHDM, poorly differentiated	7
+Chordoma	PBTA	Macrophage M2	CHDM, To be classified	129
+Chordoma	PBTA	Macrophage M2	CHDM, conventional	2
+Chordoma	PBTA	Macrophage M2	CHDM, poorly differentiated	7
+Chordoma	PBTA	Monocyte	CHDM, To be classified	129
+Chordoma	PBTA	Monocyte	CHDM, conventional	2
+Chordoma	PBTA	Monocyte	CHDM, poorly differentiated	7
+Chordoma	PBTA	Myeloid dendritic cell	CHDM, To be classified	129
+Chordoma	PBTA	Myeloid dendritic cell	CHDM, conventional	2
+Chordoma	PBTA	Myeloid dendritic cell	CHDM, poorly differentiated	7
+Chordoma	PBTA	NK cell	CHDM, To be classified	129
+Chordoma	PBTA	NK cell	CHDM, conventional	2
+Chordoma	PBTA	NK cell	CHDM, poorly differentiated	7
+Chordoma	PBTA	Neutrophil	CHDM, To be classified	129
+Chordoma	PBTA	Neutrophil	CHDM, conventional	2
+Chordoma	PBTA	Neutrophil	CHDM, poorly differentiated	7
+Chordoma	PBTA	T cell CD4+ (non-regulatory)	CHDM, To be classified	129
+Chordoma	PBTA	T cell CD4+ (non-regulatory)	CHDM, conventional	2
+Chordoma	PBTA	T cell CD4+ (non-regulatory)	CHDM, poorly differentiated	7
+Chordoma	PBTA	T cell CD8+	CHDM, To be classified	129
+Chordoma	PBTA	T cell CD8+	CHDM, conventional	2
+Chordoma	PBTA	T cell CD8+	CHDM, poorly differentiated	7
+Chordoma	PBTA	T cell regulatory (Tregs)	CHDM, To be classified	129
+Chordoma	PBTA	T cell regulatory (Tregs)	CHDM, conventional	2
+Chordoma	PBTA	T cell regulatory (Tregs)	CHDM, poorly differentiated	7
+Chordoma	PBTA	uncharacterized cell	CHDM, To be classified	129
+Chordoma	PBTA	uncharacterized cell	CHDM, conventional	2
+Chordoma	PBTA	uncharacterized cell	CHDM, poorly differentiated	7
+Choroid plexus tumor	PBTA	B cell	NA	40
+Choroid plexus tumor	PBTA	Macrophage M1	NA	40
+Choroid plexus tumor	PBTA	Macrophage M2	NA	40
+Choroid plexus tumor	PBTA	Monocyte	NA	40
+Choroid plexus tumor	PBTA	Myeloid dendritic cell	NA	40
+Choroid plexus tumor	PBTA	NK cell	NA	40
+Choroid plexus tumor	PBTA	Neutrophil	NA	40
+Choroid plexus tumor	PBTA	T cell CD4+ (non-regulatory)	NA	40
+Choroid plexus tumor	PBTA	T cell CD8+	NA	40
+Choroid plexus tumor	PBTA	T cell regulatory (Tregs)	NA	40
+Choroid plexus tumor	PBTA	uncharacterized cell	NA	40
+Clear cell sarcoma of the kidney	TARGET	B cell	NA	13
+Clear cell sarcoma of the kidney	TARGET	Macrophage M1	NA	13
+Clear cell sarcoma of the kidney	TARGET	Macrophage M2	NA	13
+Clear cell sarcoma of the kidney	TARGET	Monocyte	NA	13
+Clear cell sarcoma of the kidney	TARGET	Myeloid dendritic cell	NA	13
+Clear cell sarcoma of the kidney	TARGET	NK cell	NA	13
+Clear cell sarcoma of the kidney	TARGET	Neutrophil	NA	13
+Clear cell sarcoma of the kidney	TARGET	T cell CD4+ (non-regulatory)	NA	13
+Clear cell sarcoma of the kidney	TARGET	T cell CD8+	NA	13
+Clear cell sarcoma of the kidney	TARGET	T cell regulatory (Tregs)	NA	13
+Clear cell sarcoma of the kidney	TARGET	uncharacterized cell	NA	13
+Craniopharyngioma	PBTA	B cell	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	Macrophage M1	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	Macrophage M2	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	Monocyte	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	Myeloid dendritic cell	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	NK cell	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	Neutrophil	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	T cell CD4+ (non-regulatory)	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	T cell CD8+	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	T cell regulatory (Tregs)	CRANIO, To be classified	16
+Craniopharyngioma	PBTA	uncharacterized cell	CRANIO, To be classified	16
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	B cell	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	B cell	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	B cell	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Macrophage M1	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Macrophage M1	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Macrophage M1	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Macrophage M2	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Macrophage M2	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Macrophage M2	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Monocyte	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Monocyte	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Monocyte	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Myeloid dendritic cell	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Myeloid dendritic cell	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Myeloid dendritic cell	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	NK cell	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	NK cell	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	NK cell	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Neutrophil	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Neutrophil	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	Neutrophil	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell CD8+	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell CD8+	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell CD8+	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell regulatory (Tregs)	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell regulatory (Tregs)	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	T cell regulatory (Tregs)	GNT, wildtype	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	uncharacterized cell	GNT, BRAF V600E	1
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	uncharacterized cell	GNT, RTK	2
+Desmoplastic infantile astrocytoma and ganglioglioma	PBTA	uncharacterized cell	GNT, wildtype	1
+Diffuse hemispheric glioma	PBTA	B cell	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	B cell	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	Macrophage M1	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	Macrophage M1	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	Macrophage M2	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	Macrophage M2	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	Monocyte	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	Monocyte	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	Myeloid dendritic cell	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	Myeloid dendritic cell	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	NK cell	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	NK cell	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	Neutrophil	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	Neutrophil	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	T cell CD8+	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	T cell CD8+	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	T cell regulatory (Tregs)	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	T cell regulatory (Tregs)	DHG, H3 G35, TP53	26
+Diffuse hemispheric glioma	PBTA	uncharacterized cell	DHG, H3 G35	11
+Diffuse hemispheric glioma	PBTA	uncharacterized cell	DHG, H3 G35, TP53	26
+Diffuse intrinsic pontine glioma	PBTA	B cell	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	Macrophage M1	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	Macrophage M2	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	Monocyte	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	Myeloid dendritic cell	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	NK cell	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	Neutrophil	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	T cell CD8+	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	T cell regulatory (Tregs)	HGG, To be classified	10
+Diffuse intrinsic pontine glioma	PBTA	uncharacterized cell	HGG, To be classified	10
+Diffuse leptomeningeal glioneuronal tumor	PBTA	B cell	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	B cell	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Macrophage M1	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Macrophage M1	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Macrophage M2	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Macrophage M2	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Monocyte	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Monocyte	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Myeloid dendritic cell	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Myeloid dendritic cell	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	NK cell	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	NK cell	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Neutrophil	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	Neutrophil	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	T cell CD4+ (non-regulatory)	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	T cell CD4+ (non-regulatory)	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	T cell CD8+	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	T cell CD8+	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	T cell regulatory (Tregs)	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	T cell regulatory (Tregs)	GNT, MAPK	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	uncharacterized cell	GNT, KIAA1549-BRAF	1
+Diffuse leptomeningeal glioneuronal tumor	PBTA	uncharacterized cell	GNT, MAPK	1
+Diffuse midline glioma	PBTA	B cell	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	B cell	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	Macrophage M1	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	Macrophage M1	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	Macrophage M2	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	Macrophage M2	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	Monocyte	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	Monocyte	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	Myeloid dendritic cell	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	Myeloid dendritic cell	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	NK cell	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	NK cell	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	Neutrophil	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	Neutrophil	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	T cell CD4+ (non-regulatory)	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	T cell CD4+ (non-regulatory)	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	T cell CD8+	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	T cell CD8+	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	T cell regulatory (Tregs)	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	T cell regulatory (Tregs)	DMG, H3 K28, TP53	131
+Diffuse midline glioma	PBTA	uncharacterized cell	DMG, H3 K28	94
+Diffuse midline glioma	PBTA	uncharacterized cell	DMG, H3 K28, TP53	131
+Dysembryoplastic neuroepithelial tumor	PBTA	B cell	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	Macrophage M1	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	Macrophage M2	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	Monocyte	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	Myeloid dendritic cell	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	NK cell	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	Neutrophil	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	T cell CD4+ (non-regulatory)	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	T cell CD8+	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	T cell regulatory (Tregs)	NA	37
+Dysembryoplastic neuroepithelial tumor	PBTA	uncharacterized cell	NA	37
+Embryonal tumor with multilayer rosettes	PBTA	B cell	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	B cell	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	Macrophage M1	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	Macrophage M1	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	Macrophage M2	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	Macrophage M2	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	Monocyte	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	Monocyte	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	Myeloid dendritic cell	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	Myeloid dendritic cell	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	NK cell	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	NK cell	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	Neutrophil	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	Neutrophil	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	T cell CD4+ (non-regulatory)	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	T cell CD4+ (non-regulatory)	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	T cell CD8+	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	T cell CD8+	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	T cell regulatory (Tregs)	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	T cell regulatory (Tregs)	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PBTA	uncharacterized cell	ETMR, C19MC-altered	5
+Embryonal tumor with multilayer rosettes	PBTA	uncharacterized cell	ETMR, NOS	6
+Embryonal tumor with multilayer rosettes	PPTC	B cell	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	Macrophage M1	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	Macrophage M2	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	Monocyte	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	Myeloid dendritic cell	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	NK cell	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	Neutrophil	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	T cell CD4+ (non-regulatory)	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	T cell CD8+	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	T cell regulatory (Tregs)	ETMR, NOS	3
+Embryonal tumor with multilayer rosettes	PPTC	uncharacterized cell	ETMR, NOS	3
+Ependymoma	PBTA	B cell	EPN, MPE	11
+Ependymoma	PBTA	B cell	EPN, PF A	56
+Ependymoma	PBTA	B cell	EPN, PF B	6
+Ependymoma	PBTA	B cell	EPN, SP	5
+Ependymoma	PBTA	B cell	EPN, SP-MYCN	2
+Ependymoma	PBTA	B cell	EPN, ST YAP1	6
+Ependymoma	PBTA	B cell	EPN, ST ZFTA	42
+Ependymoma	PBTA	B cell	EPN, To be classified	55
+Ependymoma	PBTA	Macrophage M1	EPN, MPE	11
+Ependymoma	PBTA	Macrophage M1	EPN, PF A	56
+Ependymoma	PBTA	Macrophage M1	EPN, PF B	6
+Ependymoma	PBTA	Macrophage M1	EPN, SP	5
+Ependymoma	PBTA	Macrophage M1	EPN, SP-MYCN	2
+Ependymoma	PBTA	Macrophage M1	EPN, ST YAP1	6
+Ependymoma	PBTA	Macrophage M1	EPN, ST ZFTA	42
+Ependymoma	PBTA	Macrophage M1	EPN, To be classified	55
+Ependymoma	PBTA	Macrophage M2	EPN, MPE	11
+Ependymoma	PBTA	Macrophage M2	EPN, PF A	56
+Ependymoma	PBTA	Macrophage M2	EPN, PF B	6
+Ependymoma	PBTA	Macrophage M2	EPN, SP	5
+Ependymoma	PBTA	Macrophage M2	EPN, SP-MYCN	2
+Ependymoma	PBTA	Macrophage M2	EPN, ST YAP1	6
+Ependymoma	PBTA	Macrophage M2	EPN, ST ZFTA	42
+Ependymoma	PBTA	Macrophage M2	EPN, To be classified	55
+Ependymoma	PBTA	Monocyte	EPN, MPE	11
+Ependymoma	PBTA	Monocyte	EPN, PF A	56
+Ependymoma	PBTA	Monocyte	EPN, PF B	6
+Ependymoma	PBTA	Monocyte	EPN, SP	5
+Ependymoma	PBTA	Monocyte	EPN, SP-MYCN	2
+Ependymoma	PBTA	Monocyte	EPN, ST YAP1	6
+Ependymoma	PBTA	Monocyte	EPN, ST ZFTA	42
+Ependymoma	PBTA	Monocyte	EPN, To be classified	55
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, MPE	11
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, PF A	56
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, PF B	6
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, SP	5
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, SP-MYCN	2
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, ST YAP1	6
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, ST ZFTA	42
+Ependymoma	PBTA	Myeloid dendritic cell	EPN, To be classified	55
+Ependymoma	PBTA	NK cell	EPN, MPE	11
+Ependymoma	PBTA	NK cell	EPN, PF A	56
+Ependymoma	PBTA	NK cell	EPN, PF B	6
+Ependymoma	PBTA	NK cell	EPN, SP	5
+Ependymoma	PBTA	NK cell	EPN, SP-MYCN	2
+Ependymoma	PBTA	NK cell	EPN, ST YAP1	6
+Ependymoma	PBTA	NK cell	EPN, ST ZFTA	42
+Ependymoma	PBTA	NK cell	EPN, To be classified	55
+Ependymoma	PBTA	Neutrophil	EPN, MPE	11
+Ependymoma	PBTA	Neutrophil	EPN, PF A	56
+Ependymoma	PBTA	Neutrophil	EPN, PF B	6
+Ependymoma	PBTA	Neutrophil	EPN, SP	5
+Ependymoma	PBTA	Neutrophil	EPN, SP-MYCN	2
+Ependymoma	PBTA	Neutrophil	EPN, ST YAP1	6
+Ependymoma	PBTA	Neutrophil	EPN, ST ZFTA	42
+Ependymoma	PBTA	Neutrophil	EPN, To be classified	55
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, MPE	11
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, PF A	56
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, PF B	6
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, SP	5
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, SP-MYCN	2
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, ST YAP1	6
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, ST ZFTA	42
+Ependymoma	PBTA	T cell CD4+ (non-regulatory)	EPN, To be classified	55
+Ependymoma	PBTA	T cell CD8+	EPN, MPE	11
+Ependymoma	PBTA	T cell CD8+	EPN, PF A	56
+Ependymoma	PBTA	T cell CD8+	EPN, PF B	6
+Ependymoma	PBTA	T cell CD8+	EPN, SP	5
+Ependymoma	PBTA	T cell CD8+	EPN, SP-MYCN	2
+Ependymoma	PBTA	T cell CD8+	EPN, ST YAP1	6
+Ependymoma	PBTA	T cell CD8+	EPN, ST ZFTA	42
+Ependymoma	PBTA	T cell CD8+	EPN, To be classified	55
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, MPE	11
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, PF A	56
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, PF B	6
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, SP	5
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, SP-MYCN	2
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, ST YAP1	6
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, ST ZFTA	42
+Ependymoma	PBTA	T cell regulatory (Tregs)	EPN, To be classified	55
+Ependymoma	PBTA	uncharacterized cell	EPN, MPE	11
+Ependymoma	PBTA	uncharacterized cell	EPN, PF A	56
+Ependymoma	PBTA	uncharacterized cell	EPN, PF B	6
+Ependymoma	PBTA	uncharacterized cell	EPN, SP	5
+Ependymoma	PBTA	uncharacterized cell	EPN, SP-MYCN	2
+Ependymoma	PBTA	uncharacterized cell	EPN, ST YAP1	6
+Ependymoma	PBTA	uncharacterized cell	EPN, ST ZFTA	42
+Ependymoma	PBTA	uncharacterized cell	EPN, To be classified	55
+Ependymoma	PPTC	B cell	EPN, ST ZFTA	2
+Ependymoma	PPTC	B cell	EPN, To be classified	4
+Ependymoma	PPTC	Macrophage M1	EPN, ST ZFTA	2
+Ependymoma	PPTC	Macrophage M1	EPN, To be classified	4
+Ependymoma	PPTC	Macrophage M2	EPN, ST ZFTA	2
+Ependymoma	PPTC	Macrophage M2	EPN, To be classified	4
+Ependymoma	PPTC	Monocyte	EPN, ST ZFTA	2
+Ependymoma	PPTC	Monocyte	EPN, To be classified	4
+Ependymoma	PPTC	Myeloid dendritic cell	EPN, ST ZFTA	2
+Ependymoma	PPTC	Myeloid dendritic cell	EPN, To be classified	4
+Ependymoma	PPTC	NK cell	EPN, ST ZFTA	2
+Ependymoma	PPTC	NK cell	EPN, To be classified	4
+Ependymoma	PPTC	Neutrophil	EPN, ST ZFTA	2
+Ependymoma	PPTC	Neutrophil	EPN, To be classified	4
+Ependymoma	PPTC	T cell CD4+ (non-regulatory)	EPN, ST ZFTA	2
+Ependymoma	PPTC	T cell CD4+ (non-regulatory)	EPN, To be classified	4
+Ependymoma	PPTC	T cell CD8+	EPN, ST ZFTA	2
+Ependymoma	PPTC	T cell CD8+	EPN, To be classified	4
+Ependymoma	PPTC	T cell regulatory (Tregs)	EPN, ST ZFTA	2
+Ependymoma	PPTC	T cell regulatory (Tregs)	EPN, To be classified	4
+Ependymoma	PPTC	uncharacterized cell	EPN, ST ZFTA	2
+Ependymoma	PPTC	uncharacterized cell	EPN, To be classified	4
+Ewing sarcoma	PBTA	B cell	EWS	18
+Ewing sarcoma	PBTA	Macrophage M1	EWS	18
+Ewing sarcoma	PBTA	Macrophage M2	EWS	18
+Ewing sarcoma	PBTA	Monocyte	EWS	18
+Ewing sarcoma	PBTA	Myeloid dendritic cell	EWS	18
+Ewing sarcoma	PBTA	NK cell	EWS	18
+Ewing sarcoma	PBTA	Neutrophil	EWS	18
+Ewing sarcoma	PBTA	T cell CD4+ (non-regulatory)	EWS	18
+Ewing sarcoma	PBTA	T cell CD8+	EWS	18
+Ewing sarcoma	PBTA	T cell regulatory (Tregs)	EWS	18
+Ewing sarcoma	PBTA	uncharacterized cell	EWS	18
+Ewing sarcoma	PPTC	B cell	EWS	9
+Ewing sarcoma	PPTC	Macrophage M1	EWS	9
+Ewing sarcoma	PPTC	Macrophage M2	EWS	9
+Ewing sarcoma	PPTC	Monocyte	EWS	9
+Ewing sarcoma	PPTC	Myeloid dendritic cell	EWS	9
+Ewing sarcoma	PPTC	NK cell	EWS	9
+Ewing sarcoma	PPTC	Neutrophil	EWS	9
+Ewing sarcoma	PPTC	T cell CD4+ (non-regulatory)	EWS	9
+Ewing sarcoma	PPTC	T cell CD8+	EWS	9
+Ewing sarcoma	PPTC	T cell regulatory (Tregs)	EWS	9
+Ewing sarcoma	PPTC	uncharacterized cell	EWS	9
+Extraventricular neurocytoma	PBTA	B cell	EVN	2
+Extraventricular neurocytoma	PBTA	Macrophage M1	EVN	2
+Extraventricular neurocytoma	PBTA	Macrophage M2	EVN	2
+Extraventricular neurocytoma	PBTA	Monocyte	EVN	2
+Extraventricular neurocytoma	PBTA	Myeloid dendritic cell	EVN	2
+Extraventricular neurocytoma	PBTA	NK cell	EVN	2
+Extraventricular neurocytoma	PBTA	Neutrophil	EVN	2
+Extraventricular neurocytoma	PBTA	T cell CD4+ (non-regulatory)	EVN	2
+Extraventricular neurocytoma	PBTA	T cell CD8+	EVN	2
+Extraventricular neurocytoma	PBTA	T cell regulatory (Tregs)	EVN	2
+Extraventricular neurocytoma	PBTA	uncharacterized cell	EVN	2
+Ganglioglioma	PBTA	B cell	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	B cell	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	B cell	GNG, FGFR	3
+Ganglioglioma	PBTA	B cell	GNG, H3	2
+Ganglioglioma	PBTA	B cell	GNG, IDH	2
+Ganglioglioma	PBTA	B cell	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	B cell	GNG, MAPK	1
+Ganglioglioma	PBTA	B cell	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	B cell	GNG, NF1-germline	1
+Ganglioglioma	PBTA	B cell	GNG, RTK	7
+Ganglioglioma	PBTA	B cell	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	B cell	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	B cell	GNG, To be classified	2
+Ganglioglioma	PBTA	B cell	GNG, other MAPK	5
+Ganglioglioma	PBTA	B cell	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	B cell	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	B cell	GNG, wildtype	17
+Ganglioglioma	PBTA	Macrophage M1	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	Macrophage M1	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	Macrophage M1	GNG, FGFR	3
+Ganglioglioma	PBTA	Macrophage M1	GNG, H3	2
+Ganglioglioma	PBTA	Macrophage M1	GNG, IDH	2
+Ganglioglioma	PBTA	Macrophage M1	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	Macrophage M1	GNG, MAPK	1
+Ganglioglioma	PBTA	Macrophage M1	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	Macrophage M1	GNG, NF1-germline	1
+Ganglioglioma	PBTA	Macrophage M1	GNG, RTK	7
+Ganglioglioma	PBTA	Macrophage M1	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	Macrophage M1	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	Macrophage M1	GNG, To be classified	2
+Ganglioglioma	PBTA	Macrophage M1	GNG, other MAPK	5
+Ganglioglioma	PBTA	Macrophage M1	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	Macrophage M1	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	Macrophage M1	GNG, wildtype	17
+Ganglioglioma	PBTA	Macrophage M2	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	Macrophage M2	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	Macrophage M2	GNG, FGFR	3
+Ganglioglioma	PBTA	Macrophage M2	GNG, H3	2
+Ganglioglioma	PBTA	Macrophage M2	GNG, IDH	2
+Ganglioglioma	PBTA	Macrophage M2	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	Macrophage M2	GNG, MAPK	1
+Ganglioglioma	PBTA	Macrophage M2	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	Macrophage M2	GNG, NF1-germline	1
+Ganglioglioma	PBTA	Macrophage M2	GNG, RTK	7
+Ganglioglioma	PBTA	Macrophage M2	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	Macrophage M2	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	Macrophage M2	GNG, To be classified	2
+Ganglioglioma	PBTA	Macrophage M2	GNG, other MAPK	5
+Ganglioglioma	PBTA	Macrophage M2	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	Macrophage M2	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	Macrophage M2	GNG, wildtype	17
+Ganglioglioma	PBTA	Monocyte	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	Monocyte	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	Monocyte	GNG, FGFR	3
+Ganglioglioma	PBTA	Monocyte	GNG, H3	2
+Ganglioglioma	PBTA	Monocyte	GNG, IDH	2
+Ganglioglioma	PBTA	Monocyte	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	Monocyte	GNG, MAPK	1
+Ganglioglioma	PBTA	Monocyte	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	Monocyte	GNG, NF1-germline	1
+Ganglioglioma	PBTA	Monocyte	GNG, RTK	7
+Ganglioglioma	PBTA	Monocyte	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	Monocyte	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	Monocyte	GNG, To be classified	2
+Ganglioglioma	PBTA	Monocyte	GNG, other MAPK	5
+Ganglioglioma	PBTA	Monocyte	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	Monocyte	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	Monocyte	GNG, wildtype	17
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, FGFR	3
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, H3	2
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, IDH	2
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, MAPK	1
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, NF1-germline	1
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, RTK	7
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, To be classified	2
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, other MAPK	5
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	Myeloid dendritic cell	GNG, wildtype	17
+Ganglioglioma	PBTA	NK cell	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	NK cell	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	NK cell	GNG, FGFR	3
+Ganglioglioma	PBTA	NK cell	GNG, H3	2
+Ganglioglioma	PBTA	NK cell	GNG, IDH	2
+Ganglioglioma	PBTA	NK cell	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	NK cell	GNG, MAPK	1
+Ganglioglioma	PBTA	NK cell	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	NK cell	GNG, NF1-germline	1
+Ganglioglioma	PBTA	NK cell	GNG, RTK	7
+Ganglioglioma	PBTA	NK cell	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	NK cell	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	NK cell	GNG, To be classified	2
+Ganglioglioma	PBTA	NK cell	GNG, other MAPK	5
+Ganglioglioma	PBTA	NK cell	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	NK cell	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	NK cell	GNG, wildtype	17
+Ganglioglioma	PBTA	Neutrophil	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	Neutrophil	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	Neutrophil	GNG, FGFR	3
+Ganglioglioma	PBTA	Neutrophil	GNG, H3	2
+Ganglioglioma	PBTA	Neutrophil	GNG, IDH	2
+Ganglioglioma	PBTA	Neutrophil	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	Neutrophil	GNG, MAPK	1
+Ganglioglioma	PBTA	Neutrophil	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	Neutrophil	GNG, NF1-germline	1
+Ganglioglioma	PBTA	Neutrophil	GNG, RTK	7
+Ganglioglioma	PBTA	Neutrophil	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	Neutrophil	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	Neutrophil	GNG, To be classified	2
+Ganglioglioma	PBTA	Neutrophil	GNG, other MAPK	5
+Ganglioglioma	PBTA	Neutrophil	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	Neutrophil	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	Neutrophil	GNG, wildtype	17
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, FGFR	3
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, H3	2
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, IDH	2
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, MAPK	1
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, NF1-germline	1
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, RTK	7
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, To be classified	2
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, other MAPK	5
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	T cell CD4+ (non-regulatory)	GNG, wildtype	17
+Ganglioglioma	PBTA	T cell CD8+	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	T cell CD8+	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	T cell CD8+	GNG, FGFR	3
+Ganglioglioma	PBTA	T cell CD8+	GNG, H3	2
+Ganglioglioma	PBTA	T cell CD8+	GNG, IDH	2
+Ganglioglioma	PBTA	T cell CD8+	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	T cell CD8+	GNG, MAPK	1
+Ganglioglioma	PBTA	T cell CD8+	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	T cell CD8+	GNG, NF1-germline	1
+Ganglioglioma	PBTA	T cell CD8+	GNG, RTK	7
+Ganglioglioma	PBTA	T cell CD8+	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	T cell CD8+	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	T cell CD8+	GNG, To be classified	2
+Ganglioglioma	PBTA	T cell CD8+	GNG, other MAPK	5
+Ganglioglioma	PBTA	T cell CD8+	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	T cell CD8+	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	T cell CD8+	GNG, wildtype	17
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, FGFR	3
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, H3	2
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, IDH	2
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, MAPK	1
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, NF1-germline	1
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, RTK	7
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, To be classified	2
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, other MAPK	5
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	T cell regulatory (Tregs)	GNG, wildtype	17
+Ganglioglioma	PBTA	uncharacterized cell	GNG, BRAF V600E	22
+Ganglioglioma	PBTA	uncharacterized cell	GNG, BRAF V600E, CDKN2A/B	2
+Ganglioglioma	PBTA	uncharacterized cell	GNG, FGFR	3
+Ganglioglioma	PBTA	uncharacterized cell	GNG, H3	2
+Ganglioglioma	PBTA	uncharacterized cell	GNG, IDH	2
+Ganglioglioma	PBTA	uncharacterized cell	GNG, KIAA1549-BRAF	9
+Ganglioglioma	PBTA	uncharacterized cell	GNG, MAPK	1
+Ganglioglioma	PBTA	uncharacterized cell	GNG, MYB/MYBL1	2
+Ganglioglioma	PBTA	uncharacterized cell	GNG, NF1-germline	1
+Ganglioglioma	PBTA	uncharacterized cell	GNG, RTK	7
+Ganglioglioma	PBTA	uncharacterized cell	GNG, RTK, BRAF V600E	1
+Ganglioglioma	PBTA	uncharacterized cell	GNG, RTK, FGFR	1
+Ganglioglioma	PBTA	uncharacterized cell	GNG, To be classified	2
+Ganglioglioma	PBTA	uncharacterized cell	GNG, other MAPK	5
+Ganglioglioma	PBTA	uncharacterized cell	GNG, other MAPK, BRAF V600E	1
+Ganglioglioma	PBTA	uncharacterized cell	GNG, other MAPK, IDH	1
+Ganglioglioma	PBTA	uncharacterized cell	GNG, wildtype	17
+Ganglioneuroblastoma	GMKF	B cell	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	B cell	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	Macrophage M1	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	Macrophage M1	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	Macrophage M2	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	Macrophage M2	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	Monocyte	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	Monocyte	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	Myeloid dendritic cell	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	Myeloid dendritic cell	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	NK cell	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	NK cell	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	Neutrophil	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	Neutrophil	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	T cell CD8+	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	T cell CD8+	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	T cell regulatory (Tregs)	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	T cell regulatory (Tregs)	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	GMKF	uncharacterized cell	NBL, MYCN amplified	14
+Ganglioneuroblastoma	GMKF	uncharacterized cell	NBL, MYCN non-amplified	12
+Ganglioneuroblastoma	PBTA	B cell	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	B cell	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	Macrophage M1	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	Macrophage M1	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	Macrophage M2	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	Macrophage M2	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	Monocyte	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	Monocyte	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	Myeloid dendritic cell	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	Myeloid dendritic cell	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	NK cell	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	NK cell	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	Neutrophil	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	Neutrophil	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	T cell CD8+	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	T cell CD8+	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	T cell regulatory (Tregs)	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	T cell regulatory (Tregs)	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	PBTA	uncharacterized cell	NBL, MYCN amplified	2
+Ganglioneuroblastoma	PBTA	uncharacterized cell	NBL, MYCN non-amplified	2
+Ganglioneuroblastoma	TARGET	B cell	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	B cell	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	Macrophage M1	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	Macrophage M1	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	Macrophage M2	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	Macrophage M2	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	Monocyte	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	Monocyte	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	Myeloid dendritic cell	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	Myeloid dendritic cell	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	NK cell	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	NK cell	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	Neutrophil	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	Neutrophil	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	T cell CD8+	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	T cell CD8+	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	T cell regulatory (Tregs)	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	T cell regulatory (Tregs)	NBL, MYCN non-amplified	19
+Ganglioneuroblastoma	TARGET	uncharacterized cell	NBL, MYCN amplified	1
+Ganglioneuroblastoma	TARGET	uncharacterized cell	NBL, MYCN non-amplified	19
+Ganglioneuroma	PBTA	B cell	NA	3
+Ganglioneuroma	PBTA	Macrophage M1	NA	3
+Ganglioneuroma	PBTA	Macrophage M2	NA	3
+Ganglioneuroma	PBTA	Monocyte	NA	3
+Ganglioneuroma	PBTA	Myeloid dendritic cell	NA	3
+Ganglioneuroma	PBTA	NK cell	NA	3
+Ganglioneuroma	PBTA	Neutrophil	NA	3
+Ganglioneuroma	PBTA	T cell CD4+ (non-regulatory)	NA	3
+Ganglioneuroma	PBTA	T cell CD8+	NA	3
+Ganglioneuroma	PBTA	T cell regulatory (Tregs)	NA	3
+Ganglioneuroma	PBTA	uncharacterized cell	NA	3
+Germinoma	PBTA	B cell	NA	9
+Germinoma	PBTA	Macrophage M1	NA	9
+Germinoma	PBTA	Macrophage M2	NA	9
+Germinoma	PBTA	Monocyte	NA	9
+Germinoma	PBTA	Myeloid dendritic cell	NA	9
+Germinoma	PBTA	NK cell	NA	9
+Germinoma	PBTA	Neutrophil	NA	9
+Germinoma	PBTA	T cell CD4+ (non-regulatory)	NA	9
+Germinoma	PBTA	T cell CD8+	NA	9
+Germinoma	PBTA	T cell regulatory (Tregs)	NA	9
+Germinoma	PBTA	uncharacterized cell	NA	9
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	B cell	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	Macrophage M1	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	Macrophage M2	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	Monocyte	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	Myeloid dendritic cell	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	NK cell	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	Neutrophil	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	T cell CD4+ (non-regulatory)	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	T cell CD8+	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	T cell regulatory (Tregs)	GNT, wildtype	6
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, BRAF V600E	2
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, FGFR	6
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, KIAA1549-BRAF	1
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, RTK	4
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, RTK, CDKN2A/B	2
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, To be classified	2
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, other MAPK	3
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, other MAPK, CDKN2A/B	1
+Glial-neuronal tumor NOS	PBTA	uncharacterized cell	GNT, wildtype	6
+Hemangioblastoma	PBTA	B cell	NA	6
+Hemangioblastoma	PBTA	Macrophage M1	NA	6
+Hemangioblastoma	PBTA	Macrophage M2	NA	6
+Hemangioblastoma	PBTA	Monocyte	NA	6
+Hemangioblastoma	PBTA	Myeloid dendritic cell	NA	6
+Hemangioblastoma	PBTA	NK cell	NA	6
+Hemangioblastoma	PBTA	Neutrophil	NA	6
+Hemangioblastoma	PBTA	T cell CD4+ (non-regulatory)	NA	6
+Hemangioblastoma	PBTA	T cell CD8+	NA	6
+Hemangioblastoma	PBTA	T cell regulatory (Tregs)	NA	6
+Hemangioblastoma	PBTA	uncharacterized cell	NA	6
+High-grade glioma	PBTA	B cell	HGG, H3 wildtype	118
+High-grade glioma	PBTA	B cell	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	B cell	HGG, IDH	3
+High-grade glioma	PBTA	B cell	HGG, IDH, TP53	12
+High-grade glioma	PBTA	B cell	HGG, To be classified	46
+High-grade glioma	PBTA	B cell	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	Macrophage M1	HGG, H3 wildtype	118
+High-grade glioma	PBTA	Macrophage M1	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	Macrophage M1	HGG, IDH	3
+High-grade glioma	PBTA	Macrophage M1	HGG, IDH, TP53	12
+High-grade glioma	PBTA	Macrophage M1	HGG, To be classified	46
+High-grade glioma	PBTA	Macrophage M1	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	Macrophage M2	HGG, H3 wildtype	118
+High-grade glioma	PBTA	Macrophage M2	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	Macrophage M2	HGG, IDH	3
+High-grade glioma	PBTA	Macrophage M2	HGG, IDH, TP53	12
+High-grade glioma	PBTA	Macrophage M2	HGG, To be classified	46
+High-grade glioma	PBTA	Macrophage M2	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	Monocyte	HGG, H3 wildtype	118
+High-grade glioma	PBTA	Monocyte	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	Monocyte	HGG, IDH	3
+High-grade glioma	PBTA	Monocyte	HGG, IDH, TP53	12
+High-grade glioma	PBTA	Monocyte	HGG, To be classified	46
+High-grade glioma	PBTA	Monocyte	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	Myeloid dendritic cell	HGG, H3 wildtype	118
+High-grade glioma	PBTA	Myeloid dendritic cell	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	Myeloid dendritic cell	HGG, IDH	3
+High-grade glioma	PBTA	Myeloid dendritic cell	HGG, IDH, TP53	12
+High-grade glioma	PBTA	Myeloid dendritic cell	HGG, To be classified	46
+High-grade glioma	PBTA	Myeloid dendritic cell	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	NK cell	HGG, H3 wildtype	118
+High-grade glioma	PBTA	NK cell	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	NK cell	HGG, IDH	3
+High-grade glioma	PBTA	NK cell	HGG, IDH, TP53	12
+High-grade glioma	PBTA	NK cell	HGG, To be classified	46
+High-grade glioma	PBTA	NK cell	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	Neutrophil	HGG, H3 wildtype	118
+High-grade glioma	PBTA	Neutrophil	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	Neutrophil	HGG, IDH	3
+High-grade glioma	PBTA	Neutrophil	HGG, IDH, TP53	12
+High-grade glioma	PBTA	Neutrophil	HGG, To be classified	46
+High-grade glioma	PBTA	Neutrophil	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, H3 wildtype	118
+High-grade glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, IDH	3
+High-grade glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, IDH, TP53	12
+High-grade glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, To be classified	46
+High-grade glioma	PBTA	T cell CD4+ (non-regulatory)	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	T cell CD8+	HGG, H3 wildtype	118
+High-grade glioma	PBTA	T cell CD8+	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	T cell CD8+	HGG, IDH	3
+High-grade glioma	PBTA	T cell CD8+	HGG, IDH, TP53	12
+High-grade glioma	PBTA	T cell CD8+	HGG, To be classified	46
+High-grade glioma	PBTA	T cell CD8+	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	T cell regulatory (Tregs)	HGG, H3 wildtype	118
+High-grade glioma	PBTA	T cell regulatory (Tregs)	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	T cell regulatory (Tregs)	HGG, IDH	3
+High-grade glioma	PBTA	T cell regulatory (Tregs)	HGG, IDH, TP53	12
+High-grade glioma	PBTA	T cell regulatory (Tregs)	HGG, To be classified	46
+High-grade glioma	PBTA	T cell regulatory (Tregs)	HGG, To be classified, TP53	1
+High-grade glioma	PBTA	uncharacterized cell	HGG, H3 wildtype	118
+High-grade glioma	PBTA	uncharacterized cell	HGG, H3 wildtype, TP53	79
+High-grade glioma	PBTA	uncharacterized cell	HGG, IDH	3
+High-grade glioma	PBTA	uncharacterized cell	HGG, IDH, TP53	12
+High-grade glioma	PBTA	uncharacterized cell	HGG, To be classified	46
+High-grade glioma	PBTA	uncharacterized cell	HGG, To be classified, TP53	1
+High-grade glioma	PPTC	B cell	HGG, To be classified	8
+High-grade glioma	PPTC	Macrophage M1	HGG, To be classified	8
+High-grade glioma	PPTC	Macrophage M2	HGG, To be classified	8
+High-grade glioma	PPTC	Monocyte	HGG, To be classified	8
+High-grade glioma	PPTC	Myeloid dendritic cell	HGG, To be classified	8
+High-grade glioma	PPTC	NK cell	HGG, To be classified	8
+High-grade glioma	PPTC	Neutrophil	HGG, To be classified	8
+High-grade glioma	PPTC	T cell CD4+ (non-regulatory)	HGG, To be classified	8
+High-grade glioma	PPTC	T cell CD8+	HGG, To be classified	8
+High-grade glioma	PPTC	T cell regulatory (Tregs)	HGG, To be classified	8
+High-grade glioma	PPTC	uncharacterized cell	HGG, To be classified	8
+Infant-type hemispheric glioma	PBTA	B cell	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	B cell	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	B cell	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	B cell	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	B cell	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Macrophage M1	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	Macrophage M1	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	Macrophage M1	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Macrophage M1	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	Macrophage M1	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Macrophage M2	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	Macrophage M2	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	Macrophage M2	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Macrophage M2	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	Macrophage M2	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Monocyte	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	Monocyte	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	Monocyte	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Monocyte	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	Monocyte	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Myeloid dendritic cell	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	Myeloid dendritic cell	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	Myeloid dendritic cell	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Myeloid dendritic cell	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	Myeloid dendritic cell	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	NK cell	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	NK cell	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	NK cell	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	NK cell	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	NK cell	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Neutrophil	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	Neutrophil	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	Neutrophil	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	Neutrophil	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	Neutrophil	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	T cell CD4+ (non-regulatory)	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	T cell CD8+	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	T cell CD8+	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	T cell CD8+	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	T cell CD8+	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	T cell CD8+	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	T cell regulatory (Tregs)	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	T cell regulatory (Tregs)	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	T cell regulatory (Tregs)	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	T cell regulatory (Tregs)	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	T cell regulatory (Tregs)	IHG, ROS1-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	uncharacterized cell	IHG, ALK-altered	2
+Infant-type hemispheric glioma	PBTA	uncharacterized cell	IHG, NTRK-altered	7
+Infant-type hemispheric glioma	PBTA	uncharacterized cell	IHG, NTRK-altered, TP53	1
+Infant-type hemispheric glioma	PBTA	uncharacterized cell	IHG, ROS1-altered	3
+Infant-type hemispheric glioma	PBTA	uncharacterized cell	IHG, ROS1-altered, TP53	1
+Juvenile xanthogranuloma	PBTA	B cell	NA	2
+Juvenile xanthogranuloma	PBTA	Macrophage M1	NA	2
+Juvenile xanthogranuloma	PBTA	Macrophage M2	NA	2
+Juvenile xanthogranuloma	PBTA	Monocyte	NA	2
+Juvenile xanthogranuloma	PBTA	Myeloid dendritic cell	NA	2
+Juvenile xanthogranuloma	PBTA	NK cell	NA	2
+Juvenile xanthogranuloma	PBTA	Neutrophil	NA	2
+Juvenile xanthogranuloma	PBTA	T cell CD4+ (non-regulatory)	NA	2
+Juvenile xanthogranuloma	PBTA	T cell CD8+	NA	2
+Juvenile xanthogranuloma	PBTA	T cell regulatory (Tregs)	NA	2
+Juvenile xanthogranuloma	PBTA	uncharacterized cell	NA	2
+Langerhans Cell histiocytosis	PBTA	B cell	NA	5
+Langerhans Cell histiocytosis	PBTA	Macrophage M1	NA	5
+Langerhans Cell histiocytosis	PBTA	Macrophage M2	NA	5
+Langerhans Cell histiocytosis	PBTA	Monocyte	NA	5
+Langerhans Cell histiocytosis	PBTA	Myeloid dendritic cell	NA	5
+Langerhans Cell histiocytosis	PBTA	NK cell	NA	5
+Langerhans Cell histiocytosis	PBTA	Neutrophil	NA	5
+Langerhans Cell histiocytosis	PBTA	T cell CD4+ (non-regulatory)	NA	5
+Langerhans Cell histiocytosis	PBTA	T cell CD8+	NA	5
+Langerhans Cell histiocytosis	PBTA	T cell regulatory (Tregs)	NA	5
+Langerhans Cell histiocytosis	PBTA	uncharacterized cell	NA	5
+Low-grade glioma	PBTA	B cell	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	B cell	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	B cell	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	B cell	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	B cell	LGG, FGFR	12
+Low-grade glioma	PBTA	B cell	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	B cell	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	B cell	LGG, IDH	8
+Low-grade glioma	PBTA	B cell	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	B cell	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	B cell	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	B cell	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	B cell	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	B cell	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	B cell	LGG, MAPK	2
+Low-grade glioma	PBTA	B cell	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	B cell	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	B cell	LGG, NF1-germline	6
+Low-grade glioma	PBTA	B cell	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	B cell	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	B cell	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	B cell	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	B cell	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	B cell	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	B cell	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	B cell	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	B cell	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	B cell	LGG, RTK	15
+Low-grade glioma	PBTA	B cell	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	B cell	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	B cell	LGG, To be classified	5
+Low-grade glioma	PBTA	B cell	LGG, other MAPK	26
+Low-grade glioma	PBTA	B cell	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	B cell	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	B cell	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	B cell	LGG, wildtype	53
+Low-grade glioma	PBTA	B cell	SEGA, RTK	1
+Low-grade glioma	PBTA	B cell	SEGA, wildtype	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	Macrophage M1	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	Macrophage M1	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	Macrophage M1	LGG, FGFR	12
+Low-grade glioma	PBTA	Macrophage M1	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, IDH	8
+Low-grade glioma	PBTA	Macrophage M1	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	Macrophage M1	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	Macrophage M1	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	Macrophage M1	LGG, MAPK	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	Macrophage M1	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-germline	6
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, RTK	15
+Low-grade glioma	PBTA	Macrophage M1	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, To be classified	5
+Low-grade glioma	PBTA	Macrophage M1	LGG, other MAPK	26
+Low-grade glioma	PBTA	Macrophage M1	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	Macrophage M1	LGG, wildtype	53
+Low-grade glioma	PBTA	Macrophage M1	SEGA, RTK	1
+Low-grade glioma	PBTA	Macrophage M1	SEGA, wildtype	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	Macrophage M2	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	Macrophage M2	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	Macrophage M2	LGG, FGFR	12
+Low-grade glioma	PBTA	Macrophage M2	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, IDH	8
+Low-grade glioma	PBTA	Macrophage M2	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	Macrophage M2	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	Macrophage M2	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	Macrophage M2	LGG, MAPK	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	Macrophage M2	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-germline	6
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, RTK	15
+Low-grade glioma	PBTA	Macrophage M2	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, To be classified	5
+Low-grade glioma	PBTA	Macrophage M2	LGG, other MAPK	26
+Low-grade glioma	PBTA	Macrophage M2	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	Macrophage M2	LGG, wildtype	53
+Low-grade glioma	PBTA	Macrophage M2	SEGA, RTK	1
+Low-grade glioma	PBTA	Macrophage M2	SEGA, wildtype	2
+Low-grade glioma	PBTA	Monocyte	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	Monocyte	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	Monocyte	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	Monocyte	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	Monocyte	LGG, FGFR	12
+Low-grade glioma	PBTA	Monocyte	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	Monocyte	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	Monocyte	LGG, IDH	8
+Low-grade glioma	PBTA	Monocyte	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	Monocyte	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	Monocyte	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	Monocyte	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	Monocyte	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	Monocyte	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	Monocyte	LGG, MAPK	2
+Low-grade glioma	PBTA	Monocyte	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	Monocyte	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-germline	6
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	Monocyte	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	Monocyte	LGG, RTK	15
+Low-grade glioma	PBTA	Monocyte	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	Monocyte	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	Monocyte	LGG, To be classified	5
+Low-grade glioma	PBTA	Monocyte	LGG, other MAPK	26
+Low-grade glioma	PBTA	Monocyte	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	Monocyte	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	Monocyte	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	Monocyte	LGG, wildtype	53
+Low-grade glioma	PBTA	Monocyte	SEGA, RTK	1
+Low-grade glioma	PBTA	Monocyte	SEGA, wildtype	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, FGFR	12
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, IDH	8
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, MAPK	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-germline	6
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, RTK	15
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, To be classified	5
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, other MAPK	26
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	LGG, wildtype	53
+Low-grade glioma	PBTA	Myeloid dendritic cell	SEGA, RTK	1
+Low-grade glioma	PBTA	Myeloid dendritic cell	SEGA, wildtype	2
+Low-grade glioma	PBTA	NK cell	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	NK cell	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	NK cell	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	NK cell	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	NK cell	LGG, FGFR	12
+Low-grade glioma	PBTA	NK cell	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	NK cell	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	NK cell	LGG, IDH	8
+Low-grade glioma	PBTA	NK cell	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	NK cell	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	NK cell	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	NK cell	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	NK cell	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	NK cell	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	NK cell	LGG, MAPK	2
+Low-grade glioma	PBTA	NK cell	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	NK cell	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	NK cell	LGG, NF1-germline	6
+Low-grade glioma	PBTA	NK cell	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	NK cell	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	NK cell	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	NK cell	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	NK cell	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	NK cell	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	NK cell	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	NK cell	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	NK cell	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	NK cell	LGG, RTK	15
+Low-grade glioma	PBTA	NK cell	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	NK cell	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	NK cell	LGG, To be classified	5
+Low-grade glioma	PBTA	NK cell	LGG, other MAPK	26
+Low-grade glioma	PBTA	NK cell	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	NK cell	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	NK cell	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	NK cell	LGG, wildtype	53
+Low-grade glioma	PBTA	NK cell	SEGA, RTK	1
+Low-grade glioma	PBTA	NK cell	SEGA, wildtype	2
+Low-grade glioma	PBTA	Neutrophil	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	Neutrophil	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	Neutrophil	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	Neutrophil	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	Neutrophil	LGG, FGFR	12
+Low-grade glioma	PBTA	Neutrophil	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	Neutrophil	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	Neutrophil	LGG, IDH	8
+Low-grade glioma	PBTA	Neutrophil	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	Neutrophil	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	Neutrophil	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	Neutrophil	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	Neutrophil	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	Neutrophil	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	Neutrophil	LGG, MAPK	2
+Low-grade glioma	PBTA	Neutrophil	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	Neutrophil	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-germline	6
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	Neutrophil	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	Neutrophil	LGG, RTK	15
+Low-grade glioma	PBTA	Neutrophil	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	Neutrophil	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	Neutrophil	LGG, To be classified	5
+Low-grade glioma	PBTA	Neutrophil	LGG, other MAPK	26
+Low-grade glioma	PBTA	Neutrophil	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	Neutrophil	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	Neutrophil	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	Neutrophil	LGG, wildtype	53
+Low-grade glioma	PBTA	Neutrophil	SEGA, RTK	1
+Low-grade glioma	PBTA	Neutrophil	SEGA, wildtype	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, FGFR	12
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, IDH	8
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, MAPK	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-germline	6
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, RTK	15
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, To be classified	5
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, other MAPK	26
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	LGG, wildtype	53
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	SEGA, RTK	1
+Low-grade glioma	PBTA	T cell CD4+ (non-regulatory)	SEGA, wildtype	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	T cell CD8+	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	T cell CD8+	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	T cell CD8+	LGG, FGFR	12
+Low-grade glioma	PBTA	T cell CD8+	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, IDH	8
+Low-grade glioma	PBTA	T cell CD8+	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	T cell CD8+	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	T cell CD8+	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	T cell CD8+	LGG, MAPK	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	T cell CD8+	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-germline	6
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, RTK	15
+Low-grade glioma	PBTA	T cell CD8+	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, To be classified	5
+Low-grade glioma	PBTA	T cell CD8+	LGG, other MAPK	26
+Low-grade glioma	PBTA	T cell CD8+	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	T cell CD8+	LGG, wildtype	53
+Low-grade glioma	PBTA	T cell CD8+	SEGA, RTK	1
+Low-grade glioma	PBTA	T cell CD8+	SEGA, wildtype	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, FGFR	12
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, IDH	8
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, MAPK	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-germline	6
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, RTK	15
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, To be classified	5
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, other MAPK	26
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	LGG, wildtype	53
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	SEGA, RTK	1
+Low-grade glioma	PBTA	T cell regulatory (Tregs)	SEGA, wildtype	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, BRAF V600E	34
+Low-grade glioma	PBTA	uncharacterized cell	LGG, BRAF V600E, CDKN2A/B	8
+Low-grade glioma	PBTA	uncharacterized cell	LGG, BRAF V600E, other MAPK	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, BRAF/MAPK	3
+Low-grade glioma	PBTA	uncharacterized cell	LGG, FGFR	12
+Low-grade glioma	PBTA	uncharacterized cell	LGG, FGFR, NF1-germline	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, FGFR, NF1-somatic	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, IDH	8
+Low-grade glioma	PBTA	uncharacterized cell	LGG, KIAA1549-BRAF	189
+Low-grade glioma	PBTA	uncharacterized cell	LGG, KIAA1549-BRAF, BRAF V600E	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, KIAA1549-BRAF, CDKN2A/B	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, KIAA1549-BRAF, FGFR	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, KIAA1549-BRAF, RTK	8
+Low-grade glioma	PBTA	uncharacterized cell	LGG, KIAA1549-BRAF, other MAPK	3
+Low-grade glioma	PBTA	uncharacterized cell	LGG, MAPK	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, MYB/MYBL1	6
+Low-grade glioma	PBTA	uncharacterized cell	LGG, MYB/MYBL1, other MAPK	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-germline	6
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-germline, CDKN2A/B	3
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-germline, FGFR	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-germline, RTK, FGFR	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-germline, other MAPK	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-somatic	3
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-somatic, FGFR	9
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-somatic, NF1-germline	2
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-somatic, NF1-germline, CDKN2A/B	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, NF1-somatic, NF1-germline, FGFR	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, RTK	15
+Low-grade glioma	PBTA	uncharacterized cell	LGG, RTK, BRAF V600E	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, RTK, CDKN2A/B	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, To be classified	5
+Low-grade glioma	PBTA	uncharacterized cell	LGG, other MAPK	26
+Low-grade glioma	PBTA	uncharacterized cell	LGG, other MAPK, CDKN2A/B	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, other MAPK, H3	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, other MAPK, IDH	1
+Low-grade glioma	PBTA	uncharacterized cell	LGG, wildtype	53
+Low-grade glioma	PBTA	uncharacterized cell	SEGA, RTK	1
+Low-grade glioma	PBTA	uncharacterized cell	SEGA, wildtype	2
+Malignant peripheral nerve sheath tumor	PBTA	B cell	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	Macrophage M1	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	Macrophage M2	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	Monocyte	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	Myeloid dendritic cell	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	NK cell	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	Neutrophil	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	T cell CD4+ (non-regulatory)	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	T cell CD8+	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	T cell regulatory (Tregs)	NA	6
+Malignant peripheral nerve sheath tumor	PBTA	uncharacterized cell	NA	6
+Medulloblastoma	PBTA	B cell	MB, Group3	60
+Medulloblastoma	PBTA	B cell	MB, Group4	100
+Medulloblastoma	PBTA	B cell	MB, SHH	78
+Medulloblastoma	PBTA	B cell	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage M1	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage M1	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage M1	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage M1	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage M2	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage M2	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage M2	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage M2	MB, WNT	22
+Medulloblastoma	PBTA	Monocyte	MB, Group3	60
+Medulloblastoma	PBTA	Monocyte	MB, Group4	100
+Medulloblastoma	PBTA	Monocyte	MB, SHH	78
+Medulloblastoma	PBTA	Monocyte	MB, WNT	22
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, Group3	60
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, Group4	100
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, SHH	78
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, WNT	22
+Medulloblastoma	PBTA	NK cell	MB, Group3	60
+Medulloblastoma	PBTA	NK cell	MB, Group4	100
+Medulloblastoma	PBTA	NK cell	MB, SHH	78
+Medulloblastoma	PBTA	NK cell	MB, WNT	22
+Medulloblastoma	PBTA	Neutrophil	MB, Group3	60
+Medulloblastoma	PBTA	Neutrophil	MB, Group4	100
+Medulloblastoma	PBTA	Neutrophil	MB, SHH	78
+Medulloblastoma	PBTA	Neutrophil	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD8+	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD8+	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD8+	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD8+	MB, WNT	22
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, Group3	60
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, Group4	100
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, SHH	78
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, WNT	22
+Medulloblastoma	PBTA	uncharacterized cell	MB, Group3	60
+Medulloblastoma	PBTA	uncharacterized cell	MB, Group4	100
+Medulloblastoma	PBTA	uncharacterized cell	MB, SHH	78
+Medulloblastoma	PBTA	uncharacterized cell	MB, WNT	22
+Medulloblastoma	PPTC	B cell	MB, Group3	8
+Medulloblastoma	PPTC	B cell	MB, Group4	2
+Medulloblastoma	PPTC	B cell	MB, SHH	6
+Medulloblastoma	PPTC	B cell	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage M1	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage M1	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage M1	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage M1	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage M2	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage M2	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage M2	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage M2	MB, WNT	2
+Medulloblastoma	PPTC	Monocyte	MB, Group3	8
+Medulloblastoma	PPTC	Monocyte	MB, Group4	2
+Medulloblastoma	PPTC	Monocyte	MB, SHH	6
+Medulloblastoma	PPTC	Monocyte	MB, WNT	2
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, Group3	8
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, Group4	2
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, SHH	6
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, WNT	2
+Medulloblastoma	PPTC	NK cell	MB, Group3	8
+Medulloblastoma	PPTC	NK cell	MB, Group4	2
+Medulloblastoma	PPTC	NK cell	MB, SHH	6
+Medulloblastoma	PPTC	NK cell	MB, WNT	2
+Medulloblastoma	PPTC	Neutrophil	MB, Group3	8
+Medulloblastoma	PPTC	Neutrophil	MB, Group4	2
+Medulloblastoma	PPTC	Neutrophil	MB, SHH	6
+Medulloblastoma	PPTC	Neutrophil	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD8+	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD8+	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD8+	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD8+	MB, WNT	2
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, Group3	8
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, Group4	2
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, SHH	6
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, WNT	2
+Medulloblastoma	PPTC	uncharacterized cell	MB, Group3	8
+Medulloblastoma	PPTC	uncharacterized cell	MB, Group4	2
+Medulloblastoma	PPTC	uncharacterized cell	MB, SHH	6
+Medulloblastoma	PPTC	uncharacterized cell	MB, WNT	2
+Meningioma	PBTA	B cell	NA	49
+Meningioma	PBTA	Macrophage M1	NA	49
+Meningioma	PBTA	Macrophage M2	NA	49
+Meningioma	PBTA	Monocyte	NA	49
+Meningioma	PBTA	Myeloid dendritic cell	NA	49
+Meningioma	PBTA	NK cell	NA	49
+Meningioma	PBTA	Neutrophil	NA	49
+Meningioma	PBTA	T cell CD4+ (non-regulatory)	NA	49
+Meningioma	PBTA	T cell CD8+	NA	49
+Meningioma	PBTA	T cell regulatory (Tregs)	NA	49
+Meningioma	PBTA	uncharacterized cell	NA	49
+Metastatic secondary tumors	PBTA	B cell	NA	9
+Metastatic secondary tumors	PBTA	Macrophage M1	NA	9
+Metastatic secondary tumors	PBTA	Macrophage M2	NA	9
+Metastatic secondary tumors	PBTA	Monocyte	NA	9
+Metastatic secondary tumors	PBTA	Myeloid dendritic cell	NA	9
+Metastatic secondary tumors	PBTA	NK cell	NA	9
+Metastatic secondary tumors	PBTA	Neutrophil	NA	9
+Metastatic secondary tumors	PBTA	T cell CD4+ (non-regulatory)	NA	9
+Metastatic secondary tumors	PBTA	T cell CD8+	NA	9
+Metastatic secondary tumors	PBTA	T cell regulatory (Tregs)	NA	9
+Metastatic secondary tumors	PBTA	uncharacterized cell	NA	9
+Mixed germ cell tumor	PBTA	B cell	NA	5
+Mixed germ cell tumor	PBTA	Macrophage M1	NA	5
+Mixed germ cell tumor	PBTA	Macrophage M2	NA	5
+Mixed germ cell tumor	PBTA	Monocyte	NA	5
+Mixed germ cell tumor	PBTA	Myeloid dendritic cell	NA	5
+Mixed germ cell tumor	PBTA	NK cell	NA	5
+Mixed germ cell tumor	PBTA	Neutrophil	NA	5
+Mixed germ cell tumor	PBTA	T cell CD4+ (non-regulatory)	NA	5
+Mixed germ cell tumor	PBTA	T cell CD8+	NA	5
+Mixed germ cell tumor	PBTA	T cell regulatory (Tregs)	NA	5
+Mixed germ cell tumor	PBTA	uncharacterized cell	NA	5
+Neuroblastoma	GMKF	B cell	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	B cell	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	B cell	NBL, To be classified	1
+Neuroblastoma	GMKF	Macrophage M1	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	Macrophage M1	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	Macrophage M1	NBL, To be classified	1
+Neuroblastoma	GMKF	Macrophage M2	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	Macrophage M2	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	Macrophage M2	NBL, To be classified	1
+Neuroblastoma	GMKF	Monocyte	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	Monocyte	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	Monocyte	NBL, To be classified	1
+Neuroblastoma	GMKF	Myeloid dendritic cell	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	Myeloid dendritic cell	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	Myeloid dendritic cell	NBL, To be classified	1
+Neuroblastoma	GMKF	NK cell	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	NK cell	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	NK cell	NBL, To be classified	1
+Neuroblastoma	GMKF	Neutrophil	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	Neutrophil	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	Neutrophil	NBL, To be classified	1
+Neuroblastoma	GMKF	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	T cell CD4+ (non-regulatory)	NBL, To be classified	1
+Neuroblastoma	GMKF	T cell CD8+	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	T cell CD8+	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	T cell CD8+	NBL, To be classified	1
+Neuroblastoma	GMKF	T cell regulatory (Tregs)	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	T cell regulatory (Tregs)	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	T cell regulatory (Tregs)	NBL, To be classified	1
+Neuroblastoma	GMKF	uncharacterized cell	NBL, MYCN amplified	84
+Neuroblastoma	GMKF	uncharacterized cell	NBL, MYCN non-amplified	85
+Neuroblastoma	GMKF	uncharacterized cell	NBL, To be classified	1
+Neuroblastoma	Maris	B cell	NBL, MYCN amplified	27
+Neuroblastoma	Maris	B cell	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	Macrophage M1	NBL, MYCN amplified	27
+Neuroblastoma	Maris	Macrophage M1	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	Macrophage M2	NBL, MYCN amplified	27
+Neuroblastoma	Maris	Macrophage M2	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	Monocyte	NBL, MYCN amplified	27
+Neuroblastoma	Maris	Monocyte	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	Myeloid dendritic cell	NBL, MYCN amplified	27
+Neuroblastoma	Maris	Myeloid dendritic cell	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	NK cell	NBL, MYCN amplified	27
+Neuroblastoma	Maris	NK cell	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	Neutrophil	NBL, MYCN amplified	27
+Neuroblastoma	Maris	Neutrophil	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	27
+Neuroblastoma	Maris	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	T cell CD8+	NBL, MYCN amplified	27
+Neuroblastoma	Maris	T cell CD8+	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	T cell regulatory (Tregs)	NBL, MYCN amplified	27
+Neuroblastoma	Maris	T cell regulatory (Tregs)	NBL, MYCN non-amplified	11
+Neuroblastoma	Maris	uncharacterized cell	NBL, MYCN amplified	27
+Neuroblastoma	Maris	uncharacterized cell	NBL, MYCN non-amplified	11
+Neuroblastoma	PBTA	B cell	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	B cell	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	Macrophage M1	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	Macrophage M1	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	Macrophage M2	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	Macrophage M2	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	Monocyte	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	Monocyte	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	Myeloid dendritic cell	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	Myeloid dendritic cell	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	NK cell	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	NK cell	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	Neutrophil	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	Neutrophil	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	T cell CD8+	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	T cell CD8+	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	T cell regulatory (Tregs)	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	T cell regulatory (Tregs)	NBL, MYCN non-amplified	2
+Neuroblastoma	PBTA	uncharacterized cell	NBL, MYCN amplified	5
+Neuroblastoma	PBTA	uncharacterized cell	NBL, MYCN non-amplified	2
+Neuroblastoma	PPTC	B cell	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	B cell	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	Macrophage M1	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	Macrophage M1	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	Macrophage M2	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	Macrophage M2	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	Monocyte	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	Monocyte	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	Myeloid dendritic cell	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	Myeloid dendritic cell	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	NK cell	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	NK cell	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	Neutrophil	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	Neutrophil	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	T cell CD8+	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	T cell CD8+	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	T cell regulatory (Tregs)	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	T cell regulatory (Tregs)	NBL, MYCN non-amplified	8
+Neuroblastoma	PPTC	uncharacterized cell	NBL, MYCN amplified	25
+Neuroblastoma	PPTC	uncharacterized cell	NBL, MYCN non-amplified	8
+Neuroblastoma	TARGET	B cell	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	B cell	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	B cell	NBL, To be classified	1
+Neuroblastoma	TARGET	Macrophage M1	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	Macrophage M1	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	Macrophage M1	NBL, To be classified	1
+Neuroblastoma	TARGET	Macrophage M2	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	Macrophage M2	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	Macrophage M2	NBL, To be classified	1
+Neuroblastoma	TARGET	Monocyte	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	Monocyte	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	Monocyte	NBL, To be classified	1
+Neuroblastoma	TARGET	Myeloid dendritic cell	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	Myeloid dendritic cell	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	Myeloid dendritic cell	NBL, To be classified	1
+Neuroblastoma	TARGET	NK cell	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	NK cell	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	NK cell	NBL, To be classified	1
+Neuroblastoma	TARGET	Neutrophil	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	Neutrophil	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	Neutrophil	NBL, To be classified	1
+Neuroblastoma	TARGET	T cell CD4+ (non-regulatory)	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	T cell CD4+ (non-regulatory)	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	T cell CD4+ (non-regulatory)	NBL, To be classified	1
+Neuroblastoma	TARGET	T cell CD8+	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	T cell CD8+	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	T cell CD8+	NBL, To be classified	1
+Neuroblastoma	TARGET	T cell regulatory (Tregs)	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	T cell regulatory (Tregs)	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	T cell regulatory (Tregs)	NBL, To be classified	1
+Neuroblastoma	TARGET	uncharacterized cell	NBL, MYCN amplified	69
+Neuroblastoma	TARGET	uncharacterized cell	NBL, MYCN non-amplified	67
+Neuroblastoma	TARGET	uncharacterized cell	NBL, To be classified	1
+Neurofibroma/Plexiform	PBTA	B cell	NA	29
+Neurofibroma/Plexiform	PBTA	Macrophage M1	NA	29
+Neurofibroma/Plexiform	PBTA	Macrophage M2	NA	29
+Neurofibroma/Plexiform	PBTA	Monocyte	NA	29
+Neurofibroma/Plexiform	PBTA	Myeloid dendritic cell	NA	29
+Neurofibroma/Plexiform	PBTA	NK cell	NA	29
+Neurofibroma/Plexiform	PBTA	Neutrophil	NA	29
+Neurofibroma/Plexiform	PBTA	T cell CD4+ (non-regulatory)	NA	29
+Neurofibroma/Plexiform	PBTA	T cell CD8+	NA	29
+Neurofibroma/Plexiform	PBTA	T cell regulatory (Tregs)	NA	29
+Neurofibroma/Plexiform	PBTA	uncharacterized cell	NA	29
+Oligodendroglioma	PBTA	B cell	NA	62
+Oligodendroglioma	PBTA	Macrophage M1	NA	62
+Oligodendroglioma	PBTA	Macrophage M2	NA	62
+Oligodendroglioma	PBTA	Monocyte	NA	62
+Oligodendroglioma	PBTA	Myeloid dendritic cell	NA	62
+Oligodendroglioma	PBTA	NK cell	NA	62
+Oligodendroglioma	PBTA	Neutrophil	NA	62
+Oligodendroglioma	PBTA	T cell CD4+ (non-regulatory)	NA	62
+Oligodendroglioma	PBTA	T cell CD8+	NA	62
+Oligodendroglioma	PBTA	T cell regulatory (Tregs)	NA	62
+Oligodendroglioma	PBTA	uncharacterized cell	NA	62
+Osteosarcoma	PPTC	B cell	NA	30
+Osteosarcoma	PPTC	Macrophage M1	NA	30
+Osteosarcoma	PPTC	Macrophage M2	NA	30
+Osteosarcoma	PPTC	Monocyte	NA	30
+Osteosarcoma	PPTC	Myeloid dendritic cell	NA	30
+Osteosarcoma	PPTC	NK cell	NA	30
+Osteosarcoma	PPTC	Neutrophil	NA	30
+Osteosarcoma	PPTC	T cell CD4+ (non-regulatory)	NA	30
+Osteosarcoma	PPTC	T cell CD8+	NA	30
+Osteosarcoma	PPTC	T cell regulatory (Tregs)	NA	30
+Osteosarcoma	PPTC	uncharacterized cell	NA	30
+Osteosarcoma	TARGET	B cell	NA	72
+Osteosarcoma	TARGET	Macrophage M1	NA	72
+Osteosarcoma	TARGET	Macrophage M2	NA	72
+Osteosarcoma	TARGET	Monocyte	NA	72
+Osteosarcoma	TARGET	Myeloid dendritic cell	NA	72
+Osteosarcoma	TARGET	NK cell	NA	72
+Osteosarcoma	TARGET	Neutrophil	NA	72
+Osteosarcoma	TARGET	T cell CD4+ (non-regulatory)	NA	72
+Osteosarcoma	TARGET	T cell CD8+	NA	72
+Osteosarcoma	TARGET	T cell regulatory (Tregs)	NA	72
+Osteosarcoma	TARGET	uncharacterized cell	NA	72
+Other tumor	DGD	B cell	NA	2
+Other tumor	DGD	Macrophage M1	NA	2
+Other tumor	DGD	Macrophage M2	NA	2
+Other tumor	DGD	Monocyte	NA	2
+Other tumor	DGD	Myeloid dendritic cell	NA	2
+Other tumor	DGD	NK cell	NA	2
+Other tumor	DGD	Neutrophil	NA	2
+Other tumor	DGD	T cell CD4+ (non-regulatory)	NA	2
+Other tumor	DGD	T cell CD8+	NA	2
+Other tumor	DGD	T cell regulatory (Tregs)	NA	2
+Other tumor	DGD	uncharacterized cell	NA	2
+Other tumor	PBTA	B cell	NA	4
+Other tumor	PBTA	Macrophage M1	NA	4
+Other tumor	PBTA	Macrophage M2	NA	4
+Other tumor	PBTA	Monocyte	NA	4
+Other tumor	PBTA	Myeloid dendritic cell	NA	4
+Other tumor	PBTA	NK cell	NA	4
+Other tumor	PBTA	Neutrophil	NA	4
+Other tumor	PBTA	T cell CD4+ (non-regulatory)	NA	4
+Other tumor	PBTA	T cell CD8+	NA	4
+Other tumor	PBTA	T cell regulatory (Tregs)	NA	4
+Other tumor	PBTA	uncharacterized cell	NA	4
+Pilocytic astrocytoma	PBTA	B cell	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	Macrophage M1	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	Macrophage M2	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	Monocyte	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	Myeloid dendritic cell	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	NK cell	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	Neutrophil	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	T cell CD4+ (non-regulatory)	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	T cell CD8+	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	T cell regulatory (Tregs)	LGG, To be classified	3
+Pilocytic astrocytoma	PBTA	uncharacterized cell	LGG, To be classified	3
+Pineoblastoma	PBTA	B cell	PB, Group 1	4
+Pineoblastoma	PBTA	B cell	PB, Group 2	3
+Pineoblastoma	PBTA	B cell	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	B cell	PB, To be classified	6
+Pineoblastoma	PBTA	Macrophage M1	PB, Group 1	4
+Pineoblastoma	PBTA	Macrophage M1	PB, Group 2	3
+Pineoblastoma	PBTA	Macrophage M1	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	Macrophage M1	PB, To be classified	6
+Pineoblastoma	PBTA	Macrophage M2	PB, Group 1	4
+Pineoblastoma	PBTA	Macrophage M2	PB, Group 2	3
+Pineoblastoma	PBTA	Macrophage M2	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	Macrophage M2	PB, To be classified	6
+Pineoblastoma	PBTA	Monocyte	PB, Group 1	4
+Pineoblastoma	PBTA	Monocyte	PB, Group 2	3
+Pineoblastoma	PBTA	Monocyte	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	Monocyte	PB, To be classified	6
+Pineoblastoma	PBTA	Myeloid dendritic cell	PB, Group 1	4
+Pineoblastoma	PBTA	Myeloid dendritic cell	PB, Group 2	3
+Pineoblastoma	PBTA	Myeloid dendritic cell	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	Myeloid dendritic cell	PB, To be classified	6
+Pineoblastoma	PBTA	NK cell	PB, Group 1	4
+Pineoblastoma	PBTA	NK cell	PB, Group 2	3
+Pineoblastoma	PBTA	NK cell	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	NK cell	PB, To be classified	6
+Pineoblastoma	PBTA	Neutrophil	PB, Group 1	4
+Pineoblastoma	PBTA	Neutrophil	PB, Group 2	3
+Pineoblastoma	PBTA	Neutrophil	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	Neutrophil	PB, To be classified	6
+Pineoblastoma	PBTA	T cell CD4+ (non-regulatory)	PB, Group 1	4
+Pineoblastoma	PBTA	T cell CD4+ (non-regulatory)	PB, Group 2	3
+Pineoblastoma	PBTA	T cell CD4+ (non-regulatory)	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	T cell CD4+ (non-regulatory)	PB, To be classified	6
+Pineoblastoma	PBTA	T cell CD8+	PB, Group 1	4
+Pineoblastoma	PBTA	T cell CD8+	PB, Group 2	3
+Pineoblastoma	PBTA	T cell CD8+	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	T cell CD8+	PB, To be classified	6
+Pineoblastoma	PBTA	T cell regulatory (Tregs)	PB, Group 1	4
+Pineoblastoma	PBTA	T cell regulatory (Tregs)	PB, Group 2	3
+Pineoblastoma	PBTA	T cell regulatory (Tregs)	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	T cell regulatory (Tregs)	PB, To be classified	6
+Pineoblastoma	PBTA	uncharacterized cell	PB, Group 1	4
+Pineoblastoma	PBTA	uncharacterized cell	PB, Group 2	3
+Pineoblastoma	PBTA	uncharacterized cell	PB, MYC/FOXR2	2
+Pineoblastoma	PBTA	uncharacterized cell	PB, To be classified	6
+Pleomorphic xanthoastrocytoma	PBTA	B cell	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	B cell	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	Macrophage M1	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	Macrophage M1	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	Macrophage M2	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	Macrophage M2	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	Monocyte	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	Monocyte	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	Myeloid dendritic cell	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	Myeloid dendritic cell	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	NK cell	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	NK cell	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	Neutrophil	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	Neutrophil	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	T cell CD4+ (non-regulatory)	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	T cell CD4+ (non-regulatory)	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	T cell CD8+	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	T cell CD8+	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	T cell regulatory (Tregs)	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	T cell regulatory (Tregs)	HGG, PXA, TP53	2
+Pleomorphic xanthoastrocytoma	PBTA	uncharacterized cell	HGG, PXA	14
+Pleomorphic xanthoastrocytoma	PBTA	uncharacterized cell	HGG, PXA, TP53	2
+Rhabdoid tumor of the kidney	PPTC	B cell	NA	3
+Rhabdoid tumor of the kidney	PPTC	Macrophage M1	NA	3
+Rhabdoid tumor of the kidney	PPTC	Macrophage M2	NA	3
+Rhabdoid tumor of the kidney	PPTC	Monocyte	NA	3
+Rhabdoid tumor of the kidney	PPTC	Myeloid dendritic cell	NA	3
+Rhabdoid tumor of the kidney	PPTC	NK cell	NA	3
+Rhabdoid tumor of the kidney	PPTC	Neutrophil	NA	3
+Rhabdoid tumor of the kidney	PPTC	T cell CD4+ (non-regulatory)	NA	3
+Rhabdoid tumor of the kidney	PPTC	T cell CD8+	NA	3
+Rhabdoid tumor of the kidney	PPTC	T cell regulatory (Tregs)	NA	3
+Rhabdoid tumor of the kidney	PPTC	uncharacterized cell	NA	3
+Rhabdoid tumor of the kidney	TARGET	B cell	NA	64
+Rhabdoid tumor of the kidney	TARGET	Macrophage M1	NA	64
+Rhabdoid tumor of the kidney	TARGET	Macrophage M2	NA	64
+Rhabdoid tumor of the kidney	TARGET	Monocyte	NA	64
+Rhabdoid tumor of the kidney	TARGET	Myeloid dendritic cell	NA	64
+Rhabdoid tumor of the kidney	TARGET	NK cell	NA	64
+Rhabdoid tumor of the kidney	TARGET	Neutrophil	NA	64
+Rhabdoid tumor of the kidney	TARGET	T cell CD4+ (non-regulatory)	NA	64
+Rhabdoid tumor of the kidney	TARGET	T cell CD8+	NA	64
+Rhabdoid tumor of the kidney	TARGET	T cell regulatory (Tregs)	NA	64
+Rhabdoid tumor of the kidney	TARGET	uncharacterized cell	NA	64
+Rhabdomyosarcoma	DGD	B cell	NA	2
+Rhabdomyosarcoma	DGD	Macrophage M1	NA	2
+Rhabdomyosarcoma	DGD	Macrophage M2	NA	2
+Rhabdomyosarcoma	DGD	Monocyte	NA	2
+Rhabdomyosarcoma	DGD	Myeloid dendritic cell	NA	2
+Rhabdomyosarcoma	DGD	NK cell	NA	2
+Rhabdomyosarcoma	DGD	Neutrophil	NA	2
+Rhabdomyosarcoma	DGD	T cell CD4+ (non-regulatory)	NA	2
+Rhabdomyosarcoma	DGD	T cell CD8+	NA	2
+Rhabdomyosarcoma	DGD	T cell regulatory (Tregs)	NA	2
+Rhabdomyosarcoma	DGD	uncharacterized cell	NA	2
+Rhabdomyosarcoma	PBTA	B cell	NA	2
+Rhabdomyosarcoma	PBTA	Macrophage M1	NA	2
+Rhabdomyosarcoma	PBTA	Macrophage M2	NA	2
+Rhabdomyosarcoma	PBTA	Monocyte	NA	2
+Rhabdomyosarcoma	PBTA	Myeloid dendritic cell	NA	2
+Rhabdomyosarcoma	PBTA	NK cell	NA	2
+Rhabdomyosarcoma	PBTA	Neutrophil	NA	2
+Rhabdomyosarcoma	PBTA	T cell CD4+ (non-regulatory)	NA	2
+Rhabdomyosarcoma	PBTA	T cell CD8+	NA	2
+Rhabdomyosarcoma	PBTA	T cell regulatory (Tregs)	NA	2
+Rhabdomyosarcoma	PBTA	uncharacterized cell	NA	2
+Rhabdomyosarcoma	PPTC	B cell	NA	12
+Rhabdomyosarcoma	PPTC	Macrophage M1	NA	12
+Rhabdomyosarcoma	PPTC	Macrophage M2	NA	12
+Rhabdomyosarcoma	PPTC	Monocyte	NA	12
+Rhabdomyosarcoma	PPTC	Myeloid dendritic cell	NA	12
+Rhabdomyosarcoma	PPTC	NK cell	NA	12
+Rhabdomyosarcoma	PPTC	Neutrophil	NA	12
+Rhabdomyosarcoma	PPTC	T cell CD4+ (non-regulatory)	NA	12
+Rhabdomyosarcoma	PPTC	T cell CD8+	NA	12
+Rhabdomyosarcoma	PPTC	T cell regulatory (Tregs)	NA	12
+Rhabdomyosarcoma	PPTC	uncharacterized cell	NA	12
+Rosette-forming glioneuronal tumor	PBTA	B cell	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	B cell	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Macrophage M1	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Macrophage M1	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Macrophage M2	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Macrophage M2	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Monocyte	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Monocyte	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Myeloid dendritic cell	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Myeloid dendritic cell	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	NK cell	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	NK cell	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Neutrophil	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	Neutrophil	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	T cell CD4+ (non-regulatory)	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	T cell CD4+ (non-regulatory)	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	T cell CD8+	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	T cell CD8+	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	T cell regulatory (Tregs)	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	T cell regulatory (Tregs)	GNT, other MAPK, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	uncharacterized cell	GNT, FGFR	1
+Rosette-forming glioneuronal tumor	PBTA	uncharacterized cell	GNT, other MAPK, FGFR	1
+Sarcoma	PBTA	B cell	NA	13
+Sarcoma	PBTA	Macrophage M1	NA	13
+Sarcoma	PBTA	Macrophage M2	NA	13
+Sarcoma	PBTA	Monocyte	NA	13
+Sarcoma	PBTA	Myeloid dendritic cell	NA	13
+Sarcoma	PBTA	NK cell	NA	13
+Sarcoma	PBTA	Neutrophil	NA	13
+Sarcoma	PBTA	T cell CD4+ (non-regulatory)	NA	13
+Sarcoma	PBTA	T cell CD8+	NA	13
+Sarcoma	PBTA	T cell regulatory (Tregs)	NA	13
+Sarcoma	PBTA	uncharacterized cell	NA	13
+Schwannoma	PBTA	B cell	NA	30
+Schwannoma	PBTA	Macrophage M1	NA	30
+Schwannoma	PBTA	Macrophage M2	NA	30
+Schwannoma	PBTA	Monocyte	NA	30
+Schwannoma	PBTA	Myeloid dendritic cell	NA	30
+Schwannoma	PBTA	NK cell	NA	30
+Schwannoma	PBTA	Neutrophil	NA	30
+Schwannoma	PBTA	T cell CD4+ (non-regulatory)	NA	30
+Schwannoma	PBTA	T cell CD8+	NA	30
+Schwannoma	PBTA	T cell regulatory (Tregs)	NA	30
+Schwannoma	PBTA	uncharacterized cell	NA	30
+Small Cell Carcinoma	PPTC	B cell	NA	2
+Small Cell Carcinoma	PPTC	Macrophage M1	NA	2
+Small Cell Carcinoma	PPTC	Macrophage M2	NA	2
+Small Cell Carcinoma	PPTC	Monocyte	NA	2
+Small Cell Carcinoma	PPTC	Myeloid dendritic cell	NA	2
+Small Cell Carcinoma	PPTC	NK cell	NA	2
+Small Cell Carcinoma	PPTC	Neutrophil	NA	2
+Small Cell Carcinoma	PPTC	T cell CD4+ (non-regulatory)	NA	2
+Small Cell Carcinoma	PPTC	T cell CD8+	NA	2
+Small Cell Carcinoma	PPTC	T cell regulatory (Tregs)	NA	2
+Small Cell Carcinoma	PPTC	uncharacterized cell	NA	2
+Subependymal Giant Cell Astrocytoma	PBTA	B cell	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	B cell	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	Macrophage M1	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	Macrophage M1	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	Macrophage M2	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	Macrophage M2	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	Monocyte	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	Monocyte	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	Myeloid dendritic cell	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	Myeloid dendritic cell	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	NK cell	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	NK cell	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	Neutrophil	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	Neutrophil	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	T cell CD4+ (non-regulatory)	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	T cell CD4+ (non-regulatory)	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	T cell CD8+	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	T cell CD8+	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	T cell regulatory (Tregs)	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	T cell regulatory (Tregs)	SEGA, wildtype	6
+Subependymal Giant Cell Astrocytoma	PBTA	uncharacterized cell	SEGA, To be classified	9
+Subependymal Giant Cell Astrocytoma	PBTA	uncharacterized cell	SEGA, wildtype	6
+Teratoma	PBTA	B cell	NA	10
+Teratoma	PBTA	Macrophage M1	NA	10
+Teratoma	PBTA	Macrophage M2	NA	10
+Teratoma	PBTA	Monocyte	NA	10
+Teratoma	PBTA	Myeloid dendritic cell	NA	10
+Teratoma	PBTA	NK cell	NA	10
+Teratoma	PBTA	Neutrophil	NA	10
+Teratoma	PBTA	T cell CD4+ (non-regulatory)	NA	10
+Teratoma	PBTA	T cell CD8+	NA	10
+Teratoma	PBTA	T cell regulatory (Tregs)	NA	10
+Teratoma	PBTA	uncharacterized cell	NA	10
+Wilms tumor	PPTC	B cell	NA	12
+Wilms tumor	PPTC	Macrophage M1	NA	12
+Wilms tumor	PPTC	Macrophage M2	NA	12
+Wilms tumor	PPTC	Monocyte	NA	12
+Wilms tumor	PPTC	Myeloid dendritic cell	NA	12
+Wilms tumor	PPTC	NK cell	NA	12
+Wilms tumor	PPTC	Neutrophil	NA	12
+Wilms tumor	PPTC	T cell CD4+ (non-regulatory)	NA	12
+Wilms tumor	PPTC	T cell CD8+	NA	12
+Wilms tumor	PPTC	T cell regulatory (Tregs)	NA	12
+Wilms tumor	PPTC	uncharacterized cell	NA	12
+Wilms tumor	TARGET	B cell	NA	130
+Wilms tumor	TARGET	Macrophage M1	NA	130
+Wilms tumor	TARGET	Macrophage M2	NA	130
+Wilms tumor	TARGET	Monocyte	NA	130
+Wilms tumor	TARGET	Myeloid dendritic cell	NA	130
+Wilms tumor	TARGET	NK cell	NA	130
+Wilms tumor	TARGET	Neutrophil	NA	130
+Wilms tumor	TARGET	T cell CD4+ (non-regulatory)	NA	130
+Wilms tumor	TARGET	T cell CD8+	NA	130
+Wilms tumor	TARGET	T cell regulatory (Tregs)	NA	130
+Wilms tumor	TARGET	uncharacterized cell	NA	130

@@ -1,0 +1,289 @@
+cancer_group	cohort	cell_type	molecular_subtype	n
+Medulloblastoma	PBTA	B cell	MB, Group3	60
+Medulloblastoma	PBTA	B cell	MB, Group4	100
+Medulloblastoma	PBTA	B cell	MB, SHH	78
+Medulloblastoma	PBTA	B cell	MB, WNT	22
+Medulloblastoma	PBTA	B cell memory	MB, Group3	60
+Medulloblastoma	PBTA	B cell memory	MB, Group4	100
+Medulloblastoma	PBTA	B cell memory	MB, SHH	78
+Medulloblastoma	PBTA	B cell memory	MB, WNT	22
+Medulloblastoma	PBTA	B cell naive	MB, Group3	60
+Medulloblastoma	PBTA	B cell naive	MB, Group4	100
+Medulloblastoma	PBTA	B cell naive	MB, SHH	78
+Medulloblastoma	PBTA	B cell naive	MB, WNT	22
+Medulloblastoma	PBTA	B cell plasma	MB, Group3	60
+Medulloblastoma	PBTA	B cell plasma	MB, Group4	100
+Medulloblastoma	PBTA	B cell plasma	MB, SHH	78
+Medulloblastoma	PBTA	B cell plasma	MB, WNT	22
+Medulloblastoma	PBTA	Cancer associated fibroblast	MB, Group3	60
+Medulloblastoma	PBTA	Cancer associated fibroblast	MB, Group4	100
+Medulloblastoma	PBTA	Cancer associated fibroblast	MB, SHH	78
+Medulloblastoma	PBTA	Cancer associated fibroblast	MB, WNT	22
+Medulloblastoma	PBTA	Class-switched memory B cell	MB, Group3	60
+Medulloblastoma	PBTA	Class-switched memory B cell	MB, Group4	100
+Medulloblastoma	PBTA	Class-switched memory B cell	MB, SHH	78
+Medulloblastoma	PBTA	Class-switched memory B cell	MB, WNT	22
+Medulloblastoma	PBTA	Common lymphoid progenitor	MB, Group3	60
+Medulloblastoma	PBTA	Common lymphoid progenitor	MB, Group4	100
+Medulloblastoma	PBTA	Common lymphoid progenitor	MB, SHH	78
+Medulloblastoma	PBTA	Common lymphoid progenitor	MB, WNT	22
+Medulloblastoma	PBTA	Common myeloid progenitor	MB, Group3	60
+Medulloblastoma	PBTA	Common myeloid progenitor	MB, Group4	100
+Medulloblastoma	PBTA	Common myeloid progenitor	MB, SHH	78
+Medulloblastoma	PBTA	Common myeloid progenitor	MB, WNT	22
+Medulloblastoma	PBTA	Endothelial cell	MB, Group3	60
+Medulloblastoma	PBTA	Endothelial cell	MB, Group4	100
+Medulloblastoma	PBTA	Endothelial cell	MB, SHH	78
+Medulloblastoma	PBTA	Endothelial cell	MB, WNT	22
+Medulloblastoma	PBTA	Eosinophil	MB, Group3	60
+Medulloblastoma	PBTA	Eosinophil	MB, Group4	100
+Medulloblastoma	PBTA	Eosinophil	MB, SHH	78
+Medulloblastoma	PBTA	Eosinophil	MB, WNT	22
+Medulloblastoma	PBTA	Granulocyte-monocyte progenitor	MB, Group3	60
+Medulloblastoma	PBTA	Granulocyte-monocyte progenitor	MB, Group4	100
+Medulloblastoma	PBTA	Granulocyte-monocyte progenitor	MB, SHH	78
+Medulloblastoma	PBTA	Granulocyte-monocyte progenitor	MB, WNT	22
+Medulloblastoma	PBTA	Hematopoietic stem cell	MB, Group3	60
+Medulloblastoma	PBTA	Hematopoietic stem cell	MB, Group4	100
+Medulloblastoma	PBTA	Hematopoietic stem cell	MB, SHH	78
+Medulloblastoma	PBTA	Hematopoietic stem cell	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage M1	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage M1	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage M1	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage M1	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage M2	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage M2	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage M2	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage M2	MB, WNT	22
+Medulloblastoma	PBTA	Mast cell	MB, Group3	60
+Medulloblastoma	PBTA	Mast cell	MB, Group4	100
+Medulloblastoma	PBTA	Mast cell	MB, SHH	78
+Medulloblastoma	PBTA	Mast cell	MB, WNT	22
+Medulloblastoma	PBTA	Monocyte	MB, Group3	60
+Medulloblastoma	PBTA	Monocyte	MB, Group4	100
+Medulloblastoma	PBTA	Monocyte	MB, SHH	78
+Medulloblastoma	PBTA	Monocyte	MB, WNT	22
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, Group3	60
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, Group4	100
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, SHH	78
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, WNT	22
+Medulloblastoma	PBTA	Myeloid dendritic cell activated	MB, Group3	60
+Medulloblastoma	PBTA	Myeloid dendritic cell activated	MB, Group4	100
+Medulloblastoma	PBTA	Myeloid dendritic cell activated	MB, SHH	78
+Medulloblastoma	PBTA	Myeloid dendritic cell activated	MB, WNT	22
+Medulloblastoma	PBTA	NK cell	MB, Group3	60
+Medulloblastoma	PBTA	NK cell	MB, Group4	100
+Medulloblastoma	PBTA	NK cell	MB, SHH	78
+Medulloblastoma	PBTA	NK cell	MB, WNT	22
+Medulloblastoma	PBTA	Neutrophil	MB, Group3	60
+Medulloblastoma	PBTA	Neutrophil	MB, Group4	100
+Medulloblastoma	PBTA	Neutrophil	MB, SHH	78
+Medulloblastoma	PBTA	Neutrophil	MB, WNT	22
+Medulloblastoma	PBTA	Plasmacytoid dendritic cell	MB, Group3	60
+Medulloblastoma	PBTA	Plasmacytoid dendritic cell	MB, Group4	100
+Medulloblastoma	PBTA	Plasmacytoid dendritic cell	MB, SHH	78
+Medulloblastoma	PBTA	Plasmacytoid dendritic cell	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ Th1	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ Th1	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ Th1	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ Th1	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ Th2	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ Th2	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ Th2	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ Th2	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ central memory	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ central memory	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ central memory	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ central memory	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ effector memory	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ effector memory	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ effector memory	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ effector memory	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ memory	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ memory	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ memory	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ memory	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ naive	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ naive	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ naive	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ naive	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD8+	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD8+	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD8+	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD8+	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD8+ central memory	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD8+ central memory	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD8+ central memory	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD8+ central memory	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD8+ effector memory	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD8+ effector memory	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD8+ effector memory	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD8+ effector memory	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD8+ naive	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD8+ naive	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD8+ naive	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD8+ naive	MB, WNT	22
+Medulloblastoma	PBTA	T cell NK	MB, Group3	60
+Medulloblastoma	PBTA	T cell NK	MB, Group4	100
+Medulloblastoma	PBTA	T cell NK	MB, SHH	78
+Medulloblastoma	PBTA	T cell NK	MB, WNT	22
+Medulloblastoma	PBTA	T cell gamma delta	MB, Group3	60
+Medulloblastoma	PBTA	T cell gamma delta	MB, Group4	100
+Medulloblastoma	PBTA	T cell gamma delta	MB, SHH	78
+Medulloblastoma	PBTA	T cell gamma delta	MB, WNT	22
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, Group3	60
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, Group4	100
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, SHH	78
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, WNT	22
+Medulloblastoma	PPTC	B cell	MB, Group3	8
+Medulloblastoma	PPTC	B cell	MB, Group4	2
+Medulloblastoma	PPTC	B cell	MB, SHH	6
+Medulloblastoma	PPTC	B cell	MB, WNT	2
+Medulloblastoma	PPTC	B cell memory	MB, Group3	8
+Medulloblastoma	PPTC	B cell memory	MB, Group4	2
+Medulloblastoma	PPTC	B cell memory	MB, SHH	6
+Medulloblastoma	PPTC	B cell memory	MB, WNT	2
+Medulloblastoma	PPTC	B cell naive	MB, Group3	8
+Medulloblastoma	PPTC	B cell naive	MB, Group4	2
+Medulloblastoma	PPTC	B cell naive	MB, SHH	6
+Medulloblastoma	PPTC	B cell naive	MB, WNT	2
+Medulloblastoma	PPTC	B cell plasma	MB, Group3	8
+Medulloblastoma	PPTC	B cell plasma	MB, Group4	2
+Medulloblastoma	PPTC	B cell plasma	MB, SHH	6
+Medulloblastoma	PPTC	B cell plasma	MB, WNT	2
+Medulloblastoma	PPTC	Cancer associated fibroblast	MB, Group3	8
+Medulloblastoma	PPTC	Cancer associated fibroblast	MB, Group4	2
+Medulloblastoma	PPTC	Cancer associated fibroblast	MB, SHH	6
+Medulloblastoma	PPTC	Cancer associated fibroblast	MB, WNT	2
+Medulloblastoma	PPTC	Class-switched memory B cell	MB, Group3	8
+Medulloblastoma	PPTC	Class-switched memory B cell	MB, Group4	2
+Medulloblastoma	PPTC	Class-switched memory B cell	MB, SHH	6
+Medulloblastoma	PPTC	Class-switched memory B cell	MB, WNT	2
+Medulloblastoma	PPTC	Common lymphoid progenitor	MB, Group3	8
+Medulloblastoma	PPTC	Common lymphoid progenitor	MB, Group4	2
+Medulloblastoma	PPTC	Common lymphoid progenitor	MB, SHH	6
+Medulloblastoma	PPTC	Common lymphoid progenitor	MB, WNT	2
+Medulloblastoma	PPTC	Common myeloid progenitor	MB, Group3	8
+Medulloblastoma	PPTC	Common myeloid progenitor	MB, Group4	2
+Medulloblastoma	PPTC	Common myeloid progenitor	MB, SHH	6
+Medulloblastoma	PPTC	Common myeloid progenitor	MB, WNT	2
+Medulloblastoma	PPTC	Endothelial cell	MB, Group3	8
+Medulloblastoma	PPTC	Endothelial cell	MB, Group4	2
+Medulloblastoma	PPTC	Endothelial cell	MB, SHH	6
+Medulloblastoma	PPTC	Endothelial cell	MB, WNT	2
+Medulloblastoma	PPTC	Eosinophil	MB, Group3	8
+Medulloblastoma	PPTC	Eosinophil	MB, Group4	2
+Medulloblastoma	PPTC	Eosinophil	MB, SHH	6
+Medulloblastoma	PPTC	Eosinophil	MB, WNT	2
+Medulloblastoma	PPTC	Granulocyte-monocyte progenitor	MB, Group3	8
+Medulloblastoma	PPTC	Granulocyte-monocyte progenitor	MB, Group4	2
+Medulloblastoma	PPTC	Granulocyte-monocyte progenitor	MB, SHH	6
+Medulloblastoma	PPTC	Granulocyte-monocyte progenitor	MB, WNT	2
+Medulloblastoma	PPTC	Hematopoietic stem cell	MB, Group3	8
+Medulloblastoma	PPTC	Hematopoietic stem cell	MB, Group4	2
+Medulloblastoma	PPTC	Hematopoietic stem cell	MB, SHH	6
+Medulloblastoma	PPTC	Hematopoietic stem cell	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage M1	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage M1	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage M1	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage M1	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage M2	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage M2	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage M2	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage M2	MB, WNT	2
+Medulloblastoma	PPTC	Mast cell	MB, Group3	8
+Medulloblastoma	PPTC	Mast cell	MB, Group4	2
+Medulloblastoma	PPTC	Mast cell	MB, SHH	6
+Medulloblastoma	PPTC	Mast cell	MB, WNT	2
+Medulloblastoma	PPTC	Monocyte	MB, Group3	8
+Medulloblastoma	PPTC	Monocyte	MB, Group4	2
+Medulloblastoma	PPTC	Monocyte	MB, SHH	6
+Medulloblastoma	PPTC	Monocyte	MB, WNT	2
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, Group3	8
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, Group4	2
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, SHH	6
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, WNT	2
+Medulloblastoma	PPTC	Myeloid dendritic cell activated	MB, Group3	8
+Medulloblastoma	PPTC	Myeloid dendritic cell activated	MB, Group4	2
+Medulloblastoma	PPTC	Myeloid dendritic cell activated	MB, SHH	6
+Medulloblastoma	PPTC	Myeloid dendritic cell activated	MB, WNT	2
+Medulloblastoma	PPTC	NK cell	MB, Group3	8
+Medulloblastoma	PPTC	NK cell	MB, Group4	2
+Medulloblastoma	PPTC	NK cell	MB, SHH	6
+Medulloblastoma	PPTC	NK cell	MB, WNT	2
+Medulloblastoma	PPTC	Neutrophil	MB, Group3	8
+Medulloblastoma	PPTC	Neutrophil	MB, Group4	2
+Medulloblastoma	PPTC	Neutrophil	MB, SHH	6
+Medulloblastoma	PPTC	Neutrophil	MB, WNT	2
+Medulloblastoma	PPTC	Plasmacytoid dendritic cell	MB, Group3	8
+Medulloblastoma	PPTC	Plasmacytoid dendritic cell	MB, Group4	2
+Medulloblastoma	PPTC	Plasmacytoid dendritic cell	MB, SHH	6
+Medulloblastoma	PPTC	Plasmacytoid dendritic cell	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ Th1	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ Th1	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ Th1	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ Th1	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ Th2	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ Th2	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ Th2	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ Th2	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ central memory	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ central memory	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ central memory	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ central memory	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ effector memory	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ effector memory	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ effector memory	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ effector memory	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ memory	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ memory	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ memory	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ memory	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ naive	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ naive	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ naive	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ naive	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD8+	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD8+	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD8+	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD8+	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD8+ central memory	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD8+ central memory	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD8+ central memory	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD8+ central memory	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD8+ effector memory	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD8+ effector memory	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD8+ effector memory	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD8+ effector memory	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD8+ naive	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD8+ naive	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD8+ naive	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD8+ naive	MB, WNT	2
+Medulloblastoma	PPTC	T cell NK	MB, Group3	8
+Medulloblastoma	PPTC	T cell NK	MB, Group4	2
+Medulloblastoma	PPTC	T cell NK	MB, SHH	6
+Medulloblastoma	PPTC	T cell NK	MB, WNT	2
+Medulloblastoma	PPTC	T cell gamma delta	MB, Group3	8
+Medulloblastoma	PPTC	T cell gamma delta	MB, Group4	2
+Medulloblastoma	PPTC	T cell gamma delta	MB, SHH	6
+Medulloblastoma	PPTC	T cell gamma delta	MB, WNT	2
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, Group3	8
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, Group4	2
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, SHH	6
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, WNT	2

@@ -1,0 +1,89 @@
+cancer_group	cohort	cell_type	molecular_subtype	n
+Medulloblastoma	PBTA	B cell	MB, Group3	60
+Medulloblastoma	PBTA	B cell	MB, Group4	100
+Medulloblastoma	PBTA	B cell	MB, SHH	78
+Medulloblastoma	PBTA	B cell	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage M1	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage M1	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage M1	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage M1	MB, WNT	22
+Medulloblastoma	PBTA	Macrophage M2	MB, Group3	60
+Medulloblastoma	PBTA	Macrophage M2	MB, Group4	100
+Medulloblastoma	PBTA	Macrophage M2	MB, SHH	78
+Medulloblastoma	PBTA	Macrophage M2	MB, WNT	22
+Medulloblastoma	PBTA	Monocyte	MB, Group3	60
+Medulloblastoma	PBTA	Monocyte	MB, Group4	100
+Medulloblastoma	PBTA	Monocyte	MB, SHH	78
+Medulloblastoma	PBTA	Monocyte	MB, WNT	22
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, Group3	60
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, Group4	100
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, SHH	78
+Medulloblastoma	PBTA	Myeloid dendritic cell	MB, WNT	22
+Medulloblastoma	PBTA	NK cell	MB, Group3	60
+Medulloblastoma	PBTA	NK cell	MB, Group4	100
+Medulloblastoma	PBTA	NK cell	MB, SHH	78
+Medulloblastoma	PBTA	NK cell	MB, WNT	22
+Medulloblastoma	PBTA	Neutrophil	MB, Group3	60
+Medulloblastoma	PBTA	Neutrophil	MB, Group4	100
+Medulloblastoma	PBTA	Neutrophil	MB, SHH	78
+Medulloblastoma	PBTA	Neutrophil	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD4+ (non-regulatory)	MB, WNT	22
+Medulloblastoma	PBTA	T cell CD8+	MB, Group3	60
+Medulloblastoma	PBTA	T cell CD8+	MB, Group4	100
+Medulloblastoma	PBTA	T cell CD8+	MB, SHH	78
+Medulloblastoma	PBTA	T cell CD8+	MB, WNT	22
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, Group3	60
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, Group4	100
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, SHH	78
+Medulloblastoma	PBTA	T cell regulatory (Tregs)	MB, WNT	22
+Medulloblastoma	PBTA	uncharacterized cell	MB, Group3	60
+Medulloblastoma	PBTA	uncharacterized cell	MB, Group4	100
+Medulloblastoma	PBTA	uncharacterized cell	MB, SHH	78
+Medulloblastoma	PBTA	uncharacterized cell	MB, WNT	22
+Medulloblastoma	PPTC	B cell	MB, Group3	8
+Medulloblastoma	PPTC	B cell	MB, Group4	2
+Medulloblastoma	PPTC	B cell	MB, SHH	6
+Medulloblastoma	PPTC	B cell	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage M1	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage M1	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage M1	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage M1	MB, WNT	2
+Medulloblastoma	PPTC	Macrophage M2	MB, Group3	8
+Medulloblastoma	PPTC	Macrophage M2	MB, Group4	2
+Medulloblastoma	PPTC	Macrophage M2	MB, SHH	6
+Medulloblastoma	PPTC	Macrophage M2	MB, WNT	2
+Medulloblastoma	PPTC	Monocyte	MB, Group3	8
+Medulloblastoma	PPTC	Monocyte	MB, Group4	2
+Medulloblastoma	PPTC	Monocyte	MB, SHH	6
+Medulloblastoma	PPTC	Monocyte	MB, WNT	2
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, Group3	8
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, Group4	2
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, SHH	6
+Medulloblastoma	PPTC	Myeloid dendritic cell	MB, WNT	2
+Medulloblastoma	PPTC	NK cell	MB, Group3	8
+Medulloblastoma	PPTC	NK cell	MB, Group4	2
+Medulloblastoma	PPTC	NK cell	MB, SHH	6
+Medulloblastoma	PPTC	NK cell	MB, WNT	2
+Medulloblastoma	PPTC	Neutrophil	MB, Group3	8
+Medulloblastoma	PPTC	Neutrophil	MB, Group4	2
+Medulloblastoma	PPTC	Neutrophil	MB, SHH	6
+Medulloblastoma	PPTC	Neutrophil	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD4+ (non-regulatory)	MB, WNT	2
+Medulloblastoma	PPTC	T cell CD8+	MB, Group3	8
+Medulloblastoma	PPTC	T cell CD8+	MB, Group4	2
+Medulloblastoma	PPTC	T cell CD8+	MB, SHH	6
+Medulloblastoma	PPTC	T cell CD8+	MB, WNT	2
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, Group3	8
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, Group4	2
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, SHH	6
+Medulloblastoma	PPTC	T cell regulatory (Tregs)	MB, WNT	2
+Medulloblastoma	PPTC	uncharacterized cell	MB, Group3	8
+Medulloblastoma	PPTC	uncharacterized cell	MB, Group4	2
+Medulloblastoma	PPTC	uncharacterized cell	MB, SHH	6
+Medulloblastoma	PPTC	uncharacterized cell	MB, WNT	2
