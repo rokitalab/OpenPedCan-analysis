@@ -5,7 +5,7 @@
 # Modified on: 2025-04
 
 
-# This script runs the steps for immune deconvolution using xCell and quanTIseq. 
+# This script runs the steps for immune deconvolution using xCell and quanTIseq.
 
 set -e
 set -o pipefail
