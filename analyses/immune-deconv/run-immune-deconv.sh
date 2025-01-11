@@ -1,6 +1,7 @@
 #!/bin/bash
 # Module author: Komal S. Rathi, updated Kelsey Keith
 # 2022-07
+# Modified from original author to add on immune enrichment analysis script (immune-enrichment.R) - Audrey Crowther 2025-01
 
 # This script runs the steps for immune deconvolution using xCell and quanTIseq. 
 
@@ -31,3 +32,7 @@ Rscript --vanilla 01-immune-deconv.R \
 #--clin_file '../../data/histologies.tsv' \
 #--deconv_method 'quantiseq' \
 #--output_dir 'results'
+
+### Medullablastoma immune enrichment from xCell results
+echo "Medullablastoma Subtypes - Immune Enrichments"
+Rscript --vanilla immune-enrichment.R \
