@@ -6,7 +6,7 @@ on:
 jobs:
   build_only:
     name: Build Only
-    runs-on: large-runner-32
+    runs-on: ubuntu-latest-m
     steps:
       - uses: actions/checkout@v4
         with:
