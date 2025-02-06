@@ -6,7 +6,7 @@ on:
 jobs:
   build_only:
     name: Build Only
-    runs-on: large-runner-32
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,7 +19,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse
+          images: pgc-images.sbgenomics.com/rokita-lab/openpedcanverse
           tags: |
             type=raw,value=analysisjob
             # Only tag the image with latest if we're building on the default

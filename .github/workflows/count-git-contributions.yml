@@ -83,7 +83,7 @@ jobs:
       - name: Checkout manuscript repository
         uses: actions/checkout@v4
         with:
-          repository: d3b-center/OpenPedCan-manuscript
+          repository: rokitalab/OpenPedCan-manuscript
       
       - name: Configure git
         run: |
@@ -124,12 +124,7 @@ jobs:
           branch: auto_author_order
           delete-branch: true
           title: 'GHA: Updated author order'
-          body: |
-            ### Description
-
-            This PR auto-generated from GitHub Actions workflow that counts git contributions and sets author order accordingly in the `AlexsLemonade/OpenPBTA-analysis` repo.
-            See [the relevant module](https://github.com/d3b-center/OpenPedCan-analysis/tree/dev/analyses/count-contributions) for more info.
- 
+          body: | 
             ### Instruction for reviewers
 
             Review the updates in `content/metadata.yaml` and `submission_info/author_information.tsv` for accuracy.
