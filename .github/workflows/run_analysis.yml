@@ -17,14 +17,14 @@ jobs:
           docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data for Consensus CN Manta
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
+        uses: docker://pgc-images.sbgenomics.com/rokita-lab/openpedcanverse:latest
         with:
           entrypoint: ./download-data.sh
         env:
-          OPENPEDCAN_URL: https://s3.amazonaws.com/d3b-openaccess-us-east-1-prd-pbta/open-targets
+          OPENPEDCAN_URL: https://s3.amazonaws.com/bti-openaccess-us-east-1-prd-opc
           OPENPEDCAN_RELEASE: testing
       - name: Run Consensus CN Manta
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
+        uses: docker://pgc-images.sbgenomics.com/rokita-lab/openpedcanverse:latest
         with:
           entrypoint: ./analyses/copy_number_consensus_call_manta/run_consensus_call.sh
   
@@ -42,20 +42,20 @@ jobs:
           docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data for Consensus CN
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
+        uses: docker://pgc-images.sbgenomics.com/rokita-lab/openpedcanverse:latest
         with:
           entrypoint: ./download-data.sh
         env:
-          OPENPEDCAN_URL: https://s3.amazonaws.com/d3b-openaccess-us-east-1-prd-pbta/open-targets
+          OPENPEDCAN_URL: https://s3.amazonaws.com/bti-openaccess-us-east-1-prd-opc
           OPENPEDCAN_RELEASE: testing
       - name: Run Consensus CN
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
+        uses: docker://pgc-images.sbgenomics.com/rokita-lab/openpedcanverse:latest
         with:
           entrypoint: ./analyses/copy_number_consensus_call/run_consensus_call.sh
 
   run_analysis:
     name: Run Analysis
-    runs-on: ubuntu-latest-m
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -190,15 +190,15 @@ jobs:
           docker rmi $(docker image ls -aq)
           df -h
       - name: Download Data
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
+        uses: docker://pgc-images.sbgenomics.com/rokita-lab/openpedcanverse:latest
         with:
           entrypoint: ./download-data.sh
         env:
-          OPENPEDCAN_URL: https://s3.amazonaws.com/d3b-openaccess-us-east-1-prd-pbta/open-targets
+          OPENPEDCAN_URL: https://s3.amazonaws.com/bti-openaccess-us-east-1-prd-opc
           OPENPEDCAN_RELEASE: testing
 
       - name: Run Analysis
-        uses: docker://pgc-images.sbgenomics.com/d3b-bixu/openpedcanverse:latest
+        uses: docker://pgc-images.sbgenomics.com/rokita-lab/openpedcanverse:latest
         with:
           entrypoint: analyses/${{ matrix.entrypoint }}
         env:
